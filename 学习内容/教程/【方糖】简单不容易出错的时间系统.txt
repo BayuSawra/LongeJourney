@@ -1,0 +1,133 @@
+/*这个时间系统使用 % 计算方式，使得增加大量时间（比如hour+=50）时更不容易出错*/
+/*这个时间系统以地球的系统作为标杆，但去掉了闰年闰月的存在和每月日期数的差异，统一为12个月，每个月30日*/
+
+<<widget "timeWidget">>
+<<if $minute >= 60>>/*当分大于60时*/
+  <<set _hour = Math.floor($minute / 60)>>/*设置一个临时变量来获取需要前进的小时数*/
+  <<set $hour += _hour>>/*加在小时上*/
+  <<set $minute = $minute % 60>>/*时间获取剩余的分钟数*/
+<</if>>
+
+/*24时→天进位同理*/
+<<if $hour >= 24>>
+  <<set _day = Math.floor($hour / 24)>>
+  <<set $day += _day>>
+  <<set $week += _day>>/*我在这里插入对周数的判断*/
+  <<set $hour = $hour % 24>>
+<</if>>
+
+/*30天→月进位同理*/
+<<if $day > 30>>
+  <<set _month = Math.floor($day / 30)>>
+  <<set $month += _month>>
+  <<set $day = $day % 30>>
+<</if>>
+
+/*12月→年进位同理*/
+/*但我偷懒了，因为我觉得自己不会写出set month += 24这种抽象的内容*/
+<<if $month > 12>>
+  <<set $month -= 12>>
+  <<set $year +=1>>
+<</if>>
+<</widget>>
+
+/*这是周判定，让星期显示限定在7个数之内*/
+<<widget "weekChangeWidget">>
+<<timeWidget>>
+<<if $week > 7>>
+  <<set $week -= 7>>
+<</if>>
+<</widget>>
+
+/*用来显示当前的星期表示*/
+<<widget "DATE1">>
+<<weekChangeWidget>>
+/*font是字体设置，color用于改变颜色，这是HTML原生代码*/
+<<switch $week>>
+  <<case 1>><font color=#766C08>周一</font>
+  <<case 2>><font color=#766C08>周二</font>
+  <<case 3>><font color=#766C08>周三</font>
+  <<case 4>><font color=#766C08>周四</font>
+  <<case 5>><font color=#766C08>周五</font>
+  <<case 6>><font color=#FF6090>周六</font>
+  <<case 7>><font color=#FF6090>周日</font>
+<</switch>>
+<</widget>>
+
+/*设置当前的季节*/
+<<widget "seasonChangeWidget">>
+<<timeWidget>>
+<<if $month >=3 && $month <=5>>
+  <<set $season = 0>>
+<<elseif $month >=6 && $month <=8>>
+  <<set $season = 1>>
+<<elseif $month >=9 && $month <=11>>
+  <<set $season = 2>>
+<<else>>
+  <<set $season = 3>>
+<</if>>
+<</widget>>
+
+/*显示当前的季节*/
+<<widget "DATE3">>
+<<seasonChangeWidget>>
+<<switch $season>>
+  <<case 0>><font color=#a1f468>春季</font>
+  <<case 1>><font color=#FFCB5B>夏季</font>
+  <<case 2>><font color=#dc864e>秋季</font>
+  <<case 3>><font color=#a8d3e7>冬季</font>
+<</switch>>
+<</widget>>
+
+/*显示当前的时间范围*/
+/*写的时候懒得写太多if直接力大砖飞*/
+<<widget "DATE4">>
+<<timeWidget>>
+<<switch $hour>>
+  <<case 0>>深夜
+  <<case 1>>深夜
+  <<case 2>>凌晨
+  <<case 3>>凌晨
+  <<case 4>>凌晨
+  <<case 5>>凌晨
+  <<case 6>>早上
+  <<case 7>>早上
+  <<case 8>>早上
+  <<case 9>>白天
+  <<case 10>>白天
+  <<case 11>>白天
+  <<case 12>>中午
+  <<case 13>>下午
+  <<case 14>>下午
+  <<case 15>>下午
+  <<case 16>>下午
+  <<case 17>>傍晚
+  <<case 18>>傍晚
+  <<case 19>>晚上
+  <<case 20>>晚上
+  <<case 21>>晚上
+  <<case 22>>晚上
+  <<case 23>>深夜
+<</switch>>
+<</widget>>
+
+/*展示时间系统的基本内容*/
+$year-$month-$day
+<<DATE3>><<DATE1>>
+<<DATE4>>$hour时$minute分
+/*如果你不喜欢$hour时$minute分这种写法也可以试试下面这个*/
+<<if $hour < 10>>
+  <<set $showhour = "'0' + '$hour'">>
+<<else>>
+  <<set $showhour = "$hour">>
+<</if>>
+<<if $minute < 10>>
+  <<set $showminute = "'0' + '$minute '">>
+<<else>>
+  <<set $showminute = "$minute ">>
+<</if>>
+
+展示：
+$showhour:$showminute
+
+/*要记得将timeWidget放在PassageReady里面哦*/

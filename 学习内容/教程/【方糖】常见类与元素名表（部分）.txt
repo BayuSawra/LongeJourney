@@ -1,0 +1,38 @@
+
+——————侧边栏——————
+侧边栏：#ui-bar
+侧边栏本体：#ui-bar-body
+侧边栏右侧按钮栏：#ui-bar-tray
+侧边栏收起状态：#ui-bar.stowed  (收起其实是整个侧边栏向左平移)
+————侧边栏按钮————
+侧边栏展开收齐按钮：#ui-bar-toggle
+侧边栏保存按钮：#menu-item-saves
+侧边栏重启按钮：#menu-item-restart
+侧边栏设置按钮：#menu-item-settings
+侧边栏后退按钮：#history-backward
+侧边栏前进按钮：#history-forward
+————侧边栏菜单按钮————
+菜单按钮总设置：#menu li
+菜单非第一排按钮：#menu li:not(:first-child)
+菜单按钮链接：#menu li a
+菜单按钮链接悬停：#menu li a:hover
+
+
+——————片段——————
+片段：#passages
+片段跳转链接：.passage .link-internal 
+片段跳转链接悬停：.passage a:hover
+
+
+——————弹窗——————
+弹窗总设置：#ui-dialog
+弹窗开启：#ui-dialog.open
+弹窗标题栏：#ui-dialog-titlebar
+弹窗标题：#ui-dialog-title
+弹窗关闭与其按钮：#ui-dialog-close
+弹窗关闭按钮悬停：#ui-dialog-close:hove
+弹窗内容：#ui-dialog-body
+弹窗内容非首行：#ui-dialog-body > *:first-child
+弹窗分割线：#ui-dialog-body hr
+弹窗内容按钮：#ui-dialog-body ul.buttons
+弹窗内容按钮布局：#ui-dialog-body ul.buttons li

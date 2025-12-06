@@ -1,0 +1,93 @@
+/* 侧边栏的基本样式设置 */  
+#ui-bar{  
+    /* 侧边栏排版，这里是居中 */  
+    text-align:center;  
+    /* 侧边栏描边，冒号后分别是粗细 样式 颜色 */  
+    border: 5px solid #f4eede;  
+    /* 侧边栏四边的内边距 */  
+    padding: 1px 1px 1px 1px;  
+    /* 侧边栏最大宽度 */  
+    max-width: 20em;  
+    /* 侧边栏外边距，水平居中 */  
+    margin: 0 auto;  
+    /* 侧边栏内字体颜色 */  
+    color:white;  
+    /* 侧边栏背景色，带有透明度 */  
+    background: rgba( 255, 255, 255, 0.25 );  
+    /* 添加阴影效果，增强立体感 */  
+    box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.37 );  
+    /* 应用背景模糊效果，提升视觉效果 */  
+    backdrop-filter: blur( 6px );  
+    -webkit-backdrop-filter: blur( 6px ); /* 兼容性处理，针对旧版Safari */  
+    /* 设置边框圆角 */    
+    border: 1px solid rgba( 255, 255, 255, 0.18 );  
+}   
+  
+/* 侧边栏收起时的样式 */  
+#ui-bar-toggle{  
+    /* 侧边栏收起时的最大宽度 */  
+    max-width: 15em;  
+    /* 侧边栏收起时的外边距，水平居中 */  
+    margin: 0 auto;  
+    /* 侧边栏收起时的字体颜色 */  
+    color:#f4eede;  
+}  
+  
+/* 侧边栏托盘中的按钮样式 */  
+#ui-bar-tray button {  
+    /* 透明背景 */  
+    background-color:rgba(255, 255, 255, 0);  
+    /* 透明边框 */  
+    border-color:rgba(255, 255, 255, 0);  
+    /* 字体颜色 */  
+    color:red;  
+    /* 边框圆角 */  
+    border-radius:5px;  
+}  
+  
+/* 侧边栏托盘中的按钮悬停效果 */  
+#ui-bar-tray button:hover {  
+    /* 悬停时保持透明背景 */  
+    background-color:rgba(255, 255, 255, 0);  
+    /* 悬停时保持透明边框 */  
+    border-color:rgba(255, 255, 255, 0);  
+    /* 悬停时字体颜色变黑色 */  
+    color:black;  
+    /* 边框圆角不变 */  
+    border-radius:5px;  
+}  
+  
+/* 侧边栏历史记录中的项样式 */  
+#ui-bar-history [id|="history"]:disabled {  
+    /* 禁用状态的字体颜色和背景色 */  
+    color: #444;  
+    background-color: transparent;  
+    /* 隐藏禁用项 */  
+    display:none;  
+}  
+  
+#ui-bar-history [id|="history"] {  
+    /* 内边距 */  
+    padding: 0.2em 0.45em 0.35em;  
+    /* 字体颜色 */  
+    color:white;  
+    /* 透明背景 */  
+    background-color: transparent;  
+}  
+  
+#ui-bar-history [id|="history"]:hover {  
+    /* 悬停时字体颜色变红 */  
+    color:red;  
+    /* 悬停时保持透明背景 */  
+    background-color: transparent;  
+}  
+  
+/* 隐藏侧边栏中的特定按钮 */  
+/* 隐藏侧边栏save按钮 */  
+#menu-item-saves {  
+    display:none;  
+}  
+/* 隐藏侧边栏重启按钮 */  
+#menu-item-restart {  
+    display:none;  
+}

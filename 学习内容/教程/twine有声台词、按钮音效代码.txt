@@ -1,0 +1,76 @@
+：：storyinit
+/*音频*/
+<<cacheaudio "testpattern" "F:/文档/Twine/故事/8pxvl-dvsco.mp3">>
+<<cacheaudio "char1" "F:/文档/Twine/故事/查理1.wav">>
+<<cacheaudio "char2" "F:/文档/Twine/故事/查理2.wav">>
+<<cacheaudio "char3" "F:/文档/Twine/故事/查理3.wav">>
+<<cacheaudio "char4" "F:/文档/Twine/故事/查理4.wav">>
+<<cacheaudio "butt1" "F:/文档/Twine/故事/butt1.mp3">>
+<<cacheaudio "butt2" "F:/文档/Twine/故事/butt2.mp3">>
+
+
+：：有声台词
+<<set $currentAudio to "">>  <!-- 初始化当前音频变量 -->
+你回想起博士的声音：
+<<linkreplace "继续" t8n>>
+<<if $currentAudio != "char1">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "char1">>
+<<audio "char1" play>>  <!-- 播放第一段音频 -->
+<</if>>
+“查理，你应该从现在开始，写下你脑子里面想到和记得的东西。”
+他强调：
+<<linkreplace "继续" t8n>>
+<<if $currentAudio != "char2">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "char2">>
+<<audio "char2" play>>  <!-- 播放第二段音频 -->
+<</if>>
+“这件事很重要，我写下来，他们才知道能不能用你。”
+你感到有些不安，告诉博士和尼玛教授：
+<<linkreplace "继续" t8n>>
+<<if $currentAudio != "char3">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "char3">>
+<<audio "char3" play>>  <!-- 播放第三段音频 -->
+<</if>>
+“我没办法写得很好。”
+博士微笑着说：
+<<linkreplace "继续" t8n>>
+<<if $currentAudio != "char4">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "char4">>
+<<audio "char4" play>>  <!-- 播放第四段音频 -->
+<</if>>
+“没关系，查理。”
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+<</linkreplace>>
+
+[[返回|$return]]
+
+
+
+：：按钮音效：
+<<set $currentAudio to "">>  <!-- 初始化当前音频变量 -->
+<<linkreplace "button1" t8n>>
+<<if $currentAudio != "butt1">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "butt1">>
+<<audio "butt1" play>>  <!-- 播放第一段音频 -->
+<</if>>
+
+
+<<linkreplace "button2" t8n>>
+<<if $currentAudio != "butt2">>
+<<audio $currentAudio stop>>  <!-- 停止当前音频 -->
+<<set $currentAudio to "butt2">>
+<<audio "butt2" play>>  <!-- 播放第二段音频 -->
+<</if>>
+
+<</linkreplace>>
+<</linkreplace>>
+
+
+[[返回|$return]]

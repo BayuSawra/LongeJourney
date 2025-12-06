@@ -1,0 +1,111 @@
+<<set $map01=[
+        {"index":1,"hang":1,"lie":2,"roomname":"102","roomid":"102","unlock":0,"img":"0"},
+        {"index":3,"hang":1,"lie":4,"roomname":"104","roomid":"104","unlock":1,"img":"0"},
+        {"index":5,"hang":1,"lie":6,"roomname":"106","roomid":"106","unlock":0,"img":"0"},
+        {"index":7,"hang":1,"lie":8,"roomname":"108","roomid":"108","unlock":1,"img":"0"},
+        {"index":9,"hang":2,"lie":1,"roomname":"201","roomid":"201","unlock":0,"img":"0"},
+        {"index":10,"hang":2,"lie":2,"roomname":"202","roomid":"202","unlock":1,"img":"0"},
+        {"index":11,"hang":2,"lie":3,"roomname":"203","roomid":"203","unlock":0,"img":"0"},
+        {"index":12,"hang":2,"lie":4,"roomname":"204","roomid":"204","unlock":1,"img":"0"},
+        {"index":13,"hang":2,"lie":5,"roomname":"205","roomid":"205","unlock":0,"img":"0"},
+        {"index":14,"hang":2,"lie":6,"roomname":"206","roomid":"206","unlock":1,"img":"0"},
+        {"index":15,"hang":2,"lie":7,"roomname":"207","roomid":"207","unlock":0,"img":"0"},
+        {"index":16,"hang":2,"lie":8,"roomname":"208","roomid":"208","unlock":1,"img":"0"},
+        {"index":17,"hang":2,"lie":9,"roomname":"209","roomid":"209","unlock":0,"img":"0"},
+        {"index":19,"hang":3,"lie":2,"roomname":"302","roomid":"302","unlock":1,"img":"0"},
+        {"index":21,"hang":3,"lie":4,"roomname":"304","roomid":"304","unlock":0,"img":"0"},
+        {"index":23,"hang":3,"lie":6,"roomname":"306","roomid":"306","unlock":1,"img":"0"},
+        {"index":25,"hang":3,"lie":8,"roomname":"308","roomid":"308","unlock":0,"img":"0"},
+        {"index":27,"hang":4,"lie":1,"roomname":"401","roomid":"401","unlock":1,"img":"0"},
+        {"index":28,"hang":4,"lie":2,"roomname":"402","roomid":"402","unlock":0,"img":"0"},
+        {"index":29,"hang":4,"lie":3,"roomname":"403","roomid":"403","unlock":1,"img":"0"},
+        {"index":33,"hang":4,"lie":7,"roomname":"407","roomid":"407","unlock":0,"img":"0"},
+        {"index":34,"hang":4,"lie":8,"roomname":"408","roomid":"408","unlock":1,"img":"0"},
+        {"index":35,"hang":4,"lie":9,"roomname":"409","roomid":"409","unlock":0,"img":"0"},
+        {"index":37,"hang":5,"lie":2,"roomname":"502","roomid":"502","unlock":1,"img":"0"},
+        {"index":43,"hang":5,"lie":8,"roomname":"508","roomid":"508","unlock":0,"img":"0"},
+        {"index":45,"hang":6,"lie":1,"roomname":"601","roomid":"601","unlock":1,"img":"0"},
+        {"index":46,"hang":6,"lie":2,"roomname":"602","roomid":"602","unlock":0,"img":"0"},
+        {"index":47,"hang":6,"lie":3,"roomname":"603","roomid":"603","unlock":1,"img":"0"},
+        {"index":51,"hang":6,"lie":7,"roomname":"607","roomid":"607","unlock":0,"img":"0"},
+        {"index":52,"hang":6,"lie":8,"roomname":"608","roomid":"608","unlock":1,"img":"0"},
+        {"index":53,"hang":6,"lie":9,"roomname":"609","roomid":"609","unlock":0,"img":"0"},
+        {"index":55,"hang":7,"lie":2,"roomname":"702","roomid":"702","unlock":1,"img":"0"},
+        {"index":57,"hang":7,"lie":4,"roomname":"704","roomid":"704","unlock":0,"img":"0"},
+        {"index":59,"hang":7,"lie":6,"roomname":"706","roomid":"706","unlock":1,"img":"0"},
+        {"index":61,"hang":7,"lie":8,"roomname":"708","roomid":"708","unlock":0,"img":"0"},
+        {"index":63,"hang":8,"lie":1,"roomname":"801","roomid":"801","unlock":1,"img":"0"},
+        {"index":64,"hang":8,"lie":2,"roomname":"802","roomid":"802","unlock":0,"img":"0"},
+        {"index":65,"hang":8,"lie":3,"roomname":"803","roomid":"803","unlock":1,"img":"0"},
+        {"index":66,"hang":8,"lie":4,"roomname":"804","roomid":"804","unlock":0,"img":"0"},
+        {"index":67,"hang":8,"lie":5,"roomname":"805","roomid":"805","unlock":1,"img":"0"},
+        {"index":68,"hang":8,"lie":6,"roomname":"806","roomid":"806","unlock":0,"img":"0"},
+        {"index":69,"hang":8,"lie":7,"roomname":"807","roomid":"807","unlock":1,"img":"0"},
+        {"index":70,"hang":8,"lie":8,"roomname":"808","roomid":"808","unlock":0,"img":"0"},
+        {"index":71,"hang":8,"lie":9,"roomname":"809","roomid":"809","unlock":1,"img":"0"},
+        {"index":73,"hang":9,"lie":2,"roomname":"902","roomid":"902","unlock":0,"img":"0"},
+        {"index":75,"hang":9,"lie":4,"roomname":"904","roomid":"904","unlock":1,"img":"0"},
+        {"index":77,"hang":9,"lie":6,"roomname":"906","roomid":"906","unlock":0,"img":"0"},
+        {"index":79,"hang":9,"lie":8,"roomname":"908","roomid":"908","unlock":1,"img":"0"}
+        
+        ]>>
+
+
+<style>
+.maps{
+    width:450px;
+    height:450px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+ }
+ .maps100{
+    width:46px;
+    height: 46px;
+    margin:2px;
+     }
+    
+     .mapsroom{
+        width:46px;
+        height: 46px;
+        margin:2px;
+        background-color:rgb(187, 187, 187);
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        }
+        .mapsroom01{
+            width:46px;
+            height: 46px;
+            margin:2px;
+            background-color:rgb(0, 174, 255);
+            border-radius: 5px;
+            text-align: center;
+            }
+                    
+</style>
+
+
+
+<div id="maps" class="maps">
+/*生成9*9的格子 */
+<<for _j=0;_j<81;_j++>>
+<<capture _room01>>
+    <<set _room01 to $map01.filter(e => e.index == _j)>>  /*挑选对应的房间*/
+    <div class="maps100">
+        <<if _room01!="">>
+        <<if _room01[0].roomid==$return>> /*这里需要根据游戏架构调整，如果是弹窗则需要等于return或者其他保存的内容，如果是页面中显示，则passage即可*/
+            <div class="mapsroom01">
+            _room01[0].roomid
+            </div>
+        <<else>>
+            <div class="mapsroom" data-passage="_room01[0].roomid">
+            _room01[0].roomid
+            </div>
+        <</if>>
+        <</if>>
+    </div>
+<</capture>>
+<</for>>
+</div>

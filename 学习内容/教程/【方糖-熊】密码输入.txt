@@ -1,0 +1,31 @@
+<<set $truePassword="9527">>
+
+<<set $intoPassword= "0">>
+<<set $firstinto= true>>
+请输入密码：
+<<do>>
+<<if $intoPassword.length<1>><<set $firstinto= true>><<set $intoPassword= "0">><</if>>
+<<if $firstinto== true>>$intoPassword<<else>>@@color:red;$intoPassword@@<</if>>
+<</do>>
+
+<<button "1">><<if $firstinto>><<set $intoPassword="1">><<set $firstinto= false>><<else>><<set $intoPassword+="1">><</if>><<redo>><</button>>
+<<button "2">><<if $firstinto>><<set $intoPassword="2">><<set $firstinto= false>><<else>><<set $intoPassword+="2">><</if>><<redo>><</button>>
+<<button "3">><<if $firstinto>><<set $intoPassword="3">><<set $firstinto= false>><<else>><<set $intoPassword+="3">><</if>><<redo>><</button>>
+<<button "4">><<if $firstinto>><<set $intoPassword="4">><<set $firstinto= false>><<else>><<set $intoPassword+="4">><</if>><<redo>><</button>>
+<<button "5">><<if $firstinto>><<set $intoPassword="5">><<set $firstinto= false>><<else>><<set $intoPassword+="5">><</if>><<redo>><</button>>
+<<button "6">><<if $firstinto>><<set $intoPassword="6">><<set $firstinto= false>><<else>><<set $intoPassword+="6">><</if>><<redo>><</button>>
+<<button "7">><<if $firstinto>><<set $intoPassword="7">><<set $firstinto= false>><<else>><<set $intoPassword+="7">><</if>><<redo>><</button>>
+<<button "8">><<if $firstinto>><<set $intoPassword="8">><<set $firstinto= false>><<else>><<set $intoPassword+="8">><</if>><<redo>><</button>>
+<<button "9">><<if $firstinto>><<set $intoPassword="9">><<set $firstinto= false>><<else>><<set $intoPassword+="9">><</if>><<redo>><</button>>
+<<button "0">><<if $firstinto>><<set $intoPassword="0">><<set $firstinto= false>><<else>><<set $intoPassword+="0">><</if>><<redo>><</button>>
+
+<<button "C">><<set $intoPassword="0">><<set $firstinto= true>><<redo>><</button>>
+<<button "⬅">><<set $intoPassword=$intoPassword.slice(0,-1)>><<redo>><</button>>
+<<button "enter">>
+<<if $truePassword===$intoPassword>>
+    <<run UI.alert("验证通过")>>
+<<else>>
+    <<set $intoPassword="0">><<set $firstinto= true>><<redo>>
+    <<run UI.alert("验证失败")>>
+<</if>>
+<</button>>

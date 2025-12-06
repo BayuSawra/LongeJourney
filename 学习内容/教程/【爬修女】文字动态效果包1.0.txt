@@ -1,0 +1,90 @@
+/* ①新建一个片段随便起名 */
+/* ②添加标签【widget】 */
+/* ③复制下面的东西进去 */
+/* ④不要带样式表的内容 */
+
+/* 字体轻模糊 */
+<<widget "mohu1" container>><p class="mohu1">_contents</p><</widget>>
+/* 字体重模糊 */
+<<widget "mohu2" container>><p class="mohu2">_contents</p><</widget>>
+/* 字体震动 */
+<<widget "zhendong" container>><p class="zhendong">_contents</p><</widget>>
+/* 字体向左旋转90度，用来制作裂开效果 */
+<<widget "xuanzhuan" container>><p class="xuanzhuan">_contents</p><</widget>>
+/* 字体向右旋转90度，用来制作裂开效果 */
+<<widget "xuanzhuan1" container>><p class="xuanzhuan1">_contents</p><</widget>>
+
+
+/* ————分割线———— */
+/* ————分割线———— */
+/* ————分割线———— */
+/* 复制下面的东西进样式表里 */
+/* Twine故事栏下的【# 样式表】 */
+/* 不要去改类名，除非你自己会改 */
+/* 防止改完不生效，然后找半天 */
+/* 能复制就不要手打，小心拼写错误 */
+/* 复制下面的东西进样式表里 */
+
+/* 字体发光 */
+.faguang {
+   text-shadow: #FC0000 1px 0 10px;
+    }
+
+/* 字体轻模糊 */
+.mohu1 {
+    text-shadow: rgb(255, 255, 255) 0em 0em 0.12em; 
+    color: transparent;
+    display: inline;
+    }
+
+/* 字体重模糊 */
+.mohu2 {
+    text-shadow: rgb(255, 255, 255) 0em 0em 0.2em; 
+    color: transparent;
+    display: inline;
+    }
+
+/* 字体左右震动 */
+.zhendong{
+          animation: rotate 0.3s ease infinite;
+          display:inline-block;
+      }
+@keyframes rotate {
+        0% { transform:translateX(0); }
+        20% { transform:translateX(-2px); }
+        60% { transform:translateX(2px); }
+        80% { transform:translateX(-2px); }
+        100% { transform:translateX(0); }
+    }
+
+/* 字体向左旋转90度，用来制作裂开效果 */
+.xuanzhuan{
+          animation: rotate 0.7s ease infinite;
+          display:inline-block;
+          animation-iteration-count:1;
+          animation-fill-mode:forwards;
+      }
+@keyframes rotate {
+        0% { transform:rotate(0); }
+        20% { transform:rotate(20deg); }
+        50% { transform:rotate(45deg); }
+        80% { transform:rotate(65deg); }
+        100% { transform:rotate(90deg); }
+    }
+
+/* 字体向右旋转90度，用来制作裂开效果 */
+.xuanzhuan1{
+          animation: rotate1 0.7s ease infinite;
+          display:inline-block;
+          animation-iteration-count:1;
+          animation-fill-mode:forwards;
+      }
+@keyframes rotate1 {
+        0% { transform:rotate(0); }
+        20% { transform:rotate(-20deg); }
+        50% { transform:rotate(-45deg); }
+        80% { transform:rotate(-65deg); }
+        100% { transform:rotate(-90deg); }
+    }
+
+

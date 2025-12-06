@@ -1,0 +1,74 @@
+：：写在开头的初始化
+<<set $wood = {picknum: 0, achievenum: 0, shownum: 0}>>
+
+：：收集成就测试
+<<button "收集十个木头">>
+    <<set $wood.picknum = $wood.picknum + 10>>
+    <<set $wood.achievenum = $wood.achievenum + 10>>
+    
+    <<script>>
+        alert("你已经收集了10个木头，历史收集" + State.variables.wood.achievenum + "个");
+    <</script>>
+    
+    <<if $wood.achievenum >= 10 && $wood.shownum == 0>>
+        <<set $wood.shownum = $wood.shownum + 1>>
+        <<script>>
+            alert("你已经成功收集10个木头，历史收集" + State.variables.wood.achievenum + "个,达成R级成就");
+        <</script>>
+    <</if>>
+    
+    <<if $wood.achievenum >= 100 && $wood.shownum == 1>>
+        <<set $wood.shownum = $wood.shownum + 1>>
+        <<script>>
+            alert("你已经成功收集100个木头，历史收集" + State.variables.wood.achievenum + "个，达成SR级成就");
+        <</script>>
+    <</if>>
+    
+    <<if $wood.achievenum >= 1000 && $wood.shownum == 2>>
+        <<set $wood.shownum = $wood.shownum + 1>>
+        <<script>>
+            alert("你已经成功收集1000个木头，历史收集" + State.variables.wood.achievenum + "个，达成SSR级成就");
+        <</script>>
+    <</if>>
+    
+    你收集了10个木头！
+<</button>>
+
+
+<<button "使用十个木头">>
+    <<set $wood.picknum = $wood.picknum - 10>>
+        <<script>>
+        alert("你使用了10个木头");
+    <</script>>
+<</button>>
+[[暂时的背包]]
+[[暂时的成就条]]
+
+：：暂时的背包
+你现在拥有的木头的数量为$wood.picknum
+
+[[收集成就测试]]
+
+
+：：暂时的成就条
+:: Achievements
+<<if $wood.shownum == 0>>
+    N级：收集木头$wood.achievenum/10个
+    <br>
+    下一级需要收集10个木头。
+<<elseif $wood.shownum == 1>>
+    R级：收集木头$wood.achievenum/100个
+    <br>
+    下一级需要收集100个木头。
+<<elseif $wood.shownum == 2>>
+    SR级：收集木头$wood.achievenum/1000个
+    <br>
+    下一级需要收集1000个木头。
+<<elseif $wood.shownum == 3>>
+    SSR级：收集木头$wood.achievenum/∞
+    <br>
+    你已经达成成就的最高级。
+<</if>>
+
+
+[[收集成就测试]]
