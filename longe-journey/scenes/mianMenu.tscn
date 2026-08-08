@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bh5m0e3274r56"]
 
+[ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="1_vgm6g"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp7ys"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 5
@@ -16,18 +18,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=516829063]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=531095493]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -71.5
-offset_top = -16.5
-offset_right = 71.5
-offset_bottom = 16.5
+offset_left = -74.5
+offset_top = -43.0
+offset_right = 82.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Button_start" type="Button" parent="VBoxContainer" unique_id=516829063]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
 text = "开始游戏"
+
+[node name="Button_setting" type="Button" parent="VBoxContainer" unique_id=1801085484]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_vgm6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+text = "游戏设置"
+
+[node name="Button_exit" type="Button" parent="VBoxContainer" unique_id=299166154]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_vgm6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+text = "游戏设置"

@@ -23,7 +23,7 @@ MCPRuntimeBridge="*uid://wk2yhw3winuo"
 [dialogic]
 
 directories/dch_directory={
-"我": "res://我.dch"
+"我": "res://character/我.dch"
 }
 directories/dtl_directory={
 "timeline1_0": "res://timelines/timeline1_0.dtl"
