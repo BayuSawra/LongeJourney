@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://bh5m0e3274r56"]
 
+[ext_resource type="Texture2D" uid="uid://b48dskfa0av7b" path="res://art/1.png" id="1_0sotp"]
+[ext_resource type="Script" uid="uid://wo0wwfq4qvyw" path="res://scripts/extends Control.gd" id="1_swmmr"]
 [ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="1_vgm6g"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp7ys"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swmmr"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp7ys"]
+bg_color = Color(0.60662574, 0.60662585, 0.6066258, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-shadow_color = Color(0.99999994, 0.3707805, 0.91098195, 0.6)
+shadow_color = Color(0.73357177, 0.8554693, 0.9336531, 0.6)
 
 [node name="MianMenu" type="Control" unique_id=715804220]
 layout_mode = 3
@@ -17,6 +22,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_swmmr")
+
+[node name="Panel" type="Panel" parent="." unique_id=1948078779]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_swmmr")
+
+[node name="img_qiuyin" type="TextureRect" parent="Panel" unique_id=493532598]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 48.0
+offset_right = 829.0
+offset_bottom = 430.0
+texture = ExtResource("1_0sotp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=531095493]
 layout_mode = 1
@@ -25,16 +48,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -74.5
-offset_top = -43.0
-offset_right = 82.0
-offset_bottom = 70.0
+offset_left = -45.0
+offset_top = 136.0
+offset_right = 92.5
+offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 6
 
 [node name="Button_start" type="Button" parent="VBoxContainer" unique_id=516829063]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
 text = "开始游戏"
@@ -42,6 +67,7 @@ text = "开始游戏"
 [node name="Button_setting" type="Button" parent="VBoxContainer" unique_id=1801085484]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
 text = "游戏设置"
@@ -49,6 +75,9 @@ text = "游戏设置"
 [node name="Button_exit" type="Button" parent="VBoxContainer" unique_id=299166154]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
 text = "游戏设置"
+
+[connection signal="pressed" from="VBoxContainer/Button_start" to="." method="_on_button_start_pressed"]

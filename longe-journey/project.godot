@@ -35,6 +35,11 @@ layout/style_directory={
 layout/style_list=["res://chat_styel.tres"]
 layout/default_style="res://chat_styel.tres"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="LongeJourney"
