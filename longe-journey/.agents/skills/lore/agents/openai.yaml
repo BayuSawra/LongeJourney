@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lore 剧情连续性"
+  short_description: "维护剧情、角色、地点与时间线的连续性，让故事世界保持一致"
+  default_prompt: "Use $lore to review the current story bible before writing new dialogue."

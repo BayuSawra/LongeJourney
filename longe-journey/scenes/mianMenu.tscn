@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bh5m0e3274r56"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp7ys"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.99999994, 0.3707805, 0.91098195, 0.6)
+
+[node name="MianMenu" type="Control" unique_id=715804220]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=516829063]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -16.5
+offset_right = 71.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+text = "开始游戏"
