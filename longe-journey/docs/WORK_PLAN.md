@@ -40,8 +40,9 @@ GameState 与 HUD 已完成并提交：
 
 当前工作区状态：
 
-- 阶段 4 第一批已提交；第二批（`02_ward.dtl` 至 `06_luyuan.dtl` 及登记配置）待提交。
-- `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，禁止提交。
+- 阶段 4 第二批已提交（`6a46e04`）。
+- `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，保持未跟踪，禁止提交。
+- `06_luyuan.dtl` 是当前已完成的最末 timeline，下一步继续 `07_maze`。
 - 已存在的 `timelines/timeline1_0.dtl` 与其 `.uid` 不要误删，本次不提交。
 
 ### 1.4 最近检查记录（2026-08-15）
