@@ -23,7 +23,21 @@ GameState="*res://scripts/autoload/game_state.gd"
 
 [dialogic]
 
-variables={"energy": 100, "calm": 100, "money": 20, "earthworm": 0, "flower": 0, "wife": 0, "hualan": false, "jiahua": false, "player_name": "无名王", "visit_huadian": 0, "visit_shiling": 0, "visit_luyuan": 0, "visit_ting_shifang": 0}
+variables={
+"calm": 100,
+"earthworm": 0,
+"energy": 100,
+"flower": 0,
+"hualan": false,
+"jiahua": false,
+"money": 20,
+"player_name": "无名王",
+"visit_huadian": 0,
+"visit_luyuan": 0,
+"visit_shiling": 0,
+"visit_ting_shifang": 0,
+"wife": 0
+}
 directories/dch_directory={
 "我": "res://character/我.dch"
 }

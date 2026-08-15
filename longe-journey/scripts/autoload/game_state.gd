@@ -37,6 +37,13 @@ func set_var(name: String, value: Variant) -> void:
 
 func _on_dialogic_variable_changed(info: Dictionary) -> void:
 	var variable: String = info.get("variable", "")
-	if has_property(variable):
+	if _has_property(variable):
 		set(variable, info.get("new_value"))
 		value_changed.emit(variable, get(variable))
+
+
+func _has_property(property_name: String) -> bool:
+	for property in get_property_list():
+		if property["name"] == property_name:
+			return true
+	return false
