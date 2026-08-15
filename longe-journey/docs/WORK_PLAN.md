@@ -40,6 +40,14 @@ GameState 与 HUD 已完成并提交：
 当前工作区状态：
 
 - 当前工作区干净，GameState 与 HUD 已完成并提交，无需处理 Godot 编辑器写入的 `project.godot` 改动。
+- 计划文档最近一次更新：`837d64d`（docs: update work plan with GameState and HUD progress）。
+
+### 1.4 最近检查记录（2026-08-15）
+
+- `tools/check_lore_canon.py`：通过（exit 0）。
+- `tools/update_lore_index.py`：通过（exit 0），`lore/INDEX.md` 无新增 diff。
+- 登记检查：`project.godot` 已注册 `Dialogic` 与 `GameState` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
+- 工作区：干净，无未提交改动。
 
 ## 2. 目录结构与工具说明
 
@@ -151,11 +159,12 @@ visit_ting_shifang=0
 - 当前进度：已完成。`scenes/hud.tscn` + `scripts/hud.gd` 已落地，并在 `scenes/scene_1.tscn` 挂载 HUD 实例；订阅 `GameState.value_changed` 实时刷新。
 - 对应提交：`3b05895`。
 
-### 阶段 3：结局监视
+### 阶段 3：结局监视（下一步优先）
 
 - 目标：定义结局条件并集中判定。
 - 完成定义：结局判定逻辑集中在一个脚本/节点中，`wife`、`flower`、`earthworm`、`hualan`、`jiahua` 等关键分支可触发对应结局。
 - 验证：用测试用变量组合逐一走到各结局。
+- 当前进度：未开始。下一步先集中定义结局分支，再记录每个结局的变量组合与触发路径。
 
 ### 阶段 4：按地点迁移 timeline
 
@@ -218,3 +227,4 @@ visit_ting_shifang=0
 3. 运行 `git status`，确认工作区当前改动。
 4. 明确本次要推进的阶段/子任务，先列“完成定义 + 验证方式”。
 5. 动手改代码或内容，完成后跑校验、跑游戏流程、按第 7 节规范提交。
+6. 可先看第 1.4 节最近检查记录；涉及 lore/timeline 的改动仍需重跑对应校验。
