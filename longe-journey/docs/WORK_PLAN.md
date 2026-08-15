@@ -36,7 +36,7 @@ GameState 与 HUD 已完成并提交：
 - 提交 `1d24874`：feat: add GameState autoload for shared variables
 - 提交 `c0243f5`：fix: fix GameState parser error for property lookup
 - 提交 `3b05895`：feat: add persistent HUD for core stats
-- 提交 `<hash>`：feat: add ending manager and debug panel（hash 提交成功后补填）
+- 提交 `8d88040`：feat: add ending manager and debug panel
 
 当前工作区状态：
 
