@@ -135,6 +135,7 @@ visit_ting_shifang=0
 - 目标：把变量清单做成单一 `GameState` autoload，统一读写。
 - 完成定义：所有现有 timeline 的变量读写都走 `GameState`；变量默认值与上文清单一致。
 - 验证：启动游戏后检查变量初始值；推进剧情后检查数值变化持久。
+- 当前进度：已创建 `scripts/autoload/game_state.gd`，并注册到 `project.godot` 的 `[autoload]`；变量默认值已登记到 `[dialogic] variables=`。基础落地完成，运行时行为需在 Godot 编辑器中启动验证。
 
 ### 阶段 2：HUD / 常驻状态
 
