@@ -36,6 +36,7 @@ GameState 与 HUD 已完成并提交：
 - 提交 `1d24874`：feat: add GameState autoload for shared variables
 - 提交 `c0243f5`：fix: fix GameState parser error for property lookup
 - 提交 `3b05895`：feat: add persistent HUD for core stats
+- 提交 `<hash>`：feat: add ending manager and debug panel（hash 提交成功后补填）
 
 当前工作区状态：
 
@@ -46,8 +47,8 @@ GameState 与 HUD 已完成并提交：
 
 - `tools/check_lore_canon.py`：通过（exit 0）。
 - `tools/update_lore_index.py`：通过（exit 0），`lore/INDEX.md` 无新增 diff。
-- 登记检查：`project.godot` 已注册 `Dialogic` 与 `GameState` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
-- 工作区：干净，无未提交改动。
+- 登记检查：`project.godot` 已注册 `Dialogic`、`GameState` 与 `EndingManager` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD` 与 `EndingDebugPanel`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
+- 工作区：本次 3 个文件（`ending_manager.gd`、`ending_debug_panel.gd`、`ending_debug_panel.tscn`）已提交。
 
 ## 2. 目录结构与工具说明
 
@@ -159,12 +160,12 @@ visit_ting_shifang=0
 - 当前进度：已完成。`scenes/hud.tscn` + `scripts/hud.gd` 已落地，并在 `scenes/scene_1.tscn` 挂载 HUD 实例；订阅 `GameState.value_changed` 实时刷新。
 - 对应提交：`3b05895`。
 
-### 阶段 3：结局监视（下一步优先）
+### 阶段 3：结局监视
 
 - 目标：定义结局条件并集中判定。
 - 完成定义：结局判定逻辑集中在一个脚本/节点中，`wife`、`flower`、`earthworm`、`hualan`、`jiahua` 等关键分支可触发对应结局。
 - 验证：用测试用变量组合逐一走到各结局。
-- 当前进度：未开始。下一步先集中定义结局分支，再记录每个结局的变量组合与触发路径。
+- 当前进度：已完成基础监视。新增 `scripts/autoload/ending_manager.gd` autoload，监听 `GameState.value_changed`，定义 `ending_bankrupt`（money<0）、`ending_crazy`（calm<0）、`ending_exhausted`（energy<0）三个结局并去重触发；新增 `scripts/ending_debug_panel.gd` + `scenes/ending_debug_panel.tscn` 调试面板，已挂载到 `scenes/scene_1.tscn`，可写入 energy/calm/money 并实时查看触发结局。后续再把 wife/flower/earthworm/hualan/jiahua 分支结局接入同一管理器。
 
 ### 阶段 4：按地点迁移 timeline
 
