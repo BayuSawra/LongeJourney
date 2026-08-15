@@ -1,0 +1,294 @@
+[color=#696969][i]⁜当前位置  狮岭⁜[/i][/color]
+
+if {visit_shiling} == 1:
+    狮岭山脚下立着块旧碑，说王历新曾在这里凿开洞窟，里头卧着一头石狮子。
+
+    - 开始搜索
+        set {energy} -= 5
+        我沿着山路往里走，刚转过一个弯，就被几个凶神恶煞的人围住了。
+
+        “此路是我开！留下买路财！”
+
+        - 仔细看看他们
+            这些人脸上糊着油彩，腰上别着塑料刀，分明是演员假扮的土匪。
+
+            崖壁上长着一朵鸢尾花，我伸手摘了下来。
+
+            set {flower} += 1
+
+            - 再仔细看看那朵花
+                花瓣是假的，塑料气味刺鼻。
+
+                - 扔掉假花
+                    我把假花丢进草丛。
+
+                    set {flower} -= 1
+                    set {jiahua} = false
+
+                    - 继续搜索
+                        set {energy} -= 5
+                        前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+
+                        - 继续搜索
+                            set {energy} -= 5
+                            越往里走越不对劲，山在烧，人影泛着红。
+
+                            - 继续搜索
+                                白玉狮子庙前摆着供台，台上插着一朵牡丹。
+
+                                - 偷走牡丹
+                                    我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+
+                                    set {flower} += 1
+                                    set {earthworm} += 1
+                                    set {calm} -= 10
+                                    set {calm} -= 15
+
+                                    现在手里一共有 {flower} 朵花。
+
+                                    我原路折回，花了两块钱坐车回路口。
+
+                                    set {money} -= 2
+                                    jump 03_crossroads
+                                - 什么都不做
+                                    我没碰那朵牡丹，转身原路返回。
+
+                                    现在手里一共有 {flower} 朵花。
+
+                                    我花了两块钱坐车回路口。
+
+                                    set {money} -= 2
+                                    jump 03_crossroads
+                                - 结束搜索
+                                    现在手里一共有 {flower} 朵花。
+
+                                    我花了两块钱坐车回路口。
+
+                                    set {money} -= 2
+                                    jump 03_crossroads
+                            - 结束搜索
+                                现在手里一共有 {flower} 朵花。
+
+                                我花了两块钱坐车回路口。
+
+                                set {money} -= 2
+                                jump 03_crossroads
+                        - 结束搜索
+                            现在手里一共有 {flower} 朵花。
+
+                            我花了两块钱坐车回路口。
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                    - 不扔，留着
+                        - 继续搜索
+                            set {energy} -= 5
+                            前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+
+                            - 继续搜索
+                                set {energy} -= 5
+                                越往里走越不对劲，山在烧，人影泛着红。
+
+                                - 继续搜索
+                                    白玉狮子庙前摆着供台，台上插着一朵牡丹。
+
+                                    - 偷走牡丹
+                                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+
+                                        set {flower} += 1
+                                        set {earthworm} += 1
+                                        set {calm} -= 10
+                                        set {calm} -= 15
+
+                                        现在手里一共有 {flower} 朵花。
+
+                                        我原路折回，花了两块钱坐车回路口。
+
+                                        set {money} -= 2
+                                        jump 03_crossroads
+                                    - 什么都不做
+                                        我没碰那朵牡丹，转身原路返回。
+
+                                        现在手里一共有 {flower} 朵花。
+
+                                        我花了两块钱坐车回路口。
+
+                                        set {money} -= 2
+                                        jump 03_crossroads
+                                    - 结束搜索
+                                        现在手里一共有 {flower} 朵花。
+
+                                        我花了两块钱坐车回路口。
+
+                                        set {money} -= 2
+                                        jump 03_crossroads
+                                - 结束搜索
+                                    现在手里一共有 {flower} 朵花。
+
+                                    我花了两块钱坐车回路口。
+
+                                    set {money} -= 2
+                                    jump 03_crossroads
+                        - 结束搜索
+                            现在手里一共有 {flower} 朵花。
+
+                            我花了两块钱坐车回路口。
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                - 继续搜索
+                    set {energy} -= 5
+                    前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+
+                    - 继续搜索
+                        set {energy} -= 5
+                        越往里走越不对劲，山在烧，人影泛着红。
+
+                        - 继续搜索
+                            白玉狮子庙前摆着供台，台上插着一朵牡丹。
+
+                            - 偷走牡丹
+                                我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+
+                                set {flower} += 1
+                                set {earthworm} += 1
+                                set {calm} -= 10
+                                set {calm} -= 15
+
+                                现在手里一共有 {flower} 朵花。
+
+                                我原路折回，花了两块钱坐车回路口。
+
+                                set {money} -= 2
+                                jump 03_crossroads
+                            - 什么都不做
+                                我没碰那朵牡丹，转身原路返回。
+
+                                现在手里一共有 {flower} 朵花。
+
+                                我花了两块钱坐车回路口。
+
+                                set {money} -= 2
+                                jump 03_crossroads
+                            - 结束搜索
+                                现在手里一共有 {flower} 朵花。
+
+                                我花了两块钱坐车回路口。
+
+                                set {money} -= 2
+                                jump 03_crossroads
+                    - 结束搜索
+                        现在手里一共有 {flower} 朵花。
+
+                        我花了两块钱坐车回路口。
+
+                        set {money} -= 2
+                        jump 03_crossroads
+            - 继续搜索
+                set {energy} -= 5
+                前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+
+                - 继续搜索
+                    set {energy} -= 5
+                    越往里走越不对劲，山在烧，人影泛着红。
+
+                    - 继续搜索
+                        白玉狮子庙前摆着供台，台上插着一朵牡丹。
+
+                        - 偷走牡丹
+                            我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+
+                            set {flower} += 1
+                            set {earthworm} += 1
+                            set {calm} -= 10
+                            set {calm} -= 15
+
+                            现在手里一共有 {flower} 朵花。
+
+                            我原路折回，花了两块钱坐车回路口。
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                        - 什么都不做
+                            我没碰那朵牡丹，转身原路返回。
+
+                            现在手里一共有 {flower} 朵花。
+
+                            我花了两块钱坐车回路口。
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                        - 结束搜索
+                            现在手里一共有 {flower} 朵花。
+
+                            我花了两块钱坐车回路口。
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                - 结束搜索
+                    现在手里一共有 {flower} 朵花。
+
+                    我花了两块钱坐车回路口。
+
+                    set {money} -= 2
+                    jump 03_crossroads
+        - 继续搜索
+            set {energy} -= 5
+            前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+
+            - 继续搜索
+                set {energy} -= 5
+                越往里走越不对劲，山在烧，人影泛着红。
+
+                - 继续搜索
+                    白玉狮子庙前摆着供台，台上插着一朵牡丹。
+
+                    - 偷走牡丹
+                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+
+                        set {flower} += 1
+                        set {earthworm} += 1
+                        set {calm} -= 10
+                        set {calm} -= 15
+
+                        现在手里一共有 {flower} 朵花。
+
+                        我原路折回，花了两块钱坐车回路口。
+
+                        set {money} -= 2
+                        jump 03_crossroads
+                    - 什么都不做
+                        我没碰那朵牡丹，转身原路返回。
+
+                        现在手里一共有 {flower} 朵花。
+
+                        我花了两块钱坐车回路口。
+
+                        set {money} -= 2
+                        jump 03_crossroads
+                    - 结束搜索
+                        现在手里一共有 {flower} 朵花。
+
+                        我花了两块钱坐车回路口。
+
+                        set {money} -= 2
+                        jump 03_crossroads
+                - 结束搜索
+                    现在手里一共有 {flower} 朵花。
+
+                    我花了两块钱坐车回路口。
+
+                    set {money} -= 2
+                    jump 03_crossroads
+        - 结束搜索
+            现在手里一共有 {flower} 朵花。
+
+            我花了两块钱坐车回路口。
+
+            set {money} -= 2
+            jump 03_crossroads
+else:
+    狮岭已经关门了，铁门从里面锁得严严实实。
+
+    - 回路口
+        jump 03_crossroads

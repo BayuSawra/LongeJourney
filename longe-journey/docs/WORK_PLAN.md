@@ -40,7 +40,7 @@ GameState 与 HUD 已完成并提交：
 
 当前工作区状态：
 
-- 阶段 4 第一批未提交：`timelines/00_start.dtl`、`01_hospital.dtl`、`02_ward.dtl`、`03_crossroads.dtl`、`scripts/start.gd`，以及本计划文档。
+- 阶段 4 第一批已提交；第二批（`02_ward.dtl` 至 `06_luyuan.dtl` 及登记配置）待提交。
 - `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，禁止提交。
 - 已存在的 `timelines/timeline1_0.dtl` 与其 `.uid` 不要误删，本次不提交。
 
@@ -58,6 +58,13 @@ GameState 与 HUD 已完成并提交：
 - 新增 `timelines/00_start.dtl`（公交车上，跳转 `01_hospital`）与 `01_hospital.dtl`（医院楼下，跳转 `02_ward` / `03_crossroads`）。
 - `02_ward.dtl`、`03_crossroads.dtl` 为占位 TODO，尚未做真实迁移。
 - 提交：`feat: migrate opening and hospital timelines`。
+
+阶段 4 第二批检查（2026-08-15）：
+
+- `tools/check_lore_canon.py`：通过（exit 0）。
+- `project.godot` 的 `directories/dtl_directory` 已登记 `04_flower_shop`、`05_shiling`、`06_luyuan`，插在 `03_crossroads` 之后、`timeline1_0` 之前。
+- 新增 `timelines/04_flower_shop.dtl`、`05_shiling.dtl`、`06_luyuan.dtl`；`02_ward.dtl`、`03_crossroads.dtl` 已从占位 TODO 实现为真实迁移。
+- 提交：`feat: implement ward, crossroads, flower shop, shiling, and luyuan timelines`。
 
 ## 2. 目录结构与工具说明
 
@@ -180,8 +187,8 @@ visit_ting_shifang=0
 
 - 按推荐顺序逐个把原剧情迁移为 `00_start.dtl` 至 `09_ending.dtl`。
 - 每个 timeline 完成定义：可从头到尾走通，选项齐全，变量变化正确。
-- 当前进度：`00_start`、`01_hospital` 已按原剧情迁移并提交；`02_ward`、`03_crossroads` 为占位 TODO，下一步继续 `04_flower_shop`。
-- 对应提交：阶段 4 第一批（见 1.4）。
+- 当前进度：`02_ward` 至 `06_luyuan` 已实现并通过校验，下一步继续 `07_maze`。
+- 对应提交：阶段 4 第一批与第二批（见 1.4）。
 
 ### 阶段 5：文本 / 变量迁移
 

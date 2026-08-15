@@ -43,8 +43,15 @@ directories/dch_directory={
 "我": "res://character/我.dch"
 }
 directories/dtl_directory={
-"timeline1_0": "res://timelines/timeline1_0.dtl"
-}
+"00_start": "res://timelines/00_start.dtl",
+"01_hospital": "res://timelines/01_hospital.dtl",
+  "02_ward": "res://timelines/02_ward.dtl",
+  "03_crossroads": "res://timelines/03_crossroads.dtl",
+  "04_flower_shop": "res://timelines/04_flower_shop.dtl",
+  "05_shiling": "res://timelines/05_shiling.dtl",
+  "06_luyuan": "res://timelines/06_luyuan.dtl",
+  "timeline1_0": "res://timelines/timeline1_0.dtl"
+  }
 layout/style_directory={
 "": "res://chat_styel.tres",
 "chat_styel": "res://chat_styel.tres"

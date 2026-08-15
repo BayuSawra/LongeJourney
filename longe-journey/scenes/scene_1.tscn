@@ -7,5 +7,6 @@
 [node name="scene1" type="Node2D" unique_id=501499326]
 script = ExtResource("1_ta4h7")
 
-[node name="HUD" parent="." instance=ExtResource("2_hud")]
-[node name="EndingDebugPanel" parent="." instance=ExtResource("3_debug")]
+[node name="HUD" parent="." unique_id=617080985 instance=ExtResource("2_hud")]
+
+[node name="EndingDebugPanel" parent="." unique_id=882170965 instance=ExtResource("3_debug")]

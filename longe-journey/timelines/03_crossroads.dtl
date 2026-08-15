@@ -2,6 +2,33 @@
 
 路口没什么景色，人也少得很。
 
-（占位：后续在这里接入花店 / 狮岭 / 露园的分支选项。）
+if {visit_shiling} == 1 and {visit_luyuan} == 0:
+    一辆公交靠边停下，邻居探出车窗，硬塞给我一支向日葵。
 
-jump 01_hospital
+    “拿着，探病用的。”
+
+    set {flower} += 1
+elif {visit_shiling} == 0 and {visit_luyuan} == 1:
+    一辆公交靠边停下，邻居探出车窗，硬塞给我一支向日葵。
+
+    “拿着，探病用的。”
+
+    set {flower} += 1
+
+- 去花店 [if {visit_huadian} < 3]
+    花店不远，走过去就行。
+    set {energy} -= 5
+    set {visit_huadian} += 1
+    jump 04_flower_shop
+- 去狮岭 [if {money} >= 2]
+    我上了去狮岭的车，付了车费。
+    set {money} -= 2
+    set {visit_shiling} += 1
+    jump 05_shiling
+- 去露园 [if {money} >= 2]
+    我上了去露园的车，付了车费。
+    set {money} -= 2
+    set {visit_luyuan} += 1
+    jump 06_luyuan
+- 回医院
+    jump 01_hospital
