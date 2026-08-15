@@ -17,7 +17,7 @@
 ```text
 scenes/mianMenu.tscn
   -> scenes/scene_1.tscn
-  -> Dialogic.start("timeline1_0")
+  -> Dialogic.start("00_start")
 ```
 
 注意：`mianMenu.tscn` 是原工程拼写，不要“纠正”。
@@ -40,8 +40,9 @@ GameState 与 HUD 已完成并提交：
 
 当前工作区状态：
 
-- 当前工作区干净，GameState 与 HUD 已完成并提交，无需处理 Godot 编辑器写入的 `project.godot` 改动。
-- 计划文档最近一次更新：`837d64d`（docs: update work plan with GameState and HUD progress）。
+- 阶段 4 第一批未提交：`timelines/00_start.dtl`、`01_hospital.dtl`、`02_ward.dtl`、`03_crossroads.dtl`、`scripts/start.gd`，以及本计划文档。
+- `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，禁止提交。
+- 已存在的 `timelines/timeline1_0.dtl` 与其 `.uid` 不要误删，本次不提交。
 
 ### 1.4 最近检查记录（2026-08-15）
 
@@ -49,6 +50,14 @@ GameState 与 HUD 已完成并提交：
 - `tools/update_lore_index.py`：通过（exit 0），`lore/INDEX.md` 无新增 diff。
 - 登记检查：`project.godot` 已注册 `Dialogic`、`GameState` 与 `EndingManager` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD` 与 `EndingDebugPanel`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
 - 工作区：本次 3 个文件（`ending_manager.gd`、`ending_debug_panel.gd`、`ending_debug_panel.tscn`）已提交。
+
+阶段 4 第一批检查（2026-08-15）：
+
+- `tools/check_lore_canon.py`：通过（exit 0）。
+- 入口脚本 `scripts/start.gd`：已从 `timeline1_0` 改为 `Dialogic.start("00_start")`。
+- 新增 `timelines/00_start.dtl`（公交车上，跳转 `01_hospital`）与 `01_hospital.dtl`（医院楼下，跳转 `02_ward` / `03_crossroads`）。
+- `02_ward.dtl`、`03_crossroads.dtl` 为占位 TODO，尚未做真实迁移。
+- 提交：`feat: migrate opening and hospital timelines`。
 
 ## 2. 目录结构与工具说明
 
@@ -171,6 +180,8 @@ visit_ting_shifang=0
 
 - 按推荐顺序逐个把原剧情迁移为 `00_start.dtl` 至 `09_ending.dtl`。
 - 每个 timeline 完成定义：可从头到尾走通，选项齐全，变量变化正确。
+- 当前进度：`00_start`、`01_hospital` 已按原剧情迁移并提交；`02_ward`、`03_crossroads` 为占位 TODO，下一步继续 `04_flower_shop`。
+- 对应提交：阶段 4 第一批（见 1.4）。
 
 ### 阶段 5：文本 / 变量迁移
 
@@ -219,7 +230,7 @@ visit_ting_shifang=0
 - PowerShell 控制台输出乱码不影响文件本身；文件统一 UTF-8。
 - 不要在 `project.godot`、`chat_styel.tres` 等既有命名上做无谓“规范化”。
 - 变量名用英文，且与第 4 节清单保持一致。
-- 每次大改后跑一遍完整游戏流程，确认入口 `mianMenu.tscn -> scene_1.tscn -> timeline1_0` 不被破坏。
+- 每次大改后跑一遍完整游戏流程，确认入口 `mianMenu.tscn -> scene_1.tscn -> 00_start` 不被破坏。
 
 ## 9. 新线程启动检查单
 
