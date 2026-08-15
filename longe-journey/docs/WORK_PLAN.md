@@ -31,10 +31,15 @@ scenes/mianMenu.tscn
 - 已落地的插件：`addons/longe_lore_tools`（LoreDock）。
 - Godot 编辑器右侧上栏有 `LongeLoreDock`，页签为 `编辑 / 预览 / 校验 / 索引`。
 
+GameState 与 HUD 已完成并提交：
+
+- 提交 `1d24874`：feat: add GameState autoload for shared variables
+- 提交 `c0243f5`：fix: fix GameState parser error for property lookup
+- 提交 `3b05895`：feat: add persistent HUD for core stats
+
 当前工作区状态：
 
-- `project.godot` 有未提交修改，来源是 Godot 编辑器写入，不是脚本改动。
-- 不要 revert 该文件；提交前人工确认是否保留。
+- 当前工作区干净，GameState 与 HUD 已完成并提交，无需处理 Godot 编辑器写入的 `project.godot` 改动。
 
 ## 2. 目录结构与工具说明
 
@@ -135,13 +140,16 @@ visit_ting_shifang=0
 - 目标：把变量清单做成单一 `GameState` autoload，统一读写。
 - 完成定义：所有现有 timeline 的变量读写都走 `GameState`；变量默认值与上文清单一致。
 - 验证：启动游戏后检查变量初始值；推进剧情后检查数值变化持久。
-- 当前进度：已创建 `scripts/autoload/game_state.gd`，并注册到 `project.godot` 的 `[autoload]`；变量默认值已登记到 `[dialogic] variables=`。基础落地完成，运行时行为需在 Godot 编辑器中启动验证。
+- 当前进度：已完成。已创建并注册 `scripts/autoload/game_state.gd`；修复 `_has_property()`（Godot 4 无 `has_property()` 方法，改用遍历 `get_property_list()`）。
+- 对应提交：`1d24874`、`c0243f5`。
 
 ### 阶段 2：HUD / 常驻状态
 
 - 目标：显示 `energy`、`calm`、`money` 等核心状态。
 - 完成定义：HUD 在主要场景常驻，数值随 `GameState` 实时更新。
 - 验证：修改变量后 HUD 立即刷新；不同场景切换不丢状态。
+- 当前进度：已完成。`scenes/hud.tscn` + `scripts/hud.gd` 已落地，并在 `scenes/scene_1.tscn` 挂载 HUD 实例；订阅 `GameState.value_changed` 实时刷新。
+- 对应提交：`3b05895`。
 
 ### 阶段 3：结局监视
 
