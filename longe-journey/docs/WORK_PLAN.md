@@ -42,7 +42,7 @@ GameState 与 HUD 已完成并提交：
 
 - 阶段 4 第二批已提交（`6a46e04`）。
 - `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，保持未跟踪，禁止提交。
-- `06_luyuan.dtl` 是当前已完成的最末 timeline，下一步先修复 `07_maze` 跳转链路，再接 `08_wife_room`。
+- `07_maze_entry.dtl` 已创建、已登记 `project.godot` 并提交（`f6c9a37`），下一步创建 `07_maze_left.dtl`，再接 `08_wife_room`。
 - 已存在的 `timelines/timeline1_0.dtl` 与其 `.uid` 不要误删，本次不提交。
 
 ### 1.4 最近检查记录（2026-08-15）
@@ -51,6 +51,12 @@ GameState 与 HUD 已完成并提交：
 - `tools/update_lore_index.py`：通过（exit 0），`lore/INDEX.md` 无新增 diff。
 - 登记检查：`project.godot` 已注册 `Dialogic`、`GameState` 与 `EndingManager` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD` 与 `EndingDebugPanel`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
 - 工作区：本次 3 个文件（`ending_manager.gd`、`ending_debug_panel.gd`、`ending_debug_panel.tscn`）已提交。
+
+阶段 4.1 迷宫链路检查（2026-08-16）：
+
+- `07_maze_entry.dtl` 已创建、已登记 `project.godot`，提交 `f6c9a37`；`06_luyuan` 出口已接 `jump 07_maze_left`。
+- 相关提交：`53098be`（uid 跟踪）、`eec88c9`（docs 浓缩）。
+- 下一步：创建 `07_maze_left.dtl`，统一校验后提交。
 
 阶段 4 第一批检查（2026-08-15）：
 
@@ -188,12 +194,12 @@ visit_ting_shifang=0
 
 - 按推荐顺序逐个把原剧情迁移为 `00_start.dtl` 至 `09_ending.dtl`。
 - 每个 timeline 完成定义：可从头到尾走通，选项齐全，变量变化正确。
-- 当前进度：`02_ward` 至 `06_luyuan` 已实现并通过校验，下一步继续 `07_maze`。
+- 当前进度：`02_ward` 至 `06_luyuan` 已实现并通过校验；`07_maze_entry.dtl` 已创建并提交（`f6c9a37`），下一步继续 `07_maze_left.dtl`。
 - 对应提交：阶段 4 第一批与第二批（见 1.4）。
 
 ### 阶段 4.1：修复 07_maze 跳转链路
 
-- 现状：`timelines/07_maze.dtl` 不存在；Dialogic 对缺失的 jump 目标会报错，或没有下一个事件可执行。当前 `06_luyuan.dtl` 三条路线都直接 `jump 03_crossroads`，需要改为接入 `07_maze`。
+- 现状：`07_maze_entry.dtl` 已完成并提交（`f6c9a37`），`06_luyuan.dtl` 出口已接 `jump 07_maze_left`；下一步创建 `07_maze_left.dtl`，剩余 `07_maze_middle.dtl`、`07_maze_right.dtl`、`07_maze_exit.dtl`。
 - 目标链路：`06_luyuan -> 07_maze -> 08_wife_room`，缺任何一个节点都会断；先修 `06_luyuan.dtl` 的出口，再保证迷宫所有分支最终走到 `08_wife_room`。
 - jump 规则：目标必须是真实 timeline ID，或同文件内的 label；不要写 Twine 风格 passage 名或中文名（如 `jump 迷宫1`、`jump 左1`）。
 - 文件组织：延续仓库现有的“按地点分文件”模式，再按分支粒度拆小：
