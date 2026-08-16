@@ -12,4 +12,4 @@
     jump 07_maze_left
 
 - 往路面曲折的右边走
-    jump 07_maze_left
+    jump 07_maze_right
