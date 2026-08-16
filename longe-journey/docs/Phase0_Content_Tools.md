@@ -48,9 +48,10 @@ python tools/update_lore_index.py
 
 ## 4. 新增一段故事的推荐流程
 
+逐条“校验 -> 索引”只用于新增/修改 lore 或故事内容；已定稿 timeline 迁移不逐条跑校验，提交前统一按 `docs/WORK_PLAN.md` 第 7 节校验。
+
 1. 在 LoreDock `编辑` 页签新建条目，填写事实与来源。
 2. 点击 `校验` 修正格式问题，再点击 `索引` 更新索引。
 3. 在 Dialogic 中新建或编辑对应地点的 timeline。
 4. 使用变量、`我.dch` 和 `chat_styel.tres` 组织对白与跳转。
 5. 运行游戏，检查变量读写、条件跳转和结局分支是否符合预期。
-

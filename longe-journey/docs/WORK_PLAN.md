@@ -1,8 +1,8 @@
 # Longe Journey Godot 迁移工作交接计划
 
-> 本文档是后续线程的“唯一工作参考”。上下文有限时，请先读本文件，再按需查阅
-> `docs/Phase0_Content_Tools.md` 与 `docs/Dialogic_Implementation_Guide.md`。
-> 凡涉及新线程，以本文档为准，不要凭记忆修改命名或结构。
+> 新线程开始工作时，先读 `docs/task_checkpoint.md` 的“下一步”并直接执行；需要背景或规范时，
+> 再按需查阅本文档与 `docs/Phase0_Content_Tools.md`、`docs/Dialogic_Implementation_Guide.md`。
+> 凡涉及新线程，以实际文件为准，不要凭记忆修改命名或结构。
 
 ## 1. 项目快速启动与现状
 
@@ -42,7 +42,7 @@ GameState 与 HUD 已完成并提交：
 
 - 阶段 4 第二批已提交（`6a46e04`）。
 - `tools/_twine_extract.txt` 与 `tools/extract_twine.py` 是只读/参考辅助文件，保持未跟踪，禁止提交。
-- `06_luyuan.dtl` 是当前已完成的最末 timeline，下一步继续 `07_maze`。
+- `06_luyuan.dtl` 是当前已完成的最末 timeline，下一步先修复 `07_maze` 跳转链路，再接 `08_wife_room`。
 - 已存在的 `timelines/timeline1_0.dtl` 与其 `.uid` 不要误删，本次不提交。
 
 ### 1.4 最近检查记录（2026-08-15）
@@ -155,11 +155,11 @@ visit_ting_shifang=0
 09_ending.dtl
 ```
 
-迁移顺序 = 玩家游玩顺序。每完成一个 timeline，应跑一次游戏流程验证入口、选项、变量变化与结局条件。
+迁移顺序 = 玩家游玩顺序。每个阶段/提交完成后跑一次完整游戏流程验证入口、选项、变量变化与结局条件。
 
 ## 6. 后续阶段候选与推荐顺序
 
-> 阶段 4 及以后是“候选/建议”，不是已完成内容。每阶段先写清“完成定义”和“验证方式”，再动手。
+> 阶段 4 及以后是“候选/建议”，不是已完成内容；已定稿的迁移任务以 docs/task_checkpoint.md 的“下一步”为准，先完成内容，提交前再按校验清单检查。
 
 ### 阶段 1：GameState autoload
 
@@ -190,6 +190,22 @@ visit_ting_shifang=0
 - 每个 timeline 完成定义：可从头到尾走通，选项齐全，变量变化正确。
 - 当前进度：`02_ward` 至 `06_luyuan` 已实现并通过校验，下一步继续 `07_maze`。
 - 对应提交：阶段 4 第一批与第二批（见 1.4）。
+
+### 阶段 4.1：修复 07_maze 跳转链路
+
+- 现状：`timelines/07_maze.dtl` 不存在；Dialogic 对缺失的 jump 目标会报错，或没有下一个事件可执行。当前 `06_luyuan.dtl` 三条路线都直接 `jump 03_crossroads`，需要改为接入 `07_maze`。
+- 目标链路：`06_luyuan -> 07_maze -> 08_wife_room`，缺任何一个节点都会断；先修 `06_luyuan.dtl` 的出口，再保证迷宫所有分支最终走到 `08_wife_room`。
+- jump 规则：目标必须是真实 timeline ID，或同文件内的 label；不要写 Twine 风格 passage 名或中文名（如 `jump 迷宫1`、`jump 左1`）。
+- 文件组织：延续仓库现有的“按地点分文件”模式，再按分支粒度拆小：
+  - `07_maze_entry.dtl`：进入迷宫、第一层岔路。
+  - `07_maze_left.dtl`：左侧分支。
+  - `07_maze_middle.dtl`：中央女人线。
+  - `07_maze_right.dtl`：右侧分支。
+  - `07_maze_exit.dtl`：拿到花/逃离后的收束，最后 `jump 08_wife_room`。
+- 备选组织：按剧情拍拆为 `07_maze_flower_cactus`、`07_maze_flower_xiuqiu`、`07_maze_eavesdrop`、`07_maze_flee`；若迷宫较短，也可用单个 `07_maze.dtl` 配合 Dialogic 内部 label。
+- 命名：文件名继续用英文，对齐现有 `06_luyuan`、`08_wife_room` 风格，中文只放在显示文本里。
+- 完成定义：每个分支文件最后都有明确下一跳，迷宫出口统一为 `jump 08_wife_room`；从 `06_luyuan` 出发的整条链可从头走到尾。
+- 验证：逐分支走通 `06_luyuan -> 07_maze -> 08_wife_room`，并检查所有 jump/选择目标都指向真实 timeline ID 或同文件 label。
 
 ### 阶段 5：文本 / 变量迁移
 
@@ -238,13 +254,15 @@ visit_ting_shifang=0
 - PowerShell 控制台输出乱码不影响文件本身；文件统一 UTF-8。
 - 不要在 `project.godot`、`chat_styel.tres` 等既有命名上做无谓“规范化”。
 - 变量名用英文，且与第 4 节清单保持一致。
+- Dialogic 的 jump/选择目标必须是真实 timeline ID 或同文件 label，不要写 Twine 风格 passage 名或中文名（如 `迷宫1`、`左1`），否则运行时找不到下一步。
 - 每次大改后跑一遍完整游戏流程，确认入口 `mianMenu.tscn -> scene_1.tscn -> 00_start` 不被破坏。
 
 ## 9. 新线程启动检查单
 
-1. 读 `docs/WORK_PLAN.md`。
+1. 读 `docs/WORK_PLAN.md` 与 `docs/task_checkpoint.md`。
 2. 按需读 `docs/Phase0_Content_Tools.md` 与 `docs/Dialogic_Implementation_Guide.md`。
 3. 运行 `git status`，确认工作区当前改动。
-4. 明确本次要推进的阶段/子任务，先列“完成定义 + 验证方式”。
-5. 动手改代码或内容，完成后跑校验、跑游戏流程、按第 7 节规范提交。
-6. 可先看第 1.4 节最近检查记录；涉及 lore/timeline 的改动仍需重跑对应校验。
+4. 先读 `docs/task_checkpoint.md` 的“下一步”并直接执行；仅当出现新事实或矛盾时才重查 lore/技能约定。校验放在内容完成、提交之前例行执行。
+5. 启动时把本次相关规则浓缩成短清单写入 `docs/task_checkpoint.md`；后续路由只读清单，不整读 `SKILL.md` / `WORK_PLAN.md` 原文，阶段切换或需要特定规范时才回头查。
+6. 动手执行第 4 步任务，完成后按第 7 节规范统一验证并提交。
+7. 需要历史检查记录时再看第 1.4 节；timeline 迁移按阶段 4.1 的完成定义验证，不单独逐条跑 lore 校验，提交前按第 7 节统一执行。

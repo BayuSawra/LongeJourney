@@ -23,7 +23,9 @@ description: Manage story continuity for the LongeJourney project: maintain the 
 
 ## 工作流程
 
-1. 编写或修改任何剧情内容前（Dialogic `.dtl` 时间线、对话、场景、角色台词），先读取 `lore/INDEX.md`，再读取本次涉及的角色、地点、事件、伏笔条目。
+执行迁移或已有明确计划的任务时，以 `docs/task_checkpoint.md` 的“下一步”为准，先推进实现；内容完成后跑正典校验并更新索引。不要在动手前做全量 lore 重读/冲突重审。
+
+1. 新增或修改 lore 条目、编写全新剧情内容前，先读取 `lore/INDEX.md` 及相关条目；已定稿的 timeline 迁移按 `docs/task_checkpoint.md` 的“下一步”先执行，提交前统一校验，不在动手前做全量重读。
 2. 对照正典检查：名字与拼写、年龄与状态、关系、所在地、当前时间、已知信息、物品归属。
 3. 新事实一旦成为正典，立即更新对应条目，记录事实来源（如 `timelines/timeline1_0.dtl`），并同步更新索引。
 4. 发现矛盾时不要擅自改写既有设定：指出冲突双方、引用来源，并给出最合理的解决方案，由用户确认后修改。
@@ -35,6 +37,8 @@ description: Manage story continuity for the LongeJourney project: maintain the 
 - 条目保持简短、只写事实；状态值只使用：`unknown`、`alive`、`dead`、`missing`、`sealed`、`destroyed`。
 - 不删除已确立的事实；事实变化时用 `superseded_by:` 标记新条目并保留旧记录。
 - 只修改 `lore/` 与剧情相关文件，不改动无关项目代码。
+- 跨回合任务读完即落盘：完整读取原文后若任务跨越多个回合，先写出工作摘要（如 `docs/task_checkpoint.md`）；后续回合只读摘要，不再整读原文。
+- 规则一次浓缩：任务开始时把本次相关规则缩成短清单写入 `docs/task_checkpoint.md`；中途只在切换阶段或需要特定规范时查清单，提交前统一校验。
 
 ## 参考资料
 
