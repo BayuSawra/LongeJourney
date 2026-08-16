@@ -3,8 +3,8 @@
 ## 当前任务
 
 - 目标：`06_luyuan -> 07_maze -> 08_wife_room` 链路
-- 已完成：拆分方案定稿（`docs/WORK_PLAN.md` 阶段 4.1）；`07_maze_entry.dtl` 已创建、已登记 `project.godot`、已提交（`f6c9a37`）
-- 下一步：创建 `07_maze_left.dtl`
+- 已完成：拆分方案定稿（`docs/WORK_PLAN.md` 阶段 4.1）；`07_maze_entry.dtl` 已创建、已登记 `project.godot`、已提交（`f6c9a37`）；`07_maze_left.dtl` 已创建、已登记 `project.godot`、已提交（`15b09ba`）
+- 下一步：创建 `07_maze_middle.dtl`
 - 注意事项：英文文件名；中文只放显示文本；迷宫出口统一 `jump 08_wife_room`；写完不逐条跑校验，提交前统一按 `docs/WORK_PLAN.md` 第 7 节校验
 
 ## 完成定义

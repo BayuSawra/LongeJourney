@@ -52,6 +52,7 @@ directories/dtl_directory={
 "06_luyuan": "res://timelines/06_luyuan.dtl",
 "07_maze_entry": "res://timelines/07_maze_entry.dtl",
 "07_maze_left": "res://timelines/07_maze_left.dtl",
+"07_maze_middle": "res://timelines/07_maze_middle.dtl",
 "timeline1_0": "res://timelines/timeline1_0.dtl"
 }
 layout/style_directory={
