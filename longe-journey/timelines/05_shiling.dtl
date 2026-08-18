@@ -1,4 +1,5 @@
 [color=#696969][i]⁜当前位置  狮岭⁜[/i][/color]
+[background arg="res://art/shilin2.png" fade="1.0"]
 
 if {visit_shiling} == 1:
     狮岭山脚下立着块旧碑，说王历新曾在这里凿开洞窟，里头卧着一头石狮子。
