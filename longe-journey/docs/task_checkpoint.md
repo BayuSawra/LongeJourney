@@ -3,8 +3,8 @@
 ## 当前任务
 
 - 目标：`06_luyuan -> 07_maze -> 08_wife_room -> 09_ending` 链路
-- 已完成：拆分方案定稿（`docs/WORK_PLAN.md` 阶段 4.1）；`07_maze_entry.dtl` 已创建、已登记 `project.godot`、已提交（`f6c9a37`）；`07_maze_left.dtl` 已创建、已登记 `project.godot`、已提交（`15b09ba`）；`07_maze_middle.dtl` 已创建、已登记 `project.godot`、已提交（`6574e80`）；`07_maze_right.dtl` 已创建、已登记 `project.godot`、已提交（`6554e3f`）；`08_wife_room.dtl` 已创建、已登记 `project.godot`、已提交
-- 下一步：创建 `09_ending.dtl`
+- 已完成：拆分方案定稿（`docs/WORK_PLAN.md` 阶段 4.1）；`07_maze_entry.dtl` 已创建、已登记 `project.godot`、已提交（`f6c9a37`）；`07_maze_left.dtl` 已创建、已登记 `project.godot`、已提交（`15b09ba`）；`07_maze_middle.dtl` 已创建、已登记 `project.godot`、已提交（`6574e80`）；`07_maze_right.dtl` 已创建、已登记 `project.godot`、已提交（`6554e3f`）；`08_wife_room.dtl` 已创建、已登记 `project.godot`、已提交；`09_ending.dtl` 已创建、已登记 `project.godot`、已提交（`e657356`）
+- 下一步：阶段 4.1 收尾，完成全链跳转一致性核验并提交本 checkpoint；本链路已可从头走到尾
 - 注意事项：英文文件名；中文只放显示文本；jump 目标必须是真实 timeline ID 或同文件 label；写完不逐条跑校验，提交前统一按 `docs/WORK_PLAN.md` 第 7 节校验
 
 ## 完成定义
