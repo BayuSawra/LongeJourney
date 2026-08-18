@@ -1,11 +1,15 @@
 ---
 name: lore
-description: Manage story continuity for the LongeJourney project: maintain the canonical story bible (characters, locations, factions, items, timeline, plot threads, established facts) and keep dialogue, Dialogic timelines (.dtl), scenes, and worldbuilding consistent. Use when writing or editing story content, checking continuity, tracking foreshadowing and payoffs, or resolving lore contradictions.
+description: Manage LongeJourney story canon and continuity. Use only when the task explicitly targets lore entries, story-canon facts, or continuity checks; do not trigger for routine development, timeline migration, or scene-writing work that only touches lore incidentally.
 ---
 
 # Lore
 
 维护 LongeJourney 的剧情连续性。所有剧情内容都必须与项目内唯一的 lore 正典保持一致。
+
+## 加载规则
+
+`docs/task_checkpoint.md` 已浓缩并登记的规则视为本 skill 指令已加载：命中已登记范围且对应条目未变更、阶段未切换时，直接复用，不重读本文、`lore/` 原文或 `references/` 模板。仅首次启用、阶段切换、相关规范变化，或需要创建/更新条目而查阅模板时，才重读对应部分。
 
 ## 正典来源
 
