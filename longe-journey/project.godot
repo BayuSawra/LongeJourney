@@ -56,6 +56,7 @@ directories/dtl_directory={
 "07_maze_right": "res://timelines/07_maze_right.dtl",
 "07_maze_exit": "res://timelines/07_maze_exit.dtl",
 "08_wife_room": "res://timelines/08_wife_room.dtl",
+"09_ending": "res://timelines/09_ending.dtl",
 "timeline1_0": "res://timelines/timeline1_0.dtl"
 }
 layout/style_directory={
