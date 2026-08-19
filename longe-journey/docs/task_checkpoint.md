@@ -29,6 +29,8 @@
 - `[已检查] 范围=08_wife_room 内容/project.godot登记/07_maze 出口 jump 08_wife_room 结果=通过 登记=2026-08-17 23:54 线程=主线程`
 - `[已检查] 范围=全链 jump 一致性（06_luyuan -> 03_crossroads -> 06_luyuan -> 07_maze_entry -> 07_maze_left/right -> 07_maze_middle -> 07_maze_exit -> 08_wife_room -> 09_ending，含 project.godot 登记） 结果=通过 登记=2026-08-18 线程=主线程`
 - `[已检查] 范围=07/08/09 timeline 变量/标签/jump 迁移（07_maze_entry/middle/right/exit） 结果=通过 登记=2026-08-18 线程=主线程`
+- `[已检查] 范围=阶段6背景资源/切换点/BGM占位 结果=通过 登记=2026-08-19 19:21 线程=主线程`
+- `[已检查] 范围=Phase 7 统一文字速度/打字机跳过/淡入淡出/选项动画 结果=通过 登记=2026-08-19 线程=主线程`
 - 后续回合/新线程先读本清单；命中已登记范围且对应文件未变更、阶段未切换时直接沿用，不重读、不重推演。
 - 中途只在切换阶段或需要特定规范时查本清单；提交前做一次统一校验。
 - 提交前运行 `tools/check_lore_canon.py`，并按 `docs/WORK_PLAN.md` 第 7 节规范校验；校验失败不提交。

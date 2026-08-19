@@ -14,6 +14,7 @@ const FIELD_LABELS: Dictionary = {
 func _ready() -> void:
 	GameState.value_changed.connect(_on_game_state_value_changed)
 	_refresh_all()
+	VisualFX.fade_in(self, 0.45)
 
 
 func _on_game_state_value_changed(variable: String, _new_value: Variant) -> void:
