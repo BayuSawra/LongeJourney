@@ -52,10 +52,10 @@ directories/dtl_directory={
 "05_shiling": "res://timelines/05_shiling.dtl",
 "06_luyuan": "res://timelines/06_luyuan.dtl",
 "07_maze_entry": "res://timelines/07_maze_entry.dtl",
+"07_maze_exit": "res://timelines/07_maze_exit.dtl",
 "07_maze_left": "res://timelines/07_maze_left.dtl",
 "07_maze_middle": "res://timelines/07_maze_middle.dtl",
 "07_maze_right": "res://timelines/07_maze_right.dtl",
-"07_maze_exit": "res://timelines/07_maze_exit.dtl",
 "08_wife_room": "res://timelines/08_wife_room.dtl",
 "09_ending": "res://timelines/09_ending.dtl",
 "timeline1_0": "res://timelines/timeline1_0.dtl"
