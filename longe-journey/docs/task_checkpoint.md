@@ -2,17 +2,16 @@
 
 ## 当前任务
 
-- 目标：`06_luyuan -> 07_maze -> 08_wife_room -> 09_ending` 链路
-- 已完成：拆分方案定稿（`docs/WORK_PLAN.md` 阶段 4.1）；`07_maze_entry.dtl` 已创建、已登记 `project.godot`、已提交（`f6c9a37`）；`07_maze_left.dtl` 已创建、已登记 `project.godot`、已提交（`15b09ba`）；`07_maze_middle.dtl` 已创建、已登记 `project.godot`、已提交（`6574e80`）；`07_maze_right.dtl` 已创建、已登记 `project.godot`、已提交（`6554e3f`）；`08_wife_room.dtl` 已创建、已登记 `project.godot`、已提交；`09_ending.dtl` 已创建、已登记 `project.godot`、已提交（`e657356`）；阶段 4.1 收尾完成、全链跳转一致性核验通过
-- 已完成：阶段 5 文本/变量迁移（`07_maze_entry/middle/right/exit` 统一英文变量/标签格式）
-- 下一步：阶段 8：存档/读档与设置
-- 注意事项：英文文件名；中文只放显示文本；jump 目标必须是真实 timeline ID 或同文件 label；写完不逐条跑校验，提交前统一按 `docs/WORK_PLAN.md` 第 7 节校验
+- 目标：阶段 8：存档 / 历史 / 设置
+- 已完成：阶段 7 收尾（统一文字速度/打字机跳过/淡入淡出/选项动画）；`docs/WORK_PLAN.md` 已将阶段 8/9/10 拆成 commit 级执行块并加入防空转规则
+- 下一步：8.1 存档数据结构/序列化（`GameState` + 当前 timeline/场景，可写入可恢复）
+- 注意事项：新线程只读本文件“下一步”后直接执行；一个线程只做一个执行块；动工前先写完成定义；一块完成即提交；英文文件名；中文只放显示文本
 
 ## 完成定义
 
-- 每个分支文件最后都有明确下一跳，ending 统一结束整个 ending 链路
-- 从 `06_luyuan` 出发的整条链可从头走到尾
-- 所有 jump/选择目标都指向真实 timeline ID 或同文件 label
+- 一个执行块完成即提交，提交信息写明阶段与块号（如 `feat(phase8): ...`）
+- 存档覆盖 `GameState`、当前 timeline 与场景；读档可恢复
+- 设置覆盖文字速度、音量、全屏
 
 ## 相关文档
 
