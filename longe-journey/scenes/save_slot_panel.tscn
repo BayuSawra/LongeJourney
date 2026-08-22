@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://save_slot_panel"]
+
+[ext_resource type="Script" uid="" path="res://scripts/save_slot_panel.gd" id="1_save"]
+
+[node name="SaveSlotPanel" type="CanvasLayer"]
+layer = 110
+script = ExtResource("1_save")
+
+[node name="Background" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="TitleLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 60.0
+offset_bottom = 120.0
+grow_horizontal = 2
+text = "存档"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save1" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.0
+offset_top = 180.0
+offset_right = 260.0
+offset_bottom = 290.0
+grow_horizontal = 2
+text = "1. 空"
+
+[node name="Save2" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.0
+offset_top = 320.0
+offset_right = 260.0
+offset_bottom = 430.0
+grow_horizontal = 2
+text = "2. 空"
+
+[node name="Save3" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.0
+offset_top = 460.0
+offset_right = 260.0
+offset_bottom = 570.0
+grow_horizontal = 2
+text = "3. 空"
+
+[node name="CloseButton" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -110.0
+offset_right = 120.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "关闭"
+
+[node name="OverwriteDialog" type="AcceptDialog" parent="."]
+unique_name_in_owner = true
+visible = false
+title = "覆盖存档"
+size = Vector2i(480, 200)
+dialog_text = "覆盖当前存档？"
+
+[node name="NewSlotDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+visible = false
+title = "新建存档"
+size = Vector2i(480, 200)
+
+[node name="NameEdit" type="LineEdit" parent="NewSlotDialog"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 80.0
+offset_right = 380.0
+offset_bottom = 116.0
+placeholder_text = "输入存档名称"
