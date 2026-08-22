@@ -3,8 +3,8 @@
 ## 当前任务
 
 - 目标：阶段 8：存档 / 历史 / 设置
-- 已完成：阶段 7 收尾（统一文字速度/打字机跳过/淡入淡出/选项动画）；`docs/WORK_PLAN.md` 已将阶段 8/9/10 拆成 commit 级执行块并加入防空转规则
-- 下一步：8.1 存档数据结构/序列化（`GameState` + 当前 timeline/场景，可写入可恢复）
+- 已完成：8.2.1 存档槽位数据结构与存储层（`scripts/autoload/save_manager.gd`：`save()`/`save_to_slot()`/`get_slots()`/`new_slot_id()`/`rename_slot()`/`get_slot_meta()`/`has_save()`/`delete_save()`，写入 `user://dialogic/saves/{slot}/save.sav`，元数据含 id/name/timestamp/scene/timeline）
+- 下一步：8.2.2 存档 UI（槽位选择、覆盖确认、时间/命名展示、空槽位处理）
 - 注意事项：新线程只读本文件“下一步”后直接执行；一个线程只做一个执行块；动工前先写完成定义；一块完成即提交；英文文件名；中文只放显示文本
 
 ## 完成定义
@@ -30,6 +30,8 @@
 - `[已检查] 范围=07/08/09 timeline 变量/标签/jump 迁移（07_maze_entry/middle/right/exit） 结果=通过 登记=2026-08-18 线程=主线程`
 - `[已检查] 范围=阶段6背景资源/切换点/BGM占位 结果=通过 登记=2026-08-19 19:21 线程=主线程`
 - `[已检查] 范围=Phase 7 统一文字速度/打字机跳过/淡入淡出/选项动画 结果=通过 登记=2026-08-19 线程=主线程`
+- `[已检查] 范围=8.2.1 save_manager.gd 槽位数据结构与存储层（diff 通读） 结果=通过 登记=2026-08-22 线程=主线程`
+- `[验证] Godot 4 运行时未找到（Get-Command godot*、Program Files/用户目录深度 3 均无结果），未做 headless smoke test；风险点：`DirAccess.dir_exists_absolute()` 传 `user://` 路径，找到运行时后需实测保存/读取/get_slots/重命名/删除`
 - 后续回合/新线程先读本清单；命中已登记范围且对应文件未变更、阶段未切换时直接沿用，不重读、不重推演。
 - 中途只在切换阶段或需要特定规范时查本清单；提交前做一次统一校验。
 - 提交前运行 `tools/check_lore_canon.py`，并按 `docs/WORK_PLAN.md` 第 7 节规范校验；校验失败不提交。

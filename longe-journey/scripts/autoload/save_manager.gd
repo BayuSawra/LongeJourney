@@ -3,7 +3,7 @@ extends Node
 ## Persists GameState vars plus the current Dialogic timeline and scene to user://
 ## slots, and restores them on load.
 
-const VERSION: int = 1
+const VERSION: int = 2
 const GAME_STATE_VARS: Array[String] = [
 	"energy",
 	"calm",
@@ -23,11 +23,15 @@ const GAME_STATE_VARS: Array[String] = [
 var _loading: bool = false
 
 
-func save(slot: String) -> bool:
+func save(slot: String, slot_name: String = "") -> bool:
+	return save_to_slot(slot, slot_name)
+
+
+func save_to_slot(slot: String, slot_name: String = "") -> bool:
 	if slot.is_empty():
 		return false
 
-	var data: Dictionary = _build_save_data()
+	var data: Dictionary = _build_save_data(slot, slot_name)
 	var path: String = _save_path(slot)
 	DirAccess.make_dir_recursive_absolute(path.get_base_dir())
 	var file := FileAccess.open(path, FileAccess.WRITE)
@@ -35,6 +39,74 @@ func save(slot: String) -> bool:
 		return false
 	file.store_var(data, false)
 	return true
+
+
+func get_slots() -> Array[Dictionary]:
+	var slots: Array[Dictionary] = []
+	var root := DirAccess.open("user://dialogic/saves/")
+	if root == null:
+		return slots
+
+	for slot in root.get_directories():
+		if slot.is_empty() or slot == "." or slot == "..":
+			continue
+		var meta: Dictionary = get_slot_meta(slot)
+		var data: Dictionary = _read_save_data(slot)
+		var dialogic_state: Dictionary = data.get("dialogic_state", {})
+		if not dialogic_state is Dictionary:
+			dialogic_state = {}
+		slots.append({
+			"id": slot,
+			"name": meta.get("name", ""),
+			"timestamp": meta.get("timestamp", {}),
+			"scene": data.get("scene", ""),
+			"timeline": dialogic_state.get("timeline", ""),
+		})
+	return slots
+
+
+func new_slot_id() -> String:
+	var now: Dictionary = Time.get_datetime_dict_from_system()
+	var stamp: String = "%04d%02d%02d%02d%02d%02d" % [
+		now.get("year", 0),
+		now.get("month", 0),
+		now.get("day", 0),
+		now.get("hour", 0),
+		now.get("minute", 0),
+		now.get("second", 0),
+	]
+	for i in 10:
+		var candidate: String = "%s_%04d" % [stamp, randi() % 10000]
+		if not has_save(candidate) and not DirAccess.dir_exists_absolute(_save_path(candidate).get_base_dir()):
+			return candidate
+	return ""
+
+
+func rename_slot(slot: String, new_name: String) -> bool:
+	var data: Dictionary = _read_save_data(slot)
+	if data.is_empty():
+		return false
+	var meta: Dictionary = data.get("meta", {})
+	if not meta is Dictionary:
+		meta = {}
+	meta["name"] = new_name
+	data["meta"] = meta
+	var path: String = _save_path(slot)
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		return false
+	file.store_var(data, false)
+	return true
+
+
+func get_slot_meta(slot: String) -> Dictionary:
+	var data: Dictionary = _read_save_data(slot)
+	if data.is_empty():
+		return {}
+	var meta: Dictionary = data.get("meta", {})
+	if not meta is Dictionary:
+		meta = {}
+	return meta
 
 
 func load(slot: String) -> bool:
@@ -131,7 +203,7 @@ func _do_load(data: Dictionary) -> bool:
 	return true
 
 
-func _build_save_data() -> Dictionary:
+func _build_save_data(slot: String, slot_name: String) -> Dictionary:
 	var game_state: Dictionary = {}
 	for variable in GAME_STATE_VARS:
 		game_state[variable] = GameState.get_var(variable)
@@ -149,11 +221,24 @@ func _build_save_data() -> Dictionary:
 	if get_tree().current_scene != null:
 		scene = get_tree().current_scene.scene_file_path
 
+	var now: Dictionary = Time.get_datetime_dict_from_system()
 	return {
 		"version": VERSION,
 		"scene": scene,
 		"dialogic_state": dialogic_state,
 		"game_state": game_state,
+		"meta": {
+			"id": slot,
+			"name": slot_name,
+			"timestamp": {
+				"year": now.get("year", 0),
+				"month": now.get("month", 0),
+				"day": now.get("day", 0),
+				"hour": now.get("hour", 0),
+				"minute": now.get("minute", 0),
+				"second": now.get("second", 0),
+			},
+		},
 	}
 
 
