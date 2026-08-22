@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 MCPRuntimeBridge="*uid://wk2yhw3winuo"
 GameState="*res://scripts/autoload/game_state.gd"
+SaveManager="*res://scripts/autoload/save_manager.gd"
 EndingManager="*res://scripts/autoload/ending_manager.gd"
 VisualFX="*res://scripts/autoload/visual_fx.gd"
 
