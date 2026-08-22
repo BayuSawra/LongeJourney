@@ -10,13 +10,17 @@ const SAVE_SCENE := "res://scenes/save_slot_panel.tscn"
 @onready var overwrite_dialog: AcceptDialog = %OverwriteDialog
 @onready var new_slot_dialog: ConfirmationDialog = %NewSlotDialog
 @onready var name_edit: LineEdit = %NameEdit
+@onready var load_dialog: AcceptDialog = %LoadDialog
 
 var slot_buttons: Array[Button] = []
 var pending_overwrite_id := 0
 var pending_new_slot_id := 0
+var load_mode := false
+var pending_load_id := 0
 
 
 func _ready() -> void:
+	title_label.text = "读档" if load_mode else "存档"
 	slot_buttons = [save_1, save_2, save_3]
 	for i in slot_buttons.size():
 		var slot_id := i + 1
@@ -24,6 +28,7 @@ func _ready() -> void:
 	close_button.pressed.connect(queue_free)
 	overwrite_dialog.confirmed.connect(_confirm_overwrite)
 	new_slot_dialog.confirmed.connect(_confirm_new_slot)
+	load_dialog.confirmed.connect(_confirm_load)
 	refresh_slots()
 
 
@@ -52,10 +57,17 @@ func refresh_slots() -> void:
 func _on_slot_pressed(slot_id: int) -> void:
 	var slot := SaveManager.get_slot_meta(slot_id)
 	if slot.is_empty():
+		if load_mode:
+			return
 		pending_new_slot_id = slot_id
 		name_edit.text = ""
 		new_slot_dialog.popup_centered()
 	else:
+		if load_mode:
+			pending_load_id = slot_id
+			load_dialog.dialog_text = "读取 %s 的存档？" % slot.name
+			load_dialog.popup_centered()
+			return
 		pending_overwrite_id = slot_id
 		overwrite_dialog.dialog_text = "覆盖存档 %d（%s）？" % [slot_id, slot.name]
 		overwrite_dialog.popup_centered()
@@ -72,4 +84,9 @@ func _confirm_new_slot() -> void:
 	if slot_name.is_empty():
 		slot_name = "存档 %d" % pending_new_slot_id
 	if SaveManager.save(pending_new_slot_id, slot_name):
+		refresh_slots()
+
+
+func _confirm_load() -> void:
+	if SaveManager.load(str(pending_load_id)):
 		refresh_slots()

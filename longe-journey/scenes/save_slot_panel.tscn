@@ -96,3 +96,12 @@ offset_top = 80.0
 offset_right = 380.0
 offset_bottom = 116.0
 placeholder_text = "输入存档名称"
+
+[node name="LoadDialog" type="AcceptDialog" parent="."]
+unique_name_in_owner = true
+visible = false
+title = "读档"
+size = Vector2i(480, 200)
+dialog_text = "读取该存档？"
+
+[connection signal="confirmed" from="LoadDialog" to="." method="_confirm_load"]

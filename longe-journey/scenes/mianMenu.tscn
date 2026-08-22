@@ -72,6 +72,14 @@ theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
 text = "存档"
 
+[node name="Button_load" type="Button" parent="VBoxContainer" unique_id=516829065]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_vgm6g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+text = "读档"
+
 [node name="Button_setting" type="Button" parent="VBoxContainer" unique_id=1801085484]
 layout_mode = 2
 size_flags_vertical = 3
@@ -90,3 +98,4 @@ text = "游戏设置"
 
 [connection signal="pressed" from="VBoxContainer/Button_start" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_save" to="." method="_on_button_save_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_load" to="." method="_on_button_load_pressed"]
