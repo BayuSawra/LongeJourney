@@ -88,5 +88,5 @@ func _confirm_new_slot() -> void:
 
 
 func _confirm_load() -> void:
-	if SaveManager.load(str(pending_load_id)):
+	if await SaveManager.load(str(pending_load_id)):
 		refresh_slots()

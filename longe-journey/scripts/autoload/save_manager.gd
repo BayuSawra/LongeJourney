@@ -117,7 +117,7 @@ func load(slot: String) -> bool:
 		return false
 
 	_loading = true
-	var success: bool = _do_load(data)
+	var success: bool = await _do_load(data)
 	_loading = false
 	return success
 
@@ -130,7 +130,7 @@ func delete_save(slot: String) -> void:
 	DirAccess.remove_absolute(_save_path(slot))
 
 
-func get_meta(slot: String) -> Dictionary:
+func get_save_meta(slot: String) -> Dictionary:
 	var data: Dictionary = _read_save_data(slot)
 	if data.is_empty() or data.get("version", 0) != VERSION:
 		return {}
@@ -177,7 +177,7 @@ func _do_load(data: Dictionary) -> bool:
 	if not _valid_dialogic_state(dialogic_state):
 		return false
 
-	var current_timeline: String = Dialogic.current_timeline
+	var current_timeline: String = str(Dialogic.current_timeline)
 	if not current_timeline.is_empty():
 		if Dialogic.has_method("end_timeline"):
 			Dialogic.end_timeline(true)

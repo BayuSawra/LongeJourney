@@ -94,8 +94,11 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "游戏设置"
+text = "退出游戏"
 
 [connection signal="pressed" from="VBoxContainer/Button_start" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_save" to="." method="_on_button_save_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_load" to="." method="_on_button_load_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_setting" to="." method="_on_button_setting_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_lore" to="." method="_on_button_lore_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_exit" to="." method="_on_button_exit_pressed"]

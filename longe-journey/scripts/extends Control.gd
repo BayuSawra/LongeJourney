@@ -18,3 +18,18 @@ func _on_button_load_pressed() -> void:
 	var panel_instance := panel.instantiate()
 	panel_instance.load_mode = true
 	add_child(panel_instance)
+
+
+func _on_button_lore_pressed() -> void:
+	var browser: PackedScene = load("res://scenes/lore_browser.tscn")
+	if browser == null:
+		return
+	add_child(browser.instantiate())
+
+
+func _on_button_setting_pressed() -> void:
+	SettingsManager.open_settings()
+
+
+func _on_button_exit_pressed() -> void:
+	get_tree().quit()

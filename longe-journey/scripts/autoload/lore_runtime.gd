@@ -1,4 +1,3 @@
-class_name LoreRuntime
 extends Node
 
 ## Read-only runtime view of lore data imported from lore/INDEX.md and canon files.
@@ -19,7 +18,7 @@ func get_all_entries() -> Array:
 	return result
 
 
-func get_index() -> Dictionary:
+func get_index_data() -> Dictionary:
 	var categories := get_categories()
 	var entries := get_all_entries()
 	var counts: Dictionary = {}
@@ -180,11 +179,10 @@ func _find_canon(category: String, title: String) -> Dictionary:
 		if plot_text.is_empty():
 			return result
 		for section in LoreFilesystem.list_plot_thread_sections(plot_text):
-			if not section is String:
+			if section.get("title", "") != title:
 				continue
-			if _title_from_text(section) != title:
-				continue
-			var parsed := LoreMarkdownParser.parse_entry(section)
+			var body := "\n".join(section.get("body_lines", []))
+			var parsed := LoreMarkdownParser.parse_entry(body)
 			result["path"] = LoreFilesystem.PLOT_THREADS_PATH
 			result["fields"] = parsed.get("fields", {})
 			result["known_info"] = parsed.get("known_info", [])

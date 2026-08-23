@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k8kw4c64x0mt" path="res://scripts/start.gd" id="1_ta4h7"]
 [ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="2_hud"]
 [ext_resource type="PackedScene" path="res://scenes/ending_debug_panel.tscn" id="3_debug"]
+[ext_resource type="PackedScene" path="res://scenes/history_panel.tscn" id="4_history"]
 
 [node name="scene1" type="Node2D" unique_id=501499326]
 script = ExtResource("1_ta4h7")
@@ -10,3 +11,4 @@ script = ExtResource("1_ta4h7")
 [node name="HUD" parent="." unique_id=617080985 instance=ExtResource("2_hud")]
 
 [node name="EndingDebugPanel" parent="." unique_id=882170965 instance=ExtResource("3_debug")]
+[node name="HistoryPanel" parent="." unique_id=617080986 instance=ExtResource("4_history")]
