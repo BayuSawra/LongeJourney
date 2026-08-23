@@ -22,6 +22,18 @@ python tools/lj_cli.py import-lore --from D:/lore-export
 
 旧脚本 `tools/check_lore_canon.py`、`tools/update_lore_index.py` 保留，但仅作为兼容包装，不再作为新的接口入口。
 
+### 资源导出/备份
+
+按 `docs/resource_manifest.json` 导出/备份资源并做往返校验：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1
+```
+
+- 备份输出至 `backups/resources/<时间戳>/`
+- `backup_manifest.json` 记录资源清单、备份时间，以及每个文件的相对路径、SHA256、大小、字节数
+- 导出→导入（还原）→校验通过后输出 `roundtrip=passed validation=passed`
+
 ## 导入导出约定
 
 - `export-lore --out xxx.zip`：zip 内条目以 `lore/...` 为前缀，包含 `lore/INDEX.md`

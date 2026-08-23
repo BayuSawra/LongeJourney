@@ -38,6 +38,22 @@ python tools/update_lore_index.py
 
 `check_lore_canon.py` 校验失败时以非零状态退出，适合接入 CI 或提交前检查；`update_lore_index.py` 会重新生成 `lore/INDEX.md`。
 
+### 资源导出/备份
+
+按 `docs/resource_manifest.json` 清单把 `art/`、`art/icon/`、`font/` 及其 `.import` 文件导出/备份，并执行导出→导入（还原）→校验的往返验证：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1
+```
+
+备份输出至 `backups/resources/<时间戳>/`，包含：
+
+- `backup_manifest.json`：资源清单、备份时间与每个文件相对路径、SHA256、大小、字节数。
+- `backup.tar`：按清单打包的资源与 `.import` 文件。
+- `restored/`：从备份还原出的资源目录，用于往返校验。
+
+脚本会复制备份文件到 `restored/`，对照清单校验 SHA256；随后如有 Godot（默认 `E:\Godot\Godot_v4.6.2-stable_mono_win64\Godot_v4.6.2-stable_mono_win64.exe`）则执行 `--headless --import` reimport 并运行 `docs/resource_references.json` 校验；全部通过时输出 `roundtrip=passed validation=passed`。
+
 ## 3. Dialogic 内容入口
 
 - 启动对白：`Dialogic.start("timeline1_0")`。

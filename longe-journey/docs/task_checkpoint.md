@@ -50,3 +50,5 @@
 - [验证] 范围=10.1.4b 资源引用分析 结果=通过 登记=2026-08-23 线程=主线程（输出 docs/resource_references.json，引用数 57，未解析 22）
 
 - [验证] 范围=10.1.4c 资源引用校验器 结果=通过 登记=2026-08-23 线程=主线（输出 docs/resource_validation.json，与手工抽查一致）
+- [验证] 范围=10.1.4d 资源导入器 结果=通过 登记=2026-08-23 线程=主线（Godot headless --import 退出码 0；校验 missing=0 inconsistency=0 orphan=13）
+- [验证] 范围=10.1.4e 资源导出/备份 结果=通过 登记=2026-08-23 线程=主线（导出 40；往返 passed；校验 passed；Godot headless --import 完成 reimport，环境类退出警告不影响资源校验）
