@@ -11,7 +11,7 @@
 要我说，幸亏他们中间没有小偷，我的眼睛最毒辣，分辨谁是好人，谁又是坏人，只需一眼！这些人现在还算老实，都不敢拿眼瞧我，应该是知道我的来头，怕了吧。
 
 车停了，车上的人都转头盯着我，暗示我该下车了。
-[wait time="3" hide_text="false"]
+[wait time="1.0" hide_text="false"]
 
 - 下车
-    jump 01_hospital
+    jump 01_hospital/

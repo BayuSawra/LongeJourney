@@ -7,7 +7,6 @@ extends Node
 @export var characters_per_second: float = 42.0
 
 var _dialogic_text: Node = null
-var _text_cps_ready := false
 var _choice_buttons := {}
 var _chosen_button: Button = null
 var _custom_typer_target: Label = null

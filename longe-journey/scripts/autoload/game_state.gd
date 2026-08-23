@@ -25,14 +25,14 @@ func _ready() -> void:
 		Dialogic.VAR.variable_changed.connect(_on_dialogic_variable_changed)
 
 
-func get_var(name: String) -> Variant:
-	return get(name)
+func get_var(variable_name: String) -> Variant:
+	return get(variable_name)
 
 
-func set_var(name: String, value: Variant) -> void:
-	if Dialogic.VAR.set_variable(name, value):
-		set(name, value)
-		value_changed.emit(name, value)
+func set_var(variable_name: String, value: Variant) -> void:
+	if Dialogic.VAR.set_variable(variable_name, value):
+		set(variable_name, value)
+		value_changed.emit(variable_name, value)
 
 
 func _on_dialogic_variable_changed(info: Dictionary) -> void:

@@ -299,7 +299,7 @@ def _import_path(rel: PurePosixPath, lore_root: Path) -> Path | None:
     parts = rel.parts
     if parts and parts[0] == "lore":
         rel = PurePosixPath(*parts[1:])
-    elif parts and parts[0] not in ENTRY_DIRS + ("INDEX.md", "plot-threads.md"):
+    elif parts and parts[0] not in ENTRY_DIRS + ["INDEX.md", "plot-threads.md"]:
         return None
     target = (lore_root / Path(*rel.parts)).resolve()
     try:

@@ -1,6 +1,6 @@
 # Lore Index
 
-此文件由 `tools/update_lore_index.py` 自动生成；新增或修改条目后请重新运行该脚本，不要手工编辑。
+此文件由 `tools/lj_cli.py update-index` 自动生成；新增或修改条目后请重新运行该命令，不要手工编辑。
 
 ## 角色
 
