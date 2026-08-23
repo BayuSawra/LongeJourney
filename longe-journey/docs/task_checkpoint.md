@@ -48,3 +48,5 @@
 - [验证] 范围=9.3 图鉴接入 lore/INDEX.md 与 canon 校验 结果=通过 登记=2026-08-23 线程=主线程（tools/check_lore_canon.py 退出码 0；LoreRuntime 运行时读取 lore/INDEX.md 并按 canon 条目/plot-threads 解析；图鉴入口 scripts/lore_browser.gd 使用 LoreRuntime；Godot headless 冒烟通过）
 - [验证] 范围=9.2.3 图鉴搜索与分类筛选 结果=通过 登记=2026-08-23 线程=主线程（静态检查：search/分类过滤/清空/返回与空态逻辑一致；Godot 运行时未找到，未做 headless smoke test）
 - [验证] 范围=10.1.4b 资源引用分析 结果=通过 登记=2026-08-23 线程=主线程（输出 docs/resource_references.json，引用数 57，未解析 22）
+
+- [验证] 范围=10.1.4c 资源引用校验器 结果=通过 登记=2026-08-23 线程=主线（输出 docs/resource_validation.json，与手工抽查一致）

@@ -1,0 +1,85 @@
+{
+    "generated_at":  "2026-08-23T22:21:39+08:00",
+    "input_manifest":  "resource_manifest.json",
+    "input_references":  "resource_references.json",
+    "summary":  {
+                    "manifest_count":  20,
+                    "reference_count":  57,
+                    "missing_count":  0,
+                    "orphan_count":  13,
+                    "inconsistency_count":  0
+                },
+    "missing":  [
+
+                ],
+    "orphan":  [
+                   {
+                       "path":  "art/banner.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/hualan.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/hospitalicon.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/lukouicon.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/luyuanicon.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/qiuying.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/qiuyingicon.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/icon/shilingicon.png",
+                       "category":  "art/icon",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/IMG_0198.JPG",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/jiashan1.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/map.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/shilin1.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   },
+                   {
+                       "path":  "art/封面.png",
+                       "category":  "art",
+                       "detail":  "manifest entry without reference"
+                   }
+               ],
+    "inconsistency":  [
+
+                      ]
+}
