@@ -4,6 +4,8 @@
 Subcommands:
   check-lore     Validate lore/ files against the project conventions.
   update-index   Regenerate lore/INDEX.md from the lore source files.
+  export-lore    Export lore/ (including INDEX.md) to a zip or directory.
+  import-lore    Import lore/ from a zip or directory, then regenerate INDEX.md.
 
 Use --root to point at a project checkout other than the one containing this
 script; all paths are then resolved relative to that root.
@@ -11,8 +13,11 @@ script; all paths are then resolved relative to that root.
 
 import argparse
 import re
+import shutil
 import sys
+import zipfile
 from pathlib import Path
+from pathlib import PurePosixPath
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -256,6 +261,103 @@ def run_update(root: Path | None = None) -> int:
     return 0
 
 
+def run_export(root: Path | None, out: Path) -> int:
+    project_root = (PROJECT_ROOT if root is None else root).resolve()
+    lore_root = project_root / "lore"
+    if not lore_root.is_dir():
+        print(f"找不到 lore 目录：{lore_root}", file=sys.stderr)
+        return 1
+
+    out = Path(out).expanduser()
+    if out.suffix.lower() == ".zip":
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as archive:
+            for path in sorted(lore_root.rglob("*")):
+                if path.is_dir():
+                    continue
+                rel = path.relative_to(lore_root)
+                archive.write(path, f"lore/{rel.as_posix()}")
+        print(f"已导出 {lore_root} -> {out}")
+        return 0
+
+    target_lore = out / "lore"
+    target_lore.mkdir(parents=True, exist_ok=True)
+    for path in sorted(lore_root.rglob("*")):
+        if path.is_dir():
+            continue
+        rel = path.relative_to(lore_root)
+        target = target_lore / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, target)
+    print(f"已导出 {lore_root} -> {target_lore}")
+    return 0
+
+
+def _import_path(rel: PurePosixPath, lore_root: Path) -> Path | None:
+    if rel.is_absolute() or ".." in rel.parts:
+        return None
+    parts = rel.parts
+    if parts and parts[0] == "lore":
+        rel = PurePosixPath(*parts[1:])
+    elif parts and parts[0] not in ENTRY_DIRS + ("INDEX.md", "plot-threads.md"):
+        return None
+    target = (lore_root / Path(*rel.parts)).resolve()
+    try:
+        target.relative_to(lore_root.resolve())
+    except ValueError:
+        return None
+    return target
+
+
+def run_import(root: Path | None, source: Path) -> int:
+    project_root = (PROJECT_ROOT if root is None else root).resolve()
+    lore_root = project_root / "lore"
+    source = Path(source).expanduser()
+    if not source.exists():
+        print(f"找不到导入源：{source}", file=sys.stderr)
+        return 1
+
+    imported = 0
+    if source.is_file() and source.suffix.lower() == ".zip":
+        with zipfile.ZipFile(source, "r") as archive:
+            for info in archive.infolist():
+                if info.is_dir():
+                    continue
+                rel = PurePosixPath(info.filename.replace("\\", "/"))
+                target = _import_path(rel, lore_root)
+                if target is None:
+                    print(
+                        f"忽略无法识别的 zip 条目：{info.filename}",
+                        file=sys.stderr,
+                    )
+                    continue
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(archive.read(info))
+                imported += 1
+    else:
+        source_dir = source / "lore" if (source / "lore").is_dir() else source
+        for path in sorted(source_dir.rglob("*")):
+            if path.is_dir():
+                continue
+            rel = PurePosixPath(path.relative_to(source_dir).as_posix())
+            target = _import_path(rel, lore_root)
+            if target is None:
+                print(
+                    f"忽略无法识别的文件：{path}",
+                    file=sys.stderr,
+                )
+                continue
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target)
+            imported += 1
+
+    print(f"已导入 {imported} 个文件到 {lore_root}")
+    update_rc = run_update(root)
+    if update_rc:
+        return update_rc
+    return run_check(root)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="lj_cli.py",
@@ -277,6 +379,27 @@ def build_parser() -> argparse.ArgumentParser:
         "update-index",
         help="重新生成 lore/INDEX.md",
     )
+    export_parser = subparsers.add_parser(
+        "export-lore",
+        help="批量导出 lore/（含 INDEX.md）到 zip 或目录",
+    )
+    export_parser.add_argument(
+        "--out",
+        type=Path,
+        required=True,
+        help="导出目标：.zip 文件或目录（目录下会生成 lore/）",
+    )
+    import_parser = subparsers.add_parser(
+        "import-lore",
+        help="批量导入 lore/，导入后重新生成 INDEX.md 并校验",
+    )
+    import_parser.add_argument(
+        "--from",
+        dest="source",
+        type=Path,
+        required=True,
+        help="导入源：zip 文件或包含 lore/ 的目录",
+    )
     return parser
 
 
@@ -286,6 +409,10 @@ def main(argv: list[str] | None = None) -> int:
         return run_check(args.root)
     if args.command == "update-index":
         return run_update(args.root)
+    if args.command == "export-lore":
+        return run_export(args.root, args.out)
+    if args.command == "import-lore":
+        return run_import(args.root, args.source)
     return 2
 
 

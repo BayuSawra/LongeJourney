@@ -6,15 +6,28 @@
 
 - `check-lore`：校验 `lore/` 是否符合格式与目录约定，失败返回非零退出码
 - `update-index`：重新生成 `lore/INDEX.md`
+- `export-lore`：批量导出 `lore/`（含 `INDEX.md`）到 zip 或目录
+- `import-lore`：从 zip 或目录批量导入 `lore/`，导入后自动重建 `INDEX.md` 并执行 `check-lore`
 
 常用示例：
 
 ```powershell
 python tools/lj_cli.py check-lore
 python tools/lj_cli.py update-index
+python tools/lj_cli.py export-lore --out lore-backup.zip
+python tools/lj_cli.py export-lore --out D:/lore-export
+python tools/lj_cli.py import-lore --from lore-backup.zip
+python tools/lj_cli.py import-lore --from D:/lore-export
 ```
 
 旧脚本 `tools/check_lore_canon.py`、`tools/update_lore_index.py` 保留，但仅作为兼容包装，不再作为新的接口入口。
+
+## 导入导出约定
+
+- `export-lore --out xxx.zip`：zip 内条目以 `lore/...` 为前缀，包含 `lore/INDEX.md`
+- `export-lore --out 目录`：在目标目录下生成 `lore/`
+- `import-lore --from` 接受 zip 或目录；兼容 `lore/...` 布局，也兼容直接包含 `characters/`、`locations/`、`items/`、`events/`、`plot-threads.md`、`INDEX.md` 的展开布局
+- 导入路径会做安全检查，拒绝绝对路径、`..` 或越出 `lore/` 的条目
 
 ## 项目根目录
 
