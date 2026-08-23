@@ -1,0 +1,152 @@
+{
+    "format_version":  1,
+    "generated_at":  "2026-08-23T21:28:08.3394648+08:00",
+    "root":  ".",
+    "categories":  [
+                       "art",
+                       "art/icon",
+                       "font"
+                   ],
+    "resources":  [
+                      {
+                          "path":  "art/1.png",
+                          "category":  "art",
+                          "size_bytes":  47245,
+                          "import_path":  "art/1.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/banner.png",
+                          "category":  "art",
+                          "size_bytes":  51025,
+                          "import_path":  "art/banner.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/hualan.png",
+                          "category":  "art",
+                          "size_bytes":  39777,
+                          "import_path":  "art/hualan.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/flowericon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3646,
+                          "import_path":  "art/icon/flowericon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/hospitalicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3128,
+                          "import_path":  "art/icon/hospitalicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/lukouicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3313,
+                          "import_path":  "art/icon/lukouicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/luyuanicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3335,
+                          "import_path":  "art/icon/luyuanicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/moneyicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3394,
+                          "import_path":  "art/icon/moneyicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/qiuying.png",
+                          "category":  "art/icon",
+                          "size_bytes":  2008,
+                          "import_path":  "art/icon/qiuying.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/qiuyingicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3403,
+                          "import_path":  "art/icon/qiuyingicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/icon/shilingicon.png",
+                          "category":  "art/icon",
+                          "size_bytes":  3302,
+                          "import_path":  "art/icon/shilingicon.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/IMG_0198.JPG",
+                          "category":  "art",
+                          "size_bytes":  442766,
+                          "import_path":  "art/IMG_0198.JPG.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/jianshan2.png",
+                          "category":  "art",
+                          "size_bytes":  41486,
+                          "import_path":  "art/jianshan2.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/jiashan1.png",
+                          "category":  "art",
+                          "size_bytes":  37103,
+                          "import_path":  "art/jiashan1.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/map.png",
+                          "category":  "art",
+                          "size_bytes":  25401,
+                          "import_path":  "art/map.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/shilin1.png",
+                          "category":  "art",
+                          "size_bytes":  39385,
+                          "import_path":  "art/shilin1.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/shilin2.png",
+                          "category":  "art",
+                          "size_bytes":  45611,
+                          "import_path":  "art/shilin2.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/wife.png",
+                          "category":  "art",
+                          "size_bytes":  57261,
+                          "import_path":  "art/wife.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "art/封面.png",
+                          "category":  "art",
+                          "size_bytes":  20120,
+                          "import_path":  "art/封面.png.import",
+                          "has_import":  true
+                      },
+                      {
+                          "path":  "font/HYZIKUTANGJINGJIEKAITIW.TTF",
+                          "category":  "font",
+                          "size_bytes":  4034768,
+                          "import_path":  "font/HYZIKUTANGJINGJIEKAITIW.TTF.import",
+                          "has_import":  true
+                      }
+                  ]
+}
