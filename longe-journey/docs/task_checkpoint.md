@@ -2,9 +2,9 @@
 
 ## 当前任务
 
-- 目标：阶段 8：存档 / 历史 / 设置
-- 已完成：8.2.1 存档槽位数据结构与存储层（`scripts/autoload/save_manager.gd`：`save()`/`save_to_slot()`/`get_slots()`/`new_slot_id()`/`rename_slot()`/`get_slot_meta()`/`has_save()`/`delete_save()`，写入 `user://dialogic/saves/{slot}/save.sav`，元数据含 id/name/timestamp/scene/timeline）+ 8.2.2 存档 UI（`scenes/save_slot_panel.tscn` + `scripts/save_slot_panel.gd`：主菜单“存档”入口、槽位选择、覆盖确认、时间/命名展示、空槽位处理）
-- 下一步：8.2.3 读档恢复
+- 目标：阶段 9：lore 运行时只读设定数据
+- 已完成：9.1 lore 运行时导入（`scripts/autoload/lore_runtime.gd`：读取 `lore/INDEX.md` 与正典条目，解析索引条目并按 canon/plot-thread 章节匹配，提供 `get_all_entries()`/`get_category()`/`get_detail()`/`has_entry()`，返回值为深拷贝，运行时数据只读；已在 `project.godot` 注册为 `LoreRuntime` 自动加载单例）
+- 下一步：9.2.2 图鉴主界面与分类列表
 - 注意事项：新线程只读本文件“下一步”后直接执行；一个线程只做一个执行块；动工前先写完成定义；一块完成即提交；英文文件名；中文只放显示文本
 
 ## 完成定义
@@ -12,6 +12,7 @@
 - 一个执行块完成即提交，提交信息写明阶段与块号（如 `feat(phase8): ...`）
 - 存档覆盖 `GameState`、当前 timeline 与场景；读档可恢复
 - 设置覆盖文字速度、音量、全屏
+- [完成] 9.2.1 图鉴数据模型与分类索引：`LoreRuntime` 提供 `get_index()`/`get_categories()`/`search()`/`search_by_category()`，按分类与标题稳定排序，支持对标题/摘要/分类/路径/字段/已知设定的大小写不敏感检索，返回均为深拷贝，运行时数据保持只读；9.2.1 为纯数据层，不含 UI。
 
 ## 相关文档
 
@@ -39,3 +40,4 @@
 - [已检查 范围=8.2.3 读档 UI 静态检查 结果=通过 登记=2026-08-22 线程=主线程]
 - [已检查 范围=8.2.4 自动存档触发点 结果=通过 登记=2026-08-22 线程=主线程]
 - [已检查 范围=8.2.5 存读档与场景导航闭环 结果=通过 登记=2026-08-22 线程=主线程]
+- [已检查 范围=8.5 主菜单设置/退出接入 结果=通过 登记=2026-08-23 线程=主线程]
