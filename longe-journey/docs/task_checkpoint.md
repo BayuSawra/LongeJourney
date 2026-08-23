@@ -13,6 +13,7 @@
 - 存档覆盖 `GameState`、当前 timeline 与场景；读档可恢复
 - 设置覆盖文字速度、音量、全屏
 - [完成] 9.2.1 图鉴数据模型与分类索引：`LoreRuntime` 提供 `get_index()`/`get_categories()`/`search()`/`search_by_category()`，按分类与标题稳定排序，支持对标题/摘要/分类/路径/字段/已知设定的大小写不敏感检索，返回均为深拷贝，运行时数据保持只读；9.2.1 为纯数据层，不含 UI。
+- [完成] 10.1.1 统一 CLI/接口与输入输出格式、路径约定：命令入口为 tools/lj_cli.py，子命令 check-lore/update-index，支持 --root 参数化项目根，输入输出与目录约定写入 tools/README.md；旧脚本保留为兼容包装。
 
 ## 相关文档
 
@@ -43,3 +44,4 @@
 - [已检查 范围=8.5 主菜单设置/退出接入 结果=通过 登记=2026-08-23 线程=主线程]
 - [验证] 范围=9.2.2 图鉴主界面与分类列表 结果=通过 登记=2026-08-23 线程=主线程（静态检查：唯一节点名、分类/详情/返回/空态逻辑、主菜单加载引用；Godot 运行时未找到，未做 headless smoke test）
 - [验证] 范围=9.2.5 场景/HUD 集成验证 结果=通过 登记=2026-08-23 线程=主线程（静态核对：HUD 入口加载图鉴，图鉴关闭仅 queue_free() 保留场景状态；Godot headless 冒烟启动通过）
+- [验证] 范围=9.3 图鉴接入 lore/INDEX.md 与 canon 校验 结果=通过 登记=2026-08-23 线程=主线程（tools/check_lore_canon.py 退出码 0；LoreRuntime 运行时读取 lore/INDEX.md 并按 canon 条目/plot-threads 解析；图鉴入口 scripts/lore_browser.gd 使用 LoreRuntime；Godot headless 冒烟通过）
