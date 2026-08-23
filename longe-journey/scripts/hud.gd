@@ -9,12 +9,23 @@ const FIELD_LABELS: Dictionary = {
 }
 
 @onready var values: HBoxContainer = %Values
+@onready var settings_button: Button = %SettingsButton
+@onready var lore_button: Button = %LoreButton
 
 
 func _ready() -> void:
 	GameState.value_changed.connect(_on_game_state_value_changed)
 	_refresh_all()
 	VisualFX.fade_in(self, 0.45)
+	settings_button.pressed.connect(func() -> void: SettingsManager.open_settings())
+	lore_button.pressed.connect(_on_lore_button_pressed)
+
+
+func _on_lore_button_pressed() -> void:
+	var packed := load("res://scenes/lore_browser.tscn") as PackedScene
+	if packed == null:
+		return
+	get_tree().current_scene.add_child(packed.instantiate())
 
 
 func _on_game_state_value_changed(variable: String, _new_value: Variant) -> void:
