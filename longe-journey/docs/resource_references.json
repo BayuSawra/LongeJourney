@@ -1,0 +1,564 @@
+{
+    "task":  "10.1.4b resource reference analysis",
+    "generated_at":  "2026-08-23T22:03:43.5468245+08:00",
+    "reference_count":  57,
+    "resolved_count":  35,
+    "unresolved_count":  22,
+    "references":  [
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  93,
+                           "reference":  "art/",
+                           "type":  "unknown",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  93,
+                           "reference":  "art/icon/",
+                           "type":  "unknown",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  317,
+                           "reference":  "art/icon/flowericon.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  346,
+                           "reference":  "scripts/text_effects/flicker.gd",
+                           "type":  "gd",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  347,
+                           "reference":  "scripts/text_effects/flicker.gd",
+                           "type":  "gd",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  403,
+                           "reference":  "art/shilin2.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  409,
+                           "reference":  "art/icon/moneyicon.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  420,
+                           "reference":  "music/bgm.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  421,
+                           "reference":  "sfx/click.wav",
+                           "type":  "wav",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  424,
+                           "reference":  "voice/wife_01.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/Dialogic_Implementation_Guide.md",
+                           "line":  475,
+                           "reference":  "art/",
+                           "type":  "unknown",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Phase0_Content_Tools.md",
+                           "line":  46,
+                           "reference":  "character/我.dch",
+                           "type":  "dch",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/Phase0_Content_Tools.md",
+                           "line":  47,
+                           "reference":  "chat_styel.tres",
+                           "type":  "tres",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  10,
+                           "reference":  "music/\u003cscene\u003e.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  16,
+                           "reference":  "art/1.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  16,
+                           "reference":  "music/00_start.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  17,
+                           "reference":  "music/01_hospital.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  18,
+                           "reference":  "music/02_ward.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  19,
+                           "reference":  "music/03_crossroads.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  20,
+                           "reference":  "music/04_flower_shop.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  21,
+                           "reference":  "art/shilin2.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  21,
+                           "reference":  "music/05_shiling.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  22,
+                           "reference":  "art/jianshan2.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  22,
+                           "reference":  "music/06_luyuan.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  23,
+                           "reference":  "music/07_maze_entry.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  24,
+                           "reference":  "music/07_maze_left.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  25,
+                           "reference":  "music/07_maze_middle.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  26,
+                           "reference":  "music/07_maze_right.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  27,
+                           "reference":  "music/07_maze_exit.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  28,
+                           "reference":  "art/wife.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  28,
+                           "reference":  "music/08_wife_room.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  29,
+                           "reference":  "music/09_ending.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/phase6_background_bgm_inventory.md",
+                           "line":  35,
+                           "reference":  "music/*.ogg",
+                           "type":  "ogg",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "docs/WORK_PLAN.md",
+                           "line":  121,
+                           "reference":  "chat_styel.tres",
+                           "type":  "tres",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/ending_debug_panel.tscn",
+                           "line":  3,
+                           "reference":  "scripts/ending_debug_panel.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/ending_debug_panel.tscn",
+                           "line":  4,
+                           "reference":  "font/HYZIKUTANGJINGJIEKAITIW.TTF",
+                           "type":  "ttf",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/history_panel.tscn",
+                           "line":  3,
+                           "reference":  "scripts/history_panel.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/hud.tscn",
+                           "line":  3,
+                           "reference":  "scripts/hud.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/hud.tscn",
+                           "line":  4,
+                           "reference":  "font/HYZIKUTANGJINGJIEKAITIW.TTF",
+                           "type":  "ttf",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/lore_browser.tscn",
+                           "line":  3,
+                           "reference":  "scripts/lore_browser.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/mianMenu.tscn",
+                           "line":  3,
+                           "reference":  "art/1.png",
+                           "type":  "png",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/mianMenu.tscn",
+                           "line":  4,
+                           "reference":  "scripts/extends",
+                           "type":  "unknown",
+                           "resolved":  false
+                       },
+                       {
+                           "source":  "scenes/mianMenu.tscn",
+                           "line":  5,
+                           "reference":  "font/HYZIKUTANGJINGJIEKAITIW.TTF",
+                           "type":  "ttf",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/save_slot_panel.tscn",
+                           "line":  3,
+                           "reference":  "scripts/save_slot_panel.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/scene_1.tscn",
+                           "line":  3,
+                           "reference":  "scripts/start.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/scene_1.tscn",
+                           "line":  4,
+                           "reference":  "scenes/hud.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/scene_1.tscn",
+                           "line":  5,
+                           "reference":  "scenes/ending_debug_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/scene_1.tscn",
+                           "line":  6,
+                           "reference":  "scenes/history_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scenes/settings_panel.tscn",
+                           "line":  3,
+                           "reference":  "scripts/settings_panel.gd",
+                           "type":  "gd",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/extends Control.gd",
+                           "line":  4,
+                           "reference":  "scenes/scene_1.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/extends Control.gd",
+                           "line":  8,
+                           "reference":  "scenes/save_slot_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/extends Control.gd",
+                           "line":  15,
+                           "reference":  "scenes/save_slot_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/extends Control.gd",
+                           "line":  24,
+                           "reference":  "scenes/lore_browser.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/hud.gd",
+                           "line":  25,
+                           "reference":  "scenes/lore_browser.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/lore_browser.gd",
+                           "line":  3,
+                           "reference":  "font/HYZIKUTANGJINGJIEKAITIW.TTF",
+                           "type":  "ttf",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/save_slot_panel.gd",
+                           "line":  3,
+                           "reference":  "scenes/save_slot_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       },
+                       {
+                           "source":  "scripts/autoload/settings_manager.gd",
+                           "line":  44,
+                           "reference":  "scenes/settings_panel.tscn",
+                           "type":  "tscn",
+                           "resolved":  true
+                       }
+                   ],
+    "unresolved_references":  [
+                                  {
+                                      "source":  "docs/Dialogic_Implementation_Guide.md",
+                                      "line":  346,
+                                      "reference":  "scripts/text_effects/flicker.gd",
+                                      "type":  "gd",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/Dialogic_Implementation_Guide.md",
+                                      "line":  347,
+                                      "reference":  "scripts/text_effects/flicker.gd",
+                                      "type":  "gd",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/Dialogic_Implementation_Guide.md",
+                                      "line":  420,
+                                      "reference":  "music/bgm.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/Dialogic_Implementation_Guide.md",
+                                      "line":  421,
+                                      "reference":  "sfx/click.wav",
+                                      "type":  "wav",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/Dialogic_Implementation_Guide.md",
+                                      "line":  424,
+                                      "reference":  "voice/wife_01.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  10,
+                                      "reference":  "music/\u003cscene\u003e.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  16,
+                                      "reference":  "music/00_start.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  17,
+                                      "reference":  "music/01_hospital.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  18,
+                                      "reference":  "music/02_ward.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  19,
+                                      "reference":  "music/03_crossroads.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  20,
+                                      "reference":  "music/04_flower_shop.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  21,
+                                      "reference":  "music/05_shiling.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  22,
+                                      "reference":  "music/06_luyuan.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  23,
+                                      "reference":  "music/07_maze_entry.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  24,
+                                      "reference":  "music/07_maze_left.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  25,
+                                      "reference":  "music/07_maze_middle.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  26,
+                                      "reference":  "music/07_maze_right.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  27,
+                                      "reference":  "music/07_maze_exit.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  28,
+                                      "reference":  "music/08_wife_room.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  29,
+                                      "reference":  "music/09_ending.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "docs/phase6_background_bgm_inventory.md",
+                                      "line":  35,
+                                      "reference":  "music/*.ogg",
+                                      "type":  "ogg",
+                                      "resolved":  false
+                                  },
+                                  {
+                                      "source":  "scenes/mianMenu.tscn",
+                                      "line":  4,
+                                      "reference":  "scripts/extends",
+                                      "type":  "unknown",
+                                      "resolved":  false
+                                  }
+                              ]
+}
