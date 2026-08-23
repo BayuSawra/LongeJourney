@@ -52,3 +52,5 @@
 - [验证] 范围=10.1.4c 资源引用校验器 结果=通过 登记=2026-08-23 线程=主线（输出 docs/resource_validation.json，与手工抽查一致）
 - [验证] 范围=10.1.4d 资源导入器 结果=通过 登记=2026-08-23 线程=主线（Godot headless --import 退出码 0；校验 missing=0 inconsistency=0 orphan=13）
 - [验证] 范围=10.1.4e 资源导出/备份 结果=通过 登记=2026-08-23 线程=主线（导出 40；往返 passed；校验 passed；Godot headless --import 完成 reimport，环境类退出警告不影响资源校验）
+- [验证] 范围=10.2 备份目录规范 结果=通过 登记=2026-08-23 线程=主线（备份输出 backups/resources/<时间戳>/；命名 yyyyMMdd-HHmmss；manifest 字段与脚本输出一致；保留最近 3 份、脚本不自动清理；验证输出 roundtrip=passed validation=passed）
+- [验证] 范围=10.3 往返验证 结果=通过 登记=2026-08-23 线程=主线（导出 40；roundtrip=passed；validation=passed；备份 backups/resources/20260823-232730）

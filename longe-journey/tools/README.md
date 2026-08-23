@@ -31,7 +31,8 @@ powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1
 ```
 
 - 备份输出至 `backups/resources/<时间戳>/`
-- `backup_manifest.json` 记录资源清单、备份时间，以及每个文件的相对路径、SHA256、大小、字节数
+- `backup_manifest.json` 记录资源清单、备份时间，以及每个文件的相对路径、SHA256
+- 时间戳目录命名格式为 `yyyyMMdd-HHmmss`；脚本不自动清理，保留最近 3 份备份，历史备份按需手动归档/清理
 - 导出→导入（还原）→校验通过后输出 `roundtrip=passed validation=passed`
 
 ## 导入导出约定
