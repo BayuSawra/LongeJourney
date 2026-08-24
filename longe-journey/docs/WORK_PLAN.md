@@ -270,7 +270,7 @@ visit_ting_shifang=0
       - [x] 10.1.4e 导出/备份与文档：按清单导出/备份资源并做往返校验，把用法写回计划/工具文档。命令：`powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1`；备份输出至 `backups/resources/<时间戳>/`，含 `backup_manifest.json`（SHA256），往返校验通过后输出 `roundtrip=passed validation=passed`。验证：往返校验通过、文档已更新。验证通过就执行，不需要来回反复验证，收窄你的工作流。
   - [x] 10.2 备份目录规范：备份位置、命名与保留规则明确。验证通过就执行，不需要来回反复验证，收窄你的工作流。验证：备份位置 `backups/resources/<时间戳>/`、命名 `yyyyMMdd-HHmmss`、保留最近 3 份且脚本不自动清理，脚本验证输出 `roundtrip=passed validation=passed`。
 - [x] 10.3 往返验证：复用 10.1 的导出/导入/校验命令与 resource_references.json / resource_validation.json 等已有产物，做一次端到端导出->导入->校验；发现不一致时修复后重跑一次，不反复扫描全量语料。验证：导出的内容可重新导入且校验通过。如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
-- 10.4 文档：同步更新本计划与 docs/ 工具文档，记录脚本用法、备份目录/命名/保留规则及 10.3 的往返验证命令。验证：文档已更新且命令与实际 CLI 一致。
+- [x] 10.4 文档：同步更新本计划与 docs/ 工具文档，记录脚本用法、备份目录/命名/保留规则及 10.3 的往返验证命令。验证：文档已更新且命令与实际 CLI 一致。
 - 建立 timeline、lore、资源的批量导入导出脚本与备份目录规范。
 - 验证：导出的内容可重新导入且校验通过。验证通过就执行，不需要来回反复验证，收窄你的工作流。
 

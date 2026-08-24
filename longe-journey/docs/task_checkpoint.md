@@ -54,3 +54,4 @@
 - [验证] 范围=10.1.4e 资源导出/备份 结果=通过 登记=2026-08-23 线程=主线（导出 40；往返 passed；校验 passed；Godot headless --import 完成 reimport，环境类退出警告不影响资源校验）
 - [验证] 范围=10.2 备份目录规范 结果=通过 登记=2026-08-23 线程=主线（备份输出 backups/resources/<时间戳>/；命名 yyyyMMdd-HHmmss；manifest 字段与脚本输出一致；保留最近 3 份、脚本不自动清理；验证输出 roundtrip=passed validation=passed）
 - [验证] 范围=10.3 往返验证 结果=通过 登记=2026-08-23 线程=主线（导出 40；roundtrip=passed；validation=passed；备份 backups/resources/20260823-232730）
+- [验证] 范围=10.4 文档收尾 结果=通过 登记=2026-08-24 线程=主线（docs/Phase0_Content_Tools.md 与 tools/README.md 已记录脚本用法；备份 backups/resources/<时间戳>/；命名 yyyyMMdd-HHmmss；保留最近 3 份且脚本不自动清理；10.3 结果：导出 40；roundtrip=passed；validation=passed；备份 backups/resources/20260823-232730）
