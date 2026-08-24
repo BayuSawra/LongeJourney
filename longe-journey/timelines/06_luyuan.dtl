@@ -19,7 +19,7 @@
             我不敢再看，转身就跑，出了露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
         - 摘下她手里的绣球花
             我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
 
@@ -29,7 +29,7 @@
             我飞快地跑出露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
 - 直走
     中间的矮墙上爬着一株绿色兰花，我摘了下来。
 
@@ -46,7 +46,7 @@
             我不敢再看，转身就跑，出了露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
         - 摘下她手里的绣球花
             我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
 
@@ -56,7 +56,7 @@
             我飞快地跑出露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
 - 往右走
     右边石头缝里长着一棵仙人球花，我小心地摘了下来。
 
@@ -73,7 +73,7 @@
             我不敢再看，转身就跑，出了露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
         - 摘下她手里的绣球花
             我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
 
@@ -83,4 +83,4 @@
             我飞快地跑出露园。
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 07_maze_left
