@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c8historypanel2026"]
+[gd_scene format=3 uid="uid://c1i3fgk8tj4vl"]
 
-[ext_resource type="Script" path="res://scripts/history_panel.gd" id="1_hp"]
+[ext_resource type="Script" uid="uid://b2wtspxuq4rai" path="res://scripts/history_panel.gd" id="1_hp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.09, 0.1, 0.12, 0.98)
@@ -16,33 +16,30 @@ corner_radius_bottom_left = 5
 shadow_color = Color(0, 0, 0, 0.4)
 shadow_size = 8
 
-[node name="HistoryPanel" type="CanvasLayer"]
+[node name="HistoryPanel" type="CanvasLayer" unique_id=503985092]
 layer = 110
 script = ExtResource("1_hp")
 
-[node name="HistoryButton" type="Button" parent="."]
+[node name="HistoryButton" type="Button" parent="." unique_id=1427942007]
 anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.0
 anchor_right = 1.0
-anchor_bottom = 0.0
 offset_left = -152.0
 offset_top = 12.0
 offset_right = -12.0
 offset_bottom = 48.0
 grow_horizontal = 0
-text = "历史"
+text = "故事回看"
 
-[node name="Overlay" type="ColorRect" parent="."]
+[node name="Overlay" type="ColorRect" parent="." unique_id=1287808790]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 0
 color = Color(0, 0, 0, 0.55)
-visible = false
 
-[node name="Panel" type="PanelContainer" parent="Overlay"]
-anchors_preset = 15
+[node name="Panel" type="PanelContainer" parent="Overlay" unique_id=983933966]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
@@ -51,28 +48,28 @@ offset_right = -40.0
 offset_bottom = -40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Main" type="VBoxContainer" parent="Overlay/Panel"]
+[node name="Main" type="VBoxContainer" parent="Overlay/Panel" unique_id=610224162]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Header" type="HBoxContainer" parent="Overlay/Panel/Main"]
+[node name="Header" type="HBoxContainer" parent="Overlay/Panel/Main" unique_id=1971213872]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="Overlay/Panel/Main/Header"]
+[node name="Title" type="Label" parent="Overlay/Panel/Main/Header" unique_id=478662935]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 22
 text = "历史记录"
 
-[node name="CloseButton" type="Button" parent="Overlay/Panel/Main/Header"]
+[node name="CloseButton" type="Button" parent="Overlay/Panel/Main/Header" unique_id=473212893]
 layout_mode = 2
 text = "关闭"
 
-[node name="Scroll" type="ScrollContainer" parent="Overlay/Panel/Main"]
+[node name="Scroll" type="ScrollContainer" parent="Overlay/Panel/Main" unique_id=1310761530]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="List" type="VBoxContainer" parent="Overlay/Panel/Main/Scroll"]
+[node name="List" type="VBoxContainer" parent="Overlay/Panel/Main/Scroll" unique_id=2113972669]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 6

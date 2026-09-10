@@ -8,3 +8,5 @@
     jump 02_ward/
 - 离开医院去十字路口
     jump 03_crossroads/
+- 去停尸房
+    jump

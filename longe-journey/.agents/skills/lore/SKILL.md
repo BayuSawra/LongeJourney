@@ -1,7 +1,73 @@
 ---
 name: lore
-description: Manage LongeJourney story canon and continuity. Activate ONLY when the task explicitly targets lore, canon facts, continuity checks, or creation/modification of lore entries. Do NOT activate merely because a task contains story, characters, locations, events, dialogue, scenes, timelines, or worldbuilding. Treat lore as an on-demand source, not automatically loaded context.
+description: Migration-only skill for importing and establishing LongeJourney story lore during the project migration phase. This skill is NOT for normal game development or post-migration maintenance. Once migration is complete, DO NOT activate or use this skill unless the user explicitly asks to perform migration-related lore work.
 ---
+# Lore Migration
+
+本 Skill 仅用于 LongeJourney 项目的“迁移阶段”。
+
+它的职责是：
+
+- 从旧项目提取剧情正典
+- 整理旧项目 Lore
+- 建立新的 lore/ 目录
+- 检查迁移过程中的正典一致性
+- 将旧项目剧情事实迁移到新项目
+
+---
+
+# 重要：迁移完成后停止使用
+
+当用户明确表示：
+
+> 游戏迁移已经完成
+
+或者当前项目已经进入正常开发/修改阶段时：
+
+**立即停止使用本 Skill。**
+
+此后不得因为以下任何任务重新激活本 Skill：
+
+- 修改代码
+- 修改场景
+- 修改 UI
+- 修改 Timeline
+- 修改 Dialogic
+- 修改 Dialogue Manager
+- 修改角色对话
+- 修改剧情表现
+- 修改游戏逻辑
+- 修复 Bug
+- 添加功能
+- 删除功能
+- 调整资源
+- 普通剧情修改
+
+即使这些任务涉及 Lore 中已经存在的角色、地点、事件，也不得使用本 Skill。
+
+---
+
+# 迁移阶段的结束条件
+
+当满足以下任一条件：
+
+1. 用户明确表示“迁移完成”
+2. 用户明确表示“已经迁移好了”
+3. 用户开始要求进行正常游戏开发/修改，而不是继续迁移
+
+则视为：
+
+> **Lore Migration Phase 已结束。**
+
+从此以后，本 Skill 默认永久停止。
+
+除非用户明确说：
+
+> “重新进行 Lore 迁移”
+> “继续迁移 Lore”
+> “重新检查迁移结果”
+
+否则不要使用本 Skill。
 
 # Lore
 

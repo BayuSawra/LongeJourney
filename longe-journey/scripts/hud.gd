@@ -3,8 +3,7 @@ extends CanvasLayer
 ## 常驻 HUD：显示 GameState 中的核心数值，并监听变化实时刷新。
 
 const FIELD_LABELS: Dictionary = {
-	"energy": "能量",
-	"calm": "平静",
+	"flower": "花",
 	"money": "金币",
 }
 

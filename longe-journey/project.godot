@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LongeJourney"
-run/main_scene="uid://bkf4gxk37jjlr"
+run/main_scene="uid://bh5m0e3274r56"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -65,11 +65,11 @@ directories/dtl_directory={
 "timeline1_0": "res://timelines/timeline1_0.dtl"
 }
 layout/style_directory={
-"": "res://chat_styel.tres",
-"chat_styel": "res://chat_styel.tres"
+"chat_style": "res://chat_style.tres"
 }
-layout/style_list=["res://chat_styel.tres"]
+layout/style_list=["res://chat_style.tres"]
 layout/default_style="res://chat_styel.tres"
+glossary/default_case_sensitive=true
 
 [display]
 
