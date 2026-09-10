@@ -8,21 +8,21 @@ content_margin_left = 18.0
 content_margin_top = 10.0
 content_margin_right = 18.0
 content_margin_bottom = 10.0
-bg_color = Color(0.04, 0.07, 0.1, 0.55)
+bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-shadow_color = Color(0.73357177, 0.8554693, 0.9336531, 0.35)
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="CanvasLayer" unique_id=1795719205]
 layer = 100
 script = ExtResource("1_hud")
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=1270591837]
-offset_left = 16.0
+offset_left = 53.0
 offset_top = 16.0
-offset_right = 365.0
+offset_right = 236.0
 offset_bottom = 76.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
 
@@ -37,6 +37,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 24
 text = "花 0"
+horizontal_alignment = 1
 
 [node name="money" type="Label" parent="Panel/Values" unique_id=1272302614]
 layout_mode = 2
@@ -44,6 +45,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 24
 text = "金币 20"
+horizontal_alignment = 1
 
 [node name="LoreButton" type="Button" parent="Panel" unique_id=422621561]
 unique_name_in_owner = true
@@ -58,3 +60,7 @@ visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "SETTINGS"
+
+[node name="backimg" type="TextureRect" parent="Panel" unique_id=134880907]
+layout_mode = 2
+expand_mode = 3
