@@ -45,6 +45,9 @@ variables={
 "wife": 0
 }
 directories/dch_directory={
+"nurse1": "res://character/nurse1.dch",
+"nurse2": "res://character/nurse2.dch",
+"wife": "res://character/wife.dch",
 "我": "res://character/我.dch"
 }
 directories/dtl_directory={
@@ -71,6 +74,21 @@ layout/style_directory={
 layout/style_list=["res://chat_style.tres"]
 layout/default_style="res://chat_styel.tres"
 glossary/default_case_sensitive=true
+"#å¨è¿éæ³¨åæ°çåé#variables"={
+"calm": 100,
+"earthworm": 0,
+"energy": 100,
+"flower": 0,
+"hualan": false,
+"jiahua": false,
+"money": 20,
+"player_name": "无名王",
+"visit_huadian": 0,
+"visit_luyuan": 0,
+"visit_shiling": 0,
+"visit_ting_shifang": 0,
+"wife": 0
+}
 
 [display]
 
