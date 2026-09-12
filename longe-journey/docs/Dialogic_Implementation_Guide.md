@@ -70,7 +70,7 @@
 timelines/
   00_start.dtl            # 开幕/公交车
   01_hospital.dtl         # 医院入口
-  02_ward.dtl             # 住院部/停尸房
+  02_ward.dtl             # 住院部
   03_crossroads.dtl       # 路口
   04_flower_shop.dtl      # 花店
   05_shiling.dtl          # 狮岭
@@ -78,6 +78,7 @@ timelines/
   07_maze.dtl             # 假山迷宫
   08_wife_room.dtl        # 病房
   09_ending.dtl           # 结局
+  10_morgue.dtl           # 停尸房
 character/*.dch           # 角色定义
 styles/*.tres             # Dialogic 样式
 scripts/autoload/game_state.gd

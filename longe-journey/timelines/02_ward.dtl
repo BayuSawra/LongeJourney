@@ -2,7 +2,7 @@
 
 护士站在走廊入口，拦住了我。
 
-if {flower} <= 5.0:
+if {flower} < 5:
     护士上下打量我，啧了一声。
     
     “没带花别进去。”
@@ -40,34 +40,3 @@ else:
         
         - 先回医院楼下
             jump 01_hospital
-    - 先穿过小道，去停尸房那边碰碰运气
-        if {visit_ting_shifang} == 0:
-            小道里阴森森的，尽头是停尸房，门没锁死。
-            
-            - 碰碰运气，推门进去
-                set {visit_ting_shifang} += 1
-                里面空荡荡的，什么也没找着，我赶紧退了出来。
-                
-                - 回医院楼下
-                    jump 01_hospital
-            - 仔细看看
-                set {visit_ting_shifang} += 1
-                垃圾桶里有东西，我翻出来一看，是个淡黄色的花篮，用蚯蚓编的，结实得很。
-                
-                我把它收好。
-                set {hualan} = true
-                
-                - 带着花篮回医院楼下
-                    jump 01_hospital
-        elif {visit_ting_shifang} == 1:
-            停尸房门口蒙着红布，像是有人来过了。
-            
-            我不敢多待，退了出去。
-            
-            - 回医院楼下
-                jump 01_hospital
-        else:
-            小道尽头空无一人，停尸房门锁着。
-            
-            - 回医院楼下
-                jump 01_hospital
