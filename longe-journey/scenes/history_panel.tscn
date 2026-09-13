@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1i3fgk8tj4vl"]
 
-[ext_resource type="Script" uid="uid://b2wtspxuq4rai" path="res://scripts/history_panel.gd" id="1_hp"]
+[ext_resource type="Script" uid="uid://cky7h1gy0bv2k" path="res://scripts/history_panel.gd" id="1_hp"]
+[ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="2_f87ve"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.09, 0.1, 0.12, 0.98)
@@ -29,6 +30,8 @@ offset_top = 12.0
 offset_right = -12.0
 offset_bottom = 48.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_f87ve")
+theme_override_font_sizes/font_size = 18
 text = "故事回看"
 
 [node name="Overlay" type="ColorRect" parent="." unique_id=1287808790]

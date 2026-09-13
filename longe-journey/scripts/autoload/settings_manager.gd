@@ -2,7 +2,7 @@ extends Node
 
 const SETTINGS_PATH := "user://settings.cfg"
 
-var _text_speed := 42.0
+var _text_speed := 38.0
 var _volume := 100
 var _fullscreen := false
 var _panel: Node = null

@@ -4,7 +4,7 @@ extends Node
 ## Keeps dialog speed, typewriter skipping and transition animations in one place.
 
 ## Characters typed per second for dialog text. Applied to Dialogic when possible.
-@export var characters_per_second: float = 42.0
+@export var characters_per_second: float = 38.0
 
 var _dialogic_text: Node = null
 var _choice_buttons := {}

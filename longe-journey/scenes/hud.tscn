@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8k01pnuvnqqs"]
 
-[ext_resource type="Script" uid="uid://clhth4r6ujuwo" path="res://scripts/hud.gd" id="1_hud"]
+[ext_resource type="Script" uid="uid://d2rquoit6lxjr" path="res://scripts/hud.gd" id="1_hud"]
 [ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="2_font"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
@@ -8,27 +8,29 @@ content_margin_left = 18.0
 content_margin_top = 10.0
 content_margin_right = 18.0
 content_margin_bottom = 10.0
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.1, 0.1, 0.1, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-shadow_color = Color(0, 0, 0, 1)
+shadow_color = Color(2.355437, 2.355437, 2.355437, 1)
 
 [node name="HUD" type="CanvasLayer" unique_id=1795719205]
 layer = 100
 script = ExtResource("1_hud")
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=1270591837]
-offset_left = 53.0
+offset_left = 16.0
 offset_top = 16.0
-offset_right = 236.0
-offset_bottom = 76.0
+offset_right = 203.0
+offset_bottom = 69.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
 
 [node name="Values" type="HBoxContainer" parent="Panel" unique_id=1853799334]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="flower" type="Label" parent="Panel/Values" unique_id=1432114663]
@@ -44,7 +46,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 24
-text = "金币 20"
+text = "钱 20"
 horizontal_alignment = 1
 
 [node name="LoreButton" type="Button" parent="Panel" unique_id=422621561]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkf4gxk37jjlr"]
 
-[ext_resource type="Script" uid="uid://k8kw4c64x0mt" path="res://scripts/start.gd" id="1_ta4h7"]
+[ext_resource type="Script" uid="uid://bj4du2u33lnft" path="res://scripts/start.gd" id="1_ta4h7"]
 [ext_resource type="PackedScene" uid="uid://c8k01pnuvnqqs" path="res://scenes/hud.tscn" id="2_hud"]
 [ext_resource type="PackedScene" path="res://scenes/ending_debug_panel.tscn" id="3_debug"]
 [ext_resource type="PackedScene" uid="uid://c1i3fgk8tj4vl" path="res://scenes/history_panel.tscn" id="4_history"]
@@ -14,3 +14,8 @@ script = ExtResource("1_ta4h7")
 visible = false
 
 [node name="HistoryPanel" parent="." unique_id=617080986 instance=ExtResource("4_history")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=590010114]
+offset_right = 1150.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 1)
