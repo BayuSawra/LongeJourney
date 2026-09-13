@@ -15,6 +15,10 @@ run/main_scene="uid://bh5m0e3274r56"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bqbrnelyc3tkx"
+
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
@@ -45,8 +49,10 @@ variables={
 "wife": 0
 }
 directories/dch_directory={
+"neighbor": "res://character/neighbor.dch",
 "nurse1": "res://character/nurse1.dch",
 "nurse2": "res://character/nurse2.dch",
+"storeOwner": "res://character/storeOwner.dch",
 "wife": "res://character/wife.dch",
 "我": "res://character/我.dch"
 }
