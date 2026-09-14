@@ -36,12 +36,12 @@ func refresh_slots() -> void:
 	var slots := SaveManager.get_slots()
 	var slots_by_id := {}
 	for slot in slots:
-		slots_by_id[slot.id] = slot
+		slots_by_id[str(slot.id)] = slot
 	for i in slot_buttons.size():
 		var slot_id := i + 1
 		var button := slot_buttons[i]
-		if slots_by_id.has(slot_id):
-			var slot: Dictionary = slots_by_id[slot_id]
+		if slots_by_id.has(str(slot_id)):
+			var slot: Dictionary = slots_by_id[str(slot_id)]
 			var timestamp: Dictionary = slot.timestamp
 			var time_text := "%04d-%02d-%02d %02d:%02d" % [
 				timestamp.year, timestamp.month, timestamp.day,
@@ -55,7 +55,7 @@ func refresh_slots() -> void:
 
 
 func _on_slot_pressed(slot_id: int) -> void:
-	var slot := SaveManager.get_slot_meta(slot_id)
+	var slot := SaveManager.get_slot_meta(str(slot_id))
 	if slot.is_empty():
 		if load_mode:
 			return
@@ -74,8 +74,8 @@ func _on_slot_pressed(slot_id: int) -> void:
 
 
 func _confirm_overwrite() -> void:
-	var slot := SaveManager.get_slot_meta(pending_overwrite_id)
-	if SaveManager.save(pending_overwrite_id, slot.name):
+	var slot := SaveManager.get_slot_meta(str(pending_overwrite_id))
+	if SaveManager.save(str(pending_overwrite_id), slot.name):
 		refresh_slots()
 
 
@@ -83,7 +83,7 @@ func _confirm_new_slot() -> void:
 	var slot_name := name_edit.text.strip_edges()
 	if slot_name.is_empty():
 		slot_name = "存档 %d" % pending_new_slot_id
-	if SaveManager.save(pending_new_slot_id, slot_name):
+	if SaveManager.save(str(pending_new_slot_id), slot_name):
 		refresh_slots()
 
 

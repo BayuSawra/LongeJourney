@@ -4,3 +4,10 @@
 
 # 10.1.4e export/backup output
 /backups/resources/
+
+# Development validation output
+/reports/
+/.gdunit*
+**/__pycache__/
+.env
+config.toml

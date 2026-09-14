@@ -177,11 +177,8 @@ func _do_load(data: Dictionary) -> bool:
 	if not _valid_dialogic_state(dialogic_state):
 		return false
 
-	var current_timeline: String = str(Dialogic.current_timeline)
-	if not current_timeline.is_empty():
-		if Dialogic.has_method("end_timeline"):
-			Dialogic.end_timeline(true)
-		await get_tree().process_frame
+	if Dialogic.current_timeline != null:
+		await Dialogic.end_timeline(true)
 
 	var scene: String = data.get("scene", "")
 	if not scene is String:
@@ -197,9 +194,7 @@ func _do_load(data: Dictionary) -> bool:
 	var subsystems: Variant = dialogic_state.get("subsystems", {})
 	if subsystems is Dictionary:
 		state.subsystems = subsystems
-	Dialogic.load_full_state(state)
-	if Dialogic.current_timeline.is_empty() and not state.timeline.is_empty():
-		Dialogic.start_timeline(state.timeline, state.event_index)
+	await Dialogic.load_full_state(state)
 	return true
 
 

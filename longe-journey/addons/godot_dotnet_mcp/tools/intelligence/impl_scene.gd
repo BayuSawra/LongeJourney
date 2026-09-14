@@ -122,8 +122,12 @@ func _execute_scene_validate(args: Dictionary) -> Dictionary:
 		return bridge.error("Scene file not found: %s" % scene_path)
 	MCPDebugBuffer.record("debug", "intelligence", "scene_validate: %s" % scene_path)
 	var audit_result: Dictionary = bridge.call_atomic("scene_audit", {"action": "from_path", "path": scene_path})
+	if not audit_result.get("success", false):
+		return audit_result
 	var audit_data: Dictionary = bridge.extract_data(audit_result)
 	var dep_result: Dictionary = bridge.call_atomic("resource_query", {"action": "get_dependencies", "path": scene_path})
+	if not dep_result.get("success", false):
+		return dep_result
 	var dep_data: Dictionary = bridge.extract_data(dep_result)
 	var issues: Array = []
 	for raw_issue in audit_data.get("issues", []):
@@ -164,11 +168,13 @@ func _execute_scene_analyze(args: Dictionary) -> Dictionary:
 		return bridge.error("Scene file not found: %s" % scene_path)
 	MCPDebugBuffer.record("debug", "intelligence", "scene_analyze: %s" % scene_path)
 	var bindings_result: Dictionary = bridge.call_atomic("scene_bindings", {"action": "from_path", "path": scene_path})
+	if not bindings_result.get("success", false):
+		return bindings_result
 	var bindings_data: Dictionary = bridge.extract_data(bindings_result)
 	var audit_result: Dictionary = bridge.call_atomic("scene_audit", {"action": "from_path", "path": scene_path})
+	if not audit_result.get("success", false):
+		return audit_result
 	var audit_data: Dictionary = bridge.extract_data(audit_result)
-	var hierarchy_result: Dictionary = bridge.call_atomic("scene_hierarchy", {"path": scene_path})
-	var hierarchy_data: Dictionary = bridge.extract_data(hierarchy_result)
 	var issues: Array = []
 	for raw_issue in audit_data.get("issues", []):
 		if raw_issue is Dictionary:
@@ -178,16 +184,11 @@ func _execute_scene_analyze(args: Dictionary) -> Dictionary:
 		if raw_issue is Dictionary:
 			var typed_issue: Dictionary = raw_issue
 			bridge.append_unique_issue(issues, typed_issue.duplicate(true))
-	var scripts: Array = []
-	var sp_raw = bindings_data.get("script_path", "")
-	if not str(sp_raw).is_empty():
-		var sp: String = str(sp_raw)
-		var inspect_result: Dictionary = bridge.call_atomic("script_inspect", {"path": sp})
-		var inspect_data: Dictionary = bridge.extract_data(inspect_result)
-		var sentry: Dictionary = {"path": sp, "class_name": str(inspect_data.get("class_name", "")), "base_type": str(inspect_data.get("base_type", ""))}
-		scripts.append(sentry)
-	var binding_count: int = int(bindings_data.get("binding_count", bindings_data.get("count", 0)))
-	var node_count: int = int(hierarchy_data.get("node_count", 0))
+	if not bindings_data.has("node_count") or not (bindings_data.get("scripts") is Array):
+		return bridge.error("Scene bindings did not return node_count and scripts")
+	var scripts: Array = bindings_data["scripts"]
+	var binding_count: int = int(bindings_data["binding_count"])
+	var node_count: int = int(bindings_data["node_count"])
 	var out: Dictionary = {"scene": scene_path, "node_count": node_count, "binding_count": binding_count, "script_count": scripts.size(), "scripts": scripts, "issue_count": issues.size(), "issues": issues}
 	return bridge.success(out)
 

@@ -68,6 +68,13 @@ foreach ($group in $duplicatePaths) {
 
 foreach ($item in $manifestResources) {
     $path = $item.path
+    if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $path) -PathType Leaf)) {
+        $missing += [PSCustomObject]@{
+            path = $path
+            detail = "manifest resource file missing"
+            category = "missing"
+        }
+    }
     $importPath = "$path.import"
     $importFile = Join-Path $repoRoot $importPath
     if ($item.has_import -eq $true -and -not (Test-Path -LiteralPath $importFile)) {
@@ -143,8 +150,8 @@ if ($missing.Count -ne 0) {
     Write-Warning "Unexpected missing count: $($missing.Count) (expected 0)"
     $checksOk = $false
 }
-if ($orphan.Count -ne 13) {
-    Write-Warning "Unexpected orphan count: $($orphan.Count) (expected 13)"
+if ($inconsistency.Count -ne 0) {
+    Write-Warning "Resource inconsistencies: $($inconsistency.Count)"
     $checksOk = $false
 }
 foreach ($path in $mustNotBeOrphan) {

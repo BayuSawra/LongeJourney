@@ -69,6 +69,8 @@ func save_timeline() -> void:
 
 
 func _notification(what:int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		TimelineUndoRedo.free()
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		save_timeline()
 

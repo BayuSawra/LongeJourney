@@ -1,5 +1,10 @@
 # Longe Journey 内容工具统一契约
 
+## 工程验证
+
+环境安装、测试和 CI 统一入口见 `../docs/DEVELOPMENT.md`。
+`tools/verify.py` 执行隔离验证；以下 CLI 继续用于内容维护。
+
 ## 命令入口
 
 统一入口为 `tools/lj_cli.py`：
@@ -76,3 +81,19 @@ python tools/lj_cli.py --root D:/AnyProject update-index
 python tools/lj_cli.py check-lore
 python tools/lj_cli.py update-index
 ```
+
+
+## MCP 集成验收（Windows 图形桌面）
+
+在游戏根目录运行：
+
+```powershell
+$env:PYTHONUTF8 = "1"
+python tools/verify_mcp.py --godot <Godot-4.6.2-console.exe绝对路径>
+```
+
+测试复制工程、隔离用户数据并使用临时本机端口，不操作真实存档。
+覆盖冷导入、HTTP 握手、15 个工具暴露、项目盘点、场景校验/分析、主场景运行/停止、
+错误回传与停止后读取；检查实时 debugger 内存事件，不能用已有文件回传冒充成功。
+报告写入 `reports/mcp-*`（不提交）；编辑器日志错误或退出泄漏均判失败。
+此项需要 Windows 图形桌面，独立于现有 headless CI。

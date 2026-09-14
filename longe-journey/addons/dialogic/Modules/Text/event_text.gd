@@ -166,7 +166,7 @@ func _execute() -> void:
 
 			# We must skip text animation before we potentially return when there
 			# is a Choice event.
-			if dialogic.Inputs.auto_skip.enabled:
+			if _is_auto_skip_enabled():
 				dialogic.Text.skip_text_reveal()
 			else:
 				await dialogic.Text.text_finished
@@ -193,11 +193,11 @@ func _execute() -> void:
 
 		# If Auto-Skip is enabled and there are multiple parts of this text
 		# we need to skip the text after the defined time per event.
-		if dialogic.Inputs.auto_skip.enabled:
+		if _is_auto_skip_enabled():
 			await dialogic.Inputs.start_autoskip_timer()
 
 			# Check if Auto-Skip is still enabled.
-			if not dialogic.Inputs.auto_skip.enabled:
+			if not _is_auto_skip_enabled():
 				await advance
 
 		else:
@@ -239,7 +239,7 @@ func _disconnect_signals() -> void:
 ## Tries to play the voice clip for the current line.
 func _try_play_current_line_voice() -> void:
 	# If Auto-Skip is enabled and we skip voice clips, we don't want to play.
-	if (dialogic.Inputs.auto_skip.enabled
+	if (_is_auto_skip_enabled()
 	and dialogic.Inputs.auto_skip.skip_voice):
 		return
 
@@ -275,7 +275,7 @@ func _on_auto_skip_enable(enabled: bool) -> void:
 			await dialogic.Inputs.start_autoskip_timer()
 
 			# If Auto-Skip is still enabled, advance the text.
-			if dialogic.Inputs.auto_skip.enabled:
+			if _is_auto_skip_enabled():
 				advance.emit()
 
 		States.REVEALING:
@@ -564,3 +564,8 @@ func _get_syntax_highlighting(Highlighter:SyntaxHighlighter, dict:Dictionary, li
 	return dict
 
 #endregion
+
+
+# Keep RefCounted temporaries out of suspended event coroutines.
+func _is_auto_skip_enabled() -> bool:
+	return dialogic.Inputs.auto_skip.enabled

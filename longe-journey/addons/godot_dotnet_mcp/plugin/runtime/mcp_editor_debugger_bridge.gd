@@ -5,15 +5,15 @@ class_name MCPEditorDebuggerBridge
 const MCPDebugBuffer = preload("res://addons/godot_dotnet_mcp/tools/mcp_debug_buffer.gd")
 const MCPRuntimeDebugStore = preload("res://addons/godot_dotnet_mcp/plugin/runtime/mcp_runtime_debug_store.gd")
 
-const MESSAGE_PREFIX := "godot_mcp/"
-const EVENT_CHANNEL := "godot_mcp/runtime_event"
-const LOG_CHANNEL := "godot_mcp/runtime_log"
+const MESSAGE_PREFIX := "godot_mcp"
+const EVENT_CHANNEL := "godot_mcp:runtime_event"
+const LOG_CHANNEL := "godot_mcp:runtime_log"
 
 var _wired_sessions: Dictionary = {}
 
 
 func _has_capture(message: String) -> bool:
-	return str(message).begins_with(MESSAGE_PREFIX)
+	return message == MESSAGE_PREFIX
 
 
 func _capture(message: String, data, session_id: int) -> bool:

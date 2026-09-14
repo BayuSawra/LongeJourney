@@ -274,11 +274,22 @@ func _execute_project_state(args: Dictionary) -> Dictionary:
 	var runtime_summary := _get_runtime_summary()
 	var recent_errors := _get_runtime_errors(error_limit)
 	var recent_warnings := _get_runtime_warnings(min(error_limit, 10))
-	var gd_scripts: Array = bridge.collect_files("*.gd")
-	var cs_scripts: Array = bridge.collect_files("*.cs")
-	var scene_paths: Array = bridge.collect_files("*.tscn")
-	var resources_tres: Array = bridge.collect_files("*.tres")
-	var resources_res: Array = bridge.collect_files("*.res")
+	var files_by_pattern: Dictionary = {}
+	for pattern in ["*.gd", "*.cs", "*.tscn", "*.tres", "*.res"]:
+		var scan: Dictionary = bridge.call_atomic("filesystem_directory", {
+			"action": "get_files", "path": "res://", "filter": pattern, "recursive": true
+		})
+		if not scan.get("success", false):
+			return scan
+		var scan_data: Dictionary = bridge.extract_data(scan)
+		if not (scan_data.get("files") is Array):
+			return bridge.error("File scan did not return a files array: %s" % pattern)
+		files_by_pattern[pattern] = scan_data["files"]
+	var gd_scripts: Array = files_by_pattern["*.gd"]
+	var cs_scripts: Array = files_by_pattern["*.cs"]
+	var scene_paths: Array = files_by_pattern["*.tscn"]
+	var resources_tres: Array = files_by_pattern["*.tres"]
+	var resources_res: Array = files_by_pattern["*.res"]
 	var all_resources: Array = []
 	all_resources.append_array(resources_tres)
 	all_resources.append_array(resources_res)

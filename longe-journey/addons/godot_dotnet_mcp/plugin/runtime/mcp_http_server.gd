@@ -366,10 +366,8 @@ func _rebuild_tool_loader(reason: String, force_reload_scripts: bool) -> Diction
 
 
 func _replace_tool_loader() -> void:
-	if _tool_loader != null and _tool_loader.has_method("get_gdscript_lsp_diagnostics_service"):
-		var previous_service = _tool_loader.get_gdscript_lsp_diagnostics_service()
-		if previous_service != null and previous_service.has_method("clear"):
-			previous_service.clear()
+	if _tool_loader != null:
+		_tool_loader.dispose()
 	_tool_loader = MCPToolLoader.new()
 	_tool_loader.configure(self)
 
@@ -1036,3 +1034,7 @@ func _sanitize_for_json(value):
 			return null
 		_:
 			return value
+
+
+func _exit_tree() -> void:
+	_tool_loader.dispose()

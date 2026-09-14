@@ -485,10 +485,14 @@ func _analyze_scene_bindings(path: String) -> Dictionary:
 	var bindings = []
 
 	_collect_bindings_recursive(root, bindings, issues)
+	var scripts: Array[Dictionary] = []
+	_collect_scene_scripts(root, scripts)
 
 	var result = {
 		"scene_path": data.get("scene_path", ""),
 		"root_name": str(root.name),
+		"node_count": _count_nodes(root),
+		"scripts": scripts,
 		"binding_count": bindings.size(),
 		"bindings": bindings,
 		"issues": issues
@@ -498,6 +502,17 @@ func _analyze_scene_bindings(path: String) -> Dictionary:
 		root.free()
 
 	return _success(result)
+
+
+func _collect_scene_scripts(node: Node, scripts: Array[Dictionary]) -> void:
+	var script: Script = node.get_script()
+	if script != null:
+		var entry := {"path": script.resource_path, "class_name": script.get_global_name(),
+			"base_type": script.get_instance_base_type()}
+		if not scripts.has(entry):
+			scripts.append(entry)
+	for child in node.get_children():
+		_collect_scene_scripts(child, scripts)
 
 
 func _get_scene_root_for_analysis(path: String) -> Dictionary:

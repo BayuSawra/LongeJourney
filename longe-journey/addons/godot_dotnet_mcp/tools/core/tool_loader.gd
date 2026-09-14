@@ -489,7 +489,20 @@ func is_tool_enabled(tool_name: String) -> bool:
 	return not _disabled_tools.has(tool_name)
 
 
+func dispose() -> void:
+	_reset_state()
+	if _gdscript_lsp_diagnostics_service != null:
+		_gdscript_lsp_diagnostics_service.clear()
+	_gdscript_lsp_diagnostics_service = null
+	_server_context = null
+
+
 func _reset_state() -> void:
+	# Executors retain the loader through their runtime context.
+	for runtime in _runtime_by_category.values():
+		var executor = runtime.get("instance", null)
+		if executor != null and executor.has_method("configure_runtime"):
+			executor.configure_runtime({})
 	_entries_by_category.clear()
 	_ordered_categories.clear()
 	_runtime_by_category.clear()

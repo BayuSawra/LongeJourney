@@ -159,7 +159,7 @@ func extract_array(result: Dictionary, key: String) -> Array:
 
 
 func collect_files(filter: String) -> Array:
-	var result := call_atomic("filesystem_directory", {"action": "get_files", "filter": filter, "recursive": true})
+	var result := call_atomic("filesystem_directory", {"action": "get_files", "path": "res://", "filter": filter, "recursive": true})
 	var files = extract_array(result, "files")
 	return files
 
@@ -196,6 +196,9 @@ func has_severity(issues: Array, severity: String) -> bool:
 
 
 func normalize_dependency_path(raw_path: String) -> String:
+	# ResourceLoader encodes UID, type and resource path separated by ::.
+	if raw_path.contains("::"):
+		raw_path = raw_path.get_slice("::", 2)
 	if raw_path.is_empty():
 		return ""
 	if raw_path.begins_with("res://") or raw_path.begins_with("user://"):

@@ -546,3 +546,8 @@ func _on_right_click_menu_id_pressed(id: int) -> void:
 	match id:
 		0:
 			DisplayServer.clipboard_set(get_item_path(%RightClickMenu.get_meta("item")))
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		undo.free()

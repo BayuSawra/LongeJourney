@@ -1,5 +1,7 @@
 # Longe Journey Godot 迁移工作交接计划
 
+> 开发环境与验证入口以 `DEVELOPMENT.md` 为准；下述阶段规划保留为历史背景。
+
 > 新线程开始工作时，先读 `docs/task_checkpoint.md` 的“下一步”并直接执行；需要背景或规范时，
 > 再按需查阅本文档与 `docs/Phase0_Content_Tools.md`、`docs/Dialogic_Implementation_Guide.md`。
 > 凡涉及新线程，以实际文件为准，不要凭记忆修改命名或结构。

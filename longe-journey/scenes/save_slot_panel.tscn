@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://save_slot_panel"]
 
-[ext_resource type="Script" uid="" path="res://scripts/save_slot_panel.gd" id="1_save"]
+[ext_resource type="Script" path="res://scripts/save_slot_panel.gd" id="1_save"]
 
 [node name="SaveSlotPanel" type="CanvasLayer"]
 layer = 110
@@ -103,5 +103,3 @@ visible = false
 title = "读档"
 size = Vector2i(480, 200)
 dialog_text = "读取该存档？"
-
-[connection signal="confirmed" from="LoadDialog" to="." method="_confirm_load"]

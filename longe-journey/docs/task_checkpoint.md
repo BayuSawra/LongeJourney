@@ -1,6 +1,14 @@
 # 任务检查点
 
-## 当前任务
+## 当前开发底座（2026-09-13）
+
+- 已选择性迁入 gdUnit4；新增固定环境安装、隔离验证、业务回归和 Windows CI。
+- 本地验证通过：17 项 Python 工具测试、16 项游戏回归、lore/资源检查、无缓存导入及主菜单冒烟。
+- 开发入口见 `DEVELOPMENT.md`；依赖和兼容补丁见 `THIRD_PARTY.md`。
+- 未提交、未推送，GitHub Actions 尚未远端执行。
+- 下述阶段记录仅作历史背景；旧“直接执行下一步/自动提交”约定不作为当前授权。
+
+## 历史任务
 
 - 目标：阶段 9：lore 运行时只读设定数据
 - 已完成：9.1 lore 运行时导入（`scripts/autoload/lore_runtime.gd`：读取 `lore/INDEX.md` 与正典条目，解析索引条目并按 canon/plot-thread 章节匹配，提供 `get_all_entries()`/`get_category()`/`get_detail()`/`has_entry()`，返回值为深拷贝，运行时数据只读；已在 `project.godot` 注册为 `LoreRuntime` 自动加载单例）
@@ -55,3 +63,31 @@
 - [验证] 范围=10.2 备份目录规范 结果=通过 登记=2026-08-23 线程=主线（备份输出 backups/resources/<时间戳>/；命名 yyyyMMdd-HHmmss；manifest 字段与脚本输出一致；保留最近 3 份、脚本不自动清理；验证输出 roundtrip=passed validation=passed）
 - [验证] 范围=10.3 往返验证 结果=通过 登记=2026-08-23 线程=主线（导出 40；roundtrip=passed；validation=passed；备份 backups/resources/20260823-232730）
 - [验证] 范围=10.4 文档收尾 结果=通过 登记=2026-08-24 线程=主线（docs/Phase0_Content_Tools.md 与 tools/README.md 已记录脚本用法；备份 backups/resources/<时间戳>/；命名 yyyyMMdd-HHmmss；保留最近 3 份且脚本不自动清理；10.3 结果：导出 40；roundtrip=passed；validation=passed；备份 backups/resources/20260823-232730）
+
+
+## 2026-09-13 MCP 最小修复验收
+
+- 已修复：项目盘点空结果、UID 依赖误报、场景节点/脚本统计、debugger 消息前缀契约。
+- 补充：原子失败透传、加载器重建/退出循环引用释放、Dialogic 两个 UndoRedo 析构释放。
+- Python 工具测试 17 项通过；`verify.py` 25 项通过，含 MCP 回归 9 项。
+- 图形 MCP 功能检查通过：15 工具、盘点非零、主菜单 12 节点/1 脚本、运行/停止、
+  实时 debugger 内存事件与停止后错误读取。测试使用复制工程和隔离用户目录。
+- **当时完整 MCP 验收失败（已由下节修复）**：编辑器退出出现 209 个资源残留和访问冲突退出码
+  `3221225477`。根因未确认，不判通过；不以停用插件或忽略日志绕过。
+- 本地证据：`reports/verify-7c229dcedf49/summary.json`、
+  `reports/mcp-45395b905842/summary.json`、`live-events.json`、`editor.log`。
+- 后续优先排查图形编辑器退出生命周期；不扩大为 template 整体替换。
+
+
+## 2026-09-13 编辑器退出问题关闭
+
+- gdUnit 报告 writer 析构释放自建 Panel；RPC 服务显式预加载两个消息子类，
+  消除固定 Godot 4.6.2 图形编辑器的脚本资源残留与退出访问冲突。
+- 仅改 gdUnit 两处；未采用诊断期间的全局缓存清空、命令类型改写、停用插件或引擎升级。
+- MCP 验收直接跟踪实际编辑器进程，退出前保存隔离副本场景并正常关闭；失败检查保留。
+- Python 工具测试 **20 项通过**；`verify.py` **27 项通过**，包括新增 writer 所有权与 RPC 分发回归。
+- 完整 MCP 验收连续两次通过：15 工具、112 场景/617 脚本、菜单 12 节点/1 脚本、
+  主场景运行/停止、实时 debugger 内存事件、停止后错误读取；编辑器退出码均为 **0**，无错误/退出泄漏。
+- 证据：`reports/verify-b1d1f8b752c0/summary.json`、
+  `reports/mcp-e74aa93437c4/summary.json`、`reports/mcp-be043f6051ff/summary.json`。
+- 全部验证使用隔离项目和用户目录；未自动提交或推送。

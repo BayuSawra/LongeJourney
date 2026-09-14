@@ -1,7 +1,7 @@
 extends Node
 
-const EVENT_CHANNEL := "godot_mcp/runtime_event"
-const LOG_CHANNEL := "godot_mcp/runtime_log"
+const EVENT_CHANNEL := "godot_mcp:runtime_event"
+const LOG_CHANNEL := "godot_mcp:runtime_log"
 const FALLBACK_FILE_PATH := "user://godot_mcp_runtime_bridge_events.json"
 const MAX_STORED_EVENTS := 300
 const FALLBACK_FLUSH_INTERVAL_SECONDS := 2.0
@@ -120,7 +120,7 @@ func _append_fallback_event(channel: String, payload: Dictionary) -> void:
 	}
 	_pending_events.append(event)
 	_trim_cached_events()
-	if _flush_timer != null and _flush_timer.is_stopped():
+	if _flush_timer != null and _flush_timer.is_inside_tree() and _flush_timer.is_stopped():
 		_flush_timer.start()
 
 
