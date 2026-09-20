@@ -5,6 +5,8 @@
 环境安装、测试和 CI 统一入口见 `../docs/DEVELOPMENT.md`。
 `tools/verify.py` 执行隔离验证；以下 CLI 继续用于内容维护。
 
+`tools/check_timelines.py` 校验 Dialogic timeline 的登记、jump/label 目标和从 `00_start` 出发的主线可达性；完整验证会自动执行。
+
 ## 命令入口
 
 统一入口为 `tools/lj_cli.py`：

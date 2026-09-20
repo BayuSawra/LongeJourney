@@ -44,16 +44,26 @@ enum States {REVEALING, IDLE, DONE}
 var state := States.IDLE
 signal advance
 
+# Cancel suspended executions when a timeline is stopped or restarted.
+var _execution_generation := 0
+
 
 #region EXECUTION
 ################################################################################
 
 func _clear_state() -> void:
+	_execution_generation += 1
+	# Release a coroutine waiting on its own signal when its timeline is cancelled.
+	advance.emit()
+	if dialogic.Animations.is_animating():
+		dialogic.Animations.stop_animation()
 	dialogic.Text.text_sub_index = -1
 	_disconnect_signals()
 
 
 func _execute() -> void:
+	_execution_generation += 1
+	var execution := _execution_generation
 	if text.is_empty():
 		finish()
 		return
@@ -100,31 +110,28 @@ func _execute() -> void:
 		if character_style.is_empty() and current_base_style != current_style:
 			dialogic.Styles.change_style(current_base_style)
 			await dialogic.get_tree().process_frame
+			if execution != _execution_generation:
+				return
 
 		## Change to the characters style if this character has one
 		elif character and not character_style.is_empty():
 			dialogic.Styles.change_style(character_style, false)
 			await dialogic.get_tree().process_frame
+			if execution != _execution_generation:
+				return
 
 	_connect_signals()
 
 	var character_name_text := dialogic.Text.get_character_name_parsed(character)
-	var final_text: String = get_property_translated('text')
-	if ProjectSettings.get_setting('dialogic/text/split_at_new_lines', false):
-		match ProjectSettings.get_setting('dialogic/text/split_at_new_lines_as', 0):
-			0:
-				final_text = final_text.replace('\n', '[n]')
-			1:
-				final_text = final_text.replace('\n', '[n+][br]')
-
-	var split_text := []
-	for i in split_regex.search_all(final_text):
-		split_text.append([i.get_string().trim_prefix('[n]').trim_prefix('[n+]')])
-		split_text[-1].append(i.get_string().begins_with('[n+]'))
+	var final_text := ""
+	var split_text := _split_translated_text()
 
 	var reveal_next_segment: bool = dialogic.Text.text_sub_index == -1
 
 	for section_idx in range(min(max(0, dialogic.Text.text_sub_index), len(split_text)-1), len(split_text)):
+		# A locale switch must also affect segments that have not yet been shown.
+		split_text = _split_translated_text()
+		character_name_text = dialogic.Text.get_character_name_parsed(character)
 		dialogic.Inputs.block_input(ProjectSettings.get_setting('dialogic/text/text_reveal_skip_delay', 0.1))
 
 		if reveal_next_segment:
@@ -155,6 +162,8 @@ func _execute() -> void:
 			dialogic.Text.about_to_show_text.emit({"text":final_text, "character":character, "portrait":portrait, "append": is_append})
 
 			await dialogic.Text.textbox_handle_auto_visibility(final_text)
+			if execution != _execution_generation:
+				return
 
 			state = States.REVEALING
 			_try_play_current_line_voice()
@@ -170,6 +179,8 @@ func _execute() -> void:
 				dialogic.Text.skip_text_reveal()
 			else:
 				await dialogic.Text.text_finished
+				if execution != _execution_generation:
+					return
 
 			state = States.IDLE
 		else:
@@ -195,16 +206,31 @@ func _execute() -> void:
 		# we need to skip the text after the defined time per event.
 		if _is_auto_skip_enabled():
 			await dialogic.Inputs.start_autoskip_timer()
+			if execution != _execution_generation:
+				return
 
 			# Check if Auto-Skip is still enabled.
 			if not _is_auto_skip_enabled():
 				await advance
+				if execution != _execution_generation:
+					return
 
 		else:
 			await advance
+			if execution != _execution_generation:
+				return
 
 
 	finish()
+
+func _split_translated_text() -> Array:
+	var value := get_property_translated("text")
+	if ProjectSettings.get_setting("dialogic/text/split_at_new_lines", false):
+		value = value.replace("\n", "[n]" if ProjectSettings.get_setting("dialogic/text/split_at_new_lines_as", 0) == 0 else "[n+][br]")
+	var result := []
+	for segment in split_regex.search_all(value):
+		result.append([segment.get_string().trim_prefix("[n]").trim_prefix("[n+]"), segment.get_string().begins_with("[n+]")])
+	return result
 
 
 func _mark_as_read(character_name_text: String, final_text: String) -> void:

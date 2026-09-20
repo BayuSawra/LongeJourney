@@ -1,45 +1,45 @@
-[color=#696969][i]⁜当前位置  迷宫⁜[/i][/color]
+Text/lj_07_maze_middle_000/text #id:lj_07_maze_middle_000
 
-假山回廊越走越窄，风声闷在石壁间。鼻尖突然飘来一股芳香，像绿色的兰花，浓烈得让人怀疑它根本不是这世上该有的味道。主角循香抬头，见一朵绿兰开在石缝里，从未见过这种颜色，忍不住摘下来揣入袖兜。
+Text/lj_07_maze_middle_001/text #id:lj_07_maze_middle_001
 
-- 摘仙人球花
-    假山深处还有一丛仙人球，尖刺密密麻麻。主角越过层层尖刺去够那朵花，掰下来的瞬间手掌被划出一道细长口子，血珠渗出来。
-    他看着伤口，忽然觉得自己也许没有想象中那么厉害。他希望自己不是特例，至少这一刻不是。
+- Choice/lj_07_maze_middle_002/text #id:lj_07_maze_middle_002
+    Text/lj_07_maze_middle_003/text #id:lj_07_maze_middle_003
+    Text/lj_07_maze_middle_004/text #id:lj_07_maze_middle_004
     jump pick_cactus_flower
 
-- 不摘花继续走
-    绿兰收进袖兜，花香还萦绕在指间。主角绕过仙人球丛，走向假山中心。
+- Choice/lj_07_maze_middle_007/text #id:lj_07_maze_middle_007
+    Text/lj_07_maze_middle_008/text #id:lj_07_maze_middle_008
     jump pick_hydrangea
 
-label pick_cactus_flower
-花到手了，掌心却一直发麻。主角攥紧仙人球花，边走边想刚才那一划，越想越觉得心里空了一块。
+label pick_cactus_flower #id:lj_07_maze_middle_011
+Text/lj_07_maze_middle_012/text #id:lj_07_maze_middle_012
 jump pick_hydrangea
 
-label pick_hydrangea
-假山中心站着一个女人，衣着华服，头戴金钗，五官算得上漂亮，但整个人静得不像活物。她头上顶着一朵蓝色圆滚滚的绣球花，眼睛浑浊得几乎看不到瞳孔，眼皮被细线吊起，末端缝在眉毛上；嘴微微翻动，喉咙里挤出模糊的歌声，歌词听不清，像唱给空气听的。她双手无力地垂着，手背画满看不懂的符咒，指尖微微颤抖。
-她是什么？又是怎么立住的？
+label pick_hydrangea #id:lj_07_maze_middle_014
+Text/lj_07_maze_middle_015/text #id:lj_07_maze_middle_015
+Text/lj_07_maze_middle_016/text #id:lj_07_maze_middle_016
 
-- 她是怎么立住的？
+- Choice/lj_07_maze_middle_017/text #id:lj_07_maze_middle_017
     jump how_she_stands
 
-label how_she_stands
-主角走近一看，一根棍子从她背后衣服中间穿过，腰带紧紧绑在棍子上，棍子被敲进地里，把她整个人钉在假山中央。他忽然明白那声“准备好了”意味着什么：这是灭绝人性的地狱。
-天地像在旋转，眼前轰然歪倒。主角踉跄着后退，喉头哽住：“畜生，真是畜生……我当不了王爷，我当不了了！”
+label how_she_stands #id:lj_07_maze_middle_020
+Text/lj_07_maze_middle_021/text #id:lj_07_maze_middle_021
+Text/lj_07_maze_middle_022/text #id:lj_07_maze_middle_022
 
-- 立刻逃离这里
+- Choice/lj_07_maze_middle_023/text #id:lj_07_maze_middle_023
     jump flee
 
-- 摘下绣球花
+- Choice/lj_07_maze_middle_026/text #id:lj_07_maze_middle_026
     jump pick_hydrangea_flower
 
-label flee
-主角顾不上别的，一路狂奔，撞翻挡路的人冲出大门。皮鞋脚尖的位置裂开一道口子，皮翘起来，残留着白色胶痕。
-他逃到路口才停下来，低头数了数怀里的花，又拍了拍身上的尘土。抬头看去，太阳是紫灰色的，像被什么东西蒙住了。
+label flee #id:lj_07_maze_middle_029
+Text/lj_07_maze_middle_030/text #id:lj_07_maze_middle_030
+Text/lj_07_maze_middle_031/text #id:lj_07_maze_middle_031
 jump 07_maze_exit
 
-label pick_hydrangea_flower
-主角挣扎着爬起，又倒下，最后用手肘顶住她的肩膀，才勉强把那朵蓝色绣球花摘下来。她的身体僵硬，和正常人不一样。
-攥着花，主角忽然承认：“我没有当王的勇气，残忍和暴力都不是我的优点。我，只是一个普通人。”
+label pick_hydrangea_flower #id:lj_07_maze_middle_033
+Text/lj_07_maze_middle_034/text #id:lj_07_maze_middle_034
+Text/lj_07_maze_middle_035/text #id:lj_07_maze_middle_035
 
-- 离开这里
+- Choice/lj_07_maze_middle_036/text #id:lj_07_maze_middle_036
     jump flee

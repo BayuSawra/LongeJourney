@@ -3,7 +3,10 @@ extends Node
 ## Persists GameState vars plus the current Dialogic timeline and scene to user://
 ## slots, and restores them on load.
 
-const VERSION: int = 2
+const VERSION: int = 3
+const SAVE_ROOT := "user://dialogic/saves"
+const SLOT_MAX_LENGTH := 64
+var last_error := ""
 const GAME_STATE_VARS: Array[String] = [
 	"energy",
 	"calm",
@@ -28,17 +31,13 @@ func save(slot: String, slot_name: String = "") -> bool:
 
 
 func save_to_slot(slot: String, slot_name: String = "") -> bool:
-	if slot.is_empty():
+	last_error = ""
+	if not _is_valid_slot(slot):
+		last_error = "save.error_invalid_slot"
 		return false
 
 	var data: Dictionary = _build_save_data(slot, slot_name)
-	var path: String = _save_path(slot)
-	DirAccess.make_dir_recursive_absolute(path.get_base_dir())
-	var file := FileAccess.open(path, FileAccess.WRITE)
-	if file == null:
-		return false
-	file.store_var(data, false)
-	return true
+	return _write_save_data(slot, data)
 
 
 func get_slots() -> Array[Dictionary]:
@@ -48,10 +47,12 @@ func get_slots() -> Array[Dictionary]:
 		return slots
 
 	for slot in root.get_directories():
-		if slot.is_empty() or slot == "." or slot == "..":
+		if not _is_valid_slot(slot):
 			continue
 		var meta: Dictionary = get_slot_meta(slot)
 		var data: Dictionary = _read_save_data(slot)
+		if data.is_empty():
+			continue
 		var dialogic_state: Dictionary = data.get("dialogic_state", {})
 		if not dialogic_state is Dictionary:
 			dialogic_state = {}
@@ -83,20 +84,20 @@ func new_slot_id() -> String:
 
 
 func rename_slot(slot: String, new_name: String) -> bool:
+	last_error = ""
+	if not _is_valid_slot(slot):
+		last_error = "save.error_invalid_slot"
+		return false
 	var data: Dictionary = _read_save_data(slot)
 	if data.is_empty():
+		last_error = "save.error_missing"
 		return false
 	var meta: Dictionary = data.get("meta", {})
 	if not meta is Dictionary:
 		meta = {}
 	meta["name"] = new_name
 	data["meta"] = meta
-	var path: String = _save_path(slot)
-	var file := FileAccess.open(path, FileAccess.WRITE)
-	if file == null:
-		return false
-	file.store_var(data, false)
-	return true
+	return _write_save_data(slot, data)
 
 
 func get_slot_meta(slot: String) -> Dictionary:
@@ -110,10 +111,22 @@ func get_slot_meta(slot: String) -> Dictionary:
 
 
 func load(slot: String) -> bool:
-	if slot.is_empty() or _loading:
+	last_error = ""
+	if not _is_valid_slot(slot):
+		last_error = "save.error_invalid_slot"
+		return false
+	if _loading:
+		last_error = "save.error_busy"
 		return false
 	var data: Dictionary = _read_save_data(slot)
-	if data.is_empty() or data.get("version", 0) != VERSION:
+	if data.is_empty():
+		last_error = "save.error_missing"
+		return false
+	if data.get("version", 0) != VERSION:
+		last_error = "save.error_version"
+		return false
+	if not data.get("localized_dialogue") is Dictionary or not Localization.valid_saved_dialogue(data["localized_dialogue"]):
+		last_error = "save.error_data"
 		return false
 
 	_loading = true
@@ -123,11 +136,26 @@ func load(slot: String) -> bool:
 
 
 func has_save(slot: String) -> bool:
-	return FileAccess.file_exists(_save_path(slot))
+	return _is_valid_slot(slot) and FileAccess.file_exists(_save_path(slot))
 
 
 func delete_save(slot: String) -> void:
-	DirAccess.remove_absolute(_save_path(slot))
+	last_error = ""
+	if not _is_valid_slot(slot):
+		last_error = "save.error_invalid_slot"
+		return
+	var path := _save_path(slot)
+	if not FileAccess.file_exists(path):
+		return
+	var error := DirAccess.remove_absolute(path)
+	if error != OK:
+		last_error = "save.error_delete"
+		return
+	var slot_dir := path.get_base_dir()
+	if DirAccess.dir_exists_absolute(slot_dir):
+		var dir_error := DirAccess.remove_absolute(slot_dir)
+		if dir_error != OK:
+			last_error = "save.error_delete"
 
 
 func get_save_meta(slot: String) -> Dictionary:
@@ -151,6 +179,8 @@ func get_save_meta(slot: String) -> Dictionary:
 
 
 func _read_save_data(slot: String) -> Dictionary:
+	if not _is_valid_slot(slot):
+		return {}
 	var path: String = _save_path(slot)
 	if not FileAccess.file_exists(path):
 		return {}
@@ -175,6 +205,7 @@ func _do_load(data: Dictionary) -> bool:
 	if not dialogic_state is Dictionary:
 		dialogic_state = {}
 	if not _valid_dialogic_state(dialogic_state):
+		last_error = "save.error_data"
 		return false
 
 	if Dialogic.current_timeline != null:
@@ -195,6 +226,9 @@ func _do_load(data: Dictionary) -> bool:
 	if subsystems is Dictionary:
 		state.subsystems = subsystems
 	await Dialogic.load_full_state(state)
+	Localization.dialogue = data["localized_dialogue"].duplicate(true)
+	Localization.refresh_dialogue()
+	Localization._refresh_choices()
 	return true
 
 
@@ -219,6 +253,7 @@ func _build_save_data(slot: String, slot_name: String) -> Dictionary:
 	var now: Dictionary = Time.get_datetime_dict_from_system()
 	return {
 		"version": VERSION,
+		"localized_dialogue": Localization.dialogue.duplicate(true),
 		"scene": scene,
 		"dialogic_state": dialogic_state,
 		"game_state": game_state,
@@ -245,4 +280,58 @@ func _valid_dialogic_state(dialogic_state: Dictionary) -> bool:
 
 
 func _save_path(slot: String) -> String:
-	return "user://dialogic/saves/%s/save.sav" % slot
+	if not _is_valid_slot(slot):
+		return ""
+	return "%s/%s/save.sav" % [SAVE_ROOT, slot]
+
+
+func _is_valid_slot(slot: String) -> bool:
+	if slot.is_empty() or slot.length() > SLOT_MAX_LENGTH:
+		return false
+	for index in slot.length():
+		var code := slot.unicode_at(index)
+		if not ((code >= 48 and code <= 57) or (code >= 65 and code <= 90) \
+				or (code >= 97 and code <= 122) or code == 45 or code == 95):
+			return false
+	return true
+
+
+func _write_save_data(slot: String, data: Dictionary) -> bool:
+	var path := _save_path(slot)
+	if path.is_empty():
+		last_error = "save.error_invalid_slot"
+		return false
+	var directory := path.get_base_dir()
+	var directory_error := DirAccess.make_dir_recursive_absolute(directory)
+	if directory_error != OK and not DirAccess.dir_exists_absolute(directory):
+		last_error = "save.error_write"
+		return false
+
+	var temp_path := "%s.tmp-%s" % [path, str(Time.get_ticks_usec())]
+	var file := FileAccess.open(temp_path, FileAccess.WRITE)
+	if file == null:
+		last_error = "save.error_write"
+		return false
+	file.store_var(data, false)
+	file.flush()
+	var write_error := file.get_error()
+	file.close()
+	if write_error != OK:
+		DirAccess.remove_absolute(temp_path)
+		last_error = "save.error_write"
+		return false
+
+	var rename_error := DirAccess.rename_absolute(temp_path, path)
+	if rename_error != OK:
+		DirAccess.remove_absolute(temp_path)
+		last_error = "save.error_write"
+		return false
+	return true
+
+
+func display_name(slot: String, raw_name: String) -> String:
+	if not raw_name.is_empty():
+		return raw_name
+	if slot == "auto":
+		return Localization.text("save.auto_name")
+	return Localization.format_text("save.default_name", {"slot": slot})

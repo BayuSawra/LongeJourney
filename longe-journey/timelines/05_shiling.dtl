@@ -1,295 +1,295 @@
-[color=#696969][i]⁜当前位置  狮岭⁜[/i][/color]
+Text/lj_05_shiling_000/text #id:lj_05_shiling_000
 [background arg="res://art/shilin2.png" fade="1.0"]
 
 if {visit_shiling} == 1:
-    狮岭山脚下立着块旧碑，说王历新曾在这里凿开洞窟，里头卧着一头石狮子。
+    Text/lj_05_shiling_003/text #id:lj_05_shiling_003
 
-    - 开始搜索
+    - Choice/lj_05_shiling_004/text #id:lj_05_shiling_004
         set {energy} -= 5
-        我沿着山路往里走，刚转过一个弯，就被几个凶神恶煞的人围住了。
+        Text/lj_05_shiling_006/text #id:lj_05_shiling_006
 
-        “此路是我开！留下买路财！”
+        Text/lj_05_shiling_007/text #id:lj_05_shiling_007
 
-        - 仔细看看他们
-            这些人脸上糊着油彩，腰上别着塑料刀，分明是演员假扮的土匪。
+        - Choice/lj_05_shiling_008/text #id:lj_05_shiling_008
+            Text/lj_05_shiling_009/text #id:lj_05_shiling_009
 
-            崖壁上长着一朵鸢尾花，我伸手摘了下来。
+            Text/lj_05_shiling_010/text #id:lj_05_shiling_010
 
             set {flower} += 1
 
-            - 再仔细看看那朵花
-                花瓣是假的，塑料气味刺鼻。
+            - Choice/lj_05_shiling_012/text #id:lj_05_shiling_012
+                Text/lj_05_shiling_013/text #id:lj_05_shiling_013
 
-                - 扔掉假花
-                    我把假花丢进草丛。
+                - Choice/lj_05_shiling_014/text #id:lj_05_shiling_014
+                    Text/lj_05_shiling_015/text #id:lj_05_shiling_015
 
                     set {flower} -= 1
                     set {jiahua} = false
 
-                    - 继续搜索
+                    - Choice/lj_05_shiling_018/text #id:lj_05_shiling_018
                         set {energy} -= 5
-                        前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+                        Text/lj_05_shiling_020/text #id:lj_05_shiling_020
 
-                        - 继续搜索
+                        - Choice/lj_05_shiling_021/text #id:lj_05_shiling_021
                             set {energy} -= 5
-                            越往里走越不对劲，山在烧，人影泛着红。
+                            Text/lj_05_shiling_023/text #id:lj_05_shiling_023
 
-                            - 继续搜索
-                                白玉狮子庙前摆着供台，台上插着一朵牡丹。
+                            - Choice/lj_05_shiling_024/text #id:lj_05_shiling_024
+                                Text/lj_05_shiling_025/text #id:lj_05_shiling_025
 
-                                - 偷走牡丹
-                                    我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+                                - Choice/lj_05_shiling_026/text #id:lj_05_shiling_026
+                                    Text/lj_05_shiling_027/text #id:lj_05_shiling_027
 
                                     set {flower} += 1
                                     set {earthworm} += 1
                                     set {calm} -= 10
                                     set {calm} -= 15
 
-                                    现在手里一共有 {flower} 朵花。
+                                    Text/lj_05_shiling_032/text #id:lj_05_shiling_032
 
-                                    我原路折回，花了两块钱坐车回路口。
-
-                                    set {money} -= 2
-                                    jump 03_crossroads
-                                - 什么都不做
-                                    我没碰那朵牡丹，转身原路返回。
-
-                                    现在手里一共有 {flower} 朵花。
-
-                                    我花了两块钱坐车回路口。
+                                    Text/lj_05_shiling_033/text #id:lj_05_shiling_033
 
                                     set {money} -= 2
                                     jump 03_crossroads
-                                - 结束搜索
-                                    现在手里一共有 {flower} 朵花。
+                                - Choice/lj_05_shiling_037/text #id:lj_05_shiling_037
+                                    Text/lj_05_shiling_038/text #id:lj_05_shiling_038
 
-                                    我花了两块钱坐车回路口。
+                                    Text/lj_05_shiling_039/text #id:lj_05_shiling_039
+
+                                    Text/lj_05_shiling_040/text #id:lj_05_shiling_040
 
                                     set {money} -= 2
                                     jump 03_crossroads
-                            - 结束搜索
-                                现在手里一共有 {flower} 朵花。
+                                - Choice/lj_05_shiling_044/text #id:lj_05_shiling_044
+                                    Text/lj_05_shiling_045/text #id:lj_05_shiling_045
 
-                                我花了两块钱坐车回路口。
+                                    Text/lj_05_shiling_046/text #id:lj_05_shiling_046
+
+                                    set {money} -= 2
+                                    jump 03_crossroads
+                            - Choice/lj_05_shiling_051/text #id:lj_05_shiling_051
+                                Text/lj_05_shiling_052/text #id:lj_05_shiling_052
+
+                                Text/lj_05_shiling_053/text #id:lj_05_shiling_053
 
                                 set {money} -= 2
                                 jump 03_crossroads
-                        - 结束搜索
-                            现在手里一共有 {flower} 朵花。
+                        - Choice/lj_05_shiling_058/text #id:lj_05_shiling_058
+                            Text/lj_05_shiling_059/text #id:lj_05_shiling_059
 
-                            我花了两块钱坐车回路口。
+                            Text/lj_05_shiling_060/text #id:lj_05_shiling_060
 
                             set {money} -= 2
                             jump 03_crossroads
-                    - 不扔，留着
-                        - 继续搜索
+                    - Choice/lj_05_shiling_065/text #id:lj_05_shiling_065
+                        - Choice/lj_05_shiling_066/text #id:lj_05_shiling_066
                             set {energy} -= 5
-                            前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+                            Text/lj_05_shiling_068/text #id:lj_05_shiling_068
 
-                            - 继续搜索
+                            - Choice/lj_05_shiling_069/text #id:lj_05_shiling_069
                                 set {energy} -= 5
-                                越往里走越不对劲，山在烧，人影泛着红。
+                                Text/lj_05_shiling_071/text #id:lj_05_shiling_071
 
-                                - 继续搜索
-                                    白玉狮子庙前摆着供台，台上插着一朵牡丹。
+                                - Choice/lj_05_shiling_072/text #id:lj_05_shiling_072
+                                    Text/lj_05_shiling_073/text #id:lj_05_shiling_073
 
-                                    - 偷走牡丹
-                                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+                                    - Choice/lj_05_shiling_074/text #id:lj_05_shiling_074
+                                        Text/lj_05_shiling_075/text #id:lj_05_shiling_075
 
                                         set {flower} += 1
                                         set {earthworm} += 1
                                         set {calm} -= 10
                                         set {calm} -= 15
 
-                                        现在手里一共有 {flower} 朵花。
+                                        Text/lj_05_shiling_080/text #id:lj_05_shiling_080
 
-                                        我原路折回，花了两块钱坐车回路口。
-
-                                        set {money} -= 2
-                                        jump 03_crossroads
-                                    - 什么都不做
-                                        我没碰那朵牡丹，转身原路返回。
-
-                                        现在手里一共有 {flower} 朵花。
-
-                                        我花了两块钱坐车回路口。
+                                        Text/lj_05_shiling_081/text #id:lj_05_shiling_081
 
                                         set {money} -= 2
                                         jump 03_crossroads
-                                    - 结束搜索
-                                        现在手里一共有 {flower} 朵花。
+                                    - Choice/lj_05_shiling_085/text #id:lj_05_shiling_085
+                                        Text/lj_05_shiling_086/text #id:lj_05_shiling_086
 
-                                        我花了两块钱坐车回路口。
+                                        Text/lj_05_shiling_087/text #id:lj_05_shiling_087
+
+                                        Text/lj_05_shiling_088/text #id:lj_05_shiling_088
 
                                         set {money} -= 2
                                         jump 03_crossroads
-                                - 结束搜索
-                                    现在手里一共有 {flower} 朵花。
+                                    - Choice/lj_05_shiling_092/text #id:lj_05_shiling_092
+                                        Text/lj_05_shiling_093/text #id:lj_05_shiling_093
 
-                                    我花了两块钱坐车回路口。
+                                        Text/lj_05_shiling_094/text #id:lj_05_shiling_094
+
+                                        set {money} -= 2
+                                        jump 03_crossroads
+                                - Choice/lj_05_shiling_099/text #id:lj_05_shiling_099
+                                    Text/lj_05_shiling_100/text #id:lj_05_shiling_100
+
+                                    Text/lj_05_shiling_101/text #id:lj_05_shiling_101
 
                                     set {money} -= 2
                                     jump 03_crossroads
-                        - 结束搜索
-                            现在手里一共有 {flower} 朵花。
+                        - Choice/lj_05_shiling_107/text #id:lj_05_shiling_107
+                            Text/lj_05_shiling_108/text #id:lj_05_shiling_108
 
-                            我花了两块钱坐车回路口。
+                            Text/lj_05_shiling_109/text #id:lj_05_shiling_109
 
                             set {money} -= 2
                             jump 03_crossroads
-                - 继续搜索
+                - Choice/lj_05_shiling_115/text #id:lj_05_shiling_115
                     set {energy} -= 5
-                    前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+                    Text/lj_05_shiling_117/text #id:lj_05_shiling_117
 
-                    - 继续搜索
+                    - Choice/lj_05_shiling_118/text #id:lj_05_shiling_118
                         set {energy} -= 5
-                        越往里走越不对劲，山在烧，人影泛着红。
+                        Text/lj_05_shiling_120/text #id:lj_05_shiling_120
 
-                        - 继续搜索
-                            白玉狮子庙前摆着供台，台上插着一朵牡丹。
+                        - Choice/lj_05_shiling_121/text #id:lj_05_shiling_121
+                            Text/lj_05_shiling_122/text #id:lj_05_shiling_122
 
-                            - 偷走牡丹
-                                我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+                            - Choice/lj_05_shiling_123/text #id:lj_05_shiling_123
+                                Text/lj_05_shiling_124/text #id:lj_05_shiling_124
 
                                 set {flower} += 1
                                 set {earthworm} += 1
                                 set {calm} -= 10
                                 set {calm} -= 15
 
-                                现在手里一共有 {flower} 朵花。
+                                Text/lj_05_shiling_129/text #id:lj_05_shiling_129
 
-                                我原路折回，花了两块钱坐车回路口。
-
-                                set {money} -= 2
-                                jump 03_crossroads
-                            - 什么都不做
-                                我没碰那朵牡丹，转身原路返回。
-
-                                现在手里一共有 {flower} 朵花。
-
-                                我花了两块钱坐车回路口。
+                                Text/lj_05_shiling_130/text #id:lj_05_shiling_130
 
                                 set {money} -= 2
                                 jump 03_crossroads
-                            - 结束搜索
-                                现在手里一共有 {flower} 朵花。
+                            - Choice/lj_05_shiling_134/text #id:lj_05_shiling_134
+                                Text/lj_05_shiling_135/text #id:lj_05_shiling_135
 
-                                我花了两块钱坐车回路口。
+                                Text/lj_05_shiling_136/text #id:lj_05_shiling_136
+
+                                Text/lj_05_shiling_137/text #id:lj_05_shiling_137
 
                                 set {money} -= 2
                                 jump 03_crossroads
-                    - 结束搜索
-                        现在手里一共有 {flower} 朵花。
+                            - Choice/lj_05_shiling_141/text #id:lj_05_shiling_141
+                                Text/lj_05_shiling_142/text #id:lj_05_shiling_142
 
-                        我花了两块钱坐车回路口。
+                                Text/lj_05_shiling_143/text #id:lj_05_shiling_143
+
+                                set {money} -= 2
+                                jump 03_crossroads
+                    - Choice/lj_05_shiling_149/text #id:lj_05_shiling_149
+                        Text/lj_05_shiling_150/text #id:lj_05_shiling_150
+
+                        Text/lj_05_shiling_151/text #id:lj_05_shiling_151
 
                         set {money} -= 2
                         jump 03_crossroads
-            - 继续搜索
+            - Choice/lj_05_shiling_157/text #id:lj_05_shiling_157
                 set {energy} -= 5
-                前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+                Text/lj_05_shiling_159/text #id:lj_05_shiling_159
 
-                - 继续搜索
+                - Choice/lj_05_shiling_160/text #id:lj_05_shiling_160
                     set {energy} -= 5
-                    越往里走越不对劲，山在烧，人影泛着红。
+                    Text/lj_05_shiling_162/text #id:lj_05_shiling_162
 
-                    - 继续搜索
-                        白玉狮子庙前摆着供台，台上插着一朵牡丹。
+                    - Choice/lj_05_shiling_163/text #id:lj_05_shiling_163
+                        Text/lj_05_shiling_164/text #id:lj_05_shiling_164
 
-                        - 偷走牡丹
-                            我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+                        - Choice/lj_05_shiling_165/text #id:lj_05_shiling_165
+                            Text/lj_05_shiling_166/text #id:lj_05_shiling_166
 
                             set {flower} += 1
                             set {earthworm} += 1
                             set {calm} -= 10
                             set {calm} -= 15
 
-                            现在手里一共有 {flower} 朵花。
+                            Text/lj_05_shiling_171/text #id:lj_05_shiling_171
 
-                            我原路折回，花了两块钱坐车回路口。
-
-                            set {money} -= 2
-                            jump 03_crossroads
-                        - 什么都不做
-                            我没碰那朵牡丹，转身原路返回。
-
-                            现在手里一共有 {flower} 朵花。
-
-                            我花了两块钱坐车回路口。
+                            Text/lj_05_shiling_172/text #id:lj_05_shiling_172
 
                             set {money} -= 2
                             jump 03_crossroads
-                        - 结束搜索
-                            现在手里一共有 {flower} 朵花。
+                        - Choice/lj_05_shiling_176/text #id:lj_05_shiling_176
+                            Text/lj_05_shiling_177/text #id:lj_05_shiling_177
 
-                            我花了两块钱坐车回路口。
+                            Text/lj_05_shiling_178/text #id:lj_05_shiling_178
+
+                            Text/lj_05_shiling_179/text #id:lj_05_shiling_179
 
                             set {money} -= 2
                             jump 03_crossroads
-                - 结束搜索
-                    现在手里一共有 {flower} 朵花。
+                        - Choice/lj_05_shiling_183/text #id:lj_05_shiling_183
+                            Text/lj_05_shiling_184/text #id:lj_05_shiling_184
 
-                    我花了两块钱坐车回路口。
+                            Text/lj_05_shiling_185/text #id:lj_05_shiling_185
+
+                            set {money} -= 2
+                            jump 03_crossroads
+                - Choice/lj_05_shiling_191/text #id:lj_05_shiling_191
+                    Text/lj_05_shiling_192/text #id:lj_05_shiling_192
+
+                    Text/lj_05_shiling_193/text #id:lj_05_shiling_193
 
                     set {money} -= 2
                     jump 03_crossroads
-        - 继续搜索
+        - Choice/lj_05_shiling_199/text #id:lj_05_shiling_199
             set {energy} -= 5
-            前面空地上蹲着一头铁狮子，嘴里吐出一串火。
+            Text/lj_05_shiling_201/text #id:lj_05_shiling_201
 
-            - 继续搜索
+            - Choice/lj_05_shiling_202/text #id:lj_05_shiling_202
                 set {energy} -= 5
-                越往里走越不对劲，山在烧，人影泛着红。
+                Text/lj_05_shiling_204/text #id:lj_05_shiling_204
 
-                - 继续搜索
-                    白玉狮子庙前摆着供台，台上插着一朵牡丹。
+                - Choice/lj_05_shiling_205/text #id:lj_05_shiling_205
+                    Text/lj_05_shiling_206/text #id:lj_05_shiling_206
 
-                    - 偷走牡丹
-                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。
+                    - Choice/lj_05_shiling_207/text #id:lj_05_shiling_207
+                        Text/lj_05_shiling_208/text #id:lj_05_shiling_208
 
                         set {flower} += 1
                         set {earthworm} += 1
                         set {calm} -= 10
                         set {calm} -= 15
 
-                        现在手里一共有 {flower} 朵花。
+                        Text/lj_05_shiling_213/text #id:lj_05_shiling_213
 
-                        我原路折回，花了两块钱坐车回路口。
-
-                        set {money} -= 2
-                        jump 03_crossroads
-                    - 什么都不做
-                        我没碰那朵牡丹，转身原路返回。
-
-                        现在手里一共有 {flower} 朵花。
-
-                        我花了两块钱坐车回路口。
+                        Text/lj_05_shiling_214/text #id:lj_05_shiling_214
 
                         set {money} -= 2
                         jump 03_crossroads
-                    - 结束搜索
-                        现在手里一共有 {flower} 朵花。
+                    - Choice/lj_05_shiling_218/text #id:lj_05_shiling_218
+                        Text/lj_05_shiling_219/text #id:lj_05_shiling_219
 
-                        我花了两块钱坐车回路口。
+                        Text/lj_05_shiling_220/text #id:lj_05_shiling_220
+
+                        Text/lj_05_shiling_221/text #id:lj_05_shiling_221
 
                         set {money} -= 2
                         jump 03_crossroads
-                - 结束搜索
-                    现在手里一共有 {flower} 朵花。
+                    - Choice/lj_05_shiling_225/text #id:lj_05_shiling_225
+                        Text/lj_05_shiling_226/text #id:lj_05_shiling_226
 
-                    我花了两块钱坐车回路口。
+                        Text/lj_05_shiling_227/text #id:lj_05_shiling_227
+
+                        set {money} -= 2
+                        jump 03_crossroads
+                - Choice/lj_05_shiling_232/text #id:lj_05_shiling_232
+                    Text/lj_05_shiling_233/text #id:lj_05_shiling_233
+
+                    Text/lj_05_shiling_234/text #id:lj_05_shiling_234
 
                     set {money} -= 2
                     jump 03_crossroads
-        - 结束搜索
-            现在手里一共有 {flower} 朵花。
+        - Choice/lj_05_shiling_240/text #id:lj_05_shiling_240
+            Text/lj_05_shiling_241/text #id:lj_05_shiling_241
 
-            我花了两块钱坐车回路口。
+            Text/lj_05_shiling_242/text #id:lj_05_shiling_242
 
             set {money} -= 2
             jump 03_crossroads
 else:
-    狮岭已经关门了，铁门从里面锁得严严实实。
+    Text/lj_05_shiling_249/text #id:lj_05_shiling_249
 
-    - 回路口
+    - Choice/lj_05_shiling_250/text #id:lj_05_shiling_250
         jump 03_crossroads

@@ -1,20 +1,47 @@
 extends Node
 
-## Read-only runtime view of lore data imported from lore/INDEX.md and canon files.
+## Metadata keeps stable slugs/paths; every visible value comes from the selected PO.
+const MANIFEST: JSON = preload("res://localization/lore.json")
 
 var _entries_by_slug: Dictionary = {}
 var _entries_by_category: Dictionary = {}
+var _category_labels: Dictionary = {}
 
 
 func _ready() -> void:
-	_load_index()
+	var data: Dictionary = MANIFEST.data
+	for category in data["categories"]:
+		_category_labels[category["key"]] = category["label"]
+		_entries_by_category[category["key"]] = []
+	for entry in data["entries"]:
+		if _entries_by_slug.has(entry["slug"]) or not _entries_by_category.has(entry["category"]):
+			push_error("Duplicate lore slug or unknown category: " + entry["slug"])
+			get_tree().quit(2)
+			return
+		_entries_by_slug[entry["slug"]] = entry
+		_entries_by_category[entry["category"]].append(entry)
+
+
+func _copy_entry(entry: Dictionary) -> Dictionary:
+	var result := entry.duplicate(true)
+	for property in ["title", "summary", "body"]:
+		result[property] = Localization.text(entry[property])
+	result["category_label"] = Localization.text(_category_labels[entry["category"]])
+	result["fields"] = {}
+	result["known_info"] = []
+	for line in str(result["body"]).split("\n"):
+		if line.begins_with("  - "):
+			result["known_info"].append(line.trim_prefix("  - "))
+		elif line.begins_with("- ") and line.contains(": "):
+			var separator := line.find(": ")
+			result["fields"][line.substr(2, separator - 2)] = line.substr(separator + 2)
+	return result
 
 
 func get_all_entries() -> Array:
 	var result: Array = []
-	for category in _entries_by_category:
-		for entry in _entries_by_category[category]:
-			result.append(_copy_entry(entry))
+	for entry in _entries_by_slug.values():
+		result.append(_copy_entry(entry))
 	return result
 
 
@@ -24,12 +51,7 @@ func get_index_data() -> Dictionary:
 	var counts: Dictionary = {}
 	for category in categories:
 		counts[category["key"]] = category["count"]
-	return {
-		"categories": categories,
-		"entries": entries,
-		"counts": counts,
-		"total_entries": entries.size(),
-	}
+	return {"categories": categories, "entries": entries, "counts": counts, "total_entries": entries.size()}
 
 
 func get_category(category: String) -> Array:
@@ -41,28 +63,17 @@ func get_category(category: String) -> Array:
 
 func get_categories() -> Array:
 	var result: Array = []
-	for category in _sorted_category_keys():
-		var entries: Array = _entries_by_category[category]
-		var meta: Dictionary = LoreFilesystem.CATEGORIES.get(category, {})
-		var slugs: Array = []
-		var summaries: Array = []
-		for entry in entries:
-			slugs.append(entry["slug"])
-			summaries.append(_copy_entry(entry))
-		result.append({
-			"key": category,
-			"label": meta.get("label", category),
-			"count": entries.size(),
-			"slugs": slugs,
-			"entries": summaries,
-		})
+	for category in _entries_by_category:
+		var entries := get_category(category)
+		result.append({"key": category, "label": Localization.text(_category_labels[category]),
+			"count": entries.size(), "slugs": entries.map(func(entry: Dictionary): return entry["slug"]),
+			"entries": entries})
+	result.sort_custom(func(a: Dictionary, b: Dictionary): return a["label"] < b["label"])
 	return result
 
 
 func get_detail(slug: String) -> Dictionary:
-	if not _entries_by_slug.has(slug):
-		return {}
-	return _copy_entry(_entries_by_slug[slug])
+	return _copy_entry(_entries_by_slug[slug]) if _entries_by_slug.has(slug) else {}
 
 
 func has_entry(slug: String) -> bool:
@@ -75,199 +86,14 @@ func search(query: String) -> Array:
 		return []
 	var result: Array = []
 	for entry in get_all_entries():
-		if _entry_matches_terms(entry, terms):
+		var haystack: String = (entry["title"] + " " + entry["summary"] + " " + entry["body"] + " " + entry["category_label"]).to_lower()
+		if Array(terms).all(func(term: String): return haystack.contains(term)):
 			result.append(entry)
-	result.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
-		return a["title"].to_lower() < b["title"].to_lower()
-	)
+	result.sort_custom(func(a: Dictionary, b: Dictionary): return a["title"] < b["title"])
 	return result
 
 
 func search_by_category(category: String) -> Array:
-	var result: Array = []
-	for entry in get_category(category):
-		result.append(entry)
-	result.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
-		return a["title"].to_lower() < b["title"].to_lower()
-	)
+	var result := get_category(category)
+	result.sort_custom(func(a: Dictionary, b: Dictionary): return a["title"] < b["title"])
 	return result
-
-
-func _sorted_category_keys() -> Array:
-	var keys := _entries_by_category.keys()
-	keys.sort_custom(func(a: String, b: String) -> bool:
-		return _category_label(a).to_lower() < _category_label(b).to_lower()
-	)
-	return keys
-
-
-func _entry_matches_terms(entry: Dictionary, terms: Array) -> bool:
-	var haystack := _searchable_text(entry).to_lower()
-	for term in terms:
-		if term.is_empty():
-			continue
-		if not haystack.contains(term):
-			return false
-	return true
-
-
-func _searchable_text(entry: Dictionary) -> String:
-	var parts: Array = [entry.get("title", ""), entry.get("summary", ""), entry.get("category", ""), entry.get("category_label", ""), entry.get("path", "")]
-	for field_value in entry.get("fields", {}).values():
-		parts.append(str(field_value))
-	for info in entry.get("known_info", []):
-		parts.append(str(info))
-	return " ".join(parts)
-
-
-func _load_index() -> void:
-	var text := LoreFilesystem.read_file(LoreFilesystem.INDEX_PATH)
-	if text.is_empty():
-		return
-
-	var category := ""
-	var order := 0
-	for line in text.split("\n"):
-		var trimmed := line.strip_edges()
-		if trimmed.begins_with("## "):
-			category = _category_for_label(trimmed.substr(3).strip_edges())
-			if not category.is_empty() and not _entries_by_category.has(category):
-				_entries_by_category[category] = []
-			continue
-		if category.is_empty() or not trimmed.begins_with("- "):
-			continue
-
-		var item := trimmed.substr(2).strip_edges()
-		if item.is_empty():
-			continue
-		var parts := _split_index_item(item)
-		var entry := _build_entry(category, parts[0], parts[1], order)
-		order += 1
-		if entry.is_empty():
-			continue
-
-		_entries_by_slug[entry["slug"]] = entry
-		if not _entries_by_category.has(category):
-			_entries_by_category[category] = []
-		_entries_by_category[category].append(entry)
-
-
-func _build_entry(category: String, title: String, summary: String, order: int) -> Dictionary:
-	var canon := _find_canon(category, title)
-	var entry := {
-		"slug": _slug_for(category, title, canon.get("path", ""), order),
-		"title": title,
-		"summary": summary,
-		"category": category,
-		"category_label": _category_label(category),
-		"path": canon.get("path", ""),
-		"fields": canon.get("fields", {}),
-		"known_info": canon.get("known_info", []),
-	}
-	return entry
-
-
-func _find_canon(category: String, title: String) -> Dictionary:
-	var result := {
-		"path": "",
-		"fields": {},
-		"known_info": [],
-	}
-
-	if category == "plot-threads":
-		var plot_text := LoreFilesystem.read_file(LoreFilesystem.PLOT_THREADS_PATH)
-		if plot_text.is_empty():
-			return result
-		for section in LoreFilesystem.list_plot_thread_sections(plot_text):
-			if section.get("title", "") != title:
-				continue
-			var body := "\n".join(section.get("body_lines", []))
-			var parsed := LoreMarkdownParser.parse_entry(body)
-			result["path"] = LoreFilesystem.PLOT_THREADS_PATH
-			result["fields"] = parsed.get("fields", {})
-			result["known_info"] = parsed.get("known_info", [])
-			return result
-		return result
-
-	for path in LoreFilesystem.list_category(category):
-		var text := LoreFilesystem.read_file(path)
-		if text.is_empty():
-			continue
-		var parsed := LoreMarkdownParser.parse_entry(text)
-		if parsed.get("title", "").strip_edges() != title:
-			continue
-		result["path"] = str(path)
-		result["fields"] = parsed.get("fields", {})
-		result["known_info"] = parsed.get("known_info", [])
-		return result
-	return result
-
-
-func _title_from_text(text: String) -> String:
-	for line in text.split("\n"):
-		var trimmed := line.strip_edges()
-		if trimmed.begins_with("# "):
-			return trimmed.substr(2).strip_edges()
-		if trimmed.begins_with("## "):
-			return trimmed.substr(3).strip_edges()
-	return text.strip_edges()
-
-
-func _split_index_item(item: String) -> Array:
-	var parts := item.split("—", true, 1)
-	var title := parts[0].strip_edges()
-	var summary := ""
-	if parts.size() > 1:
-		summary = parts[1].strip_edges()
-	return [title, summary]
-
-
-func _category_for_label(label: String) -> String:
-	for category in LoreFilesystem.CATEGORIES:
-		var meta: Dictionary = LoreFilesystem.CATEGORIES[category]
-		if meta.get("label", "") == label:
-			return category
-	return ""
-
-
-func _category_label(category: String) -> String:
-	var meta: Dictionary = LoreFilesystem.CATEGORIES.get(category, {})
-	return meta.get("label", category)
-
-
-func _slug_for(category: String, title: String, path: String, order: int) -> String:
-	if category != "plot-threads" and not path.is_empty():
-		var path_slug := LoreFilesystem.slug_from_path(path)
-		if not path_slug.is_empty():
-			return path_slug
-	return _unique_slug(title, order)
-
-
-func _unique_slug(title: String, order: int) -> String:
-	var base := _slugify(title)
-	if base.is_empty():
-		base = "entry"
-	var slug := base
-	var counter := order
-	while _entries_by_slug.has(slug):
-		counter += 1
-		slug = "%s-%d" % [base, counter]
-	return slug
-
-
-func _slugify(text: String) -> String:
-	var slug := ""
-	var allowed := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-	for i in text.length():
-		var ch := text[i]
-		if allowed.contains(ch):
-			slug += ch.to_lower()
-		elif ch == " " or ch == "-" or ch == "_":
-			slug += "-"
-	while slug.find("--") != -1:
-		slug = slug.replace("--", "-")
-	return slug.trim_prefix("-").trim_suffix("-")
-
-
-func _copy_entry(entry: Dictionary) -> Dictionary:
-	return entry.duplicate(true)

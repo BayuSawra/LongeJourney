@@ -35,7 +35,8 @@ func after_test() -> void:
 func test_business_autoloads_and_renderer_preserved() -> void:
 	for singleton in ["Dialogic", "GameState", "SaveManager", "EndingManager", "VisualFX",
 			"AutoSaveManager", "SettingsManager", "LoreRuntime", "MCPRuntimeBridge"]:
-		assert_object(get_tree().root.get_node_or_null(singleton)).is_not_null()
+		assert_object(get_tree().root.get_node_or_null(singleton)).override_failure_message(
+			"Missing autoload: " + singleton).is_not_null()
 	assert_str(ProjectSettings.get_setting("rendering/renderer/rendering_method")).is_equal("gl_compatibility")
 	assert_bool(ProjectSettings.has_setting("autoload/GodotFramework")).is_false()
 
@@ -80,6 +81,27 @@ func test_save_slot_create_list_rename_delete() -> void:
 	assert_array(ids).contains([slot])
 	SaveManager.delete_save(slot)
 	assert_bool(SaveManager.has_save(slot)).is_false()
+	assert_bool(DirAccess.dir_exists_absolute(SaveManager._save_path(slot).get_base_dir())).is_false()
+
+
+func test_save_rejects_invalid_slot_without_touching_user_path() -> void:
+	for slot: String in ["", "../escape", "nested/slot", "slot.sav", "a\\b", "a".repeat(65)]:
+		assert_bool(SaveManager.save_to_slot(slot)).is_false()
+		assert_str(SaveManager.last_error).is_equal("save.error_invalid_slot")
+	assert_bool(FileAccess.file_exists("user://dialogic/escape/save.sav")).is_false()
+
+
+func test_visual_fx_choice_scan_connects_each_button_once() -> void:
+	var button := Button.new()
+	button.name = "ChoiceButtonRegression"
+	add_child(button)
+	await get_tree().process_frame
+	VisualFX._scan_for_choice_buttons()
+	VisualFX._scan_for_choice_buttons()
+	var pressed_connections := button.get_signal_connection_list("pressed")
+	assert_int(pressed_connections.size()).is_equal(1)
+	button.queue_free()
+	await get_tree().process_frame
 
 
 func test_load_rejects_missing_and_wrong_version() -> void:

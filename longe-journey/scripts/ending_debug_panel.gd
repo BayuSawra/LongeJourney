@@ -6,7 +6,11 @@ extends CanvasLayer
 @onready var _result_label: Label = %ResultLabel
 
 
+var _result_key := ""
+var _result_values: Dictionary = {}
+
 func _ready() -> void:
+	Localization.locale_changed.connect(_refresh_result)
 	_energy_edit.text = str(GameState.get_var("energy"))
 	_calm_edit.text = str(GameState.get_var("calm"))
 	_money_edit.text = str(GameState.get_var("money"))
@@ -26,7 +30,9 @@ func _on_apply_pressed() -> void:
 	GameState.set_var("energy", int(energy))
 	GameState.set_var("calm", int(calm))
 	GameState.set_var("money", int(money))
-	_result_label.text = "已写入：energy=%d, calm=%d, money=%d" % [int(energy), int(calm), int(money)]
+	_result_key = "ending.applied"
+	_result_values = {"energy": int(energy), "calm": int(calm), "money": int(money)}
+	_refresh_result()
 
 
 func _read_number(edit: LineEdit) -> float:
@@ -34,4 +40,15 @@ func _read_number(edit: LineEdit) -> float:
 
 
 func _on_ending_triggered(ending_id: String) -> void:
-	_result_label.text = "触发结局：" + ending_id
+	_result_key = "ending.triggered"
+	_result_values = {"ending": ending_id}
+	_refresh_result()
+
+
+func _refresh_result() -> void:
+	if _result_key.is_empty():
+		return
+	var values := _result_values.duplicate()
+	if values.has("ending"):
+		values["ending"] = Localization.text("ending." + values["ending"])
+	_result_label.text = Localization.format_text(_result_key, values)

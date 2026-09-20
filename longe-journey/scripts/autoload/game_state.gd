@@ -13,7 +13,8 @@ var flower: int = 0
 var wife: int = 0
 var hualan: bool = false
 var jiahua: bool = false
-var player_name: String = "无名王"
+## Empty means the localized default; every nonempty player name is literal user data.
+var player_name: String = ""
 var visit_huadian: int = 0
 var visit_shiling: int = 0
 var visit_luyuan: int = 0

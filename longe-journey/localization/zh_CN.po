@@ -1,0 +1,1976 @@
+msgid ""
+msgstr "Project-Id-Version: LongeJourney\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
+#: res://character/neighbor.dch
+msgid "Character/lj_neighbor/name"
+msgstr "邻居"
+
+#: res://character/nurse1.dch
+msgid "Character/lj_nurse1/name"
+msgstr "护士 1"
+
+#: res://character/nurse2.dch
+msgid "Character/lj_nurse2/name"
+msgstr "护士 2"
+
+#: res://character/我.dch
+msgid "Character/lj_self/name"
+msgstr "我"
+
+#: res://character/我.dch
+msgid "Character/lj_self/nicknames"
+msgstr "我自己"
+
+#: res://character/storeOwner.dch
+msgid "Character/lj_storeOwner/name"
+msgstr "花店老板"
+
+#: res://character/wife.dch
+msgid "Character/lj_wife/name"
+msgstr "妻子"
+
+#: res://timelines/00_start.dtl:20
+msgid "Choice/lj_00_start_010/text"
+msgstr "下车"
+
+#: res://timelines/01_hospital.dtl:7
+msgid "Choice/lj_01_hospital_003/text"
+msgstr "去住院部"
+
+#: res://timelines/01_hospital.dtl:9
+msgid "Choice/lj_01_hospital_006/text"
+msgstr "离开医院去十字路口"
+
+#: res://timelines/01_hospital.dtl:11
+msgid "Choice/lj_01_hospital_009/text"
+msgstr "去停尸房"
+
+#: res://timelines/02_ward.dtl:13
+msgid "Choice/lj_02_ward_007/text"
+msgstr "回医院楼下"
+
+#: res://timelines/02_ward.dtl:20
+msgid "Choice/lj_02_ward_014/text"
+msgstr "进入病房"
+
+#: res://timelines/02_ward.dtl:33
+msgid "Choice/lj_02_ward_025/text"
+msgstr "进入病房"
+
+#: res://timelines/03_crossroads.dtl:18
+msgid "Choice/lj_03_crossroads_012/text"
+msgstr "去花店"
+
+#: res://timelines/03_crossroads.dtl:23
+msgid "Choice/lj_03_crossroads_018/text"
+msgstr "去狮岭"
+
+#: res://timelines/03_crossroads.dtl:28
+msgid "Choice/lj_03_crossroads_024/text"
+msgstr "去露园"
+
+#: res://timelines/03_crossroads.dtl:33
+msgid "Choice/lj_03_crossroads_030/text"
+msgstr "回医院"
+
+#: res://timelines/04_flower_shop.dtl:8
+msgid "Choice/lj_04_flower_shop_004/text"
+msgstr "骂她还踢翻水桶"
+
+#: res://timelines/04_flower_shop.dtl:15
+msgid "Choice/lj_04_flower_shop_010/text"
+msgstr "“我已经知道你想陷害我的阴谋”"
+
+#: res://timelines/04_flower_shop.dtl:20
+msgid "Choice/lj_04_flower_shop_013/text"
+msgstr "拿走蚯蚓"
+
+#: res://timelines/04_flower_shop.dtl:26
+msgid "Choice/lj_04_flower_shop_019/text"
+msgstr "不要蚯蚓"
+
+#: res://timelines/04_flower_shop.dtl:35
+msgid "Choice/lj_04_flower_shop_028/text"
+msgstr "回路口"
+
+#: res://timelines/04_flower_shop.dtl:40
+msgid "Choice/lj_04_flower_shop_034/text"
+msgstr "回路口"
+
+#: res://timelines/05_shiling.dtl:7
+msgid "Choice/lj_05_shiling_004/text"
+msgstr "开始搜索"
+
+#: res://timelines/05_shiling.dtl:13
+msgid "Choice/lj_05_shiling_008/text"
+msgstr "仔细看看他们"
+
+#: res://timelines/05_shiling.dtl:20
+msgid "Choice/lj_05_shiling_012/text"
+msgstr "再仔细看看那朵花"
+
+#: res://timelines/05_shiling.dtl:23
+msgid "Choice/lj_05_shiling_014/text"
+msgstr "扔掉假花"
+
+#: res://timelines/05_shiling.dtl:29
+msgid "Choice/lj_05_shiling_018/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:33
+msgid "Choice/lj_05_shiling_021/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:37
+msgid "Choice/lj_05_shiling_024/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:40
+msgid "Choice/lj_05_shiling_026/text"
+msgstr "偷走牡丹"
+
+#: res://timelines/05_shiling.dtl:54
+msgid "Choice/lj_05_shiling_037/text"
+msgstr "什么都不做"
+
+#: res://timelines/05_shiling.dtl:63
+msgid "Choice/lj_05_shiling_044/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:70
+msgid "Choice/lj_05_shiling_051/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:77
+msgid "Choice/lj_05_shiling_058/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:84
+msgid "Choice/lj_05_shiling_065/text"
+msgstr "不扔，留着"
+
+#: res://timelines/05_shiling.dtl:85
+msgid "Choice/lj_05_shiling_066/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:89
+msgid "Choice/lj_05_shiling_069/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:93
+msgid "Choice/lj_05_shiling_072/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:96
+msgid "Choice/lj_05_shiling_074/text"
+msgstr "偷走牡丹"
+
+#: res://timelines/05_shiling.dtl:110
+msgid "Choice/lj_05_shiling_085/text"
+msgstr "什么都不做"
+
+#: res://timelines/05_shiling.dtl:119
+msgid "Choice/lj_05_shiling_092/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:126
+msgid "Choice/lj_05_shiling_099/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:133
+msgid "Choice/lj_05_shiling_107/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:140
+msgid "Choice/lj_05_shiling_115/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:144
+msgid "Choice/lj_05_shiling_118/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:148
+msgid "Choice/lj_05_shiling_121/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:151
+msgid "Choice/lj_05_shiling_123/text"
+msgstr "偷走牡丹"
+
+#: res://timelines/05_shiling.dtl:165
+msgid "Choice/lj_05_shiling_134/text"
+msgstr "什么都不做"
+
+#: res://timelines/05_shiling.dtl:174
+msgid "Choice/lj_05_shiling_141/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:181
+msgid "Choice/lj_05_shiling_149/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:188
+msgid "Choice/lj_05_shiling_157/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:192
+msgid "Choice/lj_05_shiling_160/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:196
+msgid "Choice/lj_05_shiling_163/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:199
+msgid "Choice/lj_05_shiling_165/text"
+msgstr "偷走牡丹"
+
+#: res://timelines/05_shiling.dtl:213
+msgid "Choice/lj_05_shiling_176/text"
+msgstr "什么都不做"
+
+#: res://timelines/05_shiling.dtl:222
+msgid "Choice/lj_05_shiling_183/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:229
+msgid "Choice/lj_05_shiling_191/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:236
+msgid "Choice/lj_05_shiling_199/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:240
+msgid "Choice/lj_05_shiling_202/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:244
+msgid "Choice/lj_05_shiling_205/text"
+msgstr "继续搜索"
+
+#: res://timelines/05_shiling.dtl:247
+msgid "Choice/lj_05_shiling_207/text"
+msgstr "偷走牡丹"
+
+#: res://timelines/05_shiling.dtl:261
+msgid "Choice/lj_05_shiling_218/text"
+msgstr "什么都不做"
+
+#: res://timelines/05_shiling.dtl:270
+msgid "Choice/lj_05_shiling_225/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:277
+msgid "Choice/lj_05_shiling_232/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:284
+msgid "Choice/lj_05_shiling_240/text"
+msgstr "结束搜索"
+
+#: res://timelines/05_shiling.dtl:294
+msgid "Choice/lj_05_shiling_250/text"
+msgstr "回路口"
+
+#: res://timelines/06_luyuan.dtl:6
+msgid "Choice/lj_06_luyuan_003/text"
+msgstr "往左走"
+
+#: res://timelines/06_luyuan.dtl:13
+msgid "Choice/lj_06_luyuan_007/text"
+msgstr "继续往迷宫中心走"
+
+#: res://timelines/06_luyuan.dtl:18
+msgid "Choice/lj_06_luyuan_010/text"
+msgstr "逃离"
+
+#: res://timelines/06_luyuan.dtl:23
+msgid "Choice/lj_06_luyuan_015/text"
+msgstr "摘下她手里的绣球花"
+
+#: res://timelines/06_luyuan.dtl:33
+msgid "Choice/lj_06_luyuan_025/text"
+msgstr "直走"
+
+#: res://timelines/06_luyuan.dtl:40
+msgid "Choice/lj_06_luyuan_029/text"
+msgstr "继续往迷宫中心走"
+
+#: res://timelines/06_luyuan.dtl:45
+msgid "Choice/lj_06_luyuan_032/text"
+msgstr "逃离"
+
+#: res://timelines/06_luyuan.dtl:50
+msgid "Choice/lj_06_luyuan_037/text"
+msgstr "摘下她手里的绣球花"
+
+#: res://timelines/06_luyuan.dtl:60
+msgid "Choice/lj_06_luyuan_047/text"
+msgstr "往右走"
+
+#: res://timelines/06_luyuan.dtl:67
+msgid "Choice/lj_06_luyuan_051/text"
+msgstr "继续往迷宫中心走"
+
+#: res://timelines/06_luyuan.dtl:72
+msgid "Choice/lj_06_luyuan_054/text"
+msgstr "逃离"
+
+#: res://timelines/06_luyuan.dtl:77
+msgid "Choice/lj_06_luyuan_059/text"
+msgstr "摘下她手里的绣球花"
+
+#: res://timelines/07_maze_entry.dtl:23
+msgid "Choice/lj_07_maze_entry_011/text"
+msgstr "往路面宽阔的左边走"
+
+#: res://timelines/07_maze_entry.dtl:26
+msgid "Choice/lj_07_maze_entry_014/text"
+msgstr "往路面曲折的右边走"
+
+#: res://timelines/07_maze_exit.dtl:6
+msgid "Choice/lj_07_maze_exit_003/text"
+msgstr "走进妻子的房间"
+
+#: res://timelines/07_maze_left.dtl:5
+msgid "Choice/lj_07_maze_left_002/text"
+msgstr "你杀人了？"
+
+#: res://timelines/07_maze_left.dtl:11
+msgid "Choice/lj_07_maze_left_008/text"
+msgstr "谁叫你杀的？把人给我复活了。"
+
+#: res://timelines/07_maze_middle.dtl:5
+msgid "Choice/lj_07_maze_middle_002/text"
+msgstr "摘仙人球花"
+
+#: res://timelines/07_maze_middle.dtl:10
+msgid "Choice/lj_07_maze_middle_007/text"
+msgstr "不摘花继续走"
+
+#: res://timelines/07_maze_middle.dtl:22
+msgid "Choice/lj_07_maze_middle_017/text"
+msgstr "她是怎么立住的？"
+
+#: res://timelines/07_maze_middle.dtl:29
+msgid "Choice/lj_07_maze_middle_023/text"
+msgstr "立刻逃离这里"
+
+#: res://timelines/07_maze_middle.dtl:32
+msgid "Choice/lj_07_maze_middle_026/text"
+msgstr "摘下绣球花"
+
+#: res://timelines/07_maze_middle.dtl:44
+msgid "Choice/lj_07_maze_middle_036/text"
+msgstr "离开这里"
+
+#: res://timelines/07_maze_right.dtl:5
+msgid "Choice/lj_07_maze_right_002/text"
+msgstr "开始偷听"
+
+#: res://timelines/07_maze_right.dtl:9
+msgid "Choice/lj_07_maze_right_006/text"
+msgstr "继续往前走"
+
+#: res://timelines/08_wife_room.dtl:11
+msgid "Choice/lj_08_wife_room_008/text"
+msgstr "拉开帘子"
+
+#: res://timelines/10_morgue.dtl:9
+msgid "Choice/lj_10_morgue_005/text"
+msgstr "再仔细看看"
+
+#: res://timelines/10_morgue.dtl:16
+msgid "Choice/lj_10_morgue_010/text"
+msgstr "带着花篮离开"
+
+#: res://timelines/10_morgue.dtl:18
+msgid "Choice/lj_10_morgue_014/text"
+msgstr "返回"
+
+#: res://timelines/10_morgue.dtl:23
+msgid "Choice/lj_10_morgue_020/text"
+msgstr "返回"
+
+#: res://timelines/10_morgue.dtl:28
+msgid "Choice/lj_10_morgue_026/text"
+msgstr "返回"
+
+#: res://timelines/00_start.dtl:1
+msgid "Text/lj_00_start_000/text"
+msgstr "[color=#696969][i]※当前位置  公交车上※[/i][/color]"
+
+#: res://timelines/00_start.dtl:3
+msgid "Text/lj_00_start_001/text"
+msgstr "马上就要到医院了，公交车缓慢向左转弯，我看见了医院灰色的外墙，爬山虎覆盖了它大半个身躯，破旧的窗户往外吐着灰蓝的窗帘。"
+
+#: res://timelines/00_start.dtl:5
+msgid "Text/lj_00_start_002/text"
+msgstr "这是个破医院，我自己知道。"
+
+#: res://timelines/00_start.dtl:7
+msgid "Text/lj_00_start_003/text"
+msgstr "妻子生病住院，忘了有多长时间，真是可怜。"
+
+#: res://timelines/00_start.dtl:9
+msgid "Text/lj_00_start_004/text"
+msgstr "我瞄了一眼车上的人，个个都灰头土脸，沉默地坐着，像一窝老鼠。"
+
+#: res://timelines/00_start.dtl:11
+msgid "Text/lj_00_start_005/text"
+msgstr "我数了一下，除了我以外一共有15人，今天这种天气，也不知道他们出来干什么？估计没什么事做，闲着也是闲着，出来瞎溜达。"
+
+#: res://timelines/00_start.dtl:13
+msgid "Text/lj_00_start_006/text"
+msgstr "要我说，幸亏他们中间没有小偷，我的眼睛最毒辣，能分辨谁是好人，谁又是坏人，只需一眼！"
+
+#: res://timelines/00_start.dtl:15
+msgid "Text/lj_00_start_007/text"
+msgstr "他们现在还算老实，都不敢拿眼瞧我，应该是知道我的来头，怕了吧。"
+
+#: res://timelines/00_start.dtl:17
+msgid "Text/lj_00_start_008/text"
+msgstr "车停了，车上的人都转头盯着我，暗示我该下车了。"
+
+#: res://timelines/01_hospital.dtl:1
+msgid "Text/lj_01_hospital_000/text"
+msgstr "[color=#696969][i]※当前位置  医院※[/i][/color]"
+
+#: res://timelines/01_hospital.dtl:3
+msgid "Text/lj_01_hospital_001/text"
+msgstr "站在医院楼下，感觉冷飕飕的，这种天气其实不适合探病，万一我不小心感冒了，岂不是更糟。"
+
+#: res://timelines/01_hospital.dtl:5
+msgid "Text/lj_01_hospital_002/text"
+msgstr "拿出手机，看了下聊天记录：妻子在住院部的7楼，5-05床。"
+
+#: res://timelines/02_ward.dtl:1
+msgid "Text/lj_02_ward_000/text"
+msgstr "[color=#696969][i]※当前位置  住院部※[/i][/color]"
+
+#: res://timelines/02_ward.dtl:3
+msgid "Text/lj_02_ward_001/text"
+msgstr "护士站在走廊入口，拦住了我。"
+
+#: res://timelines/02_ward.dtl:6
+msgid "Text/lj_02_ward_003/text"
+msgstr "护士上下打量我，啧了一声。"
+
+#: res://timelines/02_ward.dtl:8
+msgid "Text/lj_02_ward_004/text"
+msgstr "“没带花别进去。”"
+
+#: res://timelines/02_ward.dtl:9
+msgid "Text/lj_02_ward_005/text"
+msgstr "“我不认识你，没带花还在这叭叭。有点常识的人都知道要带5朵花。”"
+
+#: res://timelines/02_ward.dtl:11
+msgid "Text/lj_02_ward_006/text"
+msgstr "她摆手赶人，我只好灰溜溜地回到楼下。"
+
+#: res://timelines/02_ward.dtl:16
+msgid "Text/lj_02_ward_012/text"
+msgstr "护士看见我提着的淡黄色花篮，语气松了下来。"
+
+#: res://timelines/02_ward.dtl:18
+msgid "Text/lj_02_ward_013/text"
+msgstr "“行吧，你快些进去。”"
+
+#: res://timelines/02_ward.dtl:22
+msgid "Text/lj_02_ward_016/text"
+msgstr "我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。"
+
+#: res://timelines/02_ward.dtl:24
+msgid "Text/lj_02_ward_017/text"
+msgstr "（这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。）"
+
+#: res://timelines/02_ward.dtl:27
+msgid "Text/lj_02_ward_022/text"
+msgstr "护士盯着我手里乱七八糟的花，骂了起来。"
+
+#: res://timelines/02_ward.dtl:29
+msgid "Text/lj_02_ward_023/text"
+msgstr "“一点礼数都没有，这些花你就乱七八糟的拿在手里啊？怎么不买个花篮提一下。”"
+
+#: res://timelines/02_ward.dtl:31
+msgid "Text/lj_02_ward_024/text"
+msgstr "骂完她还是让开了路。"
+
+#: res://timelines/02_ward.dtl:35
+msgid "Text/lj_02_ward_027/text"
+msgstr "我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。"
+
+#: res://timelines/02_ward.dtl:37
+msgid "Text/lj_02_ward_028/text"
+msgstr "（这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。）"
+
+#: res://timelines/03_crossroads.dtl:1
+msgid "Text/lj_03_crossroads_000/text"
+msgstr "[color=#696969][i]※当前位置  路口※[/i][/color]"
+
+#: res://timelines/03_crossroads.dtl:3
+msgid "Text/lj_03_crossroads_001/text"
+msgstr "路口没什么景色，人也少得很。"
+
+#: res://timelines/03_crossroads.dtl:6
+msgid "Text/lj_03_crossroads_003/text"
+msgstr "一辆公交靠边停下，邻居探出车窗，硬塞给我一枝向日葵。"
+
+#: res://timelines/03_crossroads.dtl:8
+msgid "Text/lj_03_crossroads_004/text"
+msgstr "“拿着，探病用的。”"
+
+#: res://timelines/03_crossroads.dtl:12
+msgid "Text/lj_03_crossroads_008/text"
+msgstr "一辆公交靠边停下，邻居探出车窗，硬塞给我一枝向日葵。"
+
+#: res://timelines/03_crossroads.dtl:14
+msgid "Text/lj_03_crossroads_009/text"
+msgstr "“拿着，探病用的。”"
+
+#: res://timelines/03_crossroads.dtl:19
+msgid "Text/lj_03_crossroads_013/text"
+msgstr "花店不远，走过去就行。"
+
+#: res://timelines/03_crossroads.dtl:24
+msgid "Text/lj_03_crossroads_019/text"
+msgstr "我上了去狮岭的车，付了车费。"
+
+#: res://timelines/03_crossroads.dtl:29
+msgid "Text/lj_03_crossroads_025/text"
+msgstr "我上了去露园的车，付了车费。"
+
+#: res://timelines/04_flower_shop.dtl:1
+msgid "Text/lj_04_flower_shop_000/text"
+msgstr "[color=#696969][i]※当前位置  花店※[/i][/color]"
+
+#: res://timelines/04_flower_shop.dtl:4
+msgid "Text/lj_04_flower_shop_002/text"
+msgstr "说是花店，其实只有极小两平米，卷帘门半拉着。老板低头玩手机，桶里全是土。"
+
+#: res://timelines/04_flower_shop.dtl:6
+msgid "Text/lj_04_flower_shop_003/text"
+msgstr "“不卖花了，我改行养蛤蟆。”"
+
+#: res://timelines/04_flower_shop.dtl:9
+msgid "Text/lj_04_flower_shop_005/text"
+msgstr "我一脚踹翻水桶，土洒了一地。"
+
+#: res://timelines/04_flower_shop.dtl:11
+msgid "Text/lj_04_flower_shop_006/text"
+msgstr "老板愣了一下，竟然没生气，嘴角还翘了起来。"
+
+#: res://timelines/04_flower_shop.dtl:16
+msgid "Text/lj_04_flower_shop_011/text"
+msgstr "老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。"
+
+#: res://timelines/04_flower_shop.dtl:18
+msgid "Text/lj_04_flower_shop_012/text"
+msgstr "“那你肯定也想要这个吧。”"
+
+#: res://timelines/04_flower_shop.dtl:21
+msgid "Text/lj_04_flower_shop_014/text"
+msgstr "我捏住滑溜溜的蚯蚓，心里一阵发毛。"
+
+#: res://timelines/04_flower_shop.dtl:27
+msgid "Text/lj_04_flower_shop_020/text"
+msgstr "“我才不稀罕。”"
+
+#: res://timelines/04_flower_shop.dtl:31
+msgid "Text/lj_04_flower_shop_026/text"
+msgstr "花店正在关门，老板低着头，把卷帘门往下拉。"
+
+#: res://timelines/04_flower_shop.dtl:33
+msgid "Text/lj_04_flower_shop_027/text"
+msgstr "我没有走近，远远看了一眼就转身走了。"
+
+#: res://timelines/04_flower_shop.dtl:38
+msgid "Text/lj_04_flower_shop_033/text"
+msgstr "花店关着门，卷帘门拉得死死的。"
+
+#: res://timelines/05_shiling.dtl:1
+msgid "Text/lj_05_shiling_000/text"
+msgstr "[color=#696969][i]※当前位置  狮岭※[/i][/color]"
+
+#: res://timelines/05_shiling.dtl:5
+msgid "Text/lj_05_shiling_003/text"
+msgstr "狮岭山脚下立着块旧碑，说王历新曾在这里凿开洞窟，里头卧着一头石狮子。"
+
+#: res://timelines/05_shiling.dtl:9
+msgid "Text/lj_05_shiling_006/text"
+msgstr "我沿着山路往里走，刚转过一个弯，就被几个凶神恶煞的人围住了。"
+
+#: res://timelines/05_shiling.dtl:11
+msgid "Text/lj_05_shiling_007/text"
+msgstr "“此路是我开！留下买路财！”"
+
+#: res://timelines/05_shiling.dtl:14
+msgid "Text/lj_05_shiling_009/text"
+msgstr "这些人脸上糊着油彩，腰上别着塑料刀，分明是演员假扮的土匪。"
+
+#: res://timelines/05_shiling.dtl:16
+msgid "Text/lj_05_shiling_010/text"
+msgstr "崖壁上长着一朵鸢尾花，我伸手摘了下来。"
+
+#: res://timelines/05_shiling.dtl:21
+msgid "Text/lj_05_shiling_013/text"
+msgstr "花瓣是假的，塑料气味刺鼻。"
+
+#: res://timelines/05_shiling.dtl:24
+msgid "Text/lj_05_shiling_015/text"
+msgstr "我把假花丢进草丛。"
+
+#: res://timelines/05_shiling.dtl:31
+msgid "Text/lj_05_shiling_020/text"
+msgstr "前面空地上蹲着一头铁狮子，嘴里吐出一串火。"
+
+#: res://timelines/05_shiling.dtl:35
+msgid "Text/lj_05_shiling_023/text"
+msgstr "越往里走越不对劲，山在烧，人影泛着红。"
+
+#: res://timelines/05_shiling.dtl:38
+msgid "Text/lj_05_shiling_025/text"
+msgstr "白玉狮子庙前摆着供台，台上插着一朵牡丹。"
+
+#: res://timelines/05_shiling.dtl:41
+msgid "Text/lj_05_shiling_027/text"
+msgstr "我抓住牡丹拔了出来，手一抖，花茎上全是泥。"
+
+#: res://timelines/05_shiling.dtl:48
+msgid "Text/lj_05_shiling_032/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:50
+msgid "Text/lj_05_shiling_033/text"
+msgstr "我原路折回，花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:55
+msgid "Text/lj_05_shiling_038/text"
+msgstr "我没碰那朵牡丹，转身原路返回。"
+
+#: res://timelines/05_shiling.dtl:57
+msgid "Text/lj_05_shiling_039/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:59
+msgid "Text/lj_05_shiling_040/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:64
+msgid "Text/lj_05_shiling_045/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:66
+msgid "Text/lj_05_shiling_046/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:71
+msgid "Text/lj_05_shiling_052/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:73
+msgid "Text/lj_05_shiling_053/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:78
+msgid "Text/lj_05_shiling_059/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:80
+msgid "Text/lj_05_shiling_060/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:87
+msgid "Text/lj_05_shiling_068/text"
+msgstr "前面空地上蹲着一头铁狮子，嘴里吐出一串火。"
+
+#: res://timelines/05_shiling.dtl:91
+msgid "Text/lj_05_shiling_071/text"
+msgstr "越往里走越不对劲，山在烧，人影泛着红。"
+
+#: res://timelines/05_shiling.dtl:94
+msgid "Text/lj_05_shiling_073/text"
+msgstr "白玉狮子庙前摆着供台，台上插着一朵牡丹。"
+
+#: res://timelines/05_shiling.dtl:97
+msgid "Text/lj_05_shiling_075/text"
+msgstr "我抓住牡丹拔了出来，手一抖，花茎上全是泥。"
+
+#: res://timelines/05_shiling.dtl:104
+msgid "Text/lj_05_shiling_080/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:106
+msgid "Text/lj_05_shiling_081/text"
+msgstr "我原路折回，花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:111
+msgid "Text/lj_05_shiling_086/text"
+msgstr "我没碰那朵牡丹，转身原路返回。"
+
+#: res://timelines/05_shiling.dtl:113
+msgid "Text/lj_05_shiling_087/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:115
+msgid "Text/lj_05_shiling_088/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:120
+msgid "Text/lj_05_shiling_093/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:122
+msgid "Text/lj_05_shiling_094/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:127
+msgid "Text/lj_05_shiling_100/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:129
+msgid "Text/lj_05_shiling_101/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:134
+msgid "Text/lj_05_shiling_108/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:136
+msgid "Text/lj_05_shiling_109/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:142
+msgid "Text/lj_05_shiling_117/text"
+msgstr "前面空地上蹲着一头铁狮子，嘴里吐出一串火。"
+
+#: res://timelines/05_shiling.dtl:146
+msgid "Text/lj_05_shiling_120/text"
+msgstr "越往里走越不对劲，山在烧，人影泛着红。"
+
+#: res://timelines/05_shiling.dtl:149
+msgid "Text/lj_05_shiling_122/text"
+msgstr "白玉狮子庙前摆着供台，台上插着一朵牡丹。"
+
+#: res://timelines/05_shiling.dtl:152
+msgid "Text/lj_05_shiling_124/text"
+msgstr "我抓住牡丹拔了出来，手一抖，花茎上全是泥。"
+
+#: res://timelines/05_shiling.dtl:159
+msgid "Text/lj_05_shiling_129/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:161
+msgid "Text/lj_05_shiling_130/text"
+msgstr "我原路折回，花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:166
+msgid "Text/lj_05_shiling_135/text"
+msgstr "我没碰那朵牡丹，转身原路返回。"
+
+#: res://timelines/05_shiling.dtl:168
+msgid "Text/lj_05_shiling_136/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:170
+msgid "Text/lj_05_shiling_137/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:175
+msgid "Text/lj_05_shiling_142/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:177
+msgid "Text/lj_05_shiling_143/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:182
+msgid "Text/lj_05_shiling_150/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:184
+msgid "Text/lj_05_shiling_151/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:190
+msgid "Text/lj_05_shiling_159/text"
+msgstr "前面空地上蹲着一头铁狮子，嘴里吐出一串火。"
+
+#: res://timelines/05_shiling.dtl:194
+msgid "Text/lj_05_shiling_162/text"
+msgstr "越往里走越不对劲，山在烧，人影泛着红。"
+
+#: res://timelines/05_shiling.dtl:197
+msgid "Text/lj_05_shiling_164/text"
+msgstr "白玉狮子庙前摆着供台，台上插着一朵牡丹。"
+
+#: res://timelines/05_shiling.dtl:200
+msgid "Text/lj_05_shiling_166/text"
+msgstr "我抓住牡丹拔了出来，手一抖，花茎上全是泥。"
+
+#: res://timelines/05_shiling.dtl:207
+msgid "Text/lj_05_shiling_171/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:209
+msgid "Text/lj_05_shiling_172/text"
+msgstr "我原路折回，花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:214
+msgid "Text/lj_05_shiling_177/text"
+msgstr "我没碰那朵牡丹，转身原路返回。"
+
+#: res://timelines/05_shiling.dtl:216
+msgid "Text/lj_05_shiling_178/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:218
+msgid "Text/lj_05_shiling_179/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:223
+msgid "Text/lj_05_shiling_184/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:225
+msgid "Text/lj_05_shiling_185/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:230
+msgid "Text/lj_05_shiling_192/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:232
+msgid "Text/lj_05_shiling_193/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:238
+msgid "Text/lj_05_shiling_201/text"
+msgstr "前面空地上蹲着一头铁狮子，嘴里吐出一串火。"
+
+#: res://timelines/05_shiling.dtl:242
+msgid "Text/lj_05_shiling_204/text"
+msgstr "越往里走越不对劲，山在烧，人影泛着红。"
+
+#: res://timelines/05_shiling.dtl:245
+msgid "Text/lj_05_shiling_206/text"
+msgstr "白玉狮子庙前摆着供台，台上插着一朵牡丹。"
+
+#: res://timelines/05_shiling.dtl:248
+msgid "Text/lj_05_shiling_208/text"
+msgstr "我抓住牡丹拔了出来，手一抖，花茎上全是泥。"
+
+#: res://timelines/05_shiling.dtl:255
+msgid "Text/lj_05_shiling_213/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:257
+msgid "Text/lj_05_shiling_214/text"
+msgstr "我原路折回，花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:262
+msgid "Text/lj_05_shiling_219/text"
+msgstr "我没碰那朵牡丹，转身原路返回。"
+
+#: res://timelines/05_shiling.dtl:264
+msgid "Text/lj_05_shiling_220/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:266
+msgid "Text/lj_05_shiling_221/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:271
+msgid "Text/lj_05_shiling_226/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:273
+msgid "Text/lj_05_shiling_227/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:278
+msgid "Text/lj_05_shiling_233/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:280
+msgid "Text/lj_05_shiling_234/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:285
+msgid "Text/lj_05_shiling_241/text"
+msgstr "现在手里一共有 {flower} 朵花。"
+
+#: res://timelines/05_shiling.dtl:287
+msgid "Text/lj_05_shiling_242/text"
+msgstr "我花了两块钱坐车回路口。"
+
+#: res://timelines/05_shiling.dtl:292
+msgid "Text/lj_05_shiling_249/text"
+msgstr "狮岭已经关门了，铁门从里面锁得严严实实。"
+
+#: res://timelines/06_luyuan.dtl:1
+msgid "Text/lj_06_luyuan_000/text"
+msgstr "[color=#696969][i]※当前位置  露园※[/i][/color]"
+
+#: res://timelines/06_luyuan.dtl:4
+msgid "Text/lj_06_luyuan_002/text"
+msgstr "露园有八百年的历史，说是海临王修的。门票四块钱，我摸了摸口袋，还是进去了。"
+
+#: res://timelines/06_luyuan.dtl:7
+msgid "Text/lj_06_luyuan_004/text"
+msgstr "左边的花圃里开着一朵白玉菊花，我摘了下来。"
+
+#: res://timelines/06_luyuan.dtl:11
+msgid "Text/lj_06_luyuan_006/text"
+msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。"
+
+#: res://timelines/06_luyuan.dtl:14
+msgid "Text/lj_06_luyuan_008/text"
+msgstr "迷宫中央立着一个人影。"
+
+#: res://timelines/06_luyuan.dtl:16
+msgid "Text/lj_06_luyuan_009/text"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+
+#: res://timelines/06_luyuan.dtl:19
+msgid "Text/lj_06_luyuan_011/text"
+msgstr "我不敢再看，转身就跑，出了露园。"
+
+#: res://timelines/06_luyuan.dtl:24
+msgid "Text/lj_06_luyuan_016/text"
+msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+
+#: res://timelines/06_luyuan.dtl:29
+msgid "Text/lj_06_luyuan_019/text"
+msgstr "我飞快地跑出露园。"
+
+#: res://timelines/06_luyuan.dtl:34
+msgid "Text/lj_06_luyuan_026/text"
+msgstr "中间的矮墙上爬着一株绿色兰花，我摘了下来。"
+
+#: res://timelines/06_luyuan.dtl:38
+msgid "Text/lj_06_luyuan_028/text"
+msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。"
+
+#: res://timelines/06_luyuan.dtl:41
+msgid "Text/lj_06_luyuan_030/text"
+msgstr "迷宫中央立着一个人影。"
+
+#: res://timelines/06_luyuan.dtl:43
+msgid "Text/lj_06_luyuan_031/text"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+
+#: res://timelines/06_luyuan.dtl:46
+msgid "Text/lj_06_luyuan_033/text"
+msgstr "我不敢再看，转身就跑，出了露园。"
+
+#: res://timelines/06_luyuan.dtl:51
+msgid "Text/lj_06_luyuan_038/text"
+msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+
+#: res://timelines/06_luyuan.dtl:56
+msgid "Text/lj_06_luyuan_041/text"
+msgstr "我飞快地跑出露园。"
+
+#: res://timelines/06_luyuan.dtl:61
+msgid "Text/lj_06_luyuan_048/text"
+msgstr "右边石头缝里长着一棵仙人球花，我小心地摘了下来。"
+
+#: res://timelines/06_luyuan.dtl:65
+msgid "Text/lj_06_luyuan_050/text"
+msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。"
+
+#: res://timelines/06_luyuan.dtl:68
+msgid "Text/lj_06_luyuan_052/text"
+msgstr "迷宫中央立着一个人影。"
+
+#: res://timelines/06_luyuan.dtl:70
+msgid "Text/lj_06_luyuan_053/text"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+
+#: res://timelines/06_luyuan.dtl:73
+msgid "Text/lj_06_luyuan_055/text"
+msgstr "我不敢再看，转身就跑，出了露园。"
+
+#: res://timelines/06_luyuan.dtl:78
+msgid "Text/lj_06_luyuan_060/text"
+msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+
+#: res://timelines/06_luyuan.dtl:83
+msgid "Text/lj_06_luyuan_063/text"
+msgstr "我飞快地跑出露园。"
+
+#: res://timelines/07_maze_entry.dtl:1
+msgid "Text/lj_07_maze_entry_000/text"
+msgstr "[color=#696969][i]※当前位置  迷宫※[/i][/color]"
+
+#: res://timelines/07_maze_entry.dtl:3
+msgid "Text/lj_07_maze_entry_001/text"
+msgstr "我一脚跨进大门，不知怎的掀起一阵邪风，吓我一大跳，紧接着风卷起沙尘迷了我的眼，哐的一声巨响，背后的门重重关上了。"
+
+#: res://timelines/07_maze_entry.dtl:5
+msgid "Text/lj_07_maze_entry_002/text"
+msgstr "我一个踉跄往前蹿了两步，恍惚间被几双手扶住，还没抬头，只听耳边道：“王爷当心！别摔着了！”"
+
+#: res://timelines/07_maze_entry.dtl:7
+msgid "Text/lj_07_maze_entry_003/text"
+msgstr "叫谁王爷？定睛一看，面前三个陌生面孔，他们眼神焦急地看着我，一人给我整理衣摆，一人轻轻抚平我耳旁的鬓发，一人扶着我的手臂迟迟不肯放下。"
+
+#: res://timelines/07_maze_entry.dtl:9
+msgid "Text/lj_07_maze_entry_004/text"
+msgstr "我说：“这是哪？你们又是谁？”他们三个顿了一顿，眼神交流了一番，年长的那个回答道：“王爷，这是露园呀，今日有戏，您还不过去？”他抬手往里面指了指，那边确实灯火通明，隐约传来推杯换盏声。"
+
+#: res://timelines/07_maze_entry.dtl:11
+msgid "Text/lj_07_maze_entry_005/text"
+msgstr "我心中泛起一阵波澜，痒痒的。"
+
+#: res://timelines/07_maze_entry.dtl:13
+msgid "Text/lj_07_maze_entry_006/text"
+msgstr "—————— 这是我向往的地方。"
+
+#: res://timelines/07_maze_entry.dtl:15
+msgid "Text/lj_07_maze_entry_007/text"
+msgstr "还想问话，他们仨脚底抹油，一边作揖一边快步走开了。"
+
+#: res://timelines/07_maze_entry.dtl:17
+msgid "Text/lj_07_maze_entry_008/text"
+msgstr "生活就是这样，上一秒我还是一个普通市民，此刻我已经是万人敬仰的{player_name}！说实话这个身份更符合我的气质。"
+
+#: res://timelines/07_maze_entry.dtl:19
+msgid "Text/lj_07_maze_entry_009/text"
+msgstr "现在我是这里的王，我要很多的花，还要很多的钱！谁敢不给！？我挺起胸膛大摇大摆地往园子里走去。"
+
+#: res://timelines/07_maze_entry.dtl:21
+msgid "Text/lj_07_maze_entry_010/text"
+msgstr "但我搞不清方向，我应该："
+
+#: res://timelines/07_maze_exit.dtl:1
+msgid "Text/lj_07_maze_exit_000/text"
+msgstr "[color=#696969][i]※当前位置  迷宫※[/i][/color]"
+
+#: res://timelines/07_maze_exit.dtl:3
+msgid "Text/lj_07_maze_exit_001/text"
+msgstr "风从巷口灌进来，皮鞋裂口处的白胶痕迹还留在脚尖。主角站在路边，怀里几朵花压得衣襟发沉，四周的紫灰色日光像是隔着一层旧玻璃。"
+
+#: res://timelines/07_maze_exit.dtl:4
+msgid "Text/lj_07_maze_exit_002/text"
+msgstr "他低头看了看自己，承认这趟路早已把“王爷”的念头碾得支离破碎。可前方还有一个人等着他，无论如何，他得走过去。"
+
+#: res://timelines/07_maze_exit.dtl:7
+msgid "Text/lj_07_maze_exit_004/text"
+msgstr "主角攥紧衣襟，沿着灰蒙蒙的路朝住院部的方向走去。"
+
+#: res://timelines/07_maze_left.dtl:1
+msgid "Text/lj_07_maze_left_000/text"
+msgstr "[color=#696969][i]※当前位置  迷宫※[/i][/color]"
+
+#: res://timelines/07_maze_left.dtl:3
+msgid "Text/lj_07_maze_left_001/text"
+msgstr "沿路穿过门洞到花园，有戏却不见戏台；想搞花，植物茂盛却没有花。紫袍男人喊“哟~王爷来了”，钳住左臂拖到人群中心；主角想抽手被更用力抓住，他小声说：“王爷，前个月那个女的的男人，已经杀了。嘿嘿，正在给您抓来的路上。”"
+
+#: res://timelines/07_maze_left.dtl:6
+msgid "Text/lj_07_maze_left_003/text"
+msgstr "他愣了一秒，咧嘴笑，露出整齐的牙齿，眼里闪着金光，用力拍背说：“王爷！不是我杀人，是你要杀的人啊！”"
+
+#: res://timelines/07_maze_left.dtl:7
+msgid "Text/lj_07_maze_left_004/text"
+msgstr "主角感觉不妙想逃，被钳住的手发麻，血液无法流通，左手应该就要废了。"
+
+#: res://timelines/07_maze_left.dtl:8
+msgid "Text/lj_07_maze_left_005/text"
+msgstr "他见主角呆滞，说：“王爷你是不是哪里不舒服？今日怎么没了兴致？”说着将主角抓到假山迷宫入口，“王爷你进去吧，都准备好了。”"
+
+#: res://timelines/07_maze_left.dtl:12
+msgid "Text/lj_07_maze_left_009/text"
+msgstr "他狐疑着嘟囔：“啊？男的你也要吗？”说“得嘞王爷，我一会儿就叫人给他挖出来”，一边抓着主角到假山迷宫入口。"
+
+#: res://timelines/07_maze_left.dtl:13
+msgid "Text/lj_07_maze_left_010/text"
+msgstr "“王爷你进去吧，都准备好了。”"
+
+#: res://timelines/07_maze_left.dtl:14
+msgid "Text/lj_07_maze_left_011/text"
+msgstr "主角问准备什么，说这假山迷宫两分钟就能逛完；“您进去就知道啦！哎哟！别耽误了时辰。”说罢用力推主角。"
+
+#: res://timelines/07_maze_middle.dtl:1
+msgid "Text/lj_07_maze_middle_000/text"
+msgstr "[color=#696969][i]※当前位置  迷宫※[/i][/color]"
+
+#: res://timelines/07_maze_middle.dtl:3
+msgid "Text/lj_07_maze_middle_001/text"
+msgstr "假山回廊越走越窄，风声闷在石壁间。鼻尖突然飘来一股芳香，像绿色的兰花，浓烈得让人怀疑它根本不是这世上该有的味道。主角循香抬头，见一朵绿兰开在石缝里，从未见过这种颜色，忍不住摘下来揣入袖兜。"
+
+#: res://timelines/07_maze_middle.dtl:6
+msgid "Text/lj_07_maze_middle_003/text"
+msgstr "假山深处还有一丛仙人球，尖刺密密麻麻。主角越过层层尖刺去够那朵花，掰下来的瞬间手掌被划出一道细长口子，血珠渗出来。"
+
+#: res://timelines/07_maze_middle.dtl:7
+msgid "Text/lj_07_maze_middle_004/text"
+msgstr "他看着伤口，忽然觉得自己也许没有想象中那么厉害。他希望自己不是特例，至少这一刻不是。"
+
+#: res://timelines/07_maze_middle.dtl:11
+msgid "Text/lj_07_maze_middle_008/text"
+msgstr "绿兰收进袖兜，花香还萦绕在指间。主角绕过仙人球丛，走向假山中心。"
+
+#: res://timelines/07_maze_middle.dtl:15
+msgid "Text/lj_07_maze_middle_012/text"
+msgstr "花到手了，掌心却一直发麻。主角攥紧仙人球花，边走边想刚才那一划，越想越觉得心里空了一块。"
+
+#: res://timelines/07_maze_middle.dtl:19
+msgid "Text/lj_07_maze_middle_015/text"
+msgstr "假山中心站着一个女人，衣着华服，头戴金钗，五官算得上漂亮，但整个人静得不像活物。她头上顶着一朵蓝色圆滚滚的绣球花，眼睛浑浊得几乎看不到瞳孔，眼皮被细线吊起，末端缝在眉毛上；嘴微微翻动，喉咙里挤出模糊的歌声，歌词听不清，像唱给空气听的。她双手无力地垂着，手背画满看不懂的符咒，指尖微微颤抖。"
+
+#: res://timelines/07_maze_middle.dtl:20
+msgid "Text/lj_07_maze_middle_016/text"
+msgstr "她是什么？又是怎么立住的？"
+
+#: res://timelines/07_maze_middle.dtl:26
+msgid "Text/lj_07_maze_middle_021/text"
+msgstr "主角走近一看，一根棍子从她背后衣服中间穿过，腰带紧紧绑在棍子上，棍子被敲进地里，把她整个人钉在假山中央。他忽然明白那声“准备好了”意味着什么：这是灭绝人性的地狱。"
+
+#: res://timelines/07_maze_middle.dtl:27
+msgid "Text/lj_07_maze_middle_022/text"
+msgstr "天地像在旋转，眼前轰然歪倒。主角踉跄着后退，喉头哽住：“畜生，真是畜生……我当不了王爷，我当不了了！”"
+
+#: res://timelines/07_maze_middle.dtl:36
+msgid "Text/lj_07_maze_middle_030/text"
+msgstr "主角顾不上别的，一路狂奔，撞翻挡路的人冲出大门。皮鞋脚尖的位置裂开一道口子，皮翘起来，残留着白色胶痕。"
+
+#: res://timelines/07_maze_middle.dtl:37
+msgid "Text/lj_07_maze_middle_031/text"
+msgstr "他逃到路口才停下来，低头数了数怀里的花，又拍了拍身上的尘土。抬头看去，太阳是紫灰色的，像被什么东西蒙住了。"
+
+#: res://timelines/07_maze_middle.dtl:41
+msgid "Text/lj_07_maze_middle_034/text"
+msgstr "主角挣扎着爬起，又倒下，最后用手肘顶住她的肩膀，才勉强把那朵蓝色绣球花摘下来。她的身体僵硬，和正常人不一样。"
+
+#: res://timelines/07_maze_middle.dtl:42
+msgid "Text/lj_07_maze_middle_035/text"
+msgstr "攥着花，主角忽然承认：“我没有当王的勇气，残忍和暴力都不是我的优点。我，只是一个普通人。”"
+
+#: res://timelines/07_maze_right.dtl:1
+msgid "Text/lj_07_maze_right_000/text"
+msgstr "[color=#696969][i]※当前位置  迷宫※[/i][/color]"
+
+#: res://timelines/07_maze_right.dtl:3
+msgid "Text/lj_07_maze_right_001/text"
+msgstr "沿着蜿蜒的小路，我慢慢地走着，忽然听见墙那边有人在说话，我蹑手蹑脚地来到漏窗旁，透过茂密的竹叶，看见两个人，一个普通装扮，另一个穿着黑色大氅，蓄着灰白色的长胡子，头上梳着发髻，氅上绣着复杂的花纹，像是长着人头的蝎子。偷听恐怕会费些心神（精力-15）。"
+
+#: res://timelines/08_wife_room.dtl:1
+msgid "Text/lj_08_wife_room_000/text"
+msgstr "[color=#696969][i]※当前位置 妻子的病房※[/i][/color]"
+
+#: res://timelines/08_wife_room.dtl:4
+msgid "Text/lj_08_wife_room_002/text"
+msgstr "今天经历了太多，我已经准备好将一切讲给妻子听，听完这些故事，她就应该知道，我为了她付出了多少。缓步来到她床边，帘子正拉着，护士和她在帘子后面，聊着天。"
+
+#: res://timelines/08_wife_room.dtl:5
+msgid "Text/lj_08_wife_room_003/text"
+msgstr "“你丈夫今天还来吗？”"
+
+#: res://timelines/08_wife_room.dtl:6
+msgid "Text/lj_08_wife_room_004/text"
+msgstr "“不知道，我不管他来不来。”"
+
+#: res://timelines/08_wife_room.dtl:7
+msgid "Text/lj_08_wife_room_005/text"
+msgstr "“上回他来的时候什么都没带，不知道谁让他进来的。”"
+
+#: res://timelines/08_wife_room.dtl:8
+msgid "Text/lj_08_wife_room_006/text"
+msgstr "“我宁愿他别来，每次来了好像有多了不起，一个简单的探病对他而言难如登天。”"
+
+#: res://timelines/08_wife_room.dtl:9
+msgid "Text/lj_08_wife_room_007/text"
+msgstr "“他是你丈夫，法律规定他必须来。”"
+
+#: res://timelines/08_wife_room.dtl:12
+msgid "Text/lj_08_wife_room_009/text"
+msgstr "拉开帘子，护士与我四目相对，这次我并不是两手空空，我带了{flower}朵花。“姐，你丈夫来了。”她知会我妻子一声便离开了。"
+
+#: res://timelines/08_wife_room.dtl:13
+msgid "Text/lj_08_wife_room_010/text"
+msgstr "妻子没有说话，她坐在病床上，脸朝着窗户，不看我。"
+
+#: res://timelines/08_wife_room.dtl:14
+msgid "Text/lj_08_wife_room_011/text"
+msgstr "我把花放在她床头的柜子上，然后在一旁坐下，我们俩都在等对方先说话，我急切想要开口，告诉她我在露园的遭遇，我的鞋烂了，还碰到我很讨厌的那个邻居，还有那个该死的卖蛤蟆卵的蠢女人，如果不是她我早就来了，我忍不住了。"
+
+#: res://timelines/08_wife_room.dtl:15
+msgid "Text/lj_08_wife_room_012/text"
+msgstr "我说：“就为了今天能来，我的鞋子都破了。” 她快速转头说道：“鞋烂了你就别来！” 为什么她突然就这么生气？我不明白，这双鞋穿了六、七年了，她从来不说给我换一双，现在鞋烂了，她也不以为然。"
+
+#: res://timelines/08_wife_room.dtl:16
+msgid "Text/lj_08_wife_room_013/text"
+msgstr "“我在露园见到了活尸！”我抛出最重磅的遭遇，她一定会想知道发生了什么。她要是问我，我就毫无保留捶胸顿足地全盘托出。"
+
+#: res://timelines/08_wife_room.dtl:17
+msgid "Text/lj_08_wife_room_014/text"
+msgstr "“你自己说你讲的是几点到？现在是几点？我在这等你来，饭都没吃！你要迟到起码先打个电话说一声，我才好安排别的事情。”妻子完全无视我讲的东西，我感到愤怒同时也感到害怕，脑子里一片空白，我不知道我究竟说什么才能引起她的注意，才能开始说我心里的话。"
+
+#: res://timelines/08_wife_room.dtl:18
+msgid "Text/lj_08_wife_room_015/text"
+msgstr "“家里的蚯蚓你喂了吗？”她问我，我没能立刻回答，因为家里的蚯蚓在她住院的第二天就跑了，我不敢告诉她。“蚯蚓呢！？”她愤怒地追问道。"
+
+#: res://timelines/08_wife_room.dtl:21
+msgid "Text/lj_08_wife_room_018/text"
+msgstr "我掏出兜里的蚯蚓，虽然这不是家里的，但蚯蚓都一个样，她分辨不出来。见我能拿得出来蚯蚓，妻子的脸色稍微好转一些。"
+
+#: res://timelines/08_wife_room.dtl:24
+msgid "Text/lj_08_wife_room_020/text"
+msgstr "“你也太不要脸了吧，真花里面混假花， 没人像你这样无耻。”"
+
+#: res://timelines/08_wife_room.dtl:25
+msgid "Text/lj_08_wife_room_021/text"
+msgstr "我着急地说：“那个花店的老板不卖花了，我在镇上找遍了，才找到这些花的。”"
+
+#: res://timelines/08_wife_room.dtl:26
+msgid "Text/lj_08_wife_room_022/text"
+msgstr "她冷哼一声说：“那隔壁床的怎么就能买到。”"
+
+#: res://timelines/08_wife_room.dtl:27
+msgid "Text/lj_08_wife_room_023/text"
+msgstr "我傻眼了，我怎么知道隔壁床的怎么会买得到？！那个卖蛤蟆卵的女人果然是针对我，一定是等着我要去买花了，就马上换成别的！"
+
+#: res://timelines/08_wife_room.dtl:29
+msgid "Text/lj_08_wife_room_026/text"
+msgstr "“这些花都是你在外面捡的吧？不愿意花钱买吗？”"
+
+#: res://timelines/08_wife_room.dtl:30
+msgid "Text/lj_08_wife_room_027/text"
+msgstr "我着急地说：“那个花店的老板不卖花了，我在镇上找遍了，才找到这些花的。”"
+
+#: res://timelines/08_wife_room.dtl:31
+msgid "Text/lj_08_wife_room_028/text"
+msgstr "她冷哼一声，显然没有相信我。"
+
+#: res://timelines/08_wife_room.dtl:33
+msgid "Text/lj_08_wife_room_032/text"
+msgstr "“我真的对你太失望！家里本来就没钱，你还一点事情都不做！你走吧！不想见到你！”"
+
+#: res://timelines/08_wife_room.dtl:35
+msgid "Text/lj_08_wife_room_034/text"
+msgstr "“你什么时候能出院？”这是我问她的最后一句话。"
+
+#: res://timelines/08_wife_room.dtl:36
+msgid "Text/lj_08_wife_room_035/text"
+msgstr "“你自己看看我的手指，它们都长在一起了，我的头发也都变成了面条，一碰就断。你问我什么时候能出院？我真的不想再说你，你究竟为这个家做了什么？”"
+
+#: res://timelines/08_wife_room.dtl:37
+msgid "Text/lj_08_wife_room_036/text"
+msgstr "...已经无话可说了，今天的旅途将会成为我永远的秘密，没人想知道，没人愿意听。我站起来往门外走，妻子还在骂我，早知如此我今天就不应该出门的，我应该假装忘记订闹钟，假装自己也病了。"
+
+#: res://timelines/08_wife_room.dtl:38
+msgid "Text/lj_08_wife_room_037/text"
+msgstr "一种常见的痛苦刺激着我的眼球，我的视线开始模糊，眼前的一切像被盖上一层带水纹的玻璃。我避开了拥挤的电梯，悄悄从楼梯下去，期间我不停地想，这里究竟是什么地方？我不是说这个医院是什么地方，而是我生活的这个地方究竟是什么？如何才能从这里逃脱？"
+
+#: res://timelines/08_wife_room.dtl:39
+msgid "Text/lj_08_wife_room_038/text"
+msgstr "我想得入迷，嘴里一直嘀咕“这是什么地方”，一只手扯住我的头发，那个歪嘴护士把我拉到跟前，确定没人偷听，她一只手从侧面挡住嘴，贴着我的耳朵告诉我，这里是：死无葬身之地"
+
+#: res://timelines/09_ending.dtl:1
+msgid "Text/lj_09_ending_000/text"
+msgstr "[color=#696969][i]※当前位置 结局※[/i][/color]"
+
+#: res://timelines/09_ending.dtl:3
+msgid "Text/lj_09_ending_001/text"
+msgstr "死无葬身之地。"
+
+#: res://timelines/09_ending.dtl:5
+msgid "Text/lj_09_ending_002/text"
+msgstr "这几个字落进耳朵里，像一片灰烬落在水面上。我站在原地没有动，歪嘴护士已经松开手，退进走廊的阴影里，好像她从没有出现过。"
+
+#: res://timelines/09_ending.dtl:7
+msgid "Text/lj_09_ending_003/text"
+msgstr "楼梯间的灯灭了一盏，另一盏在头顶嗡嗡作响。我扶着墙一级一级往下走，鞋底擦过水泥台阶的声音在空荡荡的楼里反复回荡。这里没有出口，也没有人来接我回家。妻子还躺在楼上，她的手指长在一起，头发一碰就断；而我在楼下，终于承认自己也走不出这座医院。"
+
+#: res://timelines/09_ending.dtl:9
+msgid "Text/lj_09_ending_004/text"
+msgstr "今天清晨出门时，我还在数口袋里的零钱，还在惦记那几朵被压皱的花。现在花不见了，鞋也破了，我甚至说不清自己究竟走了多远，见了多少不该见的人。我只知道，从这里开始的每一天，都不会再有真正的天亮。"
+
+#: res://timelines/09_ending.dtl:11
+msgid "Text/lj_09_ending_005/text"
+msgstr "我推开住院部的大门，外面的路还是那条灰蒙蒙的路。天没有黑，也没有亮。我迈出第一步，第二步，第三步，一步一步走下去，直到那扇门在身后合拢，发出沉闷的响声。"
+
+#: res://timelines/09_ending.dtl:13
+msgid "Text/lj_09_ending_006/text"
+msgstr "这里就是死无葬身之地。而我，已经无处可去，也无处可逃。"
+
+#: res://timelines/10_morgue.dtl:1
+msgid "Text/lj_10_morgue_000/text"
+msgstr "[color=#696969][i]※当前位置  医院-停尸房※[/i][/color]"
+
+#: res://timelines/10_morgue.dtl:5
+msgid "Text/lj_10_morgue_003/text"
+msgstr "都说在停尸房能捡到好东西，我穿过一条小道，打算也去碰碰运气，要是真捡到什么，妻子应该会很开心。"
+
+#: res://timelines/10_morgue.dtl:7
+msgid "Text/lj_10_morgue_004/text"
+msgstr "我仔细查看了一圈，地上还剩些没烧的尸体，摆得不算太整齐，有几个死者的家属在那鬼哭狼嚎的。哎，人命由天定，该死的时候就得死，阎王哪管你哭不哭，人出生的时候就有定数，本子上记得清清楚楚，哭有什么用！"
+
+#: res://timelines/10_morgue.dtl:11
+msgid "Text/lj_10_morgue_007/text"
+msgstr "伴随着他们的哭声，我在停尸房的垃圾桶里找到几个花篮，花都烧没了，空的花篮沾着骨灰，好在其中有一个还算完整，我把它拎起来抖了抖，这是一个淡黄色的花篮，用蚯蚓编的，拿在手里很有分量，大小也合适。"
+
+#: res://timelines/10_morgue.dtl:13
+msgid "Text/lj_10_morgue_008/text"
+msgstr "我可以用它来装花。"
+
+#: res://timelines/10_morgue.dtl:21
+msgid "Text/lj_10_morgue_019/text"
+msgstr "又到了停尸房，刚刚在那大哭的人正在离开，他们互相搀扶着，拿红布擦着眼泪，嘴里念叨着什么，只有他们自己听得清。天色还是很不好，感觉是要下雪的前兆，云变得很白，天越来越灰。"
+
+#: res://timelines/10_morgue.dtl:26
+msgid "Text/lj_10_morgue_025/text"
+msgstr "这里一个人都没有了，我摘下眼镜对着镜片哈了口气，把它擦干净了些。"
+
+#: res://timelines/timeline1_0.dtl:1
+msgid "Text/lj_timeline1_0_000/text"
+msgstr "hi"
+
+msgid "ending.applied"
+msgstr "已写入：energy={energy}, calm={calm}, money={money}"
+
+msgid "ending.ending_bankrupt"
+msgstr "身无分文"
+
+msgid "ending.ending_crazy"
+msgstr "神智崩溃"
+
+msgid "ending.ending_exhausted"
+msgstr "精疲力尽"
+
+msgid "ending.triggered"
+msgstr "触发结局：{ending}"
+
+msgid "history.choice"
+msgstr "[选项] {text}"
+
+msgid "history.speaker"
+msgstr "{name}：{text}"
+
+msgid "hud.flower"
+msgstr "花 {value}"
+
+msgid "hud.money"
+msgstr "金币 {value}"
+
+msgid "locale.name"
+msgstr "简体中文"
+
+msgid "lore.category.characters"
+msgstr "角色"
+
+msgid "lore.category.events"
+msgstr "事件"
+
+msgid "lore.category.items"
+msgstr "物品"
+
+msgid "lore.category.locations"
+msgstr "地点"
+
+msgid "lore.category.plot-threads"
+msgstr "伏笔"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.body"
+msgstr "# 花店老板\n\n- 状态: alive\n- 首次登场: 花店（`04_flower_shop`）\n- 当前所在地: [花店](locations/flower-shop.md)\n- 年龄/生日: unknown\n- 身份/职业: 花店老板\n- 关系: [无名王](characters/protagonist.md) - 顾客\n- 物品: unknown\n- 已知信息:\n  - 在花店低头玩手机，玩家进入后才会互动。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 可提供蚯蚓；花篮（hualan）与假花（jiahua）相关选项由此处展开。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 04_flower_shop，可多次到访（visit_huadian 计数）"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.summary"
+msgstr "在花店低头玩手机，玩家进入后才会互动。"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.title"
+msgstr "花店老板"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.body"
+msgstr "# 护士\n\n- 状态: alive\n- 首次登场: 住院部闸口（`02_ward`）\n- 当前所在地: [住院部/停尸房](locations/ward.md)\n- 年龄/生日: unknown\n- 身份/职业: 住院部护士\n- 关系: [无名王](characters/protagonist.md) - 拦住去路\n- 物品: unknown\n- 已知信息:\n  - 只有 flower >= 5 时才放行进入病房。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 02_ward"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.summary"
+msgstr "只有 flower >= 5 时才放行进入病房。"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.title"
+msgstr "护士"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.body"
+msgstr "# 无名王\n\n- 状态: alive\n- 首次登场: 开场公交站（`00_start` / `scenes/scene_1.tscn`）\n- 当前所在地: [医院](locations/hospital.md)\n- 年龄/生日: unknown\n- 身份/职业: 自称“王”的无名之人\n- 关系: [妻子](characters/wife.md) - 妻子；[护士](characters/nurse.md) - 住院部闸口的阻拦者；[花店老板](characters/flower-shop-owner.md) - 花店接触者\n- 物品: [花](items/flower.md)、[钱](items/money.md)、[花篮](items/flower-basket.md)、[假花](items/fake-flower.md)、[蚯蚓](items/earthworm.md)\n- 已知信息:\n  - 在公交站下车后，周围乘客一直盯着他看。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 默认名字是“无名王”，可在露园改名。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 初始变量：energy=100、calm=100、money=20。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 00_start -> 01_hospital -> 02_ward -> 03_crossroads -> 04_flower_shop -> 05_shiling -> 06_luyuan -> 07_maze -> 08_wife_room -> 09_ending"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.summary"
+msgstr "在公交站下车后，周围乘客一直盯着他看。"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.title"
+msgstr "无名王"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.body"
+msgstr "# 妻子\n\n- 状态: alive\n- 首次登场: 病房（`08_wife_room`）\n- 当前所在地: [病房](locations/wife-room.md)\n- 年龄/生日: unknown\n- 身份/职业: 主角的妻子\n- 关系: [无名王](characters/protagonist.md) - 丈夫\n- 物品: unknown\n- 已知信息:\n  - 眼睛浑浊，眼皮被细线缝在眉骨上，嘴巴翕动但只能发出含糊的喉音。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 双手无力垂下，手背画着无法辨认的符咒。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 08_wife_room，之后进入结局分支"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.summary"
+msgstr "眼睛浑浊，眼皮被细线缝在眉骨上，嘴巴翕动但只能发出含糊的喉音。"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.title"
+msgstr "妻子"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.body"
+msgstr "# 露园改名\n\n- 时间: 06_luyuan\n- 地点: [露园](locations/luyuan.md)\n- 参与角色: [无名王](characters/protagonist.md)\n- 结果: 玩家可输入新名字，游戏内称号随之改变。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.summary"
+msgstr "玩家可输入新名字，游戏内称号随之改变。"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.title"
+msgstr "露园改名"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.body"
+msgstr "# 公交站下车\n\n- 时间: 00_start\n- 地点: [医院](locations/hospital.md)\n- 参与角色: [无名王](characters/protagonist.md)\n- 结果: 主角下车，周围乘客盯着他看。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.summary"
+msgstr "主角下车，周围乘客盯着他看。"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.title"
+msgstr "公交站下车"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.body"
+msgstr "# 住院部闸口受阻\n\n- 时间: 02_ward\n- 地点: [住院部/停尸房](locations/ward.md)\n- 参与角色: [无名王](characters/protagonist.md)、[护士](characters/nurse.md)\n- 结果: 花数不足 5 时被拦下；花数足够后才能前往病房。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.summary"
+msgstr "花数不足 5 时被拦下；花数足够后才能前往病房。"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.title"
+msgstr "住院部闸口受阻"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.body"
+msgstr "# 病房见妻\n\n- 时间: 08_wife_room\n- 地点: [病房](locations/wife-room.md)\n- 参与角色: [无名王](characters/protagonist.md)、[妻子](characters/wife.md)\n- 结果: 主角与状态异常的妻子见面，之后进入结局分支。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.summary"
+msgstr "主角与状态异常的妻子见面，之后进入结局分支。"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.title"
+msgstr "病房见妻"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.body"
+msgstr "# 蚯蚓\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店（`04_flower_shop`）\n- 已知信息:\n  - 用变量 earthworm 记录，初始为 0。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.summary"
+msgstr "用变量 earthworm 记录，初始为 0。"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.title"
+msgstr "蚯蚓"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.body"
+msgstr "# 假花\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店相关选项（变量 jiahua）\n- 已知信息:\n  - 用布尔变量 jiahua 记录，初始为 false。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.summary"
+msgstr "用布尔变量 jiahua 记录，初始为 false。"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.title"
+msgstr "假花"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.body"
+msgstr "# 花篮\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店相关选项（变量 hualan）\n- 已知信息:\n  - 用布尔变量 hualan 记录，初始为 false。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.summary"
+msgstr "用布尔变量 hualan 记录，初始为 false。"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.title"
+msgstr "花篮"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.body"
+msgstr "# 花\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 收集路线（变量 flower 初始为 0）\n- 已知信息:\n  - 数量用变量 flower 记录，初始为 0。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 住院部闸口需要 flower >= 5 才放行。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.summary"
+msgstr "数量用变量 flower 记录，初始为 0。"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.title"
+msgstr "花"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.body"
+msgstr "# 钱\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 游戏开场（初始变量）\n- 已知信息:\n  - 用变量 money 记录，初始为 20。（来源：docs/Dialogic_Implementation_Guide.md）\n  - money < 0 时进入破产结局 ending_bankrupt。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.summary"
+msgstr "用变量 money 记录，初始为 20。"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.title"
+msgstr "钱"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.body"
+msgstr "# 路口\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `03_crossroads`\n- 已知信息:\n  - 从路口选择下一步路线，可通往花店、狮岭、露园等地。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 03_crossroads -> 04_flower_shop / 05_shiling / 06_luyuan"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.summary"
+msgstr "从路口选择下一步路线，可通往花店、狮岭、露园等地。"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.title"
+msgstr "路口"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.body"
+msgstr "# 花店\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `04_flower_shop`\n- 已知信息:\n  - 花店老板低头玩手机，玩家进入后互动。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 可取得蚯蚓，并可接触花篮（hualan）与假花（jiahua）。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 04_flower_shop，visit_huadian 记录到访次数"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.summary"
+msgstr "花店老板低头玩手机，玩家进入后互动。"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.title"
+msgstr "花店"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.body"
+msgstr "# 医院\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: 开场（`00_start` / `01_hospital`）\n- 已知信息:\n  - 游戏开场地点，公交站下车后乘客会注视主角。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 00_start -> 01_hospital"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.summary"
+msgstr "游戏开场地点，公交站下车后乘客会注视主角。"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.title"
+msgstr "医院"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.body"
+msgstr "# 露园\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `06_luyuan`\n- 已知信息:\n  - 玩家会看到“如果我是王，我叫做：”的输入框，默认名字是“无名王”。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 改名后会出现“此刻我已是万人敬仰的 {player_name}！”。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 06_luyuan"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.summary"
+msgstr "玩家会看到“如果我是王，我叫做：”的输入框，默认名字是“无名王”。"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.title"
+msgstr "露园"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.body"
+msgstr "# 假山迷宫\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `07_maze`\n- 已知信息:\n  - 进入病房前的最后一段路线。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 07_maze -> 08_wife_room"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.summary"
+msgstr "进入病房前的最后一段路线。"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.title"
+msgstr "假山迷宫"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.body"
+msgstr "# 狮岭\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `05_shiling`\n- 已知信息:\n  - 可选路线之一，visit_shiling 记录到访次数。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 05_shiling"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.summary"
+msgstr "可选路线之一，visit_shiling 记录到访次数。"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.title"
+msgstr "狮岭"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.body"
+msgstr "# 住院部/停尸房\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `02_ward`\n- 已知信息:\n  - 护士在闸口把守，flower >= 5 才能继续前进。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 02_ward -> 03_crossroads"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.summary"
+msgstr "护士在闸口把守，flower >= 5 才能继续前进。"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.title"
+msgstr "住院部/停尸房"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.body"
+msgstr "# 病房\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `08_wife_room`\n- 已知信息:\n  - 妻子以异常状态出现在这里。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 08_wife_room -> 09_ending"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.summary"
+msgstr "妻子以异常状态出现在这里。"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.title"
+msgstr "病房"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.body"
+msgstr "- 状态: open\n- 埋设: 花店（`04_flower_shop`，visit_huadian）\n- 回收: unknown\n- 关联角色/地点: [花店老板](characters/flower-shop-owner.md)、[花店](locations/flower-shop.md)\n- 说明: 多次到访会推进与老板的互动，可能影响物品获取与结局。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.summary"
+msgstr "多次到访会推进与老板的互动，可能影响物品获取与结局。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.title"
+msgstr "花店多次到访"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.body"
+msgstr "- 状态: open\n- 埋设: 花店的 jiahua 选项\n- 回收: unknown\n- 关联角色/地点: [花店老板](characters/flower-shop-owner.md)、[假花](items/fake-flower.md)\n- 说明: 假花可能带来短期便利，但风险尚未写明，迁移时需补足代价。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.summary"
+msgstr "假花可能带来短期便利，但风险尚未写明，迁移时需补足代价。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.title"
+msgstr "假花的代价"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.body"
+msgstr "- 状态: open\n- 埋设: 露园改名（`06_luyuan`）\n- 回收: unknown\n- 关联角色/地点: [无名王](characters/protagonist.md)、[露园](locations/luyuan.md)\n- 说明: 玩家可以改名，之后游戏内称号会使用 {player_name}。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.summary"
+msgstr "玩家可以改名，之后游戏内称号会使用 {player_name}。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.title"
+msgstr "名字即王"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.body"
+msgstr "- 状态: open\n- 埋设: energy、calm、money 三个全局变量\n- 回收: ending_bankrupt（已存在）；ending_crazy、ending_exhausted 待写\n- 关联角色/地点: [无名王](characters/protagonist.md)\n- 说明: 检查顺序为 money < 0 -> calm < 0 -> energy < 0。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.summary"
+msgstr "检查顺序为 money < 0 -> calm < 0 -> energy < 0。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.title"
+msgstr "结局分支"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.body"
+msgstr "- 状态: open\n- 埋设: 病房中妻子的状态（`08_wife_room`）\n- 回收: unknown\n- 关联角色/地点: [妻子](characters/wife.md)、[病房](locations/wife-room.md)\n- 说明: 眼皮缝合、手背符咒等异常是核心悬念，后续剧情需要给出现象背后的解释。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.summary"
+msgstr "眼皮缝合、手背符咒等异常是核心悬念，后续剧情需要给出现象背后的解释。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.title"
+msgstr "妻子的异常"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.body"
+msgstr "- 状态: open\n- 埋设: 住院部闸口（`02_ward`）\n- 回收: unknown\n- 关联角色/地点: [护士](characters/nurse.md)、[花](items/flower.md)、[住院部/停尸房](locations/ward.md)\n- 说明: 收集至少 5 朵花才能进入病房；不同收集路线会决定主角经历过什么。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.summary"
+msgstr "收集至少 5 朵花才能进入病房；不同收集路线会决定主角经历过什么。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.title"
+msgstr "花数闸口"
+
+msgid "player.default_name"
+msgstr "无名王"
+
+msgid "save.auto_name"
+msgstr "自动存档"
+
+msgid "save.cancel"
+msgstr "取消"
+
+msgid "save.confirm"
+msgstr "确定"
+
+msgid "save.confirm_load"
+msgstr "读取 {name} 的存档？"
+
+msgid "save.confirm_overwrite"
+msgstr "覆盖存档 {slot}（{name}）？"
+
+msgid "save.default_name"
+msgstr "存档 {slot}"
+
+msgid "save.details"
+msgstr "{name}\n{time}\n{scene} | {timeline}"
+
+msgid "save.empty"
+msgstr "{slot}. 空"
+
+msgid "save.error_busy"
+msgstr "正在读取其他存档，请稍后再试。"
+
+msgid "save.error_delete"
+msgstr "删除存档失败。"
+
+msgid "save.error_data"
+msgstr "存档数据无效，无法恢复。"
+
+msgid "save.error_invalid_slot"
+msgstr "存档槽位名称无效。"
+
+msgid "save.error_missing"
+msgstr "存档不存在或无法读取。"
+
+msgid "save.error_write"
+msgstr "写入存档失败。"
+
+msgid "save.error_title"
+msgstr "读档失败"
+
+msgid "save.error_version"
+msgstr "存档版本不兼容。本地化版本使用第 3 版存档，不会覆盖旧文件。"
+
+msgid "save.load_title"
+msgstr "读档"
+
+msgid "save.location_unknown"
+msgstr "无剧情进度"
+
+msgid "save.scene.main"
+msgstr "旅程"
+
+msgid "save.scene.mianMenu"
+msgstr "主菜单"
+
+msgid "save.scene.scene_1"
+msgstr "旅程"
+
+msgid "save.timeline.00_start"
+msgstr "开始"
+
+msgid "save.timeline.01_hospital"
+msgstr "医院"
+
+msgid "save.timeline.02_ward"
+msgstr "病房"
+
+msgid "save.timeline.03_crossroads"
+msgstr "十字路口"
+
+msgid "save.timeline.04_flower_shop"
+msgstr "花店"
+
+msgid "save.timeline.05_shiling"
+msgstr "狮岭"
+
+msgid "save.timeline.06_luyuan"
+msgstr "露园"
+
+msgid "save.timeline.07_maze_entry"
+msgstr "迷宫入口"
+
+msgid "save.timeline.07_maze_exit"
+msgstr "迷宫出口"
+
+msgid "save.timeline.07_maze_left"
+msgstr "迷宫左路"
+
+msgid "save.timeline.07_maze_middle"
+msgstr "迷宫中路"
+
+msgid "save.timeline.07_maze_right"
+msgstr "迷宫右路"
+
+msgid "save.timeline.08_wife_room"
+msgstr "妻子的房间"
+
+msgid "save.timeline.09_ending"
+msgstr "结局"
+
+msgid "save.timeline.10_morgue"
+msgstr "停尸房"
+
+msgid "save.timeline.timeline1_0"
+msgstr "旅程序章"
+
+msgid "save.title"
+msgstr "存档"
+
+msgid "settings.language"
+msgstr "语言"
+
+msgid "ui.dialogue.confirm"
+msgstr "确定"
+
+#: scenes/ending_debug_panel.tscn:Apply
+msgid "ui.ending_debug_panel.apply.text"
+msgstr "应用并检查结局"
+
+#: scenes/ending_debug_panel.tscn:CalmEdit
+msgid "ui.ending_debug_panel.calm_edit.placeholder_text"
+msgstr "calm"
+
+#: scenes/ending_debug_panel.tscn:EnergyEdit
+msgid "ui.ending_debug_panel.energy_edit.placeholder_text"
+msgstr "energy"
+
+#: scenes/ending_debug_panel.tscn:MoneyEdit
+msgid "ui.ending_debug_panel.money_edit.placeholder_text"
+msgstr "money"
+
+#: scenes/ending_debug_panel.tscn:ResultLabel
+msgid "ui.ending_debug_panel.result_label.text"
+msgstr "等待写入..."
+
+#: scenes/ending_debug_panel.tscn:Title
+msgid "ui.ending_debug_panel.title.text"
+msgstr "结局调试"
+
+#: scenes/history_panel.tscn:CloseButton
+msgid "ui.history_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/history_panel.tscn:HistoryButton
+msgid "ui.history_panel.history_button.text"
+msgstr "故事回看"
+
+#: scenes/history_panel.tscn:Title
+msgid "ui.history_panel.title.text"
+msgstr "历史记录"
+
+#: scenes/hud.tscn:LoreButton
+msgid "ui.hud.lore_button.text"
+msgstr "LORE"
+
+#: scenes/hud.tscn:SettingsButton
+msgid "ui.hud.settings_button.text"
+msgstr "SETTINGS"
+
+msgid "ui.lore.all_categories"
+msgstr "全部分类"
+
+msgid "ui.lore.category_count"
+msgstr "{category}（{count}）"
+
+msgid "ui.lore.empty"
+msgstr "暂无条目"
+
+msgid "ui.lore.filtered_results"
+msgstr "{title} - {category}"
+
+msgid "ui.lore.results"
+msgstr "搜索结果"
+
+msgid "ui.lore.title"
+msgstr "图鉴"
+
+#: scenes/lore_browser.tscn:ButtonBack
+msgid "ui.lore_browser.button_back.text"
+msgstr "返回"
+
+#: scenes/lore_browser.tscn:ButtonClear
+msgid "ui.lore_browser.button_clear.text"
+msgstr "清除"
+
+#: scenes/lore_browser.tscn:ButtonClose
+msgid "ui.lore_browser.button_close.text"
+msgstr "关闭"
+
+#: scenes/lore_browser.tscn:LabelTitle
+msgid "ui.lore_browser.label_title.text"
+msgstr "图鉴"
+
+#: scenes/lore_browser.tscn:LineEditSearch
+msgid "ui.lore_browser.line_edit_search.placeholder_text"
+msgstr "搜索关键词"
+
+#: scenes/mianMenu.tscn:Button_exit
+msgid "ui.mianmenu.button_exit.text"
+msgstr "退出游戏"
+
+#: scenes/mianMenu.tscn:Button_load
+msgid "ui.mianmenu.button_load.text"
+msgstr "读档"
+
+#: scenes/mianMenu.tscn:Button_save
+msgid "ui.mianmenu.button_save.text"
+msgstr "存档"
+
+#: scenes/mianMenu.tscn:Button_setting
+msgid "ui.mianmenu.button_setting.text"
+msgstr "游戏设置"
+
+#: scenes/mianMenu.tscn:Button_start
+msgid "ui.mianmenu.button_start.text"
+msgstr "开始游戏"
+
+#: scenes/save_slot_panel.tscn:CloseButton
+msgid "ui.save_slot_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+msgid "ui.save_slot_panel.load_dialog.dialog_text"
+msgstr "读取该存档？"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+msgid "ui.save_slot_panel.load_dialog.title"
+msgstr "读档"
+
+#: scenes/save_slot_panel.tscn:NameEdit
+msgid "ui.save_slot_panel.name_edit.placeholder_text"
+msgstr "输入存档名称"
+
+#: scenes/save_slot_panel.tscn:NewSlotDialog
+msgid "ui.save_slot_panel.new_slot_dialog.title"
+msgstr "新建存档"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+msgid "ui.save_slot_panel.overwrite_dialog.dialog_text"
+msgstr "覆盖当前存档？"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+msgid "ui.save_slot_panel.overwrite_dialog.title"
+msgstr "覆盖存档"
+
+#: scenes/save_slot_panel.tscn:TitleLabel
+msgid "ui.save_slot_panel.title_label.text"
+msgstr "存档"
+
+#: scenes/settings_panel.tscn:CloseButton
+msgid "ui.settings_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/settings_panel.tscn:FullscreenCheck
+msgid "ui.settings_panel.fullscreen_check.text"
+msgstr "全屏"
+
+#: scenes/settings_panel.tscn:TextSpeedLabel
+msgid "ui.settings_panel.text_speed_label.text"
+msgstr "文字速度"
+
+#: scenes/settings_panel.tscn:Title
+msgid "ui.settings_panel.title.text"
+msgstr "设置"
+
+#: scenes/settings_panel.tscn:VolumeLabel
+msgid "ui.settings_panel.volume_label.text"
+msgstr "音量"

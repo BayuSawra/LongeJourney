@@ -1,8 +1,8 @@
-[color=#696969][i]⁜当前位置  迷宫⁜[/i][/color]
+Text/lj_07_maze_exit_000/text #id:lj_07_maze_exit_000
 
-风从巷口灌进来，皮鞋裂口处的白胶痕迹还留在脚尖。主角站在路边，怀里几朵花压得衣襟发沉，四周的紫灰色日光像是隔着一层旧玻璃。
-他低头看了看自己，承认这趟路早已把“王爷”的念头碾得支离破碎。可前方还有一个人等着他，无论如何，他得走过去。
+Text/lj_07_maze_exit_001/text #id:lj_07_maze_exit_001
+Text/lj_07_maze_exit_002/text #id:lj_07_maze_exit_002
 
-- 走进妻子的房间
-    主角攥紧衣襟，沿着灰蒙蒙的路朝住院部的方向走去。
+- Choice/lj_07_maze_exit_003/text #id:lj_07_maze_exit_003
+    Text/lj_07_maze_exit_004/text #id:lj_07_maze_exit_004
     jump 08_wife_room

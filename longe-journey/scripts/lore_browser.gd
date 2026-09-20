@@ -12,6 +12,7 @@ var _search_bar: HBoxContainer
 var _rendered_entries: Array
 var _rendered_title: String
 var _showing_detail: bool
+var _detail_slug := ""
 
 
 func _ready() -> void:
@@ -29,11 +30,12 @@ func _ready() -> void:
 	_clear_button.pressed.connect(_clear_search)
 	_populate_category_options()
 	_show_categories()
+	Localization.locale_changed.connect(_locale_changed)
 
 
 func _populate_category_options() -> void:
 	_category_option.clear()
-	_category_option.add_item("全部分类")
+	_category_option.add_item(Localization.text("ui.lore.all_categories"))
 	_category_option.set_item_metadata(0, "")
 	for category in LoreRuntime.get_categories():
 		_category_option.add_item(category.label)
@@ -41,7 +43,7 @@ func _populate_category_options() -> void:
 	_category_option.select(0)
 
 
-func _refresh_results() -> void:
+func _refresh_results(_signal_argument: Variant = null) -> void:
 	var query := _search_line.text.strip_edges()
 	var category_key := _category_option.get_item_metadata(_category_option.selected) as String
 
@@ -50,7 +52,7 @@ func _refresh_results() -> void:
 		return
 
 	var entries: Array
-	var title := "搜索结果"
+	var title := Localization.text("ui.lore.results")
 	if query.is_empty():
 		entries = LoreRuntime.search_by_category(category_key)
 		title = _category_label(category_key)
@@ -62,7 +64,7 @@ func _refresh_results() -> void:
 				if entry.category == category_key:
 					filtered.append(entry)
 			entries = filtered
-			title = "%s - %s" % [title, _category_label(category_key)]
+			title = Localization.format_text("ui.lore.filtered_results", {"title": title, "category": _category_label(category_key)})
 	_render_entries(entries, title)
 
 
@@ -81,11 +83,13 @@ func _category_label(category_key: String) -> String:
 
 func _show_categories() -> void:
 	_back_button.visible = false
-	_title_label.text = "图鉴"
+	_title_label.text = Localization.text("ui.lore.title")
+	_showing_detail = false
+	_search_bar.visible = true
 	_clear_list()
 	for category in LoreRuntime.get_categories():
 		var button := Button.new()
-		button.text = "%s（%d）" % [category.label, category.count]
+		button.text = Localization.format_text("ui.lore.category_count", {"category": category.label, "count": category.count})
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.pressed.connect(_show_category.bind(category.key))
 		_apply_font(button)
@@ -104,6 +108,7 @@ func _show_category(category_key: String) -> void:
 
 
 func _render_entries(entries: Array, title: String) -> void:
+	_search_bar.visible = true
 	_rendered_entries = entries
 	_rendered_title = title
 	_showing_detail = false
@@ -139,15 +144,8 @@ func _show_detail(slug: String) -> void:
 	_search_bar.visible = false
 	_title_label.text = entry.title
 	_clear_list()
-	var body: String
-	if entry.category == "plot-threads":
-		var text := LoreFilesystem.read_file(LoreFilesystem.PLOT_THREADS_PATH)
-		for section in LoreFilesystem.list_plot_thread_sections(text):
-			if section.title == entry.title:
-				body = "\n".join(section.body_lines)
-				break
-	else:
-		body = LoreFilesystem.read_file(entry["path"]).strip_edges()
+	var body: String = entry["body"]
+	_detail_slug = slug
 	if body.is_empty():
 		_add_empty_label()
 	else:
@@ -163,7 +161,7 @@ func _show_detail(slug: String) -> void:
 func _on_back_pressed() -> void:
 	if _showing_detail:
 		_search_bar.visible = true
-		_render_entries(_rendered_entries, _rendered_title)
+		_refresh_results()
 	else:
 		_clear_search()
 
@@ -180,7 +178,7 @@ func _clear_list() -> void:
 
 func _add_empty_label() -> void:
 	var empty_label := Label.new()
-	empty_label.text = "暂无条目"
+	empty_label.text = Localization.text("ui.lore.empty")
 	empty_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	empty_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_apply_font(empty_label)
@@ -191,3 +189,16 @@ func _apply_font(node: Control) -> void:
 	var font := load(FONT_PATH) as Font
 	if font != null:
 		node.add_theme_font_override("font", font)
+
+
+func _locale_changed() -> void:
+	var category: String = _category_option.get_item_metadata(_category_option.selected)
+	var was_detail := _showing_detail
+	var slug := _detail_slug
+	_populate_category_options()
+	for index in _category_option.item_count:
+		if _category_option.get_item_metadata(index) == category:
+			_category_option.select(index)
+	_refresh_results()
+	if was_detail:
+		_show_detail(slug)

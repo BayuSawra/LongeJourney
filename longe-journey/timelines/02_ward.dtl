@@ -1,38 +1,38 @@
-[color=#696969][i]⁜当前位置  住院部⁜[/i][/color]
+Text/lj_02_ward_000/text #id:lj_02_ward_000
 
-护士站在走廊入口，拦住了我。
+Text/lj_02_ward_001/text #id:lj_02_ward_001
 
 if {flower} < 5:
-    护士上下打量我，啧了一声。
+    Text/lj_02_ward_003/text #id:lj_02_ward_003
     
-    “没带花别进去。”
-    “我不认识你，没带花还在这叭叭。有点常识的人都知道要带5朵花。”
+    Text/lj_02_ward_004/text #id:lj_02_ward_004
+    Text/lj_02_ward_005/text #id:lj_02_ward_005
     
-    她摆手赶人，我只好灰溜溜地回到楼下。
+    Text/lj_02_ward_006/text #id:lj_02_ward_006
     
-    - 回医院楼下
+    - Choice/lj_02_ward_007/text #id:lj_02_ward_007
         jump 01_hospital/
 elif {hualan}:
-    护士看见我提着的淡黄色花篮，语气松了下来。
+    Text/lj_02_ward_012/text #id:lj_02_ward_012
     
-    “行吧，你快些进去。”
+    Text/lj_02_ward_013/text #id:lj_02_ward_013
     
-    - 进入病房
+    - Choice/lj_02_ward_014/text #id:lj_02_ward_014
         [save slot="auto"]
-        我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。
+        Text/lj_02_ward_016/text #id:lj_02_ward_016
         
-        （这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。）
+        Text/lj_02_ward_017/text #id:lj_02_ward_017
         jump 08_wife_room/
 else:
-    护士盯着我手里乱七八糟的花，骂了起来。
+    Text/lj_02_ward_022/text #id:lj_02_ward_022
     
-    “一点礼数都没有，这些花你就乱七八糟的拿在手里啊？怎么不买个花篮提一下。”
+    Text/lj_02_ward_023/text #id:lj_02_ward_023
     
-    骂完她还是让开了路。
+    Text/lj_02_ward_024/text #id:lj_02_ward_024
     
-    - 进入病房
+    - Choice/lj_02_ward_025/text #id:lj_02_ward_025
         [save slot="auto"]
-        我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。
+        Text/lj_02_ward_027/text #id:lj_02_ward_027
         
-        （这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。）
+        Text/lj_02_ward_028/text #id:lj_02_ward_028
         jump 08_wife_room/

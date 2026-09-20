@@ -1,41 +1,41 @@
-[color=#696969][i]⁜当前位置  花店⁜[/i][/color]
+Text/lj_04_flower_shop_000/text #id:lj_04_flower_shop_000
 
 if {visit_huadian} == 1:
-    说是花店，其实只有极小两平米，卷帘门半拉着。老板低头玩手机，桶里全是土。
+    Text/lj_04_flower_shop_002/text #id:lj_04_flower_shop_002
 
-    “不卖花了，我改行养蛤蟆。”
+    Text/lj_04_flower_shop_003/text #id:lj_04_flower_shop_003
 
-    - 骂她还踢翻水桶
-        我一脚踹翻水桶，土洒了一地。
+    - Choice/lj_04_flower_shop_004/text #id:lj_04_flower_shop_004
+        Text/lj_04_flower_shop_005/text #id:lj_04_flower_shop_005
 
-        老板愣了一下，竟然没生气，嘴角还翘了起来。
+        Text/lj_04_flower_shop_006/text #id:lj_04_flower_shop_006
 
         set {earthworm} += 1
         jump 03_crossroads
-    - “我已经知道你想陷害我的阴谋”
-        老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。
+    - Choice/lj_04_flower_shop_010/text #id:lj_04_flower_shop_010
+        Text/lj_04_flower_shop_011/text #id:lj_04_flower_shop_011
 
-        “那你肯定也想要这个吧。”
+        Text/lj_04_flower_shop_012/text #id:lj_04_flower_shop_012
 
-        - 拿走蚯蚓
-            我捏住滑溜溜的蚯蚓，心里一阵发毛。
+        - Choice/lj_04_flower_shop_013/text #id:lj_04_flower_shop_013
+            Text/lj_04_flower_shop_014/text #id:lj_04_flower_shop_014
 
             set {earthworm} += 1
             set {calm} -= 10
             jump 03_crossroads
-        - 不要蚯蚓
-            “我才不稀罕。”
+        - Choice/lj_04_flower_shop_019/text #id:lj_04_flower_shop_019
+            Text/lj_04_flower_shop_020/text #id:lj_04_flower_shop_020
 
             jump 03_crossroads
 elif {visit_huadian} == 2:
-    花店正在关门，老板低着头，把卷帘门往下拉。
+    Text/lj_04_flower_shop_026/text #id:lj_04_flower_shop_026
 
-    我没有走近，远远看了一眼就转身走了。
+    Text/lj_04_flower_shop_027/text #id:lj_04_flower_shop_027
 
-    - 回路口
+    - Choice/lj_04_flower_shop_028/text #id:lj_04_flower_shop_028
         jump 03_crossroads
 else:
-    花店关着门，卷帘门拉得死死的。
+    Text/lj_04_flower_shop_033/text #id:lj_04_flower_shop_033
 
-    - 回路口
+    - Choice/lj_04_flower_shop_034/text #id:lj_04_flower_shop_034
         jump 03_crossroads

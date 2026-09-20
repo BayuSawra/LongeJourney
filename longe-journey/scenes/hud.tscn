@@ -38,7 +38,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 24
-text = "花 0"
+text = ""
 horizontal_alignment = 1
 
 [node name="money" type="Label" parent="Panel/Values" unique_id=1272302614]
@@ -46,7 +46,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 24
-text = "钱 20"
+text = ""
 horizontal_alignment = 1
 
 [node name="LoreButton" type="Button" parent="Panel" unique_id=422621561]
@@ -54,14 +54,14 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "LORE"
+text = "ui.hud.lore_button.text"
 
 [node name="SettingsButton" type="Button" parent="Panel" unique_id=1039177364]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "SETTINGS"
+text = "ui.hud.settings_button.text"
 
 [node name="backimg" type="TextureRect" parent="Panel" unique_id=134880907]
 layout_mode = 2

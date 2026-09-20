@@ -22,7 +22,7 @@ anchor_right = 1.0
 offset_top = 60.0
 offset_bottom = 120.0
 grow_horizontal = 2
-text = "存档"
+text = "ui.save_slot_panel.title_label.text"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -36,7 +36,7 @@ offset_top = 180.0
 offset_right = 260.0
 offset_bottom = 290.0
 grow_horizontal = 2
-text = "1. 空"
+text = ""
 
 [node name="Save2" type="Button" parent="."]
 unique_name_in_owner = true
@@ -48,7 +48,7 @@ offset_top = 320.0
 offset_right = 260.0
 offset_bottom = 430.0
 grow_horizontal = 2
-text = "2. 空"
+text = ""
 
 [node name="Save3" type="Button" parent="."]
 unique_name_in_owner = true
@@ -60,7 +60,7 @@ offset_top = 460.0
 offset_right = 260.0
 offset_bottom = 570.0
 grow_horizontal = 2
-text = "3. 空"
+text = ""
 
 [node name="CloseButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -74,19 +74,19 @@ offset_right = 120.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "关闭"
+text = "ui.save_slot_panel.close_button.text"
 
 [node name="OverwriteDialog" type="AcceptDialog" parent="."]
 unique_name_in_owner = true
 visible = false
-title = "覆盖存档"
+title = "ui.save_slot_panel.overwrite_dialog.title"
 size = Vector2i(480, 200)
-dialog_text = "覆盖当前存档？"
+dialog_text = "ui.save_slot_panel.overwrite_dialog.dialog_text"
 
 [node name="NewSlotDialog" type="ConfirmationDialog" parent="."]
 unique_name_in_owner = true
 visible = false
-title = "新建存档"
+title = "ui.save_slot_panel.new_slot_dialog.title"
 size = Vector2i(480, 200)
 
 [node name="NameEdit" type="LineEdit" parent="NewSlotDialog"]
@@ -95,11 +95,11 @@ offset_left = 100.0
 offset_top = 80.0
 offset_right = 380.0
 offset_bottom = 116.0
-placeholder_text = "输入存档名称"
+placeholder_text = "ui.save_slot_panel.name_edit.placeholder_text"
 
 [node name="LoadDialog" type="AcceptDialog" parent="."]
 unique_name_in_owner = true
 visible = false
-title = "读档"
+title = "ui.save_slot_panel.load_dialog.title"
 size = Vector2i(480, 200)
-dialog_text = "读取该存档？"
+dialog_text = "ui.save_slot_panel.load_dialog.dialog_text"

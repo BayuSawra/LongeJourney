@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/dialogic_text_input.gd" id="2"]
+
+[node name="TextInputLayer" instance=ExtResource("1")]
+
+[node name="DialogicNode_TextInput" parent="." index="0"]
+script = ExtResource("2")
+
+[node name="TextLabel" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" index="0"]
+text = ""
+
+[node name="ConfirmationButton" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" index="2"]
+text = "save.confirm"

@@ -26,7 +26,7 @@ if ($LASTEXITCODE -ne 0) { throw "Verification failed" }
 
 ## 验证内容
 
-- lore 正典检查、资源引用扫描与一致性验证。
+- 单语言单 PO 本地化检查（key/占位符/审核戳/资源引用）、lore 正典检查、timeline 注册/jump/主线可达性检查、资源引用扫描与一致性验证。
 - 复制源码到临时目录，从无 `.godot` 缓存状态导入。
 - gdUnit4 回归：双向变量同步、结局、存档、自动存档、设置、图鉴和场景。
 - 启动真实入口主菜单的 120 个物理帧 headless 冒烟测试，释放场景后等待音频清理。
@@ -66,3 +66,7 @@ python tools/verify_mcp.py --godot <Godot-4.6.2-console.exe绝对路径>
 验收使用 console 程序检查版本/导入，图形阶段直接跟踪同目录实际编辑器 `.exe`，
 避免 console 启动器与子进程退出状态混淆。退出前保存隔离副本中的场景，再走编辑器
 正常关闭流程；不修改真实工程、不用强退获得通过。超时强制清理仍判失败。
+
+## 本地化
+
+中英文文案均集中在 `localization/<locale>.po`。编辑、新增语言、严格校验及 V3 存档兼容边界见 `LOCALIZATION.md`。

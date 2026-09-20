@@ -1,86 +1,86 @@
-[color=#696969][i]⁜当前位置  露园⁜[/i][/color]
+Text/lj_06_luyuan_000/text #id:lj_06_luyuan_000
 [background arg="res://art/jianshan2.png" fade="1.0"]
 
-露园有八百年的历史，说是海临王修的。门票四块钱，我摸了摸口袋，还是进去了。
+Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
 
-- 往左走
-    左边的花圃里开着一朵白玉菊花，我摘了下来。
+- Choice/lj_06_luyuan_003/text #id:lj_06_luyuan_003
+    Text/lj_06_luyuan_004/text #id:lj_06_luyuan_004
 
     set {flower} += 1
 
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。
+    Text/lj_06_luyuan_006/text #id:lj_06_luyuan_006
 
-    - 继续往迷宫中心走
-        迷宫中央立着一个人影。
+    - Choice/lj_06_luyuan_007/text #id:lj_06_luyuan_007
+        Text/lj_06_luyuan_008/text #id:lj_06_luyuan_008
 
-        那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。
+        Text/lj_06_luyuan_009/text #id:lj_06_luyuan_009
 
-        - 逃离
-            我不敢再看，转身就跑，出了露园。
+        - Choice/lj_06_luyuan_010/text #id:lj_06_luyuan_010
+            Text/lj_06_luyuan_011/text #id:lj_06_luyuan_011
 
             set {money} -= 2
             jump 07_maze_left
-        - 摘下她手里的绣球花
-            我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
+        - Choice/lj_06_luyuan_015/text #id:lj_06_luyuan_015
+            Text/lj_06_luyuan_016/text #id:lj_06_luyuan_016
 
             set {calm} -= 15
             set {flower} += 1
 
-            我飞快地跑出露园。
+            Text/lj_06_luyuan_019/text #id:lj_06_luyuan_019
 
             set {money} -= 2
             jump 07_maze_left
-- 直走
-    中间的矮墙上爬着一株绿色兰花，我摘了下来。
+- Choice/lj_06_luyuan_025/text #id:lj_06_luyuan_025
+    Text/lj_06_luyuan_026/text #id:lj_06_luyuan_026
 
     set {flower} += 1
 
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。
+    Text/lj_06_luyuan_028/text #id:lj_06_luyuan_028
 
-    - 继续往迷宫中心走
-        迷宫中央立着一个人影。
+    - Choice/lj_06_luyuan_029/text #id:lj_06_luyuan_029
+        Text/lj_06_luyuan_030/text #id:lj_06_luyuan_030
 
-        那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。
+        Text/lj_06_luyuan_031/text #id:lj_06_luyuan_031
 
-        - 逃离
-            我不敢再看，转身就跑，出了露园。
+        - Choice/lj_06_luyuan_032/text #id:lj_06_luyuan_032
+            Text/lj_06_luyuan_033/text #id:lj_06_luyuan_033
 
             set {money} -= 2
             jump 07_maze_left
-        - 摘下她手里的绣球花
-            我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
+        - Choice/lj_06_luyuan_037/text #id:lj_06_luyuan_037
+            Text/lj_06_luyuan_038/text #id:lj_06_luyuan_038
 
             set {calm} -= 15
             set {flower} += 1
 
-            我飞快地跑出露园。
+            Text/lj_06_luyuan_041/text #id:lj_06_luyuan_041
 
             set {money} -= 2
             jump 07_maze_left
-- 往右走
-    右边石头缝里长着一棵仙人球花，我小心地摘了下来。
+- Choice/lj_06_luyuan_047/text #id:lj_06_luyuan_047
+    Text/lj_06_luyuan_048/text #id:lj_06_luyuan_048
 
     set {flower} += 1
 
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。
+    Text/lj_06_luyuan_050/text #id:lj_06_luyuan_050
 
-    - 继续往迷宫中心走
-        迷宫中央立着一个人影。
+    - Choice/lj_06_luyuan_051/text #id:lj_06_luyuan_051
+        Text/lj_06_luyuan_052/text #id:lj_06_luyuan_052
 
-        那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。
+        Text/lj_06_luyuan_053/text #id:lj_06_luyuan_053
 
-        - 逃离
-            我不敢再看，转身就跑，出了露园。
+        - Choice/lj_06_luyuan_054/text #id:lj_06_luyuan_054
+            Text/lj_06_luyuan_055/text #id:lj_06_luyuan_055
 
             set {money} -= 2
             jump 07_maze_left
-        - 摘下她手里的绣球花
-            我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。
+        - Choice/lj_06_luyuan_059/text #id:lj_06_luyuan_059
+            Text/lj_06_luyuan_060/text #id:lj_06_luyuan_060
 
             set {calm} -= 15
             set {flower} += 1
 
-            我飞快地跑出露园。
+            Text/lj_06_luyuan_063/text #id:lj_06_luyuan_063
 
             set {money} -= 2
             jump 07_maze_left

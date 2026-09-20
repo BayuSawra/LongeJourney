@@ -21,6 +21,13 @@
 - `Modules/Wait/subsystem_wait.gd`：`clear_game_state` 默认参数改成显式 `int = 0`
   （`ClearFlags.FULL_CLEAR` 的原值），解除首次导入时单例循环类型推断。
 
+- `Modules/Variable/subsystem_variables.gd`：两个 `_get()`（子系统与 `VariableFolder`）
+  分支外补显式 `return null`。GDScript 落尾本就隐式返回 null，语义不变；
+  兼容 Godot 4.7 解析器将“并非所有路径都有返回值”升格为错误，4.6.2 不受影响。
+
+- `Modules/Text/node_name_label.gd`：`_set()` 未处理属性时补显式 `return false`。
+  兼容 Godot 4.7 解析器的全路径返回检查；属性处理和名称标签行为不变。
+
 - `Core/DialogicResourceUtil.gd`：目录清理按文件是否存在判断，避免冷导入时自定义
   资源加载器尚未注册，误删全部 timeline/角色目录。
 
@@ -33,6 +40,15 @@
 - `Editor/TimelineEditor/VisualEditor/timeline_editor_visual.gd` 与
   `Modules/Variable/variables_editor/variable_tree.gd`：析构时释放自行创建的 UndoRedo，
   修复编辑器退出对象泄漏，不改变撤销行为。
+
+- 本地化追加的 `Modules/Text/event_text.gd` 最小补丁：
+  - 每个 `[n]`/`[n+]` 段落开始时重新取当前语言，避免提前缓存旧语言后续段落；
+  - 原有分段规则提取为 `_split_translated_text()`，保留原生换行配置；
+  - 文本执行增加代数检查，取消时间线后不恢复旧协程；清理时释放自身 `advance` 等待并停止挂起的文本框动画；
+  - 不改 Dialogic 翻译键协议、不复制子系统、不升级插件。回归在 `tests/localization_test.gd`。
+
+业务布局 `chat_style.tres` 仅显示项目自己的可重译历史面板，移除重复的原生历史渲染层；
+原生 History 子系统及访问记录、自动跳过保留。文本输入层使用项目继承场景，不修改第三方 UI。
 
 ## 已有 MCP 插件
 

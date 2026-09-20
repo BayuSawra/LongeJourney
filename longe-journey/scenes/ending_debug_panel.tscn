@@ -36,35 +36,35 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.86, 0.93, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 20
-text = "结局调试"
+text = "ui.ending_debug_panel.title.text"
 
 [node name="EnergyEdit" type="LineEdit" parent="Panel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 18
-placeholder_text = "energy"
+placeholder_text = "ui.ending_debug_panel.energy_edit.placeholder_text"
 
 [node name="CalmEdit" type="LineEdit" parent="Panel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 18
-placeholder_text = "calm"
+placeholder_text = "ui.ending_debug_panel.calm_edit.placeholder_text"
 
 [node name="MoneyEdit" type="LineEdit" parent="Panel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 18
-placeholder_text = "money"
+placeholder_text = "ui.ending_debug_panel.money_edit.placeholder_text"
 
 [node name="Apply" type="Button" parent="Panel/VBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 18
-text = "应用并检查结局"
+text = "ui.ending_debug_panel.apply.text"
 
 [node name="ResultLabel" type="Label" parent="Panel/VBox"]
 unique_name_in_owner = true
@@ -72,6 +72,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.92, 0.7, 1)
 theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 16
-text = "等待写入..."
+text = "ui.ending_debug_panel.result_label.text"
 
 [connection signal="pressed" from="Panel/VBox/Apply" to="." method="_on_apply_pressed"]

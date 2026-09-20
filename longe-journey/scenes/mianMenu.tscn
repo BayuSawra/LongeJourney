@@ -111,7 +111,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "开始游戏"
+text = "ui.mianmenu.button_start.text"
 
 [node name="Button_save" type="Button" parent="UI" unique_id=516829064]
 layout_mode = 2
@@ -119,7 +119,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "存档"
+text = "ui.mianmenu.button_save.text"
 
 [node name="Button_load" type="Button" parent="UI" unique_id=516829065]
 layout_mode = 2
@@ -127,7 +127,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "读档"
+text = "ui.mianmenu.button_load.text"
 
 [node name="Button_setting" type="Button" parent="UI" unique_id=1801085484]
 layout_mode = 2
@@ -135,7 +135,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "游戏设置"
+text = "ui.mianmenu.button_setting.text"
 
 [node name="Button_exit" type="Button" parent="UI" unique_id=299166154]
 layout_mode = 2
@@ -143,7 +143,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_vgm6g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
-text = "退出游戏"
+text = "ui.mianmenu.button_exit.text"
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=174922347]
 stream = ExtResource("4_dw0oc")

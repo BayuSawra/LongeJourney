@@ -1,4 +1,5 @@
 import importlib.util
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -44,6 +45,15 @@ class VerifyTests(unittest.TestCase):
     def test_missing_executable_rejected(self):
         with self.assertRaises(RuntimeError):
             verify.executable("", "Godot")
+
+    def test_explicit_relative_executable_path_is_resolved(self):
+        tool = self.root / "tool.exe"
+        tool.write_bytes(b"placeholder")
+        previous = os.getcwd()
+        os.chdir(self.root)
+        self.addCleanup(lambda: os.chdir(previous))
+        resolved = verify.executable("tool.exe", "Godot")
+        self.assertEqual(Path(resolved), tool.resolve())
 
     def report(self, content):
         (self.root / "results.xml").write_text(content)

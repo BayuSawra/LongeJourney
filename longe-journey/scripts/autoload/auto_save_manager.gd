@@ -39,4 +39,4 @@ func _request_auto_save() -> void:
 
 func _perform_auto_save() -> void:
 	_saving = false
-	SaveManager.save_to_slot("auto", "自动存档")
+	SaveManager.save_to_slot("auto")

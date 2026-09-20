@@ -57,6 +57,13 @@ def validate_test_report(directory: Path) -> int:
 
 
 def executable(value: str, label: str) -> str:
+    # ``shutil.which`` does not consistently resolve a relative path on
+    # Windows (for example ``.local-tools/godot/...exe``). Prefer an
+    # explicitly supplied file path, then fall back to PATH lookup for
+    # command names such as ``powershell``.
+    candidate = Path(value).expanduser() if value else None
+    if candidate and candidate.is_file():
+        return str(candidate.resolve())
     resolved = shutil.which(value) if value else None
     if not resolved:
         raise RuntimeError(f"{label} executable not found: {value!r}")
@@ -95,14 +102,17 @@ def main() -> int:
                 ".env", "config.toml"))
             # Do not start a developer MCP HTTP server from a CI import.
             config = project / "project.godot"
-            config.write_text(config.read_text(encoding="utf-8").replace(
-                ', "res://addons/godot_dotnet_mcp/plugin.cfg"', ''), encoding="utf-8")
+            config_text = config.read_text(encoding="utf-8").replace(
+                ', "res://addons/godot_dotnet_mcp/plugin.cfg"', '')
+            config.write_text(config_text, encoding="utf-8")
             (project / "override.cfg").write_text(
                 '[application]\nconfig/name="LongeJourney-Verify-' + uuid.uuid4().hex +
                 '"\nconfig/use_custom_user_dir=true\nconfig/custom_user_dir_name="' +
                 Path(userdata).name + '"\n[validation]\nuser_data_dir="' +
                 Path(userdata).as_posix() + '"\n', encoding="utf-8")
+            run_step("localization", [sys.executable, "tools/localization.py", "check"], project, reports, args.timeout)
             run_step("lore", [sys.executable, "tools/lj_cli.py", "check-lore"], project, reports, args.timeout)
+            run_step("timelines", [sys.executable, "tools/check_timelines.py"], project, reports, args.timeout)
             for name, script in [("resource-scan", "resource_reference_scan.ps1"),
                                  ("resource-validation", "resource_reference_validate.ps1")]:
                 run_step(name, [powershell, "-NoProfile", "-ExecutionPolicy", "Bypass",

@@ -1,34 +1,34 @@
-[color=#696969][i]⁜当前位置  路口⁜[/i][/color]
+Text/lj_03_crossroads_000/text #id:lj_03_crossroads_000
 
-路口没什么景色，人也少得很。
+Text/lj_03_crossroads_001/text #id:lj_03_crossroads_001
 
 if {visit_shiling} == 1 and {visit_luyuan} == 0:
-    一辆公交靠边停下，邻居探出车窗，硬塞给我一枝向日葵。
+    Text/lj_03_crossroads_003/text #id:lj_03_crossroads_003
 
-    “拿着，探病用的。”
+    Text/lj_03_crossroads_004/text #id:lj_03_crossroads_004
 
     set {flower} += 1
 elif {visit_shiling} == 0 and {visit_luyuan} == 1:
-    一辆公交靠边停下，邻居探出车窗，硬塞给我一枝向日葵。
+    Text/lj_03_crossroads_008/text #id:lj_03_crossroads_008
 
-    “拿着，探病用的。”
+    Text/lj_03_crossroads_009/text #id:lj_03_crossroads_009
 
     set {flower} += 1
 
-- 去花店 [if {visit_huadian} < 3]
-    花店不远，走过去就行。
+- Choice/lj_03_crossroads_012/text | [if {visit_huadian} < 3] #id:lj_03_crossroads_012
+    Text/lj_03_crossroads_013/text #id:lj_03_crossroads_013
     set {energy} -= 5
     set {visit_huadian} += 1
     jump 04_flower_shop
-- 去狮岭 [if {money} >= 2]
-    我上了去狮岭的车，付了车费。
+- Choice/lj_03_crossroads_018/text | [if {money} >= 2] #id:lj_03_crossroads_018
+    Text/lj_03_crossroads_019/text #id:lj_03_crossroads_019
     set {money} -= 2
     set {visit_shiling} += 1
     jump 05_shiling
-- 去露园 [if {money} >= 2]
-    我上了去露园的车，付了车费。
+- Choice/lj_03_crossroads_024/text | [if {money} >= 2] #id:lj_03_crossroads_024
+    Text/lj_03_crossroads_025/text #id:lj_03_crossroads_025
     set {money} -= 2
     set {visit_luyuan} += 1
     jump 06_luyuan
-- 回医院
+- Choice/lj_03_crossroads_030/text #id:lj_03_crossroads_030
     jump 01_hospital

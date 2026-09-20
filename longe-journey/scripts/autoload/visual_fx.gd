@@ -177,6 +177,14 @@ func _find_hud_node() -> Node:
 func _scan_for_choice_buttons() -> void:
 	if get_tree() == null:
 		return
+	# Choice nodes are recreated by Dialogic. Remove freed entries first, then
+	# use the instance id as the connection guard. A bound Callable is distinct
+	# from the unbound method Callable, so is_connected() cannot detect the
+	# connection created below.
+	for instance_id in _choice_buttons.keys():
+		var registered: Variant = _choice_buttons[instance_id]
+		if not is_instance_valid(registered):
+			_choice_buttons.erase(instance_id)
 	var candidates: Array[Node] = []
 	candidates.append_array(get_tree().get_nodes_in_group("dialogic_choice"))
 	candidates.append_array(get_tree().get_nodes_in_group("dialogic_choice_button"))
@@ -184,12 +192,17 @@ func _scan_for_choice_buttons() -> void:
 		if node is Button and ("choice" in node.name.to_lower() or "choice" in str(node.get_path()).to_lower()):
 			candidates.append(node)
 	for candidate in candidates:
-		if candidate is Button and not candidate.is_connected("pressed", _on_choice_pressed):
+		if candidate is Button and not _choice_buttons.has(candidate.get_instance_id()):
 			_register_choice_button(candidate)
 
 
 func _register_choice_button(button: Button) -> void:
-	_choice_buttons[button.get_instance_id()] = button
+	if button == null or not is_instance_valid(button):
+		return
+	var instance_id := button.get_instance_id()
+	if _choice_buttons.has(instance_id):
+		return
+	_choice_buttons[instance_id] = button
 	button.pressed.connect(_on_choice_pressed.bind(button))
 	button.mouse_entered.connect(_on_choice_hover.bind(button, true))
 	button.mouse_exited.connect(_on_choice_hover.bind(button, false))

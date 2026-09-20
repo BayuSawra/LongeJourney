@@ -1,0 +1,242 @@
+{
+  "categories": [
+    {
+      "key": "characters",
+      "label": "lore.category.characters"
+    },
+    {
+      "key": "locations",
+      "label": "lore.category.locations"
+    },
+    {
+      "key": "items",
+      "label": "lore.category.items"
+    },
+    {
+      "key": "events",
+      "label": "lore.category.events"
+    },
+    {
+      "key": "plot-threads",
+      "label": "lore.category.plot-threads"
+    }
+  ],
+  "entries": [
+    {
+      "slug": "flower-shop-owner",
+      "category": "characters",
+      "path": "res://lore/characters/flower-shop-owner.md",
+      "title": "lore.characters.flower-shop-owner.title",
+      "summary": "lore.characters.flower-shop-owner.summary",
+      "body": "lore.characters.flower-shop-owner.body"
+    },
+    {
+      "slug": "nurse",
+      "category": "characters",
+      "path": "res://lore/characters/nurse.md",
+      "title": "lore.characters.nurse.title",
+      "summary": "lore.characters.nurse.summary",
+      "body": "lore.characters.nurse.body"
+    },
+    {
+      "slug": "protagonist",
+      "category": "characters",
+      "path": "res://lore/characters/protagonist.md",
+      "title": "lore.characters.protagonist.title",
+      "summary": "lore.characters.protagonist.summary",
+      "body": "lore.characters.protagonist.body"
+    },
+    {
+      "slug": "wife",
+      "category": "characters",
+      "path": "res://lore/characters/wife.md",
+      "title": "lore.characters.wife.title",
+      "summary": "lore.characters.wife.summary",
+      "body": "lore.characters.wife.body"
+    },
+    {
+      "slug": "crossroads",
+      "category": "locations",
+      "path": "res://lore/locations/crossroads.md",
+      "title": "lore.locations.crossroads.title",
+      "summary": "lore.locations.crossroads.summary",
+      "body": "lore.locations.crossroads.body"
+    },
+    {
+      "slug": "flower-shop",
+      "category": "locations",
+      "path": "res://lore/locations/flower-shop.md",
+      "title": "lore.locations.flower-shop.title",
+      "summary": "lore.locations.flower-shop.summary",
+      "body": "lore.locations.flower-shop.body"
+    },
+    {
+      "slug": "hospital",
+      "category": "locations",
+      "path": "res://lore/locations/hospital.md",
+      "title": "lore.locations.hospital.title",
+      "summary": "lore.locations.hospital.summary",
+      "body": "lore.locations.hospital.body"
+    },
+    {
+      "slug": "luyuan",
+      "category": "locations",
+      "path": "res://lore/locations/luyuan.md",
+      "title": "lore.locations.luyuan.title",
+      "summary": "lore.locations.luyuan.summary",
+      "body": "lore.locations.luyuan.body"
+    },
+    {
+      "slug": "maze",
+      "category": "locations",
+      "path": "res://lore/locations/maze.md",
+      "title": "lore.locations.maze.title",
+      "summary": "lore.locations.maze.summary",
+      "body": "lore.locations.maze.body"
+    },
+    {
+      "slug": "shiling",
+      "category": "locations",
+      "path": "res://lore/locations/shiling.md",
+      "title": "lore.locations.shiling.title",
+      "summary": "lore.locations.shiling.summary",
+      "body": "lore.locations.shiling.body"
+    },
+    {
+      "slug": "ward",
+      "category": "locations",
+      "path": "res://lore/locations/ward.md",
+      "title": "lore.locations.ward.title",
+      "summary": "lore.locations.ward.summary",
+      "body": "lore.locations.ward.body"
+    },
+    {
+      "slug": "wife-room",
+      "category": "locations",
+      "path": "res://lore/locations/wife-room.md",
+      "title": "lore.locations.wife-room.title",
+      "summary": "lore.locations.wife-room.summary",
+      "body": "lore.locations.wife-room.body"
+    },
+    {
+      "slug": "earthworm",
+      "category": "items",
+      "path": "res://lore/items/earthworm.md",
+      "title": "lore.items.earthworm.title",
+      "summary": "lore.items.earthworm.summary",
+      "body": "lore.items.earthworm.body"
+    },
+    {
+      "slug": "fake-flower",
+      "category": "items",
+      "path": "res://lore/items/fake-flower.md",
+      "title": "lore.items.fake-flower.title",
+      "summary": "lore.items.fake-flower.summary",
+      "body": "lore.items.fake-flower.body"
+    },
+    {
+      "slug": "flower-basket",
+      "category": "items",
+      "path": "res://lore/items/flower-basket.md",
+      "title": "lore.items.flower-basket.title",
+      "summary": "lore.items.flower-basket.summary",
+      "body": "lore.items.flower-basket.body"
+    },
+    {
+      "slug": "flower",
+      "category": "items",
+      "path": "res://lore/items/flower.md",
+      "title": "lore.items.flower.title",
+      "summary": "lore.items.flower.summary",
+      "body": "lore.items.flower.body"
+    },
+    {
+      "slug": "money",
+      "category": "items",
+      "path": "res://lore/items/money.md",
+      "title": "lore.items.money.title",
+      "summary": "lore.items.money.summary",
+      "body": "lore.items.money.body"
+    },
+    {
+      "slug": "luyuan-renaming",
+      "category": "events",
+      "path": "res://lore/events/luyuan-renaming.md",
+      "title": "lore.events.luyuan-renaming.title",
+      "summary": "lore.events.luyuan-renaming.summary",
+      "body": "lore.events.luyuan-renaming.body"
+    },
+    {
+      "slug": "opening-arrival",
+      "category": "events",
+      "path": "res://lore/events/opening-arrival.md",
+      "title": "lore.events.opening-arrival.title",
+      "summary": "lore.events.opening-arrival.summary",
+      "body": "lore.events.opening-arrival.body"
+    },
+    {
+      "slug": "ward-gate-block",
+      "category": "events",
+      "path": "res://lore/events/ward-gate-block.md",
+      "title": "lore.events.ward-gate-block.title",
+      "summary": "lore.events.ward-gate-block.summary",
+      "body": "lore.events.ward-gate-block.body"
+    },
+    {
+      "slug": "wife-room-reunion",
+      "category": "events",
+      "path": "res://lore/events/wife-room-reunion.md",
+      "title": "lore.events.wife-room-reunion.title",
+      "summary": "lore.events.wife-room-reunion.summary",
+      "body": "lore.events.wife-room-reunion.body"
+    },
+    {
+      "slug": "entry",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry.title",
+      "summary": "lore.plot-threads.entry.summary",
+      "body": "lore.plot-threads.entry.body"
+    },
+    {
+      "slug": "entry-23",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry-23.title",
+      "summary": "lore.plot-threads.entry-23.summary",
+      "body": "lore.plot-threads.entry-23.body"
+    },
+    {
+      "slug": "entry-24",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry-24.title",
+      "summary": "lore.plot-threads.entry-24.summary",
+      "body": "lore.plot-threads.entry-24.body"
+    },
+    {
+      "slug": "entry-25",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry-25.title",
+      "summary": "lore.plot-threads.entry-25.summary",
+      "body": "lore.plot-threads.entry-25.body"
+    },
+    {
+      "slug": "entry-26",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry-26.title",
+      "summary": "lore.plot-threads.entry-26.summary",
+      "body": "lore.plot-threads.entry-26.body"
+    },
+    {
+      "slug": "entry-27",
+      "category": "plot-threads",
+      "path": "res://lore/plot-threads.md",
+      "title": "lore.plot-threads.entry-27.title",
+      "summary": "lore.plot-threads.entry-27.summary",
+      "body": "lore.plot-threads.entry-27.body"
+    }
+  ]
+}

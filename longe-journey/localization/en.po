@@ -1,0 +1,2485 @@
+msgid ""
+msgstr "Project-Id-Version: LongeJourney\nLanguage: en\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: res://character/neighbor.dch
+#. source-sha256: 58cf5de1eb45dbcc0d7f74ce76cae0e16f2961a3b71df3a4878982eba9111ded
+msgid "Character/lj_neighbor/name"
+msgstr "Neighbor"
+
+#: res://character/nurse1.dch
+#. source-sha256: 67553a4d5272405721d0a269b869a81bf424b5235ff798868d4403d7b6f81c7d
+msgid "Character/lj_nurse1/name"
+msgstr "Nurse 1"
+
+#: res://character/nurse2.dch
+#. source-sha256: f8f5e373f2546d568b686e6776339d465cfe42d44e97f344a29c5118e9578f47
+msgid "Character/lj_nurse2/name"
+msgstr "Nurse 2"
+
+#: res://character/我.dch
+#. source-sha256: b70bb4acc0484cf040de4c07c60f9db722283da2c4a672c39291de621e92c33f
+msgid "Character/lj_self/name"
+msgstr "Me"
+
+#: res://character/我.dch
+#. source-sha256: 1ab21cbd9c874cb0db72c164c7f1b65a8c03ae07d71536db14f749602be28d65
+msgid "Character/lj_self/nicknames"
+msgstr "myself"
+
+#: res://character/storeOwner.dch
+#. source-sha256: 52428f77de9ae253dd21b1d1ea92ba607f7a569bdb93e9aabd2f9d527ed01db4
+msgid "Character/lj_storeOwner/name"
+msgstr "Flower Shop Owner"
+
+#: res://character/wife.dch
+#. source-sha256: 55c4fadb327e49a5ff860030e09399f6280924cc2761dd7f5ecfbb395ad1d93b
+msgid "Character/lj_wife/name"
+msgstr "Wife"
+
+#: res://timelines/00_start.dtl:20
+#. source-sha256: ed4d6094fad18d100d656c1eea0254c57cc206c96f4ef5e5c62c9908436aac7d
+msgid "Choice/lj_00_start_010/text"
+msgstr "Get off"
+
+#: res://timelines/01_hospital.dtl:7
+#. source-sha256: 197a560a2bfb4f46a879808af07da838e920d48fd11ce288ed7d4f121130df2a
+msgid "Choice/lj_01_hospital_003/text"
+msgstr "Go to the inpatient ward"
+
+#: res://timelines/01_hospital.dtl:9
+#. source-sha256: bf18a8a7dcd0b9b37e04a84b068191c5552887e923c335a5538c6e9241285090
+msgid "Choice/lj_01_hospital_006/text"
+msgstr "Leave the hospital for the crossroads"
+
+#: res://timelines/01_hospital.dtl:11
+#. source-sha256: 4b6c65c7de2bc13a86da13e68b9c6bddea03d7088def7f5f50ea6d13ba0ec326
+msgid "Choice/lj_01_hospital_009/text"
+msgstr "Go to the morgue"
+
+#: res://timelines/02_ward.dtl:13
+#. source-sha256: 17c988e742d2808101699eb98b4697a913aef814a39de859a4a136e85ba12d60
+msgid "Choice/lj_02_ward_007/text"
+msgstr "Go back downstairs"
+
+#: res://timelines/02_ward.dtl:20
+#. source-sha256: a951180c93c0ebdc86ecd3ba66ecec9bf9e26b7c527c625eec35fea6f736e126
+msgid "Choice/lj_02_ward_014/text"
+msgstr "Enter the room"
+
+#: res://timelines/02_ward.dtl:33
+#. source-sha256: a951180c93c0ebdc86ecd3ba66ecec9bf9e26b7c527c625eec35fea6f736e126
+msgid "Choice/lj_02_ward_025/text"
+msgstr "Enter the room"
+
+#: res://timelines/03_crossroads.dtl:18
+#. source-sha256: 5b6accdbb07bbfb2629c8786acac4d06163ec35c3601ef7eec931fe1f8a2db8e
+msgid "Choice/lj_03_crossroads_012/text"
+msgstr "Go to the flower shop"
+
+#: res://timelines/03_crossroads.dtl:23
+#. source-sha256: 4000b9aa05718ed724f838a80178ba28a3e27b27180ea8bef3541f11a53a8496
+msgid "Choice/lj_03_crossroads_018/text"
+msgstr "Go to Lion Ridge"
+
+#: res://timelines/03_crossroads.dtl:28
+#. source-sha256: 5afac83fe2d133083ca8cb6d9a6d764583b9283d8dcd2027c2dd2ab7f7a0112a
+msgid "Choice/lj_03_crossroads_024/text"
+msgstr "Go to Dew Garden"
+
+#: res://timelines/03_crossroads.dtl:33
+#. source-sha256: 732d76d42425a69c5e5f14f5e3bb7f87641e8ea77e65df0fcd91e8747561f5c6
+msgid "Choice/lj_03_crossroads_030/text"
+msgstr "Return to the hospital"
+
+#: res://timelines/04_flower_shop.dtl:8
+#. source-sha256: 25c8bc13edb6ca1bec620bcf8817992a5a5282fe3e2aa80402f6a147c2fa9cf0
+msgid "Choice/lj_04_flower_shop_004/text"
+msgstr "Curse at her and kick over the bucket"
+
+#: res://timelines/04_flower_shop.dtl:15
+#. source-sha256: f280a55f2dd7693a33527aa9cf89a684c8bb917e3c0147faa16854d81949dbf0
+msgid "Choice/lj_04_flower_shop_010/text"
+msgstr "“I already know about your plot to frame me.”"
+
+#: res://timelines/04_flower_shop.dtl:20
+#. source-sha256: b01641d571e8c7837e1164313867a1446b26708032d21705acfa5973eb06d189
+msgid "Choice/lj_04_flower_shop_013/text"
+msgstr "Take the earthworm"
+
+#: res://timelines/04_flower_shop.dtl:26
+#. source-sha256: 6934e82598d786b958bb5dac4724f96fcbd7603c4f88d2860a658e61fc9dcd97
+msgid "Choice/lj_04_flower_shop_019/text"
+msgstr "Refuse the earthworm"
+
+#: res://timelines/04_flower_shop.dtl:35
+#. source-sha256: 837eefaadc5c0d90270e193dd632ebe17d695a6e73f459b454c983867c3f3273
+msgid "Choice/lj_04_flower_shop_028/text"
+msgstr "Return to the crossroads"
+
+#: res://timelines/04_flower_shop.dtl:40
+#. source-sha256: 837eefaadc5c0d90270e193dd632ebe17d695a6e73f459b454c983867c3f3273
+msgid "Choice/lj_04_flower_shop_034/text"
+msgstr "Return to the crossroads"
+
+#: res://timelines/05_shiling.dtl:7
+#. source-sha256: bdceb7de57c069a7a64e8f0d68a56da010a5a59ad0f18d090ebb8aced75abf33
+msgid "Choice/lj_05_shiling_004/text"
+msgstr "Start searching"
+
+#: res://timelines/05_shiling.dtl:13
+#. source-sha256: e6c2fc37a4d5cd23f355cac2dca6f143987e5b83ab9b0f9050ade638f74bce23
+msgid "Choice/lj_05_shiling_008/text"
+msgstr "Look at them more closely"
+
+#: res://timelines/05_shiling.dtl:20
+#. source-sha256: 3115019b6dd291be1b55872283e55f4edc5ebe0c4f705769dfbab4981052d533
+msgid "Choice/lj_05_shiling_012/text"
+msgstr "Look more closely at the flower"
+
+#: res://timelines/05_shiling.dtl:23
+#. source-sha256: 5d51498157f2b4db9579c04a66d9fa0589d6ac4cf38954e70052821b93fc5afe
+msgid "Choice/lj_05_shiling_014/text"
+msgstr "Throw away the fake flower"
+
+#: res://timelines/05_shiling.dtl:29
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_018/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:33
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_021/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:37
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_024/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:40
+#. source-sha256: 931c895443c42173ae0aac6453b62b1f1238697872f9f21da3a333db2b26169d
+msgid "Choice/lj_05_shiling_026/text"
+msgstr "Steal the peony"
+
+#: res://timelines/05_shiling.dtl:54
+#. source-sha256: 86aa50a8639a63777e1b276d21bfc120da2cbe5a56009fb2c08acf8a6e386a9f
+msgid "Choice/lj_05_shiling_037/text"
+msgstr "Do nothing"
+
+#: res://timelines/05_shiling.dtl:63
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_044/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:70
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_051/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:77
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_058/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:84
+#. source-sha256: dd66826344a8af7e1eb99a0e8e2ccd174e525b7d732918d0493dbd56dce07917
+msgid "Choice/lj_05_shiling_065/text"
+msgstr "Keep it"
+
+#: res://timelines/05_shiling.dtl:85
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_066/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:89
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_069/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:93
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_072/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:96
+#. source-sha256: 931c895443c42173ae0aac6453b62b1f1238697872f9f21da3a333db2b26169d
+msgid "Choice/lj_05_shiling_074/text"
+msgstr "Steal the peony"
+
+#: res://timelines/05_shiling.dtl:110
+#. source-sha256: 86aa50a8639a63777e1b276d21bfc120da2cbe5a56009fb2c08acf8a6e386a9f
+msgid "Choice/lj_05_shiling_085/text"
+msgstr "Do nothing"
+
+#: res://timelines/05_shiling.dtl:119
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_092/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:126
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_099/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:133
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_107/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:140
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_115/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:144
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_118/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:148
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_121/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:151
+#. source-sha256: 931c895443c42173ae0aac6453b62b1f1238697872f9f21da3a333db2b26169d
+msgid "Choice/lj_05_shiling_123/text"
+msgstr "Steal the peony"
+
+#: res://timelines/05_shiling.dtl:165
+#. source-sha256: 86aa50a8639a63777e1b276d21bfc120da2cbe5a56009fb2c08acf8a6e386a9f
+msgid "Choice/lj_05_shiling_134/text"
+msgstr "Do nothing"
+
+#: res://timelines/05_shiling.dtl:174
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_141/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:181
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_149/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:188
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_157/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:192
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_160/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:196
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_163/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:199
+#. source-sha256: 931c895443c42173ae0aac6453b62b1f1238697872f9f21da3a333db2b26169d
+msgid "Choice/lj_05_shiling_165/text"
+msgstr "Steal the peony"
+
+#: res://timelines/05_shiling.dtl:213
+#. source-sha256: 86aa50a8639a63777e1b276d21bfc120da2cbe5a56009fb2c08acf8a6e386a9f
+msgid "Choice/lj_05_shiling_176/text"
+msgstr "Do nothing"
+
+#: res://timelines/05_shiling.dtl:222
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_183/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:229
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_191/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:236
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_199/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:240
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_202/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:244
+#. source-sha256: 529b90d2c841d54d61185340198775a5046ff3ff54843b321d0b8343dac2d4ee
+msgid "Choice/lj_05_shiling_205/text"
+msgstr "Keep searching"
+
+#: res://timelines/05_shiling.dtl:247
+#. source-sha256: 931c895443c42173ae0aac6453b62b1f1238697872f9f21da3a333db2b26169d
+msgid "Choice/lj_05_shiling_207/text"
+msgstr "Steal the peony"
+
+#: res://timelines/05_shiling.dtl:261
+#. source-sha256: 86aa50a8639a63777e1b276d21bfc120da2cbe5a56009fb2c08acf8a6e386a9f
+msgid "Choice/lj_05_shiling_218/text"
+msgstr "Do nothing"
+
+#: res://timelines/05_shiling.dtl:270
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_225/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:277
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_232/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:284
+#. source-sha256: 14d463bd427751e77257f34ab9e5267c03c2b6973edb59d33dbead6704e2569d
+msgid "Choice/lj_05_shiling_240/text"
+msgstr "Stop searching"
+
+#: res://timelines/05_shiling.dtl:294
+#. source-sha256: 837eefaadc5c0d90270e193dd632ebe17d695a6e73f459b454c983867c3f3273
+msgid "Choice/lj_05_shiling_250/text"
+msgstr "Return to the crossroads"
+
+#: res://timelines/06_luyuan.dtl:6
+#. source-sha256: f7eb53311e7cffc2908a7ef49a1113822da3b2191f6c728f37d174d8a06534b7
+msgid "Choice/lj_06_luyuan_003/text"
+msgstr "Go left"
+
+#: res://timelines/06_luyuan.dtl:13
+#. source-sha256: d8bf01eb103703a7f36fd16df15f83e4e897424001b98826df773f6ec6033a73
+msgid "Choice/lj_06_luyuan_007/text"
+msgstr "Continue toward the center of the maze"
+
+#: res://timelines/06_luyuan.dtl:18
+#. source-sha256: 6c217ce7dc69a9491f754c649239c1a82b94d6d998d42cd376174fb7bae95605
+msgid "Choice/lj_06_luyuan_010/text"
+msgstr "Flee"
+
+#: res://timelines/06_luyuan.dtl:23
+#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+msgid "Choice/lj_06_luyuan_015/text"
+msgstr "Take the hydrangea from her hand"
+
+#: res://timelines/06_luyuan.dtl:33
+#. source-sha256: 30579dabf03564bb77f274ac4664b69f6737b8db1e70cfa77a53b3966230aad8
+msgid "Choice/lj_06_luyuan_025/text"
+msgstr "Go straight ahead"
+
+#: res://timelines/06_luyuan.dtl:40
+#. source-sha256: d8bf01eb103703a7f36fd16df15f83e4e897424001b98826df773f6ec6033a73
+msgid "Choice/lj_06_luyuan_029/text"
+msgstr "Continue toward the center of the maze"
+
+#: res://timelines/06_luyuan.dtl:45
+#. source-sha256: 6c217ce7dc69a9491f754c649239c1a82b94d6d998d42cd376174fb7bae95605
+msgid "Choice/lj_06_luyuan_032/text"
+msgstr "Flee"
+
+#: res://timelines/06_luyuan.dtl:50
+#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+msgid "Choice/lj_06_luyuan_037/text"
+msgstr "Take the hydrangea from her hand"
+
+#: res://timelines/06_luyuan.dtl:60
+#. source-sha256: ba50e1e2745b0a3436b19c003ffb8a0c5a987cc5ebd56587c061b11f631af861
+msgid "Choice/lj_06_luyuan_047/text"
+msgstr "Go right"
+
+#: res://timelines/06_luyuan.dtl:67
+#. source-sha256: d8bf01eb103703a7f36fd16df15f83e4e897424001b98826df773f6ec6033a73
+msgid "Choice/lj_06_luyuan_051/text"
+msgstr "Continue toward the center of the maze"
+
+#: res://timelines/06_luyuan.dtl:72
+#. source-sha256: 6c217ce7dc69a9491f754c649239c1a82b94d6d998d42cd376174fb7bae95605
+msgid "Choice/lj_06_luyuan_054/text"
+msgstr "Flee"
+
+#: res://timelines/06_luyuan.dtl:77
+#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+msgid "Choice/lj_06_luyuan_059/text"
+msgstr "Take the hydrangea from her hand"
+
+#: res://timelines/07_maze_entry.dtl:23
+#. source-sha256: 2ef7051f91d16117abe85e15ded1a3e412706c057b0294cd2f1bb99050948f88
+msgid "Choice/lj_07_maze_entry_011/text"
+msgstr "Take the broad path to the left"
+
+#: res://timelines/07_maze_entry.dtl:26
+#. source-sha256: 4a64d0b6f2d97a4e2bf6d1f6a120c5051873dba31f67cfdb59d4aa2620403f8d
+msgid "Choice/lj_07_maze_entry_014/text"
+msgstr "Take the winding path to the right"
+
+#: res://timelines/07_maze_exit.dtl:6
+#. source-sha256: ac4e38d6ef1030c76bf4e97797d14024da77ff55bdcb9a2378ff4a2d0b9e37e7
+msgid "Choice/lj_07_maze_exit_003/text"
+msgstr "Enter his wife's room"
+
+#: res://timelines/07_maze_left.dtl:5
+#. source-sha256: c608c57f9a51b9bc4679f214a604d9699b0dedd0dfcda917787618c9202732b8
+msgid "Choice/lj_07_maze_left_002/text"
+msgstr "You killed someone?"
+
+#: res://timelines/07_maze_left.dtl:11
+#. source-sha256: aaff6dd40ab9b7369b55f5d33265d3525eb995a837efa507cbd286f084b7fe7a
+msgid "Choice/lj_07_maze_left_008/text"
+msgstr "Who told you to kill him? Bring him back to life."
+
+#: res://timelines/07_maze_middle.dtl:5
+#. source-sha256: 765f134630d68e554ac4001f997940ae6a17db1329c0579a67acadde789a29c1
+msgid "Choice/lj_07_maze_middle_002/text"
+msgstr "Pick the cactus flower"
+
+#: res://timelines/07_maze_middle.dtl:10
+#. source-sha256: 9bd8e6619f2e3df8b1e2850bd13b1829eabf2e529cfff6dd254d5e0f24a682e9
+msgid "Choice/lj_07_maze_middle_007/text"
+msgstr "Leave the flower and keep walking"
+
+#: res://timelines/07_maze_middle.dtl:22
+#. source-sha256: 5b87b8d245789aa953611be85d28bf50424eaba397a19f4cf731038c753b4e2d
+msgid "Choice/lj_07_maze_middle_017/text"
+msgstr "How is she standing?"
+
+#: res://timelines/07_maze_middle.dtl:29
+#. source-sha256: edd5374aa85886aecdc95cf23045f3336765e840f81238ce213f5f03ae8f08ce
+msgid "Choice/lj_07_maze_middle_023/text"
+msgstr "Flee immediately"
+
+#: res://timelines/07_maze_middle.dtl:32
+#. source-sha256: 1855e56a272e6da7267374055ca268dcb754d331970e0455e985aad40d6b6d94
+msgid "Choice/lj_07_maze_middle_026/text"
+msgstr "Pick the hydrangea"
+
+#: res://timelines/07_maze_middle.dtl:44
+#. source-sha256: f545172e86c5cc3338800f539079732fcd10f0b2b1bbe31ddd0d6d5ca4d41152
+msgid "Choice/lj_07_maze_middle_036/text"
+msgstr "Leave this place"
+
+#: res://timelines/07_maze_right.dtl:5
+#. source-sha256: b5e00f8a8938e3f5c0a366b8215f2eedca355ca8e78fdc191e39602f7b8ab231
+msgid "Choice/lj_07_maze_right_002/text"
+msgstr "Start eavesdropping"
+
+#: res://timelines/07_maze_right.dtl:9
+#. source-sha256: b9690f932dfb364070757c897b7549d281aabad21f8f0ca66f4572721824f037
+msgid "Choice/lj_07_maze_right_006/text"
+msgstr "Keep walking"
+
+#: res://timelines/08_wife_room.dtl:11
+#. source-sha256: 5fe8d64eac905726ecaed854a793a0b9a3bc002f83ccf381905ca073b68da96f
+msgid "Choice/lj_08_wife_room_008/text"
+msgstr "Open the curtain"
+
+#: res://timelines/10_morgue.dtl:9
+#. source-sha256: fbeabf73ed75abebe666a7cd999e8451a63feaac3e7c12def431dfb6de7a1296
+msgid "Choice/lj_10_morgue_005/text"
+msgstr "Look more closely"
+
+#: res://timelines/10_morgue.dtl:16
+#. source-sha256: 82486dd8f1c8035e8ca40bf2b94612b8a7406d2269cd75778daf8e8f7f939e5d
+msgid "Choice/lj_10_morgue_010/text"
+msgstr "Leave with the basket"
+
+#: res://timelines/10_morgue.dtl:18
+#. source-sha256: 572cf45ba43634b3448aadbc48d5398a1b32ad8a97bf42b689c394de222c30a1
+msgid "Choice/lj_10_morgue_014/text"
+msgstr "Return"
+
+#: res://timelines/10_morgue.dtl:23
+#. source-sha256: 572cf45ba43634b3448aadbc48d5398a1b32ad8a97bf42b689c394de222c30a1
+msgid "Choice/lj_10_morgue_020/text"
+msgstr "Return"
+
+#: res://timelines/10_morgue.dtl:28
+#. source-sha256: 572cf45ba43634b3448aadbc48d5398a1b32ad8a97bf42b689c394de222c30a1
+msgid "Choice/lj_10_morgue_026/text"
+msgstr "Return"
+
+#: res://timelines/00_start.dtl:1
+#. source-sha256: 8a34a2fdec3fe665eb6991e5dc761856fb8e7429e86208fb5b05e8a7283e0bc6
+msgid "Text/lj_00_start_000/text"
+msgstr "[color=#696969][i]※Current location: On the bus※[/i][/color]"
+
+#: res://timelines/00_start.dtl:3
+#. source-sha256: 45ac721d6c0f7151bc7e0f0b80e785f9b2b5c43718d7bbc33b4c21b97a36f8ba
+msgid "Text/lj_00_start_001/text"
+msgstr "Almost at the hospital. The bus turns slowly to the left, and I see its gray outer walls, ivy covering most of the building. Tattered windows spit out blue-gray curtains."
+
+#: res://timelines/00_start.dtl:5
+#. source-sha256: 968ce265d62666d7a5867dd1f4967c55413b7cf770ad988f3c16a915786167a7
+msgid "Text/lj_00_start_002/text"
+msgstr "It's a lousy hospital. I know that much."
+
+#: res://timelines/00_start.dtl:7
+#. source-sha256: 776041ae0f456c30197882946c88407ebefe8892acb9f4acfdcc64b4e652e5ff
+msgid "Text/lj_00_start_003/text"
+msgstr "My wife has been in hospital for... I forget how long. Poor thing."
+
+#: res://timelines/00_start.dtl:9
+#. source-sha256: 9c97c459a172557c9746f817bab63e937c76125188be8aca7475b38a668fc4c7
+msgid "Text/lj_00_start_004/text"
+msgstr "I glance at the other passengers. Every one of them sits there in grimy silence, like a nest of rats."
+
+#: res://timelines/00_start.dtl:11
+#. source-sha256: 29acddbc43a7144dc93f3fb51fd50a8b97443bb55ff1b042d1b649b5bbfb47b4
+msgid "Text/lj_00_start_005/text"
+msgstr "I count fifteen people besides myself. What are they all doing out in weather like this? Probably nothing better to do. Might as well wander around."
+
+#: res://timelines/00_start.dtl:13
+#. source-sha256: 13c67a1ddc93583f899b65e15753fe8f798c425f87ff6f9d46e16082a4cdfccd
+msgid "Text/lj_00_start_006/text"
+msgstr "Fortunately, none of them are thieves. Nothing gets past these eyes. I can tell the good from the bad with a single glance!"
+
+#: res://timelines/00_start.dtl:15
+#. source-sha256: c8f3fe8799ee04c542836716f1ad115ee77428dbba7142d5fee81971a7c51779
+msgid "Text/lj_00_start_007/text"
+msgstr "They're behaving themselves for now. None of them dare look me in the eye. They must know who they're dealing with. Scared, are they?"
+
+#: res://timelines/00_start.dtl:17
+#. source-sha256: 8bcd063bee8f52809bff92635dfea88aa41f5bb6c242fd08caf6aafe7c73ca06
+msgid "Text/lj_00_start_008/text"
+msgstr "The bus stops. Everyone turns to stare at me, hinting that it's time I got off."
+
+#: res://timelines/01_hospital.dtl:1
+#. source-sha256: c07650ad63b03fe632ad2b4b98156fbdaa78a1565d2479eb3154953e9e32d956
+msgid "Text/lj_01_hospital_000/text"
+msgstr "[color=#696969][i]※Current location: Hospital※[/i][/color]"
+
+#: res://timelines/01_hospital.dtl:3
+#. source-sha256: 4df2d19b50137b611ad0c44a2abc8981564de2650edf1d644fa3fdf520bc0cf2
+msgid "Text/lj_01_hospital_001/text"
+msgstr "Standing outside the hospital, I feel a chill. This really isn't visiting weather. What if I catch a cold? That would only make things worse."
+
+#: res://timelines/01_hospital.dtl:5
+#. source-sha256: 7997951752319c689de98d4994823634acd6caea9266f4c7f116f95937d8caaa
+msgid "Text/lj_01_hospital_002/text"
+msgstr "I take out my phone and check our messages: my wife is on the seventh floor of the inpatient building, bed 5-05."
+
+#: res://timelines/02_ward.dtl:1
+#. source-sha256: d1b5a6c80a11174e2645a28d05183f367a04ae17b920d0d54dd576a1d81cc83d
+msgid "Text/lj_02_ward_000/text"
+msgstr "[color=#696969][i]※Current location: Inpatient ward※[/i][/color]"
+
+#: res://timelines/02_ward.dtl:3
+#. source-sha256: fef0f675d90783adcd7765aebde8cabf7941c8e91795489a91a6c8c05d2ef781
+msgid "Text/lj_02_ward_001/text"
+msgstr "A nurse stands at the entrance to the corridor and blocks my way."
+
+#: res://timelines/02_ward.dtl:6
+#. source-sha256: 45daa0dc106063d6eacd4e6515a3244c939cda257ab841b9093a3d00a4107773
+msgid "Text/lj_02_ward_003/text"
+msgstr "She looks me up and down and clicks her tongue."
+
+#: res://timelines/02_ward.dtl:8
+#. source-sha256: ab4fd0955f39b3d6ed0fea9bb70286494fb6aea1d158f072e52bdbbe9f95e04a
+msgid "Text/lj_02_ward_004/text"
+msgstr "“No flowers, no entry.”"
+
+#: res://timelines/02_ward.dtl:9
+#. source-sha256: 1bc2495bd0fd019677667eee3d3d699ed8418506c61b1c10847e3a555cd78ced
+msgid "Text/lj_02_ward_005/text"
+msgstr "“I don't know you. No flowers, and still you stand here yapping. Anyone with common sense knows to bring five flowers.”"
+
+#: res://timelines/02_ward.dtl:11
+#. source-sha256: 8cca93599cbb84b935bcbd44fbbaba04e38cae6e0f12525e8ab71402f3c78c2b
+msgid "Text/lj_02_ward_006/text"
+msgstr "She waves me away, and I slink back downstairs."
+
+#: res://timelines/02_ward.dtl:16
+#. source-sha256: 4c11338a7a939e2663fc0d323fcaf5c314809de4bb71bb80ef99c2131daba4a6
+msgid "Text/lj_02_ward_012/text"
+msgstr "The nurse notices the pale yellow flower basket in my hand. Her tone softens."
+
+#: res://timelines/02_ward.dtl:18
+#. source-sha256: c85f95b8f0251baf5f4d57b3a575896c20375c5c6ff88f4af9976828e0061e02
+msgid "Text/lj_02_ward_013/text"
+msgstr "“Fine. Get on in, then.”"
+
+#: res://timelines/02_ward.dtl:22
+#. source-sha256: cbb76567aad234fd435101317cb0a549c8ef3d0e5f546ad0f184effc1ef2c1d4
+msgid "Text/lj_02_ward_016/text"
+msgstr "I walk through the dim corridor and push open the door to room 5-05 on the seventh floor. The curtain is drawn."
+
+#: res://timelines/02_ward.dtl:24
+#. source-sha256: 0ad2cd7fb915381417e2280ed0c99e39fb56c215495aef40f041a46540e21a9b
+msgid "Text/lj_02_ward_017/text"
+msgstr "(Next phase: connect 08_wife_room here, covering entry into the room and opening the curtain.)"
+
+#: res://timelines/02_ward.dtl:27
+#. source-sha256: 3f30537c566fa7ab389a20a0e9b9942993998c3071b38bda1fa07867f360622f
+msgid "Text/lj_02_ward_022/text"
+msgstr "The nurse stares at the jumble of flowers in my hands and starts scolding me."
+
+#: res://timelines/02_ward.dtl:29
+#. source-sha256: ecdb254f99170948c6595c79926cdf31cf8f5c630f55f7243ff85edd7e89aae3
+msgid "Text/lj_02_ward_023/text"
+msgstr "“No manners at all. You're just going to carry those flowers in a mess like that? Couldn't you buy a basket?”"
+
+#: res://timelines/02_ward.dtl:31
+#. source-sha256: a1819b7c19ad22f2f7b1bb2d70f8b86998627d2d8d91e43dda32e1ca80bdb47b
+msgid "Text/lj_02_ward_024/text"
+msgstr "After her tirade, she steps aside anyway."
+
+#: res://timelines/02_ward.dtl:35
+#. source-sha256: cbb76567aad234fd435101317cb0a549c8ef3d0e5f546ad0f184effc1ef2c1d4
+msgid "Text/lj_02_ward_027/text"
+msgstr "I walk through the dim corridor and push open the door to room 5-05 on the seventh floor. The curtain is drawn."
+
+#: res://timelines/02_ward.dtl:37
+#. source-sha256: 0ad2cd7fb915381417e2280ed0c99e39fb56c215495aef40f041a46540e21a9b
+msgid "Text/lj_02_ward_028/text"
+msgstr "(Next phase: connect 08_wife_room here, covering entry into the room and opening the curtain.)"
+
+#: res://timelines/03_crossroads.dtl:1
+#. source-sha256: fb2c1065f057a8f379de59a77ed1f0c8439d89e80333600bf2336b498935bc96
+msgid "Text/lj_03_crossroads_000/text"
+msgstr "[color=#696969][i]※Current location: Crossroads※[/i][/color]"
+
+#: res://timelines/03_crossroads.dtl:3
+#. source-sha256: 9c11e6d64e7ce1838169683ec89612c7b07ad62e4528f98b0dfc71f1d766bfe4
+msgid "Text/lj_03_crossroads_001/text"
+msgstr "There isn't much to see at the crossroads. Hardly anyone around, either."
+
+#: res://timelines/03_crossroads.dtl:6
+#. source-sha256: 16665d903a1f2c9f60b060eb6bae688682c3e40ae40249c4b848964a3725df7c
+msgid "Text/lj_03_crossroads_003/text"
+msgstr "A bus pulls over. My neighbor leans out of a window and thrusts a sunflower into my hand."
+
+#: res://timelines/03_crossroads.dtl:8
+#. source-sha256: 0a67790c18f9ac5b4451343e260db89cfe34466cbdb83a4a07d2e9910c04b26e
+msgid "Text/lj_03_crossroads_004/text"
+msgstr "“Here. For your hospital visit.”"
+
+#: res://timelines/03_crossroads.dtl:12
+#. source-sha256: 16665d903a1f2c9f60b060eb6bae688682c3e40ae40249c4b848964a3725df7c
+msgid "Text/lj_03_crossroads_008/text"
+msgstr "A bus pulls over. My neighbor leans out of a window and thrusts a sunflower into my hand."
+
+#: res://timelines/03_crossroads.dtl:14
+#. source-sha256: 0a67790c18f9ac5b4451343e260db89cfe34466cbdb83a4a07d2e9910c04b26e
+msgid "Text/lj_03_crossroads_009/text"
+msgstr "“Here. For your hospital visit.”"
+
+#: res://timelines/03_crossroads.dtl:19
+#. source-sha256: 69bd0a7cc88ae8ac7908450a4465288b909e6f793dac76dcf16a5d5bc2d2d2d7
+msgid "Text/lj_03_crossroads_013/text"
+msgstr "The flower shop isn't far. I can walk."
+
+#: res://timelines/03_crossroads.dtl:24
+#. source-sha256: 5e272b3c3c9c2db15abf57e2ae280cb1786d75e950f08ab8fd9af2df3254506a
+msgid "Text/lj_03_crossroads_019/text"
+msgstr "I board the bus to Lion Ridge and pay the fare."
+
+#: res://timelines/03_crossroads.dtl:29
+#. source-sha256: 8db06ac5f44c56777cf5e3def1c58daff1baa776482c787f9fff91249062d194
+msgid "Text/lj_03_crossroads_025/text"
+msgstr "I board the bus to Dew Garden and pay the fare."
+
+#: res://timelines/04_flower_shop.dtl:1
+#. source-sha256: d49b60c116c351ce94a42a17abaae3585e0eb35f0210260b549b9bf5af4229b1
+msgid "Text/lj_04_flower_shop_000/text"
+msgstr "[color=#696969][i]※Current location: Flower shop※[/i][/color]"
+
+#: res://timelines/04_flower_shop.dtl:4
+#. source-sha256: c8d2269f0ed4eefd3776095aa5bbae79cbe24af5baada435320e74ccdb62fa99
+msgid "Text/lj_04_flower_shop_002/text"
+msgstr "They call it a flower shop, but it's barely two square meters, with the shutter half down. The owner looks at her phone. The buckets are full of dirt."
+
+#: res://timelines/04_flower_shop.dtl:6
+#. source-sha256: 727846776ff2d65085c3d760757de682451048f8ff26bfbede330569754e10fa
+msgid "Text/lj_04_flower_shop_003/text"
+msgstr "“No more flowers. I'm raising toads now.”"
+
+#: res://timelines/04_flower_shop.dtl:9
+#. source-sha256: 14085b0e6a8639ac1dc03dc8eefa8556eed6d89be0e12403b6cefc8c8f163e4c
+msgid "Text/lj_04_flower_shop_005/text"
+msgstr "I kick the bucket over, spilling dirt across the floor."
+
+#: res://timelines/04_flower_shop.dtl:11
+#. source-sha256: 0f2344b525f918f13bc6227513ca2a5aa90c0a90b69437b68487c9c5824edc90
+msgid "Text/lj_04_flower_shop_006/text"
+msgstr "The owner freezes for a moment. Strangely, she doesn't get angry. The corners of her mouth even curl upward."
+
+#: res://timelines/04_flower_shop.dtl:16
+#. source-sha256: 7f692b3fbc2958ec4d10f4c62ac0121e134395933b3bc060f30e97325ffed6ef
+msgid "Text/lj_04_flower_shop_011/text"
+msgstr "She raises her head, slowly fishes an earthworm out of the bucket, and holds it out to me."
+
+#: res://timelines/04_flower_shop.dtl:18
+#. source-sha256: bd294f529cdb88a2eb07d40e6276f3fd19eca93944b5d0f0c179088911221b52
+msgid "Text/lj_04_flower_shop_012/text"
+msgstr "“Then you must want this, too.”"
+
+#: res://timelines/04_flower_shop.dtl:21
+#. source-sha256: 2d10ae6ec227b2cf2fc47037b7d68a15872ebc56c999a46ea4cb2dced996e66c
+msgid "Text/lj_04_flower_shop_014/text"
+msgstr "I pinch the slippery earthworm between my fingers, a creeping unease in my chest."
+
+#: res://timelines/04_flower_shop.dtl:27
+#. source-sha256: e8aaf9c5feea09c020ff193d5c16a81745229968081afb5986cc31fb076e8495
+msgid "Text/lj_04_flower_shop_020/text"
+msgstr "“Like I'd want that.”"
+
+#: res://timelines/04_flower_shop.dtl:31
+#. source-sha256: 0e8e77ed5c2d9a553dffe458b999a8ae0902c94c757eb3259b07fdcca28ff6c2
+msgid "Text/lj_04_flower_shop_026/text"
+msgstr "The shop is closing. Head down, the owner pulls the shutter lower."
+
+#: res://timelines/04_flower_shop.dtl:33
+#. source-sha256: 6d18434e749ffd5f3ef617102436218dd4a8f7c04eac1189bcc6055b26ecc6b9
+msgid "Text/lj_04_flower_shop_027/text"
+msgstr "I don't go near it. One look from a distance, and I turn away."
+
+#: res://timelines/04_flower_shop.dtl:38
+#. source-sha256: aefe7f4a5bbe9da3d8c16ca2699aa49fd2902bfdd00a88aacf26d0ebbf7369c7
+msgid "Text/lj_04_flower_shop_033/text"
+msgstr "The flower shop is closed, its shutter pulled tight."
+
+#: res://timelines/05_shiling.dtl:1
+#. source-sha256: 6c878fd92f85d9f14872bedec04732cb28e506f7083d5eb2c1c2d46af6e1a5b4
+msgid "Text/lj_05_shiling_000/text"
+msgstr "[color=#696969][i]※Current location: Lion Ridge※[/i][/color]"
+
+#: res://timelines/05_shiling.dtl:5
+#. source-sha256: cc5baccb7084a4a6fdd05e875041aaed208c9ff2ceb38c0280377ae4f538c1c9
+msgid "Text/lj_05_shiling_003/text"
+msgstr "An old stele at the foot of Lion Ridge says that Wang Lixin once carved out a cave here. Inside lies a stone lion."
+
+#: res://timelines/05_shiling.dtl:9
+#. source-sha256: c7c4e8c9a57e31865ad075d1c7ec1fa746bb0df2d06dd46de35ad0287e5c8661
+msgid "Text/lj_05_shiling_006/text"
+msgstr "I follow the mountain path. Around the first bend, a group of vicious-looking people surrounds me."
+
+#: res://timelines/05_shiling.dtl:11
+#. source-sha256: 651e162623977c24b8c2788ae23783bf88c1a7d16efd5c26883437b60039ff50
+msgid "Text/lj_05_shiling_007/text"
+msgstr "“This is our road! Pay the toll!”"
+
+#: res://timelines/05_shiling.dtl:14
+#. source-sha256: 13652af47f33d529f94047aa29f40adda53cd8d1a9eea6aecc5f27ab40f944e2
+msgid "Text/lj_05_shiling_009/text"
+msgstr "Greasepaint cakes their faces, and plastic swords hang at their waists. They're obviously actors playing bandits."
+
+#: res://timelines/05_shiling.dtl:16
+#. source-sha256: b0c5313a537a7264179fe7a4beb711d0ad55fd252465e57c6522da8d009d5440
+msgid "Text/lj_05_shiling_010/text"
+msgstr "An iris grows on the cliff face. I reach out and pick it."
+
+#: res://timelines/05_shiling.dtl:21
+#. source-sha256: 5fa61277d1adeb8097e5a00c4b23900ffbd0c3daba50102225afe68e88b7969e
+msgid "Text/lj_05_shiling_013/text"
+msgstr "The petals are fake. The smell of plastic is sharp in my nose."
+
+#: res://timelines/05_shiling.dtl:24
+#. source-sha256: 53fa5453171f2302b9d4889d8b91f578ea4f46233cccf03311773c0325ed8933
+msgid "Text/lj_05_shiling_015/text"
+msgstr "I toss the fake flower into the grass."
+
+#: res://timelines/05_shiling.dtl:31
+#. source-sha256: ade8cf68cd7faa5c39bf6ad61cfbcb2f24701d3a4be7f4ca73249122299174fe
+msgid "Text/lj_05_shiling_020/text"
+msgstr "An iron lion crouches in the clearing ahead, spitting a stream of fire."
+
+#: res://timelines/05_shiling.dtl:35
+#. source-sha256: d76e56c4b63d8717ba2821534fe970fc24e74598918f5b7f115c776ab541342f
+msgid "Text/lj_05_shiling_023/text"
+msgstr "The farther I go, the more wrong it feels. The mountain is burning. Human shapes glow red."
+
+#: res://timelines/05_shiling.dtl:38
+#. source-sha256: 5e4bd33fe4b5a33440bc438f81ca77cb690a64979575b57ded5fb00479f7f45a
+msgid "Text/lj_05_shiling_025/text"
+msgstr "An offering table stands before the White Jade Lion Temple. A single peony sits on it."
+
+#: res://timelines/05_shiling.dtl:41
+#. source-sha256: aa6444ce1f37bca24bcea0cca104b0f92e3865acfef16a0b9868705c32c4fd20
+msgid "Text/lj_05_shiling_027/text"
+msgstr "I grab the peony and pull it out. My hand trembles. The stem is caked with mud."
+
+#: res://timelines/05_shiling.dtl:48
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_032/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:50
+#. source-sha256: 2839a0518def10fd6f6279ab9be235a3439b8012f62ccf444a7909832883c564
+msgid "Text/lj_05_shiling_033/text"
+msgstr "I retrace my steps and pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:55
+#. source-sha256: a04dcba0df1317d152278fda2bc91ec19df41551af80b284c9be19bca70e23b4
+msgid "Text/lj_05_shiling_038/text"
+msgstr "I leave the peony untouched, turn around, and head back the way I came."
+
+#: res://timelines/05_shiling.dtl:57
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_039/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:59
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_040/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:64
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_045/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:66
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_046/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:71
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_052/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:73
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_053/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:78
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_059/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:80
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_060/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:87
+#. source-sha256: ade8cf68cd7faa5c39bf6ad61cfbcb2f24701d3a4be7f4ca73249122299174fe
+msgid "Text/lj_05_shiling_068/text"
+msgstr "An iron lion crouches in the clearing ahead, spitting a stream of fire."
+
+#: res://timelines/05_shiling.dtl:91
+#. source-sha256: d76e56c4b63d8717ba2821534fe970fc24e74598918f5b7f115c776ab541342f
+msgid "Text/lj_05_shiling_071/text"
+msgstr "The farther I go, the more wrong it feels. The mountain is burning. Human shapes glow red."
+
+#: res://timelines/05_shiling.dtl:94
+#. source-sha256: 5e4bd33fe4b5a33440bc438f81ca77cb690a64979575b57ded5fb00479f7f45a
+msgid "Text/lj_05_shiling_073/text"
+msgstr "An offering table stands before the White Jade Lion Temple. A single peony sits on it."
+
+#: res://timelines/05_shiling.dtl:97
+#. source-sha256: aa6444ce1f37bca24bcea0cca104b0f92e3865acfef16a0b9868705c32c4fd20
+msgid "Text/lj_05_shiling_075/text"
+msgstr "I grab the peony and pull it out. My hand trembles. The stem is caked with mud."
+
+#: res://timelines/05_shiling.dtl:104
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_080/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:106
+#. source-sha256: 2839a0518def10fd6f6279ab9be235a3439b8012f62ccf444a7909832883c564
+msgid "Text/lj_05_shiling_081/text"
+msgstr "I retrace my steps and pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:111
+#. source-sha256: a04dcba0df1317d152278fda2bc91ec19df41551af80b284c9be19bca70e23b4
+msgid "Text/lj_05_shiling_086/text"
+msgstr "I leave the peony untouched, turn around, and head back the way I came."
+
+#: res://timelines/05_shiling.dtl:113
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_087/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:115
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_088/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:120
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_093/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:122
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_094/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:127
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_100/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:129
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_101/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:134
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_108/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:136
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_109/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:142
+#. source-sha256: ade8cf68cd7faa5c39bf6ad61cfbcb2f24701d3a4be7f4ca73249122299174fe
+msgid "Text/lj_05_shiling_117/text"
+msgstr "An iron lion crouches in the clearing ahead, spitting a stream of fire."
+
+#: res://timelines/05_shiling.dtl:146
+#. source-sha256: d76e56c4b63d8717ba2821534fe970fc24e74598918f5b7f115c776ab541342f
+msgid "Text/lj_05_shiling_120/text"
+msgstr "The farther I go, the more wrong it feels. The mountain is burning. Human shapes glow red."
+
+#: res://timelines/05_shiling.dtl:149
+#. source-sha256: 5e4bd33fe4b5a33440bc438f81ca77cb690a64979575b57ded5fb00479f7f45a
+msgid "Text/lj_05_shiling_122/text"
+msgstr "An offering table stands before the White Jade Lion Temple. A single peony sits on it."
+
+#: res://timelines/05_shiling.dtl:152
+#. source-sha256: aa6444ce1f37bca24bcea0cca104b0f92e3865acfef16a0b9868705c32c4fd20
+msgid "Text/lj_05_shiling_124/text"
+msgstr "I grab the peony and pull it out. My hand trembles. The stem is caked with mud."
+
+#: res://timelines/05_shiling.dtl:159
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_129/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:161
+#. source-sha256: 2839a0518def10fd6f6279ab9be235a3439b8012f62ccf444a7909832883c564
+msgid "Text/lj_05_shiling_130/text"
+msgstr "I retrace my steps and pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:166
+#. source-sha256: a04dcba0df1317d152278fda2bc91ec19df41551af80b284c9be19bca70e23b4
+msgid "Text/lj_05_shiling_135/text"
+msgstr "I leave the peony untouched, turn around, and head back the way I came."
+
+#: res://timelines/05_shiling.dtl:168
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_136/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:170
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_137/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:175
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_142/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:177
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_143/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:182
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_150/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:184
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_151/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:190
+#. source-sha256: ade8cf68cd7faa5c39bf6ad61cfbcb2f24701d3a4be7f4ca73249122299174fe
+msgid "Text/lj_05_shiling_159/text"
+msgstr "An iron lion crouches in the clearing ahead, spitting a stream of fire."
+
+#: res://timelines/05_shiling.dtl:194
+#. source-sha256: d76e56c4b63d8717ba2821534fe970fc24e74598918f5b7f115c776ab541342f
+msgid "Text/lj_05_shiling_162/text"
+msgstr "The farther I go, the more wrong it feels. The mountain is burning. Human shapes glow red."
+
+#: res://timelines/05_shiling.dtl:197
+#. source-sha256: 5e4bd33fe4b5a33440bc438f81ca77cb690a64979575b57ded5fb00479f7f45a
+msgid "Text/lj_05_shiling_164/text"
+msgstr "An offering table stands before the White Jade Lion Temple. A single peony sits on it."
+
+#: res://timelines/05_shiling.dtl:200
+#. source-sha256: aa6444ce1f37bca24bcea0cca104b0f92e3865acfef16a0b9868705c32c4fd20
+msgid "Text/lj_05_shiling_166/text"
+msgstr "I grab the peony and pull it out. My hand trembles. The stem is caked with mud."
+
+#: res://timelines/05_shiling.dtl:207
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_171/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:209
+#. source-sha256: 2839a0518def10fd6f6279ab9be235a3439b8012f62ccf444a7909832883c564
+msgid "Text/lj_05_shiling_172/text"
+msgstr "I retrace my steps and pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:214
+#. source-sha256: a04dcba0df1317d152278fda2bc91ec19df41551af80b284c9be19bca70e23b4
+msgid "Text/lj_05_shiling_177/text"
+msgstr "I leave the peony untouched, turn around, and head back the way I came."
+
+#: res://timelines/05_shiling.dtl:216
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_178/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:218
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_179/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:223
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_184/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:225
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_185/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:230
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_192/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:232
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_193/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:238
+#. source-sha256: ade8cf68cd7faa5c39bf6ad61cfbcb2f24701d3a4be7f4ca73249122299174fe
+msgid "Text/lj_05_shiling_201/text"
+msgstr "An iron lion crouches in the clearing ahead, spitting a stream of fire."
+
+#: res://timelines/05_shiling.dtl:242
+#. source-sha256: d76e56c4b63d8717ba2821534fe970fc24e74598918f5b7f115c776ab541342f
+msgid "Text/lj_05_shiling_204/text"
+msgstr "The farther I go, the more wrong it feels. The mountain is burning. Human shapes glow red."
+
+#: res://timelines/05_shiling.dtl:245
+#. source-sha256: 5e4bd33fe4b5a33440bc438f81ca77cb690a64979575b57ded5fb00479f7f45a
+msgid "Text/lj_05_shiling_206/text"
+msgstr "An offering table stands before the White Jade Lion Temple. A single peony sits on it."
+
+#: res://timelines/05_shiling.dtl:248
+#. source-sha256: aa6444ce1f37bca24bcea0cca104b0f92e3865acfef16a0b9868705c32c4fd20
+msgid "Text/lj_05_shiling_208/text"
+msgstr "I grab the peony and pull it out. My hand trembles. The stem is caked with mud."
+
+#: res://timelines/05_shiling.dtl:255
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_213/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:257
+#. source-sha256: 2839a0518def10fd6f6279ab9be235a3439b8012f62ccf444a7909832883c564
+msgid "Text/lj_05_shiling_214/text"
+msgstr "I retrace my steps and pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:262
+#. source-sha256: a04dcba0df1317d152278fda2bc91ec19df41551af80b284c9be19bca70e23b4
+msgid "Text/lj_05_shiling_219/text"
+msgstr "I leave the peony untouched, turn around, and head back the way I came."
+
+#: res://timelines/05_shiling.dtl:264
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_220/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:266
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_221/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:271
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_226/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:273
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_227/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:278
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_233/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:280
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_234/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:285
+#. source-sha256: c7b1f04aef1fd3dca11b19deee2d0ba353d17c6b4b25525a1111dc7c74d37cc2
+msgid "Text/lj_05_shiling_241/text"
+msgstr "I now have {flower} flowers in total."
+
+#: res://timelines/05_shiling.dtl:287
+#. source-sha256: 5410faca0e8f88efba0ffe0594df9f780d9273ac3fabcf78e3058bdfeb75cfd1
+msgid "Text/lj_05_shiling_242/text"
+msgstr "I pay two yuan for the bus back to the crossroads."
+
+#: res://timelines/05_shiling.dtl:292
+#. source-sha256: b24cb5b7b16890ad730242e5bfba522017d3686e5b911769c03d3a1c967047e9
+msgid "Text/lj_05_shiling_249/text"
+msgstr "Lion Ridge is closed now. The iron gate is securely locked from the inside."
+
+#: res://timelines/06_luyuan.dtl:1
+#. source-sha256: e00675192b4a68ca035d6acdfb549aa72c374cc2e18b85b35f18d1c2771eab1b
+msgid "Text/lj_06_luyuan_000/text"
+msgstr "[color=#696969][i]※Current location: Dew Garden※[/i][/color]"
+
+#: res://timelines/06_luyuan.dtl:4
+#. source-sha256: 9b02e8dfa31cfdfc01bca6c44e9c5dea2a5196049825172f3e3a13b5513b4d34
+msgid "Text/lj_06_luyuan_002/text"
+msgstr "Dew Garden is eight hundred years old, supposedly built by the Prince of Hailin. Admission costs four yuan. I feel in my pocket and go in anyway."
+
+#: res://timelines/06_luyuan.dtl:7
+#. source-sha256: 601f556ff77c05d7c4b477e4053931dc890d818e2bb0a4872fcd54ed4a5ca9be
+msgid "Text/lj_06_luyuan_004/text"
+msgstr "A white jade chrysanthemum blooms in the flower bed to the left. I pick it."
+
+#: res://timelines/06_luyuan.dtl:11
+#. source-sha256: cb90809b5abeb742bea4313403acb8e206e246fdee7a590b5848a1b0340dbed9
+msgid "Text/lj_06_luyuan_006/text"
+msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo off the walls."
+
+#: res://timelines/06_luyuan.dtl:14
+#. source-sha256: 0d9d833576f1bbb84fdb3332629b5f3bffdf7800a7e3e58d856b1cbc68601eb5
+msgid "Text/lj_06_luyuan_008/text"
+msgstr "A figure stands at the center of the maze."
+
+#: res://timelines/06_luyuan.dtl:16
+#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+msgid "Text/lj_06_luyuan_009/text"
+msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+
+#: res://timelines/06_luyuan.dtl:19
+#. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
+msgid "Text/lj_06_luyuan_011/text"
+msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
+
+#: res://timelines/06_luyuan.dtl:24
+#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+msgid "Text/lj_06_luyuan_016/text"
+msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+
+#: res://timelines/06_luyuan.dtl:29
+#. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
+msgid "Text/lj_06_luyuan_019/text"
+msgstr "I race out of Dew Garden."
+
+#: res://timelines/06_luyuan.dtl:34
+#. source-sha256: f335a8cf159229caea75a5ae63cf615fd72b758e55cd8e9e9e76747c3c79435c
+msgid "Text/lj_06_luyuan_026/text"
+msgstr "A green orchid climbs the low wall in the middle. I pick it."
+
+#: res://timelines/06_luyuan.dtl:38
+#. source-sha256: cb90809b5abeb742bea4313403acb8e206e246fdee7a590b5848a1b0340dbed9
+msgid "Text/lj_06_luyuan_028/text"
+msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo off the walls."
+
+#: res://timelines/06_luyuan.dtl:41
+#. source-sha256: 0d9d833576f1bbb84fdb3332629b5f3bffdf7800a7e3e58d856b1cbc68601eb5
+msgid "Text/lj_06_luyuan_030/text"
+msgstr "A figure stands at the center of the maze."
+
+#: res://timelines/06_luyuan.dtl:43
+#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+msgid "Text/lj_06_luyuan_031/text"
+msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+
+#: res://timelines/06_luyuan.dtl:46
+#. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
+msgid "Text/lj_06_luyuan_033/text"
+msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
+
+#: res://timelines/06_luyuan.dtl:51
+#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+msgid "Text/lj_06_luyuan_038/text"
+msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+
+#: res://timelines/06_luyuan.dtl:56
+#. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
+msgid "Text/lj_06_luyuan_041/text"
+msgstr "I race out of Dew Garden."
+
+#: res://timelines/06_luyuan.dtl:61
+#. source-sha256: b6d58e3418716567d09afc406297e34e6bcfd681e11b858a8f0a02c902ad8404
+msgid "Text/lj_06_luyuan_048/text"
+msgstr "A cactus flower grows in a crack between the rocks to the right. I pick it carefully."
+
+#: res://timelines/06_luyuan.dtl:65
+#. source-sha256: cb90809b5abeb742bea4313403acb8e206e246fdee7a590b5848a1b0340dbed9
+msgid "Text/lj_06_luyuan_050/text"
+msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo off the walls."
+
+#: res://timelines/06_luyuan.dtl:68
+#. source-sha256: 0d9d833576f1bbb84fdb3332629b5f3bffdf7800a7e3e58d856b1cbc68601eb5
+msgid "Text/lj_06_luyuan_052/text"
+msgstr "A figure stands at the center of the maze."
+
+#: res://timelines/06_luyuan.dtl:70
+#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+msgid "Text/lj_06_luyuan_053/text"
+msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+
+#: res://timelines/06_luyuan.dtl:73
+#. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
+msgid "Text/lj_06_luyuan_055/text"
+msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
+
+#: res://timelines/06_luyuan.dtl:78
+#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+msgid "Text/lj_06_luyuan_060/text"
+msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+
+#: res://timelines/06_luyuan.dtl:83
+#. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
+msgid "Text/lj_06_luyuan_063/text"
+msgstr "I race out of Dew Garden."
+
+#: res://timelines/07_maze_entry.dtl:1
+#. source-sha256: bffe4f4f56a40a7c5b9c32d8dbb4ce5b0d8ec81d7de0ae37c06b7ea556dfbb09
+msgid "Text/lj_07_maze_entry_000/text"
+msgstr "[color=#696969][i]※Current location: Maze※[/i][/color]"
+
+#: res://timelines/07_maze_entry.dtl:3
+#. source-sha256: d9ba41000b6cce66b4f8e927068f443b49523972907958edacd9381da2f14b34
+msgid "Text/lj_07_maze_entry_001/text"
+msgstr "The instant I step through the gate, an uncanny gust rises out of nowhere. I jump. Sand and dust whip into my eyes, and with a tremendous clang, the gate slams shut behind me."
+
+#: res://timelines/07_maze_entry.dtl:5
+#. source-sha256: 155abac40d30ace6deae3795e84432d6d8b8d8157b712c96a91240f2e7f88c92
+msgid "Text/lj_07_maze_entry_002/text"
+msgstr "I stumble two steps forward. Several hands seem to catch me through the haze. Before I can look up, a voice at my ear says, “Careful, Your Highness! Don't fall!”"
+
+#: res://timelines/07_maze_entry.dtl:7
+#. source-sha256: 5ca6a7155636fd5b3cc645cafc0b1fc2e4c79cac8dd18e3fd36e2dc89facc705
+msgid "Text/lj_07_maze_entry_003/text"
+msgstr "Who are they calling Your Highness? I focus on three unfamiliar faces, all watching me anxiously. One straightens my hem, another smooths the hair beside my ear, and the third holds my arm, reluctant to let go."
+
+#: res://timelines/07_maze_entry.dtl:9
+#. source-sha256: a6069f5c8b5efa7ddddc7ca28992c86202b38be335dd211a959f6a19fa56e7a8
+msgid "Text/lj_07_maze_entry_004/text"
+msgstr "“Where am I? And who are you?” The three pause and exchange glances. The oldest replies, “Your Highness, this is Dew Garden. There's a performance today. Won't you join us?” He points farther inside. Sure enough, lights blaze there, and the faint clinking of cups reaches my ears."
+
+#: res://timelines/07_maze_entry.dtl:11
+#. source-sha256: 8676ada389c60338910f8fd92f45d43de691ab8d875da32592c6cbdeace083f4
+msgid "Text/lj_07_maze_entry_005/text"
+msgstr "Something stirs in my chest. A delicious itch."
+
+#: res://timelines/07_maze_entry.dtl:13
+#. source-sha256: a2dc5853654bf735e5f10dafcd48bbb8611fe8f58c508c0868bafada828b3852
+msgid "Text/lj_07_maze_entry_006/text"
+msgstr "—————— This is the place I've always longed for."
+
+#: res://timelines/07_maze_entry.dtl:15
+#. source-sha256: 5ac564e2fa20e321b5249471f8dbaf5d3cf211a703333c8eae8d897ab5e508fb
+msgid "Text/lj_07_maze_entry_007/text"
+msgstr "I want to ask more, but the three slip away, bowing as they hurry off."
+
+#: res://timelines/07_maze_entry.dtl:17
+#. source-sha256: 64d0f17d989ac12086b668e3a2b59a98722be333673c59dab2d57a5b30dcd75c
+msgid "Text/lj_07_maze_entry_008/text"
+msgstr "That's life. One moment I'm an ordinary citizen; the next, I'm {player_name}, revered by thousands! Frankly, this position suits my bearing much better."
+
+#: res://timelines/07_maze_entry.dtl:19
+#. source-sha256: 1288000b8f797a8e08be85e371d902f8894b5cfe7cf725040ac9c1735feaa7e0
+msgid "Text/lj_07_maze_entry_009/text"
+msgstr "I'm the ruler here now. I want flowers by the armful, and money by the heap! Who would dare refuse me? Chest out, I swagger into the garden."
+
+#: res://timelines/07_maze_entry.dtl:21
+#. source-sha256: 786184d2ce86a751018cdd6950e7ce9e5c1adf1b051ac6b0e781990ece03c709
+msgid "Text/lj_07_maze_entry_010/text"
+msgstr "But I can't get my bearings. I should:"
+
+#: res://timelines/07_maze_exit.dtl:1
+#. source-sha256: bffe4f4f56a40a7c5b9c32d8dbb4ce5b0d8ec81d7de0ae37c06b7ea556dfbb09
+msgid "Text/lj_07_maze_exit_000/text"
+msgstr "[color=#696969][i]※Current location: Maze※[/i][/color]"
+
+#: res://timelines/07_maze_exit.dtl:3
+#. source-sha256: d54026ab80a0415657fb867fedd3c54acdbbbdd9cd76bd83b2277c4e612c12ec
+msgid "Text/lj_07_maze_exit_001/text"
+msgstr "Wind pours in from the alley. White glue still marks the split at the toe of his leather shoe. The protagonist stands by the road, a few flowers weighing heavily against his chest. The purple-gray daylight seems filtered through old glass."
+
+#: res://timelines/07_maze_exit.dtl:4
+#. source-sha256: 985c83f3ec791c5af4a06d507fb4ef8838bbb1f9ba4d7527c31647d6c7dbe2db
+msgid "Text/lj_07_maze_exit_002/text"
+msgstr "He looks down at himself and admits that this journey has already crushed his dreams of being a prince. But someone is still waiting up ahead. Whatever happens, he has to reach her."
+
+#: res://timelines/07_maze_exit.dtl:7
+#. source-sha256: 1027af3c9566525170e8f1fc03cf1a9bf1904a68b8e40861da3e989ddfb6f851
+msgid "Text/lj_07_maze_exit_004/text"
+msgstr "Clutching the front of his coat, the protagonist follows the gray road toward the inpatient building."
+
+#: res://timelines/07_maze_left.dtl:1
+#. source-sha256: bffe4f4f56a40a7c5b9c32d8dbb4ce5b0d8ec81d7de0ae37c06b7ea556dfbb09
+msgid "Text/lj_07_maze_left_000/text"
+msgstr "[color=#696969][i]※Current location: Maze※[/i][/color]"
+
+#: res://timelines/07_maze_left.dtl:3
+#. source-sha256: c98d754c3205accacbefe942af37bcbc3a10433c69b81e5779d6ecc731c4d8b7
+msgid "Text/lj_07_maze_left_001/text"
+msgstr "The path leads through an archway into a garden. There is supposed to be a performance, but no stage; he wants flowers, but the lush plants bear none. A man in purple robes calls, “Well now, His Highness is here!” He clamps onto the protagonist's left arm and drags him into the crowd. When the protagonist tries to pull free, the grip tightens. The man whispers, “Your Highness, that woman from last month—her husband has been killed. Heh heh. She's being brought to you as we speak.”"
+
+#: res://timelines/07_maze_left.dtl:6
+#. source-sha256: 56bfdfe7a428c0bc44ad0fa2fcd60f9756b8a554e181aedc24bbc9d191177cde
+msgid "Text/lj_07_maze_left_003/text"
+msgstr "He freezes for a second, then grins, showing rows of perfect teeth, his eyes glinting gold. He claps the protagonist hard on the back. “Your Highness! This wasn't my killing. You were the one who wanted him dead!”"
+
+#: res://timelines/07_maze_left.dtl:7
+#. source-sha256: 31eaaa78040e67f75d6edf7117e10042b86880d5d19b3f506a59668beb6e5442
+msgid "Text/lj_07_maze_left_004/text"
+msgstr "The protagonist senses danger and wants to flee. His trapped hand has gone numb; no blood can get through. His left hand must be done for."
+
+#: res://timelines/07_maze_left.dtl:8
+#. source-sha256: 7e15773f92db02c1b5529f6891dbfd92a8f0f8fd68dae885b7b94401501fb6b7
+msgid "Text/lj_07_maze_left_005/text"
+msgstr "Seeing his blank stare, the man asks, “Are you unwell, Your Highness? Where has your enthusiasm gone today?” He hauls the protagonist to the rockery maze entrance. “Go on in, Your Highness. Everything is ready.”"
+
+#: res://timelines/07_maze_left.dtl:12
+#. source-sha256: e98e90004e351893981d518195e479199fac98cabb7c83dbcda6e3aa159763c7
+msgid "Text/lj_07_maze_left_009/text"
+msgstr "He mutters suspiciously, “Huh? You want the man too?” Then, “Very well, Your Highness. I'll have someone dig him up in a moment,” as he drags the protagonist to the rockery maze entrance."
+
+#: res://timelines/07_maze_left.dtl:13
+#. source-sha256: b47dcf553a4eedc59b8c7480985298fb7fe1ed1cd17d550a4cd1c90fc7a29901
+msgid "Text/lj_07_maze_left_010/text"
+msgstr "“Go on in, Your Highness. Everything is ready.”"
+
+#: res://timelines/07_maze_left.dtl:14
+#. source-sha256: 88fe9ca3cb1c57cc4371b9039e6b625d0b7cf68291ade7d4c588585b772499e2
+msgid "Text/lj_07_maze_left_011/text"
+msgstr "The protagonist asks what is ready, saying that this rockery maze would take two minutes to walk through. “You'll see when you get inside! Come now, don't keep us waiting.” With that, the man gives him a hard shove."
+
+#: res://timelines/07_maze_middle.dtl:1
+#. source-sha256: bffe4f4f56a40a7c5b9c32d8dbb4ce5b0d8ec81d7de0ae37c06b7ea556dfbb09
+msgid "Text/lj_07_maze_middle_000/text"
+msgstr "[color=#696969][i]※Current location: Maze※[/i][/color]"
+
+#: res://timelines/07_maze_middle.dtl:3
+#. source-sha256: 1df2aa041a4fa34bd2f0074f0029be6dafc7e6e1d5f21e964489ceeec10d68e9
+msgid "Text/lj_07_maze_middle_001/text"
+msgstr "The rockery passage grows narrower, the wind muffled between stone walls. Suddenly a fragrance reaches his nose, like a green orchid, so intense that it hardly seems of this world. Following the scent, the protagonist looks up and finds a green orchid blooming in a crack. He has never seen that color before. He can't resist picking it and slipping it into his sleeve pocket."
+
+#: res://timelines/07_maze_middle.dtl:6
+#. source-sha256: ed39e33eec28fde556cf9eee1d64bf20003316a81e34295f1b91756fc151727d
+msgid "Text/lj_07_maze_middle_003/text"
+msgstr "Deeper in the rockery grows a clump of cacti, thick with spines. The protagonist reaches through them for a flower. The moment he snaps it off, a long, thin cut opens across his palm. Beads of blood seep out."
+
+#: res://timelines/07_maze_middle.dtl:7
+#. source-sha256: 755cd7541c6d0a2bf778449a165915c1c7c0152eab989f885a63ff846f00b509
+msgid "Text/lj_07_maze_middle_004/text"
+msgstr "Looking at the wound, he suddenly thinks he may not be as powerful as he imagined. He hopes he isn't exceptional. Not at this moment, at least."
+
+#: res://timelines/07_maze_middle.dtl:11
+#. source-sha256: 698f89d9948c71225297dbe99d7ae1c84432732baba0dba8db85778103105ab2
+msgid "Text/lj_07_maze_middle_008/text"
+msgstr "The green orchid is tucked into his sleeve, its fragrance still clinging to his fingers. The protagonist skirts the cacti and heads toward the center of the rockery."
+
+#: res://timelines/07_maze_middle.dtl:15
+#. source-sha256: 90a9a962c77d54a7512ca967f2d6927b9503abe358e0f325ccdf0ed660c39ab6
+msgid "Text/lj_07_maze_middle_012/text"
+msgstr "He has the flower, but his palm won't stop tingling. Gripping the cactus flower, the protagonist walks on, turning that small cut over in his mind. The more he thinks, the hollower he feels."
+
+#: res://timelines/07_maze_middle.dtl:19
+#. source-sha256: 057b11434272531b304528111c519c9f5e13af3e900bfe6ad03c9523947c3ed8
+msgid "Text/lj_07_maze_middle_015/text"
+msgstr "A woman stands at the center of the rockery, dressed in fine robes with a gold hairpin. Her features are beautiful enough, but she is too still to seem alive. A round blue hydrangea rests on her head. Her eyes are so clouded that the pupils are almost invisible; fine threads lift her eyelids, their ends sewn into her eyebrows. Her lips move slightly, her throat squeezing out an indistinct song. The words are unintelligible, as though she is singing to the air. Her arms hang limp, the backs of her hands covered in unreadable talismans. Her fingertips tremble."
+
+#: res://timelines/07_maze_middle.dtl:20
+#. source-sha256: f52265d36a7da268b29e84743a5fe2fbb676ffcdd1836dcf85bb090ed24845bc
+msgid "Text/lj_07_maze_middle_016/text"
+msgstr "What is she? How is she standing?"
+
+#: res://timelines/07_maze_middle.dtl:26
+#. source-sha256: 91bf77636be3fbe9ee836f60a5a2eaf84884e40e9ae2c91deaa758097f305164
+msgid "Text/lj_07_maze_middle_021/text"
+msgstr "He steps closer. A pole passes through the back of her clothing. Her sash is bound tightly around it, and the pole is driven into the ground, pinning her in the center of the rockery. Suddenly he understands what “Everything is ready” meant. This is a hell stripped of all humanity."
+
+#: res://timelines/07_maze_middle.dtl:27
+#. source-sha256: 6d4234d7fa24ea90df87df5c0548457f1a688c82df97f0b02a74def70a426616
+msgid "Text/lj_07_maze_middle_022/text"
+msgstr "The world seems to spin, everything lurching sideways. He staggers backward, his throat tightening. “Animals. You're animals... I can't be a prince. I can't!”"
+
+#: res://timelines/07_maze_middle.dtl:36
+#. source-sha256: 1c7f12a13a97a042097540c8384761ae58f52b4a9ae66d90c685cec2ff18eb5a
+msgid "Text/lj_07_maze_middle_030/text"
+msgstr "The protagonist forgets everything else and runs, bowling over anyone in his way as he bursts through the gate. A split opens at the toe of his leather shoe, the leather peeling back to reveal traces of white glue."
+
+#: res://timelines/07_maze_middle.dtl:37
+#. source-sha256: 202da085ae3f7f1df6a3a42fb4cf5c00a7372c7e4f8bccc17e7b1c4bf96ccf45
+msgid "Text/lj_07_maze_middle_031/text"
+msgstr "He doesn't stop until the crossroads. Looking down, he counts the flowers in his arms and brushes dust off his clothes. When he looks up, the sun is purple-gray, as if something has veiled it."
+
+#: res://timelines/07_maze_middle.dtl:41
+#. source-sha256: c2c15ab4747815623a7773f0f10673a41c01a992bb649bfbef06ddc30f78a553
+msgid "Text/lj_07_maze_middle_034/text"
+msgstr "The protagonist struggles to his feet, falls again, and finally braces his elbow against her shoulder to pull off the blue hydrangea. Her body is rigid, unlike a normal person's."
+
+#: res://timelines/07_maze_middle.dtl:42
+#. source-sha256: 19eb1724de20200dc703256650072198de3025d7447ff5d7b2e083c9f0bcae22
+msgid "Text/lj_07_maze_middle_035/text"
+msgstr "Clutching the flower, he suddenly admits, “I don't have the courage to be a ruler. Cruelty and violence aren't my strengths. I'm just an ordinary person.”"
+
+#: res://timelines/07_maze_right.dtl:1
+#. source-sha256: bffe4f4f56a40a7c5b9c32d8dbb4ce5b0d8ec81d7de0ae37c06b7ea556dfbb09
+msgid "Text/lj_07_maze_right_000/text"
+msgstr "[color=#696969][i]※Current location: Maze※[/i][/color]"
+
+#: res://timelines/07_maze_right.dtl:3
+#. source-sha256: 4f017c5f4ae38f582a2296e44d34c07c3a41796c49ef81aa797219c5c0fe875f
+msgid "Text/lj_07_maze_right_001/text"
+msgstr "I walk slowly along the winding path. Suddenly, voices drift over the wall. I tiptoe to a lattice window and peer through thick bamboo leaves at two people. One is dressed plainly. The other wears a black cloak, with a long gray-white beard and his hair in a topknot. Intricate patterns cover the cloak, like scorpions with human heads. Eavesdropping will probably take some effort (Energy -15)."
+
+#: res://timelines/08_wife_room.dtl:1
+#. source-sha256: 7d00577939e19e4ae4f6816bc3e7d3134691b2d0752cd0a94edd40f3def1390c
+msgid "Text/lj_08_wife_room_000/text"
+msgstr "[color=#696969][i]※Current location: My wife's hospital room※[/i][/color]"
+
+#: res://timelines/08_wife_room.dtl:4
+#. source-sha256: 99c9c3b1ec20cd6ae3d95f2ae9fc315d00be25fb2589b0d35a2d4aa5b2c4ad9f
+msgid "Text/lj_08_wife_room_002/text"
+msgstr "So much has happened today. I'm ready to tell my wife everything. Once she hears these stories, she'll understand how much I've done for her. I walk slowly toward her bed. The curtain is drawn. She and a nurse are talking behind it."
+
+#: res://timelines/08_wife_room.dtl:5
+#. source-sha256: fb67d2d118e46841e2e8c77d68eade00f5b6f63d4c00f88534abc0ed82909a2c
+msgid "Text/lj_08_wife_room_003/text"
+msgstr "“Is your husband coming today?”"
+
+#: res://timelines/08_wife_room.dtl:6
+#. source-sha256: 5b905cfa390ac2efb84ba77bfc126791de089fca95ccb655b941309404a15f37
+msgid "Text/lj_08_wife_room_004/text"
+msgstr "“I don't know. I don't care whether he comes.”"
+
+#: res://timelines/08_wife_room.dtl:7
+#. source-sha256: 2ab941f594d4b14fce15c056f62b4593e9caa34242fb8a7bda2bf84b740c7638
+msgid "Text/lj_08_wife_room_005/text"
+msgstr "“He brought nothing last time. I don't know who let him in.”"
+
+#: res://timelines/08_wife_room.dtl:8
+#. source-sha256: c9a0ff99be7579b8c000a947844d432be6723ab57c9d937b17735b5ea62edd5c
+msgid "Text/lj_08_wife_room_006/text"
+msgstr "“I'd rather he stayed away. Every time he comes, he acts like he's done something incredible. A simple hospital visit is an impossible feat for him.”"
+
+#: res://timelines/08_wife_room.dtl:9
+#. source-sha256: 24b32f10e157dc0c8fd86a8bcc727a2a866e3c8ee8e30c337280e00945c31538
+msgid "Text/lj_08_wife_room_007/text"
+msgstr "“He's your husband. The law says he has to come.”"
+
+#: res://timelines/08_wife_room.dtl:12
+#. source-sha256: 33bac98d9144d9582eb7abd04bcc18daa60451174d959862556cae7664273497
+msgid "Text/lj_08_wife_room_009/text"
+msgstr "I pull the curtain aside and meet the nurse's eyes. This time, I'm not empty-handed. I've brought {flower} flowers. “Your husband's here,” she tells my wife, then leaves."
+
+#: res://timelines/08_wife_room.dtl:13
+#. source-sha256: 4f38a0de533a38519ae67d664cbe1fedbdd341f64ed21d4c9f9b778e880b6a89
+msgid "Text/lj_08_wife_room_010/text"
+msgstr "My wife says nothing. She sits on the bed, facing the window, refusing to look at me."
+
+#: res://timelines/08_wife_room.dtl:14
+#. source-sha256: 6f655e6a2e1b3141675f8a8a6897e40aa9f841fa5d1777d20d7994b6d4d03559
+msgid "Text/lj_08_wife_room_011/text"
+msgstr "I put the flowers on her bedside cabinet and sit down nearby. Each of us waits for the other to speak. I'm desperate to tell her what happened in Dew Garden. My shoes are ruined; I ran into that neighbor I can't stand; and that damned idiot woman selling toadspawn—if it weren't for her, I'd have been here ages ago. I can't hold it in any longer."
+
+#: res://timelines/08_wife_room.dtl:15
+#. source-sha256: 91db5941b7a09799c0bddbbc8a082fa55edc742084674173794db1f55627d559
+msgid "Text/lj_08_wife_room_012/text"
+msgstr "“I wore out my shoes just getting here today.” She turns sharply. “Then don't come if your shoes are ruined!” Why is she suddenly so angry? I don't understand. I've worn these shoes for six or seven years. She's never offered to replace them. Now they're ruined, and she still couldn't care less."
+
+#: res://timelines/08_wife_room.dtl:16
+#. source-sha256: 3ded6e1214e69d56036ea4459e40fd0fb5dff1f468260d52fc1a7262e8e97c8c
+msgid "Text/lj_08_wife_room_013/text"
+msgstr "“I saw a living corpse in Dew Garden!” I lead with my most shocking encounter. Surely she'll want to know what happened. If she asks, I'll pour it all out, holding nothing back, beating my chest with every word."
+
+#: res://timelines/08_wife_room.dtl:17
+#. source-sha256: f0b3c8a42e6d54498f256ad98af654062829cbe80a2de020581fa39a36113b93
+msgid "Text/lj_08_wife_room_014/text"
+msgstr "“What time did you say you'd be here? And what time is it now? I've been waiting for you without even eating! If you're going to be late, at least call, so I can make other plans.” My wife ignores everything I've said. I feel angry and afraid at once. My mind goes blank. I don't know what I could possibly say to get her attention, to start telling her what's in my heart."
+
+#: res://timelines/08_wife_room.dtl:18
+#. source-sha256: 46c613b5427f426bdf53dca7c9ab63813655491bee2e0b6c7ed5b05ccfb49881
+msgid "Text/lj_08_wife_room_015/text"
+msgstr "“Did you feed the earthworm at home?” she asks. I can't answer at once. It escaped the day after she was admitted, and I haven't dared tell her. “Where's the earthworm?!” she demands angrily."
+
+#: res://timelines/08_wife_room.dtl:21
+#. source-sha256: ffa1149c65ca594efb04f01b2b7ec52d72b5d7e3d8fe296ca5c3d6465b064acc
+msgid "Text/lj_08_wife_room_018/text"
+msgstr "I take the earthworm out of my pocket. It isn't ours, but all earthworms look alike. She won't know the difference. Seeing that I can produce one, her expression softens a little."
+
+#: res://timelines/08_wife_room.dtl:24
+#. source-sha256: 4b238f10d5854469fba5ac3b486659b9f7e42a0699a63206a091798a681a2bd1
+msgid "Text/lj_08_wife_room_020/text"
+msgstr "“Have you no shame? Mixing fake flowers in with real ones. Nobody else is this shameless.”"
+
+#: res://timelines/08_wife_room.dtl:25
+#. source-sha256: 969a75742c186e870b51f1f98b3182ba88fed18ba7ea71c943bdaa89b9c0e08e
+msgid "Text/lj_08_wife_room_021/text"
+msgstr "“The flower shop owner stopped selling flowers,” I say desperately. “I searched the whole town. These were all I could find.”"
+
+#: res://timelines/08_wife_room.dtl:26
+#. source-sha256: 3fbc19ad0905bb05d72fc1a8d41f64193a56382f3d706704aa49bcf32fe62e18
+msgid "Text/lj_08_wife_room_022/text"
+msgstr "She snorts. “Then how did the person in the next bed manage to buy some?”"
+
+#: res://timelines/08_wife_room.dtl:27
+#. source-sha256: 25987fdd82e5c74a449c1d4ffeb56467b386267ada294dd74089cfd3155bff2f
+msgid "Text/lj_08_wife_room_023/text"
+msgstr "I'm speechless. How should I know how the person in the next bed got flowers?! That woman selling toadspawn really is targeting me. She must wait until I'm about to buy flowers, then switch to something else!"
+
+#: res://timelines/08_wife_room.dtl:29
+#. source-sha256: 96c31a4097941b9ef1e170f37fbbfe6fde60bedf63b58689fc9d9e4c65cd3be9
+msgid "Text/lj_08_wife_room_026/text"
+msgstr "“You just picked these up outside, didn't you? Too cheap to buy any?”"
+
+#: res://timelines/08_wife_room.dtl:30
+#. source-sha256: 969a75742c186e870b51f1f98b3182ba88fed18ba7ea71c943bdaa89b9c0e08e
+msgid "Text/lj_08_wife_room_027/text"
+msgstr "“The flower shop owner stopped selling flowers,” I say desperately. “I searched the whole town. These were all I could find.”"
+
+#: res://timelines/08_wife_room.dtl:31
+#. source-sha256: 43d9a8f8fc6b949c5fb1cc522bd766a7eb776333439fb931ff4dc20ff941d35a
+msgid "Text/lj_08_wife_room_028/text"
+msgstr "She gives a cold snort. Clearly, she doesn't believe me."
+
+#: res://timelines/08_wife_room.dtl:33
+#. source-sha256: 94b2a90e5903726a6f53e0c17b628cdb48b125f48045d32ca867c08ecc3e3f83
+msgid "Text/lj_08_wife_room_032/text"
+msgstr "“I'm so disappointed in you! We have no money as it is, and you don't lift a finger! Get out! I don't want to see you!”"
+
+#: res://timelines/08_wife_room.dtl:35
+#. source-sha256: fb78bbb3002460a20f451d474b1110b5df0e10d4768278ac0d97eb82dfaefab2
+msgid "Text/lj_08_wife_room_034/text"
+msgstr "“When can you leave the hospital?” It's the last thing I ask her."
+
+#: res://timelines/08_wife_room.dtl:36
+#. source-sha256: e13533ff8159456aca6f098f5a428bda5355712341cef7c30c1b835ef444a9f5
+msgid "Text/lj_08_wife_room_035/text"
+msgstr "“Look at my fingers. They've grown together. My hair has turned to noodles; it snaps when you touch it. And you ask when I can leave? I don't want to keep telling you off, but what have you ever done for this family?”"
+
+#: res://timelines/08_wife_room.dtl:37
+#. source-sha256: 106aaba63ed85650982f748b18d1958d09549b15c99561591e1391f5648bf80a
+msgid "Text/lj_08_wife_room_036/text"
+msgstr "...There's nothing left to say. Today's journey will remain my secret forever. Nobody wants to know. Nobody wants to listen. I get up and head for the door. My wife is still scolding me. If I'd known, I shouldn't have gone out today. I should have pretended I'd forgotten the alarm. Pretended I was sick too."
+
+#: res://timelines/08_wife_room.dtl:38
+#. source-sha256: 14f147544962b9b93451dce1abe172b5712e5d3aa0ef9d6f05a01c19c6ba1ec8
+msgid "Text/lj_08_wife_room_037/text"
+msgstr "A familiar pain stings my eyes. My vision blurs, everything overlaid with a sheet of rippled, wet glass. I avoid the crowded elevator and slip quietly down the stairs. All the while I keep wondering: what is this place? I don't mean this hospital. I mean this place where I live. What is it? How can I escape?"
+
+#: res://timelines/08_wife_room.dtl:39
+#. source-sha256: f2e229f6b5539c4da0944e49ca4f7e07c03df201a48d49ccace20d8b8846ddfa
+msgid "Text/lj_08_wife_room_038/text"
+msgstr "Lost in thought, I keep muttering, “What is this place?” A hand grabs my hair. The crooked-mouthed nurse pulls me close. Making sure no one is listening, she shields her mouth with one hand, leans into my ear, and tells me: this is a place where you die with nowhere to be buried."
+
+#: res://timelines/09_ending.dtl:1
+#. source-sha256: f323adac0b07465b9637d7da516014c57acf5315bda4d89f825b25181a8fa338
+msgid "Text/lj_09_ending_000/text"
+msgstr "[color=#696969][i]※Current location: Ending※[/i][/color]"
+
+#: res://timelines/09_ending.dtl:3
+#. source-sha256: b6bac85e9790bb8146350c8c5907f354edc7fe9a8d09bd55fe37f3716c77982e
+msgid "Text/lj_09_ending_001/text"
+msgstr "A place where you die with nowhere to be buried."
+
+#: res://timelines/09_ending.dtl:5
+#. source-sha256: 84592ae8aa1badcbbe582b3f128c77984de5eb070338fdddcf9b26628d3886b9
+msgid "Text/lj_09_ending_002/text"
+msgstr "The words fall into my ear like ash settling on water. I stand motionless. The crooked-mouthed nurse has already let go and slipped into the shadows of the corridor, as if she'd never been there."
+
+#: res://timelines/09_ending.dtl:7
+#. source-sha256: ae1448709256c55a09b0e7cd0aa66272438165391762cde3e78c848aa4eeb413
+msgid "Text/lj_09_ending_003/text"
+msgstr "One light in the stairwell has gone out. Another buzzes above my head. I steady myself against the wall and descend one step at a time. The scrape of my soles against concrete echoes through the empty building. There is no exit here, no one coming to take me home. My wife is still lying upstairs, her fingers grown together, her hair breaking at a touch. And downstairs, I finally admit that I can't leave this hospital either."
+
+#: res://timelines/09_ending.dtl:9
+#. source-sha256: 9a74a64a8d00651c631a809075ce498bf1eb3f1bbcb54a33bcb341bfa6e62671
+msgid "Text/lj_09_ending_004/text"
+msgstr "When I left home this morning, I was still counting the coins in my pocket, still fretting over those crumpled flowers. Now the flowers are gone and my shoes are torn. I can't even say how far I've traveled, or how many people I've seen who should never have been there. All I know is that from now on, no day will ever truly dawn."
+
+#: res://timelines/09_ending.dtl:11
+#. source-sha256: 21ef77aa6ac3c400e8d212870af0704c56291bc8fe5776f572e5b2c3db930e2d
+msgid "Text/lj_09_ending_005/text"
+msgstr "I push open the doors of the inpatient building. Outside lies the same gray road. It is neither dark nor light. I take one step, then a second, then a third. I keep walking until the door closes behind me with a dull thud."
+
+#: res://timelines/09_ending.dtl:13
+#. source-sha256: 3baed293f122bb7370b70b73d49565a7f6273d26501a72716c5cc6112d8771a6
+msgid "Text/lj_09_ending_006/text"
+msgstr "This is a place where you die with nowhere to be buried. And I have nowhere left to go, nowhere to escape."
+
+#: res://timelines/10_morgue.dtl:1
+#. source-sha256: 581710bdef2132a05dbcc60904512431c983e7fd25c54a6049b6292d11bc358a
+msgid "Text/lj_10_morgue_000/text"
+msgstr "[color=#696969][i]※Current location: Hospital — Morgue※[/i][/color]"
+
+#: res://timelines/10_morgue.dtl:5
+#. source-sha256: eb61cc9dd81d73b051ee91e34901fb10ac0510c5baf28824713de5ec695726bc
+msgid "Text/lj_10_morgue_003/text"
+msgstr "They say you can find good things in the morgue. I take a narrow path over to try my luck. If I do find something, my wife ought to be pleased."
+
+#: res://timelines/10_morgue.dtl:7
+#. source-sha256: 1250c93429a91a13dc4b62dc39794bc469f7062560fbeb575e300cca5d8bfcc0
+msgid "Text/lj_10_morgue_004/text"
+msgstr "I look around carefully. A few bodies still await burning on the floor, not laid out very neatly. Some relatives are howling nearby. Ah, life is decreed by heaven. When it's time to die, you die. The King of the Underworld doesn't care whether you cry. Your fate is set at birth, every detail written in his ledger. What good is crying?"
+
+#: res://timelines/10_morgue.dtl:11
+#. source-sha256: 3d87757ab491a2a9328d98152f79d120e65b1d7b4a673c8d99d2f21b7572e900
+msgid "Text/lj_10_morgue_007/text"
+msgstr "To the sound of their sobbing, I find several flower baskets in the morgue's trash bin. The flowers have all burned away, leaving empty baskets dusted with ashes. Luckily, one is fairly intact. I lift it and give it a shake. A pale yellow basket woven from earthworms, satisfyingly weighty in the hand and just the right size."
+
+#: res://timelines/10_morgue.dtl:13
+#. source-sha256: fa48fd0f47cb4aa248a3216efee1d0434acd5312d39ba3809ae97b122822e839
+msgid "Text/lj_10_morgue_008/text"
+msgstr "I can use it to carry flowers."
+
+#: res://timelines/10_morgue.dtl:21
+#. source-sha256: d6da48a33e298ad52938b42ce73b439c2d6bc9b8800e07682bcc48a287265cc7
+msgid "Text/lj_10_morgue_019/text"
+msgstr "Back at the morgue. The people who were crying are leaving now, supporting one another, wiping their tears with red cloths. They mutter words only they can hear. The weather is still dreadful, as though snow is coming. The clouds have turned very white, the sky grayer by the moment."
+
+#: res://timelines/10_morgue.dtl:26
+#. source-sha256: 5ed24a404ada297e8aa8baa9849df6b23c8b70baf960907f131aaaa942d1b737
+msgid "Text/lj_10_morgue_025/text"
+msgstr "No one is left here. I take off my glasses, breathe on the lenses, and wipe them a little cleaner."
+
+#: res://timelines/timeline1_0.dtl:1
+#. source-sha256: 8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4
+msgid "Text/lj_timeline1_0_000/text"
+msgstr "Hi"
+
+#. source-sha256: 17333bcf36913610f4ecd20bfc6fcae9265c4d4dfda72456129a2a894fc20044
+msgid "ending.applied"
+msgstr "Applied: energy={energy}, calm={calm}, money={money}"
+
+#. source-sha256: 6e4baf459811e74cdf1a8a1f1f324a9157172c9feae0324401fda0183a684494
+msgid "ending.ending_bankrupt"
+msgstr "Penniless"
+
+#. source-sha256: 25b6621430210c43e8f28d3364c3aeb31fb8082ae508dd0fc838c4a1ce728a8c
+msgid "ending.ending_crazy"
+msgstr "Lost to Madness"
+
+#. source-sha256: 201d890d0cb2b5a573ad7e98e506e442b5c086ef3be5b0a33a9484f60c850ba0
+msgid "ending.ending_exhausted"
+msgstr "Exhausted"
+
+#. source-sha256: db8b9c70a59f2a5b431131a782be7973435cedf97ae0fd61d5e59d0aec3e8788
+msgid "ending.triggered"
+msgstr "Ending triggered: {ending}"
+
+#. source-sha256: 5d8dfabe2e62a762f3796c28ab26c6a497bb7419ff09e962072b71b711cc7c57
+msgid "history.choice"
+msgstr "[Choice] {text}"
+
+#. source-sha256: 39d7e6e4605eab1704e0ef074c84aa16965faffc8089955d02eda54916ebf210
+msgid "history.speaker"
+msgstr "{name}: {text}"
+
+#. source-sha256: 9769b4f7ded19c9ab58cd839bc775650669c83bfd8a7bbb1bb9cf07c47ebb8a1
+msgid "hud.flower"
+msgstr "Flowers: {value}"
+
+#. source-sha256: 43f3362aeb780b18b8ad7cbae729f1f1f035ae01510676e1e0c3f4714618a8ec
+msgid "hud.money"
+msgstr "Money: {value}"
+
+#. source-sha256: 9937e365aaf3a0854053a3179584ad9cd82e1164ea8535b50c1e6ae7102b373c
+msgid "locale.name"
+msgstr "English"
+
+#. source-sha256: c47b54e84e79d77fcdfe73e00633b201671bffd0700ef8052faae4a19bfaae77
+msgid "lore.category.characters"
+msgstr "Characters"
+
+#. source-sha256: c560201b331c54435b445baebe03b8922d6ef6a80065411ed3f379eb8bef9848
+msgid "lore.category.events"
+msgstr "Events"
+
+#. source-sha256: 7c89d6ebe1f9c88d2311dfd23e5757aa5d3c1eee1090c7ad3806788cbb1ccf91
+msgid "lore.category.items"
+msgstr "Items"
+
+#. source-sha256: 253ac66fb8e1032b4270f243c922faecd98a1cbe5e3c772707586f94e1a3e09e
+msgid "lore.category.locations"
+msgstr "Locations"
+
+#. source-sha256: 0d643c550acab13c716ca9cb61204c1ac742f3fc707b7ffbcc5419e577bb5ea4
+msgid "lore.category.plot-threads"
+msgstr "Plot Threads"
+
+#: res://lore/characters/flower-shop-owner.md
+#. source-sha256: 40dda188d51466b0cf2baa32ce00b0d122b3f30d09fea0ce3b28131def80bc82
+msgid "lore.characters.flower-shop-owner.body"
+msgstr "# Flower Shop Owner\n\n- Status: alive\n- First appearance: Flower Shop (`04_flower_shop`)\n- Current location: [Flower Shop](locations/flower-shop.md)\n- Age/birthday: unknown\n- Identity/occupation: Flower Shop Owner\n- Relationships: [Nameless King](characters/protagonist.md) - Customer\n- Items: unknown\n- Known information:\n  - Looks down at her phone in the flower shop; interacts only after the player enters. (Source: docs/Dialogic_Implementation_Guide.md)\n  - Can provide an earthworm; options involving the flower basket (hualan) and fake flower (jiahua) begin here. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 04_flower_shop, Repeat visits are possible (tracked by visit_huadian)"
+
+#: res://lore/characters/flower-shop-owner.md
+#. source-sha256: 8d4d508102938f853e90c1f1fface1b86176535fd240d82f5901e9ab0fcd5e3a
+msgid "lore.characters.flower-shop-owner.summary"
+msgstr "Looks down at her phone in the flower shop; interacts only after the player enters."
+
+#: res://lore/characters/flower-shop-owner.md
+#. source-sha256: 52428f77de9ae253dd21b1d1ea92ba607f7a569bdb93e9aabd2f9d527ed01db4
+msgid "lore.characters.flower-shop-owner.title"
+msgstr "Flower Shop Owner"
+
+#: res://lore/characters/nurse.md
+#. source-sha256: 9d20b224baaae800308c545b24cf5b99d72454ec06e71cceb131b249dbb2b1f0
+msgid "lore.characters.nurse.body"
+msgstr "# Nurse\n\n- Status: alive\n- First appearance: Inpatient checkpoint (`02_ward`)\n- Current location: [Inpatient Ward / Morgue](locations/ward.md)\n- Age/birthday: unknown\n- Identity/occupation: Inpatient nurse\n- Relationships: [Nameless King](characters/protagonist.md) - Blocks his path\n- Items: unknown\n- Known information:\n  - Allows entry to the room only when flower >= 5. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 02_ward"
+
+#: res://lore/characters/nurse.md
+#. source-sha256: a3672b8ce9efdc56e806823a5158b88a44b15795dc3a5f83b6162911d11636b9
+msgid "lore.characters.nurse.summary"
+msgstr "Allows entry to the room only when flower >= 5."
+
+#: res://lore/characters/nurse.md
+#. source-sha256: 33ebf04d5d9944045e66aac5d284c3a2d94e9f307b0c28daae87349a26affedd
+msgid "lore.characters.nurse.title"
+msgstr "Nurse"
+
+#: res://lore/characters/protagonist.md
+#. source-sha256: bc680e9083e1e79920aed0a9f05f145d6725902e4650cdc5c951cd80d4a2a636
+msgid "lore.characters.protagonist.body"
+msgstr "# Nameless King\n\n- Status: alive\n- First appearance: Opening bus stop (`00_start` / `scenes/scene_1.tscn`)\n- Current location: [Hospital](locations/hospital.md)\n- Age/birthday: unknown\n- Identity/occupation: A nameless man who calls himself a king\n- Relationships: [Wife](characters/wife.md) - Wife; [Nurse](characters/nurse.md) - Obstructs him at the inpatient checkpoint; [Flower Shop Owner](characters/flower-shop-owner.md) - Contact at the flower shop\n- Items: [Flowers](items/flower.md), [Money](items/money.md), [Flower Basket](items/flower-basket.md), [Fake Flower](items/fake-flower.md), [Earthworm](items/earthworm.md)\n- Known information:\n  - After he gets off at the bus stop, the other passengers keep staring at him. (Source: docs/Dialogic_Implementation_Guide.md)\n  - His default name is “Nameless King”; it can be changed in Dew Garden. (Source: docs/Dialogic_Implementation_Guide.md)\n  - Starting variables: energy=100, calm=100, money=20. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 00_start -> 01_hospital -> 02_ward -> 03_crossroads -> 04_flower_shop -> 05_shiling -> 06_luyuan -> 07_maze -> 08_wife_room -> 09_ending"
+
+#: res://lore/characters/protagonist.md
+#. source-sha256: ddb4d13052ed6dd4749a39ba5fa142fead3bb3789f2e3a2a8ad7bda4a265ec95
+msgid "lore.characters.protagonist.summary"
+msgstr "After he gets off at the bus stop, the other passengers keep staring at him."
+
+#: res://lore/characters/protagonist.md
+#. source-sha256: c7e8f06954702bbec533c4ebd04e1fb38a0296ddcee3b86453123bd93497f052
+msgid "lore.characters.protagonist.title"
+msgstr "Nameless King"
+
+#: res://lore/characters/wife.md
+#. source-sha256: 096406f35a8104994d105eab9aca8e2b8f1ddb45822621678c64a7d9d67c1c86
+msgid "lore.characters.wife.body"
+msgstr "# Wife\n\n- Status: alive\n- First appearance: Hospital Room (`08_wife_room`)\n- Current location: [Hospital Room](locations/wife-room.md)\n- Age/birthday: unknown\n- Identity/occupation: The protagonist's wife\n- Relationships: [Nameless King](characters/protagonist.md) - Husband\n- Items: unknown\n- Known information:\n  - Her eyes are clouded, her eyelids sewn to her brow with fine thread. Her lips move, but only muffled sounds escape her throat. (Source: docs/Dialogic_Implementation_Guide.md)\n  - Her hands hang limp, their backs painted with illegible talismans. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 08_wife_room, Followed by an ending branch"
+
+#: res://lore/characters/wife.md
+#. source-sha256: 371409dc0d82262529912d9a0b930e62390d2b99965db9d8ab6b94644814dcaf
+msgid "lore.characters.wife.summary"
+msgstr "Her eyes are clouded, her eyelids sewn to her brow with fine thread. Her lips move, but only muffled sounds escape her throat."
+
+#: res://lore/characters/wife.md
+#. source-sha256: 55c4fadb327e49a5ff860030e09399f6280924cc2761dd7f5ecfbb395ad1d93b
+msgid "lore.characters.wife.title"
+msgstr "Wife"
+
+#: res://lore/events/luyuan-renaming.md
+#. source-sha256: 63ee2e44c8c1a28da4d8173eac999cbc1f494bec39d5f9773e473be13d9aebb3
+msgid "lore.events.luyuan-renaming.body"
+msgstr "# Renaming in Dew Garden\n\n- Time: 06_luyuan\n- Location: [Dew Garden](locations/luyuan.md)\n- Characters involved: [Nameless King](characters/protagonist.md)\n- Outcome: The player can enter a new name, changing the title used in the game.\n- Source: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/luyuan-renaming.md
+#. source-sha256: 7935dd4339704b3b4cff06826e5f6d539fd0e11d244816b76ba8a2432c1460ef
+msgid "lore.events.luyuan-renaming.summary"
+msgstr "The player can enter a new name, changing the title used in the game."
+
+#: res://lore/events/luyuan-renaming.md
+#. source-sha256: a67a7ea5f51b7eced218cf9137defd0cc300d75dfdbb21fa5387eeede65eb510
+msgid "lore.events.luyuan-renaming.title"
+msgstr "Renaming in Dew Garden"
+
+#: res://lore/events/opening-arrival.md
+#. source-sha256: 5ea92e688fb666a050dc88aee99f5ce1c2830dcf020a6056af9f029e6d7dd69b
+msgid "lore.events.opening-arrival.body"
+msgstr "# Getting Off the Bus\n\n- Time: 00_start\n- Location: [Hospital](locations/hospital.md)\n- Characters involved: [Nameless King](characters/protagonist.md)\n- Outcome: The protagonist gets off the bus as the other passengers stare at him.\n- Source: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/opening-arrival.md
+#. source-sha256: 6628c1077a175849b6e2127331536d48a2dfefffa240b00ac445f588a5928f30
+msgid "lore.events.opening-arrival.summary"
+msgstr "The protagonist gets off the bus as the other passengers stare at him."
+
+#: res://lore/events/opening-arrival.md
+#. source-sha256: 7b7174874e60a594804d3b39209826c7e14b647dcb1e54405355c7b6e976c512
+msgid "lore.events.opening-arrival.title"
+msgstr "Getting Off the Bus"
+
+#: res://lore/events/ward-gate-block.md
+#. source-sha256: dc7f688a16b600f5119fa351792b35a7fa9392dab538327b6c2509da9ba6b1a9
+msgid "lore.events.ward-gate-block.body"
+msgstr "# Blocked at the Inpatient Checkpoint\n\n- Time: 02_ward\n- Location: [Inpatient Ward / Morgue](locations/ward.md)\n- Characters involved: [Nameless King](characters/protagonist.md), [Nurse](characters/nurse.md)\n- Outcome: He is turned away with fewer than 5 flowers; only enough flowers will get him into the room.\n- Source: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/ward-gate-block.md
+#. source-sha256: d799b9bf1a350d4cda9adcb1849c19a4ccee2b4d70a0444fc276511612104757
+msgid "lore.events.ward-gate-block.summary"
+msgstr "He is turned away with fewer than 5 flowers; only enough flowers will get him into the room."
+
+#: res://lore/events/ward-gate-block.md
+#. source-sha256: 162b0c5e16003d18b841fc8bd812bac12a645a3a796c93a7c71af2a4e5d8cfce
+msgid "lore.events.ward-gate-block.title"
+msgstr "Blocked at the Inpatient Checkpoint"
+
+#: res://lore/events/wife-room-reunion.md
+#. source-sha256: 1dfbb6319c5b7958cb0c314800a5091947c7c2da054383d66982dacd2a51ee6d
+msgid "lore.events.wife-room-reunion.body"
+msgstr "# Reunion in the Hospital Room\n\n- Time: 08_wife_room\n- Location: [Hospital Room](locations/wife-room.md)\n- Characters involved: [Nameless King](characters/protagonist.md), [Wife](characters/wife.md)\n- Outcome: The protagonist meets his wife in her abnormal condition, then proceeds to an ending branch.\n- Source: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/wife-room-reunion.md
+#. source-sha256: e42954a3f9716c46d42945c978147f4a07ef19345f08a1f7de4c90b5d00b07c0
+msgid "lore.events.wife-room-reunion.summary"
+msgstr "The protagonist meets his wife in her abnormal condition, then proceeds to an ending branch."
+
+#: res://lore/events/wife-room-reunion.md
+#. source-sha256: e6dfdda40226fc848ec40f29a1b859402abf04090bb6f464b34a76092e2bde3b
+msgid "lore.events.wife-room-reunion.title"
+msgstr "Reunion in the Hospital Room"
+
+#: res://lore/items/earthworm.md
+#. source-sha256: be6e446f753394dafa09c19d0fc37f31f6014ad39424bcbcd99d0f05e7d9360e
+msgid "lore.items.earthworm.body"
+msgstr "# Earthworm\n\n- Status: unknown\n- Holder: [Nameless King](characters/protagonist.md)\n- First appearance: Flower Shop (`04_flower_shop`)\n- Known information:\n  - Tracked by earthworm, initially 0. (Source: docs/Dialogic_Implementation_Guide.md)"
+
+#: res://lore/items/earthworm.md
+#. source-sha256: 25962d218d29e892cb97b068e7bc5f80a9090d52fa000841b629ba012bac64ef
+msgid "lore.items.earthworm.summary"
+msgstr "Tracked by earthworm, initially 0."
+
+#: res://lore/items/earthworm.md
+#. source-sha256: d0073727cc0ecabbb0b4bedbfd34d65d4a05f7e89ae25cd9b07fb6f0d81ed1b8
+msgid "lore.items.earthworm.title"
+msgstr "Earthworm"
+
+#: res://lore/items/fake-flower.md
+#. source-sha256: 91ff3cb8a1af05e779389ff041ad42ce29b52f929ebc07cfc5d707a4af53ebe5
+msgid "lore.items.fake-flower.body"
+msgstr "# Fake Flower\n\n- Status: unknown\n- Holder: [Nameless King](characters/protagonist.md)\n- First appearance: Flower shop options (jiahua variable)\n- Known information:\n  - Tracked by the boolean jiahua, initially false. (Source: docs/Dialogic_Implementation_Guide.md)"
+
+#: res://lore/items/fake-flower.md
+#. source-sha256: b3784ceae2e01719bc3009f428e6926c766810d6aeec4b4a9b6f2ba9b0698517
+msgid "lore.items.fake-flower.summary"
+msgstr "Tracked by the boolean jiahua, initially false."
+
+#: res://lore/items/fake-flower.md
+#. source-sha256: 88725b6452c793484c0f6dba6f79d1cd034cf43862e7749fe35e4bb4f67e34a6
+msgid "lore.items.fake-flower.title"
+msgstr "Fake Flower"
+
+#: res://lore/items/flower-basket.md
+#. source-sha256: 8ef2259089bf43a527599f53d7bdddd70a1a121edd78ff1e0643051793262fa2
+msgid "lore.items.flower-basket.body"
+msgstr "# Flower Basket\n\n- Status: unknown\n- Holder: [Nameless King](characters/protagonist.md)\n- First appearance: Flower shop options (hualan variable)\n- Known information:\n  - Tracked by the boolean hualan, initially false. (Source: docs/Dialogic_Implementation_Guide.md)"
+
+#: res://lore/items/flower-basket.md
+#. source-sha256: 641a22ceb989911116338511e87682da97f939fc6e2715bcde73b24fa5f847aa
+msgid "lore.items.flower-basket.summary"
+msgstr "Tracked by the boolean hualan, initially false."
+
+#: res://lore/items/flower-basket.md
+#. source-sha256: 75c03ff5153b6c0debda8afc1f2c96cc06626b2bbb73fe419de1638a87983392
+msgid "lore.items.flower-basket.title"
+msgstr "Flower Basket"
+
+#: res://lore/items/flower.md
+#. source-sha256: e5c8c9d8e8257fa6bb8c6fdb7d605828716efd991b37061d723d3f661fcd0788
+msgid "lore.items.flower.body"
+msgstr "# Flowers\n\n- Status: unknown\n- Holder: [Nameless King](characters/protagonist.md)\n- First appearance: Collection routes (flower starts at 0)\n- Known information:\n  - Quantity is tracked by flower, initially 0. (Source: docs/Dialogic_Implementation_Guide.md)\n  - Passing the inpatient checkpoint requires flower >= 5. (Source: docs/Dialogic_Implementation_Guide.md)"
+
+#: res://lore/items/flower.md
+#. source-sha256: 8f2e4eaebb7b9d548c5cb2d42f0cd04ea4e34c736be45cbca6738ec804e3bc74
+msgid "lore.items.flower.summary"
+msgstr "Quantity is tracked by flower, initially 0."
+
+#: res://lore/items/flower.md
+#. source-sha256: b0a1eab5f902df03059fe7385071b377e577e3ef962d3257663af0dcbbe85449
+msgid "lore.items.flower.title"
+msgstr "Flowers"
+
+#: res://lore/items/money.md
+#. source-sha256: bcbb76d3f1140165e69ffeec1bd46075c8751513fe0b8ef9254971bc359d1c8f
+msgid "lore.items.money.body"
+msgstr "# Money\n\n- Status: unknown\n- Holder: [Nameless King](characters/protagonist.md)\n- First appearance: Game opening (starting variable)\n- Known information:\n  - Tracked by money, initially 20. (Source: docs/Dialogic_Implementation_Guide.md)\n  - money < 0 triggers the bankruptcy ending, ending_bankrupt. (Source: docs/Dialogic_Implementation_Guide.md)"
+
+#: res://lore/items/money.md
+#. source-sha256: 32f6d93bdd9cb4cfa7d8b16825ddc9003aa7024c842ccd36517387db2e230a75
+msgid "lore.items.money.summary"
+msgstr "Tracked by money, initially 20."
+
+#: res://lore/items/money.md
+#. source-sha256: 0eb863c78da3e38b6b92d1f3999566e5d8e17a6f700a112c8993cf6bfc48f70b
+msgid "lore.items.money.title"
+msgstr "Money"
+
+#: res://lore/locations/crossroads.md
+#. source-sha256: f1e818a844439e01c7b2e8d4b0fa3f51e2fbeecf9cacf8b93c15ada869c7c85f
+msgid "lore.locations.crossroads.body"
+msgstr "# Crossroads\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `03_crossroads`\n- Known information:\n  - Choose the next route at the crossroads, leading to the flower shop, Lion Ridge, Dew Garden, and other locations. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 03_crossroads -> 04_flower_shop / 05_shiling / 06_luyuan"
+
+#: res://lore/locations/crossroads.md
+#. source-sha256: 2b8c5d643c422be8321d81998dc31347f89567d00c9b2b25ecef6e8fe993f2a9
+msgid "lore.locations.crossroads.summary"
+msgstr "Choose the next route at the crossroads, leading to the flower shop, Lion Ridge, Dew Garden, and other locations."
+
+#: res://lore/locations/crossroads.md
+#. source-sha256: 4f986690b0dad778a77f658fab7fb32a5bdccb0a75cc319c4571024af464f3f2
+msgid "lore.locations.crossroads.title"
+msgstr "Crossroads"
+
+#: res://lore/locations/flower-shop.md
+#. source-sha256: a38e26d58c61d48ca0f55489934368b1518807f73c031655b7014c7b182a5675
+msgid "lore.locations.flower-shop.body"
+msgstr "# Flower Shop\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `04_flower_shop`\n- Known information:\n  - The flower shop owner looks at her phone and interacts after the player enters. (Source: docs/Dialogic_Implementation_Guide.md)\n  - An earthworm can be obtained here; the flower basket (hualan) and fake flower (jiahua) are also introduced. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 04_flower_shop, visit_huadian tracks visits"
+
+#: res://lore/locations/flower-shop.md
+#. source-sha256: 62f533d0c0817d9b445e6f2a2a7ac33f2e8a892e67781fd102f627095f5d6549
+msgid "lore.locations.flower-shop.summary"
+msgstr "The flower shop owner looks at her phone and interacts after the player enters."
+
+#: res://lore/locations/flower-shop.md
+#. source-sha256: e670541fbb08445692169872bc41b1941c5767ef99dc33dd4225ed121d0b5dbb
+msgid "lore.locations.flower-shop.title"
+msgstr "Flower Shop"
+
+#: res://lore/locations/hospital.md
+#. source-sha256: 5228bd5b42884cd7c31ac25b3fa41bfff58d739d56d781abfc97e4c22ac27edb
+msgid "lore.locations.hospital.body"
+msgstr "# Hospital\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: Opening (`00_start` / `01_hospital`)\n- Known information:\n  - The opening location. After the protagonist gets off at the bus stop, the passengers watch him. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 00_start -> 01_hospital"
+
+#: res://lore/locations/hospital.md
+#. source-sha256: b51bf98fd8c23cecb5bae2fc5b9ae0a9022a83fa6c336904811850f512e9e60c
+msgid "lore.locations.hospital.summary"
+msgstr "The opening location. After the protagonist gets off at the bus stop, the passengers watch him."
+
+#: res://lore/locations/hospital.md
+#. source-sha256: 1f6835c0d878fa0e14800964a47b4f772f71ff202badb4c7271dd6a70e3e7533
+msgid "lore.locations.hospital.title"
+msgstr "Hospital"
+
+#: res://lore/locations/luyuan.md
+#. source-sha256: 8b79e4f71bde7775b7869b5c8465e1651017468a4184da6b2159084fa446ec82
+msgid "lore.locations.luyuan.body"
+msgstr "# Dew Garden\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `06_luyuan`\n- Known information:\n  - The player sees a name field labeled “If I were a king, my name would be:”, with “Nameless King” as the default. (Source: docs/Dialogic_Implementation_Guide.md)\n  - After renaming, the line “Now I am {player_name}, revered by thousands!” appears. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 06_luyuan"
+
+#: res://lore/locations/luyuan.md
+#. source-sha256: 5d563fc82fbef06fefb4505b3490fc223b601183e940c0008444a26d2f254450
+msgid "lore.locations.luyuan.summary"
+msgstr "The player sees a name field labeled “If I were a king, my name would be:”, with “Nameless King” as the default."
+
+#: res://lore/locations/luyuan.md
+#. source-sha256: 8f877081b5774ea9fbda1a2c201ab6b199cc078ba77e34660229cc3a8079915d
+msgid "lore.locations.luyuan.title"
+msgstr "Dew Garden"
+
+#: res://lore/locations/maze.md
+#. source-sha256: df3a80ce8fba0498700d564987060b713159acbc89ba6c8b8022e9fd4ff141c8
+msgid "lore.locations.maze.body"
+msgstr "# Rockery Maze\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `07_maze`\n- Known information:\n  - The final stretch before entering the hospital room. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 07_maze -> 08_wife_room"
+
+#: res://lore/locations/maze.md
+#. source-sha256: 48b44d67a1f04817c8b509459af0c43b9053932a92f7060f467f2d0750ff031f
+msgid "lore.locations.maze.summary"
+msgstr "The final stretch before entering the hospital room."
+
+#: res://lore/locations/maze.md
+#. source-sha256: 33d25a14235605e72f5ef9a295ea8c2e8d74ae6b9f313c52983e595cf3e11c5a
+msgid "lore.locations.maze.title"
+msgstr "Rockery Maze"
+
+#: res://lore/locations/shiling.md
+#. source-sha256: 48204d1341da9afb11b492fb145734254e41ce724432386086a9fcb7d852a6a7
+msgid "lore.locations.shiling.body"
+msgstr "# Lion Ridge\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `05_shiling`\n- Known information:\n  - One of the available routes. visit_shiling tracks the number of visits. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 05_shiling"
+
+#: res://lore/locations/shiling.md
+#. source-sha256: 8ddfa6c739f01e45fcf838b7837366929c96974413e370c1c41188ab79ebb525
+msgid "lore.locations.shiling.summary"
+msgstr "One of the available routes. visit_shiling tracks the number of visits."
+
+#: res://lore/locations/shiling.md
+#. source-sha256: ee4d7889085d03ba9838d7be1dc74b89376eddda99c1e8accc2031d0771990eb
+msgid "lore.locations.shiling.title"
+msgstr "Lion Ridge"
+
+#: res://lore/locations/ward.md
+#. source-sha256: de1a0a85459fb5e30bdd432e01f940704e3ac711742ae93af9c4451067a6391c
+msgid "lore.locations.ward.body"
+msgstr "# Inpatient Ward / Morgue\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `02_ward`\n- Known information:\n  - The nurse guards the checkpoint. Continuing requires flower >= 5. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 02_ward -> 03_crossroads"
+
+#: res://lore/locations/ward.md
+#. source-sha256: bf86ac9a1ee53f756b07d2378b9e72052cc5bdddd2e80c00ab534fe31c0a5f88
+msgid "lore.locations.ward.summary"
+msgstr "The nurse guards the checkpoint. Continuing requires flower >= 5."
+
+#: res://lore/locations/ward.md
+#. source-sha256: 1704ac774da079039cd6096c772d463f950732f75a943236f12139cadade4449
+msgid "lore.locations.ward.title"
+msgstr "Inpatient Ward / Morgue"
+
+#: res://lore/locations/wife-room.md
+#. source-sha256: d1f2bec8357610e35af8de4c9198d9346d8add8dbacd36d459f9f1151059c9be
+msgid "lore.locations.wife-room.body"
+msgstr "# Hospital Room\n\n- Status: unknown\n- Affiliation: unknown\n- First appearance: `08_wife_room`\n- Known information:\n  - The wife appears here in an abnormal condition. (Source: docs/Dialogic_Implementation_Guide.md)\n- Timeline notes: 08_wife_room -> 09_ending"
+
+#: res://lore/locations/wife-room.md
+#. source-sha256: 486c3562d371baec44050fe11dae0b1527972ab40a64956bb1079451d837bd7e
+msgid "lore.locations.wife-room.summary"
+msgstr "The wife appears here in an abnormal condition."
+
+#: res://lore/locations/wife-room.md
+#. source-sha256: 3dc1bd637918544a2fef01337af6d56b866e549c24aeb1e61828b57741bc0e62
+msgid "lore.locations.wife-room.title"
+msgstr "Hospital Room"
+
+#: res://lore/plot-threads.md
+#. source-sha256: e537f4c013a7070c3393f27468d9dd45aea148c3e3b26c7d45c3909de8f40728
+msgid "lore.plot-threads.entry-23.body"
+msgstr "- Status: open\n- Setup: Flower Shop (`04_flower_shop`, visit_huadian)\n- Payoff: unknown\n- Related characters/locations: [Flower Shop Owner](characters/flower-shop-owner.md), [Flower Shop](locations/flower-shop.md)\n- Description: Repeated visits advance interactions with the owner and may affect item acquisition and endings."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 1fa3f9d03bad901bd30e3470601ba1972f5d2a706655f09feeb72ce2264b81b1
+msgid "lore.plot-threads.entry-23.summary"
+msgstr "Repeated visits advance interactions with the owner and may affect item acquisition and endings."
+
+#: res://lore/plot-threads.md
+#. source-sha256: a08a79cebc0d54b5f73fb00d6efd30144860f2477235407eea0a97409a252664
+msgid "lore.plot-threads.entry-23.title"
+msgstr "Repeated Flower Shop Visits"
+
+#: res://lore/plot-threads.md
+#. source-sha256: ce313d1d0c406966d2db7a382bc4f401709d37535a645c2bb8ba46bba740973c
+msgid "lore.plot-threads.entry-24.body"
+msgstr "- Status: open\n- Setup: The jiahua option at the flower shop\n- Payoff: unknown\n- Related characters/locations: [Flower Shop Owner](characters/flower-shop-owner.md), [Fake Flower](items/fake-flower.md)\n- Description: The fake flower may offer a short-term advantage, but its risks are unspecified. Its cost must be defined during migration."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 08651946ef44c4c223d28eb645528b3db8e1ade80a2c3c9ffe51342c20a09f2e
+msgid "lore.plot-threads.entry-24.summary"
+msgstr "The fake flower may offer a short-term advantage, but its risks are unspecified. Its cost must be defined during migration."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 45f61df9b21223e63e9d740424077503df91898b6b505613df99dfb0acbcf9d8
+msgid "lore.plot-threads.entry-24.title"
+msgstr "The Price of a Fake Flower"
+
+#: res://lore/plot-threads.md
+#. source-sha256: a76727f58cb19add896bed38859fa08da3fe68c60528a0f61fd3a562661b4e40
+msgid "lore.plot-threads.entry-25.body"
+msgstr "- Status: open\n- Setup: Renaming in Dew Garden (`06_luyuan`)\n- Payoff: unknown\n- Related characters/locations: [Nameless King](characters/protagonist.md), [Dew Garden](locations/luyuan.md)\n- Description: The player can change their name; subsequent in-game titles use {player_name}."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 57b2d7b60d1049b5286f8c060bd79b366759c3175a487d02196df4422ade28d0
+msgid "lore.plot-threads.entry-25.summary"
+msgstr "The player can change their name; subsequent in-game titles use {player_name}."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 0eae966d57788bddba39287e25ff931dc10638f9480887dab4468eb4d4bf63fa
+msgid "lore.plot-threads.entry-25.title"
+msgstr "A King's Name"
+
+#: res://lore/plot-threads.md
+#. source-sha256: 55261b31b2a4e690a639b6706026b4069a525436ac712005d75b3ebb66f32f73
+msgid "lore.plot-threads.entry-26.body"
+msgstr "- Status: open\n- Setup: The three global variables: energy, calm, money\n- Payoff: ending_bankrupt (exists); ending_crazy and ending_exhausted remain to be written\n- Related characters/locations: [Nameless King](characters/protagonist.md)\n- Description: Checks run in this order: money < 0 -> calm < 0 -> energy < 0."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 5c28332719d3e7c1cc2577de0ee40b31b956b6758579b4e7b0abc0ec1f93d2c6
+msgid "lore.plot-threads.entry-26.summary"
+msgstr "Checks run in this order: money < 0 -> calm < 0 -> energy < 0."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 3aa40b7d7ebc9f50a18b6ba2dc1b0bf9d66c9c29f71a6714f5c1d8d3fb2c06c5
+msgid "lore.plot-threads.entry-26.title"
+msgstr "Ending Branches"
+
+#: res://lore/plot-threads.md
+#. source-sha256: ce0c69024ffdd22bd34ba0bda93975ea3330a411042becc54217fdf5c44ee8ee
+msgid "lore.plot-threads.entry-27.body"
+msgstr "- Status: open\n- Setup: The wife's condition in the hospital room (`08_wife_room`)\n- Payoff: unknown\n- Related characters/locations: [Wife](characters/wife.md), [Hospital Room](locations/wife-room.md)\n- Description: The stitched eyelids, talismans on the hands, and other abnormalities are central mysteries. Later story content must explain them."
+
+#: res://lore/plot-threads.md
+#. source-sha256: c861ae64742cb2d9a48cd8df1e156f2ab6ae9cf73ceeff5bcaac042eb3fadf92
+msgid "lore.plot-threads.entry-27.summary"
+msgstr "The stitched eyelids, talismans on the hands, and other abnormalities are central mysteries. Later story content must explain them."
+
+#: res://lore/plot-threads.md
+#. source-sha256: b7f4979a28dfa600cf432ca2079f44a5cab8ab88316adaa01886126c2caaed35
+msgid "lore.plot-threads.entry-27.title"
+msgstr "The Wife's Abnormalities"
+
+#: res://lore/plot-threads.md
+#. source-sha256: 1ca62b0d13f2e526a746f65e8d7c7cc8c6abcd4f8a33084d0bcef14eeb78a097
+msgid "lore.plot-threads.entry.body"
+msgstr "- Status: open\n- Setup: Inpatient checkpoint (`02_ward`)\n- Payoff: unknown\n- Related characters/locations: [Nurse](characters/nurse.md), [Flowers](items/flower.md), [Inpatient Ward / Morgue](locations/ward.md)\n- Description: At least 5 flowers are needed to enter the room; the collection routes determine the protagonist's experiences."
+
+#: res://lore/plot-threads.md
+#. source-sha256: d80aa3c944d28e98049b42c2a93414da973bcae272b53e88655ae5c6c454eb66
+msgid "lore.plot-threads.entry.summary"
+msgstr "At least 5 flowers are needed to enter the room; the collection routes determine the protagonist's experiences."
+
+#: res://lore/plot-threads.md
+#. source-sha256: 9741b092b435c8e118f4788dbb38bd04feeae4f9641a3558c9bb24028ed9c556
+msgid "lore.plot-threads.entry.title"
+msgstr "The Flower Checkpoint"
+
+#. source-sha256: c7e8f06954702bbec533c4ebd04e1fb38a0296ddcee3b86453123bd93497f052
+msgid "player.default_name"
+msgstr "Nameless King"
+
+#. source-sha256: f041c28cd865ca1f3d9c9b392f54cc04e7325e738cdda5b9fdb82ff767dd845f
+msgid "save.auto_name"
+msgstr "Autosave"
+
+#. source-sha256: 2cd0f3be8738a86cede1a1452f874f31d569864bbb00cacd4130990f4610cb5c
+msgid "save.cancel"
+msgstr "Cancel"
+
+#. source-sha256: fac2a67ad87807c4112af2b9201ef929d8c1c80214a6ad5198423398369371a4
+msgid "save.confirm"
+msgstr "Confirm"
+
+#. source-sha256: f3002b001a24a07a9336c7947346eb803be1865db172c2edcdde0149eb9f26a4
+msgid "save.confirm_load"
+msgstr "Load the save \"{name}\"?"
+
+#. source-sha256: 0e99370c508600d56fbfe7329452b3d1272232f0d8f988b3becd549d5f426af2
+msgid "save.confirm_overwrite"
+msgstr "Overwrite save {slot} ({name})?"
+
+#. source-sha256: 77b20e6c349c513e01b5918154671ef4fde0489abead7f572262982d481faff9
+msgid "save.default_name"
+msgstr "Save {slot}"
+
+#. source-sha256: f301edd1a4750d98dbcc5cf96346da38d386523beb2fab8dbab0870f73615500
+msgid "save.details"
+msgstr "{name}\n{time}\n{scene} | {timeline}"
+
+#. source-sha256: 0250f4a66328c506caaf2f82276c438313ab5bafeedf72718146b5a60fad1055
+msgid "save.empty"
+msgstr "{slot}. Empty"
+
+#. source-sha256: b888f3ae9f529acf5ecdd80d8c2f3a56901690934326a53e67b59b980b470647
+msgid "save.error_busy"
+msgstr "Another save is being loaded. Try again when it finishes."
+
+#. source-sha256: d69bf68f77d6507b06fb8d1d259e0f0082ce86cec1b4b1dfa92b3817e732c697
+msgid "save.error_data"
+msgstr "The save data is invalid and cannot be restored."
+
+#. source-sha256: dd7627471229e59e231b1247b408f7cb7823bdc9546ee8907426b486c43bffba
+msgid "save.error_delete"
+msgstr "Could not delete the save."
+
+#. source-sha256: b877e2fd34f69a75fd137520c1e922a8d03bcfde88a03bd9ae0f36bf6fe45e03
+msgid "save.error_invalid_slot"
+msgstr "The save slot name is invalid."
+
+#. source-sha256: b22f07c3de5fae1b738fc481a57e5ca82d9064c2dafe9f1c0243a68ca8f3dd5f
+msgid "save.error_missing"
+msgstr "The save is missing or could not be read."
+
+#. source-sha256: feddb4d3781397479f245f921af2fa8268d1994624ed9796064ab618afd21764
+msgid "save.error_title"
+msgstr "Could Not Load Save"
+
+#. source-sha256: 81498036228b693b047a91bb4872bbadba6b43184fd6a01df50f4707ae5158c4
+msgid "save.error_version"
+msgstr "Incompatible save version. This localization build requires version 3 saves. The old file has not been changed."
+
+#. source-sha256: b3c5caa28b1691ec2cdde76207f16ea72dc44db341c3773fc72ad42b8526b00b
+msgid "save.error_write"
+msgstr "Could not write the save."
+
+#. source-sha256: d3f6da526faf4a3f63ed735be0145bc8bc88ec36a60c089868ece23f76d99507
+msgid "save.load_title"
+msgstr "Load Game"
+
+#. source-sha256: edabd87429ebe941a1347ee36f0ff6b4f9782d417a6c02b3fff5d48e3be156f5
+msgid "save.location_unknown"
+msgstr "No story progress"
+
+#. source-sha256: 5f777b3322e95d7424c192945224f6ce1b132d4a481a2a763de72699dddf9431
+msgid "save.scene.main"
+msgstr "Journey"
+
+#. source-sha256: d8c47e9776cf10824b3491a0d08a8af700419cfa2b468e514e0511d5caca5b52
+msgid "save.scene.mianMenu"
+msgstr "Main Menu"
+
+#. source-sha256: 5f777b3322e95d7424c192945224f6ce1b132d4a481a2a763de72699dddf9431
+msgid "save.scene.scene_1"
+msgstr "Journey"
+
+#. source-sha256: d2bb025a2e51c410b704733316c843087aae60f3b4a336c9040f28d637a47b3a
+msgid "save.timeline.00_start"
+msgstr "Beginning"
+
+#. source-sha256: 1f6835c0d878fa0e14800964a47b4f772f71ff202badb4c7271dd6a70e3e7533
+msgid "save.timeline.01_hospital"
+msgstr "Hospital"
+
+#. source-sha256: 3dc1bd637918544a2fef01337af6d56b866e549c24aeb1e61828b57741bc0e62
+msgid "save.timeline.02_ward"
+msgstr "Ward"
+
+#. source-sha256: 4593a74f44ad695ee8a02a2fa1f69a2e90ac0a9b26db59278b92c64ea4d8335d
+msgid "save.timeline.03_crossroads"
+msgstr "Crossroads"
+
+#. source-sha256: e670541fbb08445692169872bc41b1941c5767ef99dc33dd4225ed121d0b5dbb
+msgid "save.timeline.04_flower_shop"
+msgstr "Flower Shop"
+
+#. source-sha256: ee4d7889085d03ba9838d7be1dc74b89376eddda99c1e8accc2031d0771990eb
+msgid "save.timeline.05_shiling"
+msgstr "Lion Ridge"
+
+#. source-sha256: 8f877081b5774ea9fbda1a2c201ab6b199cc078ba77e34660229cc3a8079915d
+msgid "save.timeline.06_luyuan"
+msgstr "Dew Garden"
+
+#. source-sha256: 42c6e0e3d3014f9ec5211c5477798bcd2800f7e30fd45f39122bbf7155e85e5c
+msgid "save.timeline.07_maze_entry"
+msgstr "Maze Entrance"
+
+#. source-sha256: 68c974931e558f728fc43045a826e39e7efde23a48b0d6d0cb204155ac0dabad
+msgid "save.timeline.07_maze_exit"
+msgstr "Maze Exit"
+
+#. source-sha256: 6bd111761312b0872e929ee7ecadd27334f0ac63f42520e0bfc7954e8f8a4fcb
+msgid "save.timeline.07_maze_left"
+msgstr "Maze: Left Path"
+
+#. source-sha256: 1d4b08b05ff99fec318a14be18cc178cfdf4d858c3239dc88f53e50681a0e0fe
+msgid "save.timeline.07_maze_middle"
+msgstr "Maze: Middle Path"
+
+#. source-sha256: c046ef2a0d7dba3593d980fa67f73844583bf1549fab695e22cd21c1c497a7fc
+msgid "save.timeline.07_maze_right"
+msgstr "Maze: Right Path"
+
+#. source-sha256: 22e263387027016525c8876b79d9883279baaa592e84409a08c02761c0c93612
+msgid "save.timeline.08_wife_room"
+msgstr "Wife’s Room"
+
+#. source-sha256: 7fc75ed74b81af81a983b948b2f5b5ca1d77929a54cef56d413f6f7af95cbc38
+msgid "save.timeline.09_ending"
+msgstr "Ending"
+
+#. source-sha256: 9d4095e76db127c2c4869749adf1b58aeecdf2cea7992808da0c2a3ec449d3d0
+msgid "save.timeline.10_morgue"
+msgstr "Morgue"
+
+#. source-sha256: 9848533bd2c358cc1204d8945132d4532925f82db151b1b544169171fabe6a44
+msgid "save.timeline.timeline1_0"
+msgstr "Prologue"
+
+#. source-sha256: c73a6774d91ca0f610a2d6340e5b56139d47ee0408b8bb7431fb62eee624cc76
+msgid "save.title"
+msgstr "Save Game"
+
+#. source-sha256: 9f6fee1aba17a56586bf16a77b07b1a76d8c4e867430c6ee6abfa3128b55fa98
+msgid "settings.language"
+msgstr "Language"
+
+#. source-sha256: fac2a67ad87807c4112af2b9201ef929d8c1c80214a6ad5198423398369371a4
+msgid "ui.dialogue.confirm"
+msgstr "Confirm"
+
+#: scenes/ending_debug_panel.tscn:Apply
+#. source-sha256: 06318c3fa9478bf535e4cbf360e2cc6c9854f09966c1f1072f54e174e46c1fff
+msgid "ui.ending_debug_panel.apply.text"
+msgstr "Apply and Check Endings"
+
+#: scenes/ending_debug_panel.tscn:CalmEdit
+#. source-sha256: 2b4b2eadf7b2aece598d2f2ad4637361614a738a7cdf1a457d8b46db072184d5
+msgid "ui.ending_debug_panel.calm_edit.placeholder_text"
+msgstr "Composure"
+
+#: scenes/ending_debug_panel.tscn:EnergyEdit
+#. source-sha256: 381cfb6e1e428419d5d6b5d113be06a9023d6407ebe388791ec3d59100d87ec5
+msgid "ui.ending_debug_panel.energy_edit.placeholder_text"
+msgstr "Energy"
+
+#: scenes/ending_debug_panel.tscn:MoneyEdit
+#. source-sha256: 8d2ac8b58ead9744d77286de9b0bcb7a894f238c3149fc9f3b1e3caff36330fe
+msgid "ui.ending_debug_panel.money_edit.placeholder_text"
+msgstr "Money"
+
+#: scenes/ending_debug_panel.tscn:ResultLabel
+#. source-sha256: 8fed46ef0566a81fc0e56bad25fcc38b9fd46aeb79344744ed2750cd8bfb1030
+msgid "ui.ending_debug_panel.result_label.text"
+msgstr "Waiting for input..."
+
+#: scenes/ending_debug_panel.tscn:Title
+#. source-sha256: 3fdfa5692159e45ce1f1586e61563887b5730bf82308b8fd28f8505459538102
+msgid "ui.ending_debug_panel.title.text"
+msgstr "Ending Debugger"
+
+#: scenes/history_panel.tscn:CloseButton
+#. source-sha256: 3fd47edce45b3603d4192f61dbf3e51162589b0951042a18d244132ac92e7bb7
+msgid "ui.history_panel.close_button.text"
+msgstr "Close"
+
+#: scenes/history_panel.tscn:HistoryButton
+#. source-sha256: 5b8e85e99cc4144cc5bae2e60d5a3c9dba0779b5d3ddcf25f2fc218c4a404cfd
+msgid "ui.history_panel.history_button.text"
+msgstr "Story History"
+
+#: scenes/history_panel.tscn:Title
+#. source-sha256: 5467922dce50a319ceab2a260f383d888febef5bcff5a255ed20d3423b983208
+msgid "ui.history_panel.title.text"
+msgstr "History"
+
+#: scenes/hud.tscn:LoreButton
+#. source-sha256: 34fd4b1aa7a699a50a486d848feef2647df06ace01a5424b7e897f6577268552
+msgid "ui.hud.lore_button.text"
+msgstr "Codex"
+
+#: scenes/hud.tscn:SettingsButton
+#. source-sha256: 02f6ea12816a9e7b8ce846f149281b130033cf5145d260dfea7405bc8866ee1e
+msgid "ui.hud.settings_button.text"
+msgstr "Settings"
+
+#. source-sha256: a1054434857f0a9851b1bf5df4400a05735dada92fecfdef492cccaf493f146e
+msgid "ui.lore.all_categories"
+msgstr "All Categories"
+
+#. source-sha256: 33bbf4867164ce24b9915396f80147eb20b44ba4caddf23eca095b31048a648c
+msgid "ui.lore.category_count"
+msgstr "{category} ({count})"
+
+#. source-sha256: 590fdddd01bd696673faaa636d3acc6b541478f35c4234eea58fc45e28f10d8a
+msgid "ui.lore.empty"
+msgstr "No entries"
+
+#. source-sha256: 405da31c10eb92e30e957a8822a9cfb7a3405893b5efdc73ab3a774de739d288
+msgid "ui.lore.filtered_results"
+msgstr "{title} - {category}"
+
+#. source-sha256: 88d72ece7cf767373367a4a7764f0ad813572791acbf1e3df0a0fac71311ee36
+msgid "ui.lore.results"
+msgstr "Search Results"
+
+#. source-sha256: 06169ded8b7b61afe1b619de9e1440c4e7a7ecb4f77640dba10d74d5d2635072
+msgid "ui.lore.title"
+msgstr "Codex"
+
+#: scenes/lore_browser.tscn:ButtonBack
+#. source-sha256: 572cf45ba43634b3448aadbc48d5398a1b32ad8a97bf42b689c394de222c30a1
+msgid "ui.lore_browser.button_back.text"
+msgstr "Return"
+
+#: scenes/lore_browser.tscn:ButtonClear
+#. source-sha256: bce2377283c2455ab8b1deb7711af90638f10ef82e345eb354e9296ff9397a56
+msgid "ui.lore_browser.button_clear.text"
+msgstr "Clear"
+
+#: scenes/lore_browser.tscn:ButtonClose
+#. source-sha256: 3fd47edce45b3603d4192f61dbf3e51162589b0951042a18d244132ac92e7bb7
+msgid "ui.lore_browser.button_close.text"
+msgstr "Close"
+
+#: scenes/lore_browser.tscn:LabelTitle
+#. source-sha256: 06169ded8b7b61afe1b619de9e1440c4e7a7ecb4f77640dba10d74d5d2635072
+msgid "ui.lore_browser.label_title.text"
+msgstr "Codex"
+
+#: scenes/lore_browser.tscn:LineEditSearch
+#. source-sha256: c00a21fdf78473a4494d9f689ac863ee055c35e0a8b4a26c55f3d5e873b6e2b2
+msgid "ui.lore_browser.line_edit_search.placeholder_text"
+msgstr "Search keywords"
+
+#: scenes/mianMenu.tscn:Button_exit
+#. source-sha256: dbc0fe120d31d61a6823b1d8c015e06b9baeea017fba19a80327b696c5ca6558
+msgid "ui.mianmenu.button_exit.text"
+msgstr "Quit Game"
+
+#: scenes/mianMenu.tscn:Button_load
+#. source-sha256: d3f6da526faf4a3f63ed735be0145bc8bc88ec36a60c089868ece23f76d99507
+msgid "ui.mianmenu.button_load.text"
+msgstr "Load Game"
+
+#: scenes/mianMenu.tscn:Button_save
+#. source-sha256: c73a6774d91ca0f610a2d6340e5b56139d47ee0408b8bb7431fb62eee624cc76
+msgid "ui.mianmenu.button_save.text"
+msgstr "Save Game"
+
+#: scenes/mianMenu.tscn:Button_setting
+#. source-sha256: 57444f5c18aea99609f17f1fa642cd0115d0ccfef2639bad0409c09735dcaca6
+msgid "ui.mianmenu.button_setting.text"
+msgstr "Settings"
+
+#: scenes/mianMenu.tscn:Button_start
+#. source-sha256: 76fdc50a9a0f9f557c71937262b0a1b2c50b792492dfc2699807d5038cf2d887
+msgid "ui.mianmenu.button_start.text"
+msgstr "Start Game"
+
+#: scenes/save_slot_panel.tscn:CloseButton
+#. source-sha256: 3fd47edce45b3603d4192f61dbf3e51162589b0951042a18d244132ac92e7bb7
+msgid "ui.save_slot_panel.close_button.text"
+msgstr "Close"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+#. source-sha256: 945a5efe5c455c326eb5e3bb1f00b80e84d4c72075abeea2d0e27bc94716fd55
+msgid "ui.save_slot_panel.load_dialog.dialog_text"
+msgstr "Load this save?"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+#. source-sha256: d3f6da526faf4a3f63ed735be0145bc8bc88ec36a60c089868ece23f76d99507
+msgid "ui.save_slot_panel.load_dialog.title"
+msgstr "Load Game"
+
+#: scenes/save_slot_panel.tscn:NameEdit
+#. source-sha256: 8ed334c795a0a95ce93622a80f27309b93b3ee252c6b9d2816f8cd0db6f1e582
+msgid "ui.save_slot_panel.name_edit.placeholder_text"
+msgstr "Enter a save name"
+
+#: scenes/save_slot_panel.tscn:NewSlotDialog
+#. source-sha256: 563c63d876ed1f3c19ac5637469d412a2474497261a76fff821422073cdfb695
+msgid "ui.save_slot_panel.new_slot_dialog.title"
+msgstr "New Save"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+#. source-sha256: 6d9a66439e7cd1c516fc2ea30e5965d6ffefcde5299431fefc82bde740af6bfd
+msgid "ui.save_slot_panel.overwrite_dialog.dialog_text"
+msgstr "Overwrite this save?"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+#. source-sha256: 2e077b7128bd634f976103047bfc30a7121ee1cde218785ed55e182b7d109fe6
+msgid "ui.save_slot_panel.overwrite_dialog.title"
+msgstr "Overwrite Save"
+
+#: scenes/save_slot_panel.tscn:TitleLabel
+#. source-sha256: c73a6774d91ca0f610a2d6340e5b56139d47ee0408b8bb7431fb62eee624cc76
+msgid "ui.save_slot_panel.title_label.text"
+msgstr "Save Game"
+
+#: scenes/settings_panel.tscn:CloseButton
+#. source-sha256: 3fd47edce45b3603d4192f61dbf3e51162589b0951042a18d244132ac92e7bb7
+msgid "ui.settings_panel.close_button.text"
+msgstr "Close"
+
+#: scenes/settings_panel.tscn:FullscreenCheck
+#. source-sha256: 22ea3f47fee80536c2f2450d15fa024684fd4604400a6a667ccb159d50a31867
+msgid "ui.settings_panel.fullscreen_check.text"
+msgstr "Fullscreen"
+
+#: scenes/settings_panel.tscn:TextSpeedLabel
+#. source-sha256: 7a5aafc3d5a528bb84a78cf530d0f99150aeb0cf645d989fb75d068f6804792c
+msgid "ui.settings_panel.text_speed_label.text"
+msgstr "Text Speed"
+
+#: scenes/settings_panel.tscn:Title
+#. source-sha256: df3d58c7d84b85f2037cdd20ffca0f386668645ea53008c11b0c8887182b0356
+msgid "ui.settings_panel.title.text"
+msgstr "Settings"
+
+#: scenes/settings_panel.tscn:VolumeLabel
+#. source-sha256: 8bf8b9780d342816a2342d0af74a9bedc13387be59e709d30522883236f13e30
+msgid "ui.settings_panel.volume_label.text"
+msgstr "Volume"

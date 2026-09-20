@@ -15,6 +15,10 @@ func _ready() -> void:
 	history_button.pressed.connect(_open)
 	close_button.pressed.connect(_close)
 	Dialogic.event_handled.connect(_on_dialogic_event_handled)
+	Dialogic.Choices.choice_selected.connect(_choice_selected)
+	Dialogic.History.open_requested.connect(_open)
+	Dialogic.History.close_requested.connect(_close)
+	Localization.locale_changed.connect(_rebuild_list)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -34,18 +38,19 @@ func _on_dialogic_event_handled(resource: DialogicEvent) -> void:
 	if Dialogic.current_timeline == null:
 		return
 
-	if resource.event_name != "Text" and resource.event_name != "Choice":
+	if resource.event_name != "Text":
 		return
 
-	var text_value = resource.get("text")
-	var character_value = resource.get("character")
-	var record := {
-		"timeline": Dialogic.current_timeline.resource_path,
-		"event_idx": Dialogic.current_event_idx,
-		"type": resource.event_name,
-		"text": "" if text_value == null else str(text_value),
-		"character": "" if character_value == null else str(character_value),
-	}
+	_append_record(Localization.record_event(resource))
+
+
+func _choice_selected(info: Dictionary) -> void:
+	var record := Localization.record_event(Dialogic.current_timeline_events[info["event_index"]])
+	record["event_idx"] = info["event_index"]
+	_append_record(record)
+
+
+func _append_record(record: Dictionary) -> void:
 
 	var existing_index := -1
 	for i in range(_entries.size()):
@@ -55,6 +60,7 @@ func _on_dialogic_event_handled(resource: DialogicEvent) -> void:
 
 	if existing_index >= 0:
 		_entries.resize(existing_index + 1)
+		_entries[existing_index] = record
 	else:
 		_entries.append(record)
 		if _entries.size() > MAX_ENTRIES:
@@ -65,6 +71,7 @@ func _on_dialogic_event_handled(resource: DialogicEvent) -> void:
 
 func _rebuild_list() -> void:
 	for child in list_box.get_children():
+		list_box.remove_child(child)
 		child.queue_free()
 
 	for i in range(_entries.size()):
@@ -76,16 +83,20 @@ func _rebuild_list() -> void:
 
 
 func _format_entry(entry: Dictionary) -> String:
-	var prefix := ""
+	var value := Localization.render_record(entry).strip_edges().replace("\n", " ")
+	var markup := RichTextLabel.new()
+	markup.bbcode_enabled = true
+	markup.text = value
+	value = markup.get_parsed_text()
+	markup.free()
+	if value.length() > MAX_TEXT_LEN:
+		value = value.substr(0, MAX_TEXT_LEN) + "…"
 	if entry.type == "Choice":
-		prefix = "[选项] "
-	elif not str(entry.character).is_empty():
-		prefix = str(entry.character) + "："
-
-	var text := str(entry.text).strip_edges().replace("\n", " ")
-	if text.length() > MAX_TEXT_LEN:
-		text = text.substr(0, MAX_TEXT_LEN) + "…"
-	return prefix + text
+		return Localization.format_text("history.choice", {"text": value})
+	if not str(entry.character).is_empty():
+		var character := load(entry.character) as DialogicCharacter
+		return Localization.format_text("history.speaker", {"text": value, "name": character.get_display_name_translated()})
+	return value
 
 
 func _on_entry_pressed(index: int) -> void:
