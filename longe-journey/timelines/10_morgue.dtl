@@ -1,3 +1,8 @@
+if {visit_ting_shifang} >= 2:
+    [background arg="res://art/backgrounds/morgue_empty.png" fade="0.0"]
+else:
+    [background arg="res://art/backgrounds/morgue_occupied.png" fade="0.0"]
+
 Text/lj_10_morgue_000/text #id:lj_10_morgue_000
 set {visit_ting_shifang} += 1
 

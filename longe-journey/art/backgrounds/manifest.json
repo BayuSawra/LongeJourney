@@ -1,0 +1,591 @@
+{
+  "version": 1,
+  "generation_mode": "built-in image_gen",
+  "style": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark.",
+  "assets": [
+    {
+      "id": "bus_interior_normal",
+      "path": "res://art/bus_interior_normal.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Interior of an old Chinese public bus, view along the aisle, every passenger sits naturally facing forward, neutral ordinary behavior; outside windows show a different streetscape with directional motion blur. Preserve the same bus geometry and camera as the staring variant.",
+      "prompt_kind": "reproduction specification",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "bus_interior_staring",
+      "path": "res://art/bus_interior_staring.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Same old Chinese public bus interior and camera, seated passengers turn their heads toward the viewer with silent unsettling stares.",
+      "prompt_kind": "reproduction specification",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "hospital_exterior",
+      "path": "res://art/backgrounds/hospital_exterior.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Exterior entrance and grey road of an old Chinese county hospital, wet steps, peeling plaster, bare trees and dim sky, no people.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-c9e99d43-f72f-4332-916a-62ae2a18f160.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "ward_corridor",
+      "path": "res://art/backgrounds/ward_corridor.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Empty old Chinese hospital ward corridor, nurses station at left, closed rooms, distant curtain, weak fluorescent lights; blank signs without letters or numbers.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-5c35c0c9-cf8a-44c3-9412-4caaf240a029.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "crossroads",
+      "path": "res://art/backgrounds/crossroads.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Deserted crossroads in a small Chinese town, decayed shop fronts, wet grey road, branching roads toward hills and town, no people.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-8d87e6df-92de-4f5f-8081-0b64b70c4844.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "flower_shop_open",
+      "path": "res://art/backgrounds/flower_shop_open.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Tiny old flower shop with a half-open corrugated metal shutter, several water and soil tubs in shadow, no decorative fresh flowers, wet alley beside it.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-c48db03c-8b17-4a83-a6f3-47b1040b33f4.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "flower_shop_closed",
+      "path": "res://art/backgrounds/flower_shop_closed.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the open flower shop: fully lower the same metal shutter, preserve identical camera, surrounding alley, materials and light.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-43eb4a4c-4c6f-43a7-a7ab-f77050964fa3.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_curtained",
+      "path": "res://art/backgrounds/wife_room_curtained.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Old Chinese hospital room with a fully closed bed curtain hiding the bed and patient, metal bedside cabinet and wooden chair by a window, eye-level wide view.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-9298ea66-79e4-422f-a945-1e9b51de4129.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_open",
+      "path": "res://art/backgrounds/wife_room_open.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the same curtained hospital room: slide curtain left to reveal a woman in pale patient clothes seated facing away on the bed; preserve room, furniture, camera and lighting.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-b74d391f-7d7f-4239-96d0-867106f5b3fa.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "morgue_occupied",
+      "path": "res://art/backgrounds/morgue_occupied.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Old hospital morgue courtyard, a few mourners in dark clothes and two covered stretchers beneath the awning, red cloth in one mourners hand, pale yellow empty basket on right trash bin, no graphic remains, all signage blank.",
+      "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/exec-9249d34b-5a40-45cc-952a-de7d7408dc7a.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "hospital_stairs",
+      "path": "res://art/backgrounds/hospital_stairs.png",
+      "prompt": "Use case: stylized-concept. Asset: Chinese psychological horror visual novel background, landscape 16:9, aim 1920x1080. Input image is a STYLE and ARCHITECTURE reference only, not the target composition. Generate a different room inside this same old Chinese county hospital: a deserted dim concrete stairwell, seen from the upper landing looking down at the turn of the stairs. Worn gray concrete steps, chipped blue-gray paint along the lower walls, simple dull steel railing, a dark doorway opening to the ward corridor at upper right, one overhead fluorescent tube extinguished and another weakly glowing. No people or characters. Cold grey, muted cyan and violet grey, charcoal/etching fine grain and restrained cinematic realism matching the reference. Oppressive quiet, no monster, no blood. Bottom 25 percent is dark simple steps with low detail for a dialogue box; useful environment details upper two thirds. No signage, no letters, no numbers, no readable text, no UI, no logos, no watermark.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-f41c5241-c8f8-45e7-aed1-2659682583db.png",
+      "reference_images": [
+        "C:/Users/Admin/.codex/generated_images/01a0be3d-4f6c-7a02-b3d5-074f7ca1b1f5/exec-5c35c0c9-cf8a-44c3-9412-4caaf240a029.png"
+      ],
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "morgue_empty",
+      "path": "res://art/backgrounds/morgue_empty.png",
+      "prompt": "Use case: precise-object-edit. Asset: 16:9 Chinese psychological horror visual novel background. EDIT TARGET is the attached hospital morgue courtyard image. Create the later-visit EMPTY state of exactly this same scene. Remove every living person and human silhouette, remove the two covered bodies and the occupied gurneys from under the awning. Preserve the identical camera, framing, building, bare tree branches, wet courtyard, sky, light fixtures, van, trash bins and the empty pale yellow basket on the right bin. Doors remain dark and empty. The entire courtyard and doorway must be completely unoccupied. Keep cold grey, cyan, violet-grey palette, etched grain and lighting unchanged. Do not add anything. No text, no signs, no numbers, no logos, no watermark. Keep 16:9 landscape composition.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-7ca7e98f-ce48-4d7b-9bb0-f048adeef2d7.png",
+      "reference_images": [
+        "C:/Users/Admin/.codex/generated_images/01a0be3d-4f6c-7a02-b3d5-074f7ca1b1f5/exec-9249d34b-5a40-45cc-952a-de7d7408dc7a.png"
+      ],
+      "size": [
+        1671,
+        941
+      ]
+    },
+    {
+      "id": "shiling_foothill",
+      "path": "res://art/backgrounds/shiling_foothill.png",
+      "prompt": "Use case: illustration-story\nAsset type: 1920x1080 full-screen visual novel environment background\nPrimary request: a weathered stone monument at the foot of Shiling mountain, marking an old cave said to contain a Chinese guardian stone lion; low mountain entrance beyond, overgrown weeds and damp stone steps, no people\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, matching a Chinese supernatural visual novel\nComposition/framing: 16:9 wide establishing shot, old stele and cave on the upper-left/center, broad negative space and low-detail darkened lower 25 percent for dialogue\nLighting/mood: cold wet overcast light, oppressive quiet, blue-gray and purple-gray fog\nColor palette: desaturated gray, blue-gray, muted purple, tiny dull green vegetation\nMaterials/textures: wet stone, peeling mineral surfaces, rain-darkened earth, fine charcoal stippling\nConstraints: full environment only; Chinese stone lion motif if visible, no western lion; no text or readable inscriptions; no UI, border, logo, watermark, characters, close-up faces\nAvoid: bright colors, cartoon style, photoreal camera look, readable writing, modern signs, gore",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-bee77c37-278a-4ab4-8d17-d807bed1a6de.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_trail",
+      "path": "res://art/backgrounds/shiling_trail.png",
+      "prompt": "Use case: illustration-story\nAsset type: 1920x1080 full-screen visual novel environment background\nPrimary request: a narrow mountain trail deeper inside Shiling, turning around a cliff face with rough rock wall, sparse wet grass and weeds, a small cave passage implied ahead; empty path, no people\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, matching a Chinese supernatural visual novel\nComposition/framing: 16:9 wide view along the trail, winding path leads from lower-right toward center-left, low-detail darkened lower 25 percent for dialogue\nLighting/mood: cold damp gray daylight, uneasy stillness, violet-gray mist around the bend\nColor palette: desaturated charcoal gray, blue-gray, muted purple, subdued moss green\nMaterials/textures: slick rock, muddy path, rain sheen, rough vegetation, charcoal stippling\nConstraints: full environment only; no actors, no weapons, no readable signs; no UI, border, logo, watermark\nAvoid: bright colors, cartoon style, western architecture, modern road, photoreal camera look, gore",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-adca92f4-d942-432f-8a36-d942c6c30443.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_iron_lion",
+      "path": "res://art/backgrounds/shiling_iron_lion.png",
+      "prompt": "Use case: illustration-story\nAsset type: 1920x1080 full-screen visual novel environment background\nPrimary request: an empty clearing in Shiling with a crouching Chinese iron guardian lion statue, its open mouth emitting a small controlled string of fire; surrounding mountain rock and wet weeds, no people\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, matching a Chinese supernatural visual novel\nComposition/framing: 16:9 wide environmental shot, iron lion in mid-distance slightly right of center, fire as a small focal accent, darkened low-detail lower 25 percent for dialogue\nLighting/mood: cold gray-purple overcast atmosphere with limited dark orange-red firelight reflected on wet metal, ominous but restrained\nColor palette: charcoal gray, blue-gray, purple-gray, very limited ember orange and deep red\nMaterials/textures: weathered iron patina, rain-darkened stone, wet ground, charcoal stippling\nConstraints: Chinese guardian lion / Chinese shishi silhouette, not a western lion; no gore, no people; no text, UI, border, logo, watermark\nAvoid: giant flames, bright fantasy fire, cartoon style, western heraldic lion, modern objects, photoreal camera look",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-c1c76b22-062e-40a1-8011-178c398470f6.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_burning_mountain",
+      "path": "res://art/backgrounds/shiling_burning_mountain.png",
+      "prompt": "Use case: illustration-story\nAsset type: 1920x1080 full-screen visual novel environment background\nPrimary request: deeper Shiling mountain landscape where the mountain seems to be burning, dark rocky slopes and scattered human silhouettes glowing red through smoke; ominous supernatural illusion, no close figures, no gore\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, matching a Chinese supernatural visual novel\nComposition/framing: 16:9 wide environmental panorama, layered mountain slopes and fog, tiny distant silhouettes only, broad low-detail darkened lower 25 percent for dialogue\nLighting/mood: cold purple-gray storm light overwhelmed by limited deep ember-red glow on slopes and silhouettes, oppressive heat implied through smoke\nColor palette: charcoal black, blue-gray, purple-gray, tightly limited dark vermilion and ember orange\nMaterials/textures: wet rock, ash haze, smoky mist, charcoal stippling\nConstraints: full environment only; no readable text, no UI, border, logo, watermark, no identifiable characters, no graphic flames or gore\nAvoid: bright colorful fire, cartoon style, western fantasy, modern objects, photoreal camera look",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-a3149736-0da2-458c-98bb-1f052721d5ef.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_temple",
+      "path": "res://art/backgrounds/shiling_temple.png",
+      "prompt": "Use case: illustration-story\nAsset type: 1920x1080 full-screen visual novel environment background\nPrimary request: a secluded white-jade Chinese guardian lion temple deeper in Shiling, small weathered temple facade and stone altar in front, one peony flower planted in the offering stand, overgrown wet grass and mountain rock, no people\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, matching a Chinese supernatural visual novel\nComposition/framing: 16:9 wide environmental shot, temple and altar in mid-distance slightly left of center, peony visible but not a close-up, broad low-detail darkened lower 25 percent for dialogue\nLighting/mood: cold wet overcast blue-gray light, solemn abandoned ritual atmosphere, muted purple mist\nColor palette: desaturated gray, blue-gray, purple-gray, restrained white stone, one subdued peony red accent\nMaterials/textures: pale jade-like stone, moss, wet offering table, worn paving, charcoal stippling\nConstraints: Chinese architecture and Chinese guardian lion symbolism, no readable signs or writing, no UI, border, logo, watermark, no people\nAvoid: bright festival colors, cartoon style, western temple, modern objects, photoreal camera look, gore",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-b8044af6-8bc9-49d0-a350-b1926cc23b96.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_closed_gate",
+      "path": "res://art/backgrounds/shiling_closed_gate.png",
+      "prompt": "Use case: precise-object-edit\nAsset type: 1920x1080 full-screen visual novel environment background\nInput images: Image 1: reference base image of the Shiling mountain-foot cave entrance\nPrimary request: keep the same Shiling mountain-foot environment and composition, but show the site closed for the return visit: a heavy weathered iron gate firmly locked across the cave approach, no open passage, no people\nStyle/medium: realistic dark narrative painting with fine charcoal grain and restrained etched texture, fine charcoal grain and restrained etched texture\nComposition/framing: preserve the base image's 16:9 wide framing and darkened low-detail lower 25 percent for dialogue\nLighting/mood: cold wet overcast blue-gray and purple-gray fog, oppressive locked-off silence\nColor palette: desaturated gray, blue-gray, muted purple, dark rust on the gate\nMaterials/textures: rusted iron bars, wet stone, moss, rain-darkened ground\nConstraints: change only the cave entrance state to a firmly locked iron gate; keep the surrounding mountain, old stone monument, vegetation and atmosphere coherent; no readable text, no UI, border, logo, watermark, people, western lion, gore\nAvoid: open gate, visible path through, bright colors, cartoon style, modern security gate, photoreal camera look",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-bc2d568e-54bc-4c68-ad1f-85f3e88d14fe.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "luyuan_garden",
+      "path": "res://art/backgrounds/luyuan_garden.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: an 800-year-old classical Chinese garden entrance called Luyuan, with a weathered stone paifang gateway, white chrysanthemum flower beds in the foreground, aged stone walls, a small pond and rockery glimpsed beyond, a winding wet path leading inward.\nScene/backdrop: deserted historic garden entrance under a cold humid overcast sky.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash atmosphere, matching a dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 cinematic establishing shot, eye-level, clear gateway and white chrysanthemum beds, quiet depth into the garden; keep the lower 25 percent dark and low-detail for dialogue overlay.\nLighting/mood: diffuse cold gray daylight, damp oppressive stillness, melancholy and uncanny.\nColor palette: desaturated blue-gray, violet-gray, charcoal, muted ivory flowers.\nMaterials/textures: mossy stone, peeling plaster, wet flagstones, mist, paper lantern remnants.\nConstraints: no people, no readable signs, no UI, no logo, no border, no watermark, no modern branding, no blood, no gore, no close-up objects, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-7cc711f3-edba-4a4e-9aaa-a3ae4db05052.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_entry",
+      "path": "res://art/backgrounds/maze_entry.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the entrance of a rockery maze inside an old Chinese garden; a heavy wooden maze gate has just slammed shut, wind and grit whipping across the threshold, crooked rock walls and a few dead lanterns, faint warm banquet lights far away through the maze.\nScene/backdrop: enclosed ancient garden maze entrance after a sudden hostile gust.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, ink-wash haze, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 cinematic view looking toward the closed gate and maze passage, threshold centered, warm lights tiny in the distance; keep lower 25 percent dark and low-detail for dialogue.\nLighting/mood: cold violet-gray dusk, sharp moving dust, claustrophobic and ominous, no supernatural figure.\nColor palette: gray stone, blue-violet fog, charcoal, tiny muted amber lights.\nMaterials/textures: rough limestone rockery, dust, damp soil, old wood gate, faded lantern paper.\nConstraints: no people, no readable signs, no UI, no logo, no border, no watermark, no modern objects, no blood, no gore, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-e0c0b3c4-9a43-4622-97bd-032b37a457ba.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_left_garden",
+      "path": "res://art/backgrounds/maze_left_garden.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the left branch of an ancient Chinese rockery maze, vegetation unnaturally lush but with no flowers, a dark arched doorway cut into the rocks, deep path beyond, indistinct distant crowd silhouettes in purple robes barely visible through violet mist.\nScene/backdrop: abandoned garden maze passage with damp walls and dense leaves.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash texture, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 shot down the left path, arched doorway slightly off-center, distant purple-robed figures tiny and blurred, no stage or theatrical props; lower 25 percent dark low-detail for dialogue.\nLighting/mood: cold overcast violet-gray light, oppressive quiet, uncanny but nonviolent.\nColor palette: desaturated green, blue-gray stone, violet haze, faint purple clothing silhouettes.\nMaterials/textures: wet rock, tangled leaves, moss, muddy path, drifting mist.\nConstraints: no readable signs, no UI, no logo, no border, no watermark, no modern objects, no flowers, no stage, no gore, no blood, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-4842f47e-b233-4005-9f37-7a5e90a17d5c.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_right_bamboo",
+      "path": "res://art/backgrounds/maze_right_bamboo.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: a winding stone path in an old Chinese garden rockery maze beside tall bamboo, with a high wall and a small broken lattice window; on the far side of the window two people are only distant shadow silhouettes speaking quietly, one silhouette in a long dark cloak with a suggestion of a scorpion emblem and the other with a gray-white beard.\nScene/backdrop: damp maze passage and bamboo screen, viewed from the path.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, ink-wash atmosphere, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 side perspective following the curved path, bamboo and wall framing the small window, two silhouettes tiny and indistinct beyond; lower 25 percent dark low-detail for dialogue.\nLighting/mood: moon-gray diffused light through leaves, secretive and uneasy, no readable facial details.\nColor palette: desaturated blue-gray, deep bamboo green, violet shadows, charcoal black.\nMaterials/textures: wet flagstones, rough plaster and rock, bamboo leaves, mist, chipped lattice.\nConstraints: no readable signs, no UI, no logo, no border, no watermark, no modern objects, no close-up people, no blood, no gore, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-35d80e26-3d5c-445e-9793-ddc065ddc89d.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_stone_corridor",
+      "path": "res://art/backgrounds/maze_stone_corridor.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: a very narrow central rockery corridor in an ancient Chinese garden, damp black stone walls close on both sides, green orchids growing from cracks and a few small potted cacti, shallow puddles, the passage receding into an unknown dark depth.\nScene/backdrop: enclosed wet stone corridor in a supernatural garden maze.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash haze, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 centered vanishing-point corridor, stones dominate both sides, orchids and cacti visible as environmental details, lower 25 percent dark and low-detail for dialogue.\nLighting/mood: cold dim gray-violet ambient light, humid, claustrophobic, quietly threatening.\nColor palette: charcoal black, blue-gray stone, muted orchid green, violet haze.\nMaterials/textures: wet porous rock, moss, small ceramic pots, puddle reflections, mist.\nConstraints: no people, no readable signs, no UI, no logo, no border, no watermark, no modern objects, no blood, no gore, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-361293b7-4f70-4313-9202-571956929b83.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_center",
+      "path": "res://art/backgrounds/maze_center.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the central clearing of an ancient Chinese rockery maze with one adult woman seen at medium-long distance, standing rigidly in ornate traditional clothing and a golden hairpin; a plain wooden stick is fixed behind her back at the waist by a belt and touches the ground, clearly outside the clothing and not piercing her body. Her posture is unnaturally stiff and melancholy. Subtle hydrangea blossoms may appear as a minor environmental detail without a fixed location.\nScene/backdrop: damp central maze clearing surrounded by jagged rockery and faded garden plants.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash atmosphere, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9, woman small in the middle distance, full body and full clothing visible, environment dominates, lower 25 percent dark low-detail for dialogue.\nLighting/mood: cold violet-gray dusk, tragic, eerie, restrained, no gore.\nColor palette: desaturated blue-gray stone, violet mist, muted burgundy and charcoal clothing, small ivory or lavender flowers.\nMaterials/textures: damp rocks, worn brocade fabric, wood grain, fog, wet earth.\nConstraints: adult woman only, no child, no close-up, no blood, no wounds, no impalement, no stick through body, no readable signs, no UI, no logo, no border, no watermark, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-34f61002-3348-4aa8-ab1d-e2d217c789e0.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_exit_road",
+      "path": "res://art/backgrounds/maze_exit_road.png",
+      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: an exterior road just outside an ancient garden maze, a low wall and open exit behind the viewer, gray-purple road under a sun that looks like it shines through old glass, wind blowing dust across the empty lane, faint garden walls and distant rural horizon.\nScene/backdrop: deserted road beyond a historic Chinese garden on a bleak overcast day.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash haze, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 road perspective, low wall and garden exit clearly readable, empty foreground with room for dialogue; lower 25 percent dark and low-detail.\nLighting/mood: muted gray-purple daylight, old-glass sun diffusion, windblown dust, hollow and uneasy.\nColor palette: violet-gray, dusty beige-gray, charcoal, desaturated green.\nMaterials/textures: cracked asphalt or packed earth, aged plaster wall, weeds, airborne dust, damp haze.\nConstraints: no people, no feet, no shoes, no flowers, no props, no readable signs, no UI, no logo, no border, no watermark, no modern branding, no blood, no gore, no text.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-63f468b4-7a9a-406e-8850-9937daf76c2f.png",
+      "size": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "timelines": [
+    {
+      "id": "00_start",
+      "entry": [
+        "bus_interior_normal"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_00_start_000/text",
+          "asset": "bus_interior_normal"
+        },
+        {
+          "before": "Text/lj_00_start_008/text",
+          "asset": "bus_interior_staring"
+        }
+      ]
+    },
+    {
+      "id": "01_hospital",
+      "entry": [
+        "hospital_exterior"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_01_hospital_000/text",
+          "asset": "hospital_exterior"
+        }
+      ]
+    },
+    {
+      "id": "02_ward",
+      "entry": [
+        "ward_corridor"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_02_ward_000/text",
+          "asset": "ward_corridor"
+        },
+        {
+          "before": "Text/lj_02_ward_006/text",
+          "asset": "hospital_exterior"
+        },
+        {
+          "before": "Text/lj_02_ward_016/text",
+          "asset": "wife_room_curtained"
+        },
+        {
+          "before": "Text/lj_02_ward_027/text",
+          "asset": "wife_room_curtained"
+        }
+      ]
+    },
+    {
+      "id": "03_crossroads",
+      "entry": [
+        "crossroads"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_03_crossroads_000/text",
+          "asset": "crossroads"
+        }
+      ]
+    },
+    {
+      "id": "04_flower_shop",
+      "entry": [
+        "flower_shop_open",
+        "flower_shop_closed"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_04_flower_shop_027/text",
+          "asset": "flower_shop_closed"
+        }
+      ]
+    },
+    {
+      "id": "05_shiling",
+      "entry": [
+        "shiling_foothill",
+        "shiling_closed_gate"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_05_shiling_006/text",
+          "asset": "shiling_trail"
+        },
+        {
+          "before": "Text/lj_05_shiling_020/text",
+          "asset": "shiling_iron_lion"
+        },
+        {
+          "before": "Text/lj_05_shiling_023/text",
+          "asset": "shiling_burning_mountain"
+        },
+        {
+          "before": "Text/lj_05_shiling_025/text",
+          "asset": "shiling_temple"
+        },
+        {
+          "before": "Text/lj_05_shiling_068/text",
+          "asset": "shiling_iron_lion"
+        },
+        {
+          "before": "Text/lj_05_shiling_071/text",
+          "asset": "shiling_burning_mountain"
+        },
+        {
+          "before": "Text/lj_05_shiling_073/text",
+          "asset": "shiling_temple"
+        },
+        {
+          "before": "Text/lj_05_shiling_117/text",
+          "asset": "shiling_iron_lion"
+        },
+        {
+          "before": "Text/lj_05_shiling_120/text",
+          "asset": "shiling_burning_mountain"
+        },
+        {
+          "before": "Text/lj_05_shiling_122/text",
+          "asset": "shiling_temple"
+        },
+        {
+          "before": "Text/lj_05_shiling_159/text",
+          "asset": "shiling_iron_lion"
+        },
+        {
+          "before": "Text/lj_05_shiling_162/text",
+          "asset": "shiling_burning_mountain"
+        },
+        {
+          "before": "Text/lj_05_shiling_164/text",
+          "asset": "shiling_temple"
+        },
+        {
+          "before": "Text/lj_05_shiling_201/text",
+          "asset": "shiling_iron_lion"
+        },
+        {
+          "before": "Text/lj_05_shiling_204/text",
+          "asset": "shiling_burning_mountain"
+        },
+        {
+          "before": "Text/lj_05_shiling_206/text",
+          "asset": "shiling_temple"
+        }
+      ]
+    },
+    {
+      "id": "06_luyuan",
+      "entry": [
+        "luyuan_garden"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_06_luyuan_000/text",
+          "asset": "luyuan_garden"
+        },
+        {
+          "before": "Text/lj_06_luyuan_006/text",
+          "asset": "maze_stone_corridor"
+        },
+        {
+          "before": "Text/lj_06_luyuan_008/text",
+          "asset": "maze_center"
+        },
+        {
+          "before": "Text/lj_06_luyuan_028/text",
+          "asset": "maze_stone_corridor"
+        },
+        {
+          "before": "Text/lj_06_luyuan_030/text",
+          "asset": "maze_center"
+        },
+        {
+          "before": "Text/lj_06_luyuan_050/text",
+          "asset": "maze_stone_corridor"
+        },
+        {
+          "before": "Text/lj_06_luyuan_052/text",
+          "asset": "maze_center"
+        }
+      ]
+    },
+    {
+      "id": "07_maze_entry",
+      "entry": [
+        "maze_entry"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_07_maze_entry_000/text",
+          "asset": "maze_entry"
+        }
+      ]
+    },
+    {
+      "id": "07_maze_left",
+      "entry": [
+        "maze_left_garden"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_07_maze_left_000/text",
+          "asset": "maze_left_garden"
+        }
+      ]
+    },
+    {
+      "id": "07_maze_middle",
+      "entry": [
+        "maze_stone_corridor"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_07_maze_middle_000/text",
+          "asset": "maze_stone_corridor"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_015/text",
+          "asset": "maze_center"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_030/text",
+          "asset": "maze_exit_road"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_034/text",
+          "asset": "maze_center"
+        }
+      ]
+    },
+    {
+      "id": "07_maze_right",
+      "entry": [
+        "maze_right_bamboo"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_07_maze_right_000/text",
+          "asset": "maze_right_bamboo"
+        }
+      ]
+    },
+    {
+      "id": "07_maze_exit",
+      "entry": [
+        "maze_exit_road"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_07_maze_exit_000/text",
+          "asset": "maze_exit_road"
+        }
+      ]
+    },
+    {
+      "id": "08_wife_room",
+      "entry": [
+        "wife_room_curtained"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_08_wife_room_000/text",
+          "asset": "wife_room_curtained"
+        },
+        {
+          "before": "Text/lj_08_wife_room_009/text",
+          "asset": "wife_room_open"
+        },
+        {
+          "before": "Text/lj_08_wife_room_037/text",
+          "asset": "hospital_stairs"
+        }
+      ]
+    },
+    {
+      "id": "09_ending",
+      "entry": [
+        "hospital_stairs"
+      ],
+      "cues": [
+        {
+          "before": "Text/lj_09_ending_000/text",
+          "asset": "hospital_stairs"
+        },
+        {
+          "before": "Text/lj_09_ending_005/text",
+          "asset": "hospital_exterior"
+        }
+      ]
+    },
+    {
+      "id": "10_morgue",
+      "entry": [
+        "morgue_occupied",
+        "morgue_empty"
+      ],
+      "cues": []
+    }
+  ],
+  "actual_dimensions_note": "1671-1672 x 941 pixels; each asset records its exact size."
+}

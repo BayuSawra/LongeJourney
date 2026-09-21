@@ -1,10 +1,11 @@
+[background arg="res://art/backgrounds/maze_right_bamboo.png" fade="0.0"]
+
 Text/lj_07_maze_right_000/text #id:lj_07_maze_right_000
 
 Text/lj_07_maze_right_001/text #id:lj_07_maze_right_001
 
 - Choice/lj_07_maze_right_002/text #id:lj_07_maze_right_002
     set {energy} -= 15
-    jump 07_maze_middle
-
+    jump 07_maze_middle/
 - Choice/lj_07_maze_right_006/text #id:lj_07_maze_right_006
-    jump 07_maze_middle
+    jump 07_maze_middle/

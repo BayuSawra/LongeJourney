@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.0"]
+
 Text/lj_07_maze_middle_000/text #id:lj_07_maze_middle_000
 
 Text/lj_07_maze_middle_001/text #id:lj_07_maze_middle_001
@@ -16,6 +18,7 @@ Text/lj_07_maze_middle_012/text #id:lj_07_maze_middle_012
 jump pick_hydrangea
 
 label pick_hydrangea #id:lj_07_maze_middle_014
+[background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
 Text/lj_07_maze_middle_015/text #id:lj_07_maze_middle_015
 Text/lj_07_maze_middle_016/text #id:lj_07_maze_middle_016
 
@@ -33,11 +36,12 @@ Text/lj_07_maze_middle_022/text #id:lj_07_maze_middle_022
     jump pick_hydrangea_flower
 
 label flee #id:lj_07_maze_middle_029
+[background arg="res://art/backgrounds/maze_exit_road.png" fade="0.6"]
 Text/lj_07_maze_middle_030/text #id:lj_07_maze_middle_030
 Text/lj_07_maze_middle_031/text #id:lj_07_maze_middle_031
-jump 07_maze_exit
-
+jump 07_maze_exit/
 label pick_hydrangea_flower #id:lj_07_maze_middle_033
+[background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
 Text/lj_07_maze_middle_034/text #id:lj_07_maze_middle_034
 Text/lj_07_maze_middle_035/text #id:lj_07_maze_middle_035
 

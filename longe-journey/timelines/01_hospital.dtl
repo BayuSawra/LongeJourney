@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/hospital_exterior.png" fade="0.0"]
+
 Text/lj_01_hospital_000/text #id:lj_01_hospital_000
 
 Text/lj_01_hospital_001/text #id:lj_01_hospital_001

@@ -26,8 +26,26 @@ class TimelineValidationTests(unittest.TestCase):
         errors = check_timelines.validate(self._project("jump missing\n"))
         self.assertTrue(any("jump target not found: missing" in error for error in errors))
 
-    def test_accepts_local_label_and_trailing_slash(self):
-        errors = check_timelines.validate(self._project("jump local/\nlabel local\n"))
+    def test_accepts_local_label_without_trailing_slash(self):
+        errors = check_timelines.validate(self._project("jump local\nlabel local\n"))
+        self.assertFalse(any("jump target" in error for error in errors))
+
+    def test_rejects_registered_timeline_without_trailing_slash(self):
+        project = self._project(
+            "jump other\n",
+            '"start": "res://timelines/start.dtl",\n"other": "res://timelines/other.dtl"',
+        )
+        (project / "timelines" / "other.dtl").write_text("\n", encoding="utf-8")
+        errors = check_timelines.validate(project)
+        self.assertTrue(any("cross-timeline jump must end with '/'" in error for error in errors))
+
+    def test_accepts_registered_timeline_with_trailing_slash(self):
+        project = self._project(
+            "jump other/\n",
+            '"start": "res://timelines/start.dtl",\n"other": "res://timelines/other.dtl"',
+        )
+        (project / "timelines" / "other.dtl").write_text("\n", encoding="utf-8")
+        errors = check_timelines.validate(project)
         self.assertFalse(any("jump target" in error for error in errors))
 
 

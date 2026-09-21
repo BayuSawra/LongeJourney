@@ -39,6 +39,23 @@ func _wait_for_text() -> void:
 	fail("Dialogic did not start localized text within 180 frames")
 
 
+func _event_index_by_translation_key(timeline_name: String, key: String, event_name: String = "") -> int:
+	var timeline := load("res://timelines/%s.dtl" % timeline_name) as DialogicTimeline
+	if timeline == null:
+		fail("Missing timeline while locating translation key: %s" % timeline_name)
+		return -1
+	timeline.process()
+	for index in timeline.events.size():
+		var event: DialogicEvent = timeline.events[index]
+		if event.get_property_translation_key("text") != key:
+			continue
+		if not event_name.is_empty() and event.event_name != event_name:
+			continue
+		return index
+	fail("Missing %s event translation key %s in %s" % [event_name if not event_name.is_empty() else "", key, timeline_name])
+	return -1
+
+
 func test_native_catalogs_and_all_timeline_properties() -> void:
 	assert_array(Localization.supported_locales()).is_equal(["en", "zh_CN"])
 	var paths: Dictionary = ProjectSettings.get_setting("dialogic/directories/dtl_directory")
@@ -93,7 +110,8 @@ func test_hud_lore_and_history_refresh_without_changing_variables() -> void:
 	var history = load("res://scenes/history_panel.tscn").instantiate()
 	add_child(hud)
 	add_child(history)
-	var record := {"key": "Text/lj_07_maze_entry_008/text", "variables": {"player_name": ""}, "character": "", "timeline": "res://timelines/07_maze_entry.dtl", "event_idx": 8, "type": "Text"}
+	var record_key := "Text/lj_07_maze_entry_008/text"
+	var record := {"key": record_key, "variables": {"player_name": ""}, "character": "", "timeline": "res://timelines/07_maze_entry.dtl", "event_idx": _event_index_by_translation_key("07_maze_entry", record_key, "Text"), "type": "Text"}
 	history._append_record(record)
 	var original: String = history.list_box.get_child(0).text
 	var lore_before: Dictionary = LoreRuntime.get_detail("protagonist")
@@ -131,7 +149,9 @@ func test_live_text_switch_preserves_event_and_reveal_progress() -> void:
 func test_live_choices_preserve_branch_state_and_selected_history() -> void:
 	var history = load("res://scenes/history_panel.tscn").instantiate()
 	add_child(history)
-	Dialogic.start("00_start", 8)
+	var text_key := "Text/lj_00_start_008/text"
+	var choice_key := "Choice/lj_00_start_010/text"
+	Dialogic.start("00_start", _event_index_by_translation_key("00_start", text_key, "Text"))
 	await _wait_for_text()
 	Dialogic.Text.skip_text_reveal()
 	Dialogic.Inputs.dialogic_action.emit()
@@ -146,26 +166,27 @@ func test_live_choices_preserve_branch_state_and_selected_history() -> void:
 	var index: int = Dialogic.current_event_idx
 	var disabled: bool = button.disabled
 	Localization.set_locale("en")
-	assert_str(button.text).is_equal(Localization.text("Choice/lj_00_start_010/text"))
+	assert_str(button.text).is_equal(Localization.text(choice_key))
 	assert_bool(button.disabled).is_equal(disabled)
 	assert_int(Dialogic.current_event_idx).is_equal(index)
 	assert_int(history._entries.size()).is_equal(1)
 	Dialogic.Choices._choice_blocker.stop()
 	button.choice_selected.emit()
 	assert_str(history._entries[-1].type).is_equal("Choice")
-	assert_int(history._entries[-1].event_idx).is_equal(10)
+	assert_int(history._entries[-1].event_idx).is_equal(_event_index_by_translation_key("00_start", choice_key, "Choice"))
 	history.queue_free()
 	await get_tree().process_frame
 
 
 func test_cross_language_save_restores_text_not_saved_language() -> void:
-	Dialogic.start("07_maze_entry", 8)
+	var text_key := "Text/lj_07_maze_entry_008/text"
+	Dialogic.start("07_maze_entry", _event_index_by_translation_key("07_maze_entry", text_key, "Text"))
 	await _wait_for_text()
 	Dialogic.Text.skip_text_reveal()
 	assert_bool(SaveManager.save_to_slot("localization-roundtrip")).is_true()
 	var data: Dictionary = SaveManager._read_save_data("localization-roundtrip")
 	assert_str(data["game_state"]["player_name"]).is_empty()
-	assert_str(data["localized_dialogue"]["key"]).is_equal("Text/lj_07_maze_entry_008/text")
+	assert_str(data["localized_dialogue"]["key"]).is_equal(text_key)
 	await Dialogic.end_timeline(true)
 	Localization.set_locale("en")
 	assert_bool(await SaveManager.load("localization-roundtrip")).is_true()
@@ -177,7 +198,7 @@ func test_cross_language_save_restores_text_not_saved_language() -> void:
 
 func test_custom_names_are_never_retranslated() -> void:
 	GameState.set_var("player_name", "{money}")
-	Dialogic.start("07_maze_entry", 8)
+	Dialogic.start("07_maze_entry", _event_index_by_translation_key("07_maze_entry", "Text/lj_07_maze_entry_008/text", "Text"))
 	await _wait_for_text()
 	Localization.set_locale("en")
 	assert_str(Dialogic.Text.dialog_text).contains("{money}")
@@ -215,7 +236,12 @@ func test_future_segments_use_new_locale() -> void:
 	Dialogic.Text.skip_text_reveal()
 	Localization.set_locale("en")
 	assert_str(Dialogic.Text.dialog_text).is_equal("One")
-	var event: DialogicTextEvent = Dialogic.current_timeline_events[0]
+	var event: DialogicTextEvent
+	for candidate in Dialogic.current_timeline_events:
+		if candidate is DialogicTextEvent:
+			event = candidate
+			break
+	assert_object(event).is_not_null()
 	event.advance.emit()
 	for frame in 8:
 		await get_tree().process_frame
@@ -240,7 +266,7 @@ func test_font_covers_all_catalog_characters() -> void:
 
 
 func test_incompatible_or_invalid_localized_save_is_rejected_without_mutation() -> void:
-	Dialogic.start("07_maze_entry", 8)
+	Dialogic.start("07_maze_entry", _event_index_by_translation_key("07_maze_entry", "Text/lj_07_maze_entry_008/text", "Text"))
 	await _wait_for_text()
 	Dialogic.Text.skip_text_reveal()
 	var valid := SaveManager._build_save_data("localization-invalid", "Custom name")

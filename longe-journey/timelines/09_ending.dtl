@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/hospital_stairs.png" fade="0.0"]
+
 Text/lj_09_ending_000/text #id:lj_09_ending_000
 
 Text/lj_09_ending_001/text #id:lj_09_ending_001
@@ -7,6 +9,8 @@ Text/lj_09_ending_002/text #id:lj_09_ending_002
 Text/lj_09_ending_003/text #id:lj_09_ending_003
 
 Text/lj_09_ending_004/text #id:lj_09_ending_004
+
+[background arg="res://art/backgrounds/hospital_exterior.png" fade="0.6"]
 
 Text/lj_09_ending_005/text #id:lj_09_ending_005
 

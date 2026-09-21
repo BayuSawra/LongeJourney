@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/maze_left_garden.png" fade="0.0"]
+
 Text/lj_07_maze_left_000/text #id:lj_07_maze_left_000
 
 Text/lj_07_maze_left_001/text #id:lj_07_maze_left_001
@@ -6,10 +8,9 @@ Text/lj_07_maze_left_001/text #id:lj_07_maze_left_001
     Text/lj_07_maze_left_003/text #id:lj_07_maze_left_003
     Text/lj_07_maze_left_004/text #id:lj_07_maze_left_004
     Text/lj_07_maze_left_005/text #id:lj_07_maze_left_005
-    jump 07_maze_middle
-
+    jump 07_maze_middle/
 - Choice/lj_07_maze_left_008/text #id:lj_07_maze_left_008
     Text/lj_07_maze_left_009/text #id:lj_07_maze_left_009
     Text/lj_07_maze_left_010/text #id:lj_07_maze_left_010
     Text/lj_07_maze_left_011/text #id:lj_07_maze_left_011
-    jump 07_maze_middle
+    jump 07_maze_middle/

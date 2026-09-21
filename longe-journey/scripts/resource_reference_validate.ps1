@@ -137,11 +137,11 @@ $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $orphanPaths = @($orphan | ForEach-Object { $_.path })
 $mustNotBeOrphan = @(
     "art/icon/flowericon.png",
-    "art/shilin2.png",
     "art/icon/moneyicon.png",
     "art/1.png",
-    "art/jianshan2.png",
-    "art/wife.png",
+    "art/backgrounds/shiling_foothill.png",
+    "art/backgrounds/luyuan_garden.png",
+    "art/backgrounds/wife_room_curtained.png",
     "font/HYZIKUTANGJINGJIEKAITIW.TTF"
 )
 

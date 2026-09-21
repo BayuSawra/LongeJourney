@@ -1,11 +1,16 @@
+if {visit_shiling} == 1:
+    [background arg="res://art/backgrounds/shiling_foothill.png" fade="0.0"]
+else:
+    [background arg="res://art/backgrounds/shiling_closed_gate.png" fade="0.0"]
+
 Text/lj_05_shiling_000/text #id:lj_05_shiling_000
-[background arg="res://art/shilin2.png" fade="1.0"]
 
 if {visit_shiling} == 1:
     Text/lj_05_shiling_003/text #id:lj_05_shiling_003
 
     - Choice/lj_05_shiling_004/text #id:lj_05_shiling_004
         set {energy} -= 5
+        [background arg="res://art/backgrounds/shiling_trail.png" fade="0.6"]
         Text/lj_05_shiling_006/text #id:lj_05_shiling_006
 
         Text/lj_05_shiling_007/text #id:lj_05_shiling_007
@@ -28,13 +33,16 @@ if {visit_shiling} == 1:
 
                     - Choice/lj_05_shiling_018/text #id:lj_05_shiling_018
                         set {energy} -= 5
+                        [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
                         Text/lj_05_shiling_020/text #id:lj_05_shiling_020
 
                         - Choice/lj_05_shiling_021/text #id:lj_05_shiling_021
                             set {energy} -= 5
+                            [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
                             Text/lj_05_shiling_023/text #id:lj_05_shiling_023
 
                             - Choice/lj_05_shiling_024/text #id:lj_05_shiling_024
+                                [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
                                 Text/lj_05_shiling_025/text #id:lj_05_shiling_025
 
                                 - Choice/lj_05_shiling_026/text #id:lj_05_shiling_026
@@ -50,7 +58,7 @@ if {visit_shiling} == 1:
                                     Text/lj_05_shiling_033/text #id:lj_05_shiling_033
 
                                     set {money} -= 2
-                                    jump 03_crossroads
+                                    jump 03_crossroads/
                                 - Choice/lj_05_shiling_037/text #id:lj_05_shiling_037
                                     Text/lj_05_shiling_038/text #id:lj_05_shiling_038
 
@@ -59,38 +67,41 @@ if {visit_shiling} == 1:
                                     Text/lj_05_shiling_040/text #id:lj_05_shiling_040
 
                                     set {money} -= 2
-                                    jump 03_crossroads
+                                    jump 03_crossroads/
                                 - Choice/lj_05_shiling_044/text #id:lj_05_shiling_044
                                     Text/lj_05_shiling_045/text #id:lj_05_shiling_045
 
                                     Text/lj_05_shiling_046/text #id:lj_05_shiling_046
 
                                     set {money} -= 2
-                                    jump 03_crossroads
+                                    jump 03_crossroads/
                             - Choice/lj_05_shiling_051/text #id:lj_05_shiling_051
                                 Text/lj_05_shiling_052/text #id:lj_05_shiling_052
 
                                 Text/lj_05_shiling_053/text #id:lj_05_shiling_053
 
                                 set {money} -= 2
-                                jump 03_crossroads
+                                jump 03_crossroads/
                         - Choice/lj_05_shiling_058/text #id:lj_05_shiling_058
                             Text/lj_05_shiling_059/text #id:lj_05_shiling_059
 
                             Text/lj_05_shiling_060/text #id:lj_05_shiling_060
 
                             set {money} -= 2
-                            jump 03_crossroads
+                            jump 03_crossroads/
                     - Choice/lj_05_shiling_065/text #id:lj_05_shiling_065
                         - Choice/lj_05_shiling_066/text #id:lj_05_shiling_066
                             set {energy} -= 5
+                            [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
                             Text/lj_05_shiling_068/text #id:lj_05_shiling_068
 
                             - Choice/lj_05_shiling_069/text #id:lj_05_shiling_069
                                 set {energy} -= 5
+                                [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
                                 Text/lj_05_shiling_071/text #id:lj_05_shiling_071
 
                                 - Choice/lj_05_shiling_072/text #id:lj_05_shiling_072
+                                    [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
                                     Text/lj_05_shiling_073/text #id:lj_05_shiling_073
 
                                     - Choice/lj_05_shiling_074/text #id:lj_05_shiling_074
@@ -106,7 +117,7 @@ if {visit_shiling} == 1:
                                         Text/lj_05_shiling_081/text #id:lj_05_shiling_081
 
                                         set {money} -= 2
-                                        jump 03_crossroads
+                                        jump 03_crossroads/
                                     - Choice/lj_05_shiling_085/text #id:lj_05_shiling_085
                                         Text/lj_05_shiling_086/text #id:lj_05_shiling_086
 
@@ -115,37 +126,40 @@ if {visit_shiling} == 1:
                                         Text/lj_05_shiling_088/text #id:lj_05_shiling_088
 
                                         set {money} -= 2
-                                        jump 03_crossroads
+                                        jump 03_crossroads/
                                     - Choice/lj_05_shiling_092/text #id:lj_05_shiling_092
                                         Text/lj_05_shiling_093/text #id:lj_05_shiling_093
 
                                         Text/lj_05_shiling_094/text #id:lj_05_shiling_094
 
                                         set {money} -= 2
-                                        jump 03_crossroads
+                                        jump 03_crossroads/
                                 - Choice/lj_05_shiling_099/text #id:lj_05_shiling_099
                                     Text/lj_05_shiling_100/text #id:lj_05_shiling_100
 
                                     Text/lj_05_shiling_101/text #id:lj_05_shiling_101
 
                                     set {money} -= 2
-                                    jump 03_crossroads
+                                    jump 03_crossroads/
                         - Choice/lj_05_shiling_107/text #id:lj_05_shiling_107
                             Text/lj_05_shiling_108/text #id:lj_05_shiling_108
 
                             Text/lj_05_shiling_109/text #id:lj_05_shiling_109
 
                             set {money} -= 2
-                            jump 03_crossroads
+                            jump 03_crossroads/
                 - Choice/lj_05_shiling_115/text #id:lj_05_shiling_115
                     set {energy} -= 5
+                    [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
                     Text/lj_05_shiling_117/text #id:lj_05_shiling_117
 
                     - Choice/lj_05_shiling_118/text #id:lj_05_shiling_118
                         set {energy} -= 5
+                        [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
                         Text/lj_05_shiling_120/text #id:lj_05_shiling_120
 
                         - Choice/lj_05_shiling_121/text #id:lj_05_shiling_121
+                            [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
                             Text/lj_05_shiling_122/text #id:lj_05_shiling_122
 
                             - Choice/lj_05_shiling_123/text #id:lj_05_shiling_123
@@ -161,7 +175,7 @@ if {visit_shiling} == 1:
                                 Text/lj_05_shiling_130/text #id:lj_05_shiling_130
 
                                 set {money} -= 2
-                                jump 03_crossroads
+                                jump 03_crossroads/
                             - Choice/lj_05_shiling_134/text #id:lj_05_shiling_134
                                 Text/lj_05_shiling_135/text #id:lj_05_shiling_135
 
@@ -170,30 +184,33 @@ if {visit_shiling} == 1:
                                 Text/lj_05_shiling_137/text #id:lj_05_shiling_137
 
                                 set {money} -= 2
-                                jump 03_crossroads
+                                jump 03_crossroads/
                             - Choice/lj_05_shiling_141/text #id:lj_05_shiling_141
                                 Text/lj_05_shiling_142/text #id:lj_05_shiling_142
 
                                 Text/lj_05_shiling_143/text #id:lj_05_shiling_143
 
                                 set {money} -= 2
-                                jump 03_crossroads
+                                jump 03_crossroads/
                     - Choice/lj_05_shiling_149/text #id:lj_05_shiling_149
                         Text/lj_05_shiling_150/text #id:lj_05_shiling_150
 
                         Text/lj_05_shiling_151/text #id:lj_05_shiling_151
 
                         set {money} -= 2
-                        jump 03_crossroads
+                        jump 03_crossroads/
             - Choice/lj_05_shiling_157/text #id:lj_05_shiling_157
                 set {energy} -= 5
+                [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
                 Text/lj_05_shiling_159/text #id:lj_05_shiling_159
 
                 - Choice/lj_05_shiling_160/text #id:lj_05_shiling_160
                     set {energy} -= 5
+                    [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
                     Text/lj_05_shiling_162/text #id:lj_05_shiling_162
 
                     - Choice/lj_05_shiling_163/text #id:lj_05_shiling_163
+                        [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
                         Text/lj_05_shiling_164/text #id:lj_05_shiling_164
 
                         - Choice/lj_05_shiling_165/text #id:lj_05_shiling_165
@@ -209,7 +226,7 @@ if {visit_shiling} == 1:
                             Text/lj_05_shiling_172/text #id:lj_05_shiling_172
 
                             set {money} -= 2
-                            jump 03_crossroads
+                            jump 03_crossroads/
                         - Choice/lj_05_shiling_176/text #id:lj_05_shiling_176
                             Text/lj_05_shiling_177/text #id:lj_05_shiling_177
 
@@ -218,30 +235,33 @@ if {visit_shiling} == 1:
                             Text/lj_05_shiling_179/text #id:lj_05_shiling_179
 
                             set {money} -= 2
-                            jump 03_crossroads
+                            jump 03_crossroads/
                         - Choice/lj_05_shiling_183/text #id:lj_05_shiling_183
                             Text/lj_05_shiling_184/text #id:lj_05_shiling_184
 
                             Text/lj_05_shiling_185/text #id:lj_05_shiling_185
 
                             set {money} -= 2
-                            jump 03_crossroads
+                            jump 03_crossroads/
                 - Choice/lj_05_shiling_191/text #id:lj_05_shiling_191
                     Text/lj_05_shiling_192/text #id:lj_05_shiling_192
 
                     Text/lj_05_shiling_193/text #id:lj_05_shiling_193
 
                     set {money} -= 2
-                    jump 03_crossroads
+                    jump 03_crossroads/
         - Choice/lj_05_shiling_199/text #id:lj_05_shiling_199
             set {energy} -= 5
+            [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
             Text/lj_05_shiling_201/text #id:lj_05_shiling_201
 
             - Choice/lj_05_shiling_202/text #id:lj_05_shiling_202
                 set {energy} -= 5
+                [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
                 Text/lj_05_shiling_204/text #id:lj_05_shiling_204
 
                 - Choice/lj_05_shiling_205/text #id:lj_05_shiling_205
+                    [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
                     Text/lj_05_shiling_206/text #id:lj_05_shiling_206
 
                     - Choice/lj_05_shiling_207/text #id:lj_05_shiling_207
@@ -257,7 +277,7 @@ if {visit_shiling} == 1:
                         Text/lj_05_shiling_214/text #id:lj_05_shiling_214
 
                         set {money} -= 2
-                        jump 03_crossroads
+                        jump 03_crossroads/
                     - Choice/lj_05_shiling_218/text #id:lj_05_shiling_218
                         Text/lj_05_shiling_219/text #id:lj_05_shiling_219
 
@@ -266,30 +286,30 @@ if {visit_shiling} == 1:
                         Text/lj_05_shiling_221/text #id:lj_05_shiling_221
 
                         set {money} -= 2
-                        jump 03_crossroads
+                        jump 03_crossroads/
                     - Choice/lj_05_shiling_225/text #id:lj_05_shiling_225
                         Text/lj_05_shiling_226/text #id:lj_05_shiling_226
 
                         Text/lj_05_shiling_227/text #id:lj_05_shiling_227
 
                         set {money} -= 2
-                        jump 03_crossroads
+                        jump 03_crossroads/
                 - Choice/lj_05_shiling_232/text #id:lj_05_shiling_232
                     Text/lj_05_shiling_233/text #id:lj_05_shiling_233
 
                     Text/lj_05_shiling_234/text #id:lj_05_shiling_234
 
                     set {money} -= 2
-                    jump 03_crossroads
+                    jump 03_crossroads/
         - Choice/lj_05_shiling_240/text #id:lj_05_shiling_240
             Text/lj_05_shiling_241/text #id:lj_05_shiling_241
 
             Text/lj_05_shiling_242/text #id:lj_05_shiling_242
 
             set {money} -= 2
-            jump 03_crossroads
+            jump 03_crossroads/
 else:
     Text/lj_05_shiling_249/text #id:lj_05_shiling_249
 
     - Choice/lj_05_shiling_250/text #id:lj_05_shiling_250
-        jump 03_crossroads
+        jump 03_crossroads/

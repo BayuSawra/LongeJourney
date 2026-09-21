@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/crossroads.png" fade="0.0"]
+
 Text/lj_03_crossroads_000/text #id:lj_03_crossroads_000
 
 Text/lj_03_crossroads_001/text #id:lj_03_crossroads_001
@@ -19,16 +21,16 @@ elif {visit_shiling} == 0 and {visit_luyuan} == 1:
     Text/lj_03_crossroads_013/text #id:lj_03_crossroads_013
     set {energy} -= 5
     set {visit_huadian} += 1
-    jump 04_flower_shop
+    jump 04_flower_shop/
 - Choice/lj_03_crossroads_018/text | [if {money} >= 2] #id:lj_03_crossroads_018
     Text/lj_03_crossroads_019/text #id:lj_03_crossroads_019
     set {money} -= 2
     set {visit_shiling} += 1
-    jump 05_shiling
+    jump 05_shiling/
 - Choice/lj_03_crossroads_024/text | [if {money} >= 2] #id:lj_03_crossroads_024
     Text/lj_03_crossroads_025/text #id:lj_03_crossroads_025
     set {money} -= 2
     set {visit_luyuan} += 1
-    jump 06_luyuan
+    jump 06_luyuan/
 - Choice/lj_03_crossroads_030/text #id:lj_03_crossroads_030
-    jump 01_hospital
+    jump 01_hospital/

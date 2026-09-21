@@ -7,7 +7,8 @@ $targetDirs = @(
     (Join-Path $repoRoot "docs"),
     (Join-Path $repoRoot "lore"),
     (Join-Path $repoRoot "scenes"),
-    (Join-Path $repoRoot "scripts")
+    (Join-Path $repoRoot "scripts"),
+    (Join-Path $repoRoot "timelines")
 )
 
 $excludedFiles = @(
@@ -80,6 +81,9 @@ foreach ($dir in $targetDirs) {
                         })
                     }
 
+                    if ($refEnd -ge $line.Length) {
+                        break
+                    }
                     $searchFrom = $refEnd + 1
                 }
             }
@@ -124,10 +128,10 @@ if ($result.unresolved_count -ne $unresolvedReferences.Count) {
     $failures.Add("unresolved_references mismatch")
 }
 
-$expectedResolved = $allReferences | Where-Object { $_.reference -eq "art/shilin2.png" -and $_.resolved }
+$expectedResolved = $allReferences | Where-Object { $_.reference -eq "art/backgrounds/shiling_foothill.png" -and $_.resolved }
 $expectedResolvedFlower = $allReferences | Where-Object { $_.reference -eq "art/icon/flowericon.png" -and $_.resolved }
 if ($null -eq $expectedResolved) {
-    $failures.Add("expected resolved art/shilin2.png missing")
+    $failures.Add("expected resolved art/backgrounds/shiling_foothill.png missing")
 }
 if ($null -eq $expectedResolvedFlower) {
     $failures.Add("expected resolved art/icon/flowericon.png missing")

@@ -1,3 +1,8 @@
+if {visit_huadian} == 1 or {visit_huadian} == 2:
+    [background arg="res://art/backgrounds/flower_shop_open.png" fade="0.0"]
+else:
+    [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.0"]
+
 Text/lj_04_flower_shop_000/text #id:lj_04_flower_shop_000
 
 if {visit_huadian} == 1:
@@ -11,7 +16,7 @@ if {visit_huadian} == 1:
         Text/lj_04_flower_shop_006/text #id:lj_04_flower_shop_006
 
         set {earthworm} += 1
-        jump 03_crossroads
+        jump 03_crossroads/
     - Choice/lj_04_flower_shop_010/text #id:lj_04_flower_shop_010
         Text/lj_04_flower_shop_011/text #id:lj_04_flower_shop_011
 
@@ -22,20 +27,22 @@ if {visit_huadian} == 1:
 
             set {earthworm} += 1
             set {calm} -= 10
-            jump 03_crossroads
+            jump 03_crossroads/
         - Choice/lj_04_flower_shop_019/text #id:lj_04_flower_shop_019
             Text/lj_04_flower_shop_020/text #id:lj_04_flower_shop_020
 
-            jump 03_crossroads
+            jump 03_crossroads/
 elif {visit_huadian} == 2:
     Text/lj_04_flower_shop_026/text #id:lj_04_flower_shop_026
+
+    [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.6"]
 
     Text/lj_04_flower_shop_027/text #id:lj_04_flower_shop_027
 
     - Choice/lj_04_flower_shop_028/text #id:lj_04_flower_shop_028
-        jump 03_crossroads
+        jump 03_crossroads/
 else:
     Text/lj_04_flower_shop_033/text #id:lj_04_flower_shop_033
 
     - Choice/lj_04_flower_shop_034/text #id:lj_04_flower_shop_034
-        jump 03_crossroads
+        jump 03_crossroads/

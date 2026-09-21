@@ -1,5 +1,6 @@
+[background arg="res://art/backgrounds/luyuan_garden.png" fade="0.0"]
+
 Text/lj_06_luyuan_000/text #id:lj_06_luyuan_000
-[background arg="res://art/jianshan2.png" fade="1.0"]
 
 Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
 
@@ -8,9 +9,12 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
 
     set {flower} += 1
 
+    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
+
     Text/lj_06_luyuan_006/text #id:lj_06_luyuan_006
 
     - Choice/lj_06_luyuan_007/text #id:lj_06_luyuan_007
+        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_008/text #id:lj_06_luyuan_008
 
         Text/lj_06_luyuan_009/text #id:lj_06_luyuan_009
@@ -19,7 +23,7 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_011/text #id:lj_06_luyuan_011
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/
         - Choice/lj_06_luyuan_015/text #id:lj_06_luyuan_015
             Text/lj_06_luyuan_016/text #id:lj_06_luyuan_016
 
@@ -29,15 +33,18 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_019/text #id:lj_06_luyuan_019
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/
 - Choice/lj_06_luyuan_025/text #id:lj_06_luyuan_025
     Text/lj_06_luyuan_026/text #id:lj_06_luyuan_026
 
     set {flower} += 1
 
+    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
+
     Text/lj_06_luyuan_028/text #id:lj_06_luyuan_028
 
     - Choice/lj_06_luyuan_029/text #id:lj_06_luyuan_029
+        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_030/text #id:lj_06_luyuan_030
 
         Text/lj_06_luyuan_031/text #id:lj_06_luyuan_031
@@ -46,7 +53,7 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_033/text #id:lj_06_luyuan_033
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/
         - Choice/lj_06_luyuan_037/text #id:lj_06_luyuan_037
             Text/lj_06_luyuan_038/text #id:lj_06_luyuan_038
 
@@ -56,15 +63,18 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_041/text #id:lj_06_luyuan_041
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/
 - Choice/lj_06_luyuan_047/text #id:lj_06_luyuan_047
     Text/lj_06_luyuan_048/text #id:lj_06_luyuan_048
 
     set {flower} += 1
 
+    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
+
     Text/lj_06_luyuan_050/text #id:lj_06_luyuan_050
 
     - Choice/lj_06_luyuan_051/text #id:lj_06_luyuan_051
+        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_052/text #id:lj_06_luyuan_052
 
         Text/lj_06_luyuan_053/text #id:lj_06_luyuan_053
@@ -73,7 +83,7 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_055/text #id:lj_06_luyuan_055
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/
         - Choice/lj_06_luyuan_059/text #id:lj_06_luyuan_059
             Text/lj_06_luyuan_060/text #id:lj_06_luyuan_060
 
@@ -83,4 +93,4 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
             Text/lj_06_luyuan_063/text #id:lj_06_luyuan_063
 
             set {money} -= 2
-            jump 07_maze_left
+            jump 07_maze_left/

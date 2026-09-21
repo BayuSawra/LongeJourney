@@ -53,13 +53,34 @@ def validate(project: Path) -> list[str]:
                 labels.add(name)
             jump = JUMP_RE.match(line)
             if jump:
-                jumps.append((number, jump.group(1).rstrip("/")))
-        for number, target in jumps:
-            if target in labels or target in timelines:
+                jumps.append((number, jump.group(1)))
+        for number, raw_target in jumps:
+            target = raw_target.rstrip("/")
+            if "/" in target:
+                target_timeline, target_label = target.split("/", 1)
+                if target_timeline in timelines and target_label:
+                    graph[timeline_id].add(target_timeline)
+                    continue
+                errors.append(
+                    f"{path.relative_to(project)}:{number}: jump target not found: {raw_target}"
+                )
+                continue
+            if raw_target.endswith("/"):
                 if target in timelines:
                     graph[timeline_id].add(target)
+                    continue
+                errors.append(
+                    f"{path.relative_to(project)}:{number}: jump target not found: {raw_target}"
+                )
                 continue
-            errors.append(f"{path.relative_to(project)}:{number}: jump target not found: {target}")
+            if target in timelines:
+                errors.append(
+                    f"{path.relative_to(project)}:{number}: cross-timeline jump must end with '/': {raw_target}"
+                )
+                continue
+            if target in labels:
+                continue
+            errors.append(f"{path.relative_to(project)}:{number}: jump target not found: {raw_target}")
 
     required = [
         "00_start", "01_hospital", "02_ward", "03_crossroads", "04_flower_shop",

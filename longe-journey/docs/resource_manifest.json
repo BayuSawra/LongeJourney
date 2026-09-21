@@ -5,6 +5,7 @@
     "categories":  [
                        "art",
                        "art/icon",
+                       "art/backgrounds",
                        "font"
                    ],
     "resources":  [
@@ -147,6 +148,181 @@
                           "size_bytes":  4034768,
                           "import_path":  "font/HYZIKUTANGJINGJIEKAITIW.TTF.import",
                           "has_import":  true
+                      },
+                      {
+                          "path": "art/bus_interior_normal.png",
+                          "category": "art",
+                          "size_bytes": 2197302,
+                          "import_path": "art/bus_interior_normal.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/bus_interior_staring.png",
+                          "category": "art",
+                          "size_bytes": 2290411,
+                          "import_path": "art/bus_interior_staring.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/hospital_exterior.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2562297,
+                          "import_path": "art/backgrounds/hospital_exterior.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/ward_corridor.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2073818,
+                          "import_path": "art/backgrounds/ward_corridor.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/crossroads.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2449800,
+                          "import_path": "art/backgrounds/crossroads.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/flower_shop_open.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2304958,
+                          "import_path": "art/backgrounds/flower_shop_open.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/flower_shop_closed.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2202971,
+                          "import_path": "art/backgrounds/flower_shop_closed.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/wife_room_curtained.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2079242,
+                          "import_path": "art/backgrounds/wife_room_curtained.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/wife_room_open.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1911097,
+                          "import_path": "art/backgrounds/wife_room_open.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/morgue_occupied.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2586209,
+                          "import_path": "art/backgrounds/morgue_occupied.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/hospital_stairs.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1923009,
+                          "import_path": "art/backgrounds/hospital_stairs.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/morgue_empty.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2456902,
+                          "import_path": "art/backgrounds/morgue_empty.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_foothill.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2516204,
+                          "import_path": "art/backgrounds/shiling_foothill.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_trail.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2589383,
+                          "import_path": "art/backgrounds/shiling_trail.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_iron_lion.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2206650,
+                          "import_path": "art/backgrounds/shiling_iron_lion.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_burning_mountain.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1853474,
+                          "import_path": "art/backgrounds/shiling_burning_mountain.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_temple.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2282057,
+                          "import_path": "art/backgrounds/shiling_temple.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_closed_gate.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2385980,
+                          "import_path": "art/backgrounds/shiling_closed_gate.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/luyuan_garden.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2689056,
+                          "import_path": "art/backgrounds/luyuan_garden.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_entry.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2264013,
+                          "import_path": "art/backgrounds/maze_entry.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_left_garden.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2495852,
+                          "import_path": "art/backgrounds/maze_left_garden.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_right_bamboo.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2318036,
+                          "import_path": "art/backgrounds/maze_right_bamboo.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_stone_corridor.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2464323,
+                          "import_path": "art/backgrounds/maze_stone_corridor.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_center.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2305399,
+                          "import_path": "art/backgrounds/maze_center.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_exit_road.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2395659,
+                          "import_path": "art/backgrounds/maze_exit_road.png.import",
+                          "has_import": true
                       }
                   ]
 }

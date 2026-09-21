@@ -1,3 +1,5 @@
+[background arg="res://art/backgrounds/ward_corridor.png" fade="0.0"]
+
 Text/lj_02_ward_000/text #id:lj_02_ward_000
 
 Text/lj_02_ward_001/text #id:lj_02_ward_001
@@ -8,6 +10,8 @@ if {flower} < 5:
     Text/lj_02_ward_004/text #id:lj_02_ward_004
     Text/lj_02_ward_005/text #id:lj_02_ward_005
     
+    [background arg="res://art/backgrounds/hospital_exterior.png" fade="0.6"]
+
     Text/lj_02_ward_006/text #id:lj_02_ward_006
     
     - Choice/lj_02_ward_007/text #id:lj_02_ward_007
@@ -19,6 +23,7 @@ elif {hualan}:
     
     - Choice/lj_02_ward_014/text #id:lj_02_ward_014
         [save slot="auto"]
+        [background arg="res://art/backgrounds/wife_room_curtained.png" fade="0.6"]
         Text/lj_02_ward_016/text #id:lj_02_ward_016
         
         Text/lj_02_ward_017/text #id:lj_02_ward_017
@@ -32,6 +37,7 @@ else:
     
     - Choice/lj_02_ward_025/text #id:lj_02_ward_025
         [save slot="auto"]
+        [background arg="res://art/backgrounds/wife_room_curtained.png" fade="0.6"]
         Text/lj_02_ward_027/text #id:lj_02_ward_027
         
         Text/lj_02_ward_028/text #id:lj_02_ward_028
