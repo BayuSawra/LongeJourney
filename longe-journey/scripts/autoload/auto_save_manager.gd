@@ -6,6 +6,8 @@ const MILESTONE_VARS: Array[String] = [
 	"visit_huadian", "visit_shiling", "visit_luyuan", "visit_ting_shifang",
 ]
 
+signal auto_save_completed(success: bool, error_key: String)
+
 var _saving: bool = false
 
 func _ready() -> void:
@@ -39,4 +41,5 @@ func _request_auto_save() -> void:
 
 func _perform_auto_save() -> void:
 	_saving = false
-	SaveManager.save_to_slot("auto")
+	var success := SaveManager.save_to_slot("auto")
+	auto_save_completed.emit(success, SaveManager.last_error)

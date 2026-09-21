@@ -11,6 +11,7 @@ if {visit_huadian} == 1:
     Text/lj_04_flower_shop_003/text #id:lj_04_flower_shop_003
 
     - Choice/lj_04_flower_shop_004/text #id:lj_04_flower_shop_004
+        [background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
         Text/lj_04_flower_shop_005/text #id:lj_04_flower_shop_005
 
         Text/lj_04_flower_shop_006/text #id:lj_04_flower_shop_006

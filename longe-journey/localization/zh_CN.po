@@ -59,15 +59,24 @@ msgstr "进入病房"
 
 #: res://timelines/03_crossroads.dtl:18
 msgid "Choice/lj_03_crossroads_012/text"
-msgstr "去花店"
+msgstr "去花店（最多 3 次）"
+
+msgid "Choice/lj_03_crossroads_012/disabled_text"
+msgstr "花店暂时没有新的线索。"
 
 #: res://timelines/03_crossroads.dtl:23
 msgid "Choice/lj_03_crossroads_018/text"
-msgstr "去狮岭"
+msgstr "去狮岭（需要 2 元）"
+
+msgid "Choice/lj_03_crossroads_018/disabled_text"
+msgstr "金钱不足（需要 2 元）。"
 
 #: res://timelines/03_crossroads.dtl:28
 msgid "Choice/lj_03_crossroads_024/text"
-msgstr "去露园"
+msgstr "去露园（需要 2 元）"
+
+msgid "Choice/lj_03_crossroads_024/disabled_text"
+msgstr "金钱不足（需要 2 元）。"
 
 #: res://timelines/03_crossroads.dtl:33
 msgid "Choice/lj_03_crossroads_030/text"
@@ -1344,11 +1353,38 @@ msgstr "精疲力尽"
 msgid "ending.triggered"
 msgstr "触发结局：{ending}"
 
+msgid "feedback.autosave"
+msgstr "已自动存档"
+
+msgid "feedback.autosave_failed"
+msgstr "自动存档失败：{error}"
+
+msgid "feedback.calm"
+msgstr "冷静"
+
+msgid "feedback.earthworm"
+msgstr "蚯蚓"
+
+msgid "feedback.energy"
+msgstr "体力"
+
+msgid "feedback.flower"
+msgstr "花"
+
+msgid "feedback.money"
+msgstr "金钱"
+
 msgid "history.choice"
 msgstr "[选项] {text}"
 
 msgid "history.speaker"
 msgstr "{name}：{text}"
+
+msgid "hud.calm"
+msgstr "冷静 {value}"
+
+msgid "hud.energy"
+msgstr "体力 {value}"
 
 msgid "hud.flower"
 msgstr "花 {value}"
@@ -1728,11 +1764,11 @@ msgstr "{slot}. 空"
 msgid "save.error_busy"
 msgstr "正在读取其他存档，请稍后再试。"
 
-msgid "save.error_delete"
-msgstr "删除存档失败。"
-
 msgid "save.error_data"
 msgstr "存档数据无效，无法恢复。"
+
+msgid "save.error_delete"
+msgstr "删除存档失败。"
 
 msgid "save.error_invalid_slot"
 msgstr "存档槽位名称无效。"
@@ -1740,14 +1776,14 @@ msgstr "存档槽位名称无效。"
 msgid "save.error_missing"
 msgstr "存档不存在或无法读取。"
 
-msgid "save.error_write"
-msgstr "写入存档失败。"
-
 msgid "save.error_title"
 msgstr "读档失败"
 
 msgid "save.error_version"
 msgstr "存档版本不兼容。本地化版本使用第 3 版存档，不会覆盖旧文件。"
+
+msgid "save.error_write"
+msgstr "写入存档失败。"
 
 msgid "save.load_title"
 msgstr "读档"
@@ -1955,6 +1991,10 @@ msgstr "覆盖存档"
 msgid "ui.save_slot_panel.title_label.text"
 msgstr "存档"
 
+#: scenes/settings_panel.tscn:BgmVolumeLabel
+msgid "ui.settings_panel.bgm_volume_label.text"
+msgstr "背景音乐"
+
 #: scenes/settings_panel.tscn:CloseButton
 msgid "ui.settings_panel.close_button.text"
 msgstr "关闭"
@@ -1963,6 +2003,10 @@ msgstr "关闭"
 msgid "ui.settings_panel.fullscreen_check.text"
 msgstr "全屏"
 
+#: scenes/settings_panel.tscn:SfxVolumeLabel
+msgid "ui.settings_panel.sfx_volume_label.text"
+msgstr "音效"
+
 #: scenes/settings_panel.tscn:TextSpeedLabel
 msgid "ui.settings_panel.text_speed_label.text"
 msgstr "文字速度"
@@ -1970,14 +2014,6 @@ msgstr "文字速度"
 #: scenes/settings_panel.tscn:Title
 msgid "ui.settings_panel.title.text"
 msgstr "设置"
-
-#: scenes/settings_panel.tscn:BgmVolumeLabel
-msgid "ui.settings_panel.bgm_volume_label.text"
-msgstr "背景音乐"
-
-#: scenes/settings_panel.tscn:SfxVolumeLabel
-msgid "ui.settings_panel.sfx_volume_label.text"
-msgstr "音效"
 
 #: scenes/settings_panel.tscn:UiVolumeLabel
 msgid "ui.settings_panel.ui_volume_label.text"

@@ -281,6 +281,116 @@
         1672,
         941
       ]
+    },
+    {
+      "id": "crossroads_bus_sunflower",
+      "path": "res://art/backgrounds/crossroads_bus_sunflower.png",
+      "prompt": "Deserted town crossroads in cold drizzle, old bus stopped roadside, distant neighbor handing a sunflower from the bus window.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-250d92fc-a1ab-45f2-a35c-92d64aa412f7.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "shiling_bandit_ambush",
+      "path": "res://art/backgrounds/shiling_bandit_ambush.png",
+      "prompt": "Wet Shiling mountain trail blocked by distant theatrical bandits in smeared stage makeup and cheap costumes.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-e4b80355-6ba3-4ad7-a1f4-3cd785cfa8d2.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "hospital_corridor_whisper",
+      "path": "res://art/backgrounds/hospital_corridor_whisper.png",
+      "prompt": "Old Chinese county hospital stair corridor, Chinese nurse in a simple pale blue-gray uniform whispering to a frightened man, chipped concrete and wet floor.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-330811cb-68e4-4ca4-bc64-60d99716d017.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_pinned_woman",
+      "path": "res://art/backgrounds/maze_pinned_woman.png",
+      "prompt": "Rockery maze clearing with an adult woman rigidly fixed by a pole behind her clothing, non-graphic.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-2fe7545e-b4ff-4a29-868a-b68e2f0604b3.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_escape_road",
+      "path": "res://art/backgrounds/maze_escape_road.png",
+      "prompt": "Chinese garden maze exit with traditional tiled gate, gray brick wall, misty Chinese mountains and a torn black shoe; strictly no European garden elements.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-e6c5ad4d-2d8f-4392-b8e0-5b9a5b9fca55.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "hospital_ward_door_505",
+      "path": "res://art/backgrounds/hospital_ward_door_505.png",
+      "prompt": "Seventh-floor hospital corridor ending at the closed 5-05 ward door, blank plate and distant nurse station.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-86af067e-bf43-4d28-9f74-27f66207d5d0.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "luyuan_inner_gate",
+      "path": "res://art/backgrounds/luyuan_inner_gate.png",
+      "prompt": "Inner stone paifang of the old garden, wet path to the rockery maze, half-closed wooden gate and chrysanthemums.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-44a0088f-ce65-46e4-b46a-09e41d92bfc4.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_blood_trail",
+      "path": "res://art/backgrounds/maze_blood_trail.png",
+      "prompt": "Narrow wet rockery corridor with fallen petals and a thin non-graphic blood trail.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-3a5d2cb9-2f4b-4d64-ae61-e8c1d24e23ba.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "morgue_interior_drawers",
+      "path": "res://art/backgrounds/morgue_interior_drawers.png",
+      "prompt": "Neglected morgue interior with rusted body drawers, cold light, an empty bucket and red cloth, no corpse.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-4980c1b6-e4e2-4ff5-94d9-ce285afd24d1.png",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "flower_shop_interior_buckets",
+      "path": "res://art/backgrounds/flower_shop_interior_buckets.png",
+      "prompt": "Tiny flower shop interior with overturned soil buckets, spilled dirt and earthworms under a half-raised shutter.",
+      "prompt_kind": "generation request",
+      "original_output_path": "generated_images/exec-55191cca-0dfd-4a21-985b-f122f1d6476a.png",
+      "size": [
+        1672,
+        941
+      ]
     }
   ],
   "timelines": [
@@ -328,10 +438,18 @@
         },
         {
           "before": "Text/lj_02_ward_016/text",
+          "asset": "hospital_ward_door_505"
+        },
+        {
+          "before": "Text/lj_02_ward_017/text",
           "asset": "wife_room_curtained"
         },
         {
           "before": "Text/lj_02_ward_027/text",
+          "asset": "hospital_ward_door_505"
+        },
+        {
+          "before": "Text/lj_02_ward_028/text",
           "asset": "wife_room_curtained"
         }
       ]
@@ -345,6 +463,14 @@
         {
           "before": "Text/lj_03_crossroads_000/text",
           "asset": "crossroads"
+        },
+        {
+          "before": "Text/lj_03_crossroads_003/text",
+          "asset": "crossroads_bus_sunflower"
+        },
+        {
+          "before": "Text/lj_03_crossroads_008/text",
+          "asset": "crossroads_bus_sunflower"
         }
       ]
     },
@@ -358,6 +484,10 @@
         {
           "before": "Text/lj_04_flower_shop_027/text",
           "asset": "flower_shop_closed"
+        },
+        {
+          "before": "Text/lj_04_flower_shop_005/text",
+          "asset": "flower_shop_interior_buckets"
         }
       ]
     },
@@ -368,10 +498,6 @@
         "shiling_closed_gate"
       ],
       "cues": [
-        {
-          "before": "Text/lj_05_shiling_006/text",
-          "asset": "shiling_trail"
-        },
         {
           "before": "Text/lj_05_shiling_020/text",
           "asset": "shiling_iron_lion"
@@ -431,6 +557,14 @@
         {
           "before": "Text/lj_05_shiling_206/text",
           "asset": "shiling_temple"
+        },
+        {
+          "before": "Text/lj_05_shiling_006/text",
+          "asset": "shiling_trail"
+        },
+        {
+          "before": "Text/lj_05_shiling_007/text",
+          "asset": "shiling_bandit_ambush"
         }
       ]
     },
@@ -467,6 +601,10 @@
         {
           "before": "Text/lj_06_luyuan_052/text",
           "asset": "maze_center"
+        },
+        {
+          "before": "Text/lj_06_luyuan_004/text",
+          "asset": "luyuan_inner_gate"
         }
       ]
     },
@@ -509,12 +647,20 @@
           "asset": "maze_center"
         },
         {
-          "before": "Text/lj_07_maze_middle_030/text",
-          "asset": "maze_exit_road"
-        },
-        {
           "before": "Text/lj_07_maze_middle_034/text",
           "asset": "maze_center"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_003/text",
+          "asset": "maze_blood_trail"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_021/text",
+          "asset": "maze_pinned_woman"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_030/text",
+          "asset": "maze_escape_road"
         }
       ]
     },
@@ -558,7 +704,7 @@
         },
         {
           "before": "Text/lj_08_wife_room_037/text",
-          "asset": "hospital_stairs"
+          "asset": "hospital_corridor_whisper"
         }
       ]
     },
@@ -584,7 +730,12 @@
         "morgue_occupied",
         "morgue_empty"
       ],
-      "cues": []
+      "cues": [
+        {
+          "before": "Text/lj_10_morgue_004/text",
+          "asset": "morgue_interior_drawers"
+        }
+      ]
     }
   ],
   "actual_dimensions_note": "1671-1672 x 941 pixels; each asset records its exact size."

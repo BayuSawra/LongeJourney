@@ -9,6 +9,7 @@ set {visit_ting_shifang} += 1
 if {visit_ting_shifang} == 1:
     Text/lj_10_morgue_003/text #id:lj_10_morgue_003
     
+    [background arg="res://art/backgrounds/morgue_interior_drawers.png" fade="0.6"]
     Text/lj_10_morgue_004/text #id:lj_10_morgue_004
     
     - Choice/lj_10_morgue_005/text #id:lj_10_morgue_005

@@ -117,6 +117,10 @@ func test_hud_lore_and_history_refresh_without_changing_variables() -> void:
 	var lore_before: Dictionary = LoreRuntime.get_detail("protagonist")
 	Localization.set_locale("en")
 	assert_str(hud.values.get_node("money").text).is_equal(Localization.format_text("hud.money", {"value": 20}))
+	assert_str(hud.values.get_node("energy").text).is_equal(Localization.format_text("hud.energy", {"value": 100}))
+	assert_str(hud.values.get_node("calm").text).is_equal(Localization.format_text("hud.calm", {"value": 100}))
+	assert_float(hud.values.get_node("energy_bar").value).is_equal(100.0)
+	assert_float(hud.values.get_node("calm_bar").value).is_equal(100.0)
 	assert_str(history.list_box.get_child(0).text).is_not_equal(original)
 	assert_str(LoreRuntime.get_detail("protagonist")["title"]).is_not_equal(lore_before["title"])
 	assert_array(LoreRuntime.search("Nameless King")).is_not_empty()
@@ -129,6 +133,23 @@ func test_hud_lore_and_history_refresh_without_changing_variables() -> void:
 	hud.queue_free()
 	history.queue_free()
 	await get_tree().process_frame
+
+
+func test_crossroads_condition_choices_keep_localized_disabled_reasons() -> void:
+	var timeline := load("res://timelines/03_crossroads.dtl") as DialogicTimeline
+	timeline.process()
+	var expected := {
+		"Choice/lj_03_crossroads_012/text": "Choice/lj_03_crossroads_012/disabled_text",
+		"Choice/lj_03_crossroads_018/text": "Choice/lj_03_crossroads_018/disabled_text",
+		"Choice/lj_03_crossroads_024/text": "Choice/lj_03_crossroads_024/disabled_text",
+	}
+	for event: DialogicEvent in timeline.events:
+		var key := event.get_property_translation_key("text")
+		if not expected.has(key):
+			continue
+		assert_int((event as DialogicChoiceEvent).else_action).is_equal(DialogicChoiceEvent.ElseActions.DISABLE)
+		assert_str((event as DialogicChoiceEvent).disabled_text).is_equal(expected[key])
+		assert_str(event.get_property_translated("disabled_text")).is_equal(Localization.text(expected[key]))
 
 
 func test_live_text_switch_preserves_event_and_reveal_progress() -> void:

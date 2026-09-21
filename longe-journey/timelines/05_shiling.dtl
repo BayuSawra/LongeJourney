@@ -13,6 +13,7 @@ if {visit_shiling} == 1:
         [background arg="res://art/backgrounds/shiling_trail.png" fade="0.6"]
         Text/lj_05_shiling_006/text #id:lj_05_shiling_006
 
+        [background arg="res://art/backgrounds/shiling_bandit_ambush.png" fade="0.6"]
         Text/lj_05_shiling_007/text #id:lj_05_shiling_007
 
         - Choice/lj_05_shiling_008/text #id:lj_05_shiling_008

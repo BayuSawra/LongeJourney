@@ -22,16 +22,18 @@ script = ExtResource("1_hud")
 [node name="Panel" type="PanelContainer" parent="." unique_id=1270591837]
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 203.0
-offset_bottom = 69.0
+offset_right = 400.0
+offset_bottom = 130.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
 
-[node name="Values" type="HBoxContainer" parent="Panel" unique_id=1853799334]
+[node name="Values" type="GridContainer" parent="Panel" unique_id=1853799334]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 20
+columns = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 7
 
 [node name="flower" type="Label" parent="Panel/Values" unique_id=1432114663]
 layout_mode = 2
@@ -45,9 +47,37 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = ""
 horizontal_alignment = 1
+
+[node name="energy" type="Label" parent="Panel/Values"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="energy_bar" type="ProgressBar" parent="Panel/Values"]
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="calm" type="Label" parent="Panel/Values"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="calm_bar" type="ProgressBar" parent="Panel/Values"]
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+show_percentage = false
 
 [node name="LoreButton" type="Button" parent="Panel" unique_id=422621561]
 unique_name_in_owner = true

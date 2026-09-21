@@ -16,6 +16,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 MCP = 'res://addons/godot_dotnet_mcp/plugin.cfg'
+PINNED_GODOT_VERSION = '4.7.stable.official.5b4e0cb0f'
 
 
 def require(condition, message):
@@ -29,6 +30,18 @@ def editor_executable(engine: str) -> str:
         path = path.with_name(path.name.replace("_console.exe", ".exe"))
     require(path.is_file(), f"Editor executable not found: {path}")
     return str(path)
+
+
+def require_pinned_engines(engine: str, editor: str, startupinfo) -> str:
+    engine_version = subprocess.check_output(
+        [engine, '--version'], startupinfo=startupinfo).decode().strip()
+    require(engine_version == PINNED_GODOT_VERSION,
+            f'Expected pinned Godot {PINNED_GODOT_VERSION}; got {engine_version}')
+    editor_version = subprocess.check_output(
+        [editor, '--version'], startupinfo=startupinfo).decode().strip()
+    require(editor_version == PINNED_GODOT_VERSION,
+            f'Editor version does not match console: {editor_version}')
+    return engine_version
 
 
 def main():
@@ -45,8 +58,7 @@ def main():
     si.wShowWindow = 0
     process = None
     try:
-        require(subprocess.check_output([engine, '--version'], startupinfo=si).decode().strip()
-                == '4.6.2.stable.official.71f334935', 'Expected pinned Godot 4.6.2 standard')
+        require_pinned_engines(engine, editor, si)
         with tempfile.TemporaryDirectory(prefix='LongeJourney-MCP-') as temp, \
              tempfile.TemporaryDirectory(prefix='LongeJourney-MCP-', dir=os.environ['APPDATA']) as user:
             project = Path(temp) / 'project'

@@ -91,7 +91,7 @@ python tools/lj_cli.py update-index
 
 ```powershell
 $env:PYTHONUTF8 = "1"
-python tools/verify_mcp.py --godot <Godot-4.6.2-console.exe绝对路径>
+python tools/verify_mcp.py --godot <Godot-4.7-console.exe绝对路径>
 ```
 
 测试复制工程、隔离用户数据并使用临时本机端口，不操作真实存档。

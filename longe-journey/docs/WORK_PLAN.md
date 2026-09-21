@@ -10,7 +10,7 @@
 
 ### 1.1 环境
 
-- 引擎：Godot 4.6，渲染后端为 GL Compatibility。
+- 引擎：Godot 4.7，渲染后端为 GL Compatibility。
 - 项目路径：`D:\LongeJourney\longe-journey`
 - 启动方式：用 Godot 打开 `project.godot` 即可。
 
@@ -256,22 +256,22 @@ visit_ting_shifang=0
   - 9.2.5 场景/HUD 集成验证：从游戏内入口进入图鉴，返回后场景状态不丢。验证通过就执行，不需要来回反复验证，收窄你的工作流。
 - 9.3 校验流程：与 `tools/check_lore_canon.py` 的结果保持一致。
 - 把 `lore/INDEX.md` 或 canon 数据接入游戏内“图鉴/设定”界面。
-- 验证：内容与 `tools/check_lore_canon.py` 结果一致。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
+- 验证：内容与 `tools/check_lore_canon.py` 结果一致。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
 
 ### 阶段 10：批量导入 / 导出 / 备份规范
 
 - 10.1 timeline/lore/资源导入导出脚本：输入输出格式与文件路径明确。
-  - 10.1.1 统一 CLI/接口与输入输出格式、路径约定：先定命令入口、文件格式与目录约定。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
-  - 10.1.2 timeline 导入导出：支持批量导出/导入 `timelines/`，保持引用与 label 有效。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
-  - [x] 10.1.3 lore 导入导出：支持批量导出/导入 `lore/` 与 `INDEX.md`。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
+  - 10.1.1 统一 CLI/接口与输入输出格式、路径约定：先定命令入口、文件格式与目录约定。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
+  - 10.1.2 timeline 导入导出：支持批量导出/导入 `timelines/`，保持引用与 label 有效。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
+  - [x] 10.1.3 lore 导入导出：支持批量导出/导入 `lore/` 与 `INDEX.md`。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
   - 10.1.4 资源清单与引用校验导入导出：拆为 10.1.4a~10.1.4e，每个子任务单独开线程执行，完成即提交，线程内不做下一个子任务。
     - 10.1.4a 资源清单生成：扫描 `art/`、`art/icon/`、`font/` 及配套 `.import` 文件，生成资源清单文件。验证：清单文件生成且条目完整。验证通过就执行，不需要来回反复验证，收窄你的工作流。
     - 10.1.4b 资源引用分析：扫描 lore/docs/scenes/scripts 中的资源引用，输出引用清单与未解析引用。验证：输出文件与引用计数正确。验证通过就执行，不需要来回反复验证，收窄你的工作流。
     - 10.1.4c 资源引用校验器：对照资源清单与引用清单，输出缺失、孤立、不一致项。验证：校验结果与手工抽查一致。验证通过就执行，不需要来回反复验证，收窄你的工作流。
-    - [x] 10.1.4d 资源导入器：按清单重建/补齐资源与 `.import` 文件，导入后运行校验器。验证：导入后校验通过。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
+    - [x] 10.1.4d 资源导入器：按清单重建/补齐资源与 `.import` 文件，导入后运行校验器。验证：导入后校验通过。验证通过就执行，不需要来回反复验证，收窄你的工作流。后续如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
       - [x] 10.1.4e 导出/备份与文档：按清单导出/备份资源并做往返校验，把用法写回计划/工具文档。命令：`powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1`；备份输出至 `backups/resources/<时间戳>/`，含 `backup_manifest.json`（SHA256），往返校验通过后输出 `roundtrip=passed validation=passed`。验证：往返校验通过、文档已更新。验证通过就执行，不需要来回反复验证，收窄你的工作流。
   - [x] 10.2 备份目录规范：备份位置、命名与保留规则明确。验证通过就执行，不需要来回反复验证，收窄你的工作流。验证：备份位置 `backups/resources/<时间戳>/`、命名 `yyyyMMdd-HHmmss`、保留最近 3 份且脚本不自动清理，脚本验证输出 `roundtrip=passed validation=passed`。
-- [x] 10.3 往返验证：复用 10.1 的导出/导入/校验命令与 resource_references.json / resource_validation.json 等已有产物，做一次端到端导出->导入->校验；发现不一致时修复后重跑一次，不反复扫描全量语料。验证：导出的内容可重新导入且校验通过。如需测试，godot安装在E:\Godot\Godot_v4.6.2-stable_mono_win64
+- [x] 10.3 往返验证：复用 10.1 的导出/导入/校验命令与 resource_references.json / resource_validation.json 等已有产物，做一次端到端导出->导入->校验；发现不一致时修复后重跑一次，不反复扫描全量语料。验证：导出的内容可重新导入且校验通过。如需测试，使用 `GODOT_PATH` 指向 Godot 4.7 standard。
 - [x] 10.4 文档：同步更新本计划与 docs/ 工具文档，记录脚本用法、备份目录/命名/保留规则及 10.3 的往返验证命令。验证：文档已更新且命令与实际 CLI 一致。
 - 建立 timeline、lore、资源的批量导入导出脚本与备份目录规范。
 - 验证：导出的内容可重新导入且校验通过。验证通过就执行，不需要来回反复验证，收窄你的工作流。

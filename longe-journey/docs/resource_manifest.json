@@ -323,6 +323,76 @@
                           "size_bytes": 2395659,
                           "import_path": "art/backgrounds/maze_exit_road.png.import",
                           "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/crossroads_bus_sunflower.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2352300,
+                          "import_path": "art/backgrounds/crossroads_bus_sunflower.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/flower_shop_interior_buckets.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1941261,
+                          "import_path": "art/backgrounds/flower_shop_interior_buckets.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/hospital_corridor_whisper.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1801297,
+                          "import_path": "art/backgrounds/hospital_corridor_whisper.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/hospital_ward_door_505.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1823342,
+                          "import_path": "art/backgrounds/hospital_ward_door_505.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/luyuan_inner_gate.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2489325,
+                          "import_path": "art/backgrounds/luyuan_inner_gate.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_blood_trail.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1989812,
+                          "import_path": "art/backgrounds/maze_blood_trail.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_escape_road.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2378895,
+                          "import_path": "art/backgrounds/maze_escape_road.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/maze_pinned_woman.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1976189,
+                          "import_path": "art/backgrounds/maze_pinned_woman.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/morgue_interior_drawers.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 1909592,
+                          "import_path": "art/backgrounds/morgue_interior_drawers.png.import",
+                          "has_import": true
+                      },
+                      {
+                          "path": "art/backgrounds/shiling_bandit_ambush.png",
+                          "category": "art/backgrounds",
+                          "size_bytes": 2193693,
+                          "import_path": "art/backgrounds/shiling_bandit_ambush.png.import",
+                          "has_import": true
                       }
                   ]
 }

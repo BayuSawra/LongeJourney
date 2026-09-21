@@ -37,7 +37,7 @@ else:
 Text/lj_08_wife_room_034/text #id:lj_08_wife_room_034
 Text/lj_08_wife_room_035/text #id:lj_08_wife_room_035
 Text/lj_08_wife_room_036/text #id:lj_08_wife_room_036
-[background arg="res://art/backgrounds/hospital_stairs.png" fade="0.6"]
+[background arg="res://art/backgrounds/hospital_corridor_whisper.png" fade="0.6"]
 Text/lj_08_wife_room_037/text #id:lj_08_wife_room_037
 Text/lj_08_wife_room_038/text #id:lj_08_wife_room_038
 jump 09_ending/

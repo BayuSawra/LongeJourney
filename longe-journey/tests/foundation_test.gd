@@ -38,7 +38,24 @@ func test_business_autoloads_and_renderer_preserved() -> void:
 		assert_object(get_tree().root.get_node_or_null(singleton)).override_failure_message(
 			"Missing autoload: " + singleton).is_not_null()
 	assert_str(ProjectSettings.get_setting("rendering/renderer/rendering_method")).is_equal("gl_compatibility")
+	assert_str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")).is_equal("gl_compatibility")
 	assert_bool(ProjectSettings.has_setting("autoload/GodotFramework")).is_false()
+
+
+func test_godot_47_project_features_and_plugin_entrypoints() -> void:
+	var version := Engine.get_version_info()
+	assert_int(int(version["major"])).is_equal(4)
+	assert_int(int(version["minor"])).is_equal(7)
+	var features: PackedStringArray = ProjectSettings.get_setting("application/config/features")
+	assert_bool(features.has("4.7")).is_true()
+	assert_bool(features.has("GL Compatibility")).is_true()
+	var enabled_plugins: PackedStringArray = ProjectSettings.get_setting("editor_plugins/enabled")
+	for plugin_path in ["res://addons/dialogic/plugin.cfg", "res://addons/gdUnit4/plugin.cfg",
+			"res://addons/longe_lore_tools/plugin.cfg"]:
+		assert_bool(enabled_plugins.has(plugin_path)).is_true()
+	for entrypoint in ["res://addons/dialogic/plugin.gd", "res://addons/gdUnit4/plugin.gd",
+			"res://addons/longe_lore_tools/plugin.gd"]:
+		assert_object(load(entrypoint)).is_not_null()
 
 
 func test_audio_layout_and_dialogic_routing() -> void:
@@ -115,6 +132,20 @@ func test_visual_fx_choice_scan_connects_each_button_once() -> void:
 	var pressed_connections := button.get_signal_connection_list("pressed")
 	assert_int(pressed_connections.size()).is_equal(1)
 	button.queue_free()
+	await get_tree().process_frame
+
+
+func test_feedback_layer_coalesces_resource_deltas() -> void:
+	var feedback = load("res://scenes/feedback_layer.tscn").instantiate()
+	add_child(feedback)
+	await get_tree().process_frame
+	SaveManager._loading = false
+	feedback._on_game_state_changed("money", GameState.money - 2)
+	feedback._on_game_state_changed("money", GameState.money - 4)
+	assert_float(float(feedback._pending_deltas["money"])).is_equal(-4.0)
+	feedback._flush_resource_feedback()
+	assert_int(feedback._floating_texts.get_child_count()).is_equal(1)
+	feedback.queue_free()
 	await get_tree().process_frame
 
 

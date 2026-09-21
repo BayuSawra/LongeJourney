@@ -71,20 +71,32 @@ msgstr "Enter the room"
 msgid "Choice/lj_02_ward_025/text"
 msgstr "Enter the room"
 
+#. source-sha256: 3a90652c42827c19e5e128d306cd708d298672848a07a89d3122f7240e4a3f09
+msgid "Choice/lj_03_crossroads_012/disabled_text"
+msgstr "No new leads remain at the flower shop."
+
 #: res://timelines/03_crossroads.dtl:18
-#. source-sha256: 5b6accdbb07bbfb2629c8786acac4d06163ec35c3601ef7eec931fe1f8a2db8e
+#. source-sha256: a8ce3faf3f7ffb94d182e898d3b7491b98a1ae9932de00ba2167bb197cce3902
 msgid "Choice/lj_03_crossroads_012/text"
-msgstr "Go to the flower shop"
+msgstr "Go to the flower shop (up to 3 visits)"
+
+#. source-sha256: 80f3ff40bd21b260e023d8a8e0bc9b27f7266c699f03511cc27b782a1f53646a
+msgid "Choice/lj_03_crossroads_018/disabled_text"
+msgstr "Not enough money (need 2 yuan)."
 
 #: res://timelines/03_crossroads.dtl:23
-#. source-sha256: 4000b9aa05718ed724f838a80178ba28a3e27b27180ea8bef3541f11a53a8496
+#. source-sha256: 5e3d83222eede81582474a973bf0a9ecff8aa28a19a7f4ba665ed3e3e2a193aa
 msgid "Choice/lj_03_crossroads_018/text"
-msgstr "Go to Lion Ridge"
+msgstr "Go to Lion Ridge (costs 2 yuan)"
+
+#. source-sha256: 80f3ff40bd21b260e023d8a8e0bc9b27f7266c699f03511cc27b782a1f53646a
+msgid "Choice/lj_03_crossroads_024/disabled_text"
+msgstr "Not enough money (need 2 yuan)."
 
 #: res://timelines/03_crossroads.dtl:28
-#. source-sha256: 5afac83fe2d133083ca8cb6d9a6d764583b9283d8dcd2027c2dd2ab7f7a0112a
+#. source-sha256: aeb88c19859e063d16de46ed9da3aded114ad51787c861c9dc1d5d4bbb035864
 msgid "Choice/lj_03_crossroads_024/text"
-msgstr "Go to Dew Garden"
+msgstr "Go to Dew Garden (costs 2 yuan)"
 
 #: res://timelines/03_crossroads.dtl:33
 #. source-sha256: 732d76d42425a69c5e5f14f5e3bb7f87641e8ea77e65df0fcd91e8747561f5c6
@@ -1681,6 +1693,34 @@ msgstr "Exhausted"
 msgid "ending.triggered"
 msgstr "Ending triggered: {ending}"
 
+#. source-sha256: d8ed5b39fd2ebfb1ec7415e47844bb2ac2dbc58551900fa7ec7ed47fb62eaf7e
+msgid "feedback.autosave"
+msgstr "Autosaved"
+
+#. source-sha256: e51f653948b47869f38b29bafe44f389c24bad23cbc6604268037877cc3a209e
+msgid "feedback.autosave_failed"
+msgstr "Autosave failed: {error}"
+
+#. source-sha256: 87e408f23b4fe8104ce5e52187fcae204194588b6b99b2d90f2e0e8cdbb7168e
+msgid "feedback.calm"
+msgstr "Composure"
+
+#. source-sha256: d0073727cc0ecabbb0b4bedbfd34d65d4a05f7e89ae25cd9b07fb6f0d81ed1b8
+msgid "feedback.earthworm"
+msgstr "Earthworms"
+
+#. source-sha256: d6d2aa99fd698da376bfe5da1e585e816e6b042d1b03afa35d1458322f31f85d
+msgid "feedback.energy"
+msgstr "Energy"
+
+#. source-sha256: b0a1eab5f902df03059fe7385071b377e577e3ef962d3257663af0dcbbe85449
+msgid "feedback.flower"
+msgstr "Flowers"
+
+#. source-sha256: 5ca4682d5d1faa082c04d2dcfc336e3fd3a52e7219d1eb289dd33d5b683d6105
+msgid "feedback.money"
+msgstr "Money"
+
 #. source-sha256: 5d8dfabe2e62a762f3796c28ab26c6a497bb7419ff09e962072b71b711cc7c57
 msgid "history.choice"
 msgstr "[Choice] {text}"
@@ -1688,6 +1728,14 @@ msgstr "[Choice] {text}"
 #. source-sha256: 39d7e6e4605eab1704e0ef074c84aa16965faffc8089955d02eda54916ebf210
 msgid "history.speaker"
 msgstr "{name}: {text}"
+
+#. source-sha256: 694b0fb040648210eb83b9503adc2c9bc399204ce67189c976ed0d81424c97a2
+msgid "hud.calm"
+msgstr "Calm: {value}"
+
+#. source-sha256: 8d58bd55836e95dcba46198a36289f8ebeb2579f1bddab07e9a1ebe5fa277eb0
+msgid "hud.energy"
+msgstr "Energy: {value}"
 
 #. source-sha256: 9769b4f7ded19c9ab58cd839bc775650669c83bfd8a7bbb1bb9cf07c47ebb8a1
 msgid "hud.flower"
@@ -2459,6 +2507,11 @@ msgstr "Overwrite Save"
 msgid "ui.save_slot_panel.title_label.text"
 msgstr "Save Game"
 
+#: scenes/settings_panel.tscn:BgmVolumeLabel
+#. source-sha256: 3c3638bb300c2032fec39135ce59e1f7e3b7c126205018d8f5306f9a4ae3053a
+msgid "ui.settings_panel.bgm_volume_label.text"
+msgstr "Music Volume"
+
 #: scenes/settings_panel.tscn:CloseButton
 #. source-sha256: 3fd47edce45b3603d4192f61dbf3e51162589b0951042a18d244132ac92e7bb7
 msgid "ui.settings_panel.close_button.text"
@@ -2469,6 +2522,11 @@ msgstr "Close"
 msgid "ui.settings_panel.fullscreen_check.text"
 msgstr "Fullscreen"
 
+#: scenes/settings_panel.tscn:SfxVolumeLabel
+#. source-sha256: 5e9d80d0e3c3953a8a5bc76ad143ed44ff5d0d3efab74de5bb49209c63373f2b
+msgid "ui.settings_panel.sfx_volume_label.text"
+msgstr "Sound Effects"
+
 #: scenes/settings_panel.tscn:TextSpeedLabel
 #. source-sha256: 7a5aafc3d5a528bb84a78cf530d0f99150aeb0cf645d989fb75d068f6804792c
 msgid "ui.settings_panel.text_speed_label.text"
@@ -2478,16 +2536,6 @@ msgstr "Text Speed"
 #. source-sha256: df3d58c7d84b85f2037cdd20ffca0f386668645ea53008c11b0c8887182b0356
 msgid "ui.settings_panel.title.text"
 msgstr "Settings"
-
-#: scenes/settings_panel.tscn:BgmVolumeLabel
-#. source-sha256: 3c3638bb300c2032fec39135ce59e1f7e3b7c126205018d8f5306f9a4ae3053a
-msgid "ui.settings_panel.bgm_volume_label.text"
-msgstr "Music Volume"
-
-#: scenes/settings_panel.tscn:SfxVolumeLabel
-#. source-sha256: 5e9d80d0e3c3953a8a5bc76ad143ed44ff5d0d3efab74de5bb49209c63373f2b
-msgid "ui.settings_panel.sfx_volume_label.text"
-msgstr "Sound Effects"
 
 #: scenes/settings_panel.tscn:UiVolumeLabel
 #. source-sha256: 88951e188d8ee2e112a08096d7c5cc27f0e39cfbf83baf55051adddf5df8b133

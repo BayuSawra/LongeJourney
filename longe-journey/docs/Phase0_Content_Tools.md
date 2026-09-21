@@ -52,7 +52,7 @@ powershell -ExecutionPolicy Bypass -File scripts/resource_export_backup.ps1
 - `backup.tar`：按清单打包的资源与 `.import` 文件。
 - `restored/`：从备份还原出的资源目录，用于往返校验。
 
-脚本会复制备份文件到 `restored/`，对照清单校验 SHA256；随后如有 Godot（默认 `E:\Godot\Godot_v4.6.2-stable_mono_win64\Godot_v4.6.2-stable_mono_win64.exe`）则执行 `--headless --import` reimport 并运行 `docs/resource_references.json` 校验；全部通过时输出 `roundtrip=passed validation=passed`。
+脚本会复制备份文件到 `restored/`，对照清单校验 SHA256；随后使用仓库 `.local-tools/godot-4.7/` 中的 Godot 4.7 standard（或显式传入 `-GodotExe`）执行 `--headless --import` reimport，并运行 `docs/resource_references.json` 校验；全部通过时输出 `roundtrip=passed validation=passed`。
 
 ## 3. Dialogic 内容入口
 

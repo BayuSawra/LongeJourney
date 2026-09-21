@@ -4,6 +4,8 @@ Text/lj_06_luyuan_000/text #id:lj_06_luyuan_000
 
 Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
 
+[background arg="res://art/backgrounds/luyuan_inner_gate.png" fade="0.6"]
+
 - Choice/lj_06_luyuan_003/text #id:lj_06_luyuan_003
     Text/lj_06_luyuan_004/text #id:lj_06_luyuan_004
 

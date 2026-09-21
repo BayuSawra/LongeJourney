@@ -1,6 +1,6 @@
 # 《长路漫漫》Godot + Dialogic 功能实现指南
 
-> 本文面向把 Twine（SugarCube）原版《长路漫漫》移植到 Godot 4.6 + Dialogic 2.0-Alpha-20 的后续开发。
+> 本文面向把 Twine（SugarCube）原版《长路漫漫》移植到 Godot 4.7 + Dialogic 2.0-Alpha-20 的后续开发。
 > 按功能查方案，所有示例基于本仓库当前插件源码整理；Dialogic 仍是 Alpha 版，个别 API 可能随版本调整，以实际运行版本为准。
 
 ## 1. 结论速览

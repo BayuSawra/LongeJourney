@@ -5,29 +5,31 @@ Text/lj_03_crossroads_000/text #id:lj_03_crossroads_000
 Text/lj_03_crossroads_001/text #id:lj_03_crossroads_001
 
 if {visit_shiling} == 1 and {visit_luyuan} == 0:
+    [background arg="res://art/backgrounds/crossroads_bus_sunflower.png" fade="0.6"]
     Text/lj_03_crossroads_003/text #id:lj_03_crossroads_003
 
     Text/lj_03_crossroads_004/text #id:lj_03_crossroads_004
 
     set {flower} += 1
 elif {visit_shiling} == 0 and {visit_luyuan} == 1:
+    [background arg="res://art/backgrounds/crossroads_bus_sunflower.png" fade="0.6"]
     Text/lj_03_crossroads_008/text #id:lj_03_crossroads_008
 
     Text/lj_03_crossroads_009/text #id:lj_03_crossroads_009
 
     set {flower} += 1
 
-- Choice/lj_03_crossroads_012/text | [if {visit_huadian} < 3] #id:lj_03_crossroads_012
+- Choice/lj_03_crossroads_012/text | [if {visit_huadian} < 3] [else="disable" alt_text="Choice/lj_03_crossroads_012/disabled_text"] #id:lj_03_crossroads_012
     Text/lj_03_crossroads_013/text #id:lj_03_crossroads_013
     set {energy} -= 5
     set {visit_huadian} += 1
     jump 04_flower_shop/
-- Choice/lj_03_crossroads_018/text | [if {money} >= 2] #id:lj_03_crossroads_018
+- Choice/lj_03_crossroads_018/text | [if {money} >= 2] [else="disable" alt_text="Choice/lj_03_crossroads_018/disabled_text"] #id:lj_03_crossroads_018
     Text/lj_03_crossroads_019/text #id:lj_03_crossroads_019
     set {money} -= 2
     set {visit_shiling} += 1
     jump 05_shiling/
-- Choice/lj_03_crossroads_024/text | [if {money} >= 2] #id:lj_03_crossroads_024
+- Choice/lj_03_crossroads_024/text | [if {money} >= 2] [else="disable" alt_text="Choice/lj_03_crossroads_024/disabled_text"] #id:lj_03_crossroads_024
     Text/lj_03_crossroads_025/text #id:lj_03_crossroads_025
     set {money} -= 2
     set {visit_luyuan} += 1

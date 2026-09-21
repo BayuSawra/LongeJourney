@@ -10,7 +10,7 @@
   - `src/core/writers/GdUnitRichTextMessageWriter.gd`：析构释放自行创建的报告 Panel；
     不释放调用者传入的 RichTextLabel。
   - `src/network/GdUnitServer.gd`：显式预加载 RPCMessage / RPCGdUnitEvent 后再编译类型判断。
-    在固定 Godot 4.6.2 图形编辑器中，原全局类引用方式可复现脚本资源残留和退出访问冲突；
+    在 Godot 4.6.2 图形编辑器中，原全局类引用方式可复现脚本资源残留和退出访问冲突；
     该补丁保持消息分发语义，不停用服务、不清空全局缓存、不升级引擎。
   - 回归：`tests/editor_lifecycle_test.gd`；图形退出由 `tools/verify_mcp.py` 覆盖。
 
@@ -56,6 +56,12 @@
 避免退出事件尝试重启已退出场景树的子定时器。原有退出写盘行为保留。
 未迁移模板 MCP，也未启用新的服务。
 
+- `tools/mcp_node_utils.gd`、`tools/base_tools.gd`：Godot 4.7 图形验收中，
+  将 `Engine.get_singleton("EditorInterface")` 直接作为强类型 `EditorInterface` 返回时，
+  场景运行工具触发 GDScript VM `Opcode 68` 内部错误；改用全局 `EditorInterface` 的
+  `Object` 局部变量，移除这两处接口转发的强类型返回标注。运行时仍返回 null。
+  验证：`tools/verify_mcp.py` 覆盖主场景运行/停止、实时 debugger、正常退出。
+
 - `tools/intelligence/atomic_bridge.gd`：扫描显式传入 `res://`；解析依赖的 UID/type/path 编码。
 - `tools/intelligence/impl_project.gd`：项目盘点失败向上传递，不伪装成空工程。
 - `tools/intelligence/impl_scene.gd`、`tools/scene_tools.gd`：从目标 PackedScene 统计节点及脚本，
@@ -68,5 +74,5 @@
 
 ## 环境与自有工具
 
-Godot 固定为 `4.6.2.stable.official.71f334935` standard Windows，安装脚本校验
+Godot 固定为 `4.7.stable.official.5b4e0cb0f` standard Windows，安装脚本校验
 官方发行 ZIP 的 SHA512。工程验证、测试和 CI 按本项目重写，不复制模板业务逻辑。

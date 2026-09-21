@@ -4,6 +4,8 @@ Text/lj_07_maze_middle_000/text #id:lj_07_maze_middle_000
 
 Text/lj_07_maze_middle_001/text #id:lj_07_maze_middle_001
 
+[background arg="res://art/backgrounds/maze_blood_trail.png" fade="0.6"]
+
 - Choice/lj_07_maze_middle_002/text #id:lj_07_maze_middle_002
     Text/lj_07_maze_middle_003/text #id:lj_07_maze_middle_003
     Text/lj_07_maze_middle_004/text #id:lj_07_maze_middle_004
@@ -26,6 +28,7 @@ Text/lj_07_maze_middle_016/text #id:lj_07_maze_middle_016
     jump how_she_stands
 
 label how_she_stands #id:lj_07_maze_middle_020
+[background arg="res://art/backgrounds/maze_pinned_woman.png" fade="0.6"]
 Text/lj_07_maze_middle_021/text #id:lj_07_maze_middle_021
 Text/lj_07_maze_middle_022/text #id:lj_07_maze_middle_022
 
@@ -36,7 +39,7 @@ Text/lj_07_maze_middle_022/text #id:lj_07_maze_middle_022
     jump pick_hydrangea_flower
 
 label flee #id:lj_07_maze_middle_029
-[background arg="res://art/backgrounds/maze_exit_road.png" fade="0.6"]
+[background arg="res://art/backgrounds/maze_escape_road.png" fade="0.6"]
 Text/lj_07_maze_middle_030/text #id:lj_07_maze_middle_030
 Text/lj_07_maze_middle_031/text #id:lj_07_maze_middle_031
 jump 07_maze_exit/

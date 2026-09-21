@@ -5,9 +5,17 @@ extends CanvasLayer
 const FIELD_LABELS: Dictionary = {
 	"flower": "hud.flower",
 	"money": "hud.money",
+	"energy": "hud.energy",
+	"calm": "hud.calm",
 }
 
-@onready var values: HBoxContainer = %Values
+const CAUTION_THRESHOLD := 50.0
+const LOW_THRESHOLD := 25.0
+const NORMAL_COLOR := Color(1.0, 1.0, 1.0)
+const CAUTION_COLOR := Color("#d5a85e")
+const LOW_COLOR := Color("#d86c6c")
+
+@onready var values: Container = %Values
 @onready var settings_button: Button = %SettingsButton
 @onready var lore_button: Button = %LoreButton
 
@@ -42,4 +50,30 @@ func _refresh(variable: String) -> void:
 	var label: Label = values.get_node_or_null(variable)
 	if label == null:
 		return
-	label.text = Localization.format_text(FIELD_LABELS[variable], {"value": GameState.get_var(variable)})
+	var value: Variant = GameState.get_var(variable)
+	label.text = Localization.format_text(FIELD_LABELS[variable], {"value": value})
+	if variable in ["energy", "calm"]:
+		_apply_status_style(variable, value)
+
+
+func _apply_status_style(variable: String, raw_value: Variant) -> void:
+	var value := float(raw_value)
+	var color := NORMAL_COLOR
+	if value <= LOW_THRESHOLD:
+		color = LOW_COLOR
+	elif value <= CAUTION_THRESHOLD:
+		color = CAUTION_COLOR
+	var label: Label = values.get_node_or_null(variable)
+	if label != null:
+		label.add_theme_color_override("font_color", color)
+	var bar: ProgressBar = values.get_node_or_null("%s_bar" % variable)
+	if bar == null:
+		return
+	bar.value = clampf(value, 0.0, 100.0)
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = color
+	fill.corner_radius_top_left = 4
+	fill.corner_radius_top_right = 4
+	fill.corner_radius_bottom_left = 4
+	fill.corner_radius_bottom_right = 4
+	bar.add_theme_stylebox_override("fill", fill)

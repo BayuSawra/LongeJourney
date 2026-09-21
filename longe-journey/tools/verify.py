@@ -17,6 +17,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
 ERROR_LINE = re.compile(r"^(?:SCRIPT ERROR:|ERROR:)", re.MULTILINE)
+PINNED_GODOT_VERSION = "4.7.stable.official.5b4e0cb0f"
 
 
 def run_step(name: str, command: list[str], cwd: Path, reports: Path, timeout: int) -> str:
@@ -88,8 +89,8 @@ def main() -> int:
         powershell = executable(args.powershell, "PowerShell")
         version = run_step("version", [godot, "--version"], ROOT, reports, args.timeout).strip()
         summary["godot"] = version
-        if version != "4.6.2.stable.official.71f334935":
-            raise RuntimeError(f"Pinned Godot 4.6.2 standard required; got {version}")
+        if version != PINNED_GODOT_VERSION:
+            raise RuntimeError(f"Pinned Godot 4.7 standard required; got {version}")
         if not os.environ.get("APPDATA"):
             raise RuntimeError("Windows APPDATA is required for isolated user data")
         # Only the disposable copy is imported or written by validators/editor.
@@ -102,8 +103,13 @@ def main() -> int:
                 ".env", "config.toml"))
             # Do not start a developer MCP HTTP server from a CI import.
             config = project / "project.godot"
-            config_text = config.read_text(encoding="utf-8").replace(
-                ', "res://addons/godot_dotnet_mcp/plugin.cfg"', '')
+            config_text = re.sub(
+                r',\s*"res://addons/godot_dotnet_mcp/plugin\.cfg"',
+                '',
+                config.read_text(encoding="utf-8"),
+            )
+            if "res://addons/godot_dotnet_mcp/plugin.cfg" in config_text:
+                raise RuntimeError("Verification copy still enables the MCP editor plugin")
             config.write_text(config_text, encoding="utf-8")
             (project / "override.cfg").write_text(
                 '[application]\nconfig/name="LongeJourney-Verify-' + uuid.uuid4().hex +

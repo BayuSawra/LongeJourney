@@ -46,6 +46,24 @@ class VerifyTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             verify.executable("", "Godot")
 
+    def test_wrong_godot_version_short_circuits_before_copy_and_tests(self):
+        calls = []
+
+        def fake_run_step(name, command, cwd, reports, timeout):
+            calls.append(name)
+            return "4.6.2.stable.official.71f334935" if name == "version" else ""
+
+        previous_argv = sys.argv
+        sys.argv = ["verify.py", "--timeout", "5"]
+        try:
+            with patch.object(verify, "ROOT", self.root), \
+                    patch.object(verify, "executable", return_value="godot"), \
+                    patch.object(verify, "run_step", side_effect=fake_run_step):
+                self.assertEqual(verify.main(), 1)
+        finally:
+            sys.argv = previous_argv
+        self.assertEqual(calls, ["version"])
+
     def test_explicit_relative_executable_path_is_resolved(self):
         tool = self.root / "tool.exe"
         tool.write_bytes(b"placeholder")

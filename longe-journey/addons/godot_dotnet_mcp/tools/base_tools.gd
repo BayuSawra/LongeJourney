@@ -85,7 +85,7 @@ func _parse_gdscript_metadata(path: String, content: String) -> Dictionary:
 	return _script_parser.parse_gdscript_metadata(path, content)
 
 
-func _get_editor_interface() -> EditorInterface:
+func _get_editor_interface():
 	return _node_utils.get_editor_interface()
 
 
