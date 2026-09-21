@@ -2479,6 +2479,21 @@ msgstr "Text Speed"
 msgid "ui.settings_panel.title.text"
 msgstr "Settings"
 
+#: scenes/settings_panel.tscn:BgmVolumeLabel
+#. source-sha256: 3c3638bb300c2032fec39135ce59e1f7e3b7c126205018d8f5306f9a4ae3053a
+msgid "ui.settings_panel.bgm_volume_label.text"
+msgstr "Music Volume"
+
+#: scenes/settings_panel.tscn:SfxVolumeLabel
+#. source-sha256: 5e9d80d0e3c3953a8a5bc76ad143ed44ff5d0d3efab74de5bb49209c63373f2b
+msgid "ui.settings_panel.sfx_volume_label.text"
+msgstr "Sound Effects"
+
+#: scenes/settings_panel.tscn:UiVolumeLabel
+#. source-sha256: 88951e188d8ee2e112a08096d7c5cc27f0e39cfbf83baf55051adddf5df8b133
+msgid "ui.settings_panel.ui_volume_label.text"
+msgstr "Interface Sounds"
+
 #: scenes/settings_panel.tscn:VolumeLabel
 #. source-sha256: 8bf8b9780d342816a2342d0af74a9bedc13387be59e709d30522883236f13e30
 msgid "ui.settings_panel.volume_label.text"

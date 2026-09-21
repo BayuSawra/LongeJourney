@@ -22,9 +22,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -240.0
-offset_top = -170.0
+offset_top = -220.0
 offset_right = 240.0
-offset_bottom = 170.0
+offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
@@ -80,17 +80,53 @@ max_value = 200.0
 step = 1.0
 value = 38.0
 
-[node name="VolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="BgmVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="VolumeLabel" type="Label" parent="Panel/Rows/VolumeRow"]
+[node name="BgmVolumeLabel" type="Label" parent="Panel/Rows/BgmVolumeRow"]
 layout_mode = 2
 custom_minimum_size = Vector2(90, 0)
-text = "ui.settings_panel.volume_label.text"
+text = "ui.settings_panel.bgm_volume_label.text"
 vertical_alignment = 1
 
-[node name="VolumeSlider" type="HSlider" parent="Panel/Rows/VolumeRow"]
+[node name="BgmVolumeSlider" type="HSlider" parent="Panel/Rows/BgmVolumeRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 100.0
+step = 1.0
+value = 100.0
+
+[node name="SfxVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SfxVolumeLabel" type="Label" parent="Panel/Rows/SfxVolumeRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 0)
+text = "ui.settings_panel.sfx_volume_label.text"
+vertical_alignment = 1
+
+[node name="SfxVolumeSlider" type="HSlider" parent="Panel/Rows/SfxVolumeRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 100.0
+step = 1.0
+value = 100.0
+
+[node name="UiVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="UiVolumeLabel" type="Label" parent="Panel/Rows/UiVolumeRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 0)
+text = "ui.settings_panel.ui_volume_label.text"
+vertical_alignment = 1
+
+[node name="UiVolumeSlider" type="HSlider" parent="Panel/Rows/UiVolumeRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

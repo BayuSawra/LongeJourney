@@ -3,7 +3,9 @@ extends CanvasLayer
 @onready var language_option: OptionButton = %LanguageOption
 
 @onready var text_speed_slider: HSlider = %TextSpeedSlider
-@onready var volume_slider: HSlider = %VolumeSlider
+@onready var bgm_volume_slider: HSlider = %BgmVolumeSlider
+@onready var sfx_volume_slider: HSlider = %SfxVolumeSlider
+@onready var ui_volume_slider: HSlider = %UiVolumeSlider
 @onready var fullscreen_check: CheckButton = %FullscreenCheck
 @onready var close_button: Button = %CloseButton
 
@@ -18,13 +20,21 @@ func _ready() -> void:
 		SettingsManager.set_language(language_option.get_item_metadata(index)))
 
 	text_speed_slider.value = SettingsManager.get_text_speed()
-	volume_slider.value = SettingsManager.get_volume()
+	bgm_volume_slider.value = SettingsManager.get_bgm_volume()
+	sfx_volume_slider.value = SettingsManager.get_sfx_volume()
+	ui_volume_slider.value = SettingsManager.get_ui_volume()
 	fullscreen_check.button_pressed = SettingsManager.get_fullscreen()
 	text_speed_slider.value_changed.connect(
 		func(value: float) -> void: SettingsManager.set_text_speed(value)
 	)
-	volume_slider.value_changed.connect(
-		func(value: float) -> void: SettingsManager.set_volume(int(value))
+	bgm_volume_slider.value_changed.connect(
+		func(value: float) -> void: SettingsManager.set_bgm_volume(int(value))
+	)
+	sfx_volume_slider.value_changed.connect(
+		func(value: float) -> void: SettingsManager.set_sfx_volume(int(value))
+	)
+	ui_volume_slider.value_changed.connect(
+		func(value: float) -> void: SettingsManager.set_ui_volume(int(value))
 	)
 	fullscreen_check.toggled.connect(
 		func(enabled: bool) -> void: SettingsManager.set_fullscreen(enabled)

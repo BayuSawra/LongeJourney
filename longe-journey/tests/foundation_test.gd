@@ -41,6 +41,20 @@ func test_business_autoloads_and_renderer_preserved() -> void:
 	assert_bool(ProjectSettings.has_setting("autoload/GodotFramework")).is_false()
 
 
+func test_audio_layout_and_dialogic_routing() -> void:
+	assert_bool(ProjectSettings.has_setting("audio/buses/default_bus_layout")).is_true()
+	for bus_name in ["BGM", "SFX", "UI"]:
+		assert_int(AudioServer.get_bus_index(bus_name)).is_greater_equal(0)
+	var defaults: Dictionary = ProjectSettings.get_setting("dialogic/audio/channel_defaults")
+	assert_str(str(defaults[""]["audio_bus"])).is_equal("SFX")
+	assert_str(str(defaults["music"]["audio_bus"])).is_equal("BGM")
+	assert_str(str(ProjectSettings.get_setting("dialogic/audio/type_sound_bus"))).is_equal("UI")
+	var choice_layer: Node = (load("res://scenes/dialogic_choice_layer.tscn") as PackedScene).instantiate()
+	var button_sound: AudioStreamPlayer = choice_layer.get_node("Choices/DialogicNode_ButtonSound")
+	assert_str(str(button_sound.bus)).is_equal("UI")
+	choice_layer.queue_free()
+
+
 func test_game_state_writes_dialogic() -> void:
 	GameState.set_var("money", 37)
 	assert_int(GameState.money).is_equal(37)
@@ -188,22 +202,34 @@ func test_non_milestone_does_not_auto_save() -> void:
 
 func test_settings_persistence_and_clamping() -> void:
 	SettingsManager.set_text_speed(77.0)
-	SettingsManager.set_volume(23)
+	SettingsManager.set_bgm_volume(23)
+	SettingsManager.set_sfx_volume(47)
+	SettingsManager.set_ui_volume(61)
 	SettingsManager.set_fullscreen(false)
 	SettingsManager._text_speed = 38.0
-	SettingsManager._volume = 100
+	SettingsManager._bgm_volume = 100
+	SettingsManager._sfx_volume = 100
+	SettingsManager._ui_volume = 100
 	SettingsManager._load_settings()
 	assert_float(SettingsManager.get_text_speed()).is_equal(77.0)
 	assert_float(VisualFX.get_text_speed()).is_equal(77.0)
-	assert_int(SettingsManager.get_volume()).is_equal(23)
+	assert_int(SettingsManager.get_bgm_volume()).is_equal(23)
+	assert_int(SettingsManager.get_sfx_volume()).is_equal(47)
+	assert_int(SettingsManager.get_ui_volume()).is_equal(61)
 	var config := ConfigFile.new()
 	assert_int(config.load(SettingsManager.SETTINGS_PATH)).is_equal(OK)
-	assert_int(config.get_value("audio", "volume")).is_equal(23)
+	assert_int(config.get_value("audio", "bgm_volume")).is_equal(23)
+	assert_int(config.get_value("audio", "sfx_volume")).is_equal(47)
+	assert_int(config.get_value("audio", "ui_volume")).is_equal(61)
 	assert_bool(config.get_value("display", "fullscreen")).is_false()
 	SettingsManager.set_text_speed(500.0)
-	SettingsManager.set_volume(-1)
+	SettingsManager.set_bgm_volume(-1)
+	SettingsManager.set_sfx_volume(101)
+	SettingsManager.set_ui_volume(50)
 	assert_float(SettingsManager.get_text_speed()).is_equal(200.0)
-	assert_int(SettingsManager.get_volume()).is_equal(0)
+	assert_int(SettingsManager.get_bgm_volume()).is_equal(0)
+	assert_int(SettingsManager.get_sfx_volume()).is_equal(100)
+	assert_int(SettingsManager.get_ui_volume()).is_equal(50)
 
 
 func test_lore_returns_independent_copies() -> void:

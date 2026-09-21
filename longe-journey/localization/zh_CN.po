@@ -1971,6 +1971,18 @@ msgstr "文字速度"
 msgid "ui.settings_panel.title.text"
 msgstr "设置"
 
+#: scenes/settings_panel.tscn:BgmVolumeLabel
+msgid "ui.settings_panel.bgm_volume_label.text"
+msgstr "背景音乐"
+
+#: scenes/settings_panel.tscn:SfxVolumeLabel
+msgid "ui.settings_panel.sfx_volume_label.text"
+msgstr "音效"
+
+#: scenes/settings_panel.tscn:UiVolumeLabel
+msgid "ui.settings_panel.ui_volume_label.text"
+msgstr "界面音效"
+
 #: scenes/settings_panel.tscn:VolumeLabel
 msgid "ui.settings_panel.volume_label.text"
 msgstr "音量"

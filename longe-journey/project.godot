@@ -15,6 +15,10 @@ run/main_scene="res://scenes/mianMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bqbrnelyc3tkx"
+
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -120,12 +124,13 @@ audio/channel_defaults={
 "volume": 0.0
 },
 "music": {
-"audio_bus": "",
+"audio_bus": "BGM",
 "fade_length": 0.0,
 "loop": true,
 "volume": 0.0
 }
 }
+audio/type_sound_bus="UI"
 
 [display]
 
