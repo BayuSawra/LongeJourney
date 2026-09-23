@@ -97,7 +97,7 @@ func _show_floating_text(variable: String, delta: float) -> void:
 	label.add_theme_constant_override("shadow_offset_y", 2)
 	var resource_name := Localization.text(RESOURCE_KEYS[variable])
 	label.text = "%s %s%s" % [resource_name, "+" if delta > 0.0 else "", _format_number(delta)]
-	label.position = Vector2(28.0, 84.0 + _floating_count * 27.0)
+	label.position = Vector2(28.0, 180.0 + _floating_count * 27.0)
 	_floating_count += 1
 	_floating_texts.add_child(label)
 	label.modulate.a = 0.0

@@ -91,6 +91,10 @@ func _show_categories() -> void:
 		var button := Button.new()
 		button.text = Localization.format_text("ui.lore.category_count", {"category": category.label, "count": category.count})
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		button.custom_minimum_size = Vector2(0, 44)
+		button.theme_type_variation = &"SlotButton"
+		button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		button.tooltip_text = button.text
 		button.pressed.connect(_show_category.bind(category.key))
 		_apply_font(button)
 		_list_box.add_child(button)
@@ -120,6 +124,10 @@ func _render_entries(entries: Array, title: String) -> void:
 		var entry_button := Button.new()
 		entry_button.text = entry.title
 		entry_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		entry_button.custom_minimum_size = Vector2(0, 44)
+		entry_button.theme_type_variation = &"SlotButton"
+		entry_button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		entry_button.tooltip_text = entry.title
 		entry_button.pressed.connect(_show_detail.bind(entry.slug))
 		_apply_font(entry_button)
 		_list_box.add_child(entry_button)
@@ -129,6 +137,7 @@ func _render_entries(entries: Array, title: String) -> void:
 			summary.text = entry.summary
 			summary.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			summary.theme_type_variation = &"MutedLabel"
 			summary.modulate = Color(0.72, 0.72, 0.72)
 			_apply_font(summary)
 			_list_box.add_child(summary)
@@ -153,6 +162,7 @@ func _show_detail(slug: String) -> void:
 		body_label.text = body
 		body_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		body_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		body_label.theme_type_variation = &"MutedLabel"
 		_apply_font(body_label)
 		_list_box.add_child(body_label)
 	_showing_detail = true

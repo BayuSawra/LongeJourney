@@ -11,7 +11,7 @@ const FIELD_LABELS: Dictionary = {
 
 const CAUTION_THRESHOLD := 50.0
 const LOW_THRESHOLD := 25.0
-const NORMAL_COLOR := Color(1.0, 1.0, 1.0)
+const NORMAL_COLOR := Color("#b4c5aa")
 const CAUTION_COLOR := Color("#d5a85e")
 const LOW_COLOR := Color("#d86c6c")
 

@@ -369,9 +369,9 @@ msgid "Choice/lj_06_luyuan_010/text"
 msgstr "Flee"
 
 #: res://timelines/06_luyuan.dtl:23
-#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+#. source-sha256: 8e69577bf193c76e4336c99bc51641e44adb8e573ea88fb27ad269d3d1c85edc
 msgid "Choice/lj_06_luyuan_015/text"
-msgstr "Take the hydrangea from her hand"
+msgstr "Take the hydrangea from her head"
 
 #: res://timelines/06_luyuan.dtl:33
 #. source-sha256: 30579dabf03564bb77f274ac4664b69f6737b8db1e70cfa77a53b3966230aad8
@@ -389,9 +389,9 @@ msgid "Choice/lj_06_luyuan_032/text"
 msgstr "Flee"
 
 #: res://timelines/06_luyuan.dtl:50
-#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+#. source-sha256: 8e69577bf193c76e4336c99bc51641e44adb8e573ea88fb27ad269d3d1c85edc
 msgid "Choice/lj_06_luyuan_037/text"
-msgstr "Take the hydrangea from her hand"
+msgstr "Take the hydrangea from her head"
 
 #: res://timelines/06_luyuan.dtl:60
 #. source-sha256: ba50e1e2745b0a3436b19c003ffb8a0c5a987cc5ebd56587c061b11f631af861
@@ -409,9 +409,9 @@ msgid "Choice/lj_06_luyuan_054/text"
 msgstr "Flee"
 
 #: res://timelines/06_luyuan.dtl:77
-#. source-sha256: d66f2f3855317ae70136f23dcf08a4a07569266a877dc254d0a897f4d6f7883a
+#. source-sha256: 8e69577bf193c76e4336c99bc51641e44adb8e573ea88fb27ad269d3d1c85edc
 msgid "Choice/lj_06_luyuan_059/text"
-msgstr "Take the hydrangea from her hand"
+msgstr "Take the hydrangea from her head"
 
 #: res://timelines/07_maze_entry.dtl:23
 #. source-sha256: 2ef7051f91d16117abe85e15ded1a3e412706c057b0294cd2f1bb99050948f88
@@ -534,9 +534,9 @@ msgid "Text/lj_00_start_004/text"
 msgstr "I glance at the other passengers. Every one of them sits there in grimy silence, like a nest of rats."
 
 #: res://timelines/00_start.dtl:11
-#. source-sha256: 29acddbc43a7144dc93f3fb51fd50a8b97443bb55ff1b042d1b649b5bbfb47b4
+#. source-sha256: c020387cb1f31994aa689166aae202fd9d402be327a5defd89603a50d229baed
 msgid "Text/lj_00_start_005/text"
-msgstr "I count fifteen people besides myself. What are they all doing out in weather like this? Probably nothing better to do. Might as well wander around."
+msgstr "I count around ten people besides myself. What are they all doing out in weather like this? Probably nothing better to do. Might as well wander around."
 
 #: res://timelines/00_start.dtl:13
 #. source-sha256: 13c67a1ddc93583f899b65e15753fe8f798c425f87ff6f9d46e16082a4cdfccd
@@ -734,9 +734,9 @@ msgid "Text/lj_04_flower_shop_020/text"
 msgstr "“Like I'd want that.”"
 
 #: res://timelines/04_flower_shop.dtl:31
-#. source-sha256: 0e8e77ed5c2d9a553dffe458b999a8ae0902c94c757eb3259b07fdcca28ff6c2
+#. source-sha256: 101a8a22deae4d03281dbae70ab22727e70b2032174aa4c4ed68e96c594ecd81
 msgid "Text/lj_04_flower_shop_026/text"
-msgstr "The shop is closing. Head down, the owner pulls the shutter lower."
+msgstr "The flower shop is already closed, its shutter pulled down tight."
 
 #: res://timelines/04_flower_shop.dtl:33
 #. source-sha256: 6d18434e749ffd5f3ef617102436218dd4a8f7c04eac1189bcc6055b26ecc6b9
@@ -769,9 +769,9 @@ msgid "Text/lj_05_shiling_007/text"
 msgstr "“This is our road! Pay the toll!”"
 
 #: res://timelines/05_shiling.dtl:14
-#. source-sha256: 13652af47f33d529f94047aa29f40adda53cd8d1a9eea6aecc5f27ab40f944e2
+#. source-sha256: 96609f92ef6ac9d84adc652fdf4841d23b1cfd76811aa29b640a31d1d952ea48
 msgid "Text/lj_05_shiling_009/text"
-msgstr "Greasepaint cakes their faces, and plastic swords hang at their waists. They're obviously actors playing bandits."
+msgstr "Greasepaint cakes their faces, and they clutch plastic swords. They're obviously actors playing bandits."
 
 #: res://timelines/05_shiling.dtl:16
 #. source-sha256: b0c5313a537a7264179fe7a4beb711d0ad55fd252465e57c6522da8d009d5440
@@ -1184,9 +1184,9 @@ msgid "Text/lj_06_luyuan_011/text"
 msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
 
 #: res://timelines/06_luyuan.dtl:24
-#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+#. source-sha256: 117678059ea3cbb9b79f0fadf5615c1239e2f478fdf26b9ed88b9ce20349ae1d
 msgid "Text/lj_06_luyuan_016/text"
-msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+msgstr "I reach up and pick the hydrangea from her head. Her eyelids twitch."
 
 #: res://timelines/06_luyuan.dtl:29
 #. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
@@ -1219,9 +1219,9 @@ msgid "Text/lj_06_luyuan_033/text"
 msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
 
 #: res://timelines/06_luyuan.dtl:51
-#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+#. source-sha256: 117678059ea3cbb9b79f0fadf5615c1239e2f478fdf26b9ed88b9ce20349ae1d
 msgid "Text/lj_06_luyuan_038/text"
-msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+msgstr "I reach up and pick the hydrangea from her head. Her eyelids twitch."
 
 #: res://timelines/06_luyuan.dtl:56
 #. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
@@ -1254,9 +1254,9 @@ msgid "Text/lj_06_luyuan_055/text"
 msgstr "I can't bear to look. I turn and run all the way out of Dew Garden."
 
 #: res://timelines/06_luyuan.dtl:78
-#. source-sha256: 74244fee8097c086a14fbacfea3147bff4314668b0450aa9d0dfc123dcbe0935
+#. source-sha256: 117678059ea3cbb9b79f0fadf5615c1239e2f478fdf26b9ed88b9ce20349ae1d
 msgid "Text/lj_06_luyuan_060/text"
-msgstr "I pry open her fingers and take the hydrangea. Her eyelids twitch."
+msgstr "I reach up and pick the hydrangea from her head. Her eyelids twitch."
 
 #: res://timelines/06_luyuan.dtl:83
 #. source-sha256: f489b1bdec789274e39b13267b27371f3adf51304585478b054f8ca3f7d17554
@@ -1594,9 +1594,9 @@ msgid "Text/lj_08_wife_room_037/text"
 msgstr "A familiar pain stings my eyes. My vision blurs, everything overlaid with a sheet of rippled, wet glass. I avoid the crowded elevator and slip quietly down the stairs. All the while I keep wondering: what is this place? I don't mean this hospital. I mean this place where I live. What is it? How can I escape?"
 
 #: res://timelines/08_wife_room.dtl:39
-#. source-sha256: f2e229f6b5539c4da0944e49ca4f7e07c03df201a48d49ccace20d8b8846ddfa
+#. source-sha256: 77c28ad8aad7e6318eec1cd6282af104c6ee386843f942bd8b004cd33fc3409c
 msgid "Text/lj_08_wife_room_038/text"
-msgstr "Lost in thought, I keep muttering, “What is this place?” A hand grabs my hair. The crooked-mouthed nurse pulls me close. Making sure no one is listening, she shields her mouth with one hand, leans into my ear, and tells me: this is a place where you die with nowhere to be buried."
+msgstr "Lost in thought, I keep muttering, “What is this place?” The crooked-mouthed nurse pulls me close. Making sure no one is listening, she leans into my ear, and tells me: this is a place where you die with nowhere to be buried."
 
 #: res://timelines/09_ending.dtl:1
 #. source-sha256: f323adac0b07465b9637d7da516014c57acf5315bda4d89f825b25181a8fa338
@@ -1644,14 +1644,14 @@ msgid "Text/lj_10_morgue_003/text"
 msgstr "They say you can find good things in the morgue. I take a narrow path over to try my luck. If I do find something, my wife ought to be pleased."
 
 #: res://timelines/10_morgue.dtl:7
-#. source-sha256: 1250c93429a91a13dc4b62dc39794bc469f7062560fbeb575e300cca5d8bfcc0
+#. source-sha256: b878577799353ee6c13756a8dc617165ed0486e798b5ac0325b451d9938674bb
 msgid "Text/lj_10_morgue_004/text"
-msgstr "I look around carefully. A few bodies still await burning on the floor, not laid out very neatly. Some relatives are howling nearby. Ah, life is decreed by heaven. When it's time to die, you die. The King of the Underworld doesn't care whether you cry. Your fate is set at birth, every detail written in his ledger. What good is crying?"
+msgstr "I look around carefully. The bodies still awaiting burning lie sheeted on gurneys, not lined up very neatly. The room is cold and still, without a soul around. Ah, life is decreed by heaven. When it's time to die, you die. The King of the Underworld doesn't care whether you cry. Your fate is set at birth, every detail written in his ledger. What good is crying?"
 
 #: res://timelines/10_morgue.dtl:11
-#. source-sha256: 3d87757ab491a2a9328d98152f79d120e65b1d7b4a673c8d99d2f21b7572e900
+#. source-sha256: 9c2a0420d01e44708927f1c22fe47ec5be82a1a21809884b8b185ebc8768438c
 msgid "Text/lj_10_morgue_007/text"
-msgstr "To the sound of their sobbing, I find several flower baskets in the morgue's trash bin. The flowers have all burned away, leaving empty baskets dusted with ashes. Luckily, one is fairly intact. I lift it and give it a shake. A pale yellow basket woven from earthworms, satisfyingly weighty in the hand and just the right size."
+msgstr "The morgue is dead quiet. On a stool in the corner I find an empty flower basket. The flowers have all burned away, leaving the basket dusted with ashes. Luckily, it is fairly intact. I lift it and give it a shake. A pale yellow basket woven from earthworms, satisfyingly weighty in the hand and just the right size."
 
 #: res://timelines/10_morgue.dtl:13
 #. source-sha256: fa48fd0f47cb4aa248a3216efee1d0434acd5312d39ba3809ae97b122822e839
@@ -2442,6 +2442,16 @@ msgstr "Codex"
 msgid "ui.lore_browser.line_edit_search.placeholder_text"
 msgstr "Search keywords"
 
+#: res://scenes/mianMenu.tscn
+#. source-sha256: 8a15e43ec17ebb9c8f29a1a23874d1611d9b2e42375d67e7e5942cb9af6f0f46
+msgid "ui.menu.subtitle"
+msgstr "A NARRATIVE ADVENTURE"
+
+#: res://scenes/mianMenu.tscn
+#. source-sha256: 8c6c7803829365b009b9988f87db49e478bc882613c9e31c485ca3214556f8de
+msgid "ui.menu.title"
+msgstr "Longe Journey"
+
 #: scenes/mianMenu.tscn:Button_exit
 #. source-sha256: dbc0fe120d31d61a6823b1d8c015e06b9baeea017fba19a80327b696c5ca6558
 msgid "ui.mianmenu.button_exit.text"
@@ -2546,3 +2556,8 @@ msgstr "Interface Sounds"
 #. source-sha256: 8bf8b9780d342816a2342d0af74a9bedc13387be59e709d30522883236f13e30
 msgid "ui.settings_panel.volume_label.text"
 msgstr "Volume"
+
+#: scenes/scene_1.tscn:Sign
+#. source-sha256: c029830ea22db68308b63940dae572b9cb134ba68616238a1d0e47c6ba99e9da
+msgid "ui.ward_door_locator.text"
+msgstr "7F / 5-05"

@@ -1,15 +1,37 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/dialogic_text_input.gd" id="2"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="3_theme"]
+[ext_resource type="StyleBox" path="res://ui/dialogue_panel.tres" id="4_panel"]
 
 [node name="TextInputLayer" instance=ExtResource("1")]
+theme = ExtResource("3_theme")
 
 [node name="DialogicNode_TextInput" parent="." index="0"]
+offset_left = -360.0
+offset_top = -118.0
+offset_right = 360.0
+offset_bottom = 118.0
 script = ExtResource("2")
+
+[node name="TextInputPanel" parent="DialogicNode_TextInput" index="0"]
+self_modulate = Color(1, 1, 1, 1)
+theme_override_styles/panel = ExtResource("4_panel")
+
+[node name="VBoxContainer" parent="DialogicNode_TextInput/TextInputPanel" index="0"]
+theme_override_constants/separation = 12
 
 [node name="TextLabel" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" index="0"]
 text = ""
+theme_type_variation = &"MutedLabel"
+
+[node name="InputField" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(0, 46)
+theme_override_font_sizes/font_size = 22
 
 [node name="ConfirmationButton" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 48)
+theme_type_variation = &"PrimaryButton"
+theme_override_font_sizes/font_size = 20
 text = "save.confirm"

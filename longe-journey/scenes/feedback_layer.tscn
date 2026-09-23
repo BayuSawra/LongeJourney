@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/feedback_layer.gd" id="1_feedback"]
 [ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="2_font"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="3_theme"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_notice"]
 bg_color = Color(0.035, 0.035, 0.035, 0.9)
@@ -24,6 +25,7 @@ layer = 200
 script = ExtResource("1_feedback")
 
 [node name="Root" type="Control" parent="."]
+theme = ExtResource("3_theme")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,9 +81,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -260.0
-offset_top = 24.0
+offset_top = 76.0
 offset_right = -24.0
-offset_bottom = 58.0
+offset_bottom = 110.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.72, 0.9, 0.68, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)

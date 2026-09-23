@@ -34,7 +34,7 @@ func test_main_scene_analysis_counts_real_nodes_and_scripts() -> void:
 	impl.bridge = AtomicBridge.new()
 	var result: Dictionary = impl.execute("scene_analyze", {"scene": "res://scenes/mianMenu.tscn"})
 	assert_bool(result.success).is_true()
-	assert_int(result.data.node_count).is_equal(12)
+	assert_int(result.data.node_count).is_equal(14)
 	assert_int(result.data.script_count).is_equal(1)
 	assert_str(result.data.scripts[0].path).is_equal("res://scripts/extends Control.gd")
 

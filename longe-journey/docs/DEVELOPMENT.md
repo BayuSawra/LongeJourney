@@ -37,6 +37,7 @@ if ($LASTEXITCODE -ne 0) { throw "Verification failed" }
 
 - 单语言单 PO 本地化检查（key/占位符/审核戳/资源引用）、lore 正典检查、timeline 注册/jump/主线可达性检查、资源引用扫描与一致性验证。
 - 复制源码到临时目录，从无 `.godot` 缓存状态导入。
+- 启动真实编辑器，检查默认中文场景预览、原生语言切换与英文选择跨重启保留。
 - gdUnit4 回归：双向变量同步、结局、存档、自动存档、设置、图鉴和场景。
 - 启动真实入口主菜单的 120 个物理帧 headless 冒烟测试，释放场景后等待音频清理。
 - 每步超时/非零退出/引擎错误日志均失败；JUnit 缺失、空跑、失败、跳过或 flaky 均失败。
@@ -79,3 +80,16 @@ python tools/verify_mcp.py --godot <Godot-4.7-console.exe绝对路径>
 ## 本地化
 
 中英文文案均集中在 `localization/<locale>.po`。编辑、新增语言、严格校验及 V3 存档兼容边界见 `LOCALIZATION.md`。
+
+## UI 视觉验收
+
+共享主题位于 `ui/journey_theme.tres`；主菜单、HUD、设置、存档、历史和图鉴使用同一字体、颜色及焦点样式。
+对话框通过业务继承场景适配窗口宽度，不修改 Dialogic 插件。
+
+```powershell
+python longe-journey/tools/ui_visual_qa.py --godot $env:GODOT_PATH
+```
+
+在隔离工程和独立用户目录中，使用 GL Compatibility 实际渲染中英文界面，覆盖
+1152x648、960x540、1024x768。检查界面控件边界，保存主菜单、设置、图鉴、真实对话/HUD、
+读档、历史和四选项截图到 `reports/ui-visual-qa-*/`。解析错误、引擎错误、缺图或断言失败均报错。

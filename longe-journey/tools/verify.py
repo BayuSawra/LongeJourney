@@ -71,6 +71,39 @@ def executable(value: str, label: str) -> str:
     return str(Path(resolved).resolve())
 
 
+def check_editor_localization(godot: str, project: Path, reports: Path, timeout: int) -> None:
+    config = project / "project.godot"
+    original = config.read_text(encoding="utf-8")
+    updated, count = re.subn(r'^enabled=PackedStringArray\((.*)\)$',
+        r'enabled=PackedStringArray(\1, "res://tools/editor_localization_check/plugin.cfg")',
+        original, flags=re.MULTILINE)
+    if count != 1:
+        raise RuntimeError("Expected exactly one editor plugin list for localization checks")
+    config.write_text(updated, encoding="utf-8")
+    try:
+        for locale in ("zh_CN", "en"):
+            name = "editor-localization-" + locale
+            output = run_step(name, [godot, "--headless", "--path", str(project), "--editor",
+                              "--", "--expected-locale=" + locale], project, reports, timeout)
+            if "EDITOR_LOCALIZATION_CHECK_PASSED" not in output.splitlines():
+                raise RuntimeError(f"{name}: editor check did not complete")
+    finally:
+        config.write_text(original, encoding="utf-8")
+
+
+def isolate_project_config(config: str, userdata: Path) -> str:
+    # Editor mode does not read override.cfg; isolate the disposable project itself.
+    application = (
+        'config/name="LongeJourney-Verify-' + uuid.uuid4().hex + '"\n'
+        'config/use_custom_user_dir=true\n'
+        'config/custom_user_dir_name="' + userdata.name + '"'
+    )
+    updated, count = re.subn(r'^config/name="[^"\n]*"$', application, config, flags=re.MULTILINE)
+    if count != 1 or "[validation]" in config or "config/use_custom_user_dir=" in config or "config/custom_user_dir_name=" in config:
+        raise RuntimeError("Unexpected project configuration while isolating editor user data")
+    return updated + '\n[validation]\nuser_data_dir="' + userdata.as_posix() + '"\n'
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--godot", default=os.environ.get("GODOT_PATH", ""),
@@ -100,7 +133,7 @@ def main() -> int:
             project = Path(temp) / "project"
             shutil.copytree(ROOT, project, ignore=shutil.ignore_patterns(
                 ".git", ".godot", "reports", "backups", "__pycache__", ".gdunit*",
-                ".env", "config.toml"))
+                ".env", "config.toml", "override.cfg"))
             # Do not start a developer MCP HTTP server from a CI import.
             config = project / "project.godot"
             config_text = re.sub(
@@ -110,12 +143,7 @@ def main() -> int:
             )
             if "res://addons/godot_dotnet_mcp/plugin.cfg" in config_text:
                 raise RuntimeError("Verification copy still enables the MCP editor plugin")
-            config.write_text(config_text, encoding="utf-8")
-            (project / "override.cfg").write_text(
-                '[application]\nconfig/name="LongeJourney-Verify-' + uuid.uuid4().hex +
-                '"\nconfig/use_custom_user_dir=true\nconfig/custom_user_dir_name="' +
-                Path(userdata).name + '"\n[validation]\nuser_data_dir="' +
-                Path(userdata).as_posix() + '"\n', encoding="utf-8")
+            config.write_text(isolate_project_config(config_text, Path(userdata)), encoding="utf-8")
             run_step("localization", [sys.executable, "tools/localization.py", "check"], project, reports, args.timeout)
             run_step("lore", [sys.executable, "tools/lj_cli.py", "check-lore"], project, reports, args.timeout)
             run_step("timelines", [sys.executable, "tools/check_timelines.py"], project, reports, args.timeout)
@@ -130,11 +158,12 @@ def main() -> int:
                 raise RuntimeError("Resource validation found missing or inconsistent resources")
             run_step("import", [godot, "--headless", "--path", str(project), "--editor", "--import", "--verbose"],
                      project, reports, args.timeout)
+            check_editor_localization(godot, project, reports, args.timeout)
             run_step("tests", [godot, "--headless", "--path", str(project), "-s",
                      "addons/gdUnit4/bin/GdUnitCmdTool.gd", "-a", "tests/", "-c",
                      "--ignoreHeadlessMode", "--verbose", "-rd", str(reports / "gdunit")], project, reports, args.timeout)
             summary["tests"] = validate_test_report(reports / "gdunit")
-            run_step("smoke", [godot, "--headless", "--path", str(project), "-s", "tools/smoke.gd"],
+            run_step("smoke", [godot, "--headless", "--path", str(project), "--verbose", "-s", "tools/smoke.gd"],
                      project, reports, args.timeout)
         summary["status"] = "passed"
         print(f"All checks passed. Reports: {reports}")

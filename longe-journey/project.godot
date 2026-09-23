@@ -21,7 +21,7 @@ buses/default_bus_layout="uid://bqbrnelyc3tkx"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dialogic="*uid://ds2q0uclmolvu"
 Localization="*res://scripts/autoload/localization.gd"
 MCPRuntimeBridge="*res://addons/godot_dotnet_mcp/plugin/runtime/mcp_runtime_bridge.gd"
 GameState="*res://scripts/autoload/game_state.gd"
@@ -147,7 +147,7 @@ import/use_multiple_threads=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_dotnet_mcp/plugin.cfg", "res://addons/longe_lore_tools/plugin.cfg", "res://addons/gdUnit4/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_dotnet_mcp/plugin.cfg", "res://addons/longe_lore_tools/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://editor/localization_preview/plugin.cfg")
 
 [input]
 

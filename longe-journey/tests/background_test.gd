@@ -151,6 +151,70 @@ func test_manifest_assets_are_valid_and_formal_timelines_are_registered() -> voi
 			"Background is not 16:9: %s (%s)" % [assets[id], size]).is_true()
 
 
+func test_ward_door_locator_is_runtime_ui_text() -> void:
+	var scene := ResourceLoader.load("res://scenes/scene_1.tscn", "", ResourceLoader.CACHE_MODE_IGNORE) as PackedScene
+	assert_object(scene).override_failure_message("Main scene is missing for ward door locator").is_not_null()
+	if scene == null:
+		return
+	var instance := scene.instantiate()
+	var sign := instance.get_node_or_null("WardDoorSign/Sign") as Label
+	assert_object(sign).override_failure_message("Ward door locator Label is missing").is_not_null()
+	if sign != null:
+		assert_str(sign.text).is_equal("ui.ward_door_locator.text")
+		assert_bool(sign.visible).is_false()
+	instance.free()
+
+
+func test_ward_door_locator_uses_background_cover_mapping() -> void:
+	var controller: CanvasLayer = load("res://scripts/ward_door_sign.gd").new() as CanvasLayer
+	var wide_rect: Rect2 = controller._plaque_rect(Vector2(1152.0, 648.0))
+	var four_three_rect: Rect2 = controller._plaque_rect(Vector2(1024.0, 768.0))
+	assert_bool(abs(wide_rect.position.x - 910.0) < 3.0).is_true()
+	assert_bool(abs(four_three_rect.position.x - 907.0) < 5.0).override_failure_message(
+		"4:3 plaque mapping ignored covered background crop").is_true()
+	assert_bool(four_three_rect.position.x > 880.0).is_true()
+	controller.free()
+
+
+func test_ward_door_locator_tracks_background_across_reentry() -> void:
+	var previous_background := str(Dialogic.Backgrounds.argument)
+	Dialogic.start(_load_timeline("02_ward"))
+	await _wait_for_first_text()
+	var controller := load("res://scripts/ward_door_sign.gd").new() as CanvasLayer
+	var sign := Label.new()
+	sign.name = "Sign"
+	controller.add_child(sign)
+	get_tree().root.add_child(controller)
+	await get_tree().process_frame
+
+	Dialogic.Backgrounds.update_background("", "res://art/backgrounds/ward_corridor.png", 0.0)
+	await get_tree().process_frame
+	assert_bool(sign.visible).override_failure_message("Door sign leaked into ward corridor").is_false()
+
+	Dialogic.Backgrounds.update_background("", "res://art/backgrounds/hospital_ward_door_505.png", 0.05)
+	await get_tree().create_timer(0.08).timeout
+	assert_bool(sign.visible).override_failure_message("Door sign did not appear for 5-05 background").is_true()
+	assert_object(controller.attached_sign).override_failure_message(
+		"Door sign was not attached to the active Dialogic background").is_not_null()
+
+	Dialogic.Backgrounds.update_background("", "res://art/backgrounds/wife_room_curtained.png", 0.05)
+	await get_tree().create_timer(0.08).timeout
+	assert_bool(sign.visible).override_failure_message("Door sign remained visible after leaving 5-05").is_false()
+
+	controller.queue_free()
+	await get_tree().process_frame
+	var second_controller := load("res://scripts/ward_door_sign.gd").new() as CanvasLayer
+	var second_sign := Label.new()
+	second_sign.name = "Sign"
+	second_controller.add_child(second_sign)
+	get_tree().root.add_child(second_controller)
+	await get_tree().process_frame
+	assert_bool(second_sign.visible).is_false()
+	second_controller.queue_free()
+	Dialogic.Backgrounds.update_background("", previous_background, 0.0)
+	await get_tree().process_frame
+
+
 func test_manifest_entries_and_cues_match_timeline_background_events() -> void:
 	var manifest := _read_manifest()
 	var assets := _asset_map(manifest)

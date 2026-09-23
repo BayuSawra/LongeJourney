@@ -1,87 +1,26 @@
 [gd_scene format=3 uid="uid://bh5m0e3274r56"]
 
-[ext_resource type="Texture2D" uid="uid://b48dskfa0av7b" path="res://art/1.png" id="1_0sotp"]
-[ext_resource type="Script" uid="uid://b1ssoxmh62qia" path="res://scripts/extends Control.gd" id="1_swmmr"]
-[ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="1_vgm6g"]
-[ext_resource type="Shader" uid="uid://cdofequvaau8n" path="res://shaders/frenzied_distortion.gdshader" id="3_pv8ie"]
-[ext_resource type="AudioStream" uid="uid://dupgo6aklsi7w" path="res://music/00_start.mp3" id="4_dw0oc"]
+[ext_resource type="Texture2D" uid="uid://bfa6gkgej5rnk" path="res://art/backgrounds/crossroads_bus_sunflower.png" id="1_cover"]
+[ext_resource type="Script" uid="uid://b1ssoxmh62qia" path="res://scripts/extends Control.gd" id="2_script"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="3_theme"]
+[ext_resource type="AudioStream" uid="uid://dupgo6aklsi7w" path="res://music/00_start.mp3" id="4_music"]
+[ext_resource type="Texture2D" uid="uid://v8ahaow5bs36" path="res://ui/icons/arrow-right.svg" id="5_start"]
+[ext_resource type="Texture2D" uid="uid://bas2busb666ge" path="res://ui/icons/save.svg" id="6_save"]
+[ext_resource type="Texture2D" uid="uid://bee8u5yw5udnu" path="res://ui/icons/folder-open.svg" id="7_load"]
+[ext_resource type="Texture2D" uid="uid://der2dwep51shx" path="res://ui/icons/settings.svg" id="8_settings"]
+[ext_resource type="Texture2D" uid="uid://b8v2in3v4njhi" path="res://ui/icons/log-out.svg" id="9_exit"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swmmr"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r0ftr"]
-shader = ExtResource("3_pv8ie")
-shader_parameter/insanity = 0.242000011495
-shader_parameter/speed = 0.326000015485
-shader_parameter/distortion_center = Vector2(0.5, 0.5)
-shader_parameter/wave_strength = 0.0330000015675
-shader_parameter/wave_frequency = 25.1390011941025
-shader_parameter/wave_speed = 1.5790000750025
-shader_parameter/swirl_strength = 0.442000020995
-shader_parameter/jitter_strength = 1.55600007391
-shader_parameter/glitch_strength = 0.0
-shader_parameter/glitch_density = 0.16
-shader_parameter/glitch_bands = 42.0
-shader_parameter/glitch_speed = 12.7610005586475
-shader_parameter/chroma_aberration = 4.0
-shader_parameter/desaturation = 0.12
-shader_parameter/tint_color = Color(1, 1, 1, 1)
-shader_parameter/tint_strength = 0.06
-shader_parameter/white_noise_density = 0.0070000003325
-shader_parameter/white_noise_amount = 1.0
-shader_parameter/white_noise_cell_size = 5.0
-shader_parameter/white_noise_speed = 3.2750001555625
-shader_parameter/white_noise_seed = 30.000001425
-shader_parameter/dissolve = 0.0
-shader_parameter/tear_direction = Vector2(1, 0)
-shader_parameter/tear_roughness = 0.18
-shader_parameter/tear_softness = 0.025
-shader_parameter/tear_glow = 0.55
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp7ys"]
-bg_color = Color(0.60662574, 0.60662585, 0.6066258, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_color = Color(0.73357177, 0.8554693, 0.9336531, 0.6)
-
-[node name="MianMenu" type="Control" unique_id=715804220]
+[node name="MianMenu" type="Control" unique_id=2057233916]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_swmmr")
+theme = ExtResource("3_theme")
+script = ExtResource("2_script")
 
-[node name="blackBackground" type="ColorRect" parent="." unique_id=1881142140]
-layout_mode = 0
-offset_left = -58.0
-offset_top = -44.0
-offset_right = 1222.0
-offset_bottom = 711.0
-color = Color(0, 0, 0, 1)
-
-[node name="Panel" type="Panel" parent="." unique_id=1948078779]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_swmmr")
-
-[node name="img_qiuyin" type="TextureRect" parent="Panel" unique_id=493532598]
-layout_mode = 0
-offset_left = 329.0
-offset_top = 48.0
-offset_right = 829.0
-offset_bottom = 430.0
-texture = ExtResource("1_0sotp")
-
-[node name="Distortion" type="ColorRect" parent="." unique_id=1407405128]
-material = SubResource("ShaderMaterial_r0ftr")
+[node name="Background" type="TextureRect" parent="." unique_id=546479831]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,64 +28,121 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+texture = ExtResource("1_cover")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="UI" type="VBoxContainer" parent="." unique_id=531095493]
+[node name="Shade" type="ColorRect" parent="." unique_id=9630410]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = 136.0
-offset_right = 92.5
-offset_bottom = 249.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 6
+mouse_filter = 2
+color = Color(0.025, 0.04, 0.032, 0.12)
 
-[node name="Button_start" type="Button" parent="UI" unique_id=516829063]
+[node name="MenuBand" type="ColorRect" parent="." unique_id=128996506]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.035, 0.05, 0.04, 0.88)
+
+[node name="Accent" type="ColorRect" parent="." unique_id=1470516941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.115
+anchor_right = 0.65
+anchor_bottom = 0.115
+offset_right = 40.0
+offset_bottom = 3.0
+mouse_filter = 2
+color = Color(0.785, 0.372, 0.322, 1)
+
+[node name="Title" type="Label" parent="." unique_id=2002371040]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.15
+anchor_right = 0.96
+anchor_bottom = 0.31
+theme_override_font_sizes/font_size = 46
+text = "ui.menu.title"
+autowrap_mode = 2
+
+[node name="Subtitle" type="Label" parent="." unique_id=55006826]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.345
+anchor_right = 0.96
+anchor_bottom = 0.385
+theme_type_variation = &"MutedLabel"
+text = "ui.menu.subtitle"
+
+[node name="UI" type="VBoxContainer" parent="." unique_id=1899958774]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.44
+anchor_right = 0.94
+anchor_bottom = 0.44
+theme_override_constants/separation = 8
+
+[node name="Button_start" type="Button" parent="UI" unique_id=205225028]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_vgm6g")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+theme_type_variation = &"PrimaryButton"
 text = "ui.mianmenu.button_start.text"
+icon = ExtResource("5_start")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
 
-[node name="Button_save" type="Button" parent="UI" unique_id=516829064]
+[node name="Button_save" type="Button" parent="UI" unique_id=401047087]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_vgm6g")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+theme_type_variation = &"QuietButton"
 text = "ui.mianmenu.button_save.text"
+icon = ExtResource("6_save")
+alignment = 0
+expand_icon = true
 
-[node name="Button_load" type="Button" parent="UI" unique_id=516829065]
+[node name="Button_load" type="Button" parent="UI" unique_id=1392316908]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_vgm6g")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+theme_type_variation = &"QuietButton"
 text = "ui.mianmenu.button_load.text"
+icon = ExtResource("7_load")
+alignment = 0
+expand_icon = true
 
-[node name="Button_setting" type="Button" parent="UI" unique_id=1801085484]
+[node name="Button_setting" type="Button" parent="UI" unique_id=1001085063]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_vgm6g")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+theme_type_variation = &"QuietButton"
 text = "ui.mianmenu.button_setting.text"
+icon = ExtResource("8_settings")
+alignment = 0
+expand_icon = true
 
-[node name="Button_exit" type="Button" parent="UI" unique_id=299166154]
+[node name="Button_exit" type="Button" parent="UI" unique_id=718047683]
+custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_vgm6g")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wp7ys")
+theme_type_variation = &"QuietButton"
 text = "ui.mianmenu.button_exit.text"
+icon = ExtResource("9_exit")
+alignment = 0
+expand_icon = true
 
-[node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=174922347]
-stream = ExtResource("4_dw0oc")
+[node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=621493368]
+stream = ExtResource("4_music")
 volume_db = -5.0
 autoplay = true
 bus = &"BGM"

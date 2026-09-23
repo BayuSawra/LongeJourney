@@ -138,7 +138,7 @@ $orphanPaths = @($orphan | ForEach-Object { $_.path })
 $mustNotBeOrphan = @(
     "art/icon/flowericon.png",
     "art/icon/moneyicon.png",
-    "art/1.png",
+    "art/backgrounds/crossroads_bus_sunflower.png",
     "art/backgrounds/shiling_foothill.png",
     "art/backgrounds/luyuan_garden.png",
     "art/backgrounds/wife_room_curtained.png",

@@ -10,10 +10,9 @@ if {visit_shiling} == 1:
 
     - Choice/lj_05_shiling_004/text #id:lj_05_shiling_004
         set {energy} -= 5
-        [background arg="res://art/backgrounds/shiling_trail.png" fade="0.6"]
+        [background arg="res://art/backgrounds/shiling_bandit_ambush.png" fade="0.6"]
         Text/lj_05_shiling_006/text #id:lj_05_shiling_006
 
-        [background arg="res://art/backgrounds/shiling_bandit_ambush.png" fade="0.6"]
         Text/lj_05_shiling_007/text #id:lj_05_shiling_007
 
         - Choice/lj_05_shiling_008/text #id:lj_05_shiling_008
@@ -48,6 +47,7 @@ if {visit_shiling} == 1:
 
                                 - Choice/lj_05_shiling_026/text #id:lj_05_shiling_026
                                     Text/lj_05_shiling_027/text #id:lj_05_shiling_027
+                                    [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                     set {flower} += 1
                                     set {earthworm} += 1
@@ -107,6 +107,7 @@ if {visit_shiling} == 1:
 
                                     - Choice/lj_05_shiling_074/text #id:lj_05_shiling_074
                                         Text/lj_05_shiling_075/text #id:lj_05_shiling_075
+                                        [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                         set {flower} += 1
                                         set {earthworm} += 1
@@ -165,6 +166,7 @@ if {visit_shiling} == 1:
 
                             - Choice/lj_05_shiling_123/text #id:lj_05_shiling_123
                                 Text/lj_05_shiling_124/text #id:lj_05_shiling_124
+                                [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                 set {flower} += 1
                                 set {earthworm} += 1
@@ -216,6 +218,7 @@ if {visit_shiling} == 1:
 
                         - Choice/lj_05_shiling_165/text #id:lj_05_shiling_165
                             Text/lj_05_shiling_166/text #id:lj_05_shiling_166
+                            [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                             set {flower} += 1
                             set {earthworm} += 1
@@ -267,6 +270,7 @@ if {visit_shiling} == 1:
 
                     - Choice/lj_05_shiling_207/text #id:lj_05_shiling_207
                         Text/lj_05_shiling_208/text #id:lj_05_shiling_208
+                        [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                         set {flower} += 1
                         set {earthworm} += 1

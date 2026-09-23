@@ -1,6 +1,8 @@
-[gd_scene format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/settings_panel.gd" id="1_settings"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://ui/icons/close.svg" id="3_close"]
 
 [node name="SettingsPanel" type="CanvasLayer"]
 layer = 120
@@ -21,57 +23,80 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -220.0
-offset_right = 240.0
-offset_bottom = 220.0
+offset_left = -350.0
+offset_top = -252.0
+offset_right = 350.0
+offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
+theme = ExtResource("2_theme")
 
-[node name="Rows" type="VBoxContainer" parent="Panel"]
+[node name="Margin" type="MarginContainer" parent="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 20.0
-offset_right = -24.0
-offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="Rows" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="Title" type="Label" parent="Panel/Rows"]
+[node name="Header" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
-text = "ui.settings_panel.title.text"
-horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 42)
 
-[node name="LanguageRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="Title" type="Label" parent="Panel/Margin/Rows/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleLabel"
+text = "ui.settings_panel.title.text"
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/Margin/Rows/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_type_variation = &"IconButton"
+icon = ExtResource("3_close")
+expand_icon = true
+icon_alignment = 1
+tooltip_text = "ui.settings_panel.close_button.text"
+
+[node name="Separator" type="HSeparator" parent="Panel/Margin/Rows"]
+layout_mode = 2
+
+[node name="LanguageRow" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="LanguageLabel" type="Label" parent="Panel/Rows/LanguageRow"]
+[node name="LanguageLabel" type="Label" parent="Panel/Margin/Rows/LanguageRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(90, 0)
+custom_minimum_size = Vector2(156, 0)
 text = "settings.language"
 
-[node name="LanguageOption" type="OptionButton" parent="Panel/Rows/LanguageRow"]
+[node name="LanguageOption" type="OptionButton" parent="Panel/Margin/Rows/LanguageRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 auto_translate_mode = 2
 
-[node name="TextSpeedRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="TextSpeedRow" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="TextSpeedLabel" type="Label" parent="Panel/Rows/TextSpeedRow"]
+[node name="TextSpeedLabel" type="Label" parent="Panel/Margin/Rows/TextSpeedRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(90, 0)
+custom_minimum_size = Vector2(156, 0)
 text = "ui.settings_panel.text_speed_label.text"
 vertical_alignment = 1
 
-[node name="TextSpeedSlider" type="HSlider" parent="Panel/Rows/TextSpeedRow"]
+[node name="TextSpeedSlider" type="HSlider" parent="Panel/Margin/Rows/TextSpeedRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -80,17 +105,24 @@ max_value = 200.0
 step = 1.0
 value = 38.0
 
-[node name="BgmVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="TextSpeedValue" type="Label" parent="Panel/Margin/Rows/TextSpeedRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BgmVolumeRow" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="BgmVolumeLabel" type="Label" parent="Panel/Rows/BgmVolumeRow"]
+[node name="BgmVolumeLabel" type="Label" parent="Panel/Margin/Rows/BgmVolumeRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(90, 0)
+custom_minimum_size = Vector2(156, 0)
 text = "ui.settings_panel.bgm_volume_label.text"
 vertical_alignment = 1
 
-[node name="BgmVolumeSlider" type="HSlider" parent="Panel/Rows/BgmVolumeRow"]
+[node name="BgmVolumeSlider" type="HSlider" parent="Panel/Margin/Rows/BgmVolumeRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -98,17 +130,24 @@ max_value = 100.0
 step = 1.0
 value = 100.0
 
-[node name="SfxVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="BgmVolumeValue" type="Label" parent="Panel/Margin/Rows/BgmVolumeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SfxVolumeRow" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="SfxVolumeLabel" type="Label" parent="Panel/Rows/SfxVolumeRow"]
+[node name="SfxVolumeLabel" type="Label" parent="Panel/Margin/Rows/SfxVolumeRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(90, 0)
+custom_minimum_size = Vector2(156, 0)
 text = "ui.settings_panel.sfx_volume_label.text"
 vertical_alignment = 1
 
-[node name="SfxVolumeSlider" type="HSlider" parent="Panel/Rows/SfxVolumeRow"]
+[node name="SfxVolumeSlider" type="HSlider" parent="Panel/Margin/Rows/SfxVolumeRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -116,17 +155,24 @@ max_value = 100.0
 step = 1.0
 value = 100.0
 
-[node name="UiVolumeRow" type="HBoxContainer" parent="Panel/Rows"]
+[node name="SfxVolumeValue" type="Label" parent="Panel/Margin/Rows/SfxVolumeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="UiVolumeRow" type="HBoxContainer" parent="Panel/Margin/Rows"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="UiVolumeLabel" type="Label" parent="Panel/Rows/UiVolumeRow"]
+[node name="UiVolumeLabel" type="Label" parent="Panel/Margin/Rows/UiVolumeRow"]
 layout_mode = 2
-custom_minimum_size = Vector2(90, 0)
+custom_minimum_size = Vector2(156, 0)
 text = "ui.settings_panel.ui_volume_label.text"
 vertical_alignment = 1
 
-[node name="UiVolumeSlider" type="HSlider" parent="Panel/Rows/UiVolumeRow"]
+[node name="UiVolumeSlider" type="HSlider" parent="Panel/Margin/Rows/UiVolumeRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -134,12 +180,17 @@ max_value = 100.0
 step = 1.0
 value = 100.0
 
-[node name="FullscreenCheck" type="CheckButton" parent="Panel/Rows"]
+[node name="UiVolumeValue" type="Label" parent="Panel/Margin/Rows/UiVolumeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FooterSeparator" type="HSeparator" parent="Panel/Margin/Rows"]
+layout_mode = 2
+
+[node name="FullscreenCheck" type="CheckButton" parent="Panel/Margin/Rows"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "ui.settings_panel.fullscreen_check.text"
-
-[node name="CloseButton" type="Button" parent="Panel/Rows"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "ui.settings_panel.close_button.text"

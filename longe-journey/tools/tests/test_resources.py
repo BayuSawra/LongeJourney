@@ -67,6 +67,27 @@ class ResourceValidationTests(unittest.TestCase):
         self.assertNotEqual(code, 0)
         self.assertEqual(summary["orphan_count"], 1)
 
+    def test_legacy_cover_orphan_is_allowed(self):
+        legacy = self.root / "art/1.png"
+        legacy.write_bytes(b"fixture")
+        code, summary = self.validate([
+            {"path": "art/sample.png", "has_import": False},
+            {"path": "art/1.png", "has_import": False},
+        ])
+        self.assertEqual(code, 0)
+        self.assertEqual(summary["orphan_count"], 1)
+
+    def test_active_cover_orphan_is_rejected(self):
+        active = self.root / "art/backgrounds/crossroads_bus_sunflower.png"
+        active.parent.mkdir(parents=True, exist_ok=True)
+        active.write_bytes(b"fixture")
+        code, summary = self.validate([
+            {"path": "art/sample.png", "has_import": False},
+            {"path": "art/backgrounds/crossroads_bus_sunflower.png", "has_import": False},
+        ])
+        self.assertNotEqual(code, 0)
+        self.assertEqual(summary["orphan_count"], 1)
+
 
 class ResourceReferenceScanTests(unittest.TestCase):
     def test_timeline_only_background_reference_is_scanned(self):

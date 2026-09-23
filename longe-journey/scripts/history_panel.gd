@@ -78,6 +78,10 @@ func _rebuild_list() -> void:
 		var button := Button.new()
 		button.text = _format_entry(_entries[i])
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		button.custom_minimum_size = Vector2(0, 44)
+		button.theme_type_variation = &"SlotButton"
+		button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		button.tooltip_text = button.text
 		button.pressed.connect(_on_entry_pressed.bind(i))
 		list_box.add_child(button)
 

@@ -6,29 +6,41 @@
     {
       "id": "bus_interior_normal",
       "path": "res://art/bus_interior_normal.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Interior of an old Chinese public bus, view along the aisle, every passenger sits naturally facing forward, neutral ordinary behavior; outside windows show a different streetscape with directional motion blur. Preserve the same bus geometry and camera as the staring variant.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Interior of an old crowded Chinese city bus in the rain, identical composition, identical passengers, seats, poles, handrails, lighting and reflections. Only the view outside the side windows changes: through one side window, seen in rainy haze, an old grey hospital building facade with climbing ivy covering more than half of it, broken windows with grey-blue curtains billowing outward; keep the motion blur and rainy atmosphere of the original street view. Everything inside the bus stays exactly the same.",
       "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-f8ca3e02-1d74-4b2c-ae6a-a9bdda9f1be1.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "剧情提到车窗外能看见爬满爬山虎的灰色医院，原图窗外只有街道，补入医院外墙与灰蓝窗帘使画面与文本一致。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "bus_interior_staring",
       "path": "res://art/bus_interior_staring.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Same old Chinese public bus interior and camera, seated passengers turn their heads toward the viewer with silent unsettling stares.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No readable text, numbers, signs, UI, logo or watermark. Same still-operating early-2000s Chinese county bus interior and camera, with worn but maintained seats, working fluorescent lights, fare box, hand straps and signs of an ordinary route. Every seated passenger has turned toward the viewer in a synchronized silent stare, while the surrounding bus remains mundane and in service; uncanny tension comes from the impossible behavior, not ruin or disaster. Overhead route boards are blank weathered panels with their original borders and mounts retained; no readable writing or digits.",
       "prompt_kind": "reproduction specification",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-ab224379-c92e-481a-9ecb-0019491e1ab1.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-21",
+        "reason": "Overhead route boards are blank weathered panels with their original borders and mounts retained; no readable writing or digits.",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "hospital_exterior",
       "path": "res://art/backgrounds/hospital_exterior.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Exterior entrance and grey road of an old Chinese county hospital, wet steps, peeling plaster, bare trees and dim sky, no people.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No readable text, numbers, signs, UI, logo or watermark. Exterior entrance and grey road of an old but functioning early-2000s Chinese county hospital, weathered concrete and peeling patches alongside swept steps, lit reception windows, parked bicycles, a security guard or passing family member, delivery carts and small signs of active care. Wet pavement, bare trees and dim sky create quiet unease; the hospital is operating, not abandoned or disaster-struck.",
       "prompt_kind": "reproduction specification",
-      "original_output_path": "generated_images/exec-c9e99d43-f72f-4332-916a-62ae2a18f160.png",
+      "original_output_path": "generated_images/01a0c3a8-4156-7310-90ac-5d19acf76a62/call_tsRw0QmDICikjLHCiVFcOxTh.png",
       "size": [
         1672,
         941
@@ -37,20 +49,25 @@
     {
       "id": "ward_corridor",
       "path": "res://art/backgrounds/ward_corridor.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Empty old Chinese hospital ward corridor, nurses station at left, closed rooms, distant curtain, weak fluorescent lights; blank signs without letters or numbers.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No readable text, numbers, signs, UI, logo or watermark. Early-2000s Chinese county hospital ward corridor that is old but actively staffed: nurses station at left with a lit desk lamp, chart folders, thermos and medicine tray, a wheelchair or family belongings near occupied rooms, weak fluorescent lights and a distant curtain. Keep the corridor quiet and orderly, with one subtly impossible repeated detail creating uncanny tension; it must feel in service, not derelict. Blank sign surfaces without letters or numbers. All clock faces have unnumbered tick marks; wall registration boards retain only blank rows, no recognizable writing.",
       "prompt_kind": "reproduction specification",
-      "original_output_path": "generated_images/exec-5c35c0c9-cf8a-44c3-9412-4caaf240a029.png",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-02e489cf-2909-44f5-88e6-b488ffac9ffa.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-21",
+        "reason": "All clock faces have unnumbered tick marks; wall registration boards retain only blank rows, no recognizable writing.",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "crossroads",
       "path": "res://art/backgrounds/crossroads.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Deserted crossroads in a small Chinese town, decayed shop fronts, wet grey road, branching roads toward hills and town, no people.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No readable text, numbers, signs, UI, logo or watermark. Early-2000s small Chinese county crossroads in cold drizzle, weathered but functioning shops with a lit counter, open shutters, parked bicycles, a distant bus, utility wires and a few residents or delivery workers. Wet grey road branches toward hills and town; everyday traffic and commerce continue while the perspective, repeated umbrellas or one motionless figure create a restrained absurd and uncanny mood. Avoid disaster, abandonment and total emptiness.",
       "prompt_kind": "reproduction specification",
-      "original_output_path": "generated_images/exec-8d87e6df-92de-4f5f-8081-0b64b70c4844.png",
+      "original_output_path": "generated_images/01a0c3a8-a333-73a1-8052-c6a113bc6af8/call_54ypG59QqTY3drrzXANGmwDl.png",
       "size": [
         1672,
         941
@@ -59,13 +76,18 @@
     {
       "id": "flower_shop_open",
       "path": "res://art/backgrounds/flower_shop_open.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Tiny old flower shop with a half-open corrugated metal shutter, several water and soil tubs in shadow, no decorative fresh flowers, wet alley beside it.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Same rainy old Chinese alley flower shop storefront as the reference, identical camera angle, composition, fabric awning, bicycle, wet stone street, interior lamp, and the same female shopkeeper with hair in a bun bent over the counter inside. Three changes: 1) an old weathered corrugated metal roller shutter door half-pulled-down over the shop front beneath the fabric awning, leaving the doorway half open; 2) the metal buckets in front of the shop now hold wet dark soil with only a few wilted flower stems instead of fresh flowers, keeping the buckets' number, positions and small blank price tags unchanged; 3) the shopkeeper holds an old smartphone between her lowered hands while bending over the counter, her posture, bun hairstyle and clothing unchanged.",
       "prompt_kind": "reproduction specification",
-      "original_output_path": "generated_images/exec-c48db03c-8b17-4a83-a6f3-47b1040b33f4.png",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-1eb77c0b-6e09-4662-ace4-8c3c6cfdc3bd.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "剧情描写“卷帘门半拉着”“老板低头玩手机，桶里全是土”，原图无卷帘门、桶里是鲜花、老板无手机，一次编辑补齐三处。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "flower_shop_closed",
@@ -92,13 +114,18 @@
     {
       "id": "wife_room_open",
       "path": "res://art/backgrounds/wife_room_open.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the same curtained hospital room: slide curtain left to reveal a woman in pale patient clothes seated facing away on the bed; preserve room, furniture, camera and lighting.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Keep the exact same camera angle, composition, lighting, color grading and room layout as the reference image: a bleak old Chinese hospital ward, bed with curtain rail, wife sitting on the bed edge with her back to the viewer, bedside cabinet on the left, window on the right, chair in right foreground. Only two changes: (1) On the bedside cabinet at the left, place a small bouquet of visiting flowers with messy mixed stems, like wildflowers gathered outside, standing in a simple glass or jar beside the existing thermos and metal cup and bowl; the flowers must NOT cover or hide the thermos, cup or bowl, and stay above the lower quarter of the frame. (2) The wife's dark hair is no longer a neat bun: it has become eerie long noodle-like strands, separate thick limp locks like wet noodles hanging down her back and shoulders, clearly wrong in texture but restrained in amount; she slightly raises one hand to the side, and the fingers of that hand are fused together, hard to tell apart. Everything else stays identical: her seated pose, hospital gown, bed, sheets, curtain, IV pole, cabinet, window view, chair, floor, moody dim light.",
       "prompt_kind": "reproduction specification",
       "original_output_path": "generated_images/exec-b74d391f-7d7f-4239-96d0-867106f5b3fa.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "画面补充床头柜上的探病鲜花并把妻子头发改为面条状怪异长发、手微抬且手指粘连，使背景与“放花”及“手指长在一起、头发变成面条”的剧情文本一致。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "morgue_occupied",
@@ -135,9 +162,14 @@
         "C:/Users/Admin/.codex/generated_images/01a0be3d-4f6c-7a02-b3d5-074f7ca1b1f5/exec-9249d34b-5a40-45cc-952a-de7d7408dc7a.png"
       ],
       "size": [
-        1671,
+        1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-21",
+        "reason": "Normalize existing 1671x941 RGB image to required 1672x941, preserving courtyard composition.",
+        "mode": "one-pixel width normalization"
+      }
     },
     {
       "id": "shiling_foothill",
@@ -219,24 +251,34 @@
     {
       "id": "maze_entry",
       "path": "res://art/backgrounds/maze_entry.png",
-      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the entrance of a rockery maze inside an old Chinese garden; a heavy wooden maze gate has just slammed shut, wind and grit whipping across the threshold, crooked rock walls and a few dead lanterns, faint warm banquet lights far away through the maze.\nScene/backdrop: enclosed ancient garden maze entrance after a sudden hostile gust.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, ink-wash haze, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 cinematic view looking toward the closed gate and maze passage, threshold centered, warm lights tiny in the distance; keep lower 25 percent dark and low-detail for dialogue.\nLighting/mood: cold violet-gray dusk, sharp moving dust, claustrophobic and ominous, no supernatural figure.\nColor palette: gray stone, blue-violet fog, charcoal, tiny muted amber lights.\nMaterials/textures: rough limestone rockery, dust, damp soil, old wood gate, faded lantern paper.\nConstraints: no people, no readable signs, no UI, no logo, no border, no watermark, no modern objects, no blood, no gore, no text.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the first reference image with minimal changes: same old wooden mansion gate, stone lions, lanterns, rockeries, distant lit pavilion, violet-grey mist, same camera. Add two things only: (1) in the near foreground, three servant figures in old-style Chinese clothing seen from behind as dark silhouettes, crowding toward the camera, reaching out with their hands as if adjusting the viewer's clothes and supporting the viewer's arm, obsequious to the point of eerieness, treated like the foreground silhouette figure in the second reference image; (2) the road in front of the gate now visibly forks into two: a wider stone-paved road stretching away to the left, and a narrower winding path disappearing into the rockeries on the right. Keep the closed gate, distant lights and violet-grey atmosphere unchanged; lower quarter stays dark and low-detail.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-e0c0b3c4-9a43-4622-97bd-032b37a457ba.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "补齐三个搀扶仆人剪影与门前左右岔路以匹配剧情与选项，并去除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "maze_left_garden",
       "path": "res://art/backgrounds/maze_left_garden.png",
-      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the left branch of an ancient Chinese rockery maze, vegetation unnaturally lush but with no flowers, a dark arched doorway cut into the rocks, deep path beyond, indistinct distant crowd silhouettes in purple robes barely visible through violet mist.\nScene/backdrop: abandoned garden maze passage with damp walls and dense leaves.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash texture, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9 shot down the left path, arched doorway slightly off-center, distant purple-robed figures tiny and blurred, no stage or theatrical props; lower 25 percent dark low-detail for dialogue.\nLighting/mood: cold overcast violet-gray light, oppressive quiet, uncanny but nonviolent.\nColor palette: desaturated green, blue-gray stone, violet haze, faint purple clothing silhouettes.\nMaterials/textures: wet rock, tangled leaves, moss, muddy path, drifting mist.\nConstraints: no readable signs, no UI, no logo, no border, no watermark, no modern objects, no flowers, no stage, no gore, no blood, no text.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the reference image with minimal changes: same overgrown stone archway, lush flowerless vegetation, wet stone path, distant crowd silhouettes beyond the arch, same camera and moody grey-green light. Add one figure only: in the near foreground, a man in a worn purple old-style Chinese long robe, seen from the side and back, facing toward the distant crowd, one arm stretched out gripping forward as if dragging the viewer holding the camera along; aged fabric, unsettling demeanor. Keep the crowd, archway and vegetation unchanged; lower quarter stays dark and low-detail.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-4842f47e-b233-4005-9f37-7a5e90a17d5c.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "近前景补齐钳住主角的紫袍男人以匹配对话剧情，并去除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "maze_right_bamboo",
@@ -263,13 +305,18 @@
     {
       "id": "maze_center",
       "path": "res://art/backgrounds/maze_center.png",
-      "prompt": "Use case: illustration-story\nAsset type: full-screen visual novel environment background\nPrimary request: the central clearing of an ancient Chinese rockery maze with one adult woman seen at medium-long distance, standing rigidly in ornate traditional clothing and a golden hairpin; a plain wooden stick is fixed behind her back at the waist by a belt and touches the ground, clearly outside the clothing and not piercing her body. Her posture is unnaturally stiff and melancholy. Subtle hydrangea blossoms may appear as a minor environmental detail without a fixed location.\nScene/backdrop: damp central maze clearing surrounded by jagged rockery and faded garden plants.\nStyle/medium: realistic painted environment concept art with charcoal and fine stippled grain, restrained ink-wash atmosphere, dark Chinese supernatural visual novel.\nComposition/framing: wide 16:9, woman small in the middle distance, full body and full clothing visible, environment dominates, lower 25 percent dark low-detail for dialogue.\nLighting/mood: cold violet-gray dusk, tragic, eerie, restrained, no gore.\nColor palette: desaturated blue-gray stone, violet mist, muted burgundy and charcoal clothing, small ivory or lavender flowers.\nMaterials/textures: damp rocks, worn brocade fabric, wood grain, fog, wet earth.\nConstraints: adult woman only, no child, no close-up, no blood, no wounds, no impalement, no stick through body, no readable signs, no UI, no logo, no border, no watermark, no text.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the first reference image with minimal changes: same woman in ornate dark red traditional dress standing in the flooded ruined garden, same pose, same moon gate, pavilion, rockeries and pale violet light, same camera. Add two things only, matching the second reference image: (1) on top of her hair bun, a single large round blue hydrangea flower, conspicuous and clearly visible even in this wide shot, same size and blue-violet color as the hydrangea crown in the second reference; (2) directly behind her, a dark wooden pole standing upright, its top end rising clearly above her head, its lower end disappearing into her skirt hem and the wet ground, matching the pole in the second reference. Keep her posture, dress, the garden, moon gate and lighting unchanged; lower quarter stays dark and low-detail.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-34f61002-3348-4aa8-ab1d-e2d217c789e0.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "头顶补齐蓝色绣球花、背后补齐立棍，与 maze_pinned_woman 保持一致，并去除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "maze_exit_road",
@@ -285,24 +332,34 @@
     {
       "id": "crossroads_bus_sunflower",
       "path": "res://art/backgrounds/crossroads_bus_sunflower.png",
-      "prompt": "Deserted town crossroads in cold drizzle, old bus stopped roadside, distant neighbor handing a sunflower from the bus window.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No readable text, numbers, signs, UI, logo or watermark. Same early-2000s Chinese county crossroads, broad wet reflective intersection, low shopfronts, utility wires and hill direction as crossroads.png; the same old white-and-blue county bus approaches from the matching road while a passenger extends a sunflower from a side window. Keep lived-in traffic and commerce, cold drizzle and the same town geometry; no lakeside road or mismatched green bus. Preserve the same central corner building, road geometry, shops, tree and poles as crossroads.png; only bring the matching white-and-blue bus forward on its approach and add a passenger extending one sunflower.",
       "prompt_kind": "generation request",
-      "original_output_path": "generated_images/exec-250d92fc-a1ab-45f2-a35c-92d64aa412f7.png",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-cf3515d6-cc36-4398-bb1d-689ee1f9ee34.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-21",
+        "reason": "Preserve the same central corner building, road geometry, shops, tree and poles as crossroads.png; only bring the matching white-and-blue bus forward on its approach and add a passenger extending one sunflower.",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "shiling_bandit_ambush",
       "path": "res://art/backgrounds/shiling_bandit_ambush.png",
-      "prompt": "Wet Shiling mountain trail blocked by distant theatrical bandits in smeared stage makeup and cheap costumes.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Keep the reference image exactly: same camera angle, same rainy misty mountain path, same wet black cliff rocks, same group of bandit actors with knives, same folding chair and speaker, same distant temple in the fog, same moody cold lighting. Add exactly one conspicuous purple iris flower (violet-blue petals, yellow-white throat, sword-like green leaves) growing out of a crevice in the upper-middle area of the left cliff wall, clearly visible against the dark wet rock, naturally integrated, wet from rain. Keep the lower quarter of the image dark and low-detail. Everything else stays identical to the reference.",
       "prompt_kind": "generation request",
-      "original_output_path": "generated_images/exec-e4b80355-6ba3-4ad7-a1f4-3cd785cfa8d2.png",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-d2d92249-26ab-42dd-985b-611e49b08c6f.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "剧情文本描述玩家从崖壁摘下一朵鸢尾花，但画面崖壁上没有花，故在左侧崖壁中上部石缝补一朵显眼紫色鸢尾花并修除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "hospital_corridor_whisper",
@@ -340,7 +397,7 @@
     {
       "id": "hospital_ward_door_505",
       "path": "res://art/backgrounds/hospital_ward_door_505.png",
-      "prompt": "Seventh-floor hospital corridor ending at the closed 5-05 ward door, blank plate and distant nurse station.",
+      "prompt": "Early-2000s Chinese county hospital seventh-floor corridor ending at a closed ward door, with a clearly visible blank rectangular door-plate area reserved for runtime UI text. Show corridor wayfinding structure, elevator or stair access, a distant staffed nurse station, cleaning cart, chart folders and faint signs of patients and families. The door and corridor are old but maintained and in use, with a quiet impossible symmetry or delayed fluorescent reflection creating absurd unease. Do not render any readable letters, numbers or baked-in room label; the runtime dialogue/interface will supply the 7F / 5-05 locator. No UI, logo or watermark.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-86af067e-bf43-4d28-9f74-27f66207d5d0.png",
       "size": [
@@ -351,31 +408,41 @@
     {
       "id": "luyuan_inner_gate",
       "path": "res://art/backgrounds/luyuan_inner_gate.png",
-      "prompt": "Inner stone paifang of the old garden, wet path to the rockery maze, half-closed wooden gate and chrysanthemums.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the reference image with minimal changes, keeping the exact same composition, camera angle, wet stone courtyard, paifang gate, white chrysanthemum bushes and gloomy lighting. Add two plants only: (1) a single climbing green orchid with long strap-like leaves and a few pale green flowers, growing over the low stone balustrade in the middle of the scene beside the path, slightly brighter than the grey surroundings so it stays recognizable; (2) a small flowering cactus with visible spines, buds and one open bloom, growing from the rock crevice on the right side among the existing white chrysanthemums. Both additions sit above the dark lower quarter; everything else unchanged.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-44a0088f-ce65-46e4-b46a-09e41d92bfc4.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "补齐剧情所需的中间矮墙绿兰与右侧石缝开花仙人球，并去除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "maze_blood_trail",
       "path": "res://art/backgrounds/maze_blood_trail.png",
-      "prompt": "Narrow wet rockery corridor with fallen petals and a thin non-graphic blood trail.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the reference image with minimal changes: same narrow canyon path between dark rockeries, wet stone slabs, blood trail and scattered white petals on the ground, stone lantern on the right, pale orchids in the left rock crevice, same camera and dim light. Add one plant only: a dense cluster of cacti with tightly packed sharp spines and a single flower blooming on top, rooted in the left rockery wall area above the path, clearly visible but away from the blood trail, the white petals and the dark lower quarter. Everything else unchanged.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-3a5d2cb9-2f4b-4d64-ae61-e8c1d24e23ba.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "左侧假山补齐尖刺密集、顶端带花的仙人球丛以匹配摘花划伤剧情，并去除生成水印。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "morgue_interior_drawers",
       "path": "res://art/backgrounds/morgue_interior_drawers.png",
-      "prompt": "Neglected morgue interior with rusted body drawers, cold light, an empty bucket and red cloth, no corpse.",
+      "prompt": "Plain back-room mortuary area of an operating early-2000s Chinese county hospital, arranged like improvised local medical logistics rather than a modern Western morgue: one or two covered steel gurneys, a metal bucket, washable tile, a blank registration board, thermos, cleaning supplies and a pale yellow empty funeral flower basket. Aging paint and cold fluorescent light show institutional wear, but the room is maintained and recently used. No corpse, no body drawers dominating the composition, no gore, no readable text, no UI, logo or watermark. The uncanny mood comes from an oddly orderly empty bed and a misplaced everyday object, with quiet absurdity rather than ruin.",
       "prompt_kind": "generation request",
-      "original_output_path": "generated_images/exec-4980c1b6-e4e2-4ff5-94d9-ce285afd24d1.png",
+      "original_output_path": "generated_images/01a0c459-9f7b-7493-9bff-249582235163/exec-32424059-75d4-4b98-b286-f8cff32049e6.png",
       "size": [
         1672,
         941
@@ -384,13 +451,48 @@
     {
       "id": "flower_shop_interior_buckets",
       "path": "res://art/backgrounds/flower_shop_interior_buckets.png",
-      "prompt": "Tiny flower shop interior with overturned soil buckets, spilled dirt and earthworms under a half-raised shutter.",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Same dark gloomy flower shop interior as the reference, seen from inside looking toward the rainy alley; the overturned metal bucket, spilled wet soil, scattered earthworms and debris on the floor stay exactly unchanged, identical composition and dim lighting. One addition only: in the deep shadows behind the counter and shelves, in the upper half of the frame, stands the dim figure of a middle-aged female shopkeeper with her hair in a bun, facing toward the camera with a faint, barely-there unsettling smile, subdued and eerie; the lower quarter of the image remains dark and low-detail.",
       "prompt_kind": "generation request",
       "original_output_path": "generated_images/exec-55191cca-0dfd-4a21-985b-f122f1d6476a.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "剧情在此处描写老板的表情反应但原店内画面空无一人，于纵深暗处补入盘发女老板身影。",
+        "mode": "built-in image_gen edit"
+      }
+    },
+    {
+      "id": "flower_shop_open_offering",
+      "path": "res://art/backgrounds/flower_shop_open_offering.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Same rainy old Chinese alley flower shop storefront as the reference, identical camera angle, identical composition: half-pulled weathered roller shutter, fabric awning, metal buckets of wet soil with wilted stems, bicycle, wet stone street, interior lamp. The only change: the female shopkeeper with her hair in a bun has raised her head and turned sideways toward the camera, slowly extending one open hand forward out of the shop toward the viewer, palm slightly up, a long wet dark earthworm clearly dangling and curling between her thumb and forefinger, freshly taken from the soil bucket; her other hand rests near the counter, her hairstyle and clothing unchanged, her expression blank and slow, eerie and subdued. Everything else in the scene stays exactly the same.",
+      "prompt_kind": "precise-object-edit",
+      "size": [
+        1672,
+        941
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "剧情“老板抬起头……掏出一条蚯蚓递到我面前”需要对应画面，基于 flower_shop_open 生成同机位递蚯蚓变体。",
+        "mode": "built-in image_gen edit"
+      }
+    },
+    {
+      "id": "shiling_temple_no_peony",
+      "path": "res://art/backgrounds/shiling_temple_no_peony.png",
+      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Keep the reference image exactly: same fixed camera angle of the ruined mountain temple, same stone guardian lions, same mossy tiled roof, same misty cliffs and waterfall behind, same wet stone courtyard, same cold overcast lighting. The only change: the red peony that stood in a pot at the center of the stone offering altar has been pulled out and taken away. On the altar there remains only the empty flower pot with bare dark floral soil where the flower was ripped out, plus one or two fallen red petals lying on the stone altar top. No living flower, no red bloom anywhere else. Everything else stays identical to the reference. Lower quarter of the image remains dark and low-detail.",
+      "prompt_kind": "precise-object-edit",
+      "size": [
+        1672,
+        941
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "摘牡丹分支中玩家已把供台上的牡丹拔走，画面却残留红牡丹，故生成同机位无牡丹变体（供台只剩空盆花泥）供摘花后段落使用。",
+        "mode": "built-in image_gen edit"
+      }
     }
   ],
   "timelines": [
@@ -488,6 +590,10 @@
         {
           "before": "Text/lj_04_flower_shop_005/text",
           "asset": "flower_shop_interior_buckets"
+        },
+        {
+          "before": "Text/lj_04_flower_shop_011/text",
+          "asset": "flower_shop_open_offering"
         }
       ]
     },
@@ -560,11 +666,31 @@
         },
         {
           "before": "Text/lj_05_shiling_006/text",
-          "asset": "shiling_trail"
+          "asset": "shiling_bandit_ambush"
         },
         {
           "before": "Text/lj_05_shiling_007/text",
           "asset": "shiling_bandit_ambush"
+        },
+        {
+          "before": "Text/lj_05_shiling_032/text",
+          "asset": "shiling_temple_no_peony"
+        },
+        {
+          "before": "Text/lj_05_shiling_080/text",
+          "asset": "shiling_temple_no_peony"
+        },
+        {
+          "before": "Text/lj_05_shiling_129/text",
+          "asset": "shiling_temple_no_peony"
+        },
+        {
+          "before": "Text/lj_05_shiling_171/text",
+          "asset": "shiling_temple_no_peony"
+        },
+        {
+          "before": "Text/lj_05_shiling_213/text",
+          "asset": "shiling_temple_no_peony"
         }
       ]
     },
@@ -738,5 +864,5 @@
       ]
     }
   ],
-  "actual_dimensions_note": "1671-1672 x 941 pixels; each asset records its exact size."
+  "actual_dimensions_note": "1672 x 941 pixels; each formal background asset is RGB PNG at the required 16:9 size."
 }

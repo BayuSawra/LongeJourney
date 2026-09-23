@@ -1,98 +1,110 @@
 [gd_scene format=3 uid="uid://c8k01pnuvnqqs"]
 
 [ext_resource type="Script" uid="uid://d2rquoit6lxjr" path="res://scripts/hud.gd" id="1_hud"]
-[ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="2_font"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://ui/icons/book-open.svg" id="3_lore"]
+[ext_resource type="Texture2D" path="res://ui/icons/settings.svg" id="4_settings"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+[sub_resource type="StyleBoxFlat" id="HUD"]
 content_margin_left = 18.0
-content_margin_top = 10.0
+content_margin_top = 14.0
 content_margin_right = 18.0
-content_margin_bottom = 10.0
-bg_color = Color(0.1, 0.1, 0.1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_color = Color(2.355437, 2.355437, 2.355437, 1)
+content_margin_bottom = 14.0
+bg_color = Color(0.055, 0.07, 0.06, 0.92)
+border_width_left = 2
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.46, 0.39, 0.7)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
-[node name="HUD" type="CanvasLayer" unique_id=1795719205]
+[node name="HUD" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_hud")
 
-[node name="Panel" type="PanelContainer" parent="." unique_id=1270591837]
+[node name="Panel" type="PanelContainer" parent="."]
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 400.0
-offset_bottom = 130.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
+offset_right = 336.0
+offset_bottom = 144.0
+mouse_filter = 2
+theme = ExtResource("2_theme")
+theme_override_styles/panel = SubResource("HUD")
 
-[node name="Values" type="GridContainer" parent="Panel" unique_id=1853799334]
+[node name="Values" type="GridContainer" parent="Panel"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+mouse_filter = 2
 columns = 2
-theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 7
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 8
 
-[node name="flower" type="Label" parent="Panel/Values" unique_id=1432114663]
+[node name="flower" type="Label" parent="Panel/Values"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 24
-text = ""
-horizontal_alignment = 1
-
-[node name="money" type="Label" parent="Panel/Values" unique_id=1272302614]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_font")
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
-text = ""
-horizontal_alignment = 1
+
+[node name="money" type="Label" parent="Panel/Values"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
 
 [node name="energy" type="Label" parent="Panel/Values"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 20
-text = ""
+theme_override_font_sizes/font_size = 18
 
 [node name="energy_bar" type="ProgressBar" parent="Panel/Values"]
-custom_minimum_size = Vector2(120, 18)
+custom_minimum_size = Vector2(104, 8)
 layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
 max_value = 100.0
 value = 100.0
 show_percentage = false
 
 [node name="calm" type="Label" parent="Panel/Values"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_font")
-theme_override_font_sizes/font_size = 20
-text = ""
+theme_override_font_sizes/font_size = 18
 
 [node name="calm_bar" type="ProgressBar" parent="Panel/Values"]
-custom_minimum_size = Vector2(120, 18)
+custom_minimum_size = Vector2(104, 8)
 layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
 max_value = 100.0
 value = 100.0
 show_percentage = false
 
-[node name="LoreButton" type="Button" parent="Panel" unique_id=422621561]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "ui.hud.lore_button.text"
+[node name="Tools" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -164.0
+offset_top = 16.0
+offset_right = -68.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme = ExtResource("2_theme")
+theme_override_constants/separation = 8
 
-[node name="SettingsButton" type="Button" parent="Panel" unique_id=1039177364]
+[node name="LoreButton" type="Button" parent="Tools"]
 unique_name_in_owner = true
-visible = false
+custom_minimum_size = Vector2(44, 44)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "ui.hud.settings_button.text"
+tooltip_text = "ui.hud.lore_button.text"
+theme_type_variation = &"IconButton"
+icon = ExtResource("3_lore")
+icon_alignment = 1
+expand_icon = true
 
-[node name="backimg" type="TextureRect" parent="Panel" unique_id=134880907]
+[node name="SettingsButton" type="Button" parent="Tools"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
 layout_mode = 2
-expand_mode = 3
+tooltip_text = "ui.hud.settings_button.text"
+theme_type_variation = &"IconButton"
+icon = ExtResource("4_settings")
+icon_alignment = 1
+expand_icon = true

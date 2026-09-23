@@ -1,5 +1,12 @@
 # 开发底座来源与补丁
 
+## Lucide UI 图标
+
+- 版本：`0.468.0`，来源：`lucide-icons/lucide` 官方仓库 `icons/`。
+- 许可证：ISC，保留 `ui/icons/LICENSE`。
+- 只引入界面使用的十个 SVG；`x.svg` 重命名为 `close.svg`。
+- 将 `currentColor` 描边固定为暖白 `#ecebe4`，供 Godot SVG 导入使用；其余路径保持上游形状。
+
 ## gdUnit4
 
 - 版本：6.2.1；许可证：MIT，保留 `addons/gdUnit4/LICENSE`。

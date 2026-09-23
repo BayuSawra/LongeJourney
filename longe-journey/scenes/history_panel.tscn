@@ -1,21 +1,9 @@
-[gd_scene format=3 uid="uid://c1i3fgk8tj4vl"]
+[gd_scene load_steps=5 format=3 uid="uid://c1i3fgk8tj4vl"]
 
 [ext_resource type="Script" uid="uid://cky7h1gy0bv2k" path="res://scripts/history_panel.gd" id="1_hp"]
-[ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="2_f87ve"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
-bg_color = Color(0.09, 0.1, 0.12, 0.98)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 0.14)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_color = Color(0, 0, 0, 0.4)
-shadow_size = 8
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://ui/icons/history.svg" id="3_history"]
+[ext_resource type="Texture2D" path="res://ui/icons/close.svg" id="4_close"]
 
 [node name="HistoryPanel" type="CanvasLayer" unique_id=503985092]
 layer = 110
@@ -25,14 +13,17 @@ script = ExtResource("1_hp")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -152.0
-offset_top = 12.0
-offset_right = -12.0
-offset_bottom = 48.0
+offset_left = -60.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 60.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("2_f87ve")
-theme_override_font_sizes/font_size = 18
-text = "ui.history_panel.history_button.text"
+theme = ExtResource("2_theme")
+theme_type_variation = &"IconButton"
+icon = ExtResource("3_history")
+expand_icon = true
+icon_alignment = 1
+tooltip_text = "ui.history_panel.history_button.text"
 
 [node name="Overlay" type="ColorRect" parent="." unique_id=1287808790]
 visible = false
@@ -41,38 +32,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0, 0, 0, 0.55)
 
-[node name="Panel" type="PanelContainer" parent="Overlay" unique_id=983933966]
+[node name="Panel" type="Panel" parent="Overlay" unique_id=983933966]
 layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = -40.0
-offset_bottom = -40.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -250.0
+offset_right = 430.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
 
 [node name="Main" type="VBoxContainer" parent="Overlay/Panel" unique_id=610224162]
-layout_mode = 2
-theme_override_constants/separation = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = -28.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
 
 [node name="Header" type="HBoxContainer" parent="Overlay/Panel/Main" unique_id=1971213872]
 layout_mode = 2
+custom_minimum_size = Vector2(0, 42)
 
 [node name="Title" type="Label" parent="Overlay/Panel/Main/Header" unique_id=478662935]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 22
+theme_type_variation = &"TitleLabel"
 text = "ui.history_panel.title.text"
+vertical_alignment = 1
 
 [node name="CloseButton" type="Button" parent="Overlay/Panel/Main/Header" unique_id=473212893]
 layout_mode = 2
-text = "ui.history_panel.close_button.text"
+custom_minimum_size = Vector2(40, 40)
+theme_type_variation = &"IconButton"
+icon = ExtResource("4_close")
+expand_icon = true
+icon_alignment = 1
+tooltip_text = "ui.history_panel.close_button.text"
+
+[node name="Separator" type="HSeparator" parent="Overlay/Panel/Main"]
+layout_mode = 2
 
 [node name="Scroll" type="ScrollContainer" parent="Overlay/Panel/Main" unique_id=1310761530]
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
 [node name="List" type="VBoxContainer" parent="Overlay/Panel/Main/Scroll" unique_id=2113972669]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 6
+theme_override_constants/separation = 8

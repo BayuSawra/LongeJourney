@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ending_debug_panel.tscn" id="3_debug"]
 [ext_resource type="PackedScene" uid="uid://c1i3fgk8tj4vl" path="res://scenes/history_panel.tscn" id="4_history"]
 [ext_resource type="PackedScene" path="res://scenes/feedback_layer.tscn" id="5_feedback"]
+[ext_resource type="Script" path="res://scripts/ward_door_sign.gd" id="6_ward_sign"]
 
 [node name="scene1" type="Node2D" unique_id=501499326]
 script = ExtResource("1_ta4h7")
@@ -17,6 +18,23 @@ visible = false
 [node name="HistoryPanel" parent="." unique_id=617080986 instance=ExtResource("4_history")]
 
 [node name="FeedbackLayer" parent="." instance=ExtResource("5_feedback")]
+
+[node name="WardDoorSign" type="CanvasLayer" parent="."]
+layer = 6
+script = ExtResource("6_ward_sign")
+
+[node name="Sign" type="Label" parent="WardDoorSign"]
+visible = false
+offset_right = 100.0
+offset_bottom = 30.0
+mouse_filter = 2
+text = "ui.ward_door_locator.text"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.18, 0.2, 0.2, 0.95)
+theme_override_colors/font_outline_color = Color(0.72, 0.75, 0.73, 0.7)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=590010114]
 offset_right = 1150.0

@@ -1,6 +1,14 @@
 msgid ""
 msgstr "Project-Id-Version: LongeJourney\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
 
+#: res://scenes/mianMenu.tscn
+msgid "ui.menu.title"
+msgstr "长路漫漫"
+
+#: res://scenes/mianMenu.tscn
+msgid "ui.menu.subtitle"
+msgstr "叙事冒险"
+
 #: res://character/neighbor.dch
 msgid "Character/lj_neighbor/name"
 msgstr "邻居"
@@ -296,7 +304,7 @@ msgstr "逃离"
 
 #: res://timelines/06_luyuan.dtl:23
 msgid "Choice/lj_06_luyuan_015/text"
-msgstr "摘下她手里的绣球花"
+msgstr "摘下她头上的绣球花"
 
 #: res://timelines/06_luyuan.dtl:33
 msgid "Choice/lj_06_luyuan_025/text"
@@ -312,7 +320,7 @@ msgstr "逃离"
 
 #: res://timelines/06_luyuan.dtl:50
 msgid "Choice/lj_06_luyuan_037/text"
-msgstr "摘下她手里的绣球花"
+msgstr "摘下她头上的绣球花"
 
 #: res://timelines/06_luyuan.dtl:60
 msgid "Choice/lj_06_luyuan_047/text"
@@ -328,7 +336,7 @@ msgstr "逃离"
 
 #: res://timelines/06_luyuan.dtl:77
 msgid "Choice/lj_06_luyuan_059/text"
-msgstr "摘下她手里的绣球花"
+msgstr "摘下她头上的绣球花"
 
 #: res://timelines/07_maze_entry.dtl:23
 msgid "Choice/lj_07_maze_entry_011/text"
@@ -428,7 +436,7 @@ msgstr "我瞄了一眼车上的人，个个都灰头土脸，沉默地坐着，
 
 #: res://timelines/00_start.dtl:11
 msgid "Text/lj_00_start_005/text"
-msgstr "我数了一下，除了我以外一共有15人，今天这种天气，也不知道他们出来干什么？估计没什么事做，闲着也是闲着，出来瞎溜达。"
+msgstr "我数了一下，除了我以外还有十来个人，今天这种天气，也不知道他们出来干什么？估计没什么事做，闲着也是闲着，出来瞎溜达。"
 
 #: res://timelines/00_start.dtl:13
 msgid "Text/lj_00_start_006/text"
@@ -588,7 +596,7 @@ msgstr "“我才不稀罕。”"
 
 #: res://timelines/04_flower_shop.dtl:31
 msgid "Text/lj_04_flower_shop_026/text"
-msgstr "花店正在关门，老板低着头，把卷帘门往下拉。"
+msgstr "花店已经关门了，卷帘门拉得严严实实。"
 
 #: res://timelines/04_flower_shop.dtl:33
 msgid "Text/lj_04_flower_shop_027/text"
@@ -616,7 +624,7 @@ msgstr "“此路是我开！留下买路财！”"
 
 #: res://timelines/05_shiling.dtl:14
 msgid "Text/lj_05_shiling_009/text"
-msgstr "这些人脸上糊着油彩，腰上别着塑料刀，分明是演员假扮的土匪。"
+msgstr "这些人脸上糊着油彩，手里攥着塑料刀，分明是演员假扮的土匪。"
 
 #: res://timelines/05_shiling.dtl:16
 msgid "Text/lj_05_shiling_010/text"
@@ -948,7 +956,7 @@ msgstr "我不敢再看，转身就跑，出了露园。"
 
 #: res://timelines/06_luyuan.dtl:24
 msgid "Text/lj_06_luyuan_016/text"
-msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+msgstr "我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。"
 
 #: res://timelines/06_luyuan.dtl:29
 msgid "Text/lj_06_luyuan_019/text"
@@ -976,7 +984,7 @@ msgstr "我不敢再看，转身就跑，出了露园。"
 
 #: res://timelines/06_luyuan.dtl:51
 msgid "Text/lj_06_luyuan_038/text"
-msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+msgstr "我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。"
 
 #: res://timelines/06_luyuan.dtl:56
 msgid "Text/lj_06_luyuan_041/text"
@@ -1004,7 +1012,7 @@ msgstr "我不敢再看，转身就跑，出了露园。"
 
 #: res://timelines/06_luyuan.dtl:78
 msgid "Text/lj_06_luyuan_060/text"
-msgstr "我掰开她的手指，把绣球花拿走了。她的眼皮轻轻抖了一下。"
+msgstr "我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。"
 
 #: res://timelines/06_luyuan.dtl:83
 msgid "Text/lj_06_luyuan_063/text"
@@ -1276,7 +1284,7 @@ msgstr "一种常见的痛苦刺激着我的眼球，我的视线开始模糊，
 
 #: res://timelines/08_wife_room.dtl:39
 msgid "Text/lj_08_wife_room_038/text"
-msgstr "我想得入迷，嘴里一直嘀咕“这是什么地方”，一只手扯住我的头发，那个歪嘴护士把我拉到跟前，确定没人偷听，她一只手从侧面挡住嘴，贴着我的耳朵告诉我，这里是：死无葬身之地"
+msgstr "我想得入迷，嘴里一直嘀咕“这是什么地方”，那个歪嘴护士把我拉到跟前，确定没人偷听，贴着我的耳朵告诉我，这里是：死无葬身之地"
 
 #: res://timelines/09_ending.dtl:1
 msgid "Text/lj_09_ending_000/text"
@@ -1316,11 +1324,11 @@ msgstr "都说在停尸房能捡到好东西，我穿过一条小道，打算也
 
 #: res://timelines/10_morgue.dtl:7
 msgid "Text/lj_10_morgue_004/text"
-msgstr "我仔细查看了一圈，地上还剩些没烧的尸体，摆得不算太整齐，有几个死者的家属在那鬼哭狼嚎的。哎，人命由天定，该死的时候就得死，阎王哪管你哭不哭，人出生的时候就有定数，本子上记得清清楚楚，哭有什么用！"
+msgstr "我仔细查看了一圈，没烧的尸体都盖着布停在推车上，摆得不算太整齐，屋里冷冷清清，一个人也没有。哎，人命由天定，该死的时候就得死，阎王哪管你哭不哭，人出生的时候就有定数，本子上记得清清楚楚，哭有什么用！"
 
 #: res://timelines/10_morgue.dtl:11
 msgid "Text/lj_10_morgue_007/text"
-msgstr "伴随着他们的哭声，我在停尸房的垃圾桶里找到几个花篮，花都烧没了，空的花篮沾着骨灰，好在其中有一个还算完整，我把它拎起来抖了抖，这是一个淡黄色的花篮，用蚯蚓编的，拿在手里很有分量，大小也合适。"
+msgstr "停尸房里静得出奇。我在墙角的凳子上找到一个空花篮，花都烧没了，篮子上沾着骨灰，好在还算完整，我把它拎起来抖了抖，这是一个淡黄色的花篮，用蚯蚓编的，拿在手里很有分量，大小也合适。"
 
 #: res://timelines/10_morgue.dtl:13
 msgid "Text/lj_10_morgue_008/text"
@@ -2022,3 +2030,7 @@ msgstr "界面音效"
 #: scenes/settings_panel.tscn:VolumeLabel
 msgid "ui.settings_panel.volume_label.text"
 msgstr "音量"
+
+#: scenes/scene_1.tscn:Sign
+msgid "ui.ward_door_locator.text"
+msgstr "7F / 5-05"

@@ -1,10 +1,45 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="1_choice"]
+[ext_resource type="StyleBox" path="res://ui/button_normal.tres" id="2_normal"]
+[ext_resource type="StyleBox" path="res://ui/button_hover.tres" id="3_hover"]
+[ext_resource type="StyleBox" path="res://ui/button_focus.tres" id="4_focus"]
 
 [node name="VN_ChoiceLayer" instance=ExtResource("1_choice")]
+font_use_global = false
+font_custom = "res://font/HYZIKUTANGJINGJIEKAITIW.TTF"
+font_size_use_global = false
+font_size_custom = 22
+text_color_use_global = false
+text_color_custom = Color(0.925, 0.922, 0.895, 1)
+text_color_pressed = Color(0.925, 0.922, 0.895, 1)
+text_color_hovered = Color(0.925, 0.922, 0.895, 1)
+text_color_disabled = Color(0.5, 0.54, 0.5, 1)
+text_color_focused = Color(0.925, 0.922, 0.895, 1)
+boxes_stylebox_normal = "res://ui/button_normal.tres"
+boxes_stylebox_hovered = "res://ui/button_hover.tres"
+boxes_stylebox_pressed = "res://ui/button_normal.tres"
+boxes_stylebox_disabled = "res://ui/button_normal.tres"
+boxes_stylebox_focused = "res://ui/button_focus.tres"
+boxes_v_separation = 10
+boxes_fill_width = true
+boxes_min_size = Vector2(0, 52)
+choices_custom_button = "res://scenes/dialogic_choice_button.tscn"
 
 [node name="Choices" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -380.0
+offset_top = 0.0
+offset_right = 380.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 
 [node name="DialogicNode_ButtonSound" parent="Choices" index="0"]
 bus = &"UI"

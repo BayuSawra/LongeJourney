@@ -1,6 +1,8 @@
-[gd_scene format=3 uid="uid://save_slot_panel"]
+[gd_scene load_steps=4 format=3 uid="uid://save_slot_panel"]
 
 [ext_resource type="Script" path="res://scripts/save_slot_panel.gd" id="1_save"]
+[ext_resource type="Theme" path="res://ui/journey_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://ui/icons/close.svg" id="3_close"]
 
 [node name="SaveSlotPanel" type="CanvasLayer"]
 layer = 110
@@ -15,70 +17,86 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.65)
 
-[node name="TitleLabel" type="Label" parent="."]
-unique_name_in_owner = true
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 60.0
-offset_bottom = 120.0
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -252.0
+offset_right = 360.0
+offset_bottom = 252.0
 grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="Content" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Header" type="HBoxContainer" parent="Panel/Margin/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 42)
+
+[node name="TitleLabel" type="Label" parent="Panel/Margin/Content/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleLabel"
 text = "ui.save_slot_panel.title_label.text"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Save1" type="Button" parent="."]
+[node name="CloseButton" type="Button" parent="Panel/Margin/Content/Header"]
 unique_name_in_owner = true
-anchors_preset = 10
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -260.0
-offset_top = 180.0
-offset_right = 260.0
-offset_bottom = 290.0
-grow_horizontal = 2
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_type_variation = &"IconButton"
+icon = ExtResource("3_close")
+expand_icon = true
+icon_alignment = 1
+tooltip_text = "ui.save_slot_panel.close_button.text"
+
+[node name="Separator" type="HSeparator" parent="Panel/Margin/Content"]
+layout_mode = 2
+
+[node name="Slots" type="VBoxContainer" parent="Panel/Margin/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Save1" type="Button" parent="Panel/Margin/Content/Slots"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"SlotButton"
 text = ""
 
-[node name="Save2" type="Button" parent="."]
+[node name="Save2" type="Button" parent="Panel/Margin/Content/Slots"]
 unique_name_in_owner = true
-anchors_preset = 10
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -260.0
-offset_top = 320.0
-offset_right = 260.0
-offset_bottom = 430.0
-grow_horizontal = 2
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"SlotButton"
 text = ""
 
-[node name="Save3" type="Button" parent="."]
+[node name="Save3" type="Button" parent="Panel/Margin/Content/Slots"]
 unique_name_in_owner = true
-anchors_preset = 10
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -260.0
-offset_top = 460.0
-offset_right = 260.0
-offset_bottom = 570.0
-grow_horizontal = 2
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"SlotButton"
 text = ""
-
-[node name="CloseButton" type="Button" parent="."]
-unique_name_in_owner = true
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -110.0
-offset_right = 120.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "ui.save_slot_panel.close_button.text"
 
 [node name="OverwriteDialog" type="AcceptDialog" parent="."]
 unique_name_in_owner = true
 visible = false
+theme = ExtResource("2_theme")
 title = "ui.save_slot_panel.overwrite_dialog.title"
 size = Vector2i(480, 200)
 dialog_text = "ui.save_slot_panel.overwrite_dialog.dialog_text"
@@ -86,6 +104,7 @@ dialog_text = "ui.save_slot_panel.overwrite_dialog.dialog_text"
 [node name="NewSlotDialog" type="ConfirmationDialog" parent="."]
 unique_name_in_owner = true
 visible = false
+theme = ExtResource("2_theme")
 title = "ui.save_slot_panel.new_slot_dialog.title"
 size = Vector2i(480, 200)
 
@@ -100,6 +119,7 @@ placeholder_text = "ui.save_slot_panel.name_edit.placeholder_text"
 [node name="LoadDialog" type="AcceptDialog" parent="."]
 unique_name_in_owner = true
 visible = false
+theme = ExtResource("2_theme")
 title = "ui.save_slot_panel.load_dialog.title"
 size = Vector2i(480, 200)
 dialog_text = "ui.save_slot_panel.load_dialog.dialog_text"

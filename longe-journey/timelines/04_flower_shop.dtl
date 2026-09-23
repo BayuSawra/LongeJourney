@@ -19,6 +19,7 @@ if {visit_huadian} == 1:
         set {earthworm} += 1
         jump 03_crossroads/
     - Choice/lj_04_flower_shop_010/text #id:lj_04_flower_shop_010
+        [background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
         Text/lj_04_flower_shop_011/text #id:lj_04_flower_shop_011
 
         Text/lj_04_flower_shop_012/text #id:lj_04_flower_shop_012
@@ -34,9 +35,9 @@ if {visit_huadian} == 1:
 
             jump 03_crossroads/
 elif {visit_huadian} == 2:
-    Text/lj_04_flower_shop_026/text #id:lj_04_flower_shop_026
-
     [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.6"]
+
+    Text/lj_04_flower_shop_026/text #id:lj_04_flower_shop_026
 
     Text/lj_04_flower_shop_027/text #id:lj_04_flower_shop_027
 
