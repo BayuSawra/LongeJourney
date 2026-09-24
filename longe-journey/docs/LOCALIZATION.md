@@ -4,7 +4,7 @@
 
 每种语言只有一份运行时文案文件：`localization/zh_CN.po`、`localization/en.po`。
 UTF-8，稳定 `msgid` + 该语言的 `msgstr`。界面、剧情、选项、角色名、图鉴全文都在其中。
-当前每种语言 506 条；不把中文当 key，不在业务脚本里放另一套翻译字典。
+当前每种语言 535 条；不把中文当 key，不在业务脚本里放另一套翻译字典。
 
 ```po
 msgid "settings.language"

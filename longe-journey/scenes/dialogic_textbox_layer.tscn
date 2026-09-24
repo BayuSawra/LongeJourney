@@ -7,6 +7,8 @@
 [node name="VN_TextboxLayer" instance=ExtResource("1_textbox")]
 theme = ExtResource("3_theme")
 script = ExtResource("2_script")
+typing_sounds_sounds_folder = "res://audio/sfx/02_typing"
+typing_sounds_every_nths_character = 6
 box_panel = "res://ui/dialogue_panel.tres"
 box_color_use_global = false
 box_color_custom = Color(1, 1, 1, 1)

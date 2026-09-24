@@ -25,6 +25,9 @@ boxes_v_separation = 10
 boxes_fill_width = true
 boxes_min_size = Vector2(0, 52)
 choices_custom_button = "res://scenes/dialogic_choice_button.tscn"
+sounds_hover = ""
+sounds_focus = ""
+sounds_pressed = "res://audio/sfx/01_ui_click/ui_button_click.mp3"
 
 [node name="Choices" parent="." index="0"]
 layout_mode = 1

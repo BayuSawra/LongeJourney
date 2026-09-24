@@ -3,6 +3,9 @@ if {visit_huadian} == 1 or {visit_huadian} == 2:
 else:
     [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_04_flower_shop_000/text #id:lj_04_flower_shop_000
 
 if {visit_huadian} == 1:

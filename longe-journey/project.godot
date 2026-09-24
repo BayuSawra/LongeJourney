@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LongeJourney"
-run/main_scene="res://scenes/mianMenu.tscn"
+run/main_scene="res://scenes/mainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -28,6 +28,7 @@ GameState="*res://scripts/autoload/game_state.gd"
 SaveManager="*res://scripts/autoload/save_manager.gd"
 EndingManager="*res://scripts/autoload/ending_manager.gd"
 VisualFX="*res://scripts/autoload/visual_fx.gd"
+UIAudio="*res://scripts/autoload/ui_audio.gd"
 AutoSaveManager="*res://scripts/autoload/auto_save_manager.gd"
 SettingsManager="*res://scripts/autoload/settings_manager.gd"
 LoreRuntime="*res://scripts/autoload/lore_runtime.gd"

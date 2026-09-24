@@ -118,7 +118,7 @@ func from_text(string:String) -> void:
 		_sound_from_text(string)
 		return
 
-	var result := regex.search(string)
+	var result := regex.search(string.strip_edges())
 
 	channel_name = result.get_string('channel')
 

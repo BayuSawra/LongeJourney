@@ -20,10 +20,11 @@ ERROR_LINE = re.compile(r"^(?:SCRIPT ERROR:|ERROR:)", re.MULTILINE)
 PINNED_GODOT_VERSION = "4.7.stable.official.5b4e0cb0f"
 
 
-def run_step(name: str, command: list[str], cwd: Path, reports: Path, timeout: int) -> str:
+def run_step(name: str, command: list[str], cwd: Path, reports: Path, timeout: int,
+             environment: dict[str, str] | None = None) -> str:
     print(f"[{name}]", flush=True)
     try:
-        result = subprocess.run(command, cwd=cwd, stdout=subprocess.PIPE,
+        result = subprocess.run(command, cwd=cwd, env=environment, stdout=subprocess.PIPE,
                                 stderr=subprocess.STDOUT, timeout=timeout)
     except subprocess.TimeoutExpired as exc:
         (reports / f"{name}.log").write_bytes(exc.stdout or b"")
@@ -71,7 +72,32 @@ def executable(value: str, label: str) -> str:
     return str(Path(resolved).resolve())
 
 
-def check_editor_localization(godot: str, project: Path, reports: Path, timeout: int) -> None:
+def editor_network_isolation_args() -> list[str]:
+    # A running user editor owns the default DAP/LSP ports. Port 0 asks Windows
+    # to allocate private ephemeral ports for this disposable editor process.
+    return ["--dap-port", "0", "--lsp-port", "0"]
+
+
+def isolated_editor_environment(directory: Path) -> dict[str, str]:
+    # EditorSettings and documentation caches live under these Windows roots.
+    # Keep the verification editor from reading or saving user-editor state.
+    appdata = directory / "AppData" / "Roaming"
+    localappdata = directory / "AppData" / "Local"
+    appdata.mkdir(parents=True)
+    localappdata.mkdir(parents=True)
+    environment = os.environ.copy()
+    environment.update({"APPDATA": str(appdata), "LOCALAPPDATA": str(localappdata)})
+    return environment
+
+
+def isolated_user_data_dir(environment: dict[str, str]) -> Path:
+    userdata = Path(environment["APPDATA"]) / ("LongeJourney-Verify-" + uuid.uuid4().hex)
+    userdata.mkdir()
+    return userdata
+
+
+def check_editor_localization(godot: str, project: Path, reports: Path, timeout: int,
+                              environment: dict[str, str]) -> None:
     config = project / "project.godot"
     original = config.read_text(encoding="utf-8")
     updated, count = re.subn(r'^enabled=PackedStringArray\((.*)\)$',
@@ -84,7 +110,8 @@ def check_editor_localization(godot: str, project: Path, reports: Path, timeout:
         for locale in ("zh_CN", "en"):
             name = "editor-localization-" + locale
             output = run_step(name, [godot, "--headless", "--path", str(project), "--editor",
-                              "--", "--expected-locale=" + locale], project, reports, timeout)
+                              *editor_network_isolation_args(), "--", "--expected-locale=" + locale], project, reports, timeout,
+                              environment)
             if "EDITOR_LOCALIZATION_CHECK_PASSED" not in output.splitlines():
                 raise RuntimeError(f"{name}: editor check did not complete")
     finally:
@@ -124,13 +151,13 @@ def main() -> int:
         summary["godot"] = version
         if version != PINNED_GODOT_VERSION:
             raise RuntimeError(f"Pinned Godot 4.7 standard required; got {version}")
-        if not os.environ.get("APPDATA"):
-            raise RuntimeError("Windows APPDATA is required for isolated user data")
         # Only the disposable copy is imported or written by validators/editor.
         # Its unique application name isolates user:// saves/settings from the game.
-        with tempfile.TemporaryDirectory(prefix="longe-journey-verify-") as temp, \
-                tempfile.TemporaryDirectory(prefix="LongeJourney-Verify-", dir=os.environ["APPDATA"]) as userdata:
-            project = Path(temp) / "project"
+        with tempfile.TemporaryDirectory(prefix="longe-journey-verify-") as temp:
+            temporary_root = Path(temp)
+            project = temporary_root / "project"
+            editor_environment = isolated_editor_environment(temporary_root / "editor")
+            userdata = isolated_user_data_dir(editor_environment)
             shutil.copytree(ROOT, project, ignore=shutil.ignore_patterns(
                 ".git", ".godot", "reports", "backups", "__pycache__", ".gdunit*",
                 ".env", "config.toml", "override.cfg"))
@@ -143,7 +170,7 @@ def main() -> int:
             )
             if "res://addons/godot_dotnet_mcp/plugin.cfg" in config_text:
                 raise RuntimeError("Verification copy still enables the MCP editor plugin")
-            config.write_text(isolate_project_config(config_text, Path(userdata)), encoding="utf-8")
+            config.write_text(isolate_project_config(config_text, userdata), encoding="utf-8")
             run_step("localization", [sys.executable, "tools/localization.py", "check"], project, reports, args.timeout)
             run_step("lore", [sys.executable, "tools/lj_cli.py", "check-lore"], project, reports, args.timeout)
             run_step("timelines", [sys.executable, "tools/check_timelines.py"], project, reports, args.timeout)
@@ -156,15 +183,17 @@ def main() -> int:
             validation = json.loads((reports / "resource_validation.json").read_text(encoding="utf-8-sig"))
             if validation["summary"]["missing_count"] or validation["summary"]["inconsistency_count"]:
                 raise RuntimeError("Resource validation found missing or inconsistent resources")
-            run_step("import", [godot, "--headless", "--path", str(project), "--editor", "--import", "--verbose"],
-                     project, reports, args.timeout)
-            check_editor_localization(godot, project, reports, args.timeout)
+            run_step("import", [godot, "--headless", "--path", str(project), "--editor", "--import",
+                     *editor_network_isolation_args(), "--verbose"], project, reports, args.timeout,
+                     editor_environment)
+            check_editor_localization(godot, project, reports, args.timeout, editor_environment)
             run_step("tests", [godot, "--headless", "--path", str(project), "-s",
                      "addons/gdUnit4/bin/GdUnitCmdTool.gd", "-a", "tests/", "-c",
-                     "--ignoreHeadlessMode", "--verbose", "-rd", str(reports / "gdunit")], project, reports, args.timeout)
+                     "--ignoreHeadlessMode", "--verbose", "-rd", str(reports / "gdunit")], project, reports, args.timeout,
+                     editor_environment)
             summary["tests"] = validate_test_report(reports / "gdunit")
             run_step("smoke", [godot, "--headless", "--path", str(project), "--verbose", "-s", "tools/smoke.gd"],
-                     project, reports, args.timeout)
+                     project, reports, args.timeout, editor_environment)
         summary["status"] = "passed"
         print(f"All checks passed. Reports: {reports}")
         return 0

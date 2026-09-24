@@ -1173,10 +1173,20 @@ msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo 
 msgid "Text/lj_06_luyuan_008/text"
 msgstr "A figure stands at the center of the maze."
 
-#: res://timelines/06_luyuan.dtl:16
-#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+#: res://timelines/06_luyuan.dtl:31
+#. source-sha256: db26bd910e5cdb052938e462a55bd8bda0fe26ad459cc3a563b51f222d169199
 msgid "Text/lj_06_luyuan_009/text"
-msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+msgstr "A woman in sumptuous robes, propped upright on a pole."
+
+#: res://timelines/06_luyuan.dtl:33
+#. source-sha256: c219de36586d4778a8647464292123b4a74909a49f4ba543a3e874b28b9f6094
+msgid "Text/lj_06_luyuan_009_face/text"
+msgstr "Fine thread stitches her eyelids to her eyebrows."
+
+#: res://timelines/06_luyuan.dtl:35
+#. source-sha256: 54702b1cf20e363a645a97b28a0509c4fcf97260553b8853a744671edf54cd7a
+msgid "Text/lj_06_luyuan_009_hands/text"
+msgstr "Talismans are painted on the backs of her hands."
 
 #: res://timelines/06_luyuan.dtl:19
 #. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
@@ -1208,10 +1218,20 @@ msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo 
 msgid "Text/lj_06_luyuan_030/text"
 msgstr "A figure stands at the center of the maze."
 
-#: res://timelines/06_luyuan.dtl:43
-#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+#: res://timelines/06_luyuan.dtl:78
+#. source-sha256: db26bd910e5cdb052938e462a55bd8bda0fe26ad459cc3a563b51f222d169199
 msgid "Text/lj_06_luyuan_031/text"
-msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+msgstr "A woman in sumptuous robes, propped upright on a pole."
+
+#: res://timelines/06_luyuan.dtl:80
+#. source-sha256: c219de36586d4778a8647464292123b4a74909a49f4ba543a3e874b28b9f6094
+msgid "Text/lj_06_luyuan_031_face/text"
+msgstr "Fine thread stitches her eyelids to her eyebrows."
+
+#: res://timelines/06_luyuan.dtl:82
+#. source-sha256: 54702b1cf20e363a645a97b28a0509c4fcf97260553b8853a744671edf54cd7a
+msgid "Text/lj_06_luyuan_031_hands/text"
+msgstr "Talismans are painted on the backs of her hands."
 
 #: res://timelines/06_luyuan.dtl:46
 #. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
@@ -1243,10 +1263,20 @@ msgstr "Farther in, the path grows narrower and narrower. My own footsteps echo 
 msgid "Text/lj_06_luyuan_052/text"
 msgstr "A figure stands at the center of the maze."
 
-#: res://timelines/06_luyuan.dtl:70
-#. source-sha256: d75465af12ad1e2b029b77d7cbf2e0393aee2b007aaf9d116fb998430f69ae23
+#: res://timelines/06_luyuan.dtl:125
+#. source-sha256: db26bd910e5cdb052938e462a55bd8bda0fe26ad459cc3a563b51f222d169199
 msgid "Text/lj_06_luyuan_053/text"
-msgstr "A woman in sumptuous robes, propped upright on a pole. Fine thread stitches her eyelids to her eyebrows. Talismans are painted on the backs of her hands."
+msgstr "A woman in sumptuous robes, propped upright on a pole."
+
+#: res://timelines/06_luyuan.dtl:127
+#. source-sha256: c219de36586d4778a8647464292123b4a74909a49f4ba543a3e874b28b9f6094
+msgid "Text/lj_06_luyuan_053_face/text"
+msgstr "Fine thread stitches her eyelids to her eyebrows."
+
+#: res://timelines/06_luyuan.dtl:129
+#. source-sha256: 54702b1cf20e363a645a97b28a0509c4fcf97260553b8853a744671edf54cd7a
+msgid "Text/lj_06_luyuan_053_hands/text"
+msgstr "Talismans are painted on the backs of her hands."
 
 #: res://timelines/06_luyuan.dtl:73
 #. source-sha256: 9e9485ba76f5fd152985ffce2f3cd88d3f0358aa4325ef5a90719c96f4192e36
@@ -1408,10 +1438,20 @@ msgstr "The green orchid is tucked into his sleeve, its fragrance still clinging
 msgid "Text/lj_07_maze_middle_012/text"
 msgstr "He has the flower, but his palm won't stop tingling. Gripping the cactus flower, the protagonist walks on, turning that small cut over in his mind. The more he thinks, the hollower he feels."
 
-#: res://timelines/07_maze_middle.dtl:19
-#. source-sha256: 057b11434272531b304528111c519c9f5e13af3e900bfe6ad03c9523947c3ed8
+#: res://timelines/07_maze_middle.dtl:32
+#. source-sha256: 81b744113077d177a4432b93f9465b4f2e049f79f1b227025fb70062fa8d3f3a
 msgid "Text/lj_07_maze_middle_015/text"
-msgstr "A woman stands at the center of the rockery, dressed in fine robes with a gold hairpin. Her features are beautiful enough, but she is too still to seem alive. A round blue hydrangea rests on her head. Her eyes are so clouded that the pupils are almost invisible; fine threads lift her eyelids, their ends sewn into her eyebrows. Her lips move slightly, her throat squeezing out an indistinct song. The words are unintelligible, as though she is singing to the air. Her arms hang limp, the backs of her hands covered in unreadable talismans. Her fingertips tremble."
+msgstr "A woman stands at the center of the rockery, dressed in fine robes with a gold hairpin. Her features are beautiful enough, but she is too still to seem alive. A round blue hydrangea rests on her head."
+
+#: res://timelines/07_maze_middle.dtl:34
+#. source-sha256: 6e6d9202bfcc52bab3302bd7c0cf7a0e2c385ca904d81ea30ec3713114deb17e
+msgid "Text/lj_07_maze_middle_015_face/text"
+msgstr "Her eyes are so clouded that the pupils are almost invisible; fine threads lift her eyelids, their ends sewn into her eyebrows. Her lips move slightly, her throat squeezing out an indistinct song. The words are unintelligible, as though she is singing to the air."
+
+#: res://timelines/07_maze_middle.dtl:36
+#. source-sha256: 615233e0d2463f4b125791927a376aa2ca3ab0ff629e873354dff21f781b4cd2
+msgid "Text/lj_07_maze_middle_015_hands/text"
+msgstr "Her arms hang limp, the backs of her hands covered in unreadable talismans. Her fingertips tremble."
 
 #: res://timelines/07_maze_middle.dtl:20
 #. source-sha256: f52265d36a7da268b29e84743a5fe2fbb676ffcdd1836dcf85bb090ed24845bc
@@ -2255,7 +2295,7 @@ msgid "save.scene.main"
 msgstr "Journey"
 
 #. source-sha256: d8c47e9776cf10824b3491a0d08a8af700419cfa2b468e514e0511d5caca5b52
-msgid "save.scene.mianMenu"
+msgid "save.scene.mainMenu"
 msgstr "Main Menu"
 
 #. source-sha256: 5f777b3322e95d7424c192945224f6ce1b132d4a481a2a763de72699dddf9431
@@ -2442,39 +2482,39 @@ msgstr "Codex"
 msgid "ui.lore_browser.line_edit_search.placeholder_text"
 msgstr "Search keywords"
 
-#: res://scenes/mianMenu.tscn
+#: res://scenes/mainMenu.tscn
 #. source-sha256: 8a15e43ec17ebb9c8f29a1a23874d1611d9b2e42375d67e7e5942cb9af6f0f46
 msgid "ui.menu.subtitle"
 msgstr "A NARRATIVE ADVENTURE"
 
-#: res://scenes/mianMenu.tscn
+#: res://scenes/mainMenu.tscn
 #. source-sha256: 8c6c7803829365b009b9988f87db49e478bc882613c9e31c485ca3214556f8de
 msgid "ui.menu.title"
 msgstr "Longe Journey"
 
-#: scenes/mianMenu.tscn:Button_exit
+#: scenes/mainMenu.tscn:Button_exit
 #. source-sha256: dbc0fe120d31d61a6823b1d8c015e06b9baeea017fba19a80327b696c5ca6558
-msgid "ui.mianmenu.button_exit.text"
+msgid "ui.mainmenu.button_exit.text"
 msgstr "Quit Game"
 
-#: scenes/mianMenu.tscn:Button_load
+#: scenes/mainMenu.tscn:Button_load
 #. source-sha256: d3f6da526faf4a3f63ed735be0145bc8bc88ec36a60c089868ece23f76d99507
-msgid "ui.mianmenu.button_load.text"
+msgid "ui.mainmenu.button_load.text"
 msgstr "Load Game"
 
-#: scenes/mianMenu.tscn:Button_save
+#: scenes/mainMenu.tscn:Button_save
 #. source-sha256: c73a6774d91ca0f610a2d6340e5b56139d47ee0408b8bb7431fb62eee624cc76
-msgid "ui.mianmenu.button_save.text"
+msgid "ui.mainmenu.button_save.text"
 msgstr "Save Game"
 
-#: scenes/mianMenu.tscn:Button_setting
+#: scenes/mainMenu.tscn:Button_setting
 #. source-sha256: 57444f5c18aea99609f17f1fa642cd0115d0ccfef2639bad0409c09735dcaca6
-msgid "ui.mianmenu.button_setting.text"
+msgid "ui.mainmenu.button_setting.text"
 msgstr "Settings"
 
-#: scenes/mianMenu.tscn:Button_start
+#: scenes/mainMenu.tscn:Button_start
 #. source-sha256: 76fdc50a9a0f9f557c71937262b0a1b2c50b792492dfc2699807d5038cf2d887
-msgid "ui.mianmenu.button_start.text"
+msgid "ui.mainmenu.button_start.text"
 msgstr "Start Game"
 
 #: scenes/save_slot_panel.tscn:CloseButton

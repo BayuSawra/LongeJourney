@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/luyuan_garden.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/21_forest_insects/windy_humming_forest_with_birds.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_06_luyuan_000/text #id:lj_06_luyuan_000
 
 Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
@@ -7,92 +10,143 @@ Text/lj_06_luyuan_002/text #id:lj_06_luyuan_002
 [background arg="res://art/backgrounds/luyuan_inner_gate.png" fade="0.6"]
 
 - Choice/lj_06_luyuan_003/text #id:lj_06_luyuan_003
+    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_004/text #id:lj_06_luyuan_004
+    audio action -
 
     set {flower} += 1
 
     [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
 
+    audio ambience -
+    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_006/text #id:lj_06_luyuan_006
+    audio action -
 
     - Choice/lj_06_luyuan_007/text #id:lj_06_luyuan_007
         [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_008/text #id:lj_06_luyuan_008
 
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
         Text/lj_06_luyuan_009/text #id:lj_06_luyuan_009
+        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+        Text/lj_06_luyuan_009_face/text #id:lj_06_luyuan_009_face
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+        Text/lj_06_luyuan_009_hands/text #id:lj_06_luyuan_009_hands
 
         - Choice/lj_06_luyuan_010/text #id:lj_06_luyuan_010
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_011/text #id:lj_06_luyuan_011
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/
         - Choice/lj_06_luyuan_015/text #id:lj_06_luyuan_015
+            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_016/text #id:lj_06_luyuan_016
+            audio action -
+            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
 
             set {calm} -= 15
             set {flower} += 1
 
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_019/text #id:lj_06_luyuan_019
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/
 - Choice/lj_06_luyuan_025/text #id:lj_06_luyuan_025
+    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_026/text #id:lj_06_luyuan_026
+    audio action -
 
     set {flower} += 1
 
     [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
 
+    audio ambience -
+    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_028/text #id:lj_06_luyuan_028
+    audio action -
 
     - Choice/lj_06_luyuan_029/text #id:lj_06_luyuan_029
         [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_030/text #id:lj_06_luyuan_030
 
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
         Text/lj_06_luyuan_031/text #id:lj_06_luyuan_031
+        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+        Text/lj_06_luyuan_031_face/text #id:lj_06_luyuan_031_face
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+        Text/lj_06_luyuan_031_hands/text #id:lj_06_luyuan_031_hands
 
         - Choice/lj_06_luyuan_032/text #id:lj_06_luyuan_032
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_033/text #id:lj_06_luyuan_033
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/
         - Choice/lj_06_luyuan_037/text #id:lj_06_luyuan_037
+            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_038/text #id:lj_06_luyuan_038
+            audio action -
+            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
 
             set {calm} -= 15
             set {flower} += 1
 
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_041/text #id:lj_06_luyuan_041
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/
 - Choice/lj_06_luyuan_047/text #id:lj_06_luyuan_047
+    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_048/text #id:lj_06_luyuan_048
+    audio action -
 
     set {flower} += 1
 
     [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
 
+    audio ambience -
+    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
     Text/lj_06_luyuan_050/text #id:lj_06_luyuan_050
+    audio action -
 
     - Choice/lj_06_luyuan_051/text #id:lj_06_luyuan_051
         [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
         Text/lj_06_luyuan_052/text #id:lj_06_luyuan_052
 
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
         Text/lj_06_luyuan_053/text #id:lj_06_luyuan_053
+        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+        Text/lj_06_luyuan_053_face/text #id:lj_06_luyuan_053_face
+        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+        Text/lj_06_luyuan_053_hands/text #id:lj_06_luyuan_053_hands
 
         - Choice/lj_06_luyuan_054/text #id:lj_06_luyuan_054
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_055/text #id:lj_06_luyuan_055
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/
         - Choice/lj_06_luyuan_059/text #id:lj_06_luyuan_059
+            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_060/text #id:lj_06_luyuan_060
+            audio action -
+            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
 
             set {calm} -= 15
             set {flower} += 1
 
+            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
             Text/lj_06_luyuan_063/text #id:lj_06_luyuan_063
+            audio action -
 
             set {money} -= 2
             jump 07_maze_left/

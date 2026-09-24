@@ -12,7 +12,7 @@ class FailedBridge extends "res://addons/godot_dotnet_mcp/tools/intelligence/ato
 
 func test_file_collection_includes_project_files() -> void:
 	var bridge = AtomicBridge.new()
-	assert_array(bridge.collect_files("*.tscn")).contains(["res://scenes/mianMenu.tscn"])
+	assert_array(bridge.collect_files("*.tscn")).contains(["res://scenes/mainMenu.tscn"])
 	assert_array(bridge.collect_files("*.gd")).contains(["res://scripts/extends Control.gd"])
 
 func test_dependency_uid_type_and_path_are_decoded() -> void:
@@ -24,7 +24,7 @@ func test_dependency_uid_type_and_path_are_decoded() -> void:
 func test_main_scene_dependency_is_not_falsely_missing() -> void:
 	var impl = SceneImpl.new()
 	impl.bridge = AtomicBridge.new()
-	var result: Dictionary = impl.execute("scene_validate", {"scene": "res://scenes/mianMenu.tscn"})
+	var result: Dictionary = impl.execute("scene_validate", {"scene": "res://scenes/mainMenu.tscn"})
 	assert_bool(result.success).is_true()
 	assert_bool(result.data.valid).is_true()
 	assert_array(result.data.missing_dependencies).is_empty()
@@ -32,7 +32,7 @@ func test_main_scene_dependency_is_not_falsely_missing() -> void:
 func test_main_scene_analysis_counts_real_nodes_and_scripts() -> void:
 	var impl = SceneImpl.new()
 	impl.bridge = AtomicBridge.new()
-	var result: Dictionary = impl.execute("scene_analyze", {"scene": "res://scenes/mianMenu.tscn"})
+	var result: Dictionary = impl.execute("scene_analyze", {"scene": "res://scenes/mainMenu.tscn"})
 	assert_bool(result.success).is_true()
 	assert_int(result.data.node_count).is_equal(14)
 	assert_int(result.data.script_count).is_equal(1)
@@ -42,7 +42,7 @@ func test_scene_analysis_propagates_atomic_failure() -> void:
 	var impl = SceneImpl.new()
 	impl.bridge = FailedBridge.new()
 	for tool in ["scene_validate", "scene_analyze"]:
-		var result: Dictionary = impl.execute(tool, {"scene": "res://scenes/mianMenu.tscn"})
+		var result: Dictionary = impl.execute(tool, {"scene": "res://scenes/mainMenu.tscn"})
 		assert_bool(result.success).is_false()
 		assert_str(result.error).is_equal("Injected atomic failure")
 

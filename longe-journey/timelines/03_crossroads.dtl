@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/crossroads.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_03_crossroads_000/text #id:lj_03_crossroads_000
 
 Text/lj_03_crossroads_001/text #id:lj_03_crossroads_001
@@ -25,12 +28,16 @@ elif {visit_shiling} == 0 and {visit_luyuan} == 1:
     set {visit_huadian} += 1
     jump 04_flower_shop/
 - Choice/lj_03_crossroads_018/text | [if {money} >= 2] [else="disable" alt_text="Choice/lj_03_crossroads_018/disabled_text"] #id:lj_03_crossroads_018
+    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
     Text/lj_03_crossroads_019/text #id:lj_03_crossroads_019
+    audio action -
     set {money} -= 2
     set {visit_shiling} += 1
     jump 05_shiling/
 - Choice/lj_03_crossroads_024/text | [if {money} >= 2] [else="disable" alt_text="Choice/lj_03_crossroads_024/disabled_text"] #id:lj_03_crossroads_024
+    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
     Text/lj_03_crossroads_025/text #id:lj_03_crossroads_025
+    audio action -
     set {money} -= 2
     set {visit_luyuan} += 1
     jump 06_luyuan/

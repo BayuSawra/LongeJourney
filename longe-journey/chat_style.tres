@@ -41,7 +41,8 @@ overrides = {
 "name_label_custom_font_size": "22",
 "normal_font": "\"res://font/HYZIKUTANGJINGJIEKAITIW.TTF\"",
 "text_size": "22",
-"typing_sounds_every_nths_character": "6.0"
+"typing_sounds_every_nths_character": "6.0",
+"typing_sounds_sounds_folder": "\"res://audio/sfx/02_typing\""
 }
 
 [sub_resource type="Resource" id="Resource_vyrgv"]
@@ -57,6 +58,9 @@ scene = ExtResource("8_mii73")
 overrides = {
 "font_custom": "\"res://font/HYZIKUTANGJINGJIEKAITIW.TTF\"",
 "font_size_custom": "22",
+"sounds_focus": "\"\"",
+"sounds_hover": "\"\"",
+"sounds_pressed": "\"res://audio/sfx/01_ui_click/ui_button_click.mp3\"",
 "text_color_custom": "Color(0.925, 0.922, 0.895, 1)",
 "text_color_focused": "Color(0.925, 0.922, 0.895, 1)",
 "text_color_hovered": "Color(0.925, 0.922, 0.895, 1)",

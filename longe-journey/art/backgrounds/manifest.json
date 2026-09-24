@@ -305,8 +305,8 @@
     {
       "id": "maze_center",
       "path": "res://art/backgrounds/maze_center.png",
-      "prompt": "Landscape 16:9 dark Chinese psychological-horror visual novel environment. Cold grey, cyan and violet-grey, charcoal and etched fine grain, restrained cinematic realism. Lower quarter dark and low-detail for dialogue. No text, numbers, signs, UI, logo or watermark. Edit the first reference image with minimal changes: same woman in ornate dark red traditional dress standing in the flooded ruined garden, same pose, same moon gate, pavilion, rockeries and pale violet light, same camera. Add two things only, matching the second reference image: (1) on top of her hair bun, a single large round blue hydrangea flower, conspicuous and clearly visible even in this wide shot, same size and blue-violet color as the hydrangea crown in the second reference; (2) directly behind her, a dark wooden pole standing upright, its top end rising clearly above her head, its lower end disappearing into her skirt hem and the wet ground, matching the pole in the second reference. Keep her posture, dress, the garden, moon gate and lighting unchanged; lower quarter stays dark and low-detail.",
-      "prompt_kind": "generation request",
+      "prompt": "Canonical woman: preserve her original face, dark maroon embroidered robe, gold hairpin and exactly one small blue hydrangea in the original position. Keep the wooden support and waist binding, but position both arms loosely down at her sides, hands facing sufficiently outward to show faded talisman ink. No restraints on her wrists. Eyes are cloudy; fine stitches connect upper eyelids toward brows, without blood, wounds or gore. Keep environment and full-body framing. This becomes the identity reference for all following woman shots.",
+      "prompt_kind": "reproduction specification",
       "original_output_path": "generated_images/exec-34f61002-3348-4aa8-ab1d-e2d217c789e0.png",
       "size": [
         1672,
@@ -314,7 +314,7 @@
       ],
       "qa_revision": {
         "date": "2026-09-23",
-        "reason": "头顶补齐蓝色绣球花、背后补齐立棍，与 maze_pinned_woman 保持一致，并去除生成水印。",
+        "reason": "替换为已审核版本，统一角色身份、服饰、花饰与姿态连续性。",
         "mode": "built-in image_gen edit"
       }
     },
@@ -375,13 +375,18 @@
     {
       "id": "maze_pinned_woman",
       "path": "res://art/backgrounds/maze_pinned_woman.png",
-      "prompt": "Rockery maze clearing with an adult woman rigidly fixed by a pole behind her clothing, non-graphic.",
-      "prompt_kind": "generation request",
+      "prompt": "The first two references define the SAME canonical identity and outfit; the last defines the observation scene. Create a closer three-quarter angle of the woman supported by a single dark wooden pole entering through the back of her garment, with her waist belt tied firmly around the pole and its lower end set in the ground. Preserve maroon embroidered robe, gold hairpin and exactly ONE blue hydrangea. Arms hang loosely, never tied behind the back. Keep cloudy eyes, fine eyelid threads and inked hands consistent, non-graphic. No new flowers or pale replacement robe.",
+      "prompt_kind": "reproduction specification",
       "original_output_path": "generated_images/exec-2fe7545e-b4ff-4a29-868a-b68e2f0604b3.png",
       "size": [
         1672,
         941
-      ]
+      ],
+      "qa_revision": {
+        "date": "2026-09-23",
+        "reason": "替换为已审核版本，统一角色身份、服饰、花饰与姿态连续性。",
+        "mode": "built-in image_gen edit"
+      }
     },
     {
       "id": "maze_escape_road",
@@ -493,6 +498,106 @@
         "reason": "摘牡丹分支中玩家已把供台上的牡丹拔走，画面却残留红牡丹，故生成同机位无牡丹变体（供台只剩空盆花泥）供摘花后段落使用。",
         "mode": "built-in image_gen edit"
       }
+    },
+    {
+      "id": "shiling_bandit_ambush_no_iris",
+      "path": "res://art/backgrounds/shiling_bandit_ambush_no_iris.png",
+      "prompt": "Remove the single upper-left purple iris blossom from the rock crevice. Retain leaves and a naturally empty stem. Preserve all people, knives, cliff, mountains, flags, composition and lighting exactly. Do not relocate the removed flower elsewhere.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_blood_trail_no_cactus_flower",
+      "path": "res://art/backgrounds/maze_blood_trail_no_cactus_flower.png",
+      "prompt": "Remove only the blossom at the top of the upper-left cactus. Preserve cactus bodies, spikes, orchid, rock walls, path and existing ground details exactly.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_woman_closeup",
+      "path": "res://art/backgrounds/maze_woman_closeup.png",
+      "prompt": "Using the corrected canonical woman, make a closer waist-up three-quarter observational shot that clearly includes her face and BOTH hanging hands. Same maroon robe, face, gold hairpin, single blue hydrangea, wooden support and belt. Her cloudy pupils, delicate eyelid-to-brow stitches, and talisman ink on the backs of her limp hands must read clearly at game resolution. Non-graphic uncanny stillness, no gore. Same garden, light and direction.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_woman_face_detail",
+      "path": "res://art/backgrounds/maze_woman_face_detail.png",
+      "prompt": "Close facial observation of the canonical woman, with her eyes sharply legible and the single blue hydrangea and gold hairpin visible. Preserve her maroon robe, cloudy pupils, and delicate eyelid-to-brow stitches. Non-graphic uncanny stillness; no gore. Match the existing close-up lighting and direction.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "maze_woman_closeup_no_hydrangea",
+      "path": "res://art/backgrounds/maze_woman_closeup_no_hydrangea.png",
+      "prompt": "Precise after-picking variant of the close-up. Remove ONLY the single blue hydrangea from her hair; preserve her gold hairpin, hairstyle, face, stitches, cloudy eyes, maroon robe, limp marked hands, waist binding, pole, camera and background. Do not add a replacement blossom or flower crown.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_nurse",
+      "path": "res://art/backgrounds/wife_room_nurse.png",
+      "prompt": "Keep the existing room with curtain open and wife sitting on the bed facing the window. Add the adult female nurse beside the opened curtain, looking toward the arriving first-person visitor and speaking briefly. Hospital uniform appropriate to this worn ordinary ward. Preserve wife identity, hospital gown, bed, cabinet, windows, chair and lighting. Leave wife turned away; no visible protagonist body needed.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_turned",
+      "path": "res://art/backgrounds/wife_room_turned.png",
+      "prompt": "Same adult wife and hospital gown, same bed and room. She remains seated but turns her head and upper torso toward the visitor/camera, showing a tired angry face in a natural three-quarter pose. Preserve long stringy hair, body scale, bed geometry and damp daylight. Her raised hand has visibly fused fingers consistent with the later dialogue, without injury or gore. No nurse in this frame.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_turned_calmer",
+      "path": "res://art/backgrounds/wife_room_turned_calmer.png",
+      "prompt": "Matched expression variant ONLY: same face, gaze, exact pose, gown, hair, hand, camera, room and light. Soften the anger slightly into a less tense but still tired expression, not smiling or cheerful.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "wife_room_hands",
+      "path": "res://art/backgrounds/wife_room_hands.png",
+      "prompt": "A closer observational shot of the SAME wife, including her face, raised hand and long hair. Make fingers visibly joined by skin rather than ordinary closed fingers; hair strands look thick, limp and noodle-like, some broken ends, as surreal illness, no blood or gore. Same gown and room. No symbols or eye stitches copied from any other character. Keep uncanny bodily features readable above the dialogue area.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "morgue_basket_held",
+      "path": "res://art/backgrounds/morgue_basket_held.png",
+      "prompt": "First-person close-up of the acquired EMPTY pale-yellow handled basket held by the adult protagonist hands. Its weave is unmistakably made of interlocking earthworm bodies with fine segments rather than wicker, with a little pale ash residue; no flowers or gore. Match original basket silhouette/size. Preserve the same room in the softly focused background, covered gurneys and light. The stool where the basket was must now be EMPTY. Basket should read clearly at game resolution.",
+      "prompt_kind": "generation request",
+      "size": [
+        1672,
+        941
+      ]
     }
   ],
   "timelines": [
@@ -691,6 +796,10 @@
         {
           "before": "Text/lj_05_shiling_213/text",
           "asset": "shiling_temple_no_peony"
+        },
+        {
+          "before": "Text/lj_05_shiling_013/text",
+          "asset": "shiling_bandit_ambush_no_iris"
         }
       ]
     },
@@ -731,6 +840,54 @@
         {
           "before": "Text/lj_06_luyuan_004/text",
           "asset": "luyuan_inner_gate"
+        },
+        {
+          "before": "Text/lj_06_luyuan_009/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_009_face/text",
+          "asset": "maze_woman_face_detail"
+        },
+        {
+          "before": "Text/lj_06_luyuan_009_hands/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_019/text",
+          "asset": "maze_woman_closeup_no_hydrangea"
+        },
+        {
+          "before": "Text/lj_06_luyuan_031/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_031_face/text",
+          "asset": "maze_woman_face_detail"
+        },
+        {
+          "before": "Text/lj_06_luyuan_031_hands/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_041/text",
+          "asset": "maze_woman_closeup_no_hydrangea"
+        },
+        {
+          "before": "Text/lj_06_luyuan_053/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_053_face/text",
+          "asset": "maze_woman_face_detail"
+        },
+        {
+          "before": "Text/lj_06_luyuan_053_hands/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_06_luyuan_063/text",
+          "asset": "maze_woman_closeup_no_hydrangea"
         }
       ]
     },
@@ -769,12 +926,8 @@
           "asset": "maze_stone_corridor"
         },
         {
-          "before": "Text/lj_07_maze_middle_015/text",
-          "asset": "maze_center"
-        },
-        {
           "before": "Text/lj_07_maze_middle_034/text",
-          "asset": "maze_center"
+          "asset": "maze_woman_closeup"
         },
         {
           "before": "Text/lj_07_maze_middle_003/text",
@@ -787,6 +940,26 @@
         {
           "before": "Text/lj_07_maze_middle_030/text",
           "asset": "maze_escape_road"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_004/text",
+          "asset": "maze_blood_trail_no_cactus_flower"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_015/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_015_face/text",
+          "asset": "maze_woman_face_detail"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_015_hands/text",
+          "asset": "maze_woman_closeup"
+        },
+        {
+          "before": "Text/lj_07_maze_middle_035/text",
+          "asset": "maze_woman_closeup_no_hydrangea"
         }
       ]
     },
@@ -825,12 +998,28 @@
           "asset": "wife_room_curtained"
         },
         {
+          "before": "Text/lj_08_wife_room_037/text",
+          "asset": "hospital_corridor_whisper"
+        },
+        {
           "before": "Text/lj_08_wife_room_009/text",
+          "asset": "wife_room_nurse"
+        },
+        {
+          "before": "Text/lj_08_wife_room_010/text",
           "asset": "wife_room_open"
         },
         {
-          "before": "Text/lj_08_wife_room_037/text",
-          "asset": "hospital_corridor_whisper"
+          "before": "Text/lj_08_wife_room_012/text",
+          "asset": "wife_room_turned"
+        },
+        {
+          "before": "Text/lj_08_wife_room_018/text",
+          "asset": "wife_room_turned_calmer"
+        },
+        {
+          "before": "Text/lj_08_wife_room_035/text",
+          "asset": "wife_room_hands"
         }
       ]
     },
@@ -860,6 +1049,10 @@
         {
           "before": "Text/lj_10_morgue_004/text",
           "asset": "morgue_interior_drawers"
+        },
+        {
+          "before": "Text/lj_10_morgue_008/text",
+          "asset": "morgue_basket_held"
         }
       ]
     }

@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-const BUTTON_KEY := "ui.mianmenu.button_start.text"
+const BUTTON_KEY := "ui.mainmenu.button_start.text"
 
 
 func _enter_tree() -> void:
@@ -39,14 +39,14 @@ func _run() -> void:
 		await get_tree().process_frame
 	if not await _wait_for_filesystem():
 		return
-	EditorInterface.open_scene_from_path("res://scenes/mianMenu.tscn")
+	EditorInterface.open_scene_from_path("res://scenes/mainMenu.tscn")
 	var scene: Node
 	for frame in range(600):
 		await get_tree().process_frame
 		scene = EditorInterface.get_edited_scene_root()
-		if scene != null and scene.scene_file_path == "res://scenes/mianMenu.tscn":
+		if scene != null and scene.scene_file_path == "res://scenes/mainMenu.tscn":
 			break
-	if scene == null or scene.scene_file_path != "res://scenes/mianMenu.tscn":
+	if scene == null or scene.scene_file_path != "res://scenes/mainMenu.tscn":
 		_fail("Main menu did not open in the scene editor")
 		return
 	var button := scene.get_node("UI/Button_start") as Button

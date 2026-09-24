@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/wife_room_curtained.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_08_wife_room_000/text #id:lj_08_wife_room_000
 
 Text/lj_08_wife_room_002/text #id:lj_08_wife_room_002
@@ -10,16 +13,19 @@ wife: Text/lj_08_wife_room_006/text #id:lj_08_wife_room_006
 Text/lj_08_wife_room_007/text #id:lj_08_wife_room_007
 
 - Choice/lj_08_wife_room_008/text #id:lj_08_wife_room_008
-    [background arg="res://art/backgrounds/wife_room_open.png" fade="0.6"]
+    [background arg="res://art/backgrounds/wife_room_nurse.png" fade="0.6"]
     Text/lj_08_wife_room_009/text #id:lj_08_wife_room_009
+    [background arg="res://art/backgrounds/wife_room_open.png" fade="0.6"]
     Text/lj_08_wife_room_010/text #id:lj_08_wife_room_010
     Text/lj_08_wife_room_011/text #id:lj_08_wife_room_011
+    [background arg="res://art/backgrounds/wife_room_turned.png" fade="0.6"]
     Text/lj_08_wife_room_012/text #id:lj_08_wife_room_012
     Text/lj_08_wife_room_013/text #id:lj_08_wife_room_013
     Text/lj_08_wife_room_014/text #id:lj_08_wife_room_014
     Text/lj_08_wife_room_015/text #id:lj_08_wife_room_015
 
 if {earthworm} > 0.0:
+    [background arg="res://art/backgrounds/wife_room_turned_calmer.png" fade="0.6"]
     Text/lj_08_wife_room_018/text #id:lj_08_wife_room_018
     
     if {jiahua}:
@@ -35,9 +41,12 @@ else:
     Text/lj_08_wife_room_032/text #id:lj_08_wife_room_032
 
 Text/lj_08_wife_room_034/text #id:lj_08_wife_room_034
+[background arg="res://art/backgrounds/wife_room_hands.png" fade="0.6"]
 Text/lj_08_wife_room_035/text #id:lj_08_wife_room_035
 Text/lj_08_wife_room_036/text #id:lj_08_wife_room_036
 [background arg="res://art/backgrounds/hospital_corridor_whisper.png" fade="0.6"]
+audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
 Text/lj_08_wife_room_037/text #id:lj_08_wife_room_037
+audio action -
 Text/lj_08_wife_room_038/text #id:lj_08_wife_room_038
 jump 09_ending/

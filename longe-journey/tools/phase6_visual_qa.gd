@@ -43,12 +43,12 @@ func _run() -> void:
 	_check(root.size == expected_size, "window viewport uses requested size", {"actual": root.size, "expected": expected_size})
 	dialogic.Backgrounds.background_changed.connect(_on_background_changed)
 
-	var result := change_scene_to_file("res://scenes/mianMenu.tscn")
+	var result := change_scene_to_file("res://scenes/mainMenu.tscn")
 	_check(result == OK, "main menu loads", {"error": result})
 	await scene_changed
 	await _frames(4)
 	var menu := current_scene
-	_check(menu != null and menu.scene_file_path == "res://scenes/mianMenu.tscn", "normal main-menu entry")
+	_check(menu != null and menu.scene_file_path == "res://scenes/mainMenu.tscn", "normal main-menu entry")
 	var start_button := menu.get_node_or_null("UI/Button_start") as Button
 	_check(start_button != null, "existing start button is available")
 	if start_button == null:

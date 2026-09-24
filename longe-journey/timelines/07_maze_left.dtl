@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/maze_left_garden.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/22_crowd_ambience/cayenne_market_ambience_from_the_entrance.mp3" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_07_maze_left_000/text #id:lj_07_maze_left_000
 
 Text/lj_07_maze_left_001/text #id:lj_07_maze_left_001

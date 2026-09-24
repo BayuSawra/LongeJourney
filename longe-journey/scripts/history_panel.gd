@@ -51,7 +51,6 @@ func _choice_selected(info: Dictionary) -> void:
 
 
 func _append_record(record: Dictionary) -> void:
-
 	var existing_index := -1
 	for i in range(_entries.size()):
 		if _entries[i].timeline == record.timeline and _entries[i].event_idx == record.event_idx:
@@ -74,15 +73,15 @@ func _rebuild_list() -> void:
 		list_box.remove_child(child)
 		child.queue_free()
 
-	for i in range(_entries.size()):
+	for entry_index in range(_entries.size() - 1, -1, -1):
 		var button := Button.new()
-		button.text = _format_entry(_entries[i])
+		button.text = _format_entry(_entries[entry_index])
 		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		button.custom_minimum_size = Vector2(0, 44)
 		button.theme_type_variation = &"SlotButton"
 		button.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		button.tooltip_text = button.text
-		button.pressed.connect(_on_entry_pressed.bind(i))
+		button.pressed.connect(_on_entry_pressed.bind(entry_index))
 		list_box.add_child(button)
 
 

@@ -138,6 +138,6 @@ func _apply_export_overrides() -> void:
 	# apply sound settings
 	var button_sound: DialogicNode_ButtonSound = get_button_sound()
 	button_sound.volume_db = sounds_volume
-	button_sound.sound_pressed = load(sounds_pressed)
-	button_sound.sound_hover = load(sounds_hover)
-	button_sound.sound_focus = load(sounds_focus)
+	button_sound.sound_pressed = null if sounds_pressed.is_empty() else load(sounds_pressed)
+	button_sound.sound_hover = null if sounds_hover.is_empty() else load(sounds_hover)
+	button_sound.sound_focus = null if sounds_focus.is_empty() else load(sounds_focus)

@@ -11,3 +11,6 @@
 **/__pycache__/
 .env
 config.toml
+
+# Pinned tool downloads (see docs/DEVELOPMENT.md)
+/.local-tools/

@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "generated_at": "2026-09-23T13:17:36+08:00",
+  "generated_at": "2026-09-24",
   "root": ".",
   "categories": [
     "art",
@@ -187,7 +187,7 @@
     {
       "path": "art/backgrounds/flower_shop_open.png",
       "category": "art/backgrounds",
-      "size_bytes": 2304958,
+      "size_bytes": 2284818,
       "import_path": "art/backgrounds/flower_shop_open.png.import",
       "has_import": true
     },
@@ -313,7 +313,7 @@
     {
       "path": "art/backgrounds/maze_center.png",
       "category": "art/backgrounds",
-      "size_bytes": 2305399,
+      "size_bytes": 2094813,
       "import_path": "art/backgrounds/maze_center.png.import",
       "has_import": true
     },
@@ -376,7 +376,7 @@
     {
       "path": "art/backgrounds/maze_pinned_woman.png",
       "category": "art/backgrounds",
-      "size_bytes": 1976189,
+      "size_bytes": 2091055,
       "import_path": "art/backgrounds/maze_pinned_woman.png.import",
       "has_import": true
     },
@@ -406,6 +406,76 @@
       "category": "art/backgrounds",
       "size_bytes": 2152859,
       "import_path": "art/backgrounds/shiling_temple_no_peony.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/shiling_bandit_ambush_no_iris.png",
+      "category": "art/backgrounds",
+      "size_bytes": 2207091,
+      "import_path": "art/backgrounds/shiling_bandit_ambush_no_iris.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/maze_blood_trail_no_cactus_flower.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1843315,
+      "import_path": "art/backgrounds/maze_blood_trail_no_cactus_flower.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/maze_woman_closeup.png",
+      "category": "art/backgrounds",
+      "size_bytes": 2909947,
+      "import_path": "art/backgrounds/maze_woman_closeup.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/maze_woman_closeup_no_hydrangea.png",
+      "category": "art/backgrounds",
+      "size_bytes": 2602542,
+      "import_path": "art/backgrounds/maze_woman_closeup_no_hydrangea.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/wife_room_nurse.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1877632,
+      "import_path": "art/backgrounds/wife_room_nurse.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/wife_room_turned.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1798580,
+      "import_path": "art/backgrounds/wife_room_turned.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/wife_room_turned_calmer.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1772959,
+      "import_path": "art/backgrounds/wife_room_turned_calmer.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/wife_room_hands.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1737328,
+      "import_path": "art/backgrounds/wife_room_hands.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/morgue_basket_held.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1930110,
+      "import_path": "art/backgrounds/morgue_basket_held.png.import",
+      "has_import": true
+    },
+    {
+      "path": "art/backgrounds/maze_woman_face_detail.png",
+      "category": "art/backgrounds",
+      "size_bytes": 1877586,
+      "import_path": "art/backgrounds/maze_woman_face_detail.png.import",
       "has_import": true
     }
   ]

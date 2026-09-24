@@ -13,7 +13,7 @@
 
 - Twine 原版：`D:\LongeJourney\长路漫漫\长路漫漫.html`，SugarCube 2.37.3，共 49 个 passage。
 - Godot 工程现状：
-  - 主菜单 `scenes/mianMenu.tscn` -> `scenes/scene_1.tscn` -> `Dialogic.start("timeline1_0")`。
+  - 主菜单 `scenes/mainMenu.tscn` -> `scenes/scene_1.tscn` -> `Dialogic.start("timeline1_0")`。
   - `timelines/timeline1_0.dtl` 只是测试对话。
   - 角色只有 `character/我.dch`。
   - 图片素材已复制到 `art/` 和 `art/icon/`，字体已导入。

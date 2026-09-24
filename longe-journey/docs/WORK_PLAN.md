@@ -17,12 +17,12 @@
 ### 1.2 入口流程
 
 ```text
-scenes/mianMenu.tscn
+scenes/mainMenu.tscn
   -> scenes/scene_1.tscn
   -> Dialogic.start("00_start")
 ```
 
-注意：`mianMenu.tscn` 是原工程拼写，不要“纠正”。
+主菜单文件名已统一为 `mainMenu.tscn`；修改时同步维护场景路径、节点名与本地化键。
 
 ### 1.3 已完成内容
 
@@ -86,7 +86,7 @@ character/   # Dialogic 角色（character/我.dch，已登记为“我”）
 docs/        # 本文档与设计/实现文档
 font/        # 字体
 lore/        # 剧情设定数据（canon）
-scenes/      # 场景（mianMenu、scene_1 等）
+scenes/      # 场景（mainMenu、scene_1 等）
 scripts/     # 脚本
 timelines/   # Dialogic timeline
 tools/       # Python 内容工具
@@ -303,7 +303,7 @@ visit_ting_shifang=0
 - 不要在 `project.godot`、`chat_styel.tres` 等既有命名上做无谓“规范化”。
 - 变量名用英文，且与第 4 节清单保持一致。
 - Dialogic 的 jump/选择目标必须是真实 timeline ID 或同文件 label，不要写 Twine 风格 passage 名或中文名（如 `迷宫1`、`左1`），否则运行时找不到下一步。
-- 每次大改后跑一遍完整游戏流程，确认入口 `mianMenu.tscn -> scene_1.tscn -> 00_start` 不被破坏。
+- 每次大改后跑一遍完整游戏流程，确认入口 `mainMenu.tscn -> scene_1.tscn -> 00_start` 不被破坏。
 
 ## 9. 新线程启动检查单
 

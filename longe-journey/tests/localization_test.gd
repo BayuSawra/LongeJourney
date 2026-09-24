@@ -79,16 +79,30 @@ func test_native_catalogs_and_all_timeline_properties() -> void:
 			assert_str(character.get_display_name_translated()).is_equal(Localization.text(character.display_name))
 
 
+func _story_events(timeline: DialogicTimeline) -> Array[DialogicEvent]:
+	var story_events: Array[DialogicEvent] = []
+	for event: DialogicEvent in timeline.events:
+		# Audio cues decorate the timeline; they must not redefine the localized story flow.
+		if event is DialogicAudioEvent:
+			continue
+		story_events.append(event)
+	return story_events
+
+
 func test_native_event_serialization_preserves_original_story_flow() -> void:
 	var baseline: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/localization_flow.json"))
 	for path in baseline:
 		var timeline := load(path) as DialogicTimeline
 		timeline.process()
-		assert_int(timeline.events.size()).is_equal(baseline[path].size())
-		for index in timeline.events.size():
+		var story_events := _story_events(timeline)
+		var expected: Array = baseline[path]
+		if story_events.size() != expected.size():
+			fail("Native story event count changed: %s => %d (expected %d)" % [path, story_events.size(), expected.size()])
+			continue
+		for index in story_events.size():
 			# Native Comment retains CR from a Windows checkout; normalize line endings only.
-			var serialized: String = timeline.events[index]._store_as_string().replace("\r\n", "\n").trim_suffix("\r")
-			assert_str(serialized.sha256_text()).override_failure_message("Native event serialization changed: %s:%d => %s" % [path, index, serialized]).is_equal(baseline[path][index])
+			var serialized: String = story_events[index]._store_as_string().replace("\r\n", "\n").trim_suffix("\r")
+			assert_str(serialized.sha256_text()).override_failure_message("Native story event serialization changed: %s:%d => %s" % [path, index, serialized]).is_equal(expected[index])
 
 
 func test_language_settings_persist_and_options_use_autonyms() -> void:
@@ -166,6 +180,18 @@ func test_live_text_switch_preserves_event_and_reveal_progress() -> void:
 	assert_bool(node.revealing).is_equal(revealing)
 	assert_str(Dialogic.Text.dialog_text).is_equal(Localization.text("Text/lj_00_start_000/text"))
 
+
+func test_history_records_are_displayed_newest_first() -> void:
+	var history = load("res://scenes/history_panel.tscn").instantiate()
+	add_child(history)
+	var first := {"key": "Text/lj_00_start_000/text", "variables": {}, "character": "", "timeline": "res://timelines/00_start.dtl", "event_idx": 0, "type": "Text"}
+	var second := {"key": "Text/lj_00_start_001/text", "variables": {}, "character": "", "timeline": "res://timelines/00_start.dtl", "event_idx": 1, "type": "Text"}
+	history._append_record(first)
+	history._append_record(second)
+	assert_str(history.list_box.get_child(0).text).is_equal(history._format_entry(second))
+	assert_str(history.list_box.get_child(1).text).is_equal(history._format_entry(first))
+	history.queue_free()
+	await get_tree().process_frame
 
 func test_live_choices_preserve_branch_state_and_selected_history() -> void:
 	var history = load("res://scenes/history_panel.tscn").instantiate()

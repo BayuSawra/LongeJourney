@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://bh5m0e3274r56"]
+
+[ext_resource type="Texture2D" uid="uid://cjayg78wghy0u" path="res://art/backgrounds/crossroads.png" id="1_cover"]
+[ext_resource type="Script" uid="uid://b1ssoxmh62qia" path="res://scripts/extends Control.gd" id="2_script"]
+[ext_resource type="Theme" uid="uid://fmsasptelp8m" path="res://ui/journey_theme.tres" id="3_theme"]
+[ext_resource type="AudioStream" uid="uid://dupgo6aklsi7w" path="res://music/00_start.mp3" id="4_music"]
+[ext_resource type="Texture2D" uid="uid://v8ahaow5bs36" path="res://ui/icons/arrow-right.svg" id="5_start"]
+[ext_resource type="Texture2D" uid="uid://bas2busb666ge" path="res://ui/icons/save.svg" id="6_save"]
+[ext_resource type="Texture2D" uid="uid://bee8u5yw5udnu" path="res://ui/icons/folder-open.svg" id="7_load"]
+[ext_resource type="Texture2D" uid="uid://der2dwep51shx" path="res://ui/icons/settings.svg" id="8_settings"]
+[ext_resource type="Texture2D" uid="uid://b8v2in3v4njhi" path="res://ui/icons/log-out.svg" id="9_exit"]
+
+[node name="MainMenu" type="Control" unique_id=2057233916]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+script = ExtResource("2_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=546479831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_cover")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Shade" type="ColorRect" parent="." unique_id=9630410]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.025, 0.04, 0.032, 0.12)
+
+[node name="MenuBand" type="ColorRect" parent="." unique_id=128996506]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.035, 0.05, 0.04, 0.88)
+
+[node name="Accent" type="ColorRect" parent="." unique_id=1470516941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.115
+anchor_right = 0.65
+anchor_bottom = 0.115
+offset_right = 40.0
+offset_bottom = 3.0
+mouse_filter = 2
+color = Color(0.785, 0.372, 0.322, 1)
+
+[node name="Title" type="Label" parent="." unique_id=2002371040]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.15
+anchor_right = 0.96
+anchor_bottom = 0.31
+theme_override_font_sizes/font_size = 46
+text = "ui.menu.title"
+autowrap_mode = 2
+
+[node name="Subtitle" type="Label" parent="." unique_id=55006826]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.345
+anchor_right = 0.96
+anchor_bottom = 0.385
+theme_type_variation = &"MutedLabel"
+text = "ui.menu.subtitle"
+
+[node name="UI" type="VBoxContainer" parent="." unique_id=1899958774]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.44
+anchor_right = 0.94
+anchor_bottom = 0.44
+theme_override_constants/separation = 8
+
+[node name="Button_start" type="Button" parent="UI" unique_id=205225028]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "ui.mainmenu.button_start.text"
+icon = ExtResource("5_start")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+
+[node name="Button_save" type="Button" parent="UI" unique_id=401047087]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"QuietButton"
+text = "ui.mainmenu.button_save.text"
+icon = ExtResource("6_save")
+alignment = 0
+expand_icon = true
+
+[node name="Button_load" type="Button" parent="UI" unique_id=1392316908]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"QuietButton"
+text = "ui.mainmenu.button_load.text"
+icon = ExtResource("7_load")
+alignment = 0
+expand_icon = true
+
+[node name="Button_setting" type="Button" parent="UI" unique_id=1001085063]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"QuietButton"
+text = "ui.mainmenu.button_setting.text"
+icon = ExtResource("8_settings")
+alignment = 0
+expand_icon = true
+
+[node name="Button_exit" type="Button" parent="UI" unique_id=718047683]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_type_variation = &"QuietButton"
+text = "ui.mainmenu.button_exit.text"
+icon = ExtResource("9_exit")
+alignment = 0
+expand_icon = true
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=621493368]
+stream = ExtResource("4_music")
+volume_db = -5.0
+autoplay = true
+bus = &"BGM"
+parameters/looping = true
+
+[connection signal="pressed" from="UI/Button_start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="UI/Button_save" to="." method="_on_button_save_pressed"]
+[connection signal="pressed" from="UI/Button_load" to="." method="_on_button_load_pressed"]
+[connection signal="pressed" from="UI/Button_setting" to="." method="_on_button_setting_pressed"]
+[connection signal="pressed" from="UI/Button_exit" to="." method="_on_button_exit_pressed"]

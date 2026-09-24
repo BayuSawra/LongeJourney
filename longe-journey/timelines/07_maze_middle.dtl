@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_07_maze_middle_000/text #id:lj_07_maze_middle_000
 
 Text/lj_07_maze_middle_001/text #id:lj_07_maze_middle_001
@@ -7,12 +10,17 @@ Text/lj_07_maze_middle_001/text #id:lj_07_maze_middle_001
 [background arg="res://art/backgrounds/maze_blood_trail.png" fade="0.6"]
 
 - Choice/lj_07_maze_middle_002/text #id:lj_07_maze_middle_002
+    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
     Text/lj_07_maze_middle_003/text #id:lj_07_maze_middle_003
+    audio action -
+    [background arg="res://art/backgrounds/maze_blood_trail_no_cactus_flower.png" fade="0.6"]
     Text/lj_07_maze_middle_004/text #id:lj_07_maze_middle_004
     jump pick_cactus_flower
 
 - Choice/lj_07_maze_middle_007/text #id:lj_07_maze_middle_007
+    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
     Text/lj_07_maze_middle_008/text #id:lj_07_maze_middle_008
+    audio action -
     jump pick_hydrangea
 
 label pick_cactus_flower #id:lj_07_maze_middle_011
@@ -20,8 +28,12 @@ Text/lj_07_maze_middle_012/text #id:lj_07_maze_middle_012
 jump pick_hydrangea
 
 label pick_hydrangea #id:lj_07_maze_middle_014
-[background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
 Text/lj_07_maze_middle_015/text #id:lj_07_maze_middle_015
+[background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+Text/lj_07_maze_middle_015_face/text #id:lj_07_maze_middle_015_face
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+Text/lj_07_maze_middle_015_hands/text #id:lj_07_maze_middle_015_hands
 Text/lj_07_maze_middle_016/text #id:lj_07_maze_middle_016
 
 - Choice/lj_07_maze_middle_017/text #id:lj_07_maze_middle_017
@@ -40,12 +52,17 @@ Text/lj_07_maze_middle_022/text #id:lj_07_maze_middle_022
 
 label flee #id:lj_07_maze_middle_029
 [background arg="res://art/backgrounds/maze_escape_road.png" fade="0.6"]
+audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
 Text/lj_07_maze_middle_030/text #id:lj_07_maze_middle_030
+audio action -
 Text/lj_07_maze_middle_031/text #id:lj_07_maze_middle_031
 jump 07_maze_exit/
 label pick_hydrangea_flower #id:lj_07_maze_middle_033
-[background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
 Text/lj_07_maze_middle_034/text #id:lj_07_maze_middle_034
+audio action -
+[background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
 Text/lj_07_maze_middle_035/text #id:lj_07_maze_middle_035
 
 - Choice/lj_07_maze_middle_036/text #id:lj_07_maze_middle_036

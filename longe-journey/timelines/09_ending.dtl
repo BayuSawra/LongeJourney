@@ -1,17 +1,26 @@
 [background arg="res://art/backgrounds/hospital_stairs.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_09_ending_000/text #id:lj_09_ending_000
 
 Text/lj_09_ending_001/text #id:lj_09_ending_001
 
 Text/lj_09_ending_002/text #id:lj_09_ending_002
 
+audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
 Text/lj_09_ending_003/text #id:lj_09_ending_003
+audio action -
 
 Text/lj_09_ending_004/text #id:lj_09_ending_004
 
 [background arg="res://art/backgrounds/hospital_exterior.png" fade="0.6"]
 
+audio action "res://audio/sfx/08_heavy_door/door_smash_1.mp3" [loop="false", bus="SFX"]
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_09_ending_005/text #id:lj_09_ending_005
+audio action -
 
 Text/lj_09_ending_006/text #id:lj_09_ending_006

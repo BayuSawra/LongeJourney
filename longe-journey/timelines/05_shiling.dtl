@@ -3,6 +3,9 @@ if {visit_shiling} == 1:
 else:
     [background arg="res://art/backgrounds/shiling_closed_gate.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_05_shiling_000/text #id:lj_05_shiling_000
 
 if {visit_shiling} == 1:
@@ -11,14 +14,19 @@ if {visit_shiling} == 1:
     - Choice/lj_05_shiling_004/text #id:lj_05_shiling_004
         set {energy} -= 5
         [background arg="res://art/backgrounds/shiling_bandit_ambush.png" fade="0.6"]
+        audio action "res://audio/sfx/03_footsteps/footsteps_walking_through_woods.mp3" [loop="false", bus="SFX"]
         Text/lj_05_shiling_006/text #id:lj_05_shiling_006
+        audio action -
 
         Text/lj_05_shiling_007/text #id:lj_05_shiling_007
 
         - Choice/lj_05_shiling_008/text #id:lj_05_shiling_008
             Text/lj_05_shiling_009/text #id:lj_05_shiling_009
 
+            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
             Text/lj_05_shiling_010/text #id:lj_05_shiling_010
+            audio action -
+            [background arg="res://art/backgrounds/shiling_bandit_ambush_no_iris.png" fade="0.6"]
 
             set {flower} += 1
 
@@ -34,7 +42,9 @@ if {visit_shiling} == 1:
                     - Choice/lj_05_shiling_018/text #id:lj_05_shiling_018
                         set {energy} -= 5
                         [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                        audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_020/text #id:lj_05_shiling_020
+                        audio action -
 
                         - Choice/lj_05_shiling_021/text #id:lj_05_shiling_021
                             set {energy} -= 5
@@ -46,7 +56,9 @@ if {visit_shiling} == 1:
                                 Text/lj_05_shiling_025/text #id:lj_05_shiling_025
 
                                 - Choice/lj_05_shiling_026/text #id:lj_05_shiling_026
+                                    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
                                     Text/lj_05_shiling_027/text #id:lj_05_shiling_027
+                                    audio action -
                                     [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                     set {flower} += 1
@@ -56,7 +68,9 @@ if {visit_shiling} == 1:
 
                                     Text/lj_05_shiling_032/text #id:lj_05_shiling_032
 
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                     Text/lj_05_shiling_033/text #id:lj_05_shiling_033
+                                    audio action -
 
                                     set {money} -= 2
                                     jump 03_crossroads/
@@ -65,28 +79,36 @@ if {visit_shiling} == 1:
 
                                     Text/lj_05_shiling_039/text #id:lj_05_shiling_039
 
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                     Text/lj_05_shiling_040/text #id:lj_05_shiling_040
+                                    audio action -
 
                                     set {money} -= 2
                                     jump 03_crossroads/
                                 - Choice/lj_05_shiling_044/text #id:lj_05_shiling_044
                                     Text/lj_05_shiling_045/text #id:lj_05_shiling_045
 
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                     Text/lj_05_shiling_046/text #id:lj_05_shiling_046
+                                    audio action -
 
                                     set {money} -= 2
                                     jump 03_crossroads/
                             - Choice/lj_05_shiling_051/text #id:lj_05_shiling_051
                                 Text/lj_05_shiling_052/text #id:lj_05_shiling_052
 
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                 Text/lj_05_shiling_053/text #id:lj_05_shiling_053
+                                audio action -
 
                                 set {money} -= 2
                                 jump 03_crossroads/
                         - Choice/lj_05_shiling_058/text #id:lj_05_shiling_058
                             Text/lj_05_shiling_059/text #id:lj_05_shiling_059
 
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_060/text #id:lj_05_shiling_060
+                            audio action -
 
                             set {money} -= 2
                             jump 03_crossroads/
@@ -94,7 +116,9 @@ if {visit_shiling} == 1:
                         - Choice/lj_05_shiling_066/text #id:lj_05_shiling_066
                             set {energy} -= 5
                             [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                            audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_068/text #id:lj_05_shiling_068
+                            audio action -
 
                             - Choice/lj_05_shiling_069/text #id:lj_05_shiling_069
                                 set {energy} -= 5
@@ -106,7 +130,9 @@ if {visit_shiling} == 1:
                                     Text/lj_05_shiling_073/text #id:lj_05_shiling_073
 
                                     - Choice/lj_05_shiling_074/text #id:lj_05_shiling_074
+                                        audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
                                         Text/lj_05_shiling_075/text #id:lj_05_shiling_075
+                                        audio action -
                                         [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                         set {flower} += 1
@@ -116,7 +142,9 @@ if {visit_shiling} == 1:
 
                                         Text/lj_05_shiling_080/text #id:lj_05_shiling_080
 
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                         Text/lj_05_shiling_081/text #id:lj_05_shiling_081
+                                        audio action -
 
                                         set {money} -= 2
                                         jump 03_crossroads/
@@ -125,35 +153,45 @@ if {visit_shiling} == 1:
 
                                         Text/lj_05_shiling_087/text #id:lj_05_shiling_087
 
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                         Text/lj_05_shiling_088/text #id:lj_05_shiling_088
+                                        audio action -
 
                                         set {money} -= 2
                                         jump 03_crossroads/
                                     - Choice/lj_05_shiling_092/text #id:lj_05_shiling_092
                                         Text/lj_05_shiling_093/text #id:lj_05_shiling_093
 
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                         Text/lj_05_shiling_094/text #id:lj_05_shiling_094
+                                        audio action -
 
                                         set {money} -= 2
                                         jump 03_crossroads/
                                 - Choice/lj_05_shiling_099/text #id:lj_05_shiling_099
                                     Text/lj_05_shiling_100/text #id:lj_05_shiling_100
 
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                     Text/lj_05_shiling_101/text #id:lj_05_shiling_101
+                                    audio action -
 
                                     set {money} -= 2
                                     jump 03_crossroads/
                         - Choice/lj_05_shiling_107/text #id:lj_05_shiling_107
                             Text/lj_05_shiling_108/text #id:lj_05_shiling_108
 
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_109/text #id:lj_05_shiling_109
+                            audio action -
 
                             set {money} -= 2
                             jump 03_crossroads/
                 - Choice/lj_05_shiling_115/text #id:lj_05_shiling_115
                     set {energy} -= 5
                     [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                    audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
                     Text/lj_05_shiling_117/text #id:lj_05_shiling_117
+                    audio action -
 
                     - Choice/lj_05_shiling_118/text #id:lj_05_shiling_118
                         set {energy} -= 5
@@ -165,7 +203,9 @@ if {visit_shiling} == 1:
                             Text/lj_05_shiling_122/text #id:lj_05_shiling_122
 
                             - Choice/lj_05_shiling_123/text #id:lj_05_shiling_123
+                                audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
                                 Text/lj_05_shiling_124/text #id:lj_05_shiling_124
+                                audio action -
                                 [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                                 set {flower} += 1
@@ -175,7 +215,9 @@ if {visit_shiling} == 1:
 
                                 Text/lj_05_shiling_129/text #id:lj_05_shiling_129
 
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                 Text/lj_05_shiling_130/text #id:lj_05_shiling_130
+                                audio action -
 
                                 set {money} -= 2
                                 jump 03_crossroads/
@@ -184,28 +226,36 @@ if {visit_shiling} == 1:
 
                                 Text/lj_05_shiling_136/text #id:lj_05_shiling_136
 
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                 Text/lj_05_shiling_137/text #id:lj_05_shiling_137
+                                audio action -
 
                                 set {money} -= 2
                                 jump 03_crossroads/
                             - Choice/lj_05_shiling_141/text #id:lj_05_shiling_141
                                 Text/lj_05_shiling_142/text #id:lj_05_shiling_142
 
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                                 Text/lj_05_shiling_143/text #id:lj_05_shiling_143
+                                audio action -
 
                                 set {money} -= 2
                                 jump 03_crossroads/
                     - Choice/lj_05_shiling_149/text #id:lj_05_shiling_149
                         Text/lj_05_shiling_150/text #id:lj_05_shiling_150
 
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_151/text #id:lj_05_shiling_151
+                        audio action -
 
                         set {money} -= 2
                         jump 03_crossroads/
             - Choice/lj_05_shiling_157/text #id:lj_05_shiling_157
                 set {energy} -= 5
                 [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
                 Text/lj_05_shiling_159/text #id:lj_05_shiling_159
+                audio action -
 
                 - Choice/lj_05_shiling_160/text #id:lj_05_shiling_160
                     set {energy} -= 5
@@ -217,7 +267,9 @@ if {visit_shiling} == 1:
                         Text/lj_05_shiling_164/text #id:lj_05_shiling_164
 
                         - Choice/lj_05_shiling_165/text #id:lj_05_shiling_165
+                            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_166/text #id:lj_05_shiling_166
+                            audio action -
                             [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                             set {flower} += 1
@@ -227,7 +279,9 @@ if {visit_shiling} == 1:
 
                             Text/lj_05_shiling_171/text #id:lj_05_shiling_171
 
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_172/text #id:lj_05_shiling_172
+                            audio action -
 
                             set {money} -= 2
                             jump 03_crossroads/
@@ -236,28 +290,36 @@ if {visit_shiling} == 1:
 
                             Text/lj_05_shiling_178/text #id:lj_05_shiling_178
 
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_179/text #id:lj_05_shiling_179
+                            audio action -
 
                             set {money} -= 2
                             jump 03_crossroads/
                         - Choice/lj_05_shiling_183/text #id:lj_05_shiling_183
                             Text/lj_05_shiling_184/text #id:lj_05_shiling_184
 
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                             Text/lj_05_shiling_185/text #id:lj_05_shiling_185
+                            audio action -
 
                             set {money} -= 2
                             jump 03_crossroads/
                 - Choice/lj_05_shiling_191/text #id:lj_05_shiling_191
                     Text/lj_05_shiling_192/text #id:lj_05_shiling_192
 
+                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                     Text/lj_05_shiling_193/text #id:lj_05_shiling_193
+                    audio action -
 
                     set {money} -= 2
                     jump 03_crossroads/
         - Choice/lj_05_shiling_199/text #id:lj_05_shiling_199
             set {energy} -= 5
             [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+            audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
             Text/lj_05_shiling_201/text #id:lj_05_shiling_201
+            audio action -
 
             - Choice/lj_05_shiling_202/text #id:lj_05_shiling_202
                 set {energy} -= 5
@@ -269,7 +331,9 @@ if {visit_shiling} == 1:
                     Text/lj_05_shiling_206/text #id:lj_05_shiling_206
 
                     - Choice/lj_05_shiling_207/text #id:lj_05_shiling_207
+                        audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_208/text #id:lj_05_shiling_208
+                        audio action -
                         [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
 
                         set {flower} += 1
@@ -279,7 +343,9 @@ if {visit_shiling} == 1:
 
                         Text/lj_05_shiling_213/text #id:lj_05_shiling_213
 
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_214/text #id:lj_05_shiling_214
+                        audio action -
 
                         set {money} -= 2
                         jump 03_crossroads/
@@ -288,28 +354,36 @@ if {visit_shiling} == 1:
 
                         Text/lj_05_shiling_220/text #id:lj_05_shiling_220
 
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_221/text #id:lj_05_shiling_221
+                        audio action -
 
                         set {money} -= 2
                         jump 03_crossroads/
                     - Choice/lj_05_shiling_225/text #id:lj_05_shiling_225
                         Text/lj_05_shiling_226/text #id:lj_05_shiling_226
 
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                         Text/lj_05_shiling_227/text #id:lj_05_shiling_227
+                        audio action -
 
                         set {money} -= 2
                         jump 03_crossroads/
                 - Choice/lj_05_shiling_232/text #id:lj_05_shiling_232
                     Text/lj_05_shiling_233/text #id:lj_05_shiling_233
 
+                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
                     Text/lj_05_shiling_234/text #id:lj_05_shiling_234
+                    audio action -
 
                     set {money} -= 2
                     jump 03_crossroads/
         - Choice/lj_05_shiling_240/text #id:lj_05_shiling_240
             Text/lj_05_shiling_241/text #id:lj_05_shiling_241
 
+            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
             Text/lj_05_shiling_242/text #id:lj_05_shiling_242
+            audio action -
 
             set {money} -= 2
             jump 03_crossroads/

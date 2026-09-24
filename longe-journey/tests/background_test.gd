@@ -240,6 +240,7 @@ func test_manifest_entries_and_cues_match_timeline_background_events() -> void:
 		for path in expected_paths:
 			assert_array(observed_entries).contains([path]).override_failure_message(
 				"Entry background is missing from timeline: %s / %s" % [id, path])
+		var cue_keys := {}
 		for cue_value in timeline_data.get("cues", []):
 			if not cue_value is Dictionary:
 				fail("Cue must be an object in timeline: %s" % id)
@@ -250,6 +251,9 @@ func test_manifest_entries_and_cues_match_timeline_background_events() -> void:
 			if key.is_empty() or not assets.has(asset_id):
 				fail("Cue key or asset is invalid in timeline: %s" % id)
 				continue
+			assert_bool(not cue_keys.has(key)).override_failure_message(
+				"Duplicate background cue: %s / %s" % [id, key]).is_true()
+			cue_keys[key] = true
 			var actual := _background_path_before_key(timeline, key)
 			assert_str(actual).override_failure_message("Missing cue background before %s" % key).is_equal(assets[asset_id])
 		await timeline.clean()
@@ -288,6 +292,64 @@ func _wait_for_first_text() -> String:
 		await get_tree().process_frame
 	fail("Timeline did not reach its first text event")
 	return ""
+
+
+func _advance_to_text(key: String, max_frames := 600) -> String:
+	for _frame in max_frames:
+		if str(Localization.dialogue.get("key", "")) == key:
+			return str(Dialogic.Backgrounds.argument)
+		if Dialogic.current_state == Dialogic.States.REVEALING_TEXT:
+			Dialogic.Text.skip_text_reveal()
+		elif Dialogic.current_state == Dialogic.States.IDLE:
+			Dialogic.Inputs.dialogic_action.emit()
+		await get_tree().process_frame
+	fail("Timeline did not reach text event: " + key)
+	return ""
+
+
+func _advance_to_text_without_background(key: String, forbidden_background: String, max_frames := 300) -> void:
+	for _frame in max_frames:
+		if str(Dialogic.Backgrounds.argument) == forbidden_background:
+			fail("Unexpected background before %s: %s" % [key, forbidden_background])
+			return
+		if str(Localization.dialogue.get("key", "")) == key:
+			return
+		if Dialogic.current_state == Dialogic.States.REVEALING_TEXT:
+			Dialogic.Text.skip_text_reveal()
+		elif Dialogic.current_state == Dialogic.States.IDLE:
+			Dialogic.Inputs.dialogic_action.emit()
+		await get_tree().process_frame
+	fail("Timeline did not reach text event: " + key)
+
+
+func _runtime_assets_available(assets: Dictionary, required_assets: Array) -> bool:
+	var available := true
+	for raw_asset_id in required_assets:
+		var asset_id := str(raw_asset_id)
+		assert_bool(assets.has(asset_id)).override_failure_message("Missing state asset: " + asset_id).is_true()
+		available = available and assets.has(asset_id)
+	return available
+
+
+func _select_runtime_choice(button_index: int, max_frames := 600) -> bool:
+	for _frame in max_frames:
+		if Dialogic.current_state == Dialogic.States.AWAITING_CHOICE:
+			var question := Dialogic.Choices.get_current_question_info()
+			var choices: Array = question.get("choices", [])
+			if button_index < 1 or button_index > choices.size():
+				fail("Choice index is unavailable: %d" % button_index)
+				return false
+			Dialogic.Choices._choice_blocker.stop()
+			Dialogic.Choices._on_choice_selected(choices[button_index - 1])
+			await get_tree().process_frame
+			return true
+		if Dialogic.current_state == Dialogic.States.REVEALING_TEXT:
+			Dialogic.Text.skip_text_reveal()
+		elif Dialogic.current_state == Dialogic.States.IDLE:
+			Dialogic.Inputs.dialogic_action.emit()
+		await get_tree().process_frame
+	fail("Timeline did not reach a choice")
+	return false
 
 
 func _reset_runtime_state() -> void:
@@ -369,3 +431,187 @@ func test_bus_background_switch_and_hospital_transition() -> void:
 	Dialogic.start(_load_timeline("01_hospital"))
 	var hospital_path := await _wait_for_first_text()
 	assert_str(hospital_path).is_equal(hospital_path_expected)
+
+func test_item_and_pose_states_use_the_expected_backgrounds() -> void:
+	var manifest := _read_manifest()
+	var assets := _asset_map(manifest)
+	var cases := [
+		{"timeline": "05_shiling", "key": "Text/lj_05_shiling_013/text", "asset": "shiling_bandit_ambush_no_iris"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_009/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_009_face/text", "asset": "maze_woman_face_detail"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_009_hands/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_019/text", "asset": "maze_woman_closeup_no_hydrangea"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_031/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_031_face/text", "asset": "maze_woman_face_detail"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_031_hands/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_041/text", "asset": "maze_woman_closeup_no_hydrangea"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_053/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_053_face/text", "asset": "maze_woman_face_detail"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_053_hands/text", "asset": "maze_woman_closeup"},
+		{"timeline": "06_luyuan", "key": "Text/lj_06_luyuan_063/text", "asset": "maze_woman_closeup_no_hydrangea"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_004/text", "asset": "maze_blood_trail_no_cactus_flower"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_015/text", "asset": "maze_woman_closeup"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_015_face/text", "asset": "maze_woman_face_detail"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_015_hands/text", "asset": "maze_woman_closeup"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_021/text", "asset": "maze_pinned_woman"},
+		{"timeline": "07_maze_middle", "key": "Text/lj_07_maze_middle_035/text", "asset": "maze_woman_closeup_no_hydrangea"},
+		{"timeline": "08_wife_room", "key": "Text/lj_08_wife_room_009/text", "asset": "wife_room_nurse"},
+		{"timeline": "08_wife_room", "key": "Text/lj_08_wife_room_010/text", "asset": "wife_room_open"},
+		{"timeline": "08_wife_room", "key": "Text/lj_08_wife_room_012/text", "asset": "wife_room_turned"},
+		{"timeline": "08_wife_room", "key": "Text/lj_08_wife_room_018/text", "asset": "wife_room_turned_calmer"},
+		{"timeline": "08_wife_room", "key": "Text/lj_08_wife_room_035/text", "asset": "wife_room_hands"},
+		{"timeline": "10_morgue", "key": "Text/lj_10_morgue_008/text", "asset": "morgue_basket_held"},
+	]
+	var loaded := {}
+	for case: Dictionary in cases:
+		var timeline_id := str(case.timeline)
+		if not loaded.has(timeline_id):
+			loaded[timeline_id] = _load_timeline(timeline_id)
+		var timeline: DialogicTimeline = loaded[timeline_id]
+		var asset_id := str(case.asset)
+		assert_bool(assets.has(asset_id)).override_failure_message("Missing state asset: " + asset_id).is_true()
+		if timeline != null and assets.has(asset_id):
+			assert_str(_background_path_before_key(timeline, str(case.key))).override_failure_message(
+				"State background mismatch: %s / %s" % [timeline_id, case.key]).is_equal(assets[asset_id])
+	for timeline: DialogicTimeline in loaded.values():
+		if timeline != null:
+			await timeline.clean()
+
+
+func test_branch_specific_backgrounds_do_not_leak_to_skipped_routes() -> void:
+	var maze_source := FileAccess.get_file_as_string("res://timelines/07_maze_middle.dtl")
+	var picked_cactus_start := maze_source.find("- Choice/lj_07_maze_middle_002/text")
+	var skipped_cactus_start := maze_source.find("- Choice/lj_07_maze_middle_007/text")
+	var cactus_label := maze_source.find("label pick_cactus_flower")
+	assert_bool(picked_cactus_start >= 0 and skipped_cactus_start > picked_cactus_start and cactus_label > skipped_cactus_start).is_true()
+	if picked_cactus_start >= 0 and skipped_cactus_start > picked_cactus_start and cactus_label > skipped_cactus_start:
+		var picked_cactus := maze_source.substr(picked_cactus_start, skipped_cactus_start - picked_cactus_start)
+		var skipped_cactus := maze_source.substr(skipped_cactus_start, cactus_label - skipped_cactus_start)
+		assert_bool(picked_cactus.contains("maze_blood_trail_no_cactus_flower.png")).is_true()
+		assert_bool(not skipped_cactus.contains("maze_blood_trail_no_cactus_flower.png")).is_true()
+
+	var wife_source := FileAccess.get_file_as_string("res://timelines/08_wife_room.dtl")
+	var earthworm_branch := wife_source.find("if {earthworm} > 0.0:")
+	var no_earthworm_branch := wife_source.find("else:\n    Text/lj_08_wife_room_032/text")
+	assert_bool(earthworm_branch >= 0 and no_earthworm_branch > earthworm_branch).is_true()
+	if earthworm_branch >= 0 and no_earthworm_branch > earthworm_branch:
+		var worm_route := wife_source.substr(earthworm_branch, no_earthworm_branch - earthworm_branch)
+		assert_bool(worm_route.contains("wife_room_turned_calmer.png")).is_true()
+		assert_bool(not wife_source.substr(no_earthworm_branch).contains("wife_room_turned_calmer.png")).is_true()
+
+	var morgue_source := FileAccess.get_file_as_string("res://timelines/10_morgue.dtl")
+	var collect_start := morgue_source.find("- Choice/lj_10_morgue_005/text")
+	var leave_start := morgue_source.find("- Choice/lj_10_morgue_014/text")
+	assert_bool(collect_start >= 0 and leave_start > collect_start).is_true()
+	if collect_start >= 0 and leave_start > collect_start:
+		assert_bool(morgue_source.substr(collect_start, leave_start - collect_start).contains(
+			"morgue_basket_held.png")).is_true()
+		assert_bool(not morgue_source.substr(leave_start).contains("morgue_basket_held.png")).is_true()
+
+func test_runtime_shiling_iris_background_persists_after_discard() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["shiling_bandit_ambush_no_iris"]):
+		return
+	GameState.set_var("visit_shiling", 1)
+	Dialogic.start(_load_timeline("05_shiling"))
+	await _advance_to_text("Text/lj_05_shiling_003/text")
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_05_shiling_013/text")).is_equal(assets["shiling_bandit_ambush_no_iris"])
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_05_shiling_015/text")).is_equal(assets["shiling_bandit_ambush_no_iris"])
+
+
+func test_runtime_luyuan_hydrangea_pick_updates_all_entry_routes() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["maze_woman_closeup", "maze_woman_closeup_no_hydrangea"]):
+		return
+	var routes := [
+		{"entry_choice": 1, "closeup_key": "Text/lj_06_luyuan_009/text", "picked_key": "Text/lj_06_luyuan_019/text"},
+		{"entry_choice": 2, "closeup_key": "Text/lj_06_luyuan_031/text", "picked_key": "Text/lj_06_luyuan_041/text"},
+		{"entry_choice": 3, "closeup_key": "Text/lj_06_luyuan_053/text", "picked_key": "Text/lj_06_luyuan_063/text"},
+	]
+	for route: Dictionary in routes:
+		Dialogic.start(_load_timeline("06_luyuan"))
+		await _advance_to_text("Text/lj_06_luyuan_002/text")
+		assert_bool(await _select_runtime_choice(int(route.entry_choice))).is_true()
+		assert_bool(await _select_runtime_choice(1)).is_true()
+		assert_str(await _advance_to_text(str(route.closeup_key))).is_equal(assets["maze_woman_closeup"])
+		assert_bool(await _select_runtime_choice(2)).is_true()
+		assert_str(await _advance_to_text(str(route.picked_key))).is_equal(assets["maze_woman_closeup_no_hydrangea"])
+		await Dialogic.end_timeline(true)
+		await get_tree().process_frame
+
+
+func test_runtime_maze_middle_observe_pick_and_flee_backgrounds() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["maze_blood_trail", "maze_woman_closeup", "maze_pinned_woman", "maze_woman_closeup_no_hydrangea", "maze_escape_road"]):
+		return
+	Dialogic.start(_load_timeline("07_maze_middle"))
+	await _advance_to_text("Text/lj_07_maze_middle_001/text")
+	assert_bool(await _select_runtime_choice(2)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_015/text")).is_equal(assets["maze_woman_closeup"])
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_021/text")).is_equal(assets["maze_pinned_woman"])
+	assert_bool(await _select_runtime_choice(2)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_035/text")).is_equal(assets["maze_woman_closeup_no_hydrangea"])
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_030/text")).is_equal(assets["maze_escape_road"])
+
+
+func test_runtime_maze_middle_cactus_pick_and_skip_backgrounds() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["maze_blood_trail", "maze_blood_trail_no_cactus_flower"]):
+		return
+	Dialogic.start(_load_timeline("07_maze_middle"))
+	await _advance_to_text("Text/lj_07_maze_middle_001/text")
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_004/text")).is_equal(assets["maze_blood_trail_no_cactus_flower"])
+	await Dialogic.end_timeline(true)
+	await get_tree().process_frame
+
+	Dialogic.start(_load_timeline("07_maze_middle"))
+	await _advance_to_text("Text/lj_07_maze_middle_001/text")
+	assert_bool(await _select_runtime_choice(2)).is_true()
+	assert_str(await _advance_to_text("Text/lj_07_maze_middle_008/text")).is_equal(assets["maze_blood_trail"])
+
+
+func test_runtime_morgue_basket_take_and_leave_backgrounds() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["morgue_interior_drawers", "morgue_basket_held"]):
+		return
+	Dialogic.start(_load_timeline("10_morgue"))
+	await _advance_to_text("Text/lj_10_morgue_004/text")
+	assert_bool(await _select_runtime_choice(1)).is_true()
+	assert_str(await _advance_to_text("Text/lj_10_morgue_007/text")).is_equal(assets["morgue_interior_drawers"])
+	assert_str(await _advance_to_text("Text/lj_10_morgue_008/text")).is_equal(assets["morgue_basket_held"])
+	await Dialogic.end_timeline(true)
+	await get_tree().process_frame
+
+	_reset_runtime_state()
+	Dialogic.start(_load_timeline("10_morgue"))
+	assert_str(await _advance_to_text("Text/lj_10_morgue_004/text")).is_equal(assets["morgue_interior_drawers"])
+	assert_bool(await _select_runtime_choice(2)).is_true()
+	await _advance_to_text_without_background("Text/lj_01_hospital_000/text", assets["morgue_basket_held"])
+
+
+func test_runtime_wife_room_branches_end_with_hands_background() -> void:
+	var assets := _asset_map(_read_manifest())
+	if not _runtime_assets_available(assets, ["wife_room_nurse", "wife_room_open", "wife_room_turned", "wife_room_turned_calmer", "wife_room_hands"]):
+		return
+	for earthworm in [0, 1]:
+		GameState.set_var("earthworm", earthworm)
+		Dialogic.start(_load_timeline("08_wife_room"))
+		await _advance_to_text("Text/lj_08_wife_room_007/text")
+		assert_bool(await _select_runtime_choice(1)).is_true()
+		assert_str(await _advance_to_text("Text/lj_08_wife_room_009/text")).is_equal(assets["wife_room_nurse"])
+		assert_str(await _advance_to_text("Text/lj_08_wife_room_010/text")).is_equal(assets["wife_room_open"])
+		assert_str(await _advance_to_text("Text/lj_08_wife_room_012/text")).is_equal(assets["wife_room_turned"])
+		var branch_key: String = "Text/lj_08_wife_room_018/text" if earthworm > 0 else "Text/lj_08_wife_room_032/text"
+		var expected_path: String = str(assets["wife_room_turned_calmer"]) if earthworm > 0 else str(assets["wife_room_turned"])
+		assert_str(await _advance_to_text(branch_key)).is_equal(expected_path)
+		assert_str(await _advance_to_text("Text/lj_08_wife_room_035/text")).is_equal(assets["wife_room_hands"])
+		await Dialogic.end_timeline(true)
+		await get_tree().process_frame
+		_reset_runtime_state()

@@ -1,5 +1,8 @@
 [background arg="res://art/bus_interior_normal.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/09_bus_ambience/bus_interior_ambience_with_people.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_00_start_000/text #id:lj_00_start_000
 
 Text/lj_00_start_001/text #id:lj_00_start_001

@@ -166,10 +166,10 @@ func _process(_delta: float) -> void:
                     require(len(tools) == 15, 'Unexpected default exposed tool count')
                     state = call('intelligence_project_state')
                     require(state['project_name'] == name, 'Connected to the wrong project')
-                    require('res://scenes/mianMenu.tscn' in state['scene_paths'] and
+                    require('res://scenes/mainMenu.tscn' in state['scene_paths'] and
                         'res://scripts/extends Control.gd' in state['script_paths'] and state['resources'] > 0,
                         'Project inventory is incomplete')
-                    scene = {'scene': 'res://scenes/mianMenu.tscn'}
+                    scene = {'scene': 'res://scenes/mainMenu.tscn'}
                     require(call('intelligence_scene_validate', scene)['valid'], 'False missing dependency')
                     analysis = call('intelligence_scene_analyze', scene)
                     require(analysis['node_count'] == 12 and analysis['script_count'] == 1, 'Invalid scene analysis')

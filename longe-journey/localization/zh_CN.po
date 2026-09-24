@@ -1,11 +1,11 @@
 msgid ""
 msgstr "Project-Id-Version: LongeJourney\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
 
-#: res://scenes/mianMenu.tscn
+#: res://scenes/mainMenu.tscn
 msgid "ui.menu.title"
 msgstr "长路漫漫"
 
-#: res://scenes/mianMenu.tscn
+#: res://scenes/mainMenu.tscn
 msgid "ui.menu.subtitle"
 msgstr "叙事冒险"
 
@@ -946,9 +946,17 @@ msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上
 msgid "Text/lj_06_luyuan_008/text"
 msgstr "迷宫中央立着一个人影。"
 
-#: res://timelines/06_luyuan.dtl:16
+#: res://timelines/06_luyuan.dtl:31
 msgid "Text/lj_06_luyuan_009/text"
-msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上。"
+
+#: res://timelines/06_luyuan.dtl:33
+msgid "Text/lj_06_luyuan_009_face/text"
+msgstr "眼皮被细线缝在眉毛上。"
+
+#: res://timelines/06_luyuan.dtl:35
+msgid "Text/lj_06_luyuan_009_hands/text"
+msgstr "手背上画着符咒。"
 
 #: res://timelines/06_luyuan.dtl:19
 msgid "Text/lj_06_luyuan_011/text"
@@ -974,9 +982,17 @@ msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上
 msgid "Text/lj_06_luyuan_030/text"
 msgstr "迷宫中央立着一个人影。"
 
-#: res://timelines/06_luyuan.dtl:43
+#: res://timelines/06_luyuan.dtl:78
 msgid "Text/lj_06_luyuan_031/text"
-msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上。"
+
+#: res://timelines/06_luyuan.dtl:80
+msgid "Text/lj_06_luyuan_031_face/text"
+msgstr "眼皮被细线缝在眉毛上。"
+
+#: res://timelines/06_luyuan.dtl:82
+msgid "Text/lj_06_luyuan_031_hands/text"
+msgstr "手背上画着符咒。"
 
 #: res://timelines/06_luyuan.dtl:46
 msgid "Text/lj_06_luyuan_033/text"
@@ -1002,9 +1018,17 @@ msgstr "继续往里走，路越收越窄，我听见自己的脚步声在墙上
 msgid "Text/lj_06_luyuan_052/text"
 msgstr "迷宫中央立着一个人影。"
 
-#: res://timelines/06_luyuan.dtl:70
+#: res://timelines/06_luyuan.dtl:125
 msgid "Text/lj_06_luyuan_053/text"
-msgstr "那是个穿着华服的女人，被一根棍子立在地上，眼皮被细线缝在眉毛上，手背上画着符咒。"
+msgstr "那是个穿着华服的女人，被一根棍子立在地上。"
+
+#: res://timelines/06_luyuan.dtl:127
+msgid "Text/lj_06_luyuan_053_face/text"
+msgstr "眼皮被细线缝在眉毛上。"
+
+#: res://timelines/06_luyuan.dtl:129
+msgid "Text/lj_06_luyuan_053_hands/text"
+msgstr "手背上画着符咒。"
 
 #: res://timelines/06_luyuan.dtl:73
 msgid "Text/lj_06_luyuan_055/text"
@@ -1134,9 +1158,17 @@ msgstr "绿兰收进袖兜，花香还萦绕在指间。主角绕过仙人球丛
 msgid "Text/lj_07_maze_middle_012/text"
 msgstr "花到手了，掌心却一直发麻。主角攥紧仙人球花，边走边想刚才那一划，越想越觉得心里空了一块。"
 
-#: res://timelines/07_maze_middle.dtl:19
+#: res://timelines/07_maze_middle.dtl:32
 msgid "Text/lj_07_maze_middle_015/text"
-msgstr "假山中心站着一个女人，衣着华服，头戴金钗，五官算得上漂亮，但整个人静得不像活物。她头上顶着一朵蓝色圆滚滚的绣球花，眼睛浑浊得几乎看不到瞳孔，眼皮被细线吊起，末端缝在眉毛上；嘴微微翻动，喉咙里挤出模糊的歌声，歌词听不清，像唱给空气听的。她双手无力地垂着，手背画满看不懂的符咒，指尖微微颤抖。"
+msgstr "假山中心站着一个女人，衣着华服，头戴金钗，五官算得上漂亮，但整个人静得不像活物。她头上顶着一朵蓝色圆滚滚的绣球花。"
+
+#: res://timelines/07_maze_middle.dtl:34
+msgid "Text/lj_07_maze_middle_015_face/text"
+msgstr "眼睛浑浊得几乎看不到瞳孔，眼皮被细线吊起，末端缝在眉毛上；嘴微微翻动，喉咙里挤出模糊的歌声，歌词听不清，像唱给空气听的。"
+
+#: res://timelines/07_maze_middle.dtl:36
+msgid "Text/lj_07_maze_middle_015_hands/text"
+msgstr "她双手无力地垂着，手背画满看不懂的符咒，指尖微微颤抖。"
 
 #: res://timelines/07_maze_middle.dtl:20
 msgid "Text/lj_07_maze_middle_016/text"
@@ -1802,7 +1834,7 @@ msgstr "无剧情进度"
 msgid "save.scene.main"
 msgstr "旅程"
 
-msgid "save.scene.mianMenu"
+msgid "save.scene.mainMenu"
 msgstr "主菜单"
 
 msgid "save.scene.scene_1"
@@ -1947,24 +1979,24 @@ msgstr "图鉴"
 msgid "ui.lore_browser.line_edit_search.placeholder_text"
 msgstr "搜索关键词"
 
-#: scenes/mianMenu.tscn:Button_exit
-msgid "ui.mianmenu.button_exit.text"
+#: scenes/mainMenu.tscn:Button_exit
+msgid "ui.mainmenu.button_exit.text"
 msgstr "退出游戏"
 
-#: scenes/mianMenu.tscn:Button_load
-msgid "ui.mianmenu.button_load.text"
+#: scenes/mainMenu.tscn:Button_load
+msgid "ui.mainmenu.button_load.text"
 msgstr "读档"
 
-#: scenes/mianMenu.tscn:Button_save
-msgid "ui.mianmenu.button_save.text"
+#: scenes/mainMenu.tscn:Button_save
+msgid "ui.mainmenu.button_save.text"
 msgstr "存档"
 
-#: scenes/mianMenu.tscn:Button_setting
-msgid "ui.mianmenu.button_setting.text"
+#: scenes/mainMenu.tscn:Button_setting
+msgid "ui.mainmenu.button_setting.text"
 msgstr "游戏设置"
 
-#: scenes/mianMenu.tscn:Button_start
-msgid "ui.mianmenu.button_start.text"
+#: scenes/mainMenu.tscn:Button_start
+msgid "ui.mainmenu.button_start.text"
 msgstr "开始游戏"
 
 #: scenes/save_slot_panel.tscn:CloseButton

@@ -25,6 +25,14 @@
 
 保留当前 `2.0-Alpha-20 WIP (Godot 4.4+)`，不整体升级。
 
+- `Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd`：可选按钮音效路径为空时直接清空对应音频，避免 `load("")` 尝试加载 `res://`；允许关闭悬停、聚焦音。由 UI 对话与音频配置回归覆盖。
+
+- `Modules/Audio/event_audio.gd`：解析前去除行尾空白，确保 Windows CRLF 下的
+  `audio ambience -` 正确停止频道，不把 `-\r` 当成资源路径。
+- `Modules/Audio/subsystem_audio.gd`：淡入淡出 Tween 绑定到对应播放器；快速切换剧情、
+  读档或结束时间线释放播放器时同步取消动画。停止频道立即移除当前播放器引用，
+  避免同帧重新播放时对已排队释放的播放器创建淡出。回归见 `tests/audio_binding_test.gd`。
+
 - `Modules/Wait/subsystem_wait.gd`：`clear_game_state` 默认参数改成显式 `int = 0`
   （`ClearFlags.FULL_CLEAR` 的原值），解除首次导入时单例循环类型推断。
 

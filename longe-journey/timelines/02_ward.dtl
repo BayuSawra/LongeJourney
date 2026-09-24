@@ -1,5 +1,8 @@
 [background arg="res://art/backgrounds/ward_corridor.png" fade="0.0"]
 
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_02_ward_000/text #id:lj_02_ward_000
 
 Text/lj_02_ward_001/text #id:lj_02_ward_001

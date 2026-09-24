@@ -107,7 +107,7 @@ func update_audio(channel_name:= "", path := "", settings_overrides := {}) -> vo
 		var prev_audio_node: AudioStreamPlayer = current_audio_channels[channel_name]
 		prev_audio_node.name += "_Prev"
 		if audio_settings.fade_length > 0.0:
-			var fade_out_tween: Tween = create_tween()
+			var fade_out_tween: Tween = prev_audio_node.create_tween()
 			fade_out_tween.tween_method(
 				interpolate_volume_linearly.bind(prev_audio_node),
 				db_to_linear(prev_audio_node.volume_db),
@@ -120,6 +120,7 @@ func update_audio(channel_name:= "", path := "", settings_overrides := {}) -> vo
 
 	## Set state
 	if not path:
+		current_audio_channels.erase(channel_name)
 		info.erase(channel_name)
 		return
 
@@ -146,7 +147,7 @@ func update_audio(channel_name:= "", path := "", settings_overrides := {}) -> vo
 	## Volume & Fade
 	if audio_settings.fade_length > 0.0:
 		new_player.volume_db = linear_to_db(0.0)
-		var fade_in_tween := create_tween()
+		var fade_in_tween := new_player.create_tween()
 		fade_in_tween.tween_method(
 			interpolate_volume_linearly.bind(new_player),
 			0.0,

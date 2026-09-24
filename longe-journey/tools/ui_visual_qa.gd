@@ -52,7 +52,7 @@ func _run() -> void:
 	_check(settings_manager.get_language() == locale, "requested locale is available", {"locale": locale, "actual": settings_manager.get_language()})
 	await _stable()
 
-	var result := change_scene_to_file("res://scenes/mianMenu.tscn")
+	var result := change_scene_to_file("res://scenes/mainMenu.tscn")
 	_check(result == OK, "main menu loads", {"error": result})
 	if result != OK:
 		_finish()

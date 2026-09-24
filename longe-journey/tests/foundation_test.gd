@@ -69,7 +69,14 @@ func test_audio_layout_and_dialogic_routing() -> void:
 	var choice_layer: Node = (load("res://scenes/dialogic_choice_layer.tscn") as PackedScene).instantiate()
 	var button_sound: AudioStreamPlayer = choice_layer.get_node("Choices/DialogicNode_ButtonSound")
 	assert_str(str(button_sound.bus)).is_equal("UI")
+	assert_str(str(choice_layer.get("sounds_pressed"))).is_equal("res://audio/sfx/01_ui_click/ui_button_click.mp3")
+	assert_str(str(choice_layer.get("sounds_hover"))).is_empty()
+	assert_str(str(choice_layer.get("sounds_focus"))).is_empty()
 	choice_layer.queue_free()
+	var textbox_layer: Node = (load("res://scenes/dialogic_textbox_layer.tscn") as PackedScene).instantiate()
+	assert_str(str(textbox_layer.get("typing_sounds_sounds_folder"))).is_equal("res://audio/sfx/02_typing")
+	assert_int(int(textbox_layer.get("typing_sounds_every_nths_character"))).is_equal(6)
+	textbox_layer.queue_free()
 
 
 func test_game_state_writes_dialogic() -> void:
@@ -130,7 +137,12 @@ func test_visual_fx_choice_scan_connects_each_button_once() -> void:
 	VisualFX._scan_for_choice_buttons()
 	VisualFX._scan_for_choice_buttons()
 	var pressed_connections := button.get_signal_connection_list("pressed")
-	assert_int(pressed_connections.size()).is_equal(1)
+	var visual_connections := pressed_connections.filter(func(connection: Dictionary):
+		return connection["callable"].get_object() == VisualFX)
+	var audio_connections := pressed_connections.filter(func(connection: Dictionary):
+		return connection["callable"].get_object() == UIAudio)
+	assert_int(visual_connections.size()).is_equal(1)
+	assert_int(audio_connections.size()).is_equal(1)
 	button.queue_free()
 	await get_tree().process_frame
 
@@ -273,7 +285,7 @@ func test_lore_returns_independent_copies() -> void:
 
 
 func test_menu_and_panels_instantiate() -> void:
-	for path in ["mianMenu", "settings_panel", "save_slot_panel", "lore_browser", "hud", "history_panel"]:
+	for path in ["mainMenu", "settings_panel", "save_slot_panel", "lore_browser", "hud", "history_panel"]:
 		var packed := load("res://scenes/%s.tscn" % path) as PackedScene
 		assert_object(packed).is_not_null()
 		var instance := packed.instantiate()
@@ -285,7 +297,7 @@ func test_menu_and_panels_instantiate() -> void:
 
 func test_main_menu_start_and_cross_scene_load() -> void:
 	var previous_scene := get_tree().current_scene
-	assert_int(get_tree().change_scene_to_file("res://scenes/mianMenu.tscn")).is_equal(OK)
+	assert_int(get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")).is_equal(OK)
 	await get_tree().scene_changed
 	get_tree().current_scene._on_button_start_pressed()
 	await get_tree().scene_changed
@@ -296,7 +308,7 @@ func test_main_menu_start_and_cross_scene_load() -> void:
 	GameState.set_var("money", 66)
 	assert_bool(SaveManager.save_to_slot("scene-roundtrip")).is_true()
 	await Dialogic.end_timeline(true)
-	assert_int(get_tree().change_scene_to_file("res://scenes/mianMenu.tscn")).is_equal(OK)
+	assert_int(get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")).is_equal(OK)
 	await get_tree().scene_changed
 	GameState.set_var("money", 2)
 	assert_bool(await SaveManager.load("scene-roundtrip")).is_true()
@@ -308,6 +320,26 @@ func test_main_menu_start_and_cross_scene_load() -> void:
 	await Dialogic.end_timeline(true)
 	get_tree().current_scene.queue_free()
 	get_tree().current_scene = previous_scene
+	await get_tree().process_frame
+
+
+func test_story_ending_returns_to_main_menu() -> void:
+	assert_int(get_tree().change_scene_to_file("res://scenes/scene_1.tscn")).is_equal(OK)
+	await get_tree().scene_changed
+	await get_tree().process_frame
+	await Dialogic.end_timeline(true)
+	Dialogic.start("09_ending")
+	await get_tree().process_frame
+	await Dialogic.end_timeline(true)
+	for _frame in 20:
+		if get_tree().current_scene and get_tree().current_scene.scene_file_path == "res://scenes/mainMenu.tscn":
+			break
+		await get_tree().process_frame
+	assert_str(get_tree().current_scene.scene_file_path).is_equal("res://scenes/mainMenu.tscn")
+	var menu := get_tree().current_scene
+	menu.get_node("BGM").stop()
+	menu.queue_free()
+	get_tree().current_scene = null
 	await get_tree().process_frame
 
 

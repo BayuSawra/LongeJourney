@@ -1,0 +1,354 @@
+{
+  "version": 2,
+  "title": "Longe Journey 已选音效",
+  "imported_at": "2026-09-23T11:12:28.196404+00:00",
+  "source_selection": "音效选择清单.json",
+  "selected_count": 24,
+  "groups": [
+    {
+      "track_id": "01_2",
+      "group": "01_UI点击",
+      "kind": "UI",
+      "candidate": "UI Button Click",
+      "path": "res://audio/sfx/01_ui_click/ui_button_click.mp3",
+      "file": "audio/sfx/01_ui_click/ui_button_click.mp3",
+      "source_url": "https://freesound.org/people/el_boss/sounds/677861/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "02_2",
+      "group": "02_打字推进",
+      "kind": "UI",
+      "candidate": "Single key type",
+      "path": "res://audio/sfx/02_typing/single_key_type.wav",
+      "file": "audio/sfx/02_typing/single_key_type.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/type/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 53508,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "03_1",
+      "group": "03_走路",
+      "kind": "人物",
+      "candidate": "Footsteps walking through woods",
+      "path": "res://audio/sfx/03_footsteps/footsteps_walking_through_woods.mp3",
+      "file": "audio/sfx/03_footsteps/footsteps_walking_through_woods.mp3",
+      "source_url": "https://freesound.org/people/noisyninja/sounds/394923/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "04_2",
+      "group": "04_奔跑喘气",
+      "kind": "人物",
+      "candidate": "Alvarez fernando antropo fonia corriendo",
+      "path": "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3",
+      "file": "audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3",
+      "source_url": "https://freesound.org/people/artesmediales/sounds/334691/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "05_1",
+      "group": "05_楼梯石廊脚步",
+      "kind": "人物",
+      "candidate": "Footsteps stone floor",
+      "path": "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3",
+      "file": "audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3",
+      "source_url": "https://freesound.org/people/HenKonen/sounds/757207/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "06_3",
+      "group": "06_门锁铁门",
+      "kind": "动作",
+      "candidate": "Door key in door lock",
+      "path": "res://audio/sfx/06_lock_metal_door/door_key_in_door_lock.wav",
+      "file": "audio/sfx/06_lock_metal_door/door_key_in_door_lock.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/doors/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 111031,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "07_3",
+      "group": "07_帘子卷帘门",
+      "kind": "动作",
+      "candidate": "Electric shutters opening close up",
+      "path": "res://audio/sfx/07_shutter/electric_shutters_opening_close_up.mp3",
+      "file": "audio/sfx/07_shutter/electric_shutters_opening_close_up.mp3",
+      "source_url": "https://freesound.org/people/khenshom/sounds/557377/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "08_1",
+      "group": "08_厚门猛关",
+      "kind": "动作",
+      "candidate": "Door Smash 1",
+      "path": "res://audio/sfx/08_heavy_door/door_smash_1.mp3",
+      "file": "audio/sfx/08_heavy_door/door_smash_1.mp3",
+      "source_url": "https://freesound.org/people/qubodup/sounds/218890/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "09_1",
+      "group": "09_公交环境",
+      "kind": "环境",
+      "candidate": "Bus interior ambience with people",
+      "path": "res://audio/sfx/09_bus_ambience/bus_interior_ambience_with_people.wav",
+      "file": "audio/sfx/09_bus_ambience/bus_interior_ambience_with_people.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/bus/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "wave_format_extensible_pcm",
+        "source_bits_per_sample": 24,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 848307,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "10_2",
+      "group": "10_公交到站离站",
+      "kind": "动作",
+      "candidate": "City bus departure",
+      "path": "res://audio/sfx/10_bus_arrival_departure/city_bus_departure.wav",
+      "file": "audio/sfx/10_bus_arrival_departure/city_bus_departure.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/bus/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 527720,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "11_3",
+      "group": "11_植物花茎折断",
+      "kind": "动作",
+      "candidate": "Plant Stem Break 2",
+      "path": "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3",
+      "file": "audio/sfx/11_plant_break/plant_stem_break_2.mp3",
+      "source_url": "https://freesound.org/people/JuneBeetle/sounds/863011/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "12_3",
+      "group": "12_火焰喷火",
+      "kind": "环境",
+      "candidate": "Fire swoosh burning",
+      "path": "res://audio/sfx/12_fire/fire_swoosh_burning.wav",
+      "file": "audio/sfx/12_fire/fire_swoosh_burning.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/fire/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "wave_format_extensible_pcm",
+        "source_bits_per_sample": 24,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 160168,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "13_2",
+      "group": "13_仪式庙宇",
+      "kind": "环境",
+      "candidate": "Japan Kashiwa Shrine Hitting a Small Gong",
+      "path": "res://audio/sfx/13_ritual_temple/japan_kashiwa_shrine_hitting_a_small_gong.mp3",
+      "file": "audio/sfx/13_ritual_temple/japan_kashiwa_shrine_hitting_a_small_gong.mp3",
+      "source_url": "https://freesound.org/people/RutgerMuller/sounds/364847/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "14_3",
+      "group": "14_风声",
+      "kind": "环境",
+      "candidate": "Wind in the top of the mountain",
+      "path": "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav",
+      "file": "audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/wind/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "wave_format_extensible_pcm",
+        "source_bits_per_sample": 24,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 1402512,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "15_3",
+      "group": "15_雨声",
+      "kind": "环境",
+      "candidate": "Long rain ambience",
+      "path": "res://audio/sfx/15_rain/long_rain_ambience.wav",
+      "file": "audio/sfx/15_rain/long_rain_ambience.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/rain/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 14782286,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "16_3",
+      "group": "16_水滴滴水",
+      "kind": "环境",
+      "candidate": "Small water drops",
+      "path": "res://audio/sfx/16_water_drops/small_water_drops.mp3",
+      "file": "audio/sfx/16_water_drops/small_water_drops.mp3",
+      "source_url": "https://freesound.org/people/arseniiv/sounds/257349/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "17_2",
+      "group": "17_水流气泡",
+      "kind": "环境",
+      "candidate": "Water bubble",
+      "path": "res://audio/sfx/17_water_bubbles/water_bubble.wav",
+      "file": "audio/sfx/17_water_bubbles/water_bubble.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/water/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 18719,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "18_1",
+      "group": "18_低语恐怖",
+      "kind": "人声",
+      "candidate": "Four Voices Whispering 6 with Echo",
+      "path": "res://audio/sfx/18_whisper_horror/four_voices_whispering_6_with_echo.mp3",
+      "file": "audio/sfx/18_whisper_horror/four_voices_whispering_6_with_echo.mp3",
+      "source_url": "https://freesound.org/people/geoneo0/sounds/193818/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "19_1",
+      "group": "19_哭声呜咽",
+      "kind": "人声",
+      "candidate": "Man sobbing crying or whimpering",
+      "path": "res://audio/sfx/19_sobbing/man_sobbing_crying_or_whimpering.mp3",
+      "file": "audio/sfx/19_sobbing/man_sobbing_crying_or_whimpering.mp3",
+      "source_url": "https://freesound.org/people/SnowFightStudios/sounds/643669/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "20_1",
+      "group": "20_医院病房停尸房底噪",
+      "kind": "环境",
+      "candidate": "A C Hum",
+      "path": "res://audio/sfx/20_hospital_hum/a_c_hum.mp3",
+      "file": "audio/sfx/20_hospital_hum/a_c_hum.mp3",
+      "source_url": "https://freesound.org/people/timgormly/sounds/148906/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "21_2",
+      "group": "21_园林森林虫鸣",
+      "kind": "环境",
+      "candidate": "Windy humming forest with birds",
+      "path": "res://audio/sfx/21_forest_insects/windy_humming_forest_with_birds.wav",
+      "file": "audio/sfx/21_forest_insects/windy_humming_forest_with_birds.wav",
+      "source_url": "https://mixkit.co/free-sound-effects/forest/",
+      "quality": "WAV 原文件",
+      "notes": "",
+      "audio_conversion": {
+        "source_encoding": "pcm",
+        "source_bits_per_sample": 16,
+        "channels": 2,
+        "sample_rate": 44100,
+        "frames": 5528114,
+        "output_encoding": "pcm",
+        "output_bits_per_sample": 16
+      }
+    },
+    {
+      "track_id": "22_1",
+      "group": "22_人群宴席远声",
+      "kind": "环境",
+      "candidate": "Cayenne Market Ambience from the Entrance",
+      "path": "res://audio/sfx/22_crowd_ambience/cayenne_market_ambience_from_the_entrance.mp3",
+      "file": "audio/sfx/22_crowd_ambience/cayenne_market_ambience_from_the_entrance.mp3",
+      "source_url": "https://freesound.org/people/felix.blume/sounds/868858/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "23_1",
+      "group": "23_手机提示音",
+      "kind": "UI",
+      "candidate": "Good Phone Notification Sound",
+      "path": "res://audio/sfx/23_phone_notification/good_phone_notification_sound.mp3",
+      "file": "audio/sfx/23_phone_notification/good_phone_notification_sound.mp3",
+      "source_url": "https://freesound.org/people/qubodup/sounds/782969/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    },
+    {
+      "track_id": "24_3",
+      "group": "24_硬币车费",
+      "kind": "动作",
+      "candidate": "Coin Payment",
+      "path": "res://audio/sfx/24_coin_payment/coin_payment.mp3",
+      "file": "audio/sfx/24_coin_payment/coin_payment.mp3",
+      "source_url": "https://freesound.org/people/moogleoftheages/sounds/561359/",
+      "quality": "MP3 预览版",
+      "notes": ""
+    }
+  ]
+}

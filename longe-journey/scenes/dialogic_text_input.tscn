@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="PackedScene" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/dialogic_text_input.gd" id="2"]
 [ext_resource type="Theme" path="res://ui/journey_theme.tres" id="3_theme"]
 [ext_resource type="StyleBox" path="res://ui/dialogue_panel.tres" id="4_panel"]
+[ext_resource type="Script" path="res://scripts/dialogic_text_input_layer.gd" id="5_layer"]
 
 [node name="TextInputLayer" instance=ExtResource("1")]
 theme = ExtResource("3_theme")
+script = ExtResource("5_layer")
 
 [node name="DialogicNode_TextInput" parent="." index="0"]
 offset_left = -360.0
