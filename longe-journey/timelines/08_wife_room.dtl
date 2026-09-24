@@ -14,7 +14,9 @@ Text/lj_08_wife_room_007/text #id:lj_08_wife_room_007
 
 - Choice/lj_08_wife_room_008/text #id:lj_08_wife_room_008
     [background arg="res://art/backgrounds/wife_room_nurse.png" fade="0.6"]
+    audio action "res://audio/sfx/27_curtain/curtains_textile_texture_wav.mp3" [loop="false", bus="SFX"]
     Text/lj_08_wife_room_009/text #id:lj_08_wife_room_009
+    audio action -
     [background arg="res://art/backgrounds/wife_room_open.png" fade="0.6"]
     Text/lj_08_wife_room_010/text #id:lj_08_wife_room_010
     Text/lj_08_wife_room_011/text #id:lj_08_wife_room_011
@@ -48,5 +50,7 @@ Text/lj_08_wife_room_036/text #id:lj_08_wife_room_036
 audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
 Text/lj_08_wife_room_037/text #id:lj_08_wife_room_037
 audio action -
+audio action "res://audio/sfx/40_female_whisper/whisper_once.wav" [loop="false", bus="SFX"]
 Text/lj_08_wife_room_038/text #id:lj_08_wife_room_038
+audio action -
 jump 09_ending/

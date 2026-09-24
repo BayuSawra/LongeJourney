@@ -9,5 +9,7 @@ Text/lj_07_maze_exit_001/text #id:lj_07_maze_exit_001
 Text/lj_07_maze_exit_002/text #id:lj_07_maze_exit_002
 
 - Choice/lj_07_maze_exit_003/text #id:lj_07_maze_exit_003
+    audio action "res://audio/sfx/29_road_steps/light_footsteps_on_concrete_walking_wav.mp3" [loop="false", bus="SFX"]
     Text/lj_07_maze_exit_004/text #id:lj_07_maze_exit_004
+    audio action -
     jump 08_wife_room/

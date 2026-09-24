@@ -21,7 +21,9 @@ Text/lj_00_start_007/text #id:lj_00_start_007
 
 [background arg="res://art/bus_interior_staring.png" fade="1.0"]
 
+audio action "res://audio/sfx/25_bus_arrival/bus_coach_ext_pull_up_brake_air_release_idle.mp3" [loop="false", bus="SFX"]
 Text/lj_00_start_008/text #id:lj_00_start_008
+audio action -
 [wait time="0.5" hide_text="false"]
 
 - Choice/lj_00_start_010/text #id:lj_00_start_010

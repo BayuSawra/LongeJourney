@@ -7,7 +7,9 @@ Text/lj_01_hospital_000/text #id:lj_01_hospital_000
 
 Text/lj_01_hospital_001/text #id:lj_01_hospital_001
 
+audio action "res://audio/sfx/37_phone_handling/phone_pickup_once.wav" [loop="false", bus="SFX"]
 Text/lj_01_hospital_002/text #id:lj_01_hospital_002
+audio action -
 
 - Choice/lj_01_hospital_003/text #id:lj_01_hospital_003
     jump 02_ward/

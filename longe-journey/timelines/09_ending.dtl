@@ -9,6 +9,8 @@ Text/lj_09_ending_001/text #id:lj_09_ending_001
 
 Text/lj_09_ending_002/text #id:lj_09_ending_002
 
+audio ambience -
+audio ambience "res://audio/sfx/36_light_buzz/light_hum_loop.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
 Text/lj_09_ending_003/text #id:lj_09_ending_003
 audio action -

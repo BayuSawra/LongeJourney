@@ -9,21 +9,27 @@ Text/lj_03_crossroads_001/text #id:lj_03_crossroads_001
 
 if {visit_shiling} == 1 and {visit_luyuan} == 0:
     [background arg="res://art/backgrounds/crossroads_bus_sunflower.png" fade="0.6"]
+    audio action "res://audio/sfx/25_bus_arrival/bus_coach_ext_pull_up_brake_air_release_idle.mp3" [loop="false", bus="SFX"]
     Text/lj_03_crossroads_003/text #id:lj_03_crossroads_003
+    audio action -
 
     Text/lj_03_crossroads_004/text #id:lj_03_crossroads_004
 
     set {flower} += 1
 elif {visit_shiling} == 0 and {visit_luyuan} == 1:
     [background arg="res://art/backgrounds/crossroads_bus_sunflower.png" fade="0.6"]
+    audio action "res://audio/sfx/25_bus_arrival/bus_coach_ext_pull_up_brake_air_release_idle.mp3" [loop="false", bus="SFX"]
     Text/lj_03_crossroads_008/text #id:lj_03_crossroads_008
+    audio action -
 
     Text/lj_03_crossroads_009/text #id:lj_03_crossroads_009
 
     set {flower} += 1
 
 - Choice/lj_03_crossroads_012/text | [if {visit_huadian} < 3] [else="disable" alt_text="Choice/lj_03_crossroads_012/disabled_text"] #id:lj_03_crossroads_012
+    audio action "res://audio/sfx/29_road_steps/light_footsteps_on_concrete_walking_wav.mp3" [loop="false", bus="SFX"]
     Text/lj_03_crossroads_013/text #id:lj_03_crossroads_013
+    audio action -
     set {energy} -= 5
     set {visit_huadian} += 1
     jump 04_flower_shop/

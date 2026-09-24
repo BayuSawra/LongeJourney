@@ -31,7 +31,9 @@ label pick_hydrangea #id:lj_07_maze_middle_014
 [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
 Text/lj_07_maze_middle_015/text #id:lj_07_maze_middle_015
 [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+audio action "res://audio/sfx/32_female_humming/woman_humming.mp3" [loop="false", bus="SFX"]
 Text/lj_07_maze_middle_015_face/text #id:lj_07_maze_middle_015_face
+audio action -
 [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
 Text/lj_07_maze_middle_015_hands/text #id:lj_07_maze_middle_015_hands
 Text/lj_07_maze_middle_016/text #id:lj_07_maze_middle_016
@@ -59,7 +61,7 @@ Text/lj_07_maze_middle_031/text #id:lj_07_maze_middle_031
 jump 07_maze_exit/
 label pick_hydrangea_flower #id:lj_07_maze_middle_033
 [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+audio action "res://audio/sfx/34_body_scuffle/body_fall_wav.mp3" [loop="false", bus="SFX"]
 Text/lj_07_maze_middle_034/text #id:lj_07_maze_middle_034
 audio action -
 [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]

@@ -17,7 +17,9 @@ if {visit_ting_shifang} == 1:
     
     - Choice/lj_10_morgue_005/text #id:lj_10_morgue_005
         #set {energy} -= 5#int类型数值写法
+        audio action "res://audio/sfx/39_basket_handling/basket_lift_once.wav" [loop="false", bus="SFX"]
         Text/lj_10_morgue_007/text #id:lj_10_morgue_007
+        audio action -
         [background arg="res://art/backgrounds/morgue_basket_held.png" fade="0.6"]
         
         Text/lj_10_morgue_008/text #id:lj_10_morgue_008

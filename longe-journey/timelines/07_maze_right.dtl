@@ -5,6 +5,8 @@ audio ambience -
 audio ambience "res://audio/sfx/21_forest_insects/windy_humming_forest_with_birds.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
 Text/lj_07_maze_right_000/text #id:lj_07_maze_right_000
 
+audio ambience -
+audio ambience "res://audio/sfx/35_muffled_voices/muffled_voices_mp3.mp3" [loop="true", fade="0.5", volume="-14", bus="SFX"]
 audio action "res://audio/sfx/03_footsteps/footsteps_walking_through_woods.mp3" [loop="false", bus="SFX"]
 Text/lj_07_maze_right_001/text #id:lj_07_maze_right_001
 audio action -

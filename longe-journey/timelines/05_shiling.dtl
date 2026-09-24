@@ -49,10 +49,12 @@ if {visit_shiling} == 1:
                         - Choice/lj_05_shiling_021/text #id:lj_05_shiling_021
                             set {energy} -= 5
                             [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                            audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
                             Text/lj_05_shiling_023/text #id:lj_05_shiling_023
 
                             - Choice/lj_05_shiling_024/text #id:lj_05_shiling_024
                                 [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                                audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
                                 Text/lj_05_shiling_025/text #id:lj_05_shiling_025
 
                                 - Choice/lj_05_shiling_026/text #id:lj_05_shiling_026
@@ -123,10 +125,12 @@ if {visit_shiling} == 1:
                             - Choice/lj_05_shiling_069/text #id:lj_05_shiling_069
                                 set {energy} -= 5
                                 [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                                audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
                                 Text/lj_05_shiling_071/text #id:lj_05_shiling_071
 
                                 - Choice/lj_05_shiling_072/text #id:lj_05_shiling_072
                                     [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                                    audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
                                     Text/lj_05_shiling_073/text #id:lj_05_shiling_073
 
                                     - Choice/lj_05_shiling_074/text #id:lj_05_shiling_074
@@ -196,10 +200,12 @@ if {visit_shiling} == 1:
                     - Choice/lj_05_shiling_118/text #id:lj_05_shiling_118
                         set {energy} -= 5
                         [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                        audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
                         Text/lj_05_shiling_120/text #id:lj_05_shiling_120
 
                         - Choice/lj_05_shiling_121/text #id:lj_05_shiling_121
                             [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                            audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
                             Text/lj_05_shiling_122/text #id:lj_05_shiling_122
 
                             - Choice/lj_05_shiling_123/text #id:lj_05_shiling_123
@@ -260,10 +266,12 @@ if {visit_shiling} == 1:
                 - Choice/lj_05_shiling_160/text #id:lj_05_shiling_160
                     set {energy} -= 5
                     [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                    audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
                     Text/lj_05_shiling_162/text #id:lj_05_shiling_162
 
                     - Choice/lj_05_shiling_163/text #id:lj_05_shiling_163
                         [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                        audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
                         Text/lj_05_shiling_164/text #id:lj_05_shiling_164
 
                         - Choice/lj_05_shiling_165/text #id:lj_05_shiling_165
@@ -324,10 +332,12 @@ if {visit_shiling} == 1:
             - Choice/lj_05_shiling_202/text #id:lj_05_shiling_202
                 set {energy} -= 5
                 [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
                 Text/lj_05_shiling_204/text #id:lj_05_shiling_204
 
                 - Choice/lj_05_shiling_205/text #id:lj_05_shiling_205
                     [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                    audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
                     Text/lj_05_shiling_206/text #id:lj_05_shiling_206
 
                     - Choice/lj_05_shiling_207/text #id:lj_05_shiling_207

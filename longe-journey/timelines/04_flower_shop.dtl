@@ -15,7 +15,9 @@ if {visit_huadian} == 1:
 
     - Choice/lj_04_flower_shop_004/text #id:lj_04_flower_shop_004
         [background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
+        audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [loop="false", bus="SFX"]
         Text/lj_04_flower_shop_005/text #id:lj_04_flower_shop_005
+        audio action -
 
         Text/lj_04_flower_shop_006/text #id:lj_04_flower_shop_006
 
@@ -23,7 +25,9 @@ if {visit_huadian} == 1:
         jump 03_crossroads/
     - Choice/lj_04_flower_shop_010/text #id:lj_04_flower_shop_010
         [background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
+        audio action "res://audio/sfx/38_soil_rummage/selected.mp3" [loop="false", bus="SFX"]
         Text/lj_04_flower_shop_011/text #id:lj_04_flower_shop_011
+        audio action -
 
         Text/lj_04_flower_shop_012/text #id:lj_04_flower_shop_012
 
