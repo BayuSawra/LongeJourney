@@ -1,8 +1,8 @@
 class_name LoreValidator
 extends RefCounted
 
-const LoreFilesystem = preload("res://addons/longe_lore_tools/helpers/lore_filesystem.gd")
-const LoreMarkdownParser = preload("res://addons/longe_lore_tools/helpers/lore_markdown_parser.gd")
+const LoreFilesystem = preload("res://addons/long_journey_lore_tools/helpers/lore_filesystem.gd")
+const LoreMarkdownParser = preload("res://addons/long_journey_lore_tools/helpers/lore_markdown_parser.gd")
 
 const ENTRY_RE := "^[a-z0-9]+(?:-[a-z0-9]+)*\\.md$"
 const KNOWN_INFO_RE := "^\\- .+（来源：.+）$"

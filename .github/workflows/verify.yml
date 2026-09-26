@@ -1,10 +1,10 @@
-name: Verify LongeJourney
+name: Verify long-journey
 
 on:
   push:
-    paths: ["longe-journey/**", ".github/workflows/verify.yml"]
+    paths: ["long-journey/**", ".github/workflows/verify.yml"]
   pull_request:
-    paths: ["longe-journey/**", ".github/workflows/verify.yml"]
+    paths: ["long-journey/**", ".github/workflows/verify.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,20 +22,20 @@ jobs:
       - name: Install pinned Godot (verified SHA512)
         shell: powershell
         run: |
-          $godot = & ./longe-journey/tools/setup_env.ps1
+          $godot = & ./long-journey/tools/setup_env.ps1
           "GODOT_PATH=$godot" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - name: Verify tools, content and game
         shell: powershell
         run: |
-          python -m unittest discover -s longe-journey/tools/tests -v
+          python -m unittest discover -s long-journey/tools/tests -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python longe-journey/tools/verify.py
+          python long-journey/tools/verify.py
           exit $LASTEXITCODE
       - name: Upload verification reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: verification-reports
-          path: longe-journey/reports/
+          path: long-journey/reports/
           if-no-files-found: warn
           retention-days: 7

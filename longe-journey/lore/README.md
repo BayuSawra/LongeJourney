@@ -1,4 +1,4 @@
-# Longe Journey 故事规范库（lore）
+# long-journey 故事规范库（lore）
 
 这里是游戏重置到 Godot 后唯一的故事事实来源。写剧情、做关卡、写对话之前，先查这里；发现新事实，先改这里。
 

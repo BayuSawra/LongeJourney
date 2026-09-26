@@ -57,8 +57,8 @@
 在仓库根目录执行；第二步必须在重新导入后执行，以恢复游戏使用的派生片段记录：
 
 ```powershell
-python longe-journey/tools/import_selected_sfx.py 'D:/Downloads/音效选择清单 (1).json' --project-root longe-journey
-python longe-journey/tools/prepare_sfx_clips.py --ffmpeg .local-tools/audio-python/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe
+python long-journey/tools/import_selected_sfx.py 'D:/Downloads/音效选择清单 (1).json' --project-root long-journey
+python long-journey/tools/prepare_sfx_clips.py --ffmpeg .local-tools/audio-python/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe
 ```
 
 裁剪工具需要 FFmpeg，可用 `--ffmpeg` 指定实际路径。裁剪配方绑定本次选中的 track_id；换选其他录音必须重新检查剪辑点，工具不会套用其他候选。WAV 导入规范为 PCM16，MP3 原录音保持不变。

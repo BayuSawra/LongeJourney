@@ -105,7 +105,7 @@ def read_po(path: Path) -> tuple[dict[str, str], dict[str, Message]]:
 
 
 def write_po(path: Path, locale: str, messages: dict[str, Message], plural_forms: str) -> None:
-    header = ("Project-Id-Version: LongeJourney\nLanguage: " + locale +
+    header = ("Project-Id-Version: long-journey\nLanguage: " + locale +
               "\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\n" +
               "Content-Transfer-Encoding: 8bit\nPlural-Forms: " + plural_forms + "\n")
     lines = ['msgid ""', 'msgstr ' + json.dumps(header, ensure_ascii=False), ""]

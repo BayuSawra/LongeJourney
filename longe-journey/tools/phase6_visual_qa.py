@@ -44,8 +44,8 @@ def write_override(project: Path, user_name: str) -> None:
 def run_case(engine: Path, report: Path, width: int, height: int) -> dict:
     case = report / f"{width}x{height}"
     case.mkdir()
-    user_name = f"LongeJourney-Phase6-{uuid.uuid4().hex}"
-    with tempfile.TemporaryDirectory(prefix="LongeJourney-Phase6-") as temp:
+    user_name = f"long-journey-Phase6-{uuid.uuid4().hex}"
+    with tempfile.TemporaryDirectory(prefix="long-journey-Phase6-") as temp:
         project = Path(temp) / "project"
         shutil.copytree(ROOT, project, ignore=ignore_copy)
         write_override(project, user_name)

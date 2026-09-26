@@ -1,10 +1,10 @@
 # 阶段0 内容工具使用指南
 
-本文档面向后续在 Longe Journey 中持续添加故事内容的工作流，覆盖 Godot 编辑器内的 Lore 工具、命令行校验/索引工具，以及 Dialogic 对白入口。
+本文档面向后续在 long-journey 中持续添加故事内容的工作流，覆盖 Godot 编辑器内的 Lore 工具、命令行校验/索引工具，以及 Dialogic 对白入口。
 
 ## 1. LoreDock：Godot 编辑器内的正文工具
 
-用 Godot 打开 `project.godot` 后，右侧上栏会出现 `LongeLoreDock`，其中包含四个页签：
+用 Godot 打开 `project.godot` 后，右侧上栏会出现 `LongJourneyLoreDock`，其中包含四个页签：
 
 - `编辑`：新建、打开、保存、删除 lore 条目。
 - `预览`：查看当前条目的 Markdown 源码和渲染后的预览。

@@ -1,14 +1,14 @@
 @tool
 extends EditorPlugin
 
-const LoreDock = preload("res://addons/longe_lore_tools/ui/lore_dock.gd")
+const LoreDock = preload("res://addons/long_journey_lore_tools/ui/lore_dock.gd")
 
 var _dock: Control
 
 
 func _enter_tree() -> void:
 	_dock = LoreDock.new()
-	_dock.name = "LongeLoreDock"
+	_dock.name = "LongJourneyLoreDock"
 	add_control_to_dock(DOCK_SLOT_RIGHT_UL, _dock)
 
 

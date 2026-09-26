@@ -10,7 +10,7 @@ func before() -> void:
 		push_error("Run integration tests through tools/verify.py with isolated user data")
 		get_tree().quit(2)
 		return
-	assert_str(str(ProjectSettings.get_setting("application/config/name"))).starts_with("LongeJourney-Verify-")
+	assert_str(str(ProjectSettings.get_setting("application/config/name"))).starts_with("long-journey-Verify-")
 	assert_str(OS.get_user_data_dir().replace("\\", "/")).is_equal(
 		str(ProjectSettings.get_setting("validation/user_data_dir")))
 	for key in SaveManager.GAME_STATE_VARS:
@@ -51,10 +51,10 @@ func test_godot_47_project_features_and_plugin_entrypoints() -> void:
 	assert_bool(features.has("GL Compatibility")).is_true()
 	var enabled_plugins: PackedStringArray = ProjectSettings.get_setting("editor_plugins/enabled")
 	for plugin_path in ["res://addons/dialogic/plugin.cfg", "res://addons/gdUnit4/plugin.cfg",
-			"res://addons/longe_lore_tools/plugin.cfg"]:
+			"res://addons/long_journey_lore_tools/plugin.cfg"]:
 		assert_bool(enabled_plugins.has(plugin_path)).is_true()
 	for entrypoint in ["res://addons/dialogic/plugin.gd", "res://addons/gdUnit4/plugin.gd",
-			"res://addons/longe_lore_tools/plugin.gd"]:
+			"res://addons/long_journey_lore_tools/plugin.gd"]:
 		assert_object(load(entrypoint)).is_not_null()
 
 

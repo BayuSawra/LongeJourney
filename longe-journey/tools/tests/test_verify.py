@@ -102,7 +102,7 @@ class VerifyTests(unittest.TestCase):
         userdata = verify.isolated_user_data_dir(environment)
         self.assertEqual(userdata.parent, Path(environment["APPDATA"]))
         self.assertTrue(userdata.is_dir())
-        config = verify.isolate_project_config('[application]\nconfig/name="LongeJourney"\n', userdata)
+        config = verify.isolate_project_config('[application]\nconfig/name="long-journey"\n', userdata)
         self.assertIn('config/custom_user_dir_name="' + userdata.name + '"', config)
         self.assertIn('user_data_dir="' + userdata.as_posix() + '"', config)
 
@@ -115,7 +115,7 @@ class VerifyTests(unittest.TestCase):
 
     def test_all_godot_steps_share_editor_environment_and_user_data_dir(self):
         (self.root / "project.godot").write_text(
-            '[application]\nconfig/name="LongeJourney"\n[editor_plugins]\nenabled=PackedStringArray()\n',
+            '[application]\nconfig/name="long-journey"\n[editor_plugins]\nenabled=PackedStringArray()\n',
             encoding="utf-8")
         docs = self.root / "docs"
         docs.mkdir()
@@ -173,9 +173,9 @@ class VerifyTests(unittest.TestCase):
         self.assertEqual((self.root / "project.godot").read_text(encoding="utf-8"), original)
 
     def test_editor_user_data_is_isolated_in_project_config(self):
-        original = '[application]\nconfig/name="LongeJourney"\nrun/main_scene="res://menu.tscn"\n[rendering]\nrenderer/rendering_method="gl_compatibility"\n'
+        original = '[application]\nconfig/name="long-journey"\nrun/main_scene="res://menu.tscn"\n[rendering]\nrenderer/rendering_method="gl_compatibility"\n'
         result = verify.isolate_project_config(original, self.root)
-        self.assertIn('config/name="LongeJourney-Verify-', result)
+        self.assertIn('config/name="long-journey-Verify-', result)
         self.assertIn('config/use_custom_user_dir=true', result)
         self.assertIn('config/custom_user_dir_name="' + self.root.name + '"', result)
         self.assertIn('[validation]\nuser_data_dir="' + self.root.as_posix() + '"', result)

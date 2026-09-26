@@ -1,10 +1,10 @@
 @tool
 extends VBoxContainer
 
-const LoreFilesystem = preload("res://addons/longe_lore_tools/helpers/lore_filesystem.gd")
-const LoreMarkdownParser = preload("res://addons/longe_lore_tools/helpers/lore_markdown_parser.gd")
-const LoreValidator = preload("res://addons/longe_lore_tools/helpers/lore_validator.gd")
-const IndexWriter = preload("res://addons/longe_lore_tools/helpers/index_writer.gd")
+const LoreFilesystem = preload("res://addons/long_journey_lore_tools/helpers/lore_filesystem.gd")
+const LoreMarkdownParser = preload("res://addons/long_journey_lore_tools/helpers/lore_markdown_parser.gd")
+const LoreValidator = preload("res://addons/long_journey_lore_tools/helpers/lore_validator.gd")
+const IndexWriter = preload("res://addons/long_journey_lore_tools/helpers/index_writer.gd")
 
 var _category_option: OptionButton
 var _search_input: LineEdit
@@ -28,7 +28,7 @@ var _entries: Array[String] = []
 
 
 func _ready() -> void:
-	name = "LongeLoreDock"
+	name = "LongJourneyLoreDock"
 	custom_minimum_size = Vector2(360, 520)
 	add_theme_constant_override("separation", 6)
 	_build_ui()

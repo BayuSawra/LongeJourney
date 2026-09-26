@@ -41,7 +41,7 @@ def disable_mcp_editor(project: Path) -> None:
 
 
 def write_override(project: Path, user_data: Path) -> None:
-    (project / "override.cfg").write_text("[application]\n" + f'config/name="LongeJourney-UIVisualQA-{uuid.uuid4().hex}"\n' + "config/use_custom_user_dir=true\n" + f'config/custom_user_dir_name="{user_data.name}"\n' + "[validation]\n" + f'user_data_dir="{user_data.as_posix()}"\n' + "[display]\nwindow/size/mode=0\nwindow/stretch/mode=\"canvas_items\"\n", encoding="utf-8")
+    (project / "override.cfg").write_text("[application]\n" + f'config/name="long-journey-UIVisualQA-{uuid.uuid4().hex}"\n' + "config/use_custom_user_dir=true\n" + f'config/custom_user_dir_name="{user_data.name}"\n' + "[validation]\n" + f'user_data_dir="{user_data.as_posix()}"\n' + "[display]\nwindow/size/mode=0\nwindow/stretch/mode=\"canvas_items\"\n", encoding="utf-8")
 
 
 def import_command(engine: Path, project: Path) -> list[str]:
@@ -91,8 +91,8 @@ def validate_case_result(case: Path, locale: str, width: int, height: int) -> No
 def run_case(engine: Path, report: Path, width: int, height: int, locale: str) -> dict:
     case = report / locale / f"{width}x{height}"
     case.mkdir(parents=True)
-    with tempfile.TemporaryDirectory(prefix="longe-journey-ui-qa-") as temp, \
-            tempfile.TemporaryDirectory(prefix="LongeJourney-UIVisualQA-", dir=os.environ["APPDATA"]) as userdata:
+    with tempfile.TemporaryDirectory(prefix="long-journey-ui-qa-") as temp, \
+            tempfile.TemporaryDirectory(prefix="long-journey-UIVisualQA-", dir=os.environ["APPDATA"]) as userdata:
         project = Path(temp) / "project"
         shutil.copytree(ROOT, project, ignore=ignore_copy)
         disable_mcp_editor(project)

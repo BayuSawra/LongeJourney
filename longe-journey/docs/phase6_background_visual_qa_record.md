@@ -89,6 +89,6 @@
 ## 自动门槛
 
 - `python -m pytest tools/tests`：54 passed。
-- `python tools/verify.py --godot D:\project_godot\LongeJourney\.local-tools\godot-4.7\Godot_v4.7-stable_win64_console.exe`：版本、隔离冷导入、资源扫描、资源验证、gdUnit4 和启动冒烟全部通过。
+- `python tools/verify.py --godot D:\project_godot\long-journey\.local-tools\godot-4.7\Godot_v4.7-stable_win64_console.exe`：版本、隔离冷导入、资源扫描、资源验证、gdUnit4 和启动冒烟全部通过。
 - `git diff --check`：通过。
 - 正式背景资源：35 张，全部存在且为 `1672×941 RGB PNG`；manifest 引用无缺失。

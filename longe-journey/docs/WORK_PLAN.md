@@ -1,4 +1,4 @@
-# Longe Journey Godot 迁移工作交接计划
+# long-journey Godot 迁移工作交接计划
 
 > 开发环境与验证入口以 `DEVELOPMENT.md` 为准；下述阶段规划保留为历史背景。
 
@@ -11,7 +11,7 @@
 ### 1.1 环境
 
 - 引擎：Godot 4.7，渲染后端为 GL Compatibility。
-- 项目路径：`D:\LongeJourney\longe-journey`
+- 项目路径：`D:\long-journey\long-journey`
 - 启动方式：用 Godot 打开 `project.godot` 即可。
 
 ### 1.2 入口流程
@@ -30,8 +30,8 @@ scenes/mainMenu.tscn
 
 - 提交 `8eb04bb`：feat: add Phase 0 lore tools and content pipeline
 - 在此之前有 `f1da61b`、`cf38ade`。
-- 已落地的插件：`addons/longe_lore_tools`（LoreDock）。
-- Godot 编辑器右侧上栏有 `LongeLoreDock`，页签为 `编辑 / 预览 / 校验 / 索引`。
+- 已落地的插件：`addons/long_journey_lore_tools`（LoreDock）。
+- Godot 编辑器右侧上栏有 `LongJourneyLoreDock`，页签为 `编辑 / 预览 / 校验 / 索引`。
 
 GameState 与 HUD 已完成并提交：
 
@@ -51,7 +51,7 @@ GameState 与 HUD 已完成并提交：
 
 - `tools/check_lore_canon.py`：通过（exit 0）。
 - `tools/update_lore_index.py`：通过（exit 0），`lore/INDEX.md` 无新增 diff。
-- 登记检查：`project.godot` 已注册 `Dialogic`、`GameState` 与 `EndingManager` autoload；`longe_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD` 与 `EndingDebugPanel`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
+- 登记检查：`project.godot` 已注册 `Dialogic`、`GameState` 与 `EndingManager` autoload；`long_journey_lore_tools` 插件已启用；`scenes/scene_1.tscn` 已挂载 `HUD` 与 `EndingDebugPanel`；`scenes/hud.tscn` 已挂 `scripts/hud.gd`。
 - 工作区：本次 3 个文件（`ending_manager.gd`、`ending_debug_panel.gd`、`ending_debug_panel.tscn`）已提交。
 
 阶段 4.1 迷宫链路检查（2026-08-16）：
@@ -80,7 +80,7 @@ GameState 与 HUD 已完成并提交：
 ### 2.1 顶层目录
 
 ```text
-addons/      # dialogic、godot_dotnet_mcp、longe_lore_tools
+addons/      # dialogic、godot_dotnet_mcp、long_journey_lore_tools
 art/         # 美术资源
 character/   # Dialogic 角色（character/我.dch，已登记为“我”）
 docs/        # 本文档与设计/实现文档
@@ -97,7 +97,7 @@ tools/       # Python 内容工具
 - `lore/` 存设定正文，`lore/INDEX.md` 是汇总索引。
 - `tools/check_lore_canon.py`：校验 canon 一致性。
 - `tools/update_lore_index.py`：重建 `lore/INDEX.md`。
-- `addons/longe_lore_tools`：Godot 编辑器内的 LoreDock 插件，含编辑、预览、校验、索引四个页签。
+- `addons/long_journey_lore_tools`：Godot 编辑器内的 LoreDock 插件，含编辑、预览、校验、索引四个页签。
 
 PowerShell 命令行等价操作：
 

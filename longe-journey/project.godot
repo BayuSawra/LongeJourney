@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="LongeJourney"
+config/name="long-journey"
 run/main_scene="res://scenes/mainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -140,7 +140,7 @@ window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="LongeJourney"
+project/assembly_name="long-journey"
 
 [editor]
 
@@ -148,7 +148,7 @@ import/use_multiple_threads=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_dotnet_mcp/plugin.cfg", "res://addons/longe_lore_tools/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://editor/localization_preview/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_dotnet_mcp/plugin.cfg", "res://addons/long_journey_lore_tools/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://editor/localization_preview/plugin.cfg")
 
 [input]
 

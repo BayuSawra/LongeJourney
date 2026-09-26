@@ -259,7 +259,7 @@ def import_selection(selection_path: Path, project_root: Path) -> dict:
 
     manifest = {
         "version": 2,
-        "title": "Longe Journey 已选音效",
+        "title": "long-journey 已选音效",
         "imported_at": datetime.now(timezone.utc).isoformat(),
         "source_selection": selection_path.name,
         "selected_count": len(imported),

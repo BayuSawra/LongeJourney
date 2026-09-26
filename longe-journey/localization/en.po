@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: LongeJourney\nLanguage: en\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: long-journey\nLanguage: en\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: res://character/neighbor.dch
 #. source-sha256: 58cf5de1eb45dbcc0d7f74ce76cae0e16f2961a3b71df3a4878982eba9111ded
@@ -2490,7 +2490,7 @@ msgstr "A NARRATIVE ADVENTURE"
 #: res://scenes/mainMenu.tscn
 #. source-sha256: 8c6c7803829365b009b9988f87db49e478bc882613c9e31c485ca3214556f8de
 msgid "ui.menu.title"
-msgstr "Longe Journey"
+msgstr "long-journey"
 
 #: scenes/mainMenu.tscn:Button_exit
 #. source-sha256: dbc0fe120d31d61a6823b1d8c015e06b9baeea017fba19a80327b696c5ca6558

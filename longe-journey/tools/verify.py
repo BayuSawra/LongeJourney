@@ -91,7 +91,7 @@ def isolated_editor_environment(directory: Path) -> dict[str, str]:
 
 
 def isolated_user_data_dir(environment: dict[str, str]) -> Path:
-    userdata = Path(environment["APPDATA"]) / ("LongeJourney-Verify-" + uuid.uuid4().hex)
+    userdata = Path(environment["APPDATA"]) / ("long-journey-Verify-" + uuid.uuid4().hex)
     userdata.mkdir()
     return userdata
 
@@ -121,7 +121,7 @@ def check_editor_localization(godot: str, project: Path, reports: Path, timeout:
 def isolate_project_config(config: str, userdata: Path) -> str:
     # Editor mode does not read override.cfg; isolate the disposable project itself.
     application = (
-        'config/name="LongeJourney-Verify-' + uuid.uuid4().hex + '"\n'
+        'config/name="long-journey-Verify-' + uuid.uuid4().hex + '"\n'
         'config/use_custom_user_dir=true\n'
         'config/custom_user_dir_name="' + userdata.name + '"'
     )
@@ -153,7 +153,7 @@ def main() -> int:
             raise RuntimeError(f"Pinned Godot 4.7 standard required; got {version}")
         # Only the disposable copy is imported or written by validators/editor.
         # Its unique application name isolates user:// saves/settings from the game.
-        with tempfile.TemporaryDirectory(prefix="longe-journey-verify-") as temp:
+        with tempfile.TemporaryDirectory(prefix="long-journey-verify-") as temp:
             temporary_root = Path(temp)
             project = temporary_root / "project"
             editor_environment = isolated_editor_environment(temporary_root / "editor")

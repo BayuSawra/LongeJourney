@@ -59,15 +59,15 @@ def main():
     process = None
     try:
         require_pinned_engines(engine, editor, si)
-        with tempfile.TemporaryDirectory(prefix='LongeJourney-MCP-') as temp, \
-             tempfile.TemporaryDirectory(prefix='LongeJourney-MCP-', dir=os.environ['APPDATA']) as user:
+        with tempfile.TemporaryDirectory(prefix='long-journey-MCP-') as temp, \
+             tempfile.TemporaryDirectory(prefix='long-journey-MCP-', dir=os.environ['APPDATA']) as user:
             project = Path(temp) / 'project'
             shutil.copytree(ROOT, project, ignore=shutil.ignore_patterns(
                 '.git', '.godot', 'reports', 'backups', '__pycache__', '.gdunit*', '.env', 'config.toml'))
             config = project / 'project.godot'
             text = config.read_text(encoding='utf-8')
             name = Path(user).name
-            text = text.replace('config/name="LongeJourney"', f'config/name="{name}"\n'
+            text = text.replace('config/name="long-journey"', f'config/name="{name}"\n'
                                 f'config/use_custom_user_dir=true\nconfig/custom_user_dir_name="{name}"')
             require(f'config/custom_user_dir_name="{name}"' in text, 'Failed to isolate user data')
             config.write_text(text, encoding='utf-8')
@@ -81,7 +81,7 @@ def main():
             addon = project / 'addons' / 'mcp_acceptance'
             addon.mkdir()
             (addon / 'plugin.cfg').write_text('[plugin]\nname="MCP acceptance observer"\n'
-                'description="Isolated test harness"\nauthor="LongeJourney"\nversion="1"\nscript="plugin.gd"\n')
+                'description="Isolated test harness"\nauthor="long-journey"\nversion="1"\nscript="plugin.gd"\n')
             (addon / 'plugin.gd').write_text('''@tool
 extends EditorPlugin
 const Store = preload("res://addons/godot_dotnet_mcp/plugin/runtime/mcp_runtime_debug_store.gd")
@@ -103,7 +103,7 @@ func _process(_delta: float) -> void:
 ''', encoding='utf-8')
             text = text.replace(f'"{MCP}"', f'"{MCP}", "res://addons/mcp_acceptance/plugin.cfg"')
             config.write_text(text, encoding='utf-8')
-            marker = 'LongeJourney-MCP-Probe-' + uuid.uuid4().hex
+            marker = 'long-journey-MCP-Probe-' + uuid.uuid4().hex
             (project / 'mcp_probe.gd').write_text('extends Node\nfunc _ready() -> void:\n'
                 f'\tget_node("/root/MCPRuntimeBridge").emit_error("{marker}")\n', encoding='utf-8')
             (project / 'mcp_probe.tscn').write_text('[gd_scene load_steps=2 format=3]\n'
@@ -159,7 +159,7 @@ func _process(_delta: float) -> void:
                             time.sleep(1)
                     require(health['status'] == 'ok' and health['tool_loader_status']['healthy'], 'Unhealthy server')
                     init = rpc('initialize', {'protocolVersion': '2025-06-18', 'capabilities': {},
-                        'clientInfo': {'name': 'LongeJourney-acceptance', 'version': '1'}})
+                        'clientInfo': {'name': 'long-journey-acceptance', 'version': '1'}})
                     require(init['protocolVersion'] == '2025-06-18', 'Wrong protocol')
                     rpc('notifications/initialized', notification=True)
                     tools = rpc('tools/list')['tools']

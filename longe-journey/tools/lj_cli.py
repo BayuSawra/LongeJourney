@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Unified command-line entry for the Longe Journey lore tools.
+"""Unified command-line entry for the long-journey lore tools.
 
 Subcommands:
   check-lore     Validate lore/ files against the project conventions.
@@ -361,7 +361,7 @@ def run_import(root: Path | None, source: Path) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="lj_cli.py",
-        description="Longe Journey lore 统一命令行工具",
+        description="long-journey lore 统一命令行工具",
     )
     parser.add_argument(
         "--root",

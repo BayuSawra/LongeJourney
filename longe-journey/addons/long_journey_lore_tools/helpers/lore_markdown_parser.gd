@@ -1,7 +1,7 @@
 class_name LoreMarkdownParser
 extends RefCounted
 
-const LoreFilesystem = preload("res://addons/longe_lore_tools/helpers/lore_filesystem.gd")
+const LoreFilesystem = preload("res://addons/long_journey_lore_tools/helpers/lore_filesystem.gd")
 
 
 static func parse_entry(text: String) -> Dictionary:

@@ -21,7 +21,7 @@
 - 不修改 `addons/`、GameState、存档逻辑或第三方插件。
 - 不把中文剧情文字、楼层或房间号烘焙进背景图片。
 - 不凭“感觉不一致”直接重绘；必须先记录具体问题，再修改对应资产。
-- 修改背景行为时同步更新 `longe-journey/tests/` 回归测试。
+- 修改背景行为时同步更新 `long-journey/tests/` 回归测试。
 - 不提交 `.godot/`、截图、验证报告、工具下载、密钥或本地配置。
 
 ## 3. 并行执行分工
@@ -122,7 +122,7 @@
 
 ## 7. 自动验证
 
-在 `longe-journey/` 目录运行：
+在 `long-journey/` 目录运行：
 
 ```powershell
 python -m pytest tools/tests

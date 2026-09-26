@@ -8,20 +8,20 @@ Windows、Python 3.10+、PowerShell，验证固定使用 Godot **4.7 standard**�
 在仓库根目录首次安装引擎（已存在的目录会明确报错，不覆盖）：
 
 ```powershell
-$env:GODOT_PATH = & ./longe-journey/tools/setup_env.ps1
+$env:GODOT_PATH = & ./long-journey/tools/setup_env.ps1
 ```
 
 后续会话直接指定已安装的引擎：
 
 ```powershell
 $env:GODOT_PATH = "$PWD/.local-tools/godot-4.7/Godot_v4.7-stable_win64_console.exe"
-python -m unittest discover -s longe-journey/tools/tests -v
+python -m unittest discover -s long-journey/tools/tests -v
 if ($LASTEXITCODE -ne 0) { throw "Tool tests failed" }
-python longe-journey/tools/verify.py
+python long-journey/tools/verify.py
 if ($LASTEXITCODE -ne 0) { throw "Verification failed" }
 ```
 
-编辑器打开 `longe-journey/project.godot`。gdUnit4 已注册为编辑器插件。
+编辑器打开 `long-journey/project.godot`。gdUnit4 已注册为编辑器插件。
 **存档/设置集成测试只通过 verify.py 运行**，不直接从原项目运行测试套件。
 
 ## 2.0 分支的 Godot 4.7 升级
@@ -44,7 +44,7 @@ if ($LASTEXITCODE -ne 0) { throw "Verification failed" }
 
 临时项目使用独立 `user://`，不改真实存档、设置及原项目导入缓存。
 CI 副本禁用 MCP **编辑器**插件，避免启动开发 HTTP 服务；原项目配置与运行时桥保持不变。
-报告写入 `longe-journey/reports/verify-*/`，包含日志、JUnit/HTML、资源报告与 summary.json。
+报告写入 `long-journey/reports/verify-*/`，包含日志、JUnit/HTML、资源报告与 summary.json。
 资源 orphan 数量只是报告，不把历史数字锁成错误门槛。
 
 `.github/workflows/verify.yml` 在 Windows 执行同一套检查并上传报告。
@@ -87,7 +87,7 @@ python tools/verify_mcp.py --godot <Godot-4.7-console.exe绝对路径>
 对话框通过业务继承场景适配窗口宽度，不修改 Dialogic 插件。
 
 ```powershell
-python longe-journey/tools/ui_visual_qa.py --godot $env:GODOT_PATH
+python long-journey/tools/ui_visual_qa.py --godot $env:GODOT_PATH
 ```
 
 在隔离工程和独立用户目录中，使用 GL Compatibility 实际渲染中英文界面，覆盖

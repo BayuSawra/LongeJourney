@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 
-SRC = Path(r"D:\LongeJourney\长路漫漫\长路漫漫.html")
+SRC = Path(r"D:\long-journey\长路漫漫\长路漫漫.html")
 OUT = Path(__file__).with_name("_twine_extract.txt")
 
 

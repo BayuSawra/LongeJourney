@@ -1,4 +1,4 @@
-# Longe Journey 内容工具统一契约
+# long-journey 内容工具统一契约
 
 ## 工程验证
 
