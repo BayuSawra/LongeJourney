@@ -7,11 +7,11 @@ msgstr "邻居"
 
 #: res://character/nurse1.dch
 msgid "Character/lj_nurse1/name"
-msgstr "护士 1"
+msgstr "歪嘴护士"
 
 #: res://character/nurse2.dch
 msgid "Character/lj_nurse2/name"
-msgstr "护士 2"
+msgstr "哀怨护士"
 
 #: res://character/我.dch
 msgid "Character/lj_self/name"
@@ -23,7 +23,7 @@ msgstr "我自己"
 
 #: res://character/storeOwner.dch
 msgid "Character/lj_storeOwner/name"
-msgstr "花店老板"
+msgstr "丑老板"
 
 #: res://character/wife.dch
 msgid "Character/lj_wife/name"

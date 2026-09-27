@@ -7,14 +7,14 @@ msgid "Character/lj_neighbor/name"
 msgstr "Neighbor"
 
 #: res://character/nurse1.dch
-#. source-sha256: 67553a4d5272405721d0a269b869a81bf424b5235ff798868d4403d7b6f81c7d
+#. source-sha256: c7f4085a255080bbd7bfc5cab36656c7bcdaaf5495ca09f6d174ecd4bea13ae9
 msgid "Character/lj_nurse1/name"
-msgstr "Nurse 1"
+msgstr "Crooked-Mouthed Nurse"
 
 #: res://character/nurse2.dch
-#. source-sha256: f8f5e373f2546d568b686e6776339d465cfe42d44e97f344a29c5118e9578f47
+#. source-sha256: c4c67ba9c50d8f1eb12987ced9bee974e188f13a70c10809224fa977275026d4
 msgid "Character/lj_nurse2/name"
-msgstr "Nurse 2"
+msgstr "Sorrowful Nurse"
 
 #: res://character/我.dch
 #. source-sha256: b70bb4acc0484cf040de4c07c60f9db722283da2c4a672c39291de621e92c33f
@@ -27,9 +27,9 @@ msgid "Character/lj_self/nicknames"
 msgstr "myself"
 
 #: res://character/storeOwner.dch
-#. source-sha256: 52428f77de9ae253dd21b1d1ea92ba607f7a569bdb93e9aabd2f9d527ed01db4
+#. source-sha256: 6da738115a68eab2ca7998efa30496175ace932bd30f4cf94780d3ab819ed18d
 msgid "Character/lj_storeOwner/name"
-msgstr "Flower Shop Owner"
+msgstr "Ugly Boss"
 
 #: res://character/wife.dch
 #. source-sha256: 55c4fadb327e49a5ff860030e09399f6280924cc2761dd7f5ecfbb395ad1d93b

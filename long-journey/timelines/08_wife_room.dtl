@@ -7,9 +7,9 @@ audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [loop="true", fade=
 
 今天经历了太多，我已经准备好将一切讲给妻子听，听完这些故事，她就应该知道，我为了她付出了多少。缓步来到她床边，帘子正拉着，护士和她在帘子后面，聊着天。 #id:lj_08_wife_room_002
 “你丈夫今天还来吗？” #id:lj_08_wife_room_003
-wife: “不知道，我不管他来不来。” #id:lj_08_wife_room_004
+character/wife: “不知道，我不管他来不来。” #id:lj_08_wife_room_004
 “上回他来的时候什么都没带，不知道谁让他进来的。” #id:lj_08_wife_room_005
-wife: “我宁愿他别来，每次来了好像有多了不起，一个简单的探病对他而言难如登天。” #id:lj_08_wife_room_006
+character/wife: “我宁愿他别来，每次来了好像有多了不起，一个简单的探病对他而言难如登天。” #id:lj_08_wife_room_006
 “他是你丈夫，法律规定他必须来。” #id:lj_08_wife_room_007
 
 - 拉开帘子 #id:lj_08_wife_room_008

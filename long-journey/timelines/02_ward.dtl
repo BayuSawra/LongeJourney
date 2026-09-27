@@ -6,11 +6,11 @@ audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [fade="0.5" volume=
 [color=#696969][i]※当前位置  住院部※[/i][/color] #id:lj_02_ward_000
 
 if {flower} < 5:
-    nurse1: “没带花别进去。” #id:lj_02_ward_003
+    character/nurse1: “没带花别进去。” #id:lj_02_ward_003
     
     一个虎背熊腰的护士拦住我。 #id:lj_02_ward_004
-    我: ”我经常来，你们医院的护士都认识我。“ #id:lj_02_ward_001
-    nurse1: “我就不认识你!没带花就别在这里丢人现眼！有点常识的人都知道要带5朵花！" #id:lj_02_ward_005
+    character/我: ”我经常来，你们医院的护士都认识我。“ #id:lj_02_ward_001
+    character/nurse1: “我就不认识你!没带花就别在这里丢人现眼！有点常识的人都知道要带5朵花！" #id:lj_02_ward_005
     
     [background arg="res://art/backgrounds/hospital_exterior.png" fade="0.6"]
     
@@ -22,8 +22,8 @@ if {flower} < 5:
 elif {hualan}:
     我再次来到住院部楼下。 #id:lj_02_ward_012
     
-    nurse1: “这都几点了？叫你拿5朵花怎么就这么费劲？“ #id:lj_02_ward_013
-    nurse1: “...哦，你还捡了个死人花篮？...行吧，快些进去。” #id:lj_02_ward_018
+    character/nurse1: “这都几点了？叫你拿5朵花怎么就这么费劲？“ #id:lj_02_ward_013
+    character/nurse1: “...哦，你还捡了个死人花篮？...行吧，快些进去。” #id:lj_02_ward_018
     
     - 进入病房 #id:lj_02_ward_014
         [save slot="auto"]
