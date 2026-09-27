@@ -1,0 +1,15 @@
+[background arg="res://art/backgrounds/maze_exit_road.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  迷宫※[/i][/color] #id:lj_07_maze_exit_000
+
+风从巷口灌进来，皮鞋裂口处的白胶痕迹还留在脚尖。主角站在路边，怀里几朵花压得衣襟发沉，四周的紫灰色日光像是隔着一层旧玻璃。 #id:lj_07_maze_exit_001
+他低头看了看自己，承认这趟路早已把“王爷”的念头碾得支离破碎。可前方还有一个人等着他，无论如何，他得走过去。 #id:lj_07_maze_exit_002
+
+- 走进妻子的房间 #id:lj_07_maze_exit_003
+    audio action "res://audio/sfx/29_road_steps/light_footsteps_on_concrete_walking_wav.mp3" [loop="false", bus="SFX"]
+    主角攥紧衣襟，沿着灰蒙蒙的路朝住院部的方向走去。 #id:lj_07_maze_exit_004
+    audio action -
+    jump 08_wife_room/

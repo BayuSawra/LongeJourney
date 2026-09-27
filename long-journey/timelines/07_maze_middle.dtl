@@ -1,0 +1,71 @@
+[background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  迷宫※[/i][/color] #id:lj_07_maze_middle_000
+
+假山回廊越走越窄，风声闷在石壁间。鼻尖突然飘来一股芳香，像绿色的兰花，浓烈得让人怀疑它根本不是这世上该有的味道。主角循香抬头，见一朵绿兰开在石缝里，从未见过这种颜色，忍不住摘下来揣入袖兜。 #id:lj_07_maze_middle_001
+
+[background arg="res://art/backgrounds/maze_blood_trail.png" fade="0.6"]
+
+- 摘仙人球花 #id:lj_07_maze_middle_002
+    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+    假山深处还有一丛仙人球，尖刺密密麻麻。主角越过层层尖刺去够那朵花，掰下来的瞬间手掌被划出一道细长口子，血珠渗出来。 #id:lj_07_maze_middle_003
+    audio action -
+    [background arg="res://art/backgrounds/maze_blood_trail_no_cactus_flower.png" fade="0.6"]
+    他看着伤口，忽然觉得自己也许没有想象中那么厉害。他希望自己不是特例，至少这一刻不是。 #id:lj_07_maze_middle_004
+    jump pick_cactus_flower
+
+- 不摘花继续走 #id:lj_07_maze_middle_007
+    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
+    绿兰收进袖兜，花香还萦绕在指间。主角绕过仙人球丛，走向假山中心。 #id:lj_07_maze_middle_008
+    audio action -
+    jump pick_hydrangea
+
+label pick_cactus_flower #id:lj_07_maze_middle_011
+花到手了，掌心却一直发麻。主角攥紧仙人球花，边走边想刚才那一划，越想越觉得心里空了一块。 #id:lj_07_maze_middle_012
+jump pick_hydrangea
+
+label pick_hydrangea #id:lj_07_maze_middle_014
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+假山中心站着一个女人，衣着华服，头戴金钗，五官算得上漂亮，但整个人静得不像活物。她头上顶着一朵蓝色圆滚滚的绣球花。 #id:lj_07_maze_middle_015
+[background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
+audio action "res://audio/sfx/32_female_humming/woman_humming.mp3" [loop="false", bus="SFX"]
+眼睛浑浊得几乎看不到瞳孔，眼皮被细线吊起，末端缝在眉毛上；嘴微微翻动，喉咙里挤出模糊的歌声，歌词听不清，像唱给空气听的。 #id:lj_07_maze_middle_015_face
+audio action -
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+她双手无力地垂着，手背画满看不懂的符咒，指尖微微颤抖。 #id:lj_07_maze_middle_015_hands
+她是什么？又是怎么立住的？ #id:lj_07_maze_middle_016
+
+- 她是怎么立住的？ #id:lj_07_maze_middle_017
+    jump how_she_stands
+
+label how_she_stands #id:lj_07_maze_middle_020
+[background arg="res://art/backgrounds/maze_pinned_woman.png" fade="0.6"]
+主角走近一看，一根棍子从她背后衣服中间穿过，腰带紧紧绑在棍子上，棍子被敲进地里，把她整个人钉在假山中央。他忽然明白那声“准备好了”意味着什么：这是灭绝人性的地狱。 #id:lj_07_maze_middle_021
+天地像在旋转，眼前轰然歪倒。主角踉跄着后退，喉头哽住：“畜生，真是畜生……我当不了王爷，我当不了了！” #id:lj_07_maze_middle_022
+
+- 立刻逃离这里 #id:lj_07_maze_middle_023
+    jump flee
+
+- 摘下绣球花 #id:lj_07_maze_middle_026
+    jump pick_hydrangea_flower
+
+label flee #id:lj_07_maze_middle_029
+[background arg="res://art/backgrounds/maze_escape_road.png" fade="0.6"]
+audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
+主角顾不上别的，一路狂奔，撞翻挡路的人冲出大门。皮鞋脚尖的位置裂开一道口子，皮翘起来，残留着白色胶痕。 #id:lj_07_maze_middle_030
+audio action -
+他逃到路口才停下来，低头数了数怀里的花，又拍了拍身上的尘土。抬头看去，太阳是紫灰色的，像被什么东西蒙住了。 #id:lj_07_maze_middle_031
+jump 07_maze_exit/
+label pick_hydrangea_flower #id:lj_07_maze_middle_033
+[background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
+audio action "res://audio/sfx/34_body_scuffle/body_fall_wav.mp3" [loop="false", bus="SFX"]
+主角挣扎着爬起，又倒下，最后用手肘顶住她的肩膀，才勉强把那朵蓝色绣球花摘下来。她的身体僵硬，和正常人不一样。 #id:lj_07_maze_middle_034
+audio action -
+[background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
+攥着花，主角忽然承认：“我没有当王的勇气，残忍和暴力都不是我的优点。我，只是一个普通人。” #id:lj_07_maze_middle_035
+
+- 离开这里 #id:lj_07_maze_middle_036
+    jump flee

@@ -1,0 +1,404 @@
+if {visit_shiling} == 1:
+    [background arg="res://art/backgrounds/shiling_foothill.png" fade="0.0"]
+else:
+    [background arg="res://art/backgrounds/shiling_closed_gate.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  狮岭※[/i][/color] #id:lj_05_shiling_000
+
+if {visit_shiling} == 1:
+    狮岭山脚下立着块旧碑，说王历新曾在这里凿开洞窟，里头卧着一头石狮子。 #id:lj_05_shiling_003
+
+    - 开始搜索 #id:lj_05_shiling_004
+        set {energy} -= 5
+        [background arg="res://art/backgrounds/shiling_bandit_ambush.png" fade="0.6"]
+        audio action "res://audio/sfx/03_footsteps/footsteps_walking_through_woods.mp3" [loop="false", bus="SFX"]
+        我沿着山路往里走，刚转过一个弯，就被几个凶神恶煞的人围住了。 #id:lj_05_shiling_006
+        audio action -
+
+        “此路是我开！留下买路财！” #id:lj_05_shiling_007
+
+        - 仔细看看他们 #id:lj_05_shiling_008
+            这些人脸上糊着油彩，手里攥着塑料刀，分明是演员假扮的土匪。 #id:lj_05_shiling_009
+
+            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+            崖壁上长着一朵鸢尾花，我伸手摘了下来。 #id:lj_05_shiling_010
+            audio action -
+            [background arg="res://art/backgrounds/shiling_bandit_ambush_no_iris.png" fade="0.6"]
+
+            set {flower} += 1
+
+            - 再仔细看看那朵花 #id:lj_05_shiling_012
+                花瓣是假的，塑料气味刺鼻。 #id:lj_05_shiling_013
+
+                - 扔掉假花 #id:lj_05_shiling_014
+                    我把假花丢进草丛。 #id:lj_05_shiling_015
+
+                    set {flower} -= 1
+                    set {jiahua} = false
+
+                    - 继续搜索 #id:lj_05_shiling_018
+                        set {energy} -= 5
+                        [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                        audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
+                        前面空地上蹲着一头铁狮子，嘴里吐出一串火。 #id:lj_05_shiling_020
+                        audio action -
+
+                        - 继续搜索 #id:lj_05_shiling_021
+                            set {energy} -= 5
+                            [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                            audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
+                            越往里走越不对劲，山在烧，人影泛着红。 #id:lj_05_shiling_023
+
+                            - 继续搜索 #id:lj_05_shiling_024
+                                [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                                audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+                                白玉狮子庙前摆着供台，台上插着一朵牡丹。 #id:lj_05_shiling_025
+
+                                - 偷走牡丹 #id:lj_05_shiling_026
+                                    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+                                    我抓住牡丹拔了出来，手一抖，花茎上全是泥。 #id:lj_05_shiling_027
+                                    audio action -
+                                    [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
+
+                                    set {flower} += 1
+                                    set {earthworm} += 1
+                                    set {calm} -= 10
+                                    set {calm} -= 15
+
+                                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_032
+
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                    我原路折回，花了两块钱坐车回路口。 #id:lj_05_shiling_033
+                                    audio action -
+
+                                    set {money} -= 2
+                                    jump 03_crossroads/
+                                - 什么都不做 #id:lj_05_shiling_037
+                                    我没碰那朵牡丹，转身原路返回。 #id:lj_05_shiling_038
+
+                                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_039
+
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                    我花了两块钱坐车回路口。 #id:lj_05_shiling_040
+                                    audio action -
+
+                                    set {money} -= 2
+                                    jump 03_crossroads/
+                                - 结束搜索 #id:lj_05_shiling_044
+                                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_045
+
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                    我花了两块钱坐车回路口。 #id:lj_05_shiling_046
+                                    audio action -
+
+                                    set {money} -= 2
+                                    jump 03_crossroads/
+                            - 结束搜索 #id:lj_05_shiling_051
+                                现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_052
+
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                我花了两块钱坐车回路口。 #id:lj_05_shiling_053
+                                audio action -
+
+                                set {money} -= 2
+                                jump 03_crossroads/
+                        - 结束搜索 #id:lj_05_shiling_058
+                            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_059
+
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                            我花了两块钱坐车回路口。 #id:lj_05_shiling_060
+                            audio action -
+
+                            set {money} -= 2
+                            jump 03_crossroads/
+                    - 不扔，留着 #id:lj_05_shiling_065
+                        - 继续搜索 #id:lj_05_shiling_066
+                            set {energy} -= 5
+                            [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                            audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
+                            前面空地上蹲着一头铁狮子，嘴里吐出一串火。 #id:lj_05_shiling_068
+                            audio action -
+
+                            - 继续搜索 #id:lj_05_shiling_069
+                                set {energy} -= 5
+                                [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                                audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
+                                越往里走越不对劲，山在烧，人影泛着红。 #id:lj_05_shiling_071
+
+                                - 继续搜索 #id:lj_05_shiling_072
+                                    [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                                    audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+                                    白玉狮子庙前摆着供台，台上插着一朵牡丹。 #id:lj_05_shiling_073
+
+                                    - 偷走牡丹 #id:lj_05_shiling_074
+                                        audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+                                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。 #id:lj_05_shiling_075
+                                        audio action -
+                                        [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
+
+                                        set {flower} += 1
+                                        set {earthworm} += 1
+                                        set {calm} -= 10
+                                        set {calm} -= 15
+
+                                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_080
+
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                        我原路折回，花了两块钱坐车回路口。 #id:lj_05_shiling_081
+                                        audio action -
+
+                                        set {money} -= 2
+                                        jump 03_crossroads/
+                                    - 什么都不做 #id:lj_05_shiling_085
+                                        我没碰那朵牡丹，转身原路返回。 #id:lj_05_shiling_086
+
+                                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_087
+
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                        我花了两块钱坐车回路口。 #id:lj_05_shiling_088
+                                        audio action -
+
+                                        set {money} -= 2
+                                        jump 03_crossroads/
+                                    - 结束搜索 #id:lj_05_shiling_092
+                                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_093
+
+                                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                        我花了两块钱坐车回路口。 #id:lj_05_shiling_094
+                                        audio action -
+
+                                        set {money} -= 2
+                                        jump 03_crossroads/
+                                - 结束搜索 #id:lj_05_shiling_099
+                                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_100
+
+                                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                    我花了两块钱坐车回路口。 #id:lj_05_shiling_101
+                                    audio action -
+
+                                    set {money} -= 2
+                                    jump 03_crossroads/
+                        - 结束搜索 #id:lj_05_shiling_107
+                            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_108
+
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                            我花了两块钱坐车回路口。 #id:lj_05_shiling_109
+                            audio action -
+
+                            set {money} -= 2
+                            jump 03_crossroads/
+                - 继续搜索 #id:lj_05_shiling_115
+                    set {energy} -= 5
+                    [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                    audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
+                    前面空地上蹲着一头铁狮子，嘴里吐出一串火。 #id:lj_05_shiling_117
+                    audio action -
+
+                    - 继续搜索 #id:lj_05_shiling_118
+                        set {energy} -= 5
+                        [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                        audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
+                        越往里走越不对劲，山在烧，人影泛着红。 #id:lj_05_shiling_120
+
+                        - 继续搜索 #id:lj_05_shiling_121
+                            [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                            audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+                            白玉狮子庙前摆着供台，台上插着一朵牡丹。 #id:lj_05_shiling_122
+
+                            - 偷走牡丹 #id:lj_05_shiling_123
+                                audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+                                我抓住牡丹拔了出来，手一抖，花茎上全是泥。 #id:lj_05_shiling_124
+                                audio action -
+                                [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
+
+                                set {flower} += 1
+                                set {earthworm} += 1
+                                set {calm} -= 10
+                                set {calm} -= 15
+
+                                现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_129
+
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                我原路折回，花了两块钱坐车回路口。 #id:lj_05_shiling_130
+                                audio action -
+
+                                set {money} -= 2
+                                jump 03_crossroads/
+                            - 什么都不做 #id:lj_05_shiling_134
+                                我没碰那朵牡丹，转身原路返回。 #id:lj_05_shiling_135
+
+                                现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_136
+
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                我花了两块钱坐车回路口。 #id:lj_05_shiling_137
+                                audio action -
+
+                                set {money} -= 2
+                                jump 03_crossroads/
+                            - 结束搜索 #id:lj_05_shiling_141
+                                现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_142
+
+                                audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                                我花了两块钱坐车回路口。 #id:lj_05_shiling_143
+                                audio action -
+
+                                set {money} -= 2
+                                jump 03_crossroads/
+                    - 结束搜索 #id:lj_05_shiling_149
+                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_150
+
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                        我花了两块钱坐车回路口。 #id:lj_05_shiling_151
+                        audio action -
+
+                        set {money} -= 2
+                        jump 03_crossroads/
+            - 继续搜索 #id:lj_05_shiling_157
+                set {energy} -= 5
+                [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+                audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
+                前面空地上蹲着一头铁狮子，嘴里吐出一串火。 #id:lj_05_shiling_159
+                audio action -
+
+                - 继续搜索 #id:lj_05_shiling_160
+                    set {energy} -= 5
+                    [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                    audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
+                    越往里走越不对劲，山在烧，人影泛着红。 #id:lj_05_shiling_162
+
+                    - 继续搜索 #id:lj_05_shiling_163
+                        [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                        audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+                        白玉狮子庙前摆着供台，台上插着一朵牡丹。 #id:lj_05_shiling_164
+
+                        - 偷走牡丹 #id:lj_05_shiling_165
+                            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+                            我抓住牡丹拔了出来，手一抖，花茎上全是泥。 #id:lj_05_shiling_166
+                            audio action -
+                            [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
+
+                            set {flower} += 1
+                            set {earthworm} += 1
+                            set {calm} -= 10
+                            set {calm} -= 15
+
+                            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_171
+
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                            我原路折回，花了两块钱坐车回路口。 #id:lj_05_shiling_172
+                            audio action -
+
+                            set {money} -= 2
+                            jump 03_crossroads/
+                        - 什么都不做 #id:lj_05_shiling_176
+                            我没碰那朵牡丹，转身原路返回。 #id:lj_05_shiling_177
+
+                            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_178
+
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                            我花了两块钱坐车回路口。 #id:lj_05_shiling_179
+                            audio action -
+
+                            set {money} -= 2
+                            jump 03_crossroads/
+                        - 结束搜索 #id:lj_05_shiling_183
+                            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_184
+
+                            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                            我花了两块钱坐车回路口。 #id:lj_05_shiling_185
+                            audio action -
+
+                            set {money} -= 2
+                            jump 03_crossroads/
+                - 结束搜索 #id:lj_05_shiling_191
+                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_192
+
+                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                    我花了两块钱坐车回路口。 #id:lj_05_shiling_193
+                    audio action -
+
+                    set {money} -= 2
+                    jump 03_crossroads/
+        - 继续搜索 #id:lj_05_shiling_199
+            set {energy} -= 5
+            [background arg="res://art/backgrounds/shiling_iron_lion.png" fade="0.6"]
+            audio action "res://audio/sfx/12_fire/fire_swoosh_burning.wav" [loop="false", bus="SFX"]
+            前面空地上蹲着一头铁狮子，嘴里吐出一串火。 #id:lj_05_shiling_201
+            audio action -
+
+            - 继续搜索 #id:lj_05_shiling_202
+                set {energy} -= 5
+                [background arg="res://art/backgrounds/shiling_burning_mountain.png" fade="0.6"]
+                audio ambience "res://audio/sfx/30_fire_loop/campfire_crackles.wav" [loop="true", fade="0.5", volume="-12", bus="SFX"]
+                越往里走越不对劲，山在烧，人影泛着红。 #id:lj_05_shiling_204
+
+                - 继续搜索 #id:lj_05_shiling_205
+                    [background arg="res://art/backgrounds/shiling_temple.png" fade="0.6"]
+                    audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+                    白玉狮子庙前摆着供台，台上插着一朵牡丹。 #id:lj_05_shiling_206
+
+                    - 偷走牡丹 #id:lj_05_shiling_207
+                        audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
+                        我抓住牡丹拔了出来，手一抖，花茎上全是泥。 #id:lj_05_shiling_208
+                        audio action -
+                        [background arg="res://art/backgrounds/shiling_temple_no_peony.png" fade="0.6"]
+
+                        set {flower} += 1
+                        set {earthworm} += 1
+                        set {calm} -= 10
+                        set {calm} -= 15
+
+                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_213
+
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                        我原路折回，花了两块钱坐车回路口。 #id:lj_05_shiling_214
+                        audio action -
+
+                        set {money} -= 2
+                        jump 03_crossroads/
+                    - 什么都不做 #id:lj_05_shiling_218
+                        我没碰那朵牡丹，转身原路返回。 #id:lj_05_shiling_219
+
+                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_220
+
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                        我花了两块钱坐车回路口。 #id:lj_05_shiling_221
+                        audio action -
+
+                        set {money} -= 2
+                        jump 03_crossroads/
+                    - 结束搜索 #id:lj_05_shiling_225
+                        现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_226
+
+                        audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                        我花了两块钱坐车回路口。 #id:lj_05_shiling_227
+                        audio action -
+
+                        set {money} -= 2
+                        jump 03_crossroads/
+                - 结束搜索 #id:lj_05_shiling_232
+                    现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_233
+
+                    audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+                    我花了两块钱坐车回路口。 #id:lj_05_shiling_234
+                    audio action -
+
+                    set {money} -= 2
+                    jump 03_crossroads/
+        - 结束搜索 #id:lj_05_shiling_240
+            现在手里一共有 {flower} 朵花。 #id:lj_05_shiling_241
+
+            audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [loop="false", bus="SFX"]
+            我花了两块钱坐车回路口。 #id:lj_05_shiling_242
+            audio action -
+
+            set {money} -= 2
+            jump 03_crossroads/
+else:
+    狮岭已经关门了，铁门从里面锁得严严实实。 #id:lj_05_shiling_249
+
+    - 回路口 #id:lj_05_shiling_250
+        jump 03_crossroads/

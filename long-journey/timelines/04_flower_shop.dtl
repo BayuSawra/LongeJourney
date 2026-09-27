@@ -1,0 +1,57 @@
+if {visit_huadian} == 1 or {visit_huadian} == 2:
+    [background arg="res://art/backgrounds/flower_shop_open.png" fade="0.0"]
+else:
+    [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  花店※[/i][/color] #id:lj_04_flower_shop_000
+
+if {visit_huadian} == 1:
+    说是花店，其实只有极小两平米，卷帘门半拉着。老板低头玩手机，桶里全是土。 #id:lj_04_flower_shop_002
+
+    “不卖花了，我改行养蛤蟆。” #id:lj_04_flower_shop_003
+
+    - 骂她还踢翻水桶 #id:lj_04_flower_shop_004
+        [background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
+        audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [loop="false", bus="SFX"]
+        我一脚踹翻水桶，土洒了一地。 #id:lj_04_flower_shop_005
+        audio action -
+
+        老板愣了一下，竟然没生气，嘴角还翘了起来。 #id:lj_04_flower_shop_006
+
+        set {earthworm} += 1
+        jump 03_crossroads/
+    - “我已经知道你想陷害我的阴谋” #id:lj_04_flower_shop_010
+        [background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
+        audio action "res://audio/sfx/38_soil_rummage/selected.mp3" [loop="false", bus="SFX"]
+        老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。 #id:lj_04_flower_shop_011
+        audio action -
+
+        “那你肯定也想要这个吧。” #id:lj_04_flower_shop_012
+
+        - 拿走蚯蚓 #id:lj_04_flower_shop_013
+            我捏住滑溜溜的蚯蚓，心里一阵发毛。 #id:lj_04_flower_shop_014
+
+            set {earthworm} += 1
+            set {calm} -= 10
+            jump 03_crossroads/
+        - 不要蚯蚓 #id:lj_04_flower_shop_019
+            “我才不稀罕。” #id:lj_04_flower_shop_020
+
+            jump 03_crossroads/
+elif {visit_huadian} == 2:
+    [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.6"]
+
+    花店已经关门了，卷帘门拉得严严实实。 #id:lj_04_flower_shop_026
+
+    我没有走近，远远看了一眼就转身走了。 #id:lj_04_flower_shop_027
+
+    - 回路口 #id:lj_04_flower_shop_028
+        jump 03_crossroads/
+else:
+    花店关着门，卷帘门拉得死死的。 #id:lj_04_flower_shop_033
+
+    - 回路口 #id:lj_04_flower_shop_034
+        jump 03_crossroads/

@@ -1,0 +1,28 @@
+[background arg="res://art/backgrounds/hospital_stairs.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置 结局※[/i][/color] #id:lj_09_ending_000
+
+死无葬身之地。 #id:lj_09_ending_001
+
+这几个字落进耳朵里，像一片灰烬落在水面上。我站在原地没有动，歪嘴护士已经松开手，退进走廊的阴影里，好像她从没有出现过。 #id:lj_09_ending_002
+
+audio ambience -
+audio ambience "res://audio/sfx/36_light_buzz/light_hum_loop.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
+楼梯间的灯灭了一盏，另一盏在头顶嗡嗡作响。我扶着墙一级一级往下走，鞋底擦过水泥台阶的声音在空荡荡的楼里反复回荡。这里没有出口，也没有人来接我回家。妻子还躺在楼上，她的手指长在一起，头发一碰就断；而我在楼下，终于承认自己也走不出这座医院。 #id:lj_09_ending_003
+audio action -
+
+今天清晨出门时，我还在数口袋里的零钱，还在惦记那几朵被压皱的花。现在花不见了，鞋也破了，我甚至说不清自己究竟走了多远，见了多少不该见的人。我只知道，从这里开始的每一天，都不会再有真正的天亮。 #id:lj_09_ending_004
+
+[background arg="res://art/backgrounds/hospital_exterior.png" fade="0.6"]
+
+audio action "res://audio/sfx/08_heavy_door/door_smash_1.mp3" [loop="false", bus="SFX"]
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+我推开住院部的大门，外面的路还是那条灰蒙蒙的路。天没有黑，也没有亮。我迈出第一步，第二步，第三步，一步一步走下去，直到那扇门在身后合拢，发出沉闷的响声。 #id:lj_09_ending_005
+audio action -
+
+这里就是死无葬身之地。而我，已经无处可去，也无处可逃。 #id:lj_09_ending_006

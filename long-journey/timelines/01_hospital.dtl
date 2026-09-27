@@ -1,0 +1,19 @@
+[background arg="res://art/backgrounds/hospital_exterior.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  医院※[/i][/color] #id:lj_01_hospital_000
+
+站在医院楼下，感觉冷飕飕的，这种天气其实不适合探病，万一我不小心感冒了，岂不是更糟。 #id:lj_01_hospital_001
+
+audio action "res://audio/sfx/37_phone_handling/phone_pickup_once.wav" [loop="false", bus="SFX"]
+拿出手机，看了下聊天记录：妻子在住院部的7楼，5-05床。 #id:lj_01_hospital_002
+audio action -
+
+- 去住院部 #id:lj_01_hospital_003
+    jump 02_ward/
+- 离开医院去十字路口 #id:lj_01_hospital_006
+    jump 03_crossroads/
+- 去停尸房 #id:lj_01_hospital_009
+    jump 10_morgue/

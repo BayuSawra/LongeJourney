@@ -1,0 +1,30 @@
+[background arg="res://art/bus_interior_normal.png" fade="0.0"]
+
+audio action -
+audio ambience -
+audio ambience "res://audio/sfx/09_bus_ambience/bus_interior_ambience_with_people.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
+[color=#696969][i]※当前位置  公交车上※[/i][/color] #id:lj_00_start_000
+
+马上就要到医院了，公交车缓慢向左转弯，我看见了医院灰色的外墙，爬山虎覆盖了它大半个身躯，破旧的窗户往外吐着灰蓝的窗帘。 #id:lj_00_start_001
+
+这是个破医院，我自己知道。 #id:lj_00_start_002
+
+妻子生病住院，忘了有多长时间，真是可怜。 #id:lj_00_start_003
+
+我瞄了一眼车上的人，个个都灰头土脸，沉默地坐着，像一窝老鼠。 #id:lj_00_start_004
+
+我数了一下，除了我以外还有十来个人，今天这种天气，也不知道他们出来干什么？估计没什么事做，闲着也是闲着，出来瞎溜达。 #id:lj_00_start_005
+
+要我说，幸亏他们中间没有小偷，我的眼睛最毒辣，能分辨谁是好人，谁又是坏人，只需一眼！ #id:lj_00_start_006
+
+他们现在还算老实，都不敢拿眼瞧我，应该是知道我的来头，怕了吧。 #id:lj_00_start_007
+
+[background arg="res://art/bus_interior_staring.png" fade="1.0"]
+
+audio action "res://audio/sfx/25_bus_arrival/bus_coach_ext_pull_up_brake_air_release_idle.mp3" [loop="false", bus="SFX"]
+车停了，车上的人都转头盯着我，暗示我该下车了。 #id:lj_00_start_008
+audio action -
+[wait time="0.5" hide_text="false"]
+
+- 下车 #id:lj_00_start_010
+    jump 01_hospital/

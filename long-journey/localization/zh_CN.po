@@ -1,0 +1,727 @@
+msgid ""
+msgstr "Project-Id-Version: long-journey\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
+#: res://character/neighbor.dch
+msgid "Character/lj_neighbor/name"
+msgstr "邻居"
+
+#: res://character/nurse1.dch
+msgid "Character/lj_nurse1/name"
+msgstr "护士 1"
+
+#: res://character/nurse2.dch
+msgid "Character/lj_nurse2/name"
+msgstr "护士 2"
+
+#: res://character/我.dch
+msgid "Character/lj_self/name"
+msgstr "我"
+
+#: res://character/我.dch
+msgid "Character/lj_self/nicknames"
+msgstr "我自己"
+
+#: res://character/storeOwner.dch
+msgid "Character/lj_storeOwner/name"
+msgstr "花店老板"
+
+#: res://character/wife.dch
+msgid "Character/lj_wife/name"
+msgstr "妻子"
+
+msgid "ending.applied"
+msgstr "已写入：energy={energy}, calm={calm}, money={money}"
+
+msgid "ending.ending_bankrupt"
+msgstr "身无分文"
+
+msgid "ending.ending_crazy"
+msgstr "神智崩溃"
+
+msgid "ending.ending_exhausted"
+msgstr "精疲力尽"
+
+msgid "ending.triggered"
+msgstr "触发结局：{ending}"
+
+msgid "feedback.autosave"
+msgstr "已自动存档"
+
+msgid "feedback.autosave_failed"
+msgstr "自动存档失败：{error}"
+
+msgid "feedback.calm"
+msgstr "冷静"
+
+msgid "feedback.earthworm"
+msgstr "蚯蚓"
+
+msgid "feedback.energy"
+msgstr "体力"
+
+msgid "feedback.flower"
+msgstr "花"
+
+msgid "feedback.money"
+msgstr "金钱"
+
+msgid "history.choice"
+msgstr "[选项] {text}"
+
+msgid "history.speaker"
+msgstr "{name}：{text}"
+
+msgid "hud.calm"
+msgstr "冷静 {value}"
+
+msgid "hud.energy"
+msgstr "体力 {value}"
+
+msgid "hud.flower"
+msgstr "花 {value}"
+
+msgid "hud.money"
+msgstr "钱 {value}"
+
+msgid "locale.name"
+msgstr "简体中文"
+
+msgid "lore.category.characters"
+msgstr "角色"
+
+msgid "lore.category.events"
+msgstr "事件"
+
+msgid "lore.category.items"
+msgstr "物品"
+
+msgid "lore.category.locations"
+msgstr "地点"
+
+msgid "lore.category.plot-threads"
+msgstr "伏笔"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.body"
+msgstr "# 花店老板\n\n- 状态: alive\n- 首次登场: 花店（`04_flower_shop`）\n- 当前所在地: [花店](locations/flower-shop.md)\n- 年龄/生日: unknown\n- 身份/职业: 花店老板\n- 关系: [无名王](characters/protagonist.md) - 顾客\n- 物品: unknown\n- 已知信息:\n  - 在花店低头玩手机，玩家进入后才会互动。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 可提供蚯蚓；花篮（hualan）与假花（jiahua）相关选项由此处展开。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 04_flower_shop，可多次到访（visit_huadian 计数）"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.summary"
+msgstr "在花店低头玩手机，玩家进入后才会互动。"
+
+#: res://lore/characters/flower-shop-owner.md
+msgid "lore.characters.flower-shop-owner.title"
+msgstr "花店老板"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.body"
+msgstr "# 护士\n\n- 状态: alive\n- 首次登场: 住院部闸口（`02_ward`）\n- 当前所在地: [住院部/停尸房](locations/ward.md)\n- 年龄/生日: unknown\n- 身份/职业: 住院部护士\n- 关系: [无名王](characters/protagonist.md) - 拦住去路\n- 物品: unknown\n- 已知信息:\n  - 只有 flower >= 5 时才放行进入病房。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 02_ward"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.summary"
+msgstr "只有 flower >= 5 时才放行进入病房。"
+
+#: res://lore/characters/nurse.md
+msgid "lore.characters.nurse.title"
+msgstr "护士"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.body"
+msgstr "# 无名王\n\n- 状态: alive\n- 首次登场: 开场公交站（`00_start` / `scenes/scene_1.tscn`）\n- 当前所在地: [医院](locations/hospital.md)\n- 年龄/生日: unknown\n- 身份/职业: 自称“王”的无名之人\n- 关系: [妻子](characters/wife.md) - 妻子；[护士](characters/nurse.md) - 住院部闸口的阻拦者；[花店老板](characters/flower-shop-owner.md) - 花店接触者\n- 物品: [花](items/flower.md)、[钱](items/money.md)、[花篮](items/flower-basket.md)、[假花](items/fake-flower.md)、[蚯蚓](items/earthworm.md)\n- 已知信息:\n  - 在公交站下车后，周围乘客一直盯着他看。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 默认名字是“无名王”，可在露园改名。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 初始变量：energy=100、calm=100、money=20。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 00_start -> 01_hospital -> 02_ward -> 03_crossroads -> 04_flower_shop -> 05_shiling -> 06_luyuan -> 07_maze -> 08_wife_room -> 09_ending"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.summary"
+msgstr "在公交站下车后，周围乘客一直盯着他看。"
+
+#: res://lore/characters/protagonist.md
+msgid "lore.characters.protagonist.title"
+msgstr "无名王"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.body"
+msgstr "# 妻子\n\n- 状态: alive\n- 首次登场: 病房（`08_wife_room`）\n- 当前所在地: [病房](locations/wife-room.md)\n- 年龄/生日: unknown\n- 身份/职业: 主角的妻子\n- 关系: [无名王](characters/protagonist.md) - 丈夫\n- 物品: unknown\n- 已知信息:\n  - 眼睛浑浊，眼皮被细线缝在眉骨上，嘴巴翕动但只能发出含糊的喉音。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 双手无力垂下，手背画着无法辨认的符咒。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 08_wife_room，之后进入结局分支"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.summary"
+msgstr "眼睛浑浊，眼皮被细线缝在眉骨上，嘴巴翕动但只能发出含糊的喉音。"
+
+#: res://lore/characters/wife.md
+msgid "lore.characters.wife.title"
+msgstr "妻子"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.body"
+msgstr "# 露园改名\n\n- 时间: 06_luyuan\n- 地点: [露园](locations/luyuan.md)\n- 参与角色: [无名王](characters/protagonist.md)\n- 结果: 玩家可输入新名字，游戏内称号随之改变。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.summary"
+msgstr "玩家可输入新名字，游戏内称号随之改变。"
+
+#: res://lore/events/luyuan-renaming.md
+msgid "lore.events.luyuan-renaming.title"
+msgstr "露园改名"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.body"
+msgstr "# 公交站下车\n\n- 时间: 00_start\n- 地点: [医院](locations/hospital.md)\n- 参与角色: [无名王](characters/protagonist.md)\n- 结果: 主角下车，周围乘客盯着他看。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.summary"
+msgstr "主角下车，周围乘客盯着他看。"
+
+#: res://lore/events/opening-arrival.md
+msgid "lore.events.opening-arrival.title"
+msgstr "公交站下车"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.body"
+msgstr "# 住院部闸口受阻\n\n- 时间: 02_ward\n- 地点: [住院部/停尸房](locations/ward.md)\n- 参与角色: [无名王](characters/protagonist.md)、[护士](characters/nurse.md)\n- 结果: 花数不足 5 时被拦下；花数足够后才能前往病房。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.summary"
+msgstr "花数不足 5 时被拦下；花数足够后才能前往病房。"
+
+#: res://lore/events/ward-gate-block.md
+msgid "lore.events.ward-gate-block.title"
+msgstr "住院部闸口受阻"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.body"
+msgstr "# 病房见妻\n\n- 时间: 08_wife_room\n- 地点: [病房](locations/wife-room.md)\n- 参与角色: [无名王](characters/protagonist.md)、[妻子](characters/wife.md)\n- 结果: 主角与状态异常的妻子见面，之后进入结局分支。\n- 来源: docs/Dialogic_Implementation_Guide.md"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.summary"
+msgstr "主角与状态异常的妻子见面，之后进入结局分支。"
+
+#: res://lore/events/wife-room-reunion.md
+msgid "lore.events.wife-room-reunion.title"
+msgstr "病房见妻"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.body"
+msgstr "# 蚯蚓\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店（`04_flower_shop`）\n- 已知信息:\n  - 用变量 earthworm 记录，初始为 0。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.summary"
+msgstr "用变量 earthworm 记录，初始为 0。"
+
+#: res://lore/items/earthworm.md
+msgid "lore.items.earthworm.title"
+msgstr "蚯蚓"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.body"
+msgstr "# 假花\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店相关选项（变量 jiahua）\n- 已知信息:\n  - 用布尔变量 jiahua 记录，初始为 false。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.summary"
+msgstr "用布尔变量 jiahua 记录，初始为 false。"
+
+#: res://lore/items/fake-flower.md
+msgid "lore.items.fake-flower.title"
+msgstr "假花"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.body"
+msgstr "# 花篮\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 花店相关选项（变量 hualan）\n- 已知信息:\n  - 用布尔变量 hualan 记录，初始为 false。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.summary"
+msgstr "用布尔变量 hualan 记录，初始为 false。"
+
+#: res://lore/items/flower-basket.md
+msgid "lore.items.flower-basket.title"
+msgstr "花篮"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.body"
+msgstr "# 花\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 收集路线（变量 flower 初始为 0）\n- 已知信息:\n  - 数量用变量 flower 记录，初始为 0。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 住院部闸口需要 flower >= 5 才放行。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.summary"
+msgstr "数量用变量 flower 记录，初始为 0。"
+
+#: res://lore/items/flower.md
+msgid "lore.items.flower.title"
+msgstr "花"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.body"
+msgstr "# 钱\n\n- 状态: unknown\n- 持有人: [无名王](characters/protagonist.md)\n- 首次出现: 游戏开场（初始变量）\n- 已知信息:\n  - 用变量 money 记录，初始为 20。（来源：docs/Dialogic_Implementation_Guide.md）\n  - money < 0 时进入破产结局 ending_bankrupt。（来源：docs/Dialogic_Implementation_Guide.md）"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.summary"
+msgstr "用变量 money 记录，初始为 20。"
+
+#: res://lore/items/money.md
+msgid "lore.items.money.title"
+msgstr "钱"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.body"
+msgstr "# 路口\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `03_crossroads`\n- 已知信息:\n  - 从路口选择下一步路线，可通往花店、狮岭、露园等地。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 03_crossroads -> 04_flower_shop / 05_shiling / 06_luyuan"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.summary"
+msgstr "从路口选择下一步路线，可通往花店、狮岭、露园等地。"
+
+#: res://lore/locations/crossroads.md
+msgid "lore.locations.crossroads.title"
+msgstr "路口"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.body"
+msgstr "# 花店\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `04_flower_shop`\n- 已知信息:\n  - 花店老板低头玩手机，玩家进入后互动。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 可取得蚯蚓，并可接触花篮（hualan）与假花（jiahua）。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 04_flower_shop，visit_huadian 记录到访次数"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.summary"
+msgstr "花店老板低头玩手机，玩家进入后互动。"
+
+#: res://lore/locations/flower-shop.md
+msgid "lore.locations.flower-shop.title"
+msgstr "花店"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.body"
+msgstr "# 医院\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: 开场（`00_start` / `01_hospital`）\n- 已知信息:\n  - 游戏开场地点，公交站下车后乘客会注视主角。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 00_start -> 01_hospital"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.summary"
+msgstr "游戏开场地点，公交站下车后乘客会注视主角。"
+
+#: res://lore/locations/hospital.md
+msgid "lore.locations.hospital.title"
+msgstr "医院"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.body"
+msgstr "# 露园\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `06_luyuan`\n- 已知信息:\n  - 玩家会看到“如果我是王，我叫做：”的输入框，默认名字是“无名王”。（来源：docs/Dialogic_Implementation_Guide.md）\n  - 改名后会出现“此刻我已是万人敬仰的 {player_name}！”。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 06_luyuan"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.summary"
+msgstr "玩家会看到“如果我是王，我叫做：”的输入框，默认名字是“无名王”。"
+
+#: res://lore/locations/luyuan.md
+msgid "lore.locations.luyuan.title"
+msgstr "露园"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.body"
+msgstr "# 假山迷宫\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `07_maze`\n- 已知信息:\n  - 进入病房前的最后一段路线。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 07_maze -> 08_wife_room"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.summary"
+msgstr "进入病房前的最后一段路线。"
+
+#: res://lore/locations/maze.md
+msgid "lore.locations.maze.title"
+msgstr "假山迷宫"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.body"
+msgstr "# 狮岭\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `05_shiling`\n- 已知信息:\n  - 可选路线之一，visit_shiling 记录到访次数。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 05_shiling"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.summary"
+msgstr "可选路线之一，visit_shiling 记录到访次数。"
+
+#: res://lore/locations/shiling.md
+msgid "lore.locations.shiling.title"
+msgstr "狮岭"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.body"
+msgstr "# 住院部/停尸房\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `02_ward`\n- 已知信息:\n  - 护士在闸口把守，flower >= 5 才能继续前进。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 02_ward -> 03_crossroads"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.summary"
+msgstr "护士在闸口把守，flower >= 5 才能继续前进。"
+
+#: res://lore/locations/ward.md
+msgid "lore.locations.ward.title"
+msgstr "住院部/停尸房"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.body"
+msgstr "# 病房\n\n- 状态: unknown\n- 所属势力: unknown\n- 首次出现: `08_wife_room`\n- 已知信息:\n  - 妻子以异常状态出现在这里。（来源：docs/Dialogic_Implementation_Guide.md）\n- 时间线备注: 08_wife_room -> 09_ending"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.summary"
+msgstr "妻子以异常状态出现在这里。"
+
+#: res://lore/locations/wife-room.md
+msgid "lore.locations.wife-room.title"
+msgstr "病房"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.body"
+msgstr "- 状态: open\n- 埋设: 花店（`04_flower_shop`，visit_huadian）\n- 回收: unknown\n- 关联角色/地点: [花店老板](characters/flower-shop-owner.md)、[花店](locations/flower-shop.md)\n- 说明: 多次到访会推进与老板的互动，可能影响物品获取与结局。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.summary"
+msgstr "多次到访会推进与老板的互动，可能影响物品获取与结局。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-23.title"
+msgstr "花店多次到访"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.body"
+msgstr "- 状态: open\n- 埋设: 花店的 jiahua 选项\n- 回收: unknown\n- 关联角色/地点: [花店老板](characters/flower-shop-owner.md)、[假花](items/fake-flower.md)\n- 说明: 假花可能带来短期便利，但风险尚未写明，迁移时需补足代价。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.summary"
+msgstr "假花可能带来短期便利，但风险尚未写明，迁移时需补足代价。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-24.title"
+msgstr "假花的代价"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.body"
+msgstr "- 状态: open\n- 埋设: 露园改名（`06_luyuan`）\n- 回收: unknown\n- 关联角色/地点: [无名王](characters/protagonist.md)、[露园](locations/luyuan.md)\n- 说明: 玩家可以改名，之后游戏内称号会使用 {player_name}。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.summary"
+msgstr "玩家可以改名，之后游戏内称号会使用 {player_name}。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-25.title"
+msgstr "名字即王"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.body"
+msgstr "- 状态: open\n- 埋设: energy、calm、money 三个全局变量\n- 回收: ending_bankrupt（已存在）；ending_crazy、ending_exhausted 待写\n- 关联角色/地点: [无名王](characters/protagonist.md)\n- 说明: 检查顺序为 money < 0 -> calm < 0 -> energy < 0。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.summary"
+msgstr "检查顺序为 money < 0 -> calm < 0 -> energy < 0。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-26.title"
+msgstr "结局分支"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.body"
+msgstr "- 状态: open\n- 埋设: 病房中妻子的状态（`08_wife_room`）\n- 回收: unknown\n- 关联角色/地点: [妻子](characters/wife.md)、[病房](locations/wife-room.md)\n- 说明: 眼皮缝合、手背符咒等异常是核心悬念，后续剧情需要给出现象背后的解释。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.summary"
+msgstr "眼皮缝合、手背符咒等异常是核心悬念，后续剧情需要给出现象背后的解释。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry-27.title"
+msgstr "妻子的异常"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.body"
+msgstr "- 状态: open\n- 埋设: 住院部闸口（`02_ward`）\n- 回收: unknown\n- 关联角色/地点: [护士](characters/nurse.md)、[花](items/flower.md)、[住院部/停尸房](locations/ward.md)\n- 说明: 收集至少 5 朵花才能进入病房；不同收集路线会决定主角经历过什么。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.summary"
+msgstr "收集至少 5 朵花才能进入病房；不同收集路线会决定主角经历过什么。"
+
+#: res://lore/plot-threads.md
+msgid "lore.plot-threads.entry.title"
+msgstr "花数闸口"
+
+msgid "player.default_name"
+msgstr "无名王"
+
+msgid "save.auto_name"
+msgstr "自动存档"
+
+msgid "save.cancel"
+msgstr "取消"
+
+msgid "save.confirm"
+msgstr "确定"
+
+msgid "save.confirm_load"
+msgstr "读取 {name} 的存档？"
+
+msgid "save.confirm_overwrite"
+msgstr "覆盖存档 {slot}（{name}）？"
+
+msgid "save.default_name"
+msgstr "存档 {slot}"
+
+msgid "save.details"
+msgstr "{name}\n{time}\n{scene} | {timeline}"
+
+msgid "save.empty"
+msgstr "{slot}. 空"
+
+msgid "save.error_busy"
+msgstr "正在读取其他存档，请稍后再试。"
+
+msgid "save.error_data"
+msgstr "存档数据无效，无法恢复。"
+
+msgid "save.error_delete"
+msgstr "删除存档失败。"
+
+msgid "save.error_invalid_slot"
+msgstr "存档槽位名称无效。"
+
+msgid "save.error_missing"
+msgstr "存档不存在或无法读取。"
+
+msgid "save.error_title"
+msgstr "读档失败"
+
+msgid "save.error_version"
+msgstr "存档版本不兼容。本地化版本使用第 3 版存档，不会覆盖旧文件。"
+
+msgid "save.error_write"
+msgstr "写入存档失败。"
+
+msgid "save.load_title"
+msgstr "读档"
+
+msgid "save.location_unknown"
+msgstr "无剧情进度"
+
+msgid "save.scene.main"
+msgstr "旅程"
+
+msgid "save.scene.mainMenu"
+msgstr "主菜单"
+
+msgid "save.scene.scene_1"
+msgstr "旅程"
+
+msgid "save.timeline.00_start"
+msgstr "开始"
+
+msgid "save.timeline.01_hospital"
+msgstr "医院"
+
+msgid "save.timeline.02_ward"
+msgstr "病房"
+
+msgid "save.timeline.03_crossroads"
+msgstr "十字路口"
+
+msgid "save.timeline.04_flower_shop"
+msgstr "花店"
+
+msgid "save.timeline.05_shiling"
+msgstr "狮岭"
+
+msgid "save.timeline.06_luyuan"
+msgstr "露园"
+
+msgid "save.timeline.07_maze_entry"
+msgstr "迷宫入口"
+
+msgid "save.timeline.07_maze_exit"
+msgstr "迷宫出口"
+
+msgid "save.timeline.07_maze_left"
+msgstr "迷宫左路"
+
+msgid "save.timeline.07_maze_middle"
+msgstr "迷宫中路"
+
+msgid "save.timeline.07_maze_right"
+msgstr "迷宫右路"
+
+msgid "save.timeline.08_wife_room"
+msgstr "妻子的房间"
+
+msgid "save.timeline.09_ending"
+msgstr "结局"
+
+msgid "save.timeline.10_morgue"
+msgstr "停尸房"
+
+msgid "save.timeline.timeline1_0"
+msgstr "旅程序章"
+
+msgid "save.title"
+msgstr "存档"
+
+msgid "settings.language"
+msgstr "语言"
+
+msgid "ui.dialogue.confirm"
+msgstr "确定"
+
+#: scenes/ending_debug_panel.tscn:Apply
+msgid "ui.ending_debug_panel.apply.text"
+msgstr "应用并检查结局"
+
+#: scenes/ending_debug_panel.tscn:CalmEdit
+msgid "ui.ending_debug_panel.calm_edit.placeholder_text"
+msgstr "calm"
+
+#: scenes/ending_debug_panel.tscn:EnergyEdit
+msgid "ui.ending_debug_panel.energy_edit.placeholder_text"
+msgstr "energy"
+
+#: scenes/ending_debug_panel.tscn:MoneyEdit
+msgid "ui.ending_debug_panel.money_edit.placeholder_text"
+msgstr "money"
+
+#: scenes/ending_debug_panel.tscn:ResultLabel
+msgid "ui.ending_debug_panel.result_label.text"
+msgstr "等待写入..."
+
+#: scenes/ending_debug_panel.tscn:Title
+msgid "ui.ending_debug_panel.title.text"
+msgstr "结局调试"
+
+#: scenes/history_panel.tscn:CloseButton
+msgid "ui.history_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/history_panel.tscn:HistoryButton
+msgid "ui.history_panel.history_button.text"
+msgstr "故事回看"
+
+#: scenes/history_panel.tscn:Title
+msgid "ui.history_panel.title.text"
+msgstr "历史记录"
+
+#: scenes/hud.tscn:LoreButton
+msgid "ui.hud.lore_button.text"
+msgstr "LORE"
+
+#: scenes/hud.tscn:SettingsButton
+msgid "ui.hud.settings_button.text"
+msgstr "SETTINGS"
+
+msgid "ui.lore.all_categories"
+msgstr "全部分类"
+
+msgid "ui.lore.category_count"
+msgstr "{category}（{count}）"
+
+msgid "ui.lore.empty"
+msgstr "暂无条目"
+
+msgid "ui.lore.filtered_results"
+msgstr "{title} - {category}"
+
+msgid "ui.lore.results"
+msgstr "搜索结果"
+
+msgid "ui.lore.title"
+msgstr "图鉴"
+
+#: scenes/lore_browser.tscn:ButtonBack
+msgid "ui.lore_browser.button_back.text"
+msgstr "返回"
+
+#: scenes/lore_browser.tscn:ButtonClear
+msgid "ui.lore_browser.button_clear.text"
+msgstr "清除"
+
+#: scenes/lore_browser.tscn:ButtonClose
+msgid "ui.lore_browser.button_close.text"
+msgstr "关闭"
+
+#: scenes/lore_browser.tscn:LabelTitle
+msgid "ui.lore_browser.label_title.text"
+msgstr "图鉴"
+
+#: scenes/lore_browser.tscn:LineEditSearch
+msgid "ui.lore_browser.line_edit_search.placeholder_text"
+msgstr "搜索关键词"
+
+#: scenes/mainMenu.tscn:Button_exit
+msgid "ui.mainmenu.button_exit.text"
+msgstr "退出游戏"
+
+#: scenes/mainMenu.tscn:Button_load
+msgid "ui.mainmenu.button_load.text"
+msgstr "读档"
+
+#: scenes/mainMenu.tscn:Button_save
+msgid "ui.mainmenu.button_save.text"
+msgstr "存档"
+
+#: scenes/mainMenu.tscn:Button_setting
+msgid "ui.mainmenu.button_setting.text"
+msgstr "游戏设置"
+
+#: scenes/mainMenu.tscn:Button_start
+msgid "ui.mainmenu.button_start.text"
+msgstr "开始游戏"
+
+#: res://scenes/mainMenu.tscn
+msgid "ui.menu.subtitle"
+msgstr "叙事冒险"
+
+#: res://scenes/mainMenu.tscn
+msgid "ui.menu.title"
+msgstr "长路漫漫"
+
+#: scenes/save_slot_panel.tscn:CloseButton
+msgid "ui.save_slot_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+msgid "ui.save_slot_panel.load_dialog.dialog_text"
+msgstr "读取该存档？"
+
+#: scenes/save_slot_panel.tscn:LoadDialog
+msgid "ui.save_slot_panel.load_dialog.title"
+msgstr "读档"
+
+#: scenes/save_slot_panel.tscn:NameEdit
+msgid "ui.save_slot_panel.name_edit.placeholder_text"
+msgstr "输入存档名称"
+
+#: scenes/save_slot_panel.tscn:NewSlotDialog
+msgid "ui.save_slot_panel.new_slot_dialog.title"
+msgstr "新建存档"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+msgid "ui.save_slot_panel.overwrite_dialog.dialog_text"
+msgstr "覆盖当前存档？"
+
+#: scenes/save_slot_panel.tscn:OverwriteDialog
+msgid "ui.save_slot_panel.overwrite_dialog.title"
+msgstr "覆盖存档"
+
+#: scenes/save_slot_panel.tscn:TitleLabel
+msgid "ui.save_slot_panel.title_label.text"
+msgstr "存档"
+
+#: scenes/settings_panel.tscn:BgmVolumeLabel
+msgid "ui.settings_panel.bgm_volume_label.text"
+msgstr "背景音乐"
+
+#: scenes/settings_panel.tscn:CloseButton
+msgid "ui.settings_panel.close_button.text"
+msgstr "关闭"
+
+#: scenes/settings_panel.tscn:FullscreenCheck
+msgid "ui.settings_panel.fullscreen_check.text"
+msgstr "全屏"
+
+#: scenes/settings_panel.tscn:SfxVolumeLabel
+msgid "ui.settings_panel.sfx_volume_label.text"
+msgstr "音效"
+
+#: scenes/settings_panel.tscn:TextSpeedLabel
+msgid "ui.settings_panel.text_speed_label.text"
+msgstr "文字速度"
+
+#: scenes/settings_panel.tscn:Title
+msgid "ui.settings_panel.title.text"
+msgstr "设置"
+
+#: scenes/settings_panel.tscn:UiVolumeLabel
+msgid "ui.settings_panel.ui_volume_label.text"
+msgstr "界面音效"
+
+#: scenes/settings_panel.tscn:VolumeLabel
+msgid "ui.settings_panel.volume_label.text"
+msgstr "音量"
+
+#: scenes/scene_1.tscn:Sign
+msgid "ui.ward_door_locator.text"
+msgstr "7F / 5-05"
