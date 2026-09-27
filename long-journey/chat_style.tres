@@ -42,7 +42,7 @@ overrides = {
 "normal_font": "\"res://font/HYZIKUTANGJINGJIEKAITIW.TTF\"",
 "text_size": "22",
 "typing_sounds_every_nths_character": "3.0",
-"typing_sounds_sounds_folder": "\"res://audio/sfx/02_typing\""
+"typing_sounds_volume": "0.0"
 }
 
 [sub_resource type="Resource" id="Resource_vyrgv"]
@@ -85,4 +85,4 @@ layer_info = {
 "15": SubResource("Resource_f03m8"),
 "16": SubResource("Resource_ua431")
 }
-metadata/_latest_layer = "14"
+metadata/_latest_layer = "13"

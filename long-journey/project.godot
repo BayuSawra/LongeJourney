@@ -99,7 +99,7 @@ glossary/default_case_sensitive=true
 "visit_ting_shifang": 0,
 "wife": 0
 }
-text/letter_speed=0.3
+text/letter_speed=0.05
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1

@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://5ulr345eh8ua" path="res://font/HYZIKUTANGJINGJIEKAITIW.TTF" id="1_font"]
 [ext_resource type="StyleBox" path="res://ui/button_normal.tres" id="2_normal"]
-[ext_resource type="StyleBox" path="res://ui/button_hover.tres" id="3_hover"]
+[ext_resource type="StyleBox" uid="uid://cdvbs60cprhvi" path="res://ui/button_hover.tres" id="3_hover"]
 [ext_resource type="StyleBox" path="res://ui/button_focus.tres" id="4_focus"]
 
 [sub_resource type="StyleBoxFlat" id="Disabled"]
