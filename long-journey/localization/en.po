@@ -128,11 +128,6 @@ msgstr "Refuse the earthworm"
 msgid "Choice/lj_04_flower_shop_028/text"
 msgstr "Return to the crossroads"
 
-#: res://timelines/04_flower_shop.dtl:40
-#. source-sha256: 837eefaadc5c0d90270e193dd632ebe17d695a6e73f459b454c983867c3f3273
-msgid "Choice/lj_04_flower_shop_034/text"
-msgstr "Return to the crossroads"
-
 #: res://timelines/05_shiling.dtl:7
 #. source-sha256: bdceb7de57c069a7a64e8f0d68a56da010a5a59ad0f18d090ebb8aced75abf33
 msgid "Choice/lj_05_shiling_004/text"
@@ -514,9 +509,13 @@ msgid "Text/lj_00_start_000/text"
 msgstr "[color=#696969][i]※Current location: On the bus※[/i][/color]"
 
 #: res://timelines/00_start.dtl:3
-#. source-sha256: 45ac721d6c0f7151bc7e0f0b80e785f9b2b5c43718d7bbc33b4c21b97a36f8ba
+#. source-sha256: 148015a9614df173f0bec3ce88ca5d3aed9a111bd8662a90f51e196c2c84a23f
 msgid "Text/lj_00_start_001/text"
-msgstr "Almost at the hospital. The bus turns slowly to the left, and I see its gray outer walls, ivy covering most of the building. Tattered windows spit out blue-gray curtains."
+msgstr "Almost at the hospital now. The bus turns slowly to the left, and I see the hospital's gray outer wall."
+
+#. source-sha256: b86043977e6d138813c5335e15d9627e5c19e418158a24678f58223372d8c540
+msgid "Text/lj_00_start_001b/text"
+msgstr "Ivy covers most of it, and tattered windows spit out blue-gray curtains."
 
 #: res://timelines/00_start.dtl:5
 #. source-sha256: 968ce265d62666d7a5867dd1f4967c55413b7cf770ad988f3c16a915786167a7
@@ -534,12 +533,16 @@ msgid "Text/lj_00_start_004/text"
 msgstr "I glance at the other passengers. Every one of them sits there in grimy silence, like a nest of rats."
 
 #: res://timelines/00_start.dtl:11
-#. source-sha256: c020387cb1f31994aa689166aae202fd9d402be327a5defd89603a50d229baed
+#. source-sha256: 704786333c6f8f3eeadd98a974039873f26b0e4591e6feb4dbc6cad10d8cc889
 msgid "Text/lj_00_start_005/text"
-msgstr "I count around ten people besides myself. What are they all doing out in weather like this? Probably nothing better to do. Might as well wander around."
+msgstr "I count around ten people besides myself. What are they all doing out in weather like this?"
+
+#. source-sha256: 7f022c09d227be947ccc375cb2ae20f560dc8fed6a1279a444b0833618ebbd6e
+msgid "Text/lj_00_start_005b/text"
+msgstr "Just a bunch of paupers. They love wandering around."
 
 #: res://timelines/00_start.dtl:13
-#. source-sha256: 13c67a1ddc93583f899b65e15753fe8f798c425f87ff6f9d46e16082a4cdfccd
+#. source-sha256: e6e5bb97813a261eee39bd184ac49fb4dac8384e9244f437b747e8d253ecdc32
 msgid "Text/lj_00_start_006/text"
 msgstr "Fortunately, none of them are thieves. Nothing gets past these eyes. I can tell the good from the bad with a single glance!"
 
@@ -574,9 +577,13 @@ msgid "Text/lj_02_ward_000/text"
 msgstr "[color=#696969][i]※Current location: Inpatient ward※[/i][/color]"
 
 #: res://timelines/02_ward.dtl:12
-#. source-sha256: 9238c35ecda88b788f14c49a64aaa5e4e325b735d162945b9de7db9349c2a3f0
+#. source-sha256: 36e77ce5fdb0a42e57caaa387e93eaad7e7ee75f5fc107f9bb418a4b56f5724c
 msgid "Text/lj_02_ward_001/text"
 msgstr "“I come here often. All the nurses at your hospital know me.”"
+
+#. source-sha256: 387c71ca53b8f39dba9dc7991e25318455aa8d627d126e25e681dc9a3ee00d52
+msgid "Text/lj_02_ward_001a/text"
+msgstr "“I'm the husband of the patient in bed 505 on the seventh floor.”"
 
 #: res://timelines/02_ward.dtl:18
 #. source-sha256: 81c09f28955f18c5964e6cd3d176127bdb7d994e4f4041a058dd57b0540721af
@@ -594,14 +601,18 @@ msgid "Text/lj_02_ward_004/text"
 msgstr "A burly nurse blocks my way."
 
 #: res://timelines/02_ward.dtl:13
-#. source-sha256: 948da2357c418fe2385b34ddc80a1a930d3e68a4e067de346aa8c204e4ff92ca
+#. source-sha256: 2752e2da83781b68bb76f4563594a23be1fc8a26bbf1544e6cb2f817bfe216c0
 msgid "Text/lj_02_ward_005/text"
-msgstr "“I don't know you! If you don't have flowers, don't come here making a fool of yourself. Anyone with common sense knows to bring five flowers!”"
+msgstr "“I don't know you!”"
+
+#. source-sha256: 0f8a84ed4c3254db4ee91197e9848b8306c5808504091171e8687e190202d7bb
+msgid "Text/lj_02_ward_005b/text"
+msgstr "“If you don't have flowers, don't come here making a fool of yourself. Anyone with common sense knows to bring five flowers!”"
 
 #: res://timelines/02_ward.dtl:17
-#. source-sha256: fe76f53f068bfd01c38cb9bf4118c26f70aa1919e70cfee20a8cb93ce68a5396
+#. source-sha256: 7606c1b4a702347978677e936cc81d04298208b876153ebbbe4c392fe7f0fa35
 msgid "Text/lj_02_ward_006/text"
-msgstr "She waves me off rudely, telling me to get away."
+msgstr "She rolls her eyes, waves me off rudely, and tells me to get away."
 
 #: res://timelines/02_ward.dtl:23
 #. source-sha256: b8c11371f78c365f0af2a16b7a290835ee0d354a6c56db1be14700e396a9795c
@@ -752,11 +763,6 @@ msgstr "The flower shop is already closed, its shutter pulled down tight."
 #. source-sha256: 6d18434e749ffd5f3ef617102436218dd4a8f7c04eac1189bcc6055b26ecc6b9
 msgid "Text/lj_04_flower_shop_027/text"
 msgstr "I don't go near it. One look from a distance, and I turn away."
-
-#: res://timelines/04_flower_shop.dtl:38
-#. source-sha256: aefe7f4a5bbe9da3d8c16ca2699aa49fd2902bfdd00a88aacf26d0ebbf7369c7
-msgid "Text/lj_04_flower_shop_033/text"
-msgstr "The flower shop is closed, its shutter pulled tight."
 
 #: res://timelines/05_shiling.dtl:1
 #. source-sha256: 6c878fd92f85d9f14872bedec04732cb28e506f7083d5eb2c1c2d46af6e1a5b4

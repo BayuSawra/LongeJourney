@@ -54,6 +54,7 @@ func test_choice_layer_uses_centered_warm_white_buttons() -> void:
 	await get_tree().process_frame
 	layout.apply_export_overrides()
 	var container := choices.get_node("Choices") as VBoxContainer
+	assert_bool(container.visible).is_true()
 	assert_float(container.anchor_left).is_equal(0.5)
 	assert_float(container.anchor_top).is_equal(0.0)
 	assert_float(container.anchor_right).is_equal(0.5)

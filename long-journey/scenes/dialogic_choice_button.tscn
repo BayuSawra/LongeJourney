@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://f614idawra74"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_choice"]
+[ext_resource type="Script" uid="uid://bldt7xlfum7ov" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_choice"]
 
-[node name="ChoiceButton" type="Button"]
+[node name="ChoiceButton" type="Button" unique_id=1007321483]
 autowrap_mode = 3
 script = ExtResource("1_choice")

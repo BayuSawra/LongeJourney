@@ -9,8 +9,10 @@ if {flower} < 5:
     character/nurse1: “没带花别进去。” #id:lj_02_ward_003
     
     一个虎背熊腰的护士拦住我。 #id:lj_02_ward_004
-    character/我: ”我经常来，你们医院的护士都认识我。“ #id:lj_02_ward_001
-    character/nurse1: “我就不认识你!没带花就别在这里丢人现眼！有点常识的人都知道要带5朵花！" #id:lj_02_ward_005
+    character/我: “我是7楼505床病人的丈夫。” #id:lj_02_ward_001a
+    character/我: “我经常来，你们医院的护士都认识我。” #id:lj_02_ward_001
+    character/nurse1: “我就不认识你！” #id:lj_02_ward_005
+    character/nurse1: “没带花就别在这里丢人现眼！有点常识的人都知道要带5朵花！" #id:lj_02_ward_005b
     
     她翻了一个白眼，粗鲁地朝我摆了摆手，要我走远些。 #id:lj_02_ward_006
     看来今天不准备好花，是进不去了。 #id:lj_02_ward_002

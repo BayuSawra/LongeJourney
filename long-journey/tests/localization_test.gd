@@ -82,7 +82,8 @@ func test_native_catalogs_and_all_timeline_properties() -> void:
 					assert_str(event.get_property_translated(property)).is_equal(Localization.text(key))
 		for path in ProjectSettings.get_setting("dialogic/directories/dch_directory").values():
 			var character := load(path) as DialogicCharacter
-			assert_str(character.get_display_name_translated()).is_equal(Localization.text(character.display_name))
+			var name_key := character.get_property_translation_key(DialogicCharacter.TranslatedProperties.NAME)
+			assert_str(character.get_display_name_translated()).is_equal(Localization.text(name_key))
 
 
 func _story_events(timeline: DialogicTimeline) -> Array[DialogicEvent]:
