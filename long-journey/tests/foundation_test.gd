@@ -73,7 +73,9 @@ func test_audio_layout_and_dialogic_routing() -> void:
 	assert_str(str(choice_layer.get("sounds_hover"))).is_empty()
 	assert_str(str(choice_layer.get("sounds_focus"))).is_empty()
 	choice_layer.queue_free()
-	var style := load("res://chat_style.tres") as DialogicStyle
+	var style_path := str(DialogicStylesUtil.get_style_path(""))
+	assert_str(style_path).is_equal("res://character/chat_style.tres")
+	var style := load(style_path) as DialogicStyle
 	var textbox_info: Dictionary = style.get_layer_inherited_info("13")
 	assert_str(str(textbox_info["path"])).is_equal("res://scenes/dialogic_textbox_layer.tscn")
 	var textbox_overrides: Dictionary = textbox_info["overrides"]

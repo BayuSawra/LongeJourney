@@ -6,17 +6,31 @@ const MAX_BOX_WIDTH := 1000.0
 const BOX_HEIGHT := 156.0
 const BOTTOM_MARGIN := 24.0
 
+var _viewport: Viewport
+
 
 func _ready() -> void:
+	_viewport = get_viewport()
 	super._ready()
-	if not get_viewport().size_changed.is_connected(_apply_box_settings):
-		get_viewport().size_changed.connect(_apply_box_settings)
+	if _viewport == null:
+		return
+	if not _viewport.size_changed.is_connected(_apply_box_settings):
+		_viewport.size_changed.connect(_apply_box_settings)
 	_apply_box_settings()
 
 
+func _exit_tree() -> void:
+	if _viewport != null and is_instance_valid(_viewport) and \
+			_viewport.size_changed.is_connected(_apply_box_settings):
+		_viewport.size_changed.disconnect(_apply_box_settings)
+	_viewport = null
+
+
 func _apply_box_settings() -> void:
+	if _viewport == null or not is_inside_tree():
+		return
 	super._apply_box_settings()
-	var responsive_width := minf(MAX_BOX_WIDTH, maxf(0.0, get_viewport().get_visible_rect().size.x - HORIZONTAL_GUTTER * 2.0))
+	var responsive_width := minf(MAX_BOX_WIDTH, maxf(0.0, _viewport.get_visible_rect().size.x - HORIZONTAL_GUTTER * 2.0))
 	var responsive_size := Vector2(responsive_width, BOX_HEIGHT)
 	var sizer: Control = %Sizer
 	sizer.size = responsive_size

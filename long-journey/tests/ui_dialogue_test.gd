@@ -22,9 +22,28 @@ func test_textbox_uses_responsive_22px_dialogue_panel() -> void:
 	assert_float(sizer.position.y).is_equal(-180.0)
 	var text := textbox.get_node("Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText") as RichTextLabel
 	assert_int(text.get_theme_font_size(&"normal_font_size")).is_equal(22)
+	var name_label_panel := textbox.get_node("Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder/NameLabelPanel") as PanelContainer
+	assert_that(name_label_panel.position).is_equal(Vector2(-30.5, -56.0))
 	var name_label := textbox.get_node("Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder/NameLabelPanel/DialogicNode_NameLabel") as Label
 	assert_int(name_label.get_theme_font_size(&"font_size")).is_equal(22)
 	layout.queue_free()
+
+
+func test_textbox_ignores_size_changed_after_exit_tree() -> void:
+	var viewport := SubViewport.new()
+	viewport.size = Vector2i(1152, 648)
+	add_child(viewport)
+	var textbox := (load("res://scenes/dialogic_textbox_layer.tscn") as PackedScene).instantiate()
+	viewport.add_child(textbox)
+	await get_tree().process_frame
+
+	viewport.remove_child(textbox)
+	await assert_error(func() -> void:
+		viewport.size_changed.emit()
+	).is_success()
+	assert_bool(textbox.is_inside_tree()).is_false()
+	textbox.free()
+	viewport.queue_free()
 
 
 func test_choice_layer_uses_centered_warm_white_buttons() -> void:

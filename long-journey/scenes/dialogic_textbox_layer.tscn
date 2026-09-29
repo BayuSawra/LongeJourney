@@ -32,6 +32,7 @@ name_label_custom_font_size = 22
 name_label_box_panel = "res://ui/name_panel.tres"
 name_label_box_use_global_color = false
 name_label_box_modulate = Color(1, 1, 1, 1)
+name_label_box_offset = Vector2(-0.5, 8)
 
 [node name="Animations" parent="." index="0"]
 autoplay = &"RESET"
@@ -49,8 +50,7 @@ offset_right = -48.0
 theme_override_styles/panel = ExtResource("4_0q0ig")
 
 [node name="NameLabelPanel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder" index="0"]
-visible = false
-offset_left = -29.0
-offset_top = -66.0
-offset_right = 0.0
-offset_bottom = -34.0
+offset_left = -30.5
+offset_top = -56.0
+offset_right = -1.5
+offset_bottom = -24.0

@@ -12,9 +12,9 @@
 },
 &"default_portrait": "",
 &"description": "none",
-&"display_name": "Character/lj_self/name",
+&"display_name": "我",
 &"mirror": false,
-&"nicknames": ["Character/lj_self/nicknames"],
+&"nicknames": ["我自己"],
 &"offset": Vector2(0, 0),
 &"portraits": {},
 &"scale": 1.0

@@ -78,11 +78,11 @@ directories/dtl_directory={
 "timeline1_0": "res://timelines/timeline1_0.dtl"
 }
 layout/style_directory={
-"": "res://chat_style.tres",
-"chat_style": "res://chat_style.tres"
+"": "res://character/chat_style.tres",
+"chat_style": "res://character/chat_style.tres"
 }
-layout/style_list=["res://chat_style.tres"]
-layout/default_style="res://chat_style.tres"
+layout/style_list=["res://character/chat_style.tres"]
+layout/default_style="res://character/chat_style.tres"
 glossary/default_case_sensitive=true
 "#å¨è¿éæ³¨åæ°çåé#variables"={
 "calm": 100,
