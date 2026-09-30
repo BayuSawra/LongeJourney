@@ -2,6 +2,7 @@ extends GdUnitTestSuite
 
 var _original_messages: Dictionary = {}
 var _original_dialogic_sources: Dictionary = {}
+const SOURCE_ONLY_EDITING_SETTING := "long_journey/localization/source_only_editing"
 
 
 func before() -> void:
@@ -30,6 +31,7 @@ func after_test() -> void:
 		Localization.dialogic_sources[key] = _original_dialogic_sources[key]
 	_original_messages.clear()
 	_original_dialogic_sources.clear()
+	ProjectSettings.set_setting(SOURCE_ONLY_EDITING_SETTING, false)
 	SettingsManager.set_language("zh_CN")
 	await get_tree().process_frame
 	SaveManager._loading = false
@@ -41,6 +43,58 @@ func _wait_for_text() -> void:
 			return
 		await get_tree().process_frame
 	fail("Dialogic did not start localized text within 180 frames")
+
+
+func test_inline_text_without_translation_id_is_previewed_from_timeline() -> void:
+	var timeline := DialogicTimeline.new()
+	timeline.from_text("\u672a\u7f16\u53f7\u8bd5\u5199[n+]\u7ee7\u7eed")
+	Dialogic.start(timeline)
+	await _wait_for_text()
+	assert_str(Localization.dialogue.key).is_empty()
+	assert_str(Localization.dialogue.source).is_equal("\u672a\u7f16\u53f7\u8bd5\u5199[n+]\u7ee7\u7eed")
+	assert_str(Localization.render_record(Localization.dialogue)).is_equal("\u672a\u7f16\u53f7\u8bd5\u5199[n+]\u7ee7\u7eed")
+
+
+func test_inline_text_without_translation_id_survives_save_roundtrip() -> void:
+	var timeline := load("res://timelines/04_flower_shop.dtl") as DialogicTimeline
+	timeline.process()
+	var source := "\u5979\u6307\u4e86\u6307\u5730\u4e0a\u7684\u51e0\u4e2a\u6c34\u6876\u3002"
+	var event_index := -1
+	for index in timeline.events.size():
+		var event: DialogicEvent = timeline.events[index]
+		if event is DialogicTextEvent and event._translation_id.is_empty() and event.text == source:
+			event_index = index
+			break
+	assert_int(event_index).is_not_equal(-1)
+	Dialogic.start("04_flower_shop", event_index)
+	await _wait_for_text()
+	assert_str(Localization.dialogue.key).is_empty()
+	assert_str(Localization.dialogue.source).is_equal(source)
+	assert_bool(SaveManager.save_to_slot("localization-inline")).is_true()
+	var data: Dictionary = SaveManager._read_save_data("localization-inline")
+	assert_str(data["localized_dialogue"]["key"]).is_empty()
+	assert_str(data["localized_dialogue"]["source"]).is_equal(source)
+	await Dialogic.end_timeline(true)
+	assert_bool(await SaveManager.load("localization-inline")).is_true()
+	assert_str(Localization.dialogue.source).is_equal(source)
+	assert_str(Dialogic.Text.dialog_text).is_equal(source)
+
+func test_target_catalog_is_validated_when_selected() -> void:
+	var key := "save.title"
+	var backup := String(Localization.catalogs["en"].get_message(key))
+	Localization.catalogs["en"].erase_message(key)
+	assert_str(Localization._catalog_mismatch("en")).contains("count differs")
+	assert_bool(Localization._validate_catalogs(false)).is_true()
+	Localization.catalogs["en"].add_message(key, backup)
+	assert_str(Localization._catalog_mismatch("en")).is_empty()
+
+
+func test_source_only_editing_disables_target_validation() -> void:
+	ProjectSettings.set_setting(SOURCE_ONLY_EDITING_SETTING, true)
+	assert_bool(Localization.is_source_only_editing()).is_true()
+	assert_array(Localization.supported_locales()).is_equal([Localization.SOURCE_LOCALE])
+	assert_bool(Localization._validate_catalogs(true)).is_true()
+	ProjectSettings.set_setting(SOURCE_ONLY_EDITING_SETTING, false)
 
 
 func _event_index_by_translation_key(timeline_name: String, key: String, event_name: String = "") -> int:
@@ -70,7 +124,7 @@ func test_native_catalogs_and_all_timeline_properties() -> void:
 			var timeline := load(path) as DialogicTimeline
 			timeline.process()
 			for event: DialogicEvent in timeline.events:
-				if not event.can_be_translated():
+				if not event.can_be_translated() or event._translation_id.is_empty():
 					continue
 				for property in event._get_translatable_properties():
 					var source_text: String = event._get_property_original_translation(property)

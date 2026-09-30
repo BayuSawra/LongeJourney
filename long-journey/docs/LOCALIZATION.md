@@ -4,7 +4,7 @@
 
 界面、角色名、图鉴和本地化 UI 文案存放在 `localization/<locale>.po`，使用 UTF-8、
 稳定 `msgid` + 该语言的 `msgstr`。当前 `zh_CN.po` 有 199 条共享原文；
-`en.po` 另有 336 条 Dialogic 译文，共 535 条。
+`en.po` 另有 351 条 Dialogic 译文，共 550 条。
 
 Dialogic 的剧情与选项原文直接写在 `timelines/*.dtl`，不再复制到 `zh_CN.po`。
 稳定 `#id` 仍保留在事件行末尾，英文及后续语言只把对应译文放进 PO。
@@ -34,8 +34,12 @@ msgstr "语言"
 `Localization.text(key)` 取当前语言文本；`format_text(key, values)` 使用命名占位符。
 Dialogic 继续使用自己的翻译与事件系统，不引入新的业务框架。启动时从已登记 timeline
 收集 Dialogic 原文，中文直接使用 `.dtl` 正文，目标语言使用对应 PO 的 `msgstr`。
+启动只强制校验源语言和 timeline 原文；目标语言在真正切换时校验，因此未完成的 `en.po`
+不会阻塞中文剧情编辑与试玩。
 空 `player_name` 表示默认名称，由当前语言显示；自定义姓名和存档名保持原样。
 历史记录与存档保存稳定 key 和变量快照，不把中文渲染结果当成跨语言文本来源。
+未带 `#id` 的试写行没有稳定 key，记录和手动存档改存 timeline 原文快照；补上 `#id`
+后才能进入目标语言翻译流程。
 历史面板维持原有会话内历史/回看语义，不新增跨会话历史档案。
 
 **没有翻译回退**：关闭 Godot fallback；缺语言/缺 key/空翻译运行时会报告原因并退出。
@@ -49,12 +53,32 @@ Dialogic 继续使用自己的翻译与事件系统，不引入新的业务框�
 这不修改 Godot 编辑器界面语言，不依赖运行语言的 `internationalization/locale/test`，也不覆盖玩家已保存的语言设置。
 插件不修改第三方代码；Godot 原生预览接口或中文资源缺失时明确报错。
 
+## 暂存本地化关联
+
+集中编辑中文正文时，可在不提交的 `override.cfg` 中启用本地编辑模式：
+
+```ini
+[long_journey]
+
+localization/source_only_editing=true
+```
+
+该模式只启用并暴露 `zh_CN`，不校验或切换目标语言，避免未完成的英文目录阻塞中文编辑与试玩。
+设置里原先选择的英文偏好会保留，删除该设置后恢复。它不提供缺翻译回退；`tools/verify.py`
+会忽略 `override.cfg`，仍执行完整中英文校验。编辑期间可只检查中文源：
+
+```powershell
+$env:PYTHONUTF8 = "1"
+python tools/localization.py check-source
+```
+
 ## 编辑已有文案
 
 1. 共享界面/图鉴文案只修改 `zh_CN.po` 的中文 `msgstr`，再修改目标语言 PO；不要重命名已有 key。
 2. Dialogic 剧情和选项直接在 Godot 的 Dialogic 编辑器中修改 `.dtl` 正文，不要改已有 `#id`。
-3. 保留 `{player_name}`、`{count}` 等命名参数、BBCode、链接目标、Dialogic `[n]`/`[n+]` 的数量与次序。
-4. 中文源变化后，工具会按 `source-sha256` 标记旧译文待审；人工核对译文后显式确认：
+3. 中文试写阶段可以暂不添加 `#id`，timeline 可直接播放；准备进入目标语言流程时再补唯一 `#id`，然后运行 `sync`。
+4. 保留 `{player_name}`、`{count}` 等命名参数、BBCode、链接目标、Dialogic `[n]`/`[n+]` 的数量与次序。
+5. 中文源变化后，工具会按 `source-sha256` 标记旧译文待审；人工核对译文后显式确认：
 
 ```powershell
 $env:PYTHONUTF8 = "1"

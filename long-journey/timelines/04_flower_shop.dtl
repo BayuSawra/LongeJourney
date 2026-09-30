@@ -4,45 +4,43 @@ audio action -
 audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [fade="0.5" volume="-8.0" bus="SFX" loop="true"]
 [color=#696969][i]※当前位置  花店※[/i][/color] #id:lj_04_flower_shop_000
 
-if {visit_huadian} == 0.0:
-    说是花店，其实只有极小两平米，卷帘门半拉着。老板低头玩手机，桶里全是土。 #id:lj_04_flower_shop_002
+if {visit_huadian} == 1.0:
+    这是一个极小的花店，大约有两平，老板正在玩手机。 #id:lj_04_flower_shop_002
     
-    “不卖花了，我改行养蛤蟆。” #id:lj_04_flower_shop_003
-    set {visit_huadian} += 1
-    - 骂她还踢翻水桶 #id:lj_04_flower_shop_004
-        [background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
-        audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [bus="SFX" loop="false"]
-        我一脚踹翻水桶，土洒了一地。 #id:lj_04_flower_shop_005
-        audio action -
-        
-        老板愣了一下，竟然没生气，嘴角还翘了起来。 #id:lj_04_flower_shop_006
-        
-        set {earthworm} += 1
-        jump 03_crossroads/
-    - “我已经知道你想陷害我的阴谋” #id:lj_04_flower_shop_010
-        [background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
-        audio action "res://audio/sfx/38_soil_rummage/selected.mp3" [bus="SFX" loop="false"]
-        老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。 #id:lj_04_flower_shop_011
-        audio action -
-        
-        “那你肯定也想要这个吧。” #id:lj_04_flower_shop_012
-        
-        - 拿走蚯蚓 #id:lj_04_flower_shop_013
-            我捏住滑溜溜的蚯蚓，心里一阵发毛。 #id:lj_04_flower_shop_014
-            
-            set {earthworm} += 1
-            set {calm} -= 10
-            jump 03_crossroads/
-        - 不要蚯蚓 #id:lj_04_flower_shop_019
-            “我才不稀罕。” #id:lj_04_flower_shop_020
-            
-            jump 03_crossroads/
-elif {visit_huadian} > 0.0:
+    character/storeOwner: "你要买花吗？" #id:lj_04_flower_shop_003
+    character/我: “嗯。” #id:lj_04_flower_shop_003a
+    character/storeOwner: "这段时间没什么生意，我没卖花了。" #id:lj_04_flower_shop_003b
+    她指了指地上的几个水桶。 #id:lj_04_flower_shop_003c
+    我看了一下，桶里面全填着土，不知道什么意思。 #id:lj_04_flower_shop_003d
+    character/我: "你装这些土干什么？" #id:lj_04_flower_shop_003e
+    character/storeOwner: "看不出来吗？我现在改行养蛤蟆。" #id:lj_04_flower_shop_003f
+    character/storeOwner: "它们现在都在土里冬眠。明年开春了我卖蛤蟆卵，能赚钱。" #id:lj_04_flower_shop_003g
+    这婆娘真是想钱想疯了！把花店开在医院旁边却干起别的买卖！ #id:lj_04_flower_shop_003h
+    可见她有多歹毒，明明知道我今天会来买花！ #id:lj_04_flower_shop_003i
+    也许是昨晚，更有可能就是今天早上！她便开始养蛤蟆了！
+    这样下去，又有多少人会被她坑害！ #id:lj_04_flower_shop_003j
+    我瞪了她一眼，却不小心看见了她那又黑又粗的小腿，太恶心了！令人作呕！ #id:lj_04_flower_shop_003k
+    - 直接骂她 #id:lj_04_flower_shop_004
+        jump 04_1_flower_shop/
+    
+    - 揭穿她的阴谋 #id:lj_04_flower_shop_010
+        jump 04_2_flower_shop/
+
+elif {visit_huadian} >= 3.0:
     [background arg="res://art/backgrounds/flower_shop_closed.png" fade="0.6"]
     
-    花店已经关门了，卷帘门拉得严严实实。 #id:lj_04_flower_shop_026
+    花店已经关门，卷帘门拉了下来。 #id:lj_04_flower_shop_026
     
-    我没有走近，远远看了一眼就转身走了。 #id:lj_04_flower_shop_027
+    我悄悄走近看了看，那丑东西确实不在了。 #id:lj_04_flower_shop_027
     
-    - 回路口 #id:lj_04_flower_shop_028
+    - 回十字路口 #id:lj_04_flower_shop_028
+        jump 03_crossroads/
+elif {visit_huadian} == 2.0:
+    再次来到花店，她正在关门。
+    我站在几米远的电线杆后面偷偷看了会儿，她应该不打算再搞什么小动作了。
+    哎，今天又是我独自战胜邪恶的一天。
+    想到这里我心中一股无名火直冲天灵盖，为什么妻子非要选这种时候生病呢？！
+    天气这么冷，我最怕冷了！她明明知道！
+    要是我被冻到了，定要她日子也不好过！
+    - 回十字路口
         jump 03_crossroads/

@@ -25,6 +25,7 @@ sounds_focus = ""
 choices_custom_button = "res://scenes/dialogic_choice_button.tscn"
 
 [node name="Choices" parent="." index="0"]
+visible = true
 anchors_preset = 13
 anchor_top = 0.0
 anchor_bottom = 1.0

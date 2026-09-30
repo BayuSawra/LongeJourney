@@ -1,7 +1,4 @@
 [background arg="res://art/bus_interior_normal.png" fade="0.0"]
-
-audio action -
-audio ambience -
 audio ambience "res://audio/sfx/09_bus_ambience/bus_interior_ambience_with_people.wav" [fade="0.5" volume="-8.0" bus="SFX" loop="true"]
 [color=#696969][i]※当前位置  公交车上※[/i][/color] #id:lj_00_start_000
 

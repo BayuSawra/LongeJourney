@@ -1,7 +1,4 @@
 [background arg="res://art/backgrounds/hospital_exterior.png" fade="0.0"]
-
-audio action -
-audio ambience -
 audio ambience "res://audio/sfx/14_wind/wind_in_the_top_of_the_mountain.wav" [fade="0.5" volume="-8.0" bus="SFX" loop="true"]
 [color=#696969][i]※当前位置  医院※[/i][/color] #id:lj_01_hospital_000
 

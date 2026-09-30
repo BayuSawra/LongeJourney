@@ -104,14 +104,14 @@ msgid "Choice/lj_03_crossroads_030/text"
 msgstr "Return to the hospital"
 
 #: res://timelines/04_flower_shop.dtl:8
-#. source-sha256: 25c8bc13edb6ca1bec620bcf8817992a5a5282fe3e2aa80402f6a147c2fa9cf0
+#. source-sha256: e9922884c20748ed3ddaeb185f44efc37f737cafa9da531de5ff195ea40896a8
 msgid "Choice/lj_04_flower_shop_004/text"
-msgstr "Curse at her and kick over the bucket"
+msgstr "Curse her outright"
 
 #: res://timelines/04_flower_shop.dtl:15
-#. source-sha256: f280a55f2dd7693a33527aa9cf89a684c8bb917e3c0147faa16854d81949dbf0
+#. source-sha256: 1856639e02e57d275daefc4442e2a6eee525209283a53cd72fe5f59300dd8bbe
 msgid "Choice/lj_04_flower_shop_010/text"
-msgstr "“I already know about your plot to frame me.”"
+msgstr "Expose her scheme"
 
 #: res://timelines/04_flower_shop.dtl:20
 #. source-sha256: b01641d571e8c7837e1164313867a1446b26708032d21705acfa5973eb06d189
@@ -715,19 +715,63 @@ msgid "Text/lj_04_flower_shop_000/text"
 msgstr "[color=#696969][i]※Current location: Flower shop※[/i][/color]"
 
 #: res://timelines/04_flower_shop.dtl:4
-#. source-sha256: c8d2269f0ed4eefd3776095aa5bbae79cbe24af5baada435320e74ccdb62fa99
+#. source-sha256: c3b3f1fdcd324857cf9935a4c698b7e5086a0d0a910f40ba39feafac2c1bae23
 msgid "Text/lj_04_flower_shop_002/text"
-msgstr "They call it a flower shop, but it's barely two square meters, with the shutter half down. The owner looks at her phone. The buckets are full of dirt."
+msgstr "It is a tiny flower shop, barely two square meters, and the owner is playing on her phone."
 
 #: res://timelines/04_flower_shop.dtl:6
-#. source-sha256: 727846776ff2d65085c3d760757de682451048f8ff26bfbede330569754e10fa
+#. source-sha256: 6ad6dcd87ed1eafdbe974118b6a73f6f35ea9b04c362669bb7f5f4d750dff694
 msgid "Text/lj_04_flower_shop_003/text"
-msgstr "“No more flowers. I'm raising toads now.”"
+msgstr "Are you here to buy flowers?"
+
+#. source-sha256: fb27d08f16fa6e6f66af2caa92a62095b30e33a09bf1129962df0c6556337961
+msgid "Text/lj_04_flower_shop_003a/text"
+msgstr "Yeah."
+
+#. source-sha256: 9014e7a0f363568a3e251c721d382e3e05a44b9d0b1ab7ee77a80d15b4399457
+msgid "Text/lj_04_flower_shop_003b/text"
+msgstr "There hasn't been much business lately. I don't sell flowers anymore."
+
+#. source-sha256: 36a80966c93ec38f3d2ed06b58ffee1f1d413ab97e31dca4093309ac988f3e53
+msgid "Text/lj_04_flower_shop_003c/text"
+msgstr "She points to several buckets on the floor."
+
+#. source-sha256: 3f34e5b868ed867ee096fb8d660ffd26d56736ed497e93e8cab102d784545d6d
+msgid "Text/lj_04_flower_shop_003d/text"
+msgstr "I look. They are full of dirt. I have no idea what she means."
+
+#. source-sha256: efb3b5ebbf1a58616d5529fa64df5a991c269ed2aaa63cf5a320825489f1da9b
+msgid "Text/lj_04_flower_shop_003e/text"
+msgstr "What are you doing with all that dirt?"
+
+#. source-sha256: 5ee40bc9f54829560a4b7ee37348db45edb7a79ef0983379ff99e712073a18d3
+msgid "Text/lj_04_flower_shop_003f/text"
+msgstr "Can't you tell? I've switched to raising toads."
+
+#. source-sha256: 679830001168cfea8a010e02d1b34491c489c3ac1eb0dc5c81320bf38419404c
+msgid "Text/lj_04_flower_shop_003g/text"
+msgstr "They're hibernating in the soil right now. Next spring I'll sell toadspawn. It makes good money."
+
+#. source-sha256: f7fb8d2fe425a992dc3e40c03fbf7c2c5d9c50317f43d61b79b66b61fa33a239
+msgid "Text/lj_04_flower_shop_003h/text"
+msgstr "This woman has lost her mind over money! She runs a flower shop beside a hospital, then goes and starts another business!"
+
+#. source-sha256: 678c93a94e1dc562cb1b633b1c31cf3465d1173b1e820d0f350e5e2002177811
+msgid "Text/lj_04_flower_shop_003i/text"
+msgstr "It just goes to show how vicious she is. She knew I would come to buy flowers today. Maybe last night, or more likely this very morning, she started raising toads!"
+
+#. source-sha256: 073ea905fed0ebbe916b150a2b3d78e21fe8afd48ce19390d122814d9ebef967
+msgid "Text/lj_04_flower_shop_003j/text"
+msgstr "At this rate, how many more people will she swindle?"
+
+#. source-sha256: fb65c8aecf6c115324d82ef6ee63faf063b5c8329870c22434050e3cef6ee0d8
+msgid "Text/lj_04_flower_shop_003k/text"
+msgstr "I glare at her, then accidentally catch sight of her thick, dark calves. Disgusting! Revolting!"
 
 #: res://timelines/04_flower_shop.dtl:9
-#. source-sha256: 14085b0e6a8639ac1dc03dc8eefa8556eed6d89be0e12403b6cefc8c8f163e4c
+#. source-sha256: c0ac7f44e29301a14367e1470271f79fe50f2a56c5c522e3d2edfafef5281813
 msgid "Text/lj_04_flower_shop_005/text"
-msgstr "I kick the bucket over, spilling dirt across the floor."
+msgstr "You're squatting on the toilet without doing your business. How much are next year's toads going to sell for? Is it enough to buy you a coffin?"
 
 #: res://timelines/04_flower_shop.dtl:11
 #. source-sha256: 0f2344b525f918f13bc6227513ca2a5aa90c0a90b69437b68487c9c5824edc90

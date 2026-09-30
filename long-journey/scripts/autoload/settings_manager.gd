@@ -8,6 +8,7 @@ var _ui_volume := 100
 var _fullscreen := false
 var _panel: Node = null
 var _loading_settings := false
+var _preferred_language := Localization.SOURCE_LOCALE
 
 func _ready() -> void:
 	_load_settings()
@@ -76,6 +77,11 @@ func get_language() -> String:
 	return Localization.locale
 
 func set_language(language: String) -> void:
+	_preferred_language = language
+	if Localization.is_source_only_editing() and language != Localization.SOURCE_LOCALE:
+		if Localization.set_locale(Localization.SOURCE_LOCALE):
+			save()
+		return
 	if Localization.set_locale(language):
 		save()
 
@@ -87,7 +93,7 @@ func _load_settings() -> void:
 		get_tree().quit(2)
 		return
 	_loading_settings = true
-	set_language(config.get_value("localization", "language", Localization.SOURCE_LOCALE))
+	set_language(str(config.get_value("localization", "language", Localization.SOURCE_LOCALE)))
 	var legacy_volume := int(config.get_value("audio", "volume", 100))
 	set_bgm_volume(int(config.get_value("audio", "bgm_volume", legacy_volume)))
 	set_sfx_volume(int(config.get_value("audio", "sfx_volume", legacy_volume)))
@@ -99,7 +105,7 @@ func save() -> void:
 	if _loading_settings:
 		return
 	var config := ConfigFile.new()
-	config.set_value("localization", "language", get_language())
+	config.set_value("localization", "language", _preferred_language)
 	config.set_value("audio", "volume", _bgm_volume)
 	config.set_value("audio", "bgm_volume", _bgm_volume)
 	config.set_value("audio", "sfx_volume", _sfx_volume)

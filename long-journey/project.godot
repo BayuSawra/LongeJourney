@@ -64,6 +64,8 @@ directories/dtl_directory={
 "01_hospital": "res://timelines/01_hospital.dtl",
 "02_ward": "res://timelines/02_ward.dtl",
 "03_crossroads": "res://timelines/03_crossroads.dtl",
+"04_1_flower_shop": "res://timelines/04_1_flower_shop.dtl",
+"04_2_flower_shop": "res://timelines/04_2_flower_shop.dtl",
 "04_flower_shop": "res://timelines/04_flower_shop.dtl",
 "05_shiling": "res://timelines/05_shiling.dtl",
 "06_luyuan": "res://timelines/06_luyuan.dtl",

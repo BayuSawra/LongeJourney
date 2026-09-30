@@ -8,6 +8,7 @@ var _chosen_button: Button = null
 var _choice_scan_tick := 0.0
 
 const CHOICE_SCAN_INTERVAL := 0.08
+const CHOICE_HIGHLIGHT_MODULATE := Color(1.08, 1.08, 1.08)
 
 
 func _ready() -> void:
@@ -141,11 +142,11 @@ func _on_choice_focus(button: Button, focused: bool) -> void:
 		_apply_choice_state(button, false)
 
 
-func _apply_choice_state(button: Button, selected: bool) -> void:
+func _apply_choice_state(button: Button, active: bool) -> void:
 	if button == null or not is_instance_valid(button):
 		return
-	button.scale = Vector2(1.04, 1.04) if selected else Vector2.ONE
-	button.modulate = Color(1.25, 1.18, 0.92) if selected else Color.WHITE
+	button.scale = Vector2(1.04, 1.04) if active else Vector2.ONE
+	button.modulate = CHOICE_HIGHLIGHT_MODULATE if active else Color.WHITE
 
 
 func _clear_previous_choice() -> void:

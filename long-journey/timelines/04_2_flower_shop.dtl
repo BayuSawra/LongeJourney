@@ -1,0 +1,17 @@
+[background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
+audio action "res://audio/sfx/38_soil_rummage/selected.mp3" [bus="SFX" loop="false"]
+老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。 #id:lj_04_flower_shop_011
+audio action -
+
+“那你肯定也想要这个吧。” #id:lj_04_flower_shop_012
+
+- 拿走蚯蚓 #id:lj_04_flower_shop_013
+        我捏住滑溜溜的蚯蚓，心里一阵发毛。 #id:lj_04_flower_shop_014
+        
+        set {earthworm} += 1
+        set {calm} -= 10
+        jump 03_crossroads/
+- 不要蚯蚓 #id:lj_04_flower_shop_019
+        “我才不稀罕。” #id:lj_04_flower_shop_020
+        
+        jump 03_crossroads/

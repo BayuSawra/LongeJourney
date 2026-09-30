@@ -11,6 +11,7 @@
 **/__pycache__/
 .env
 config.toml
+/override.cfg
 
 # Pinned tool downloads (see docs/DEVELOPMENT.md)
 /.local-tools/

@@ -4,11 +4,13 @@ extends Node
 signal locale_changed
 
 const SOURCE_LOCALE := "zh_CN"
+const SOURCE_ONLY_EDITING_SETTING := "long_journey/localization/source_only_editing"
 const UI_FONT := preload("res://font/HYZIKUTANGJINGJIEKAITIW.TTF")
 var locale := SOURCE_LOCALE
 var catalogs: Dictionary = {}
 var dialogic_sources: Dictionary = {}
 var dialogue: Dictionary = {}
+var _shared_keys: Dictionary = {}
 var _variables := RegEx.create_from_string(r"(?<!\\)\{([^{}]+)\}")
 
 
@@ -21,7 +23,7 @@ func _ready() -> void:
 		catalogs[catalog.locale] = catalog
 	if not _collect_dialogic_sources():
 		return
-	if not _validate_catalogs():
+	if not _validate_catalogs(false):
 		return
 	TranslationServer.set_locale(locale)
 	# Extend Dialogic's parser, before its variable expansion; no business framework.
@@ -57,7 +59,7 @@ func _is_dialogic_key(key: String) -> bool:
 	return key.begins_with("Text/") or key.begins_with("Choice/") or key.begins_with("Text Input/")
 
 
-func _validate_catalogs() -> bool:
+func _validate_catalogs(validate_targets := true) -> bool:
 	if not catalogs.has(SOURCE_LOCALE):
 		return _fail("Missing source locale " + SOURCE_LOCALE)
 	var source_catalog: Translation = catalogs[SOURCE_LOCALE]
@@ -66,26 +68,50 @@ func _validate_catalogs() -> bool:
 		if _is_dialogic_key(key):
 			return _fail("Dialogic source must stay in timeline: " + key)
 		keys[key] = true
+	_shared_keys = keys
+	if not validate_targets or is_source_only_editing():
+		return true
 	for language in catalogs:
-		var catalog: Translation = catalogs[language]
-		var expected := keys.duplicate()
-		if language != SOURCE_LOCALE:
-			for key in dialogic_sources:
-				expected[key] = true
-		if catalog.get_message_count() != expected.size():
-			return _fail("Translation key count differs: " + language)
-		for key in catalog.get_message_list():
-			if not expected.has(key):
-				return _fail("Unexpected translation key: %s / %s" % [language, key])
-			if String(catalog.get_message(key)).strip_edges().is_empty():
-				return _fail("Missing translation: %s / %s" % [language, key])
+		if not _validate_catalog(language):
+			return false
+	return true
+
+
+func _catalog_mismatch(language: String) -> String:
+	if not catalogs.has(language):
+		return "Unsupported locale: " + language
+	var catalog: Translation = catalogs[language]
+	var expected := _shared_keys.duplicate()
+	if language != SOURCE_LOCALE:
+		for key in dialogic_sources:
+			expected[key] = true
+	if catalog.get_message_count() != expected.size():
+		return "Translation key count differs: " + language
+	for key in catalog.get_message_list():
+		if not expected.has(key):
+			return "Unexpected translation key: %s / %s" % [language, key]
+		if String(catalog.get_message(key)).strip_edges().is_empty():
+			return "Missing translation: %s / %s" % [language, key]
+	return ""
+
+
+func _validate_catalog(language: String) -> bool:
+	var reason := _catalog_mismatch(language)
+	if not reason.is_empty():
+		return _fail(reason)
 	return true
 
 
 func supported_locales() -> Array:
+	if is_source_only_editing():
+		return [SOURCE_LOCALE]
 	var result := catalogs.keys()
 	result.sort()
 	return result
+
+
+func is_source_only_editing() -> bool:
+	return bool(ProjectSettings.get_setting(SOURCE_ONLY_EDITING_SETTING, false))
 
 
 func language_name(language: String) -> String:
@@ -95,6 +121,11 @@ func language_name(language: String) -> String:
 func set_locale(language: String) -> bool:
 	if not catalogs.has(language):
 		return _fail("Unsupported locale: " + language)
+	if language != SOURCE_LOCALE and is_source_only_editing():
+		push_warning("Localization source-only editing mode keeps the active locale at " + SOURCE_LOCALE)
+		return false
+	if language != SOURCE_LOCALE and not _validate_catalog(language):
+		return false
 	if language == locale:
 		return true
 	locale = language
@@ -149,12 +180,17 @@ func _default_player_name(value: String) -> String:
 
 
 func record_event(event: DialogicEvent) -> Dictionary:
+	var key := ""
+	var source := String(event._get_property_original_translation("text"))
+	if not event._translation_id.is_empty():
+		key = event.get_property_translation_key("text")
 	var values: Dictionary = {}
-	for found in _variables.search_all(text(event.get_property_translation_key("text"))):
+	for found in _variables.search_all(_event_text(event)):
 		var variable := found.get_string(1)
 		values[variable] = Dialogic.VAR.get_variable(variable)
 	return {
-		"key": event.get_property_translation_key("text"),
+		"key": key,
+		"source": source,
 		"variables": values,
 		"character": event.character.resource_path if event is DialogicTextEvent and event.character != null else "",
 		"timeline": Dialogic.current_timeline.resource_path,
@@ -163,12 +199,20 @@ func record_event(event: DialogicEvent) -> Dictionary:
 	}
 
 
+func _event_text(event: DialogicEvent) -> String:
+	if event._translation_id.is_empty():
+		return String(event._get_property_original_translation("text"))
+	return text(event.get_property_translation_key("text"))
+
+
 func valid_saved_dialogue(record: Dictionary) -> bool:
 	if record.is_empty():
 		return true
 	for field in ["key", "character", "timeline", "type"]:
 		if not record.get(field) is String:
 			return false
+	if record.has("source") and not record.get("source") is String:
+		return false
 	if not record.get("variables") is Dictionary or not record.get("event_idx") is int or not record.get("segment") is int:
 		return false
 	if record.type != "Text" or record.segment < 0 or record.event_idx < 0:
@@ -182,24 +226,42 @@ func valid_saved_dialogue(record: Dictionary) -> bool:
 	if record.event_idx >= timeline.events.size():
 		return false
 	var event: DialogicEvent = timeline.events[record.event_idx]
-	if not event is DialogicTextEvent or event.get_property_translation_key("text") != record.key:
+	if not event is DialogicTextEvent:
 		return false
+	var template := ""
+	if record.key.is_empty():
+		if not record.get("source") is String or str(record.get("source", "")).strip_edges().is_empty() or not event._translation_id.is_empty():
+			return false
+		template = str(record["source"])
+	else:
+		if event.get_property_translation_key("text") != record.key:
+			return false
+		template = text(record.key)
 	var variables := {}
-	for found in _variables.search_all(text(record.key)):
+	for found in _variables.search_all(template):
 		variables[found.get_string(1)] = true
 	if record.variables.size() != variables.size():
 		return false
 	for variable_name in variables:
 		if not record.variables.has(variable_name) or typeof(record.variables[variable_name]) not in [TYPE_STRING, TYPE_BOOL, TYPE_INT, TYPE_FLOAT]:
 			return false
-	return record.segment < event._split_translated_text().size()
+	var segments: Array = event.split_regex.search_all(template)
+	return record.segment < segments.size()
 
 
 func render_record(record: Dictionary) -> String:
 	var values: Dictionary = record["variables"].duplicate(true)
 	if values.has("player_name"):
 		values["player_name"] = player_name(str(values["player_name"]))
-	return substitute(text(record["key"]), values)
+	var template := ""
+	if str(record["key"]).is_empty():
+		template = str(record.get("source", ""))
+		if template.is_empty():
+			_fail("Dialogue record is missing inline source text")
+			return ""
+	else:
+		template = text(record["key"])
+	return substitute(template, values)
 
 
 func _text_started(_info: Dictionary) -> void:
@@ -219,7 +281,11 @@ func refresh_dialogue() -> void:
 	var segments := event.split_regex.search_all(render_record(dialogue))
 	var index: int = dialogue["segment"]
 	if index >= segments.size():
-		_fail("Translated dialogue segment count changed")
+		_fail("Translated dialogue segment count changed: %s segment %d has %d segments" % [
+			str(dialogue.get("key", "")) if not str(dialogue.get("key", "")).is_empty() else str(dialogue.get("source", "")),
+			index,
+			segments.size(),
+		])
 		return
 	var start := index
 	while start > 0 and segments[start].get_string().begins_with("[n+]"):

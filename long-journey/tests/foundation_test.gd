@@ -151,6 +151,20 @@ func test_visual_fx_choice_scan_connects_each_button_once() -> void:
 	await get_tree().process_frame
 
 
+func test_visual_fx_choice_highlight_does_not_tint_text_yellow() -> void:
+	var button := Button.new()
+	button.name = "ChoiceHighlightRegression"
+	add_child(button)
+	await get_tree().process_frame
+	VisualFX._apply_choice_state(button, true)
+	var highlight := button.modulate
+	assert_float(highlight.r).is_equal(highlight.g)
+	assert_float(highlight.g).is_equal(highlight.b)
+	assert_that(button.scale).is_equal(Vector2(1.04, 1.04))
+	button.queue_free()
+	await get_tree().process_frame
+
+
 func test_feedback_layer_coalesces_resource_deltas() -> void:
 	var feedback = load("res://scenes/feedback_layer.tscn").instantiate()
 	add_child(feedback)

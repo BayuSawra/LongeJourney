@@ -269,6 +269,7 @@ def sync_locale(
 def validate_catalogs(
     directory: Path,
     dialogic_sources: dict[str, str] | None = None,
+    source_only: bool = False,
 ) -> dict[str, dict[str, Message]]:
     paths = sorted(directory.glob("*.po"))
     if not paths:
@@ -289,6 +290,8 @@ def validate_catalogs(
             f"{SOURCE_LOCALE}.po: {source_dialogic}"
         )
     for locale, messages in catalogs.items():
+        if source_only and locale != SOURCE_LOCALE:
+            continue
         expected = set(source)
         if locale != SOURCE_LOCALE:
             expected.update(dialogic_sources)
@@ -311,9 +314,9 @@ def validate_catalogs(
     return catalogs
 
 
-def check_project(root: Path) -> tuple[int, int, int]:
+def check_project(root: Path, source_only: bool = False) -> tuple[int, int, int]:
     dialogic_sources = extract_dialogic_sources(root)
-    catalogs = validate_catalogs(root / "localization", dialogic_sources)
+    catalogs = validate_catalogs(root / "localization", dialogic_sources, source_only)
     source = catalogs[SOURCE_LOCALE]
     config = (root / "project.godot").read_text(encoding="utf-8")
     registered = set(re.findall(r'res://localization/([A-Za-z_0-9-]+)\.po', config))
@@ -353,6 +356,7 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=ROOT)
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("check")
+    sub.add_parser("check-source", help="Check the Chinese source and timelines without target translations")
     init = sub.add_parser("init", help="Create an untranslated language catalog; never overwrite")
     init.add_argument("locale")
     init.add_argument("--plural-forms", required=True)
@@ -367,6 +371,12 @@ def main() -> int:
             locales, messages, dialogic_messages = check_project(args.root)
             print(
                 f"Localization passed: {locales} locales, {messages} shared messages, "
+                f"{dialogic_messages} Dialogic source texts"
+            )
+        elif args.command == "check-source":
+            locales, messages, dialogic_messages = check_project(args.root, source_only=True)
+            print(
+                f"Localization source passed: {locales} source catalog, {messages} shared messages, "
                 f"{dialogic_messages} Dialogic source texts"
             )
         elif args.command == "init":

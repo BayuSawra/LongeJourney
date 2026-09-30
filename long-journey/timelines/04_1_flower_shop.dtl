@@ -1,0 +1,13 @@
+[background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
+audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [bus="SFX" loop="false"]
+character/我: “占着茅坑不拉屎，明年的蛤蟆能卖多少钱？” #id:lj_04_flower_shop_005
+”给你买个棺材够不够？" #id:lj_04_flower_shop_006
+她猛地从凳子上站起来，像是想要打我。
+我当然不怕，我比她强壮多了。
+然她长得有点肥，但绝不是的我的对手。
+character/storeOwner: “老娘惹你了？开口就咒我！你家谁在医院里？怕不是被你防的吧？”
+这婆娘有点文化，也许还有点看相的本领。
+我实在不能让她暴露透露事件的真相，索性一脚踹翻她的水桶！
+set {earthworm} += 1
+- 回十字路口
+	jump 03_crossroads/

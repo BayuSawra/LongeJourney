@@ -120,6 +120,15 @@ class LocalizationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "source changed"):
             localization.validate_catalogs(self.root)
 
+    def test_source_only_check_skips_target_catalogs(self):
+        self.target["ui.test"].text = ""
+        self.write()
+        with self.assertRaisesRegex(ValueError, "empty ID/translation"):
+            localization.validate_catalogs(self.root)
+        catalogs = localization.validate_catalogs(self.root, source_only=True)
+        self.assertEqual(set(catalogs), {"en", "zh_CN"})
+        self.assertEqual(catalogs["en"]["ui.test"].text, "")
+
     def test_missing_stamp_requires_review(self):
         self.target["ui.test"].comments.clear()
         self.write()
