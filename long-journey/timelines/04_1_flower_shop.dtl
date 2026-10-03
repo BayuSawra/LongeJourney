@@ -1,13 +1,22 @@
 [background arg="res://art/backgrounds/flower_shop_interior_buckets.png" fade="0.6"]
-audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [bus="SFX" loop="false"]
 character/我: “占着茅坑不拉屎，明年的蛤蟆能卖多少钱？” #id:lj_04_flower_shop_005
-”给你买个棺材够不够？" #id:lj_04_flower_shop_006
+character/我: ”给你买个棺材够不够？" #id:lj_04_flower_shop_006
 她猛地从凳子上站起来，像是想要打我。
 我当然不怕，我比她强壮多了。
 然她长得有点肥，但绝不是的我的对手。
 character/storeOwner: “老娘惹你了？开口就咒我！你家谁在医院里？怕不是被你防的吧？”
 这婆娘有点文化，也许还有点看相的本领。
+audio action "res://audio/sfx/28_bucket_spill/bucket_drop_once.wav" [bus="SFX" loop="false"]
 我实在不能让她暴露透露事件的真相，索性一脚踹翻她的水桶！
+她大叫一声，伸手想要拯救从土里翻出来的蛤蟆。
+我趁她弯腰之际马上又踹翻她另一个水桶！
+如此往复，苦命的蛤蟆个个都翻着肚皮，滚得满地都是。
+她现在知道哭了，流着大颗的眼泪，把蛤蟆挨个捡回桶里。
+嘴里还不停咒骂着我，不过她哭得太厉害，具体骂了什么，也听不清了。
+散落一地的泥土里，似乎有什么在动。
+是一只蚯蚓！我立马伸手去捡，她背对着我，应该是没有看见。
+我迅速把蚯蚓揣进右侧裤兜里。
 set {earthworm} += 1
+character/我: "今天只是对你小施惩戒，不要把我惹毛了，我很聪明，你好自为之。"
 - 回十字路口
 	jump 03_crossroads/

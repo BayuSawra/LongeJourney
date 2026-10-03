@@ -13,4 +13,5 @@ audio action -
 - 离开医院去十字路口 #id:lj_01_hospital_006
     jump 03_crossroads/
 - 去停尸房 #id:lj_01_hospital_009
+    set {visit_ting_shifang} += 1.0
     jump 10_morgue/

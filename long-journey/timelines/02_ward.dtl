@@ -5,48 +5,29 @@ audio ambience -
 audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [fade="0.5" volume="-8.0" bus="SFX" loop="true"]
 [color=#696969][i]※当前位置  住院部※[/i][/color] #id:lj_02_ward_000
 
-if {flower} < 5:
+else:
     character/nurse1: “没带花别进去。” #id:lj_02_ward_003
-    
     一个虎背熊腰的护士拦住我。 #id:lj_02_ward_004
     character/我: “我是7楼505床病人的丈夫。” #id:lj_02_ward_001a
     character/我: “我经常来，你们医院的护士都认识我。” #id:lj_02_ward_001
-    character/nurse1: “我就不认识你！” #id:lj_02_ward_005
-    character/nurse1: “没带花就别在这里丢人现眼！有点常识的人都知道要带5朵花！" #id:lj_02_ward_005b
+    character/nurse1: “我就不认识你！没带花就别在这丢人现眼！有点常识都知道要带五朵花！”
     
     她翻了一个白眼，粗鲁地朝我摆了摆手，要我走远些。 #id:lj_02_ward_006
     看来今天不准备好花，是进不去了。 #id:lj_02_ward_002
     
     - 回医院楼下 #id:lj_02_ward_007
         jump 01_hospital/
-elif {hualan}:
+elif {hualan} and {flower} >= 5:
     我再次来到住院部楼下。 #id:lj_02_ward_012
-    
     character/nurse1: “这都几点了？叫你拿5朵花怎么就这么费劲？“ #id:lj_02_ward_013
-    character/nurse1: “...哦，你还捡了个死人花篮？...行吧，快些进去。” #id:lj_02_ward_018
-    
-    - 进入病房 #id:lj_02_ward_014
+    - 进入病房
         [save slot="auto"]
-        [background arg="res://art/backgrounds/hospital_ward_door_505.png" fade="0.6"]
-        audio action "res://audio/sfx/26_hospital_door/creaky_door_open.wav" [bus="SFX" loop="false"]
-        我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。 #id:lj_02_ward_016
-        audio action -
-        [background arg="res://art/backgrounds/wife_room_curtained.png" fade="0.6"]
-        （这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。） #id:lj_02_ward_017
         jump 08_wife_room/
-else:
-    护士盯着我手里乱七八糟的花，骂了起来。 #id:lj_02_ward_022
-    
-    “一点礼数都没有，这些花你就乱七八糟的拿在手里啊？怎么不买个花篮提一下。” #id:lj_02_ward_023
-    
-    骂完她还是让开了路。 #id:lj_02_ward_024
-    
-    - 进入病房 #id:lj_02_ward_025
+elif {flower} >= 5:
+    character/nurse1: “这都几点了？叫你拿5朵花怎么就这么费劲？“
+    歪嘴护士一见我来了就开骂。
+    “这些花你就乱七八糟的拿在手里啊？怎么不买个花篮提一下？”
+    说罢白了我一眼，摆手让我进去。
+    - 进入病房
         [save slot="auto"]
-        [background arg="res://art/backgrounds/hospital_ward_door_505.png" fade="0.6"]
-        audio action "res://audio/sfx/26_hospital_door/creaky_door_open.wav" [bus="SFX" loop="false"]
-        我穿过灰暗的走廊，推开7楼5-05病房的门，帘子拉着。 #id:lj_02_ward_027
-        audio action -
-        [background arg="res://art/backgrounds/wife_room_curtained.png" fade="0.6"]
-        （这里下一阶段接入 08_wife_room：进入病房与拉开帘子的剧情。） #id:lj_02_ward_028
         jump 08_wife_room/

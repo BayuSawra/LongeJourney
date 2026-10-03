@@ -1,17 +1,31 @@
 [background arg="res://art/backgrounds/flower_shop_open_offering.png" fade="0.6"]
 audio action "res://audio/sfx/38_soil_rummage/selected.mp3" [bus="SFX" loop="false"]
-老板抬起头，慢吞吞地从桶里掏出一条蚯蚓，递到我面前。 #id:lj_04_flower_shop_011
+character/我:  "……我已经知道你想害我的阴谋。"
+她用看怪物一般的眼神上下打量了我一番。 #id:lj_04_flower_shop_011
+character/storeOwner: "神经病。"
+这丑东西将脸侧向一边，不再理我。
+我顶着寒风死死的盯着她，我的眼神无比正义，我的表情无比狰狞。
+这是我对着镜子演练过无数次的震撼表情，专门用来对付暗中害我的小人。
+也就过了几秒，她自知没办法骗过我，败下阵来。
+character/storeOwner: “你要干嘛？我这真没花了。”
+她说着走到桶前，伸手到桶里翻了又翻，最终找出来一只活蹦乱跳的蚯蚓。
+character/storeOwner:  “我这有一只蚯蚓，你需要的话可以拿去。”
+蚯蚓看上去很健康，应该有12厘米组左右，筷子那么粗，想必是和蛤蟆一起冬眠，养肥了。
 audio action -
 
-“那你肯定也想要这个吧。” #id:lj_04_flower_shop_012
-
-- 拿走蚯蚓 #id:lj_04_flower_shop_013
-        我捏住滑溜溜的蚯蚓，心里一阵发毛。 #id:lj_04_flower_shop_014
+- 收下蚯蚓 #id:lj_04_flower_shop_013
         
         set {earthworm} += 1
-        set {calm} -= 10
-        jump 03_crossroads/
-- 不要蚯蚓 #id:lj_04_flower_shop_019
-        “我才不稀罕。” #id:lj_04_flower_shop_020
-        
-        jump 03_crossroads/
+        我骄傲地接过蚯蚓。 #id:lj_04_flower_shop_014
+        character/我: “你要是不干坏事，也就不会发生今天这茬事。”
+        她轻叹一口气，不再理我。
+        - 回十字路口
+                jump 03_crossroads/
+- 拒绝施舍 #id:lj_04_flower_shop_019
+        character/我: “呸！我才不稀罕。” #id:lj_04_flower_shop_020
+        character/我: “你养的蚯蚓跟你一样丑！肯定有病！”
+        character/storeOwner: “你积点口德吧！你这种人老天爷要派人来收的！”
+        说罢，她把蚯蚓埋回土里，继续收拾着地上的土。
+        - 回十字路口
+                
+                jump 03_crossroads/

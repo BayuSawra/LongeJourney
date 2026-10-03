@@ -26,21 +26,21 @@ elif {visit_shiling} == 0 and {visit_luyuan} == 1:
     
     set {flower} += 1
 
-- 去花店（最多 3 次） | [if {visit_huadian} < 3] [else="disable" alt_text="花店暂时没有新的线索。"] #id:lj_03_crossroads_012
+- 走去花店 | [if {visit_huadian} < 3] [else="disable" alt_text="花店暂时没有新的线索。"] #id:lj_03_crossroads_012
     audio action "res://audio/sfx/29_road_steps/light_footsteps_on_concrete_walking_wav.mp3" [bus="SFX" loop="false"]
     花店不远，走过去就行。 #id:lj_03_crossroads_013
     audio action -
     set {energy} -= 5
     set {visit_huadian} += 1.0
     jump 04_flower_shop/
-- 去狮岭（需要 2 元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"] #id:lj_03_crossroads_018
+- 乘车去狮岭（需要 2 元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"] #id:lj_03_crossroads_018
     audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [bus="SFX" loop="false"]
     我上了去狮岭的车，付了车费。 #id:lj_03_crossroads_019
     audio action -
     set {money} -= 2
     set {visit_shiling} += 1
     jump 05_shiling/
-- 去露园（需要 2 元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"] #id:lj_03_crossroads_024
+- 乘车去露园（需要 2 元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"] #id:lj_03_crossroads_024
     audio action "res://audio/sfx/24_coin_payment/coin_payment.mp3" [bus="SFX" loop="false"]
     我上了去露园的车，付了车费。 #id:lj_03_crossroads_025
     audio action -
