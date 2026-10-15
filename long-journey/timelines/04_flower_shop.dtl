@@ -20,10 +20,10 @@ if {visit_huadian} == 1.0:
     也许是昨晚，更有可能就是今天早上！她便开始养蛤蟆了！
     这样下去，又有多少人会被她坑害！ #id:lj_04_flower_shop_003j
     我瞪了她一眼，却不小心看见了她那又黑又粗的小腿，太恶心了！令人作呕！ #id:lj_04_flower_shop_003k
-    - 直接骂她 #id:lj_04_flower_shop_004
+    - 往死里骂她 #id:lj_04_flower_shop_004
         jump 04_1_flower_shop/
     
-    - 揭穿她的阴谋 #id:lj_04_flower_shop_010
+    - 揭穿她故意害我的阴谋 #id:lj_04_flower_shop_010
         jump 04_2_flower_shop/
 
 elif {visit_huadian} >= 3.0:

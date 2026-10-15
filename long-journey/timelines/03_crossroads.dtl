@@ -30,7 +30,6 @@ elif {visit_shiling} == 0 and {visit_luyuan} == 1:
     audio action "res://audio/sfx/29_road_steps/light_footsteps_on_concrete_walking_wav.mp3" [bus="SFX" loop="false"]
     花店不远，走过去就行。 #id:lj_03_crossroads_013
     audio action -
-    set {energy} -= 5
     set {visit_huadian} += 1.0
     jump 04_flower_shop/
 - 乘车去狮岭（需要 2 元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"] #id:lj_03_crossroads_018

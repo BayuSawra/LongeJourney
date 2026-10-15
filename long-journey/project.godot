@@ -67,6 +67,7 @@ directories/dtl_directory={
 "04_1_flower_shop": "res://timelines/04_1_flower_shop.dtl",
 "04_2_flower_shop": "res://timelines/04_2_flower_shop.dtl",
 "04_flower_shop": "res://timelines/04_flower_shop.dtl",
+"05_1shiling": "res://timelines/05_1shiling.dtl",
 "05_shiling": "res://timelines/05_shiling.dtl",
 "06_luyuan": "res://timelines/06_luyuan.dtl",
 "07_maze_entry": "res://timelines/07_maze_entry.dtl",

@@ -1,7 +1,6 @@
 audio ambience "res://audio/sfx/20_hospital_hum/a_c_hum.mp3" [fade="0.5" volume="-8.0" bus="SFX" loop="true"]
 [color=#696969][i]※当前位置  医院-停尸房※[/i][/color] #id:lj_10_morgue_000
 [background arg="res://art/backgrounds/morgue_empty.png" fade="0.0"]
-[background arg="res://art/backgrounds/morgue_occupied.png" fade="0.0"]
 
 if {visit_ting_shifang} == 1:
     都说在停尸房能捡到好东西。 #id:lj_10_morgue_003
@@ -22,7 +21,7 @@ if {visit_ting_shifang} == 1:
         audio action -
         [background arg="res://art/backgrounds/morgue_basket_held.png" fade="0.6"]
         
-        预期不错，我可以用它来装花。 #id:lj_10_morgue_008
+        我可以用它来装花。 #id:lj_10_morgue_008
         set {hualan} = true
         
         - 带着花篮离开 #id:lj_10_morgue_010
@@ -33,13 +32,13 @@ elif {visit_ting_shifang} == 2:
     audio action "res://audio/sfx/19_sobbing/man_sobbing_crying_or_whimpering.mp3" [bus="SFX" loop="false"]
     又到了停尸房,刚刚在那大哭的人正在离开。 #id:lj_10_morgue_019
     他们互相搀扶着，拿红布擦着眼泪，嘴里念叨着什么，只有他们自己听得清。
-    天色还是很不好，感觉是要下雪的前兆，云变得很白，天越来越灰。
+    天色还是很不好，感觉就要下雪，云很白，天越来越灰。
     audio action -
     
-    - 返回 #id:lj_10_morgue_020
+    - 返回医院楼下 #id:lj_10_morgue_020
         jump 01_hospital/
 else:
     这里一个人都没有了，我摘下眼镜对着镜片哈了口气，把它擦干净了些。 #id:lj_10_morgue_025
     
-    - 返回 #id:lj_10_morgue_026
+    - 返回医院楼下 #id:lj_10_morgue_026
         jump 01_hospital/
