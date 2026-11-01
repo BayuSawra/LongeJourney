@@ -808,6 +808,11 @@ msgstr "The flower shop is already closed, its shutter pulled down tight."
 msgid "Text/lj_04_flower_shop_027/text"
 msgstr "I don't go near it. One look from a distance, and I turn away."
 
+#: res://timelines/05_1shiling.dtl:1
+#. source-sha256: 6c878fd92f85d9f14872bedec04732cb28e506f7083d5eb2c1c2d46af6e1a5b4
+msgid "Text/lj_05_1shiling_000/text"
+msgstr "[color=#696969][i]※Current location: Lion Ridge※[/i][/color]"
+
 #: res://timelines/05_shiling.dtl:1
 #. source-sha256: 6c878fd92f85d9f14872bedec04732cb28e506f7083d5eb2c1c2d46af6e1a5b4
 msgid "Text/lj_05_shiling_000/text"

@@ -1,0 +1,2 @@
+set {remaining} = 5 - {flower}
+在狮岭一番找寻下来，我已经有了 {flower} 朵花，算不错，还差 {remaining} 朵花就能去医院了。

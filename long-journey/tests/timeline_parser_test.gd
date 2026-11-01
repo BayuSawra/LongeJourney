@@ -31,3 +31,20 @@ func test_project_timeline_ending_inside_choice_has_single_end_branch() -> void:
 	assert_object(timeline).is_not_null()
 	timeline.process()
 	assert_array(_end_branch_indices(timeline)).is_equal([timeline.events.size() - 1])
+
+
+func test_shiling_remaining_variable_is_declared_and_calculated() -> void:
+	var timeline := load("res://timelines/05_4shiling.dtl") as DialogicTimeline
+	assert_object(timeline).is_not_null()
+	timeline.process()
+	var variable_event := timeline.events[0] as DialogicVariableEvent
+	assert_object(variable_event).is_not_null()
+	assert_str(variable_event.name).is_equal("remaining")
+	assert_bool(Dialogic.VAR.has(variable_event.name)).is_true()
+
+	var original_flower = Dialogic.VAR.get_variable("flower")
+	Dialogic.VAR.set_variable("flower", 2)
+	variable_event.execute(Dialogic)
+	await get_tree().process_frame
+	assert_float(float(Dialogic.VAR.get_variable("remaining"))).is_equal(3.0)
+	Dialogic.VAR.set_variable("flower", original_flower)

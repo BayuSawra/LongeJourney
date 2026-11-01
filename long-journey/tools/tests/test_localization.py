@@ -43,6 +43,20 @@ class LocalizationTests(unittest.TestCase):
             "Choice/lj_start_001/disabled_text": "尚未准备好。",
         })
 
+    def test_duplicate_dialogic_id_across_timelines_rejected(self):
+        project = self.root / "project"
+        (project / "timelines").mkdir(parents=True)
+        (project / "timelines/first.dtl").write_text(
+            "[color=#696969][i]※当前位置  狮岭※[/i][/color] #id:lj_shared_000\n",
+            encoding="utf-8",
+        )
+        (project / "timelines/second.dtl").write_text(
+            "[color=#696969][i]※当前位置  狮岭※[/i][/color] #id:lj_shared_000\n",
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(ValueError, "duplicate Dialogic source ID lj_shared_000"):
+            localization.extract_dialogic_sources(project)
+
     def test_dialogic_translation_can_exist_only_in_target_catalog(self):
         key = "Text/lj_start_000/text"
         source_text = "开场 {player_name}"
