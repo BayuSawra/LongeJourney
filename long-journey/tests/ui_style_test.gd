@@ -71,6 +71,10 @@ func test_hud_tools_are_visible_and_do_not_cover_values() -> void:
 		assert_object(button.icon).is_not_null()
 		assert_bool(button.get_global_rect().intersects(hud.values.get_global_rect())).is_false()
 	assert_bool(hud.lore_button.get_global_rect().intersects(hud.settings_button.get_global_rect())).is_false()
+	assert_object(hud.where_u_are).is_not_null()
+	assert_bool(hud.where_u_are.get_global_rect().intersects(hud.values.get_global_rect())).is_false()
+	assert_bool(hud.where_u_are.get_global_rect().intersects(hud.lore_button.get_global_rect())).is_false()
+	assert_bool(hud.where_u_are.get_global_rect().intersects(hud.settings_button.get_global_rect())).is_false()
 	for variable in ["flower", "money", "energy", "energy_bar", "calm", "calm_bar"]:
 		assert_object(hud.values.get_node_or_null(variable)).is_not_null()
 	hud.queue_free()

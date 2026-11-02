@@ -188,6 +188,113 @@ func test_hud_money_label_uses_short_chinese_label() -> void:
 	await get_tree().process_frame
 
 
+func test_hud_location_follows_the_running_timeline() -> void:
+	var hud := (load("res://scenes/hud.tscn") as PackedScene).instantiate()
+	add_child(hud)
+	await get_tree().process_frame
+	var registered: Dictionary = ProjectSettings.get_setting("dialogic/directories/dtl_directory")
+	var stems := {}
+	for path in registered.values():
+		var stem := String(path).get_file().get_basename()
+		assert_bool(hud.LOCATION_KEYS.has(stem)).override_failure_message("HUD location is not registered: " + stem).is_true()
+		stems[stem] = true
+		var key := String(hud.LOCATION_KEYS[stem])
+		for language in Localization.supported_locales():
+			assert_str(Localization.text_in(language, key)).is_not_empty()
+	for timeline_id in hud.LOCATION_KEYS:
+		assert_bool(stems.has(timeline_id)).override_failure_message("HUD location maps an unknown timeline: " + String(timeline_id)).is_true()
+	assert_str(String(hud.LOCATION_KEYS["04_flower_shop"])).is_equal(String(hud.LOCATION_KEYS["04_2_flower_shop"]))
+	assert_str(String(hud.LOCATION_KEYS["05_shiling"])).is_equal(String(hud.LOCATION_KEYS["05_3shiling"]))
+	assert_str(String(hud.LOCATION_KEYS["07_maze_entry"])).is_equal(String(hud.LOCATION_KEYS["07_maze_right"]))
+	assert_str(hud.where_u_are.text).is_empty()
+	await _wait_for_location(hud, "02_ward", "住院部")
+	await _wait_for_location(hud, "04_2_flower_shop", "花店")
+	await _wait_for_location(hud, "05_3shiling", "狮岭")
+	await _wait_for_location(hud, "07_maze_right", "迷宫")
+	await _wait_for_location(hud, "10_morgue", "医院-停尸房")
+	Localization.set_locale("en")
+	assert_str(hud.where_u_are.text).is_equal("Hospital — Morgue")
+	await Dialogic.end_timeline(true)
+	await get_tree().process_frame
+	assert_str(hud.where_u_are.text).is_empty()
+	hud.queue_free()
+	await get_tree().process_frame
+
+
+func _wait_for_location(hud: Node, timeline_id: String, expected: String) -> void:
+	Dialogic.start(timeline_id)
+	for _frame in 60:
+		if hud.where_u_are.text == expected:
+			return
+		await get_tree().process_frame
+	assert_str(hud.where_u_are.text).is_equal(expected)
+
+
+func test_hud_map_dots_follow_the_current_location() -> void:
+	var hud := (load("res://scenes/hud.tscn") as PackedScene).instantiate()
+	var map := hud.get_node("Map")
+	var dots := {}
+	var positions := {}
+	for child in map.get_children():
+		assert_bool(child.has_meta("location_key")).override_failure_message("Map child is missing location_key: " + str(child.name)).is_true()
+		var key := String(child.get_meta("location_key"))
+		assert_bool(dots.has(key)).override_failure_message("Duplicate map location: " + key).is_false()
+		dots[key] = child
+		positions[key] = (child as Control).position
+	assert_int(dots.size()).is_equal(hud.MAP_LOCATION_KEYS.size())
+	for key in hud.MAP_LOCATION_KEYS:
+		assert_bool(dots.has(key)).override_failure_message("Map is missing " + String(key)).is_true()
+		assert_bool((dots[key] as CanvasItem).self_modulate.is_equal_approx(hud.MAP_DOT_IDLE)).is_true()
+	var child_count := map.get_child_count()
+	add_child(hud)
+	await get_tree().process_frame
+	assert_int(map.get_child_count()).is_equal(child_count)
+	for key in dots:
+		positions[key] = (dots[key] as Control).position
+	_assert_map_dot_positions(dots, positions)
+	await _wait_for_map_dot(hud, dots, "01_hospital", "location.hospital")
+	await _wait_for_map_dot(hud, dots, "03_crossroads", "location.crossroads")
+	await _wait_for_map_dot(hud, dots, "04_1_flower_shop", "location.flower_shop")
+	await _wait_for_map_dot(hud, dots, "04_flower_shop", "location.flower_shop")
+	await _wait_for_map_dot(hud, dots, "05_shiling", "location.shiling")
+	await _wait_for_map_dot(hud, dots, "06_luyuan", "location.luyuan")
+	await _wait_for_map_dot(hud, dots, "02_ward", "")
+	await _wait_for_map_dot(hud, dots, "10_morgue", "")
+	_assert_map_dot_positions(dots, positions)
+	await Dialogic.end_timeline(true)
+	await get_tree().process_frame
+	for key in dots:
+		assert_bool((dots[key] as CanvasItem).self_modulate.is_equal_approx(hud.MAP_DOT_IDLE)).is_true()
+	_assert_map_dot_positions(dots, positions)
+	hud.queue_free()
+	await get_tree().process_frame
+
+
+func _wait_for_map_dot(hud: Node, dots: Dictionary, timeline_id: String, active_key: String) -> void:
+	Dialogic.start(timeline_id)
+	for _frame in 60:
+		if _map_dots_match(hud, dots, active_key):
+			return
+		await get_tree().process_frame
+	assert_bool(_map_dots_match(hud, dots, active_key)).override_failure_message("Map dot did not follow " + timeline_id).is_true()
+
+
+func _map_dots_match(hud: Node, dots: Dictionary, active_key: String) -> bool:
+	for key in dots:
+		var expected: Color = hud.MAP_DOT_HERE if String(key) == active_key else hud.MAP_DOT_IDLE
+		if not (dots[key] as CanvasItem).self_modulate.is_equal_approx(expected):
+			return false
+	return true
+
+
+func _assert_map_dot_positions(dots: Dictionary, positions: Dictionary) -> void:
+	for key in dots:
+		var pos: Vector2 = (dots[key] as Control).position
+		var expected: Vector2 = positions[key]
+		assert_float(pos.x).is_equal(expected.x)
+		assert_float(pos.y).is_equal(expected.y)
+
+
 func test_hud_lore_and_history_refresh_without_changing_variables() -> void:
 	var hud = load("res://scenes/hud.tscn").instantiate()
 	var history = load("res://scenes/history_panel.tscn").instantiate()

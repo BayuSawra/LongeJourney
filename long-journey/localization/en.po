@@ -1854,6 +1854,54 @@ msgstr "Money: {value}"
 msgid "locale.name"
 msgstr "English"
 
+#. source-sha256: 77a567b1f3f648852d6f607e4335316b36a5c47006015eed444e23169804f299
+msgid "location.bus"
+msgstr "On the bus"
+
+#. source-sha256: 4f986690b0dad778a77f658fab7fb32a5bdccb0a75cc319c4571024af464f3f2
+msgid "location.crossroads"
+msgstr "Crossroads"
+
+#. source-sha256: edabd87429ebe941a1347ee36f0ff6b4f9782d417a6c02b3fff5d48e3be156f5
+msgid "location.debug"
+msgstr "No story progress"
+
+#. source-sha256: 7fc75ed74b81af81a983b948b2f5b5ca1d77929a54cef56d413f6f7af95cbc38
+msgid "location.ending"
+msgstr "Ending"
+
+#. source-sha256: e670541fbb08445692169872bc41b1941c5767ef99dc33dd4225ed121d0b5dbb
+msgid "location.flower_shop"
+msgstr "Flower shop"
+
+#. source-sha256: 1f6835c0d878fa0e14800964a47b4f772f71ff202badb4c7271dd6a70e3e7533
+msgid "location.hospital"
+msgstr "Hospital"
+
+#. source-sha256: 8f877081b5774ea9fbda1a2c201ab6b199cc078ba77e34660229cc3a8079915d
+msgid "location.luyuan"
+msgstr "Dew Garden"
+
+#. source-sha256: f42f970d4a40098eecf5cc902d1c7f46556a479ec750036842bbb772f424b54a
+msgid "location.maze"
+msgstr "Maze"
+
+#. source-sha256: 07ff53c74c5841ec9d24f6502e60d8e533ea358064223095b3c8485eaf01a143
+msgid "location.morgue"
+msgstr "Hospital — Morgue"
+
+#. source-sha256: ee4d7889085d03ba9838d7be1dc74b89376eddda99c1e8accc2031d0771990eb
+msgid "location.shiling"
+msgstr "Lion Ridge"
+
+#. source-sha256: 4fab86194e318dbbf5c01c65d0e4a7878954d7f3ae0ccf1f8fbe533a39c4064d
+msgid "location.ward"
+msgstr "Inpatient ward"
+
+#. source-sha256: 83586cbaac6a37fd8733270b2fd9370a171edc10adedfbaeeb5877c3e7d88263
+msgid "location.wife_room"
+msgstr "My wife's hospital room"
+
 #. source-sha256: c47b54e84e79d77fcdfe73e00633b201671bffd0700ef8052faae4a19bfaae77
 msgid "lore.category.characters"
 msgstr "Characters"

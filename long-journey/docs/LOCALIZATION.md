@@ -3,8 +3,8 @@
 ## 存储约定
 
 界面、角色名、图鉴和本地化 UI 文案存放在 `localization/<locale>.po`，使用 UTF-8、
-稳定 `msgid` + 该语言的 `msgstr`。当前 `zh_CN.po` 有 199 条共享原文；
-`en.po` 另有 351 条 Dialogic 译文，共 550 条。
+稳定 `msgid` + 该语言的 `msgstr`。当前 `zh_CN.po` 有 211 条共享原文；
+`en.po` 另有 352 条 Dialogic 译文，共 563 条。
 
 Dialogic 的剧情与选项原文直接写在 `timelines/*.dtl`，不再复制到 `zh_CN.po`。
 稳定 `#id` 仍保留在事件行末尾，英文及后续语言只把对应译文放进 PO。

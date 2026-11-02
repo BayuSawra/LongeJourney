@@ -336,7 +336,7 @@ def check_project(root: Path, source_only: bool = False) -> tuple[int, int, int]
     refs.update(dialogic_sources)
     for path in (root / "scripts").rglob("*.gd"):
         text = path.read_text(encoding="utf-8")
-        refs.update(re.findall(r'"((?:ui|save|settings|history|hud|ending|player|locale)\.[a-z_0-9.]*[a-z_0-9])"', text))
+        refs.update(re.findall(r'"((?:ui|save|settings|history|hud|ending|player|locale|location)\.[a-z_0-9.]*[a-z_0-9])"', text))
     manifest = json.loads((root / "localization/lore.json").read_text(encoding="utf-8"))
     for category in manifest["categories"]:
         refs.add(category["label"])

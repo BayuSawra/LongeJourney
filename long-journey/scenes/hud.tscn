@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d2rquoit6lxjr" path="res://scripts/hud.gd" id="1_hud"]
 [ext_resource type="Theme" uid="uid://fmsasptelp8m" path="res://ui/journey_theme.tres" id="2_theme"]
 [ext_resource type="Texture2D" uid="uid://1lplpwogt7dw" path="res://ui/icons/book-open.svg" id="3_lore"]
+[ext_resource type="Texture2D" uid="uid://cl8wlewqcbvow" path="res://art/bus_interior_normal.png" id="3_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://der2dwep51shx" path="res://ui/icons/settings.svg" id="4_settings"]
 
 [sub_resource type="StyleBoxFlat" id="HUD"]
@@ -21,9 +22,34 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="StyleBoxFlat" id="MapDot"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
 [node name="HUD" type="CanvasLayer" unique_id=692640629]
 layer = 100
 script = ExtResource("1_hud")
+
+[node name="黑色底图" type="Sprite2D" parent="." unique_id=1066597000]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(573.75, 40)
+scale = Vector2(0.20065787, 0.02763018)
+texture = ExtResource("3_uo2fv")
+
+[node name="whereUare" type="Label" parent="." unique_id=152736773]
+unique_name_in_owner = true
+offset_left = 411.0
+offset_top = 26.0
+offset_right = 735.0
+offset_bottom = 52.0
+size_flags_vertical = 1
+theme = ExtResource("2_theme")
+theme_type_variation = &"MutedLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="energy" type="Label" parent="." unique_id=1373413542]
 visible = false
@@ -122,3 +148,59 @@ theme_type_variation = &"IconButton"
 icon = ExtResource("4_settings")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Map" type="Panel" parent="." unique_id=1158172578]
+offset_left = 8.0
+offset_top = 495.0
+offset_right = 125.0
+offset_bottom = 631.0
+
+[node name="医院" type="Panel" parent="Map" unique_id=2104451001]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 36.0
+offset_bottom = 33.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("MapDot")
+metadata/location_key = "location.hospital"
+
+[node name="花店" type="Panel" parent="Map" unique_id=2104451002]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 25.0
+offset_right = 82.0
+offset_bottom = 37.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("MapDot")
+metadata/location_key = "location.flower_shop"
+
+[node name="十字路口" type="Panel" parent="Map" unique_id=2104451003]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 51.0
+offset_right = 54.0
+offset_bottom = 63.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("MapDot")
+metadata/location_key = "location.crossroads"
+
+[node name="狮岭" type="Panel" parent="Map" unique_id=2104451004]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 81.0
+offset_right = 34.0
+offset_bottom = 93.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("MapDot")
+metadata/location_key = "location.shiling"
+
+[node name="露园" type="Panel" parent="Map" unique_id=2104451005]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 79.0
+offset_right = 80.0
+offset_bottom = 91.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("MapDot")
+metadata/location_key = "location.luyuan"
