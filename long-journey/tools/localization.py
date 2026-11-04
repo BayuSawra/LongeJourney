@@ -199,6 +199,43 @@ def validate_locale(locale: str) -> None:
         raise ValueError(f"Invalid locale code (use en, zh_CN, pt_BR, etc.): {locale!r}")
 
 
+def targets_deferred(root: Path) -> bool:
+    """Chinese content production defers target-language completeness until localization."""
+    path = root / "project.godot"
+    section = ""
+    found = False
+    value = ""
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if line.startswith("[") and line.endswith("]"):
+            section = line[1:-1]
+            continue
+        if section != "long_journey" or "=" not in line or line.startswith(";"):
+            continue
+        name, raw_value = line.split("=", 1)
+        if name.strip() != "localization/defer_target_locales":
+            continue
+        if found:
+            raise ValueError(f"{path}: duplicate localization/defer_target_locales")
+        found = True
+        value = raw_value.strip().lower()
+    if not found:
+        return False
+    if value not in {"true", "false"}:
+        raise ValueError(f"{path}: localization/defer_target_locales must be true or false")
+    return value == "true"
+
+
+def source_only_for_check(root: Path, require_targets: bool) -> bool:
+    return False if require_targets else targets_deferred(root)
+
+
+def translation_check_locales(root: Path) -> tuple[str, ...]:
+    if targets_deferred(root):
+        return (SOURCE_LOCALE,)
+    return (SOURCE_LOCALE, "en")
+
+
 def validate_structure(source: str, target: str, label: str) -> None:
     if tokens(source) != tokens(target):
         raise ValueError(f"{label}: placeholder/markup mismatch")
@@ -355,8 +392,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("check")
+    sub.add_parser("check", help="Check Chinese source; include target locales unless they are deferred")
     sub.add_parser("check-source", help="Check the Chinese source and timelines without target translations")
+    sub.add_parser("check-targets", help="Require complete target translations even while localization is deferred")
     init = sub.add_parser("init", help="Create an untranslated language catalog; never overwrite")
     init.add_argument("locale")
     init.add_argument("--plural-forms", required=True)
@@ -367,18 +405,21 @@ def main() -> int:
     approve.add_argument("keys", nargs="+")
     args = parser.parse_args()
     try:
-        if args.command == "check":
-            locales, messages, dialogic_messages = check_project(args.root)
-            print(
-                f"Localization passed: {locales} locales, {messages} shared messages, "
-                f"{dialogic_messages} Dialogic source texts"
-            )
-        elif args.command == "check-source":
-            locales, messages, dialogic_messages = check_project(args.root, source_only=True)
-            print(
-                f"Localization source passed: {locales} source catalog, {messages} shared messages, "
-                f"{dialogic_messages} Dialogic source texts"
-            )
+        if args.command in {"check", "check-source", "check-targets"}:
+            source_only = args.command == "check-source" or source_only_for_check(
+                args.root, args.command == "check-targets")
+            locales, messages, dialogic_messages = check_project(args.root, source_only=source_only)
+            if source_only:
+                print(
+                    f"Localization source passed: {locales} catalogs present, {messages} shared messages, "
+                    f"{dialogic_messages} Dialogic source texts. Target locales are deferred; "
+                    "run check-targets when localizing."
+                )
+            else:
+                print(
+                    f"Localization passed: {locales} locales, {messages} shared messages, "
+                    f"{dialogic_messages} Dialogic source texts"
+                )
         elif args.command == "init":
             count = init_locale(
                 args.root / "localization",
@@ -386,7 +427,7 @@ def main() -> int:
                 args.plural_forms,
                 extract_dialogic_sources(args.root),
             )
-            print(f"Created {args.locale}: {count} untranslated IDs. Translate, approve and register before check.")
+            print(f"Created {args.locale}: {count} untranslated IDs. Translate, approve and register before check-targets.")
         elif args.command == "sync":
             count = sync_locale(
                 args.root / "localization",

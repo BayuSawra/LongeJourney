@@ -114,8 +114,26 @@ func _event_index_by_translation_key(timeline_name: String, key: String, event_n
 	return -1
 
 
+func test_deferred_target_locales_keep_gameplay_in_chinese() -> void:
+	ProjectSettings.set_setting(SOURCE_ONLY_EDITING_SETTING, false)
+	var deferred := bool(ProjectSettings.get_setting(Localization.DEFER_TARGETS_SETTING, false))
+	assert_bool(Localization.is_source_only_editing()).is_equal(deferred)
+	if deferred:
+		assert_array(Localization.supported_locales()).is_equal([Localization.SOURCE_LOCALE])
+		assert_bool(Localization.set_locale("en")).is_false()
+		assert_str(Localization.locale).is_equal("zh_CN")
+		assert_bool(Localization._validate_catalogs(true)).is_true()
+	else:
+		assert_array(Localization.supported_locales()).is_equal(["en", "zh_CN"])
+		assert_bool(Localization.set_locale("en")).is_true()
+		assert_str(Localization.locale).is_equal("en")
+
+
 func test_native_catalogs_and_all_timeline_properties() -> void:
-	assert_array(Localization.supported_locales()).is_equal(["en", "zh_CN"])
+	if Localization.is_source_only_editing():
+		assert_array(Localization.supported_locales()).is_equal([Localization.SOURCE_LOCALE])
+	else:
+		assert_array(Localization.supported_locales()).is_equal(["en", "zh_CN"])
 	var paths: Dictionary = ProjectSettings.get_setting("dialogic/directories/dtl_directory")
 	for language in Localization.supported_locales():
 		Localization.set_locale(language)
@@ -167,15 +185,25 @@ func test_native_event_serialization_preserves_original_story_flow() -> void:
 
 
 func test_language_settings_persist_and_options_use_autonyms() -> void:
-	SettingsManager.set_language("en")
-	Localization.set_locale("zh_CN")
-	SettingsManager._load_settings()
-	assert_str(Localization.locale).is_equal("en")
 	var panel = load("res://scenes/settings_panel.tscn").instantiate()
-	add_child(panel)
-	assert_int(panel.language_option.item_count).is_equal(2)
-	assert_str(panel.language_option.get_item_metadata(panel.language_option.selected)).is_equal("en")
-	assert_str(panel.language_option.get_item_text(0)).is_equal("English")
+	if Localization.is_source_only_editing():
+		SettingsManager.set_language("en")
+		assert_str(Localization.locale).is_equal("zh_CN")
+		SettingsManager._load_settings()
+		assert_str(Localization.locale).is_equal("zh_CN")
+		add_child(panel)
+		assert_int(panel.language_option.item_count).is_equal(1)
+		assert_str(panel.language_option.get_item_metadata(panel.language_option.selected)).is_equal("zh_CN")
+		assert_str(panel.language_option.get_item_text(0)).is_equal("简体中文")
+	else:
+		SettingsManager.set_language("en")
+		Localization.set_locale("zh_CN")
+		SettingsManager._load_settings()
+		assert_str(Localization.locale).is_equal("en")
+		add_child(panel)
+		assert_int(panel.language_option.item_count).is_equal(2)
+		assert_str(panel.language_option.get_item_metadata(panel.language_option.selected)).is_equal("en")
+		assert_str(panel.language_option.get_item_text(0)).is_equal("English")
 	panel.queue_free()
 	await get_tree().process_frame
 
@@ -212,8 +240,12 @@ func test_hud_location_follows_the_running_timeline() -> void:
 	await _wait_for_location(hud, "05_3shiling", "狮岭")
 	await _wait_for_location(hud, "07_maze_right", "迷宫")
 	await _wait_for_location(hud, "10_morgue", "医院-停尸房")
-	Localization.set_locale("en")
-	assert_str(hud.where_u_are.text).is_equal("Hospital — Morgue")
+	if Localization.is_source_only_editing():
+		assert_bool(Localization.set_locale("en")).is_false()
+		assert_str(hud.where_u_are.text).is_equal("医院-停尸房")
+	else:
+		assert_bool(Localization.set_locale("en")).is_true()
+		assert_str(hud.where_u_are.text).is_equal("Hospital — Morgue")
 	await Dialogic.end_timeline(true)
 	await get_tree().process_frame
 	assert_str(hud.where_u_are.text).is_empty()
@@ -305,16 +337,22 @@ func test_hud_lore_and_history_refresh_without_changing_variables() -> void:
 	history._append_record(record)
 	var original: String = history.list_box.get_child(0).text
 	var lore_before: Dictionary = LoreRuntime.get_detail("protagonist")
-	Localization.set_locale("en")
+	if Localization.is_source_only_editing():
+		assert_bool(Localization.set_locale("en")).is_false()
+		assert_str(history.list_box.get_child(0).text).is_equal(original)
+		assert_str(LoreRuntime.get_detail("protagonist")["title"]).is_equal(lore_before["title"])
+		assert_array(LoreRuntime.search("无名王")).is_not_empty()
+	else:
+		assert_bool(Localization.set_locale("en")).is_true()
+		assert_str(history.list_box.get_child(0).text).is_not_equal(original)
+		assert_str(LoreRuntime.get_detail("protagonist")["title"]).is_not_equal(lore_before["title"])
+		assert_array(LoreRuntime.search("Nameless King")).is_not_empty()
+		assert_array(LoreRuntime.search("无名王")).is_empty()
 	assert_str(hud.values.get_node("money").text).is_equal(Localization.format_text("hud.money", {"value": 20}))
 	assert_str(hud.values.get_node("energy").text).is_equal(Localization.format_text("hud.energy", {"value": 100}))
 	assert_str(hud.values.get_node("calm").text).is_equal(Localization.format_text("hud.calm", {"value": 100}))
 	assert_float(hud.values.get_node("energy_bar").value).is_equal(100.0)
 	assert_float(hud.values.get_node("calm_bar").value).is_equal(100.0)
-	assert_str(history.list_box.get_child(0).text).is_not_equal(original)
-	assert_str(LoreRuntime.get_detail("protagonist")["title"]).is_not_equal(lore_before["title"])
-	assert_array(LoreRuntime.search("Nameless King")).is_not_empty()
-	assert_array(LoreRuntime.search("无名王")).is_empty()
 	assert_int(GameState.money).is_equal(20)
 	assert_str(GameState.player_name).is_empty()
 	assert_str(Localization.render_record(record)).contains(Localization.text("player.default_name"))
@@ -411,9 +449,12 @@ func test_cross_language_save_restores_text_not_saved_language() -> void:
 	assert_str(data["game_state"]["player_name"]).is_empty()
 	assert_str(data["localized_dialogue"]["key"]).is_equal(text_key)
 	await Dialogic.end_timeline(true)
-	Localization.set_locale("en")
+	if Localization.is_source_only_editing():
+		assert_bool(Localization.set_locale("en")).is_false()
+	else:
+		assert_bool(Localization.set_locale("en")).is_true()
 	assert_bool(await SaveManager.load("localization-roundtrip")).is_true()
-	assert_str(Localization.locale).is_equal("en")
+	assert_str(Localization.locale).is_equal("zh_CN" if Localization.is_source_only_editing() else "en")
 	assert_str(Dialogic.Text.dialog_text).contains(Localization.text("player.default_name"))
 	assert_str(Dialogic.Text.dialog_text).is_equal(Localization.render_record(Localization.dialogue))
 	assert_str(GameState.player_name).is_empty()
@@ -423,11 +464,15 @@ func test_custom_names_are_never_retranslated() -> void:
 	GameState.set_var("player_name", "{money}")
 	Dialogic.start("07_maze_entry", _event_index_by_translation_key("07_maze_entry", "Text/lj_07_maze_entry_008/text", "Text"))
 	await _wait_for_text()
-	Localization.set_locale("en")
+	if Localization.is_source_only_editing():
+		assert_bool(Localization.set_locale("en")).is_false()
+		assert_str(SaveManager.display_name("1", "")).is_equal("存档 1")
+	else:
+		assert_bool(Localization.set_locale("en")).is_true()
+		assert_str(SaveManager.display_name("1", "")).is_equal("Save 1")
 	assert_str(Dialogic.Text.dialog_text).contains("{money}")
 	assert_str(GameState.player_name).is_equal("{money}")
 	assert_str(SaveManager.display_name("1", "自动存档")).is_equal("自动存档")
-	assert_str(SaveManager.display_name("1", "")).is_equal("Save 1")
 	assert_str(SaveManager.display_name("auto", "")).is_equal(Localization.text("save.auto_name"))
 
 
@@ -450,12 +495,15 @@ func test_language_switch_during_animation_and_cancel_does_not_revive_event() ->
 
 func test_future_segments_use_new_locale() -> void:
 	var key := "Text/lj_00_start_000/text"
-	for language in ["en", "zh_CN"]:
+	var use_english := not Localization.is_source_only_editing()
+	var languages: Array = ["en", "zh_CN"] if use_english else ["zh_CN"]
+	for language in languages:
 		_original_messages[language] = {key: Localization.text_in(language, key)}
 	_original_dialogic_sources[key] = Localization.dialogic_sources[key]
 	Localization.dialogic_sources[key] = "甲[n]乙[n+]丙"
 	Localization.catalogs["zh_CN"].add_message(key, "甲[n]乙[n+]丙")
-	Localization.catalogs["en"].add_message(key, "One[n]Two[n+]Three")
+	if use_english:
+		Localization.catalogs["en"].add_message(key, "One[n]Two[n+]Three")
 	Dialogic.start("00_start")
 	await _wait_for_text()
 	Dialogic.Text.skip_text_reveal()
@@ -465,8 +513,11 @@ func test_future_segments_use_new_locale() -> void:
 		await get_tree().process_frame
 	assert_int(Dialogic.Text.text_sub_index).is_equal(0)
 	assert_int(Dialogic.current_state).is_equal(Dialogic.States.IDLE)
-	Localization.set_locale("en")
-	assert_str(Dialogic.Text.dialog_text).is_equal("One")
+	if use_english:
+		assert_bool(Localization.set_locale("en")).is_true()
+	else:
+		assert_bool(Localization.set_locale("en")).is_false()
+	assert_str(Dialogic.Text.dialog_text).is_equal("One" if use_english else "甲")
 	var event: DialogicTextEvent
 	for candidate in Dialogic.current_timeline_events:
 		if candidate is DialogicTextEvent:
@@ -478,14 +529,14 @@ func test_future_segments_use_new_locale() -> void:
 		if Dialogic.current_state == Dialogic.States.IDLE and Dialogic.Text.text_sub_index == 1:
 			break
 		await get_tree().process_frame
-	assert_str(Dialogic.Text.dialog_text).is_equal("Two")
+	assert_str(Dialogic.Text.dialog_text).is_equal("Two" if use_english else "乙")
 	Dialogic.Text.skip_text_reveal()
 	event.advance.emit()
 	for frame in 180:
 		if Dialogic.current_state == Dialogic.States.IDLE and Dialogic.Text.text_sub_index == 2:
 			break
 		await get_tree().process_frame
-	assert_str(Dialogic.Text.dialog_text).is_equal("TwoThree")
+	assert_str(Dialogic.Text.dialog_text).is_equal("TwoThree" if use_english else "乙丙")
 
 
 func test_font_covers_all_catalog_characters() -> void:

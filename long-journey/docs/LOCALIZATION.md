@@ -26,7 +26,8 @@ msgstr "语言"
 
 ## 运行行为
 
-默认首次启动使用简体中文；设置中的 Language/语言可立即切换并持久保存。
+默认首次启动使用简体中文。目标语言开启后，设置中的 Language/语言可立即切换并持久保存。
+推迟期间语言列表只有简体中文，已保存的英文偏好不会切过去。
 语言选项显示各语言文件的 `locale.name`（自称），不是固定写死的中英文枚举。
 切换会刷新 UI、当前对话和后续段落、选项、历史记录、图鉴详情与搜索。
 不重启时间线，不重新判断选项条件，不重置打字进度，也不触发剧情副作用。
@@ -34,8 +35,10 @@ msgstr "语言"
 `Localization.text(key)` 取当前语言文本；`format_text(key, values)` 使用命名占位符。
 Dialogic 继续使用自己的翻译与事件系统，不引入新的业务框架。启动时从已登记 timeline
 收集 Dialogic 原文，中文直接使用 `.dtl` 正文，目标语言使用对应 PO 的 `msgstr`。
-启动只强制校验源语言和 timeline 原文；目标语言在真正切换时校验，因此未完成的 `en.po`
-不会阻塞中文剧情编辑与试玩。
+当前内容制作阶段推迟目标语言。`project.godot` 中
+`localization/defer_target_locales=true` 时，游戏只启用简体中文；`check`、编辑器预览和
+界面截图验收也只检查中文源。`en.po` 可以暂时缺条目、多条目、为空或与中文源不一致，
+这些都不会挡住中文编辑、试玩和验证。文件本身仍须是可读的 PO：语法损坏会直接报错。
 空 `player_name` 表示默认名称，由当前语言显示；自定义姓名和存档名保持原样。
 历史记录与存档保存稳定 key 和变量快照，不把中文渲染结果当成跨语言文本来源。
 未带 `#id` 的试写行没有稳定 key，记录和手动存档改存 timeline 原文快照；补上 `#id`
@@ -53,37 +56,40 @@ Dialogic 继续使用自己的翻译与事件系统，不引入新的业务框�
 这不修改 Godot 编辑器界面语言，不依赖运行语言的 `internationalization/locale/test`，也不覆盖玩家已保存的语言设置。
 插件不修改第三方代码；Godot 原生预览接口或中文资源缺失时明确报错。
 
-## 暂存本地化关联
+## 先做完中文，再做英文
 
-集中编辑中文正文时，可在不提交的 `override.cfg` 中启用本地编辑模式：
+游戏做完前保持：
 
 ```ini
 [long_journey]
 
-localization/source_only_editing=true
+localization/defer_target_locales=true
 ```
 
-该模式只启用并暴露 `zh_CN`，不校验或切换目标语言，避免未完成的英文目录阻塞中文编辑与试玩。
-设置里原先选择的英文偏好会保留，删除该设置后恢复。它不提供缺翻译回退；`tools/verify.py`
-会忽略 `override.cfg`，仍执行完整中英文校验。编辑期间可只检查中文源：
+此开关写在 `project.godot` 里，编辑器、`check` 和 `verify.py` 使用同一规则。
+它不把缺英文回退成中文或空串；目标语言根本不进入游玩和验收。
+不提交的 `override.cfg` 仍可用 `localization/source_only_editing=true` 在本机额外锁住中文，
+即使以后关掉上面的项目开关也生效。
 
-```powershell
-$env:PYTHONUTF8 = "1"
-python tools/localization.py check-source
-```
+准备做英文时：
+
+1. 把 `localization/defer_target_locales` 改为 `false`。
+2. 运行 `sync en`，补齐新增条目；已从中文删除的旧 ID 需要先从 `en.po` 明确移除。
+3. 填写译文并用 `approve` 确认当前中文版本。
+4. 运行 `check-targets`、Python 测试和 `verify.py`。未完成的目标语言会使这些检查失败。
 
 ## 编辑已有文案
 
-1. 共享界面/图鉴文案只修改 `zh_CN.po` 的中文 `msgstr`，再修改目标语言 PO；不要重命名已有 key。
-2. Dialogic 剧情和选项直接在 Godot 的 Dialogic 编辑器中修改 `.dtl` 正文，不要改已有 `#id`。
+1. 内容制作期间只改 `zh_CN.po` 和 `.dtl` 中文正文，不要为了让英文通过而改中文。不要重命名已有 key 或 `#id`。
+2. Dialogic 剧情和选项直接在 Godot 的 Dialogic 编辑器中修改 `.dtl` 正文。
 3. 中文试写阶段可以暂不添加 `#id`，timeline 可直接播放；准备进入目标语言流程时再补唯一 `#id`，然后运行 `sync`。
-4. 保留 `{player_name}`、`{count}` 等命名参数、BBCode、链接目标、Dialogic `[n]`/`[n+]` 的数量与次序。
-5. 中文源变化后，工具会按 `source-sha256` 标记旧译文待审；人工核对译文后显式确认：
+4. 保留 `{player_name}`、`{count}` 等命名参数、BBCode、链接目标、Dialogic `[n]`/`[n+]` 的数量与次序。目标语言开启后，译文也必须保留它们。
+5. 做英文时，中文源变化会使旧译文的 `source-sha256` 失效；核对译文后显式确认：
 
 ```powershell
 $env:PYTHONUTF8 = "1"
 python tools/localization.py approve en settings.language
-python tools/localization.py check
+python tools/localization.py check-targets
 ```
 
 命令从游戏根目录运行。`approve` 只确认指定 key 对应的当前中文版本，不翻译、不批量掩盖缺漏。
@@ -115,7 +121,7 @@ Dialogic 或共享中文调整后，可运行 `sync fr` 添加新增 key，然�
 当前计数文案采用数字+标签，不依赖英语复数。需要复杂复数、性别语法、RTL 排版时，
 需增加相应实现与测试，不能仅添加文件就声称该语言的排版/语法已支持。
 
-字体沿用项目现有字体，中英全部文案逐字符检查覆盖；原本缺字的装饰符 `⁜` 改为同用途的 `※`。
+字体沿用项目现有字体。推迟目标语言时，逐字符检查覆盖中文目录和 timeline 原文；开启后连同英文目录一起检查。原本缺字的装饰符 `⁜` 改为同用途的 `※`。
 新增语言必须通过字体覆盖测试，并人工验证文本扩张、换行、按钮宽度和输入法。
 
 ## 存档兼容性
@@ -134,8 +140,12 @@ python tools/localization.py check
 python tools/verify.py
 ```
 
+`defer_target_locales=true` 时，上面的 `check` 和 `verify.py` 只验收中文源、timeline 与界面 key。
+目标语言完整验收使用 `python tools/localization.py check-targets`；关掉推迟开关后，
+`check` 与 `verify.py` 会重新覆盖英文目录、编辑器英文预览和英文界面截图。
+
 `verify.py` 会复制工程并隔离 `user://`，不触碰真实存档和设置。
-覆盖中英文原生翻译、Dialogic 内嵌原文与 PO 译文、全部时间线事件序列、设置持久化、动态 UI、图鉴搜索与历史、
+目标语言开启后，覆盖中英文原生翻译、Dialogic 内嵌原文与 PO 译文、全部时间线事件序列、设置持久化、动态 UI、图鉴搜索与历史、
 切换时的打字/选项/后续段落、跨语言读档、自定义名字、取消动画生命周期和字体覆盖。
 `tests/fixtures/localization_flow.json` 是迁移前原生事件序列替换稳定 ID 后的哈希基线；
 只规范化 CRLF/LF 差异。剧情有意修改时应核对变更后更新对应预期，不能为通过测试整份重算。

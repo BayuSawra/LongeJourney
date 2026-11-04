@@ -20,7 +20,8 @@ func _run() -> void:
 	for argument in OS.get_cmdline_user_args():
 		if argument.begins_with("--expected-locale="):
 			expected_locale = argument.trim_prefix("--expected-locale=")
-	if expected_locale not in ["zh_CN", "en"]:
+	var targets_deferred := bool(ProjectSettings.get_setting("long_journey/localization/defer_target_locales", false))
+	if expected_locale not in ["zh_CN", "en"] or (targets_deferred and expected_locale != "zh_CN"):
 		_fail("Unsupported expected preview locale: " + expected_locale)
 		return
 	var menu: PopupMenu
@@ -52,14 +53,15 @@ func _run() -> void:
 	var button := scene.find_child("Button_start", true, false) as Button
 	if not _check_preview(button, expected_locale):
 		return
-	for locale in ["en", "", "zh_CN", "en"]:
+	var cycle := ["", "zh_CN"] if targets_deferred else ["en", "", "zh_CN", "en"]
+	for locale in cycle:
 		if not _select_locale(menu, locale):
 			return
 		for frame in range(3):
 			await get_tree().process_frame
 		if not _check_preview(button, locale):
 			return
-	# Leave English selected so the next editor process can test persistence.
+	# Leave the last cycled locale selected so the next editor process can test persistence.
 	for frame in range(8):
 		await get_tree().process_frame
 	EditorInterface.save_all_scenes()

@@ -24,6 +24,15 @@ class UiVisualQaTests(unittest.TestCase):
         command = ui_visual_qa.import_command(Path("godot.exe"), self.project)
         self.assertEqual(command, ["godot.exe", "--headless", "--path", str(self.project), "--editor", "--import", "--verbose"])
 
+    def test_deferred_targets_limit_visual_qa_to_chinese(self):
+        (self.project / "project.godot").write_text(
+            "[long_journey]\nlocalization/defer_target_locales=true\n",
+            encoding="utf-8",
+        )
+        self.assertEqual(ui_visual_qa.qa_locales(self.project), ("zh_CN",))
+        (self.project / "project.godot").write_text("[application]\nconfig/name=\"long-journey\"\n", encoding="utf-8")
+        self.assertEqual(ui_visual_qa.qa_locales(self.project), ("zh_CN", "en"))
+
     def test_runtime_command_is_graphical_gl_compatibility(self):
         command = ui_visual_qa.runtime_command(Path("godot.exe"), self.project, self.case, 960, 540, "zh_CN")
         self.assertNotIn("--headless", command)

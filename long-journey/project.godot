@@ -58,7 +58,8 @@ directories/dch_directory={
 "character/nurse2": "res://character/nurse2.dch",
 "character/storeOwner": "res://character/storeOwner.dch",
 "character/wife": "res://character/wife.dch",
-"character/我": "res://character/我.dch"
+"character/我": "res://character/我.dch",
+"noone": "res://character/noone.dch"
 }
 directories/dtl_directory={
 "00_start": "res://timelines/00_start.dtl",
@@ -82,6 +83,7 @@ directories/dtl_directory={
 "08_wife_room": "res://timelines/08_wife_room.dtl",
 "09_ending": "res://timelines/09_ending.dtl",
 "10_morgue": "res://timelines/10_morgue.dtl",
+"11_inthebus": "res://timelines/11_inthebus.dtl",
 "timeline1_0": "res://timelines/timeline1_0.dtl"
 }
 layout/style_directory={
@@ -175,6 +177,10 @@ dialogic_default_action={
 
 locale/translations=PackedStringArray("res://localization/zh_CN.po", "res://localization/en.po")
 locale/fallback=""
+
+[long_journey]
+
+localization/defer_target_locales=true
 
 [physics]
 

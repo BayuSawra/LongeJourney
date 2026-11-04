@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -17,6 +18,14 @@ ROOT = Path(__file__).resolve().parents[1]
 PINNED_GODOT_VERSION = "4.7.stable.official.5b4e0cb0f"
 SIZES = ((1152, 648), (960, 540), (1024, 768))
 LOCALES = ("zh_CN", "en")
+
+
+def qa_locales(project: Path) -> tuple[str, ...]:
+    path = Path(__file__).resolve().parent / "localization.py"
+    spec = importlib.util.spec_from_file_location("lj_localization_for_qa", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.translation_check_locales(project)
 ERROR_LINE = re.compile(r"^(?:SCRIPT ERROR:|ERROR:)", re.MULTILINE)
 ANSI = re.compile(r"\x1b\[[0-?]*[ -/]*[@-~]")
 MCP_EDITOR_PLUGIN = "res://addons/godot_dotnet_mcp/plugin.cfg"
@@ -116,7 +125,7 @@ def main() -> int:
         version = subprocess.check_output([str(engine), "--version"], text=True).strip()
         require(version == PINNED_GODOT_VERSION, f"Expected {PINNED_GODOT_VERSION}; got {version}")
         require(bool(os.environ.get("APPDATA")), "Windows APPDATA is required for isolated user data")
-        for locale in LOCALES:
+        for locale in qa_locales(ROOT):
             for width, height in SIZES:
                 result["cases"].append(run_case(engine, report, width, height, locale))
         result["status"] = "passed"

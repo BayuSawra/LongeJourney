@@ -1,2 +1,6 @@
 set {remaining} = 5 - {flower}
 在狮岭一番找寻下来，我已经有了 {flower} 朵花，算不错，还差 {remaining} 朵花就能去医院了。
+[wait time="1.0"]
+- 乘车回十字路口（车费2元）
+	set {money} -= 2.0
+	jump 11_inthebus/

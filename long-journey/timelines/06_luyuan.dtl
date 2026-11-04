@@ -1,152 +1,23 @@
 [background arg="res://art/backgrounds/luyuan_garden.png" fade="0.0"]
-
 audio action -
-audio ambience -
-audio ambience "res://audio/sfx/21_forest_insects/windy_humming_forest_with_birds.wav" [loop="true", fade="0.5", volume="-8", bus="SFX"]
-[color=#696969][i]※当前位置  露园※[/i][/color] #id:lj_06_luyuan_000
-
-露园有八百年的历史，说是海临王修的。门票四块钱，我摸了摸口袋，还是进去了。 #id:lj_06_luyuan_002
-
-[background arg="res://art/backgrounds/luyuan_inner_gate.png" fade="0.6"]
-
-- 往左走 #id:lj_06_luyuan_003
-    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-    左边的花圃里开着一朵白玉菊花，我摘了下来。 #id:lj_06_luyuan_004
-    audio action -
-
-    set {flower} += 1
-
-    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
-
-    audio ambience -
-    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。 #id:lj_06_luyuan_006
-    audio action -
-
-    - 继续往迷宫中心走 #id:lj_06_luyuan_007
-        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
-        迷宫中央立着一个人影。 #id:lj_06_luyuan_008
-
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        那是个穿着华服的女人，被一根棍子立在地上。 #id:lj_06_luyuan_009
-        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
-        眼皮被细线缝在眉毛上。 #id:lj_06_luyuan_009_face
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        手背上画着符咒。 #id:lj_06_luyuan_009_hands
-
-        - 逃离 #id:lj_06_luyuan_010
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我不敢再看，转身就跑，出了露园。 #id:lj_06_luyuan_011
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
-        - 摘下她头上的绣球花 #id:lj_06_luyuan_015
-            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-            我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。 #id:lj_06_luyuan_016
-            audio action -
-            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
-
-            set {calm} -= 15
-            set {flower} += 1
-
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我飞快地跑出露园。 #id:lj_06_luyuan_019
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
-- 直走 #id:lj_06_luyuan_025
-    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-    中间的矮墙上爬着一株绿色兰花，我摘了下来。 #id:lj_06_luyuan_026
-    audio action -
-
-    set {flower} += 1
-
-    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
-
-    audio ambience -
-    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。 #id:lj_06_luyuan_028
-    audio action -
-
-    - 继续往迷宫中心走 #id:lj_06_luyuan_029
-        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
-        迷宫中央立着一个人影。 #id:lj_06_luyuan_030
-
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        那是个穿着华服的女人，被一根棍子立在地上。 #id:lj_06_luyuan_031
-        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
-        眼皮被细线缝在眉毛上。 #id:lj_06_luyuan_031_face
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        手背上画着符咒。 #id:lj_06_luyuan_031_hands
-
-        - 逃离 #id:lj_06_luyuan_032
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我不敢再看，转身就跑，出了露园。 #id:lj_06_luyuan_033
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
-        - 摘下她头上的绣球花 #id:lj_06_luyuan_037
-            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-            我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。 #id:lj_06_luyuan_038
-            audio action -
-            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
-
-            set {calm} -= 15
-            set {flower} += 1
-
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我飞快地跑出露园。 #id:lj_06_luyuan_041
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
-- 往右走 #id:lj_06_luyuan_047
-    audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-    右边石头缝里长着一棵仙人球花，我小心地摘了下来。 #id:lj_06_luyuan_048
-    audio action -
-
-    set {flower} += 1
-
-    [background arg="res://art/backgrounds/maze_stone_corridor.png" fade="0.6"]
-
-    audio ambience -
-    audio action "res://audio/sfx/05_stone_footsteps/footsteps_stone_floor.mp3" [loop="false", bus="SFX"]
-    继续往里走，路越收越窄，我听见自己的脚步声在墙上弹回来。 #id:lj_06_luyuan_050
-    audio action -
-
-    - 继续往迷宫中心走 #id:lj_06_luyuan_051
-        [background arg="res://art/backgrounds/maze_center.png" fade="0.6"]
-        迷宫中央立着一个人影。 #id:lj_06_luyuan_052
-
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        那是个穿着华服的女人，被一根棍子立在地上。 #id:lj_06_luyuan_053
-        [background arg="res://art/backgrounds/maze_woman_face_detail.png" fade="0.6"]
-        眼皮被细线缝在眉毛上。 #id:lj_06_luyuan_053_face
-        [background arg="res://art/backgrounds/maze_woman_closeup.png" fade="0.6"]
-        手背上画着符咒。 #id:lj_06_luyuan_053_hands
-
-        - 逃离 #id:lj_06_luyuan_054
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我不敢再看，转身就跑，出了露园。 #id:lj_06_luyuan_055
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
-        - 摘下她头上的绣球花 #id:lj_06_luyuan_059
-            audio action "res://audio/sfx/11_plant_break/plant_stem_break_2.mp3" [loop="false", bus="SFX"]
-            我抬手把她头上的绣球花摘了下来。她的眼皮轻轻抖了一下。 #id:lj_06_luyuan_060
-            audio action -
-            [background arg="res://art/backgrounds/maze_woman_closeup_no_hydrangea.png" fade="0.6"]
-
-            set {calm} -= 15
-            set {flower} += 1
-
-            audio action "res://audio/sfx/04_running_breath/alvarez_fernando_antropo_fonia_corriendo.mp3" [loop="false", bus="SFX"]
-            我飞快地跑出露园。 #id:lj_06_luyuan_063
-            audio action -
-
-            set {money} -= 2
-            jump 07_maze_left/
+[color=#696969][i]※当前位置  露园※[/i][/color] #id:lj_07_maze_entry_000
+露园距今有800多年历史，说是古代一个叫海临王的人修建的。
+园子里没人管理破败得很，我想里面要是有点什么野花野草，摘几朵无伤大雅吧？
+.....
+想到这里感觉内心一阵酸楚，我平日里最看不起小偷小摸的人。
+今天怎么自己也沦落到如此地步，可悲、可叹......
+.....说回露园，里面有个假山迷宫，我和妻子以前去过一次，环境阴森森的，没玩多久就出来了。
+说实话根本算不上是个迷宫，杂草丛生，到处都是蚊子，还花了4元买门票！
+.....看来今日我到此摘花，并不冒失，这种骗钱的地方，总需要有人来整治整治。
+嘿嘿嘿...说不定我在古代也是一个王爷，过着衣食无忧的生活。
+珍海味，绫罗绸缎，应有尽有。
+海临王这种名字，看似霸气，应当也只是做做样子，搞得好像高高在上，实则极有可能是个头脑简单的货色。
+能当王爷只是命好，我要是有这命，必须要起一个非同凡响的名字，就叫...就叫...
+[text_input text="如果我是王，我叫做：" var="player_name" placeholder="输入名字" allow_empty="true"]
+我是{player_name}
+[wait time="2.0"]
+- 买票进园（4元） | [if {money} >= 2] [else="disable" alt_text="金钱不足（需要 2 元）。"]
+    set {money} -= 4.0
+    jump 07_maze_entry/
+- 回到十字路口
+    jump 03_crossroads/

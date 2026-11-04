@@ -134,6 +134,32 @@ class LocalizationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "source changed"):
             localization.validate_catalogs(self.root)
 
+    def test_deferred_targets_follow_the_project_setting(self):
+        project = self.root / "game"
+        project.mkdir()
+        config = project / "project.godot"
+        config.write_text("[internationalization]\nlocale/fallback=\"\"\n", encoding="utf-8")
+        self.assertFalse(localization.targets_deferred(project))
+        self.assertEqual(localization.translation_check_locales(project), ("zh_CN", "en"))
+        self.assertFalse(localization.source_only_for_check(project, False))
+        config.write_text(
+            "[long_journey]\nlocalization/defer_target_locales=true\n",
+            encoding="utf-8",
+        )
+        self.assertTrue(localization.targets_deferred(project))
+        self.assertEqual(localization.translation_check_locales(project), ("zh_CN",))
+        self.assertTrue(localization.source_only_for_check(project, False))
+        self.assertFalse(localization.source_only_for_check(project, True))
+        config.write_text(
+            "[long_journey]\nlocalization/defer_target_locales=false\n[long_journey]\nlocalization/defer_target_locales=true\n",
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(ValueError, "duplicate"):
+            localization.targets_deferred(project)
+        config.write_text("[long_journey]\nlocalization/defer_target_locales=yes\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "true or false"):
+            localization.targets_deferred(project)
+
     def test_source_only_check_skips_target_catalogs(self):
         self.target["ui.test"].text = ""
         self.write()

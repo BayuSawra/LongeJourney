@@ -1,0 +1,18 @@
+[color=#696969][i]※当前位置  公交车上※[/i][/color] #id:lj_11_inthebus_000
+车浑浑噩噩的启动了，我坐在离后车门最近的位置。 #id:lj_11_inthebus_001
+这个位置比较宽敞，如果发生什么微危险我可以第一个离开，这是我的首选座位。 #id:lj_11_inthebus_002
+我警惕的用眼睛扫过车上每一个人，还好，应该没有小偷。 #id:lj_11_inthebus_003
+noone: “嘿，你也坐车啊。“ #id:lj_11_inthebus_004
+车停了有人拍了拍的肩膀。我抬头一看，原来是我邻居。 #id:lj_11_inthebus_005
+character/我: “嗯，对啊。” #id:lj_11_inthebus_006
+character/neighbor: “哦！你是去看你妻子吧？下一站就是医院了。” #id:lj_11_inthebus_007
+什么意思？有时候真的不想理这个人。 #id:lj_11_inthebus_008
+一天到晚不知道在干什么，莫名其妙走过来就直接说我妻子在医院，真的很烦， #id:lj_11_inthebus_009
+汽车就要关门，他一脚踩在地上，一脚踩在车上，从书包里掏出一朵向日葵。 #id:lj_11_inthebus_010
+character/neighbor: “哥，你把这个送给嫂子，我自己种的，今天摘一朵本打算拿回家放花瓶里，一点心意哈。” #id:lj_11_inthebus_011
+见我没反应，他把向日葵插在我的开衫里，容不得我拒绝。 #id:lj_11_inthebus_012
+车门已经关上，说实话不是车门关得快我一定下去揍他。 #id:lj_11_inthebus_013
+我很讨厌他，但是我得到了一朵花。 #id:lj_11_inthebus_014
+set {flower} += 1.0
+- 继续坐车 #id:lj_11_inthebus_015
+	jump 03_crossroads/

@@ -163,6 +163,19 @@ class VerifyTests(unittest.TestCase):
                               if line.startswith("user_data_dir="))
         self.assertEqual(Path(validation_dir), Path(environment["APPDATA"]) / custom_name)
 
+    def test_deferred_targets_check_only_the_chinese_editor_preview(self):
+        original = (
+            '[editor_plugins]\nenabled=PackedStringArray("res://editor/localization_preview/plugin.cfg")\n'
+            '[long_journey]\nlocalization/defer_target_locales=true\n'
+        )
+        (self.root / "project.godot").write_text(original, encoding="utf-8")
+        with patch.object(verify, "run_step", return_value="EDITOR_LOCALIZATION_CHECK_PASSED\n") as run:
+            verify.check_editor_localization("godot", self.root, self.root, 5, os.environ.copy())
+        self.assertEqual((self.root / "project.godot").read_text(encoding="utf-8"), original)
+        self.assertEqual(run.call_count, 1)
+        self.assertEqual(run.call_args.args[0], "editor-localization-zh_CN")
+        self.assertIn("--expected-locale=zh_CN", run.call_args.args[1])
+
     def test_editor_preview_missing_completion_marker_is_rejected(self):
         original = '[editor_plugins]\nenabled=PackedStringArray("res://editor/localization_preview/plugin.cfg")\n'
         (self.root / "project.godot").write_text(original, encoding="utf-8")

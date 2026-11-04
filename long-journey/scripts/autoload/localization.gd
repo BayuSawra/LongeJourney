@@ -5,6 +5,7 @@ signal locale_changed
 
 const SOURCE_LOCALE := "zh_CN"
 const SOURCE_ONLY_EDITING_SETTING := "long_journey/localization/source_only_editing"
+const DEFER_TARGETS_SETTING := "long_journey/localization/defer_target_locales"
 const UI_FONT := preload("res://font/HYZIKUTANGJINGJIEKAITIW.TTF")
 var locale := SOURCE_LOCALE
 var catalogs: Dictionary = {}
@@ -111,7 +112,9 @@ func supported_locales() -> Array:
 
 
 func is_source_only_editing() -> bool:
-	return bool(ProjectSettings.get_setting(SOURCE_ONLY_EDITING_SETTING, false))
+	# Content production keeps Chinese playable while en.po waits for a later localization pass.
+	return bool(ProjectSettings.get_setting(SOURCE_ONLY_EDITING_SETTING, false)) \
+		or bool(ProjectSettings.get_setting(DEFER_TARGETS_SETTING, false))
 
 
 func language_name(language: String) -> String:

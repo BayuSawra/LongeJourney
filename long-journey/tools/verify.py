@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -96,6 +97,16 @@ def isolated_user_data_dir(environment: dict[str, str]) -> Path:
     return userdata
 
 
+def localization_tools():
+    if getattr(localization_tools, "module", None) is None:
+        path = Path(__file__).resolve().parent / "localization.py"
+        spec = importlib.util.spec_from_file_location("lj_localization", path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        localization_tools.module = module
+    return localization_tools.module
+
+
 def check_editor_localization(godot: str, project: Path, reports: Path, timeout: int,
                               environment: dict[str, str]) -> None:
     config = project / "project.godot"
@@ -107,7 +118,7 @@ def check_editor_localization(godot: str, project: Path, reports: Path, timeout:
         raise RuntimeError("Expected exactly one editor plugin list for localization checks")
     config.write_text(updated, encoding="utf-8")
     try:
-        for locale in ("zh_CN", "en"):
+        for locale in localization_tools().translation_check_locales(project):
             name = "editor-localization-" + locale
             output = run_step(name, [godot, "--headless", "--path", str(project), "--editor",
                               *editor_network_isolation_args(), "--", "--expected-locale=" + locale], project, reports, timeout,
